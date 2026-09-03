@@ -10,7 +10,7 @@
  * |:----------:|:-----------------------------------------------|
  * | 12/09/2023 | Document creation		                         |
  *
- * @author Albano Peñalva (albano.penalva@uner.edu.ar)
+ * @author Amilcar Muñoz (amilcar.munioz@gmail.com)
  *
  */
 
@@ -42,8 +42,11 @@ void app_main(void){
     		case SWITCH_2:
     			LedToggle(LED_2);
     		break;
+			case (SWITCH_1 | SWITCH_2):
+				LedToggle(LED_3);
+			break;
     	}
-	    LedToggle(LED_3);
 		vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
 	}
 }
+/*==================[end of file]============================================*/
