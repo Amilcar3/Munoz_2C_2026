@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>P_2_Ejercicio_3: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/P_2_Ejercicio_3/main/P_2_Ejercicio_3.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">P_2_Ejercicio_3<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Regla Ultrasonica con Timers y Puerto Serie</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_p__2___ejercicio__3_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo P_2_Ejercicio_3.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Regla ultrasónica con timers, interrupciones y puerto serie (Proyecto 2, Actividad 3).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="hc__sr04_8h_source.html">hc_sr04.h</a>&quot;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="led_8h_source.html">led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lcditse0803_8h_source.html">lcditse0803.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="_p__2___ejercicio__3_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a3ed92b701199baee159bdc042a127524" id="r_a3ed92b701199baee159bdc042a127524"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3ed92b701199baee159bdc042a127524">CONFIG_TASK_MEASURE_PERIOD</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:a3ed92b701199baee159bdc042a127524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período inicial del timer de medición, en microsegundos (1.000.000 us = 1 s).  <br /></td></tr>
+<tr class="memitem:aacd6ed0905cef7b97347ab09bc160018" id="r_aacd6ed0905cef7b97347ab09bc160018"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aacd6ed0905cef7b97347ab09bc160018">CONFIG_TASK_DISPLAY_PERIOD</a>&#160;&#160;&#160;1000000</td></tr>
+<tr class="memdesc:aacd6ed0905cef7b97347ab09bc160018"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período del timer de visualización, en microsegundos (1.000.000 us = 1 s).  <br /></td></tr>
+<tr class="memitem:af2e697ac60e05813d45ea2c9c9e79c25" id="r_af2e697ac60e05813d45ea2c9c9e79c25"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af2e697ac60e05813d45ea2c9c9e79c25">LED_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:af2e697ac60e05813d45ea2c9c9e79c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor simbólico de LED encendido (no utilizado en esta versión).  <br /></td></tr>
+<tr class="memitem:a80700bb63bd56ebabbb4728aa433fd29" id="r_a80700bb63bd56ebabbb4728aa433fd29"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80700bb63bd56ebabbb4728aa433fd29">LED_OFF</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a80700bb63bd56ebabbb4728aa433fd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor simbólico de LED apagado (no utilizado en esta versión).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:afaccfed84cd1498a05ea04a65f1209b1" id="r_afaccfed84cd1498a05ea04a65f1209b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a> (void *param)</td></tr>
+<tr class="memdesc:afaccfed84cd1498a05ea04a65f1209b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback invocada en la interrupción del timer A.  <br /></td></tr>
+<tr class="memitem:a5088c3325764095ca222dc78c328f466" id="r_a5088c3325764095ca222dc78c328f466"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5088c3325764095ca222dc78c328f466">FuncTimerB</a> (void *param)</td></tr>
+<tr class="memdesc:a5088c3325764095ca222dc78c328f466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback invocada en la interrupción del timer B.  <br /></td></tr>
+<tr class="memitem:a6f31bea395d045fe371954869780fdd0" id="r_a6f31bea395d045fe371954869780fdd0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6f31bea395d045fe371954869780fdd0">switch1Action</a> ()</td></tr>
+<tr class="memdesc:a6f31bea395d045fe371954869780fdd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback de la interrupción de TEC1.  <br /></td></tr>
+<tr class="memitem:a2572deac1f7e91fd462cebfbe08e7945" id="r_a2572deac1f7e91fd462cebfbe08e7945"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2572deac1f7e91fd462cebfbe08e7945">switch2Action</a> ()</td></tr>
+<tr class="memdesc:a2572deac1f7e91fd462cebfbe08e7945"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback de la interrupción de TEC2.  <br /></td></tr>
+<tr class="memitem:aaf69046ac9e295f86fc2a6447cd001ab" id="r_aaf69046ac9e295f86fc2a6447cd001ab"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaf69046ac9e295f86fc2a6447cd001ab">FuncUart</a> (void *param)</td></tr>
+<tr class="memdesc:aaf69046ac9e295f86fc2a6447cd001ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback de recepción de la UART.  <br /></td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memdesc:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal de la aplicación.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ac22ee0f4de1e8eb682232f04b2ac1e3c" id="r_ac22ee0f4de1e8eb682232f04b2ac1e3c"><td class="memItemLeft">TaskHandle_t&#160;</td><td class="memItemRight"><a class="el" href="#ac22ee0f4de1e8eb682232f04b2ac1e3c">measure_task_handle</a> = NULL</td></tr>
+<tr class="memdesc:ac22ee0f4de1e8eb682232f04b2ac1e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle de la tarea de medición; destino de la notificación de TIMER_A.  <br /></td></tr>
+<tr class="memitem:abaf073dd4f91187228bc62d1177a72e4" id="r_abaf073dd4f91187228bc62d1177a72e4"><td class="memItemLeft">TaskHandle_t&#160;</td><td class="memItemRight"><a class="el" href="#abaf073dd4f91187228bc62d1177a72e4">display_task_handle</a> = NULL</td></tr>
+<tr class="memdesc:abaf073dd4f91187228bc62d1177a72e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle de la tarea de visualización; destino de la notificación de TIMER_B.  <br /></td></tr>
+<tr class="memitem:a7ae9d3ad463ec7a0eb38ee23a15c51e7" id="r_a7ae9d3ad463ec7a0eb38ee23a15c51e7"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a7ae9d3ad463ec7a0eb38ee23a15c51e7">distance</a> = 0</td></tr>
+<tr class="memdesc:a7ae9d3ad463ec7a0eb38ee23a15c51e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Última distancia medida, en la unidad activa (cm o pulgadas).  <br /></td></tr>
+<tr class="memitem:a03446857cc3da06bfbb944a2227ac6c2" id="r_a03446857cc3da06bfbb944a2227ac6c2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a03446857cc3da06bfbb944a2227ac6c2">button_1</a> = false</td></tr>
+<tr class="memdesc:a03446857cc3da06bfbb944a2227ac6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de medición activa (alternado por TEC1 o tecla 'O').  <br /></td></tr>
+<tr class="memitem:a11511a13d82792834b58815196d9d8f9" id="r_a11511a13d82792834b58815196d9d8f9"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a11511a13d82792834b58815196d9d8f9">button_2</a> = false</td></tr>
+<tr class="memdesc:a11511a13d82792834b58815196d9d8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de modo HOLD activo (alternado por TEC2 o tecla 'H').  <br /></td></tr>
+<tr class="memitem:aaa67826f6b886481b456434e6146e017" id="r_aaa67826f6b886481b456434e6146e017"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#aaa67826f6b886481b456434e6146e017">held_distance</a> = 0</td></tr>
+<tr class="memdesc:aaa67826f6b886481b456434e6146e017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distancia que se muestra; se congela cuando HOLD está activo.  <br /></td></tr>
+<tr class="memitem:a3e75c53e282b6678cf50a802eb12ef98" id="r_a3e75c53e282b6678cf50a802eb12ef98"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a3e75c53e282b6678cf50a802eb12ef98">measure_period</a> = <a class="el" href="#a3ed92b701199baee159bdc042a127524">CONFIG_TASK_MEASURE_PERIOD</a></td></tr>
+<tr class="memdesc:a3e75c53e282b6678cf50a802eb12ef98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período actual del timer de medición, en microsegundos. Se modifica con las teclas 'F' y 'S'.  <br /></td></tr>
+<tr class="memitem:a0b5f41c0b1cf0590ec5f77c24a9f857f" id="r_a0b5f41c0b1cf0590ec5f77c24a9f857f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0b5f41c0b1cf0590ec5f77c24a9f857f">unit_inches</a> = false</td></tr>
+<tr class="memdesc:a0b5f41c0b1cf0590ec5f77c24a9f857f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de unidad de trabajo: true = pulgadas, false = centímetros.  <br /></td></tr>
+<tr class="memitem:a1a69518182947e2961a3f5e59f4678e3" id="r_a1a69518182947e2961a3f5e59f4678e3"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a1a69518182947e2961a3f5e59f4678e3">max_distance</a> = 0</td></tr>
+<tr class="memdesc:a1a69518182947e2961a3f5e59f4678e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máxima distancia medida desde el inicio.  <br /></td></tr>
+<tr class="memitem:aaa86bfad3036abb617bfa2850dc36df2" id="r_aaa86bfad3036abb617bfa2850dc36df2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaa86bfad3036abb617bfa2850dc36df2">show_max</a> = false</td></tr>
+<tr class="memdesc:aaa86bfad3036abb617bfa2850dc36df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de visualización: true = se muestra la máxima distancia, false = la actual.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Regla ultrasónica con timers, interrupciones y puerto serie (Proyecto 2, Actividad 3). </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="aacd6ed0905cef7b97347ab09bc160018" name="aacd6ed0905cef7b97347ab09bc160018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacd6ed0905cef7b97347ab09bc160018">&#9670;&#160;</a></span>CONFIG_TASK_DISPLAY_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_TASK_DISPLAY_PERIOD&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período del timer de visualización, en microsegundos (1.000.000 us = 1 s). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00076">76</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a3ed92b701199baee159bdc042a127524" name="a3ed92b701199baee159bdc042a127524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed92b701199baee159bdc042a127524">&#9670;&#160;</a></span>CONFIG_TASK_MEASURE_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_TASK_MEASURE_PERIOD&#160;&#160;&#160;1000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período inicial del timer de medición, en microsegundos (1.000.000 us = 1 s). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00074">74</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a80700bb63bd56ebabbb4728aa433fd29" name="a80700bb63bd56ebabbb4728aa433fd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80700bb63bd56ebabbb4728aa433fd29">&#9670;&#160;</a></span>LED_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_OFF&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor simbólico de LED apagado (no utilizado en esta versión). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00080">80</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+</div>
+</div>
+<a id="af2e697ac60e05813d45ea2c9c9e79c25" name="af2e697ac60e05813d45ea2c9c9e79c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e697ac60e05813d45ea2c9c9e79c25">&#9670;&#160;</a></span>LED_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_ON&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valor simbólico de LED encendido (no utilizado en esta versión). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00078">78</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal de la aplicación. </p>
+<p>Inicializa los periféricos (teclas, <a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80" title="LED driver for the ESP-EDU Board.">LEDs</a>, sensor HC-SR04, display LCD), asocia las interrupciones de TEC1 y TEC2, configura e inicializa los timers A y B y la UART (115200 baudios, con <a class="el" href="#aaf69046ac9e295f86fc2a6447cd001ab" title="FuncUart">FuncUart</a> como callback de recepción), crea las tareas y por último inicia el conteo de los timers. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">299</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00076">CONFIG_TASK_DISPLAY_PERIOD</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00074">CONFIG_TASK_MEASURE_PERIOD</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00086">display_task_handle</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00112">FuncTimerA()</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00124">FuncTimerB()</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>, <a class="el" href="gpio__mcu_8h_source.html#l00054">GPIO_2</a>, <a class="el" href="gpio__mcu_8h_source.html#l00055">GPIO_3</a>, <a class="el" href="hc__sr04_8c_source.html#l00034">HcSr04Init()</a>, <a class="el" href="lcditse0803_8c_source.html#l00037">LcdItsE0803Init()</a>, <a class="el" href="led_8c_source.html#l00031">LedsInit()</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00084">measure_task_handle</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00207">switch1Action()</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00216">switch2Action()</a>, <a class="el" href="switch_8h_source.html#l00032">SWITCH_1</a>, <a class="el" href="switch_8h_source.html#l00033">SWITCH_2</a>, <a class="el" href="switch_8c_source.html#l00047">SwitchActivInt()</a>, <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00116">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="afaccfed84cd1498a05ea04a65f1209b1" name="afaccfed84cd1498a05ea04a65f1209b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaccfed84cd1498a05ea04a65f1209b1">&#9670;&#160;</a></span>FuncTimerA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerA </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback invocada en la interrupción del timer A. </p>
+<p>Envía una notificación a measureTask para que realice una medición.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Parámetro de usuario del timer (no utilizado). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00112">112</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00084">measure_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a5088c3325764095ca222dc78c328f466" name="a5088c3325764095ca222dc78c328f466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5088c3325764095ca222dc78c328f466">&#9670;&#160;</a></span>FuncTimerB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerB </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback invocada en la interrupción del timer B. </p>
+<p>Envía una notificación a displayTask para que actualice <a class="el" href="group___l_e_d.html#gab6831a7d06c0a2bc69f9b024f6445a80" title="LED driver for the ESP-EDU Board.">LEDs</a>, display LCD y transmisión por UART.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Parámetro de usuario del timer (no utilizado). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00124">124</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00086">display_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="aaf69046ac9e295f86fc2a6447cd001ab" name="aaf69046ac9e295f86fc2a6447cd001ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf69046ac9e295f86fc2a6447cd001ab">&#9670;&#160;</a></span>FuncUart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncUart </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback de recepción de la UART. </p>
+<p>El driver la invoca cada vez que llega un byte desde la PC (evento UART_DATA). Lee el carácter recibido y ejecuta el comando asociado:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Tecla  </th><th class="markdownTableHeadLeft">Acción  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">'O'/'o'  </td><td class="markdownTableBodyLeft">Alterna la medición (equivale a TEC1).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">'H'/'h'  </td><td class="markdownTableBodyLeft">Alterna el modo HOLD (equivale a TEC2).  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">'I'/'i'  </td><td class="markdownTableBodyLeft">Alterna la unidad entre centímetros y pulgadas.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">'M'/'m'  </td><td class="markdownTableBodyLeft">Alterna entre mostrar la distancia actual y la máxima.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">'F'/'f'  </td><td class="markdownTableBodyLeft">Reduce 100 ms el período de medición (lectura más rápida).  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">'S'/'s'  </td><td class="markdownTableBodyLeft">Aumenta 100 ms el período de medición (lectura más lenta).  </td></tr>
+</table>
+<p>El período de medición se limita a un mínimo de 100 ms para evitar que la variable sin signo <a class="el" href="#a3e75c53e282b6678cf50a802eb12ef98" title="measure_period">measure_period</a> llegue a cero o desborde.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Parámetro de usuario de la UART (no utilizado). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">240</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00090">button_1</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00092">button_2</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00088">distance</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00094">held_distance</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00100">max_distance</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00096">measure_period</a>, <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00102">show_max</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8c_source.html#l00174">TimerUpdatePeriod()</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a>, <a class="el" href="uart__mcu_8c_source.html#l00142">UartReadByte()</a> y <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00098">unit_inches</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a6f31bea395d045fe371954869780fdd0" name="a6f31bea395d045fe371954869780fdd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f31bea395d045fe371954869780fdd0">&#9670;&#160;</a></span>switch1Action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void switch1Action </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback de la interrupción de TEC1. </p>
+<p>Alterna el indicador <a class="el" href="#a03446857cc3da06bfbb944a2227ac6c2" title="button_1">button_1</a> (medición activa/detenida). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00207">207</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00090">button_1</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a2572deac1f7e91fd462cebfbe08e7945" name="a2572deac1f7e91fd462cebfbe08e7945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2572deac1f7e91fd462cebfbe08e7945">&#9670;&#160;</a></span>switch2Action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void switch2Action </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback de la interrupción de TEC2. </p>
+<p>Alterna el indicador <a class="el" href="#a11511a13d82792834b58815196d9d8f9" title="button_2">button_2</a> (modo HOLD). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00216">216</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00092">button_2</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a03446857cc3da06bfbb944a2227ac6c2" name="a03446857cc3da06bfbb944a2227ac6c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03446857cc3da06bfbb944a2227ac6c2">&#9670;&#160;</a></span>button_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool button_1 = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicador de medición activa (alternado por TEC1 o tecla 'O'). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00090">90</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a> y <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00207">switch1Action()</a>.</p>
+
+</div>
+</div>
+<a id="a11511a13d82792834b58815196d9d8f9" name="a11511a13d82792834b58815196d9d8f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11511a13d82792834b58815196d9d8f9">&#9670;&#160;</a></span>button_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool button_2 = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicador de modo HOLD activo (alternado por TEC2 o tecla 'H'). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00092">92</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a> y <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00216">switch2Action()</a>.</p>
+
+</div>
+</div>
+<a id="abaf073dd4f91187228bc62d1177a72e4" name="abaf073dd4f91187228bc62d1177a72e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf073dd4f91187228bc62d1177a72e4">&#9670;&#160;</a></span>display_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t display_task_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle de la tarea de visualización; destino de la notificación de TIMER_B. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00086">86</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a> y <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00124">FuncTimerB()</a>.</p>
+
+</div>
+</div>
+<a id="a7ae9d3ad463ec7a0eb38ee23a15c51e7" name="a7ae9d3ad463ec7a0eb38ee23a15c51e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ae9d3ad463ec7a0eb38ee23a15c51e7">&#9670;&#160;</a></span>distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t distance = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Última distancia medida, en la unidad activa (cm o pulgadas). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00088">88</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>, <a class="el" href="hc__sr04_8c_source.html#l00045">HcSr04ReadDistanceInCentimeters()</a> y <a class="el" href="hc__sr04_8c_source.html#l00067">HcSr04ReadDistanceInInches()</a>.</p>
+
+</div>
+</div>
+<a id="aaa67826f6b886481b456434e6146e017" name="aaa67826f6b886481b456434e6146e017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa67826f6b886481b456434e6146e017">&#9670;&#160;</a></span>held_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t held_distance = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distancia que se muestra; se congela cuando HOLD está activo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00094">94</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>.</p>
+
+</div>
+</div>
+<a id="a1a69518182947e2961a3f5e59f4678e3" name="a1a69518182947e2961a3f5e59f4678e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a69518182947e2961a3f5e59f4678e3">&#9670;&#160;</a></span>max_distance</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t max_distance = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Máxima distancia medida desde el inicio. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00100">100</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>.</p>
+
+</div>
+</div>
+<a id="a3e75c53e282b6678cf50a802eb12ef98" name="a3e75c53e282b6678cf50a802eb12ef98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e75c53e282b6678cf50a802eb12ef98">&#9670;&#160;</a></span>measure_period</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t measure_period = <a class="el" href="#a3ed92b701199baee159bdc042a127524">CONFIG_TASK_MEASURE_PERIOD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período actual del timer de medición, en microsegundos. Se modifica con las teclas 'F' y 'S'. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00096">96</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>.</p>
+
+</div>
+</div>
+<a id="ac22ee0f4de1e8eb682232f04b2ac1e3c" name="ac22ee0f4de1e8eb682232f04b2ac1e3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22ee0f4de1e8eb682232f04b2ac1e3c">&#9670;&#160;</a></span>measure_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t measure_task_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle de la tarea de medición; destino de la notificación de TIMER_A. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00084">84</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00299">app_main()</a> y <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00112">FuncTimerA()</a>.</p>
+
+</div>
+</div>
+<a id="aaa86bfad3036abb617bfa2850dc36df2" name="aaa86bfad3036abb617bfa2850dc36df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa86bfad3036abb617bfa2850dc36df2">&#9670;&#160;</a></span>show_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool show_max = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicador de visualización: true = se muestra la máxima distancia, false = la actual. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00102">102</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>.</p>
+
+</div>
+</div>
+<a id="a0b5f41c0b1cf0590ec5f77c24a9f857f" name="a0b5f41c0b1cf0590ec5f77c24a9f857f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b5f41c0b1cf0590ec5f77c24a9f857f">&#9670;&#160;</a></span>unit_inches</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool unit_inches = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicador de unidad de trabajo: true = pulgadas, false = centímetros. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00098">98</a> del archivo <a class="el" href="_p__2___ejercicio__3_8c_source.html">P_2_Ejercicio_3.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__3_8c_source.html#l00240">FuncUart()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_5653bcdce3a67a970e89fc7010cee879.html">P_2_Ejercicio_3</a></li><li class="navelem"><a href="dir_b1256b76bb3b174a48c5ca94e47ac3fc.html">main</a></li><li class="navelem"><a href="_p__2___ejercicio__3_8c.html">P_2_Ejercicio_3.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
