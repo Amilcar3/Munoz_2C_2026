@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>P_2_Ejercicio_4: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/P_2_Ejercicio_4/main/P_2_Ejercicio_4.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">P_2_Ejercicio_4<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Osiloscopio</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_p__2___ejercicio__4_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo P_2_Ejercicio_4.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Osciloscopio por UART con generación y lectura de ECG (Proyecto 2, Actividad 4).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="analog__io__mcu_8h_source.html">analog_io_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer__mcu_8h_source.html">timer_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="uart__mcu_8h_source.html">uart_mcu.h</a>&quot;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+</div>
+<p><a href="_p__2___ejercicio__4_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a92ff760a329dbb72416845e6c5e6cb4f" id="r_a92ff760a329dbb72416845e6c5e6cb4f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a92ff760a329dbb72416845e6c5e6cb4f">CONFIG_TASK_ADC_PERIOD</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="memdesc:a92ff760a329dbb72416845e6c5e6cb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período del timer de muestreo del ADC, en microsegundos (2000 us = 2 ms -&gt; 500 Hz).  <br /></td></tr>
+<tr class="memitem:af5957d66c23d0afdb8eab1af7e6fb956" id="r_af5957d66c23d0afdb8eab1af7e6fb956"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af5957d66c23d0afdb8eab1af7e6fb956">CONFIG_TASK_ECG_PERIOD</a>&#160;&#160;&#160;4000</td></tr>
+<tr class="memdesc:af5957d66c23d0afdb8eab1af7e6fb956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Período del timer de reproducción del ECG, en microsegundos.  <br /></td></tr>
+<tr class="memitem:adac897c7727996af151c8cc61e123d91" id="r_adac897c7727996af151c8cc61e123d91"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adac897c7727996af151c8cc61e123d91">ECG_LENGTH</a>&#160;&#160;&#160;(sizeof(<a class="el" href="#a7b6bdcac40660789e85102850e2d1687">ecg</a>) / sizeof(<a class="el" href="#a7b6bdcac40660789e85102850e2d1687">ecg</a>[0]))</td></tr>
+<tr class="memdesc:adac897c7727996af151c8cc61e123d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cantidad de muestras del arreglo <a class="el" href="#a7b6bdcac40660789e85102850e2d1687" title="ecg">ecg</a>, calculada en tiempo de compilación.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:afaccfed84cd1498a05ea04a65f1209b1" id="r_afaccfed84cd1498a05ea04a65f1209b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afaccfed84cd1498a05ea04a65f1209b1">FuncTimerA</a> (void *param)</td></tr>
+<tr class="memdesc:afaccfed84cd1498a05ea04a65f1209b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback invocada en la interrupción del timer A.  <br /></td></tr>
+<tr class="memitem:a36b91703df10d61468418101db6e8f0f" id="r_a36b91703df10d61468418101db6e8f0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a36b91703df10d61468418101db6e8f0f">FuncTimerECG</a> (void *param)</td></tr>
+<tr class="memdesc:a36b91703df10d61468418101db6e8f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función de callback invocada en la interrupción del timer B.  <br /></td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memdesc:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal de la aplicación.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a235b66a2ef6a561e57b09f3391e4a692" id="r_a235b66a2ef6a561e57b09f3391e4a692"><td class="memItemLeft">TaskHandle_t&#160;</td><td class="memItemRight"><a class="el" href="#a235b66a2ef6a561e57b09f3391e4a692">adc_task_handle</a> = NULL</td></tr>
+<tr class="memdesc:a235b66a2ef6a561e57b09f3391e4a692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle de la tarea de muestreo del ADC; destino de la notificación de TIMER_A.  <br /></td></tr>
+<tr class="memitem:a541609bbf5e34a3412d049d0579e9068" id="r_a541609bbf5e34a3412d049d0579e9068"><td class="memItemLeft">TaskHandle_t&#160;</td><td class="memItemRight"><a class="el" href="#a541609bbf5e34a3412d049d0579e9068">ecg_task_handle</a> = NULL</td></tr>
+<tr class="memdesc:a541609bbf5e34a3412d049d0579e9068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle de la tarea de reproducción del ECG; destino de la notificación de TIMER_B.  <br /></td></tr>
+<tr class="memitem:a2c75b4f34726e9b7a8dd42ca7fa1d31d" id="r_a2c75b4f34726e9b7a8dd42ca7fa1d31d"><td class="memItemLeft">TaskHandle_t&#160;</td><td class="memItemRight"><a class="el" href="#a2c75b4f34726e9b7a8dd42ca7fa1d31d">main_task_handle</a> = NULL</td></tr>
+<tr class="memitem:a7b6bdcac40660789e85102850e2d1687" id="r_a7b6bdcac40660789e85102850e2d1687"><td class="memItemLeft">const uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a7b6bdcac40660789e85102850e2d1687">ecg</a> []</td></tr>
+<tr class="memdesc:a7b6bdcac40660789e85102850e2d1687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestras de una señal de ECG, provistas por la cátedra.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Osciloscopio por UART con generación y lectura de ECG (Proyecto 2, Actividad 4). </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a92ff760a329dbb72416845e6c5e6cb4f" name="a92ff760a329dbb72416845e6c5e6cb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ff760a329dbb72416845e6c5e6cb4f">&#9670;&#160;</a></span>CONFIG_TASK_ADC_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_TASK_ADC_PERIOD&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período del timer de muestreo del ADC, en microsegundos (2000 us = 2 ms -&gt; 500 Hz). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00055">55</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="af5957d66c23d0afdb8eab1af7e6fb956" name="af5957d66c23d0afdb8eab1af7e6fb956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5957d66c23d0afdb8eab1af7e6fb956">&#9670;&#160;</a></span>CONFIG_TASK_ECG_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONFIG_TASK_ECG_PERIOD&#160;&#160;&#160;4000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Período del timer de reproducción del ECG, en microsegundos. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00057">57</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="adac897c7727996af151c8cc61e123d91" name="adac897c7727996af151c8cc61e123d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adac897c7727996af151c8cc61e123d91">&#9670;&#160;</a></span>ECG_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ECG_LENGTH&#160;&#160;&#160;(sizeof(<a class="el" href="#a7b6bdcac40660789e85102850e2d1687">ecg</a>) / sizeof(<a class="el" href="#a7b6bdcac40660789e85102850e2d1687">ecg</a>[0]))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cantidad de muestras del arreglo <a class="el" href="#a7b6bdcac40660789e85102850e2d1687" title="ecg">ecg</a>, calculada en tiempo de compilación. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00059">59</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal de la aplicación. </p>
+<p>Inicializa el canal CH1 del ADC en modo ADC_SINGLE, configura e inicializa el timer A (muestreo, 500 Hz), inicializa la UART sin callback de recepción (UART_NO_INT, esta actividad solo transmite), inicializa el conversor D/A, configura e inicializa el timer B (reproducción del ECG), crea ambas tareas y por último inicia el conteo de los dos timers. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">185</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="analog__io__mcu_8h_source.html#l00038">ADC_SINGLE</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00062">adc_task_handle</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00045">AnalogInputInit()</a>, <a class="el" href="analog__io__mcu_8c_source.html#l00120">AnalogOutputInit()</a>, <a class="el" href="analog__io__mcu_8h_source.html#l00032">CH1</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00055">CONFIG_TASK_ADC_PERIOD</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00057">CONFIG_TASK_ECG_PERIOD</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00064">ecg_task_handle</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00074">FuncTimerA()</a>, <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00086">FuncTimerECG()</a>, <a class="el" href="timer__mcu_8h_source.html#l00040">timer_config_t::timer</a>, <a class="el" href="timer__mcu_8h_source.html#l00032">TIMER_A</a>, <a class="el" href="timer__mcu_8h_source.html#l00033">TIMER_B</a>, <a class="el" href="timer__mcu_8c_source.html#l00067">TimerInit()</a>, <a class="el" href="timer__mcu_8c_source.html#l00116">TimerStart()</a>, <a class="el" href="uart__mcu_8h_source.html#l00026">UART_NO_INT</a>, <a class="el" href="uart__mcu_8h_source.html#l00032">UART_PC</a> y <a class="el" href="uart__mcu_8c_source.html#l00107">UartInit()</a>.</p>
+
+</div>
+</div>
+<a id="afaccfed84cd1498a05ea04a65f1209b1" name="afaccfed84cd1498a05ea04a65f1209b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaccfed84cd1498a05ea04a65f1209b1">&#9670;&#160;</a></span>FuncTimerA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerA </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback invocada en la interrupción del timer A. </p>
+<p>Notifica a adcTask para que tome una nueva muestra del ADC.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Parámetro de usuario del timer (no utilizado). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00074">74</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00062">adc_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="a36b91703df10d61468418101db6e8f0f" name="a36b91703df10d61468418101db6e8f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36b91703df10d61468418101db6e8f0f">&#9670;&#160;</a></span>FuncTimerECG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FuncTimerECG </td>
+          <td>(</td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función de callback invocada en la interrupción del timer B. </p>
+<p>Notifica a ecgTask para que escriba la siguiente muestra del ECG en el conversor D/A.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">param</td><td>Parámetro de usuario del timer (no utilizado). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00086">86</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00064">ecg_task_handle</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a235b66a2ef6a561e57b09f3391e4a692" name="a235b66a2ef6a561e57b09f3391e4a692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235b66a2ef6a561e57b09f3391e4a692">&#9670;&#160;</a></span>adc_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t adc_task_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle de la tarea de muestreo del ADC; destino de la notificación de TIMER_A. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00062">62</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a> y <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00074">FuncTimerA()</a>.</p>
+
+</div>
+</div>
+<a id="a7b6bdcac40660789e85102850e2d1687" name="a7b6bdcac40660789e85102850e2d1687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b6bdcac40660789e85102850e2d1687">&#9670;&#160;</a></span>ecg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16_t ecg[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                   = {</div>
+<div class="line">    76, 77, 78, 77, 79, 86, 81, 76, 84, 93, 85, 80,</div>
+<div class="line">    89, 95, 89, 85, 93, 98, 94, 88, 98, 105, 96, 91,</div>
+<div class="line">    99, 105, 101, 96, 102, 106, 101, 96, 100, 107, 101,</div>
+<div class="line">    94, 100, 104, 100, 91, 99, 103, 98, 91, 96, 105, 95,</div>
+<div class="line">    88, 95, 100, 94, 85, 93, 99, 92, 84, 91, 96, 87, 80,</div>
+<div class="line">    83, 92, 86, 78, 84, 89, 79, 73, 81, 83, 78, 70, 80, 82,</div>
+<div class="line">    79, 69, 80, 82, 81, 70, 75, 81, 77, 74, 79, 83, 82, 72,</div>
+<div class="line">    80, 87, 79, 76, 85, 95, 87, 81, 88, 93, 88, 84, 87, 94,</div>
+<div class="line">    86, 82, 85, 94, 85, 82, 85, 95, 86, 83, 92, 99, 91, 88,</div>
+<div class="line">    94, 98, 95, 90, 97, 105, 104, 94, 98, 114, 117, 124, 144,</div>
+<div class="line">    180, 210, 236, 253, 227, 171, 99, 49, 34, 29, 43, 69, 89,</div>
+<div class="line">    89, 90, 98, 107, 104, 98, 104, 110, 102, 98, 103, 111, 101,</div>
+<div class="line">    94, 103, 108, 102, 95, 97, 106, 100, 92, 101, 103, 100, 94, 98,</div>
+<div class="line">    103, 96, 90, 98, 103, 97, 90, 99, 104, 95, 90, 99, 104, 100, 93,</div>
+<div class="line">    100, 106, 101, 93, 101, 105, 103, 96, 105, 112, 105, 99, 103, 108,</div>
+<div class="line">    99, 96, 102, 106, 99, 90, 92, 100, 87, 80, 82, 88, 77, 69, 75, 79,</div>
+<div class="line">    74, 67, 71, 78, 72, 67, 73, 81, 77, 71, 75, 84, 79, 77, 77, 76, 76,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Muestras de una señal de ECG, provistas por la cátedra. </p>
+<p>Se reproduce en bucle por el conversor D/A en ecgTask. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00097">97</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+</div>
+</div>
+<a id="a541609bbf5e34a3412d049d0579e9068" name="a541609bbf5e34a3412d049d0579e9068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a541609bbf5e34a3412d049d0579e9068">&#9670;&#160;</a></span>ecg_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t ecg_task_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle de la tarea de reproducción del ECG; destino de la notificación de TIMER_B. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00064">64</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00185">app_main()</a> y <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00086">FuncTimerECG()</a>.</p>
+
+</div>
+</div>
+<a id="a2c75b4f34726e9b7a8dd42ca7fa1d31d" name="a2c75b4f34726e9b7a8dd42ca7fa1d31d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c75b4f34726e9b7a8dd42ca7fa1d31d">&#9670;&#160;</a></span>main_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TaskHandle_t main_task_handle = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="_p__2___ejercicio__4_8c_source.html#l00091">91</a> del archivo <a class="el" href="_p__2___ejercicio__4_8c_source.html">P_2_Ejercicio_4.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_ba0d19a36655e42ae5c7311a58c7a125.html">P_2_Ejercicio_4</a></li><li class="navelem"><a href="dir_b0e08ec42023c9dbd429bb6566687d59.html">main</a></li><li class="navelem"><a href="_p__2___ejercicio__4_8c.html">P_2_Ejercicio_4.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>P_2_Ejercicio_4: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/drivers/devices/src/gc9a01.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">P_2_Ejercicio_4<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Osiloscopio</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gc9a01_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo gc9a01.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Driver para el display TFT redondo GC9A01 (240x240, RGB565).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="spi__mcu_8h_source.html">spi_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="delay__mcu_8h_source.html">delay_mcu.h</a>&quot;</code><br />
+</div>
+<p><a href="gc9a01_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a439375e509def8c94dcc136c05bd0620" id="r_a439375e509def8c94dcc136c05bd0620"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a439375e509def8c94dcc136c05bd0620">GC9A01_SPI_BR</a>&#160;&#160;&#160;20000000</td></tr>
+<tr class="memitem:a5d3fb1970e1e98050006978a14b3d95e" id="r_a5d3fb1970e1e98050006978a14b3d95e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5d3fb1970e1e98050006978a14b3d95e">TX_BUF_SIZE</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="memitem:a9711f11384e2fedf13a1702b122532b5" id="r_a9711f11384e2fedf13a1702b122532b5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9711f11384e2fedf13a1702b122532b5">TX_BUF_PIXELS</a>&#160;&#160;&#160;(<a class="el" href="#a5d3fb1970e1e98050006978a14b3d95e">TX_BUF_SIZE</a> / 2)</td></tr>
+<tr class="memitem:a497f6c19c60c0046cc5c33ac62f7ff39" id="r_a497f6c19c60c0046cc5c33ac62f7ff39"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a497f6c19c60c0046cc5c33ac62f7ff39">INIT_PARAM_MAX</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memitem:ac9d9e5359d0533a94f178aa73ba62efb" id="r_ac9d9e5359d0533a94f178aa73ba62efb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac9d9e5359d0533a94f178aa73ba62efb">DELAY_FLAG</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="memitem:a9124ec1c470a9dc03b7d327ed5fb7d1d" id="r_a9124ec1c470a9dc03b7d327ed5fb7d1d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9124ec1c470a9dc03b7d327ed5fb7d1d">INIT_DELAY_MS</a>&#160;&#160;&#160;150</td></tr>
+<tr class="memitem:a96c42ef141d1431fab9bbcb1d54ca289" id="r_a96c42ef141d1431fab9bbcb1d54ca289"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a96c42ef141d1431fab9bbcb1d54ca289">CMD_SWRESET</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memitem:a9c487bf7c38340b2b191c888239963fa" id="r_a9c487bf7c38340b2b191c888239963fa"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c487bf7c38340b2b191c888239963fa">CMD_SLPIN</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="memitem:a7694dbd26d7c80144d0cbb3f7cdf2519" id="r_a7694dbd26d7c80144d0cbb3f7cdf2519"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7694dbd26d7c80144d0cbb3f7cdf2519">CMD_SLPOUT</a>&#160;&#160;&#160;0x11</td></tr>
+<tr class="memitem:ab69bbf26580a663b429fa630e59c3b17" id="r_ab69bbf26580a663b429fa630e59c3b17"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab69bbf26580a663b429fa630e59c3b17">CMD_INVOFF</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="memitem:a542d44e81148532d7c809c9a61feb8aa" id="r_a542d44e81148532d7c809c9a61feb8aa"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a542d44e81148532d7c809c9a61feb8aa">CMD_INVON</a>&#160;&#160;&#160;0x21</td></tr>
+<tr class="memitem:aa0df460dcde49ac4871a6b470d287125" id="r_aa0df460dcde49ac4871a6b470d287125"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa0df460dcde49ac4871a6b470d287125">CMD_DISPOFF</a>&#160;&#160;&#160;0x28</td></tr>
+<tr class="memitem:a2c8bd6921c9970165f583e5539ddfa3a" id="r_a2c8bd6921c9970165f583e5539ddfa3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2c8bd6921c9970165f583e5539ddfa3a">CMD_DISPON</a>&#160;&#160;&#160;0x29</td></tr>
+<tr class="memitem:ae4ce3a9fdb55c87dd5990b6a066e259e" id="r_ae4ce3a9fdb55c87dd5990b6a066e259e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae4ce3a9fdb55c87dd5990b6a066e259e">CMD_CASET</a>&#160;&#160;&#160;0x2A</td></tr>
+<tr class="memitem:a73265882d44404cedad246cf9036a8b3" id="r_a73265882d44404cedad246cf9036a8b3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a73265882d44404cedad246cf9036a8b3">CMD_RASET</a>&#160;&#160;&#160;0x2B</td></tr>
+<tr class="memitem:a987c997463b48bd31bd59f737b2d5631" id="r_a987c997463b48bd31bd59f737b2d5631"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a987c997463b48bd31bd59f737b2d5631">CMD_RAMWR</a>&#160;&#160;&#160;0x2C</td></tr>
+<tr class="memitem:a9afae088f9e941a364b276e4cf104090" id="r_a9afae088f9e941a364b276e4cf104090"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9afae088f9e941a364b276e4cf104090">CMD_TEON</a>&#160;&#160;&#160;0x35</td></tr>
+<tr class="memitem:a13ad38329e49bc95b232be93535cae89" id="r_a13ad38329e49bc95b232be93535cae89"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a13ad38329e49bc95b232be93535cae89">CMD_MADCTL</a>&#160;&#160;&#160;0x36</td></tr>
+<tr class="memitem:a1daea3d506e13bd9f550274704ccda04" id="r_a1daea3d506e13bd9f550274704ccda04"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1daea3d506e13bd9f550274704ccda04">CMD_COLMOD</a>&#160;&#160;&#160;0x3A</td></tr>
+<tr class="memitem:a5a53277d857bd983c4b3265ab155d7d8" id="r_a5a53277d857bd983c4b3265ab155d7d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5a53277d857bd983c4b3265ab155d7d8">CMD_FRAMERATE</a>&#160;&#160;&#160;0xE8</td></tr>
+<tr class="memitem:ad5a3715197a4ef2573017db09cf3395f" id="r_ad5a3715197a4ef2573017db09cf3395f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad5a3715197a4ef2573017db09cf3395f">CMD_INREGEN1</a>&#160;&#160;&#160;0xFE</td></tr>
+<tr class="memitem:af3ec0a674090f95f7afdb9503566eb25" id="r_af3ec0a674090f95f7afdb9503566eb25"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af3ec0a674090f95f7afdb9503566eb25">CMD_INREGEN2</a>&#160;&#160;&#160;0xEF</td></tr>
+<tr class="memitem:a4cb565516cbae737f91547a6d1e13ed1" id="r_a4cb565516cbae737f91547a6d1e13ed1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4cb565516cbae737f91547a6d1e13ed1">CMD_POWER2</a>&#160;&#160;&#160;0xC3</td></tr>
+<tr class="memitem:a97d11b19459866ab1c966ab3e165ae28" id="r_a97d11b19459866ab1c966ab3e165ae28"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a97d11b19459866ab1c966ab3e165ae28">CMD_POWER3</a>&#160;&#160;&#160;0xC4</td></tr>
+<tr class="memitem:abfbc67bd6eb009711cafbf214c78cef9" id="r_abfbc67bd6eb009711cafbf214c78cef9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abfbc67bd6eb009711cafbf214c78cef9">CMD_POWER4</a>&#160;&#160;&#160;0xC9</td></tr>
+<tr class="memitem:a8b3b562d7c250845616c053d3ac9b9d8" id="r_a8b3b562d7c250845616c053d3ac9b9d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8b3b562d7c250845616c053d3ac9b9d8">CMD_GAMMA1</a>&#160;&#160;&#160;0xF0</td></tr>
+<tr class="memitem:acc8725b55909d5c95fe18d06f535a47d" id="r_acc8725b55909d5c95fe18d06f535a47d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acc8725b55909d5c95fe18d06f535a47d">CMD_GAMMA2</a>&#160;&#160;&#160;0xF1</td></tr>
+<tr class="memitem:aae60a88f01d4750b97b57fd8adeedf7b" id="r_aae60a88f01d4750b97b57fd8adeedf7b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aae60a88f01d4750b97b57fd8adeedf7b">CMD_GAMMA3</a>&#160;&#160;&#160;0xF2</td></tr>
+<tr class="memitem:a8d74df5b539d830c50fccab919981d97" id="r_a8d74df5b539d830c50fccab919981d97"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8d74df5b539d830c50fccab919981d97">CMD_GAMMA4</a>&#160;&#160;&#160;0xF3</td></tr>
+<tr class="memitem:ab30e6bd24448245df1d60a3e1c4ddbdf" id="r_ab30e6bd24448245df1d60a3e1c4ddbdf"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab30e6bd24448245df1d60a3e1c4ddbdf">MADCTL_MY</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="memitem:a6d18ed48efb3186877a07d0e81155453" id="r_a6d18ed48efb3186877a07d0e81155453"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6d18ed48efb3186877a07d0e81155453">MADCTL_MX</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="memitem:adc23a239d2b6976d53254ef4fc5d1713" id="r_adc23a239d2b6976d53254ef4fc5d1713"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adc23a239d2b6976d53254ef4fc5d1713">MADCTL_MV</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="memitem:a659f0d6f0c258a3d91f882a59dfa76f5" id="r_a659f0d6f0c258a3d91f882a59dfa76f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a659f0d6f0c258a3d91f882a59dfa76f5">MADCTL_BGR</a>&#160;&#160;&#160;0x08</td></tr>
+<tr class="memitem:aa6704a11b6a42b8f3fb98f2701fad119" id="r_aa6704a11b6a42b8f3fb98f2701fad119"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa6704a11b6a42b8f3fb98f2701fad119">COLMOD_RGB565</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="memitem:a996f7be338ccb40d1a2a5abc1ad61759" id="r_a996f7be338ccb40d1a2a5abc1ad61759"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a996f7be338ccb40d1a2a5abc1ad61759">ABS</a>(x)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:gab98bba7e34a665ce7defdc3883a41c4f" id="r_gab98bba7e34a665ce7defdc3883a41c4f"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gab98bba7e34a665ce7defdc3883a41c4f">GC9A01Init</a> (<a class="el" href="group___s_p_i.html#ga7d468ea862538a179a76e97b9085f075">spi_dev_t</a> spi_dev, uint8_t gpio_dc, uint8_t gpio_rst)</td></tr>
+<tr class="memdesc:gab98bba7e34a665ce7defdc3883a41c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el display GC9A01.  <br /></td></tr>
+<tr class="memitem:ga9f66c7d62a651c8622f06c5420ba31bb" id="r_ga9f66c7d62a651c8622f06c5420ba31bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga9f66c7d62a651c8622f06c5420ba31bb">GC9A01DrawPixel</a> (uint16_t x, uint16_t y, uint16_t color)</td></tr>
+<tr class="memdesc:ga9f66c7d62a651c8622f06c5420ba31bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un píxel en el display.  <br /></td></tr>
+<tr class="memitem:gabfddd9754277f82ac98b86d70a2936a9" id="r_gabfddd9754277f82ac98b86d70a2936a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gabfddd9754277f82ac98b86d70a2936a9">GC9A01Fill</a> (uint16_t color)</td></tr>
+<tr class="memdesc:gabfddd9754277f82ac98b86d70a2936a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Llena todo el display con un color.  <br /></td></tr>
+<tr class="memitem:gaf296c866e3e6d7ce46792bc36cee1a55" id="r_gaf296c866e3e6d7ce46792bc36cee1a55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gaf296c866e3e6d7ce46792bc36cee1a55">GC9A01Rotate</a> (<a class="el" href="group___g_c9_a01.html#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a> rotation)</td></tr>
+<tr class="memdesc:gaf296c866e3e6d7ce46792bc36cee1a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rota el display a una orientación determinada.  <br /></td></tr>
+<tr class="memitem:gaa9ae53ecfbf183d193cac3014cbee69d" id="r_gaa9ae53ecfbf183d193cac3014cbee69d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gaa9ae53ecfbf183d193cac3014cbee69d">GC9A01Invert</a> (bool invert)</td></tr>
+<tr class="memdesc:gaa9ae53ecfbf183d193cac3014cbee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activa o desactiva la inversión de colores del display.  <br /></td></tr>
+<tr class="memitem:ga6f46020455db5580ab1ab4a95b6ed357" id="r_ga6f46020455db5580ab1ab4a95b6ed357"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga6f46020455db5580ab1ab4a95b6ed357">GC9A01Sleep</a> (bool sleep)</td></tr>
+<tr class="memdesc:ga6f46020455db5580ab1ab4a95b6ed357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entra o sale del modo de bajo consumo (sleep) del controlador.  <br /></td></tr>
+<tr class="memitem:gaea6616658f8d75e0cf3d191d5788e6e6" id="r_gaea6616658f8d75e0cf3d191d5788e6e6"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gaea6616658f8d75e0cf3d191d5788e6e6">GC9A01IsVisible</a> (uint16_t x, uint16_t y)</td></tr>
+<tr class="memdesc:gaea6616658f8d75e0cf3d191d5788e6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si un punto está dentro del círculo visible del display.  <br /></td></tr>
+<tr class="memitem:ga05d860a311c5fd723e38445aecfc6bae" id="r_ga05d860a311c5fd723e38445aecfc6bae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga05d860a311c5fd723e38445aecfc6bae">GC9A01DrawChar</a> (uint16_t x, uint16_t y, char data, const <a class="el" href="struct_font__t.html">Font_t</a> *font, uint16_t foreground, uint16_t background)</td></tr>
+<tr class="memdesc:ga05d860a311c5fd723e38445aecfc6bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un caracter en el display.  <br /></td></tr>
+<tr class="memitem:ga9057ce8c780f072662c0cda73b42ea85" id="r_ga9057ce8c780f072662c0cda73b42ea85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga9057ce8c780f072662c0cda73b42ea85">GC9A01DrawIcon</a> (uint16_t x, uint16_t y, <a class="el" href="group___i_c_o_n_s.html#ga945c9cb2ded81b38da222e91d09df40b">icon_t</a> icon, const <a class="el" href="structicon__font__t.html">icon_font_t</a> *icon_font, uint16_t foreground, uint16_t background)</td></tr>
+<tr class="memdesc:ga9057ce8c780f072662c0cda73b42ea85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un ícono en el display.  <br /></td></tr>
+<tr class="memitem:gae225f030628f5cc25bb8f44b86d98419" id="r_gae225f030628f5cc25bb8f44b86d98419"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gae225f030628f5cc25bb8f44b86d98419">GC9A01DrawInt</a> (uint16_t x, uint16_t y, uint32_t num, uint8_t dig, const <a class="el" href="struct_font__t.html">Font_t</a> *font, uint16_t foreground, uint16_t background)</td></tr>
+<tr class="memdesc:gae225f030628f5cc25bb8f44b86d98419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un número entero en el display.  <br /></td></tr>
+<tr class="memitem:ga3a8fabebccf799b3eeb7c1a07eaadbb8" id="r_ga3a8fabebccf799b3eeb7c1a07eaadbb8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga3a8fabebccf799b3eeb7c1a07eaadbb8">GC9A01DrawString</a> (uint16_t x, uint16_t y, const char *str, const <a class="el" href="struct_font__t.html">Font_t</a> *font, uint16_t foreground, uint16_t background)</td></tr>
+<tr class="memdesc:ga3a8fabebccf799b3eeb7c1a07eaadbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una cadena de caracteres en el display.  <br /></td></tr>
+<tr class="memitem:ga1d2f36602472ca0d33821f79c6b99f11" id="r_ga1d2f36602472ca0d33821f79c6b99f11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga1d2f36602472ca0d33821f79c6b99f11">GC9A01GetStringSize</a> (const char *str, const <a class="el" href="struct_font__t.html">Font_t</a> *font, uint16_t *width, uint16_t *height)</td></tr>
+<tr class="memdesc:ga1d2f36602472ca0d33821f79c6b99f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el ancho y alto que ocupa una cadena de caracteres.  <br /></td></tr>
+<tr class="memitem:ga390a949658f27dc576780b964b0d6111" id="r_ga390a949658f27dc576780b964b0d6111"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga390a949658f27dc576780b964b0d6111">GC9A01DrawLine</a> (uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</td></tr>
+<tr class="memdesc:ga390a949658f27dc576780b964b0d6111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una línea en el display.  <br /></td></tr>
+<tr class="memitem:ga97c71ab34d185fcbd175612ff6852a00" id="r_ga97c71ab34d185fcbd175612ff6852a00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga97c71ab34d185fcbd175612ff6852a00">GC9A01DrawRectangle</a> (uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</td></tr>
+<tr class="memdesc:ga97c71ab34d185fcbd175612ff6852a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un rectángulo en el display.  <br /></td></tr>
+<tr class="memitem:ga24cc5421859284ac70997a3d5885ccc3" id="r_ga24cc5421859284ac70997a3d5885ccc3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga24cc5421859284ac70997a3d5885ccc3">GC9A01DrawFilledRectangle</a> (uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</td></tr>
+<tr class="memdesc:ga24cc5421859284ac70997a3d5885ccc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un rectángulo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga8c5d84f7509392f6635025d094a26ade" id="r_ga8c5d84f7509392f6635025d094a26ade"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga8c5d84f7509392f6635025d094a26ade">GC9A01DrawCircle</a> (int16_t x0, int16_t y0, int16_t r, uint16_t color)</td></tr>
+<tr class="memdesc:ga8c5d84f7509392f6635025d094a26ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un círculo en el display.  <br /></td></tr>
+<tr class="memitem:ga9e503046c4f764ea6c6d190c17f97874" id="r_ga9e503046c4f764ea6c6d190c17f97874"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga9e503046c4f764ea6c6d190c17f97874">GC9A01DrawFilledCircle</a> (int16_t x0, int16_t y0, int16_t r, uint16_t color)</td></tr>
+<tr class="memdesc:ga9e503046c4f764ea6c6d190c17f97874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un círculo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga521c3050df779f5f0a8bf70df8de84f6" id="r_ga521c3050df779f5f0a8bf70df8de84f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga521c3050df779f5f0a8bf70df8de84f6">GC9A01DrawTriangle</a> (int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</td></tr>
+<tr class="memdesc:ga521c3050df779f5f0a8bf70df8de84f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un triángulo en el display.  <br /></td></tr>
+<tr class="memitem:gabee76a1d7ac171860bc54bcc855483d4" id="r_gabee76a1d7ac171860bc54bcc855483d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#gabee76a1d7ac171860bc54bcc855483d4">GC9A01DrawFilledTriangle</a> (int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</td></tr>
+<tr class="memdesc:gabee76a1d7ac171860bc54bcc855483d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un triángulo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga2bc2fddcdffe3b489f187dfb39394d96" id="r_ga2bc2fddcdffe3b489f187dfb39394d96"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga2bc2fddcdffe3b489f187dfb39394d96">GC9A01DrawPicture</a> (uint16_t x, uint16_t y, uint16_t width, uint16_t height, const uint8_t *pic)</td></tr>
+<tr class="memdesc:ga2bc2fddcdffe3b489f187dfb39394d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una imagen en el display.  <br /></td></tr>
+<tr class="memitem:ga49f30e05ccd435918aec9d060528d173" id="r_ga49f30e05ccd435918aec9d060528d173"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="group___g_c9_a01.html#ga49f30e05ccd435918aec9d060528d173">GC9A01DeInit</a> (void)</td></tr>
+<tr class="memdesc:ga49f30e05ccd435918aec9d060528d173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desinicializa el display (apaga la pantalla).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Driver para el display TFT redondo GC9A01 (240x240, RGB565). </p>
+<dl class="section author"><dt>Autor</dt><dd>Amilcar Muñoz </dd></dl>
+<dl class="section version"><dt>Versión</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2026-09-30</dd></dl>
+<dl class="section note"><dt>Nota</dt><dd>La estructura del driver sigue la del driver ILI9341 de la cátedra (Albano Peñalva). La secuencia de inicialización del controlador proviene de la librería Adafruit_GC9A01A:</dd></dl>
+<p>Copyright (c) Adafruit Industries. Written by Limor "ladyada" Fried. BSD license, all text here must be included in any redistribution. </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a996f7be338ccb40d1a2a5abc1ad61759" name="a996f7be338ccb40d1a2a5abc1ad61759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996f7be338ccb40d1a2a5abc1ad61759">&#9670;&#160;</a></span>ABS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ABS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">((x) &lt; 0 ? -(x) : (x))</div>
+</div><!-- fragment --><p>Valor absoluto de un entero </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00069">69</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ae4ce3a9fdb55c87dd5990b6a066e259e" name="ae4ce3a9fdb55c87dd5990b6a066e259e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ce3a9fdb55c87dd5990b6a066e259e">&#9670;&#160;</a></span>CMD_CASET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_CASET&#160;&#160;&#160;0x2A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define las columnas accesibles de la memoria </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00043">43</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a1daea3d506e13bd9f550274704ccda04" name="a1daea3d506e13bd9f550274704ccda04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1daea3d506e13bd9f550274704ccda04">&#9670;&#160;</a></span>CMD_COLMOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_COLMOD&#160;&#160;&#160;0x3A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Formato de píxel </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00048">48</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="aa0df460dcde49ac4871a6b470d287125" name="aa0df460dcde49ac4871a6b470d287125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0df460dcde49ac4871a6b470d287125">&#9670;&#160;</a></span>CMD_DISPOFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_DISPOFF&#160;&#160;&#160;0x28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Display apagado </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00041">41</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00662">GC9A01DeInit()</a>.</p>
+
+</div>
+</div>
+<a id="a2c8bd6921c9970165f583e5539ddfa3a" name="a2c8bd6921c9970165f583e5539ddfa3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c8bd6921c9970165f583e5539ddfa3a">&#9670;&#160;</a></span>CMD_DISPON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_DISPON&#160;&#160;&#160;0x29</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Display encendido </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00042">42</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a5a53277d857bd983c4b3265ab155d7d8" name="a5a53277d857bd983c4b3265ab155d7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a53277d857bd983c4b3265ab155d7d8">&#9670;&#160;</a></span>CMD_FRAMERATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_FRAMERATE&#160;&#160;&#160;0xE8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control de frame rate </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00049">49</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a8b3b562d7c250845616c053d3ac9b9d8" name="a8b3b562d7c250845616c053d3ac9b9d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3b562d7c250845616c053d3ac9b9d8">&#9670;&#160;</a></span>CMD_GAMMA1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_GAMMA1&#160;&#160;&#160;0xF0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gamma 1 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00055">55</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="acc8725b55909d5c95fe18d06f535a47d" name="acc8725b55909d5c95fe18d06f535a47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8725b55909d5c95fe18d06f535a47d">&#9670;&#160;</a></span>CMD_GAMMA2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_GAMMA2&#160;&#160;&#160;0xF1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gamma 2 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00056">56</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="aae60a88f01d4750b97b57fd8adeedf7b" name="aae60a88f01d4750b97b57fd8adeedf7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae60a88f01d4750b97b57fd8adeedf7b">&#9670;&#160;</a></span>CMD_GAMMA3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_GAMMA3&#160;&#160;&#160;0xF2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gamma 3 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00057">57</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a8d74df5b539d830c50fccab919981d97" name="a8d74df5b539d830c50fccab919981d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d74df5b539d830c50fccab919981d97">&#9670;&#160;</a></span>CMD_GAMMA4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_GAMMA4&#160;&#160;&#160;0xF3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gamma 4 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00058">58</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ad5a3715197a4ef2573017db09cf3395f" name="ad5a3715197a4ef2573017db09cf3395f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a3715197a4ef2573017db09cf3395f">&#9670;&#160;</a></span>CMD_INREGEN1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_INREGEN1&#160;&#160;&#160;0xFE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Habilitación de registros internos 1 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00050">50</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="af3ec0a674090f95f7afdb9503566eb25" name="af3ec0a674090f95f7afdb9503566eb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3ec0a674090f95f7afdb9503566eb25">&#9670;&#160;</a></span>CMD_INREGEN2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_INREGEN2&#160;&#160;&#160;0xEF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Habilitación de registros internos 2 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00051">51</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ab69bbf26580a663b429fa630e59c3b17" name="ab69bbf26580a663b429fa630e59c3b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69bbf26580a663b429fa630e59c3b17">&#9670;&#160;</a></span>CMD_INVOFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_INVOFF&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inversión de colores desactivada </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00039">39</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00385">GC9A01Invert()</a>.</p>
+
+</div>
+</div>
+<a id="a542d44e81148532d7c809c9a61feb8aa" name="a542d44e81148532d7c809c9a61feb8aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542d44e81148532d7c809c9a61feb8aa">&#9670;&#160;</a></span>CMD_INVON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_INVON&#160;&#160;&#160;0x21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inversión de colores activada </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00040">40</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00385">GC9A01Invert()</a>.</p>
+
+</div>
+</div>
+<a id="a13ad38329e49bc95b232be93535cae89" name="a13ad38329e49bc95b232be93535cae89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13ad38329e49bc95b232be93535cae89">&#9670;&#160;</a></span>CMD_MADCTL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_MADCTL&#160;&#160;&#160;0x36</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control de acceso a memoria (dirección de barrido) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00047">47</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00364">GC9A01Rotate()</a>.</p>
+
+</div>
+</div>
+<a id="a4cb565516cbae737f91547a6d1e13ed1" name="a4cb565516cbae737f91547a6d1e13ed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb565516cbae737f91547a6d1e13ed1">&#9670;&#160;</a></span>CMD_POWER2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_POWER2&#160;&#160;&#160;0xC3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control de alimentación 2 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00052">52</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a97d11b19459866ab1c966ab3e165ae28" name="a97d11b19459866ab1c966ab3e165ae28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97d11b19459866ab1c966ab3e165ae28">&#9670;&#160;</a></span>CMD_POWER3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_POWER3&#160;&#160;&#160;0xC4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control de alimentación 3 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00053">53</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="abfbc67bd6eb009711cafbf214c78cef9" name="abfbc67bd6eb009711cafbf214c78cef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbc67bd6eb009711cafbf214c78cef9">&#9670;&#160;</a></span>CMD_POWER4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_POWER4&#160;&#160;&#160;0xC9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Control de alimentación 4 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00054">54</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a987c997463b48bd31bd59f737b2d5631" name="a987c997463b48bd31bd59f737b2d5631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a987c997463b48bd31bd59f737b2d5631">&#9670;&#160;</a></span>CMD_RAMWR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_RAMWR&#160;&#160;&#160;0x2C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Escritura de memoria de video </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00045">45</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00351">GC9A01DrawPixel()</a>.</p>
+
+</div>
+</div>
+<a id="a73265882d44404cedad246cf9036a8b3" name="a73265882d44404cedad246cf9036a8b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73265882d44404cedad246cf9036a8b3">&#9670;&#160;</a></span>CMD_RASET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_RASET&#160;&#160;&#160;0x2B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Define las filas accesibles de la memoria </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00044">44</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a9c487bf7c38340b2b191c888239963fa" name="a9c487bf7c38340b2b191c888239963fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c487bf7c38340b2b191c888239963fa">&#9670;&#160;</a></span>CMD_SLPIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SLPIN&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Entrar en modo sleep </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00037">37</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00389">GC9A01Sleep()</a>.</p>
+
+</div>
+</div>
+<a id="a7694dbd26d7c80144d0cbb3f7cdf2519" name="a7694dbd26d7c80144d0cbb3f7cdf2519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7694dbd26d7c80144d0cbb3f7cdf2519">&#9670;&#160;</a></span>CMD_SLPOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SLPOUT&#160;&#160;&#160;0x11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Salir del modo sleep </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00038">38</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a> y <a class="el" href="gc9a01_8c_source.html#l00389">GC9A01Sleep()</a>.</p>
+
+</div>
+</div>
+<a id="a96c42ef141d1431fab9bbcb1d54ca289" name="a96c42ef141d1431fab9bbcb1d54ca289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c42ef141d1431fab9bbcb1d54ca289">&#9670;&#160;</a></span>CMD_SWRESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_SWRESET&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reset por software </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00036">36</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a9afae088f9e941a364b276e4cf104090" name="a9afae088f9e941a364b276e4cf104090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9afae088f9e941a364b276e4cf104090">&#9670;&#160;</a></span>CMD_TEON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_TEON&#160;&#160;&#160;0x35</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Línea de tearing effect activada </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00046">46</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="aa6704a11b6a42b8f3fb98f2701fad119" name="aa6704a11b6a42b8f3fb98f2701fad119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6704a11b6a42b8f3fb98f2701fad119">&#9670;&#160;</a></span>COLMOD_RGB565</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLMOD_RGB565&#160;&#160;&#160;0x05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>16 bits por píxel </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00066">66</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ac9d9e5359d0533a94f178aa73ba62efb" name="ac9d9e5359d0533a94f178aa73ba62efb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d9e5359d0533a94f178aa73ba62efb">&#9670;&#160;</a></span>DELAY_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY_FLAG&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bit en la tabla de inicialización que indica esperar luego del comando </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00032">32</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a439375e509def8c94dcc136c05bd0620" name="a439375e509def8c94dcc136c05bd0620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a439375e509def8c94dcc136c05bd0620">&#9670;&#160;</a></span>GC9A01_SPI_BR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_SPI_BR&#160;&#160;&#160;20000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frecuencia del clock SPI en Hz (se puede redefinir) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00026">26</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a9124ec1c470a9dc03b7d327ed5fb7d1d" name="a9124ec1c470a9dc03b7d327ed5fb7d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9124ec1c470a9dc03b7d327ed5fb7d1d">&#9670;&#160;</a></span>INIT_DELAY_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_DELAY_MS&#160;&#160;&#160;150</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Espera luego de los comandos de la tabla con DELAY_FLAG </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00033">33</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a497f6c19c60c0046cc5c33ac62f7ff39" name="a497f6c19c60c0046cc5c33ac62f7ff39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a497f6c19c60c0046cc5c33ac62f7ff39">&#9670;&#160;</a></span>INIT_PARAM_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_PARAM_MAX&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Máxima cantidad de parámetros de un comando de inicialización </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00031">31</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="a659f0d6f0c258a3d91f882a59dfa76f5" name="a659f0d6f0c258a3d91f882a59dfa76f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659f0d6f0c258a3d91f882a59dfa76f5">&#9670;&#160;</a></span>MADCTL_BGR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MADCTL_BGR&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Orden de colores BGR </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00064">64</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00364">GC9A01Rotate()</a>.</p>
+
+</div>
+</div>
+<a id="adc23a239d2b6976d53254ef4fc5d1713" name="adc23a239d2b6976d53254ef4fc5d1713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc23a239d2b6976d53254ef4fc5d1713">&#9670;&#160;</a></span>MADCTL_MV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MADCTL_MV&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Intercambio de filas y columnas </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00063">63</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00364">GC9A01Rotate()</a>.</p>
+
+</div>
+</div>
+<a id="a6d18ed48efb3186877a07d0e81155453" name="a6d18ed48efb3186877a07d0e81155453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d18ed48efb3186877a07d0e81155453">&#9670;&#160;</a></span>MADCTL_MX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MADCTL_MX&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Orden de columnas invertido </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00062">62</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00364">GC9A01Rotate()</a>.</p>
+
+</div>
+</div>
+<a id="ab30e6bd24448245df1d60a3e1c4ddbdf" name="ab30e6bd24448245df1d60a3e1c4ddbdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab30e6bd24448245df1d60a3e1c4ddbdf">&#9670;&#160;</a></span>MADCTL_MY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MADCTL_MY&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Orden de filas invertido </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00061">61</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00364">GC9A01Rotate()</a>.</p>
+
+</div>
+</div>
+<a id="a9711f11384e2fedf13a1702b122532b5" name="a9711f11384e2fedf13a1702b122532b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9711f11384e2fedf13a1702b122532b5">&#9670;&#160;</a></span>TX_BUF_PIXELS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_BUF_PIXELS&#160;&#160;&#160;(<a class="el" href="#a5d3fb1970e1e98050006978a14b3d95e">TX_BUF_SIZE</a> / 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cantidad de píxeles que entran en el buffer </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00030">30</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="a5d3fb1970e1e98050006978a14b3d95e" name="a5d3fb1970e1e98050006978a14b3d95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3fb1970e1e98050006978a14b3d95e">&#9670;&#160;</a></span>TX_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TX_BUF_SIZE&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tamaño del buffer de transmisión en bytes (debe ser par) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00029">29</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00629">GC9A01DrawPicture()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a href="dir_2602097dce81420f4880be8af28b7cd8.html">src</a></li><li class="navelem"><a href="gc9a01_8c.html">gc9a01.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
