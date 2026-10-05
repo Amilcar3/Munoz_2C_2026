@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>P_2_Ejercicio_1: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/drivers/devices/inc/gc9a01.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">P_2_Ejercicio_1<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Regla Ultrasonica</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gc9a01_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">gc9a01.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="gc9a01_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef GC9A01_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define GC9A01_H_</span><span class="preprocessor"></span><span class="preprocessor"></span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/*==================[inclusions]=============================================*/</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;<a class="code" href="spi__mcu_8h.html">spi_mcu.h</a>&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#include &quot;<a class="code" href="fonts_8h.html">fonts.h</a>&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="icons_8h.html">icons.h</a>&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/*==================[macros]=================================================*/</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/* Dimensiones del display */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga3a8ee83d8806d5fd2eea93d6a8ee0e32">   59</a></span><span class="preprocessor">#define GC9A01_WIDTH        240     </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga06dbbc73fcc97ad61eefcebaf8296d09">   60</a></span><span class="preprocessor">#define GC9A01_HEIGHT       240     </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga4525c4bd609083f6278e88ec0ee543e1">   61</a></span><span class="preprocessor">#define GC9A01_CENTER_X     120     </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga0ed2cb2f4403bba61ce22e2886a92176">   62</a></span><span class="preprocessor">#define GC9A01_CENTER_Y     120     </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga9b5abf2299d76b8fd29e2050623008a7">   63</a></span><span class="preprocessor">#define GC9A01_RADIUS       120     </span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gadad4b4228e8402bd3791b6749c015227">   67</a></span><span class="preprocessor">#define GC9A01_NO_RST       0xFF</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga729bc5fd0ef79dff42b83f9b994ea006">   70</a></span><span class="preprocessor">#define GC9A01_COLOR(r, g, b)   ((uint16_t)((((r) &amp; 0xF8) &lt;&lt; 8) | (((g) &amp; 0xFC) &lt;&lt; 3) | ((b) &gt;&gt; 3)))</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">/* Colores de 16 bits (RGB565) */</span>       <span class="comment">/*    R,   G,   B */</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga4eea514b3f10297e83914b978d87ca83">   73</a></span><span class="preprocessor">#define GC9A01_BLACK            0x0000  </span><span class="comment">/*    0,   0,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga1982006bf2c19eed5a37368fd6acb957">   74</a></span><span class="preprocessor">#define GC9A01_NAVY             0x000F  </span><span class="comment">/*    0,   0, 128 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga167d5d76a0862499204fcd5773803501">   75</a></span><span class="preprocessor">#define GC9A01_DARKGREEN        0x03E0  </span><span class="comment">/*    0, 128,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga30bf604c3893dd39aadeb75b3fb50523">   76</a></span><span class="preprocessor">#define GC9A01_DARKCYAN         0x03EF  </span><span class="comment">/*    0, 128, 128 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga334156de59c307da103fa1ac738837f5">   77</a></span><span class="preprocessor">#define GC9A01_MAROON           0x7800  </span><span class="comment">/*  128,   0,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga884af337a1936a7756029e70e8d780f0">   78</a></span><span class="preprocessor">#define GC9A01_PURPLE           0x780F  </span><span class="comment">/*  128,   0, 128 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga48ea061eccd56e91aa4b0fc4a0e836b6">   79</a></span><span class="preprocessor">#define GC9A01_OLIVE            0x7BE0  </span><span class="comment">/*  128, 128,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga7deb06b3b3f578e792247bc8a6ff988c">   80</a></span><span class="preprocessor">#define GC9A01_LIGHTGREY        0xC618  </span><span class="comment">/*  192, 192, 192 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga8f6d63df26ec3e9db15116776a7816df">   81</a></span><span class="preprocessor">#define GC9A01_DARKGREY         0x7BEF  </span><span class="comment">/*  128, 128, 128 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gab58afddf6ae05aaca87fd6ef0159f67f">   82</a></span><span class="preprocessor">#define GC9A01_BLUE             0x001F  </span><span class="comment">/*    0,   0, 255 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga3e6137dedf7cb938878203e7b7ae101b">   83</a></span><span class="preprocessor">#define GC9A01_GREEN            0x07E0  </span><span class="comment">/*    0, 255,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga9ab19194482b72903696eda07ada2718">   84</a></span><span class="preprocessor">#define GC9A01_CYAN             0x07FF  </span><span class="comment">/*    0, 255, 255 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gabfc2288cac7e2a62274be3c0319abd8c">   85</a></span><span class="preprocessor">#define GC9A01_RED              0xF800  </span><span class="comment">/*  255,   0,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga474cd8d628f76b85341b3e2d631e1ffc">   86</a></span><span class="preprocessor">#define GC9A01_MAGENTA          0xF81F  </span><span class="comment">/*  255,   0, 255 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gaa4632c5251987331be3de1bdf948e37a">   87</a></span><span class="preprocessor">#define GC9A01_YELLOW           0xFFE0  </span><span class="comment">/*  255, 255,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga6a1a2592b8671200d66bfdaec6f4b234">   88</a></span><span class="preprocessor">#define GC9A01_WHITE            0xFFFF  </span><span class="comment">/*  255, 255, 255 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga6646232af8eed7112a8707ce254afef4">   89</a></span><span class="preprocessor">#define GC9A01_ORANGE           0xFD20  </span><span class="comment">/*  255, 165,   0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga72b44f262bdcbe624167846dad3e0b73">   90</a></span><span class="preprocessor">#define GC9A01_GREENYELLOW      0xAFE5  </span><span class="comment">/*  173, 255,  47 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga29ef2d50acac88b96b414fc3a9380af8">   91</a></span><span class="preprocessor">#define GC9A01_PINK             0xFC18  </span><span class="comment">/*  255, 130, 198 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">/*==================[typedef]================================================*/</span></div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="};">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga35a060331ab5261b48abcfedde124137">   96</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="group___g_c9_a01.html#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a> {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3">   97</a></span>    <a class="code hl_enumvalue" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3">GC9A01_ROTATION_0</a>,      </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39">   98</a></span>    <a class="code hl_enumvalue" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39">GC9A01_ROTATION_90</a>,     </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c">   99</a></span>    <a class="code hl_enumvalue" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c">GC9A01_ROTATION_180</a>,    </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257">  100</a></span>    <a class="code hl_enumvalue" href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257">GC9A01_ROTATION_270</a>     </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="group___g_c9_a01.html#ga7c7b92836c55752912d2b1120216b446">  101</a></span>} <a class="code hl_typedef" href="group___g_c9_a01.html#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a>;</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">/*==================[external data declaration]==============================*/</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">/*==================[external functions declaration]=========================*/</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>uint8_t <a class="code hl_function" href="group___g_c9_a01.html#gab98bba7e34a665ce7defdc3883a41c4f">GC9A01Init</a>(<a class="code hl_typedef" href="group___s_p_i.html#ga7d468ea862538a179a76e97b9085f075">spi_dev_t</a> spi_dev, uint8_t gpio_dc, uint8_t gpio_rst);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga9f66c7d62a651c8622f06c5420ba31bb">GC9A01DrawPixel</a>(uint16_t x, uint16_t y, uint16_t color);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#gabfddd9754277f82ac98b86d70a2936a9">GC9A01Fill</a>(uint16_t color);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#gaf296c866e3e6d7ce46792bc36cee1a55">GC9A01Rotate</a>(<a class="code hl_typedef" href="group___g_c9_a01.html#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a> rotation);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#gaa9ae53ecfbf183d193cac3014cbee69d">GC9A01Invert</a>(<span class="keywordtype">bool</span> invert);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga6f46020455db5580ab1ab4a95b6ed357">GC9A01Sleep</a>(<span class="keywordtype">bool</span> sleep);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keywordtype">bool</span> <a class="code hl_function" href="group___g_c9_a01.html#gaea6616658f8d75e0cf3d191d5788e6e6">GC9A01IsVisible</a>(uint16_t x, uint16_t y);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga05d860a311c5fd723e38445aecfc6bae">GC9A01DrawChar</a>(uint16_t x, uint16_t y, <span class="keywordtype">char</span> data, <span class="keyword">const</span> <a class="code hl_struct" href="struct_font__t.html">Font_t</a>* font, uint16_t foreground, uint16_t background);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga9057ce8c780f072662c0cda73b42ea85">GC9A01DrawIcon</a>(uint16_t x, uint16_t y, <a class="code hl_enumeration" href="group___i_c_o_n_s.html#ga945c9cb2ded81b38da222e91d09df40b">icon_t</a> icon, <span class="keyword">const</span> <a class="code hl_struct" href="structicon__font__t.html">icon_font_t</a>* icon_font, uint16_t foreground, uint16_t background);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#gae225f030628f5cc25bb8f44b86d98419">GC9A01DrawInt</a>(uint16_t x, uint16_t y, uint32_t num, uint8_t dig, <span class="keyword">const</span> <a class="code hl_struct" href="struct_font__t.html">Font_t</a>* font, uint16_t foreground, uint16_t background);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga3a8fabebccf799b3eeb7c1a07eaadbb8">GC9A01DrawString</a>(uint16_t x, uint16_t y, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code hl_struct" href="struct_font__t.html">Font_t</a> *font, uint16_t foreground, uint16_t background);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga1d2f36602472ca0d33821f79c6b99f11">GC9A01GetStringSize</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code hl_struct" href="struct_font__t.html">Font_t</a>* font, uint16_t* width, uint16_t* height);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga390a949658f27dc576780b964b0d6111">GC9A01DrawLine</a>(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga97c71ab34d185fcbd175612ff6852a00">GC9A01DrawRectangle</a>(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga24cc5421859284ac70997a3d5885ccc3">GC9A01DrawFilledRectangle</a>(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga8c5d84f7509392f6635025d094a26ade">GC9A01DrawCircle</a>(int16_t x0, int16_t y0, int16_t r, uint16_t color);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga9e503046c4f764ea6c6d190c17f97874">GC9A01DrawFilledCircle</a>(int16_t x0, int16_t y0, int16_t r, uint16_t color);</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga521c3050df779f5f0a8bf70df8de84f6">GC9A01DrawTriangle</a>(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#gabee76a1d7ac171860bc54bcc855483d4">GC9A01DrawFilledTriangle</a>(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___g_c9_a01.html#ga2bc2fddcdffe3b489f187dfb39394d96">GC9A01DrawPicture</a>(uint16_t x, uint16_t y, uint16_t width, uint16_t height, <span class="keyword">const</span> uint8_t* pic);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span></div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>uint8_t <a class="code hl_function" href="group___g_c9_a01.html#ga49f30e05ccd435918aec9d060528d173">GC9A01DeInit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="preprocessor">#endif </span><span class="comment">/* GC9A01_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">/*==================[end of file]============================================*/</span></div>
+<div class="ttc" id="afonts_8h_html"><div class="ttname"><a href="fonts_8h.html">fonts.h</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga05d860a311c5fd723e38445aecfc6bae"><div class="ttname"><a href="group___g_c9_a01.html#ga05d860a311c5fd723e38445aecfc6bae">GC9A01DrawChar</a></div><div class="ttdeci">void GC9A01DrawChar(uint16_t x, uint16_t y, char data, const Font_t *font, uint16_t foreground, uint16_t background)</div><div class="ttdoc">Dibuja un caracter en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00407">gc9a01.c:407</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga1d2f36602472ca0d33821f79c6b99f11"><div class="ttname"><a href="group___g_c9_a01.html#ga1d2f36602472ca0d33821f79c6b99f11">GC9A01GetStringSize</a></div><div class="ttdeci">void GC9A01GetStringSize(const char *str, const Font_t *font, uint16_t *width, uint16_t *height)</div><div class="ttdoc">Obtiene el ancho y alto que ocupa una cadena de caracteres.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00464">gc9a01.c:464</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga24cc5421859284ac70997a3d5885ccc3"><div class="ttname"><a href="group___g_c9_a01.html#ga24cc5421859284ac70997a3d5885ccc3">GC9A01DrawFilledRectangle</a></div><div class="ttdeci">void GC9A01DrawFilledRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</div><div class="ttdoc">Dibuja un rectángulo relleno en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00537">gc9a01.c:537</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga2bc2fddcdffe3b489f187dfb39394d96"><div class="ttname"><a href="group___g_c9_a01.html#ga2bc2fddcdffe3b489f187dfb39394d96">GC9A01DrawPicture</a></div><div class="ttdeci">void GC9A01DrawPicture(uint16_t x, uint16_t y, uint16_t width, uint16_t height, const uint8_t *pic)</div><div class="ttdoc">Dibuja una imagen en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00629">gc9a01.c:629</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga35a060331ab5261b48abcfedde124137"><div class="ttname"><a href="group___g_c9_a01.html#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a></div><div class="ttdeci">gc9a01_rotation</div><div class="ttdoc">Rotaciones posibles del display (múltiplos de 90 grados).</div><div class="ttdef"><b>Definition</b> <a href="#l00096">gc9a01.h:96</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga390a949658f27dc576780b964b0d6111"><div class="ttname"><a href="group___g_c9_a01.html#ga390a949658f27dc576780b964b0d6111">GC9A01DrawLine</a></div><div class="ttdeci">void GC9A01DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</div><div class="ttdoc">Dibuja una línea en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00476">gc9a01.c:476</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga3a8fabebccf799b3eeb7c1a07eaadbb8"><div class="ttname"><a href="group___g_c9_a01.html#ga3a8fabebccf799b3eeb7c1a07eaadbb8">GC9A01DrawString</a></div><div class="ttdeci">void GC9A01DrawString(uint16_t x, uint16_t y, const char *str, const Font_t *font, uint16_t foreground, uint16_t background)</div><div class="ttdoc">Dibuja una cadena de caracteres en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00447">gc9a01.c:447</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga49f30e05ccd435918aec9d060528d173"><div class="ttname"><a href="group___g_c9_a01.html#ga49f30e05ccd435918aec9d060528d173">GC9A01DeInit</a></div><div class="ttdeci">uint8_t GC9A01DeInit(void)</div><div class="ttdoc">Desinicializa el display (apaga la pantalla).</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00662">gc9a01.c:662</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga521c3050df779f5f0a8bf70df8de84f6"><div class="ttname"><a href="group___g_c9_a01.html#ga521c3050df779f5f0a8bf70df8de84f6">GC9A01DrawTriangle</a></div><div class="ttdeci">void GC9A01DrawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</div><div class="ttdoc">Dibuja el contorno de un triángulo en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00587">gc9a01.c:587</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga6f46020455db5580ab1ab4a95b6ed357"><div class="ttname"><a href="group___g_c9_a01.html#ga6f46020455db5580ab1ab4a95b6ed357">GC9A01Sleep</a></div><div class="ttdeci">void GC9A01Sleep(bool sleep)</div><div class="ttdoc">Entra o sale del modo de bajo consumo (sleep) del controlador.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00389">gc9a01.c:389</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga7c7b92836c55752912d2b1120216b446"><div class="ttname"><a href="group___g_c9_a01.html#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a></div><div class="ttdeci">enum gc9a01_rotation gc9a01_rotation_t</div><div class="ttdoc">Rotaciones posibles del display (múltiplos de 90 grados).</div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga8c5d84f7509392f6635025d094a26ade"><div class="ttname"><a href="group___g_c9_a01.html#ga8c5d84f7509392f6635025d094a26ade">GC9A01DrawCircle</a></div><div class="ttdeci">void GC9A01DrawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</div><div class="ttdoc">Dibuja el contorno de un círculo en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00541">gc9a01.c:541</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga9057ce8c780f072662c0cda73b42ea85"><div class="ttname"><a href="group___g_c9_a01.html#ga9057ce8c780f072662c0cda73b42ea85">GC9A01DrawIcon</a></div><div class="ttdeci">void GC9A01DrawIcon(uint16_t x, uint16_t y, icon_t icon, const icon_font_t *icon_font, uint16_t foreground, uint16_t background)</div><div class="ttdoc">Dibuja un ícono en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00416">gc9a01.c:416</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga97c71ab34d185fcbd175612ff6852a00"><div class="ttname"><a href="group___g_c9_a01.html#ga97c71ab34d185fcbd175612ff6852a00">GC9A01DrawRectangle</a></div><div class="ttdeci">void GC9A01DrawRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</div><div class="ttdoc">Dibuja el contorno de un rectángulo en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00527">gc9a01.c:527</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga9e503046c4f764ea6c6d190c17f97874"><div class="ttname"><a href="group___g_c9_a01.html#ga9e503046c4f764ea6c6d190c17f97874">GC9A01DrawFilledCircle</a></div><div class="ttdeci">void GC9A01DrawFilledCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color)</div><div class="ttdoc">Dibuja un círculo relleno en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00566">gc9a01.c:566</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_ga9f66c7d62a651c8622f06c5420ba31bb"><div class="ttname"><a href="group___g_c9_a01.html#ga9f66c7d62a651c8622f06c5420ba31bb">GC9A01DrawPixel</a></div><div class="ttdeci">void GC9A01DrawPixel(uint16_t x, uint16_t y, uint16_t color)</div><div class="ttdoc">Dibuja un píxel en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00351">gc9a01.c:351</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gaa9ae53ecfbf183d193cac3014cbee69d"><div class="ttname"><a href="group___g_c9_a01.html#gaa9ae53ecfbf183d193cac3014cbee69d">GC9A01Invert</a></div><div class="ttdeci">void GC9A01Invert(bool invert)</div><div class="ttdoc">Activa o desactiva la inversión de colores del display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00385">gc9a01.c:385</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gab98bba7e34a665ce7defdc3883a41c4f"><div class="ttname"><a href="group___g_c9_a01.html#gab98bba7e34a665ce7defdc3883a41c4f">GC9A01Init</a></div><div class="ttdeci">uint8_t GC9A01Init(spi_dev_t spi_dev, uint8_t gpio_dc, uint8_t gpio_rst)</div><div class="ttdoc">Inicializa el display GC9A01.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00290">gc9a01.c:290</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gabee76a1d7ac171860bc54bcc855483d4"><div class="ttname"><a href="group___g_c9_a01.html#gabee76a1d7ac171860bc54bcc855483d4">GC9A01DrawFilledTriangle</a></div><div class="ttdeci">void GC9A01DrawFilledTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color)</div><div class="ttdoc">Dibuja un triángulo relleno en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00594">gc9a01.c:594</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gabfddd9754277f82ac98b86d70a2936a9"><div class="ttname"><a href="group___g_c9_a01.html#gabfddd9754277f82ac98b86d70a2936a9">GC9A01Fill</a></div><div class="ttdeci">void GC9A01Fill(uint16_t color)</div><div class="ttdoc">Llena todo el display con un color.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00360">gc9a01.c:360</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gae225f030628f5cc25bb8f44b86d98419"><div class="ttname"><a href="group___g_c9_a01.html#gae225f030628f5cc25bb8f44b86d98419">GC9A01DrawInt</a></div><div class="ttdeci">void GC9A01DrawInt(uint16_t x, uint16_t y, uint32_t num, uint8_t dig, const Font_t *font, uint16_t foreground, uint16_t background)</div><div class="ttdoc">Dibuja un número entero en el display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00421">gc9a01.c:421</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gaea6616658f8d75e0cf3d191d5788e6e6"><div class="ttname"><a href="group___g_c9_a01.html#gaea6616658f8d75e0cf3d191d5788e6e6">GC9A01IsVisible</a></div><div class="ttdeci">bool GC9A01IsVisible(uint16_t x, uint16_t y)</div><div class="ttdoc">Indica si un punto está dentro del círculo visible del display.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00399">gc9a01.c:399</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gaf296c866e3e6d7ce46792bc36cee1a55"><div class="ttname"><a href="group___g_c9_a01.html#gaf296c866e3e6d7ce46792bc36cee1a55">GC9A01Rotate</a></div><div class="ttdeci">void GC9A01Rotate(gc9a01_rotation_t rotation)</div><div class="ttdoc">Rota el display a una orientación determinada.</div><div class="ttdef"><b>Definition</b> <a href="gc9a01_8c_source.html#l00364">gc9a01.c:364</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257"><div class="ttname"><a href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257">GC9A01_ROTATION_270</a></div><div class="ttdeci">@ GC9A01_ROTATION_270</div><div class="ttdef"><b>Definition</b> <a href="#l00100">gc9a01.h:100</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c"><div class="ttname"><a href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c">GC9A01_ROTATION_180</a></div><div class="ttdeci">@ GC9A01_ROTATION_180</div><div class="ttdef"><b>Definition</b> <a href="#l00099">gc9a01.h:99</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3"><div class="ttname"><a href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3">GC9A01_ROTATION_0</a></div><div class="ttdeci">@ GC9A01_ROTATION_0</div><div class="ttdef"><b>Definition</b> <a href="#l00097">gc9a01.h:97</a></div></div>
+<div class="ttc" id="agroup___g_c9_a01_html_gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39"><div class="ttname"><a href="group___g_c9_a01.html#gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39">GC9A01_ROTATION_90</a></div><div class="ttdeci">@ GC9A01_ROTATION_90</div><div class="ttdef"><b>Definition</b> <a href="#l00098">gc9a01.h:98</a></div></div>
+<div class="ttc" id="agroup___i_c_o_n_s_html_ga945c9cb2ded81b38da222e91d09df40b"><div class="ttname"><a href="group___i_c_o_n_s.html#ga945c9cb2ded81b38da222e91d09df40b">icon_t</a></div><div class="ttdeci">icon_t</div><div class="ttdoc">Monochromatic icons for LCD display.</div><div class="ttdef"><b>Definition</b> <a href="icons_8h_source.html#l00034">icons.h:34</a></div></div>
+<div class="ttc" id="agroup___s_p_i_html_ga7d468ea862538a179a76e97b9085f075"><div class="ttname"><a href="group___s_p_i.html#ga7d468ea862538a179a76e97b9085f075">spi_dev_t</a></div><div class="ttdeci">enum spi_devices spi_dev_t</div><div class="ttdoc">SPI driver for the ESP-EDU Board.</div></div>
+<div class="ttc" id="aicons_8h_html"><div class="ttname"><a href="icons_8h.html">icons.h</a></div></div>
+<div class="ttc" id="aspi__mcu_8h_html"><div class="ttname"><a href="spi__mcu_8h.html">spi_mcu.h</a></div></div>
+<div class="ttc" id="astruct_font__t_html"><div class="ttname"><a href="struct_font__t.html">Font_t</a></div><div class="ttdoc">Font structure.</div><div class="ttdef"><b>Definition</b> <a href="fonts_8h_source.html#l00043">fonts.h:43</a></div></div>
+<div class="ttc" id="astructicon__font__t_html"><div class="ttname"><a href="structicon__font__t.html">icon_font_t</a></div><div class="ttdoc">Icon font structure.</div><div class="ttdef"><b>Definition</b> <a href="icons_8h_source.html#l00104">icons.h:104</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_4774754e228843183aac8de48667fdde.html">drivers</a></li><li class="navelem"><a href="dir_01f3b75bad316aed7476a5f4cbb25c84.html">devices</a></li><li class="navelem"><a href="dir_ec09302fb0adc1632f5eb1743ad0d2a7.html">inc</a></li><li class="navelem"><a href="gc9a01_8h.html">gc9a01.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
