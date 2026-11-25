@@ -1,0 +1,1065 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/frogfs/include/frogfs/frogfs.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('frogfs_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo frogfs.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="frogfs__types_8h_source.html">frogfs_types.h</a>&quot;</code><br />
+</div>
+<p><a href="frogfs_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:frogfs_5Fconfig_5Ft" id="r_frogfs_5Fconfig_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfrogfs__config__t.html">frogfs_config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for the <em class="arg">frogfs_init</em> function.  <a href="structfrogfs__config__t.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:frogfs_5Fstat_5Ft" id="r_frogfs_5Fstat_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfrogfs__stat__t.html">frogfs_stat_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure filled by the <em class="arg">frogfs_stat</em> function.  <a href="structfrogfs__stat__t.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:frogfs_5Fdh_5Ft" id="r_frogfs_5Fdh_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A frogfs directory handle.  <a href="structfrogfs__dh__t.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:frogfs_5Ffh_5Ft" id="r_frogfs_5Ffh_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A frogfs file handle.  <a href="structfrogfs__fh__t.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9aa8ea0487ecd27f5b1c660f9bc956ed" id="r_a9aa8ea0487ecd27f5b1c660f9bc956ed"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9aa8ea0487ecd27f5b1c660f9bc956ed">FROGFS_MAGIC</a>&#160;&#160;&#160;0x474F5246 /** FROG */</td></tr>
+<tr class="memdesc:a9aa8ea0487ecd27f5b1c660f9bc956ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Magic number used in the frogfs file header.  <br /></td></tr>
+<tr class="memitem:a63fc05c29609d5384376a78b69c9510d" id="r_a63fc05c29609d5384376a78b69c9510d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a63fc05c29609d5384376a78b69c9510d">FROGFS_VER_MAJOR</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a63fc05c29609d5384376a78b69c9510d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Major version this source distribution supports.  <br /></td></tr>
+<tr class="memitem:a019d4ae2062c738aaf994d43ec6385b7" id="r_a019d4ae2062c738aaf994d43ec6385b7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a019d4ae2062c738aaf994d43ec6385b7">FROGFS_VER_MINOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a019d4ae2062c738aaf994d43ec6385b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minor version this source distribution supports.  <br /></td></tr>
+<tr class="memitem:af1ebb4a212412d5b99ca106f4f492f87" id="r_af1ebb4a212412d5b99ca106f4f492f87"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af1ebb4a212412d5b99ca106f4f492f87">FROGFS_OPEN_RAW</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="memdesc:af1ebb4a212412d5b99ca106f4f492f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for <em class="arg">frogfs_open</em> to open any file as raw. Useful to pass compressed data over a transport such as HTTP.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:af1d2f4cc2a7356d5333ab68867946550" id="r_af1d2f4cc2a7356d5333ab68867946550"><td class="memItemLeft">typedef enum <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1">frogfs_entry_type_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af1d2f4cc2a7356d5333ab68867946550">frogfs_entry_type_t</a></td></tr>
+<tr class="memdesc:af1d2f4cc2a7356d5333ab68867946550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of frogfs entry types.  <br /></td></tr>
+<tr class="memitem:a2d72edbfa26e468990c4ef62fdc84f8f" id="r_a2d72edbfa26e468990c4ef62fdc84f8f"><td class="memItemLeft">typedef enum <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">frogfs_comp_algo_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2d72edbfa26e468990c4ef62fdc84f8f">frogfs_comp_algo_t</a></td></tr>
+<tr class="memdesc:a2d72edbfa26e468990c4ef62fdc84f8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression algorithm ids.  <br /></td></tr>
+<tr class="memitem:a8f7bc0d1b5bfe20db69f92c3e10e698f" id="r_a8f7bc0d1b5bfe20db69f92c3e10e698f"><td class="memItemLeft">typedef struct frogfs_config_t&#160;</td><td class="memItemRight"><a class="el" href="#a8f7bc0d1b5bfe20db69f92c3e10e698f">frogfs_config_t</a></td></tr>
+<tr class="memdesc:a8f7bc0d1b5bfe20db69f92c3e10e698f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration for the <em class="arg">frogfs_init</em> function.  <br /></td></tr>
+<tr class="memitem:a388c40ddcc4a20deb8edb3341ee4426b" id="r_a388c40ddcc4a20deb8edb3341ee4426b"><td class="memItemLeft">typedef struct <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a></td></tr>
+<tr class="memdesc:a388c40ddcc4a20deb8edb3341ee4426b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A frogfs filesystem handle.  <br /></td></tr>
+<tr class="memitem:abb3bb561e37238bf8e34f10f29e16872" id="r_abb3bb561e37238bf8e34f10f29e16872"><td class="memItemLeft">typedef struct frogfs_stat_t&#160;</td><td class="memItemRight"><a class="el" href="#abb3bb561e37238bf8e34f10f29e16872">frogfs_stat_t</a></td></tr>
+<tr class="memdesc:abb3bb561e37238bf8e34f10f29e16872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure filled by the <em class="arg">frogfs_stat</em> function.  <br /></td></tr>
+<tr class="memitem:a5fadf7336d987bb6050ee6fe54af15fa" id="r_a5fadf7336d987bb6050ee6fe54af15fa"><td class="memItemLeft">typedef struct frogfs_entry_t&#160;</td><td class="memItemRight"><a class="el" href="#a5fadf7336d987bb6050ee6fe54af15fa">frogfs_entry_t</a></td></tr>
+<tr class="memdesc:a5fadf7336d987bb6050ee6fe54af15fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fiilesystem entry pointer.  <br /></td></tr>
+<tr class="memitem:a150c683e080702fee52bc690aad16b53" id="r_a150c683e080702fee52bc690aad16b53"><td class="memItemLeft">typedef struct frogfs_dh_t&#160;</td><td class="memItemRight"><a class="el" href="#a150c683e080702fee52bc690aad16b53">frogfs_dh_t</a></td></tr>
+<tr class="memitem:ac17e44dacf2d40052f351a82258afc5e" id="r_ac17e44dacf2d40052f351a82258afc5e"><td class="memItemLeft">typedef struct frogfs_fh_t&#160;</td><td class="memItemRight"><a class="el" href="#ac17e44dacf2d40052f351a82258afc5e">frogfs_fh_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ad02060de27bb3f72ddb866f3860858e1" id="r_ad02060de27bb3f72ddb866f3860858e1"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ad02060de27bb3f72ddb866f3860858e1">frogfs_entry_type_t</a> { <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1a5d971c7a4d83ac800e8bfcdb34fe8989">FROGFS_ENTRY_TYPE_DIR</a>
+, <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1a6ec52feedad7eaeee49e24fad8e3c133">FROGFS_ENTRY_TYPE_FILE</a>
+ }</td></tr>
+<tr class="memdesc:ad02060de27bb3f72ddb866f3860858e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of frogfs entry types.  <a href="#ad02060de27bb3f72ddb866f3860858e1">Más...</a><br /></td></tr>
+<tr class="memitem:a43eac5e9ec9f51bc2a867a7cbb7209a6" id="r_a43eac5e9ec9f51bc2a867a7cbb7209a6"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">frogfs_comp_algo_t</a> { <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6a0338001aec2a3edc168599ae761c5b99">FROGFS_COMP_ALGO_NONE</a>
+, <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6a17c6e20b76810c076a448b7edb999937">FROGFS_COMP_ALGO_ZLIB</a>
+, <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6ab263d5517bce3a40366b0f31b8d01159">FROGFS_COMP_ALGO_HEATSHRINK</a>
+, <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6a7c3cb817ee288230514c1d9d53b6471d">FROGFS_COMP_ALGO_GZIP</a>
+ }</td></tr>
+<tr class="memdesc:a43eac5e9ec9f51bc2a867a7cbb7209a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression algorithm ids.  <a href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a3cd293bda6e6814bfa27dc3771974400" id="r_a3cd293bda6e6814bfa27dc3771974400"><td class="memItemLeft"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3cd293bda6e6814bfa27dc3771974400">frogfs_init</a> (const <a class="el" href="structfrogfs__config__t.html">frogfs_config_t</a> *conf)</td></tr>
+<tr class="memdesc:a3cd293bda6e6814bfa27dc3771974400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize and return a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance.  <br /></td></tr>
+<tr class="memitem:aad1ff95d5c5b312f7f68bcc33bc0983e" id="r_aad1ff95d5c5b312f7f68bcc33bc0983e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aad1ff95d5c5b312f7f68bcc33bc0983e">frogfs_deinit</a> (<a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs)</td></tr>
+<tr class="memdesc:aad1ff95d5c5b312f7f68bcc33bc0983e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tear down a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance.  <br /></td></tr>
+<tr class="memitem:a147d6dfbf61f14647c8fa7c37e26a39f" id="r_a147d6dfbf61f14647c8fa7c37e26a39f"><td class="memItemLeft">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a147d6dfbf61f14647c8fa7c37e26a39f">frogfs_get_entry</a> (const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs, const char *path)</td></tr>
+<tr class="memdesc:a147d6dfbf61f14647c8fa7c37e26a39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get frogfs entry for path.  <br /></td></tr>
+<tr class="memitem:a23880d70f8dc382a3d072b277bac3c20" id="r_a23880d70f8dc382a3d072b277bac3c20"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a23880d70f8dc382a3d072b277bac3c20">frogfs_get_name</a> (const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry)</td></tr>
+<tr class="memdesc:a23880d70f8dc382a3d072b277bac3c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name for frogfs entry.  <br /></td></tr>
+<tr class="memitem:a5b3a7ede4f56ada81913a147c75ec02f" id="r_a5b3a7ede4f56ada81913a147c75ec02f"><td class="memItemLeft">char *&#160;</td><td class="memItemRight"><a class="el" href="#a5b3a7ede4f56ada81913a147c75ec02f">frogfs_get_path</a> (const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs, const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry)</td></tr>
+<tr class="memdesc:a5b3a7ede4f56ada81913a147c75ec02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full path for frogfs entry.  <br /></td></tr>
+<tr class="memitem:a78ae34e4745da0aa7d9947e37211c04f" id="r_a78ae34e4745da0aa7d9947e37211c04f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a78ae34e4745da0aa7d9947e37211c04f">frogfs_is_dir</a> (const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry)</td></tr>
+<tr class="memdesc:a78ae34e4745da0aa7d9947e37211c04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if entry is a directory.  <br /></td></tr>
+<tr class="memitem:acddf6c41eba34780412b34108d47ef25" id="r_acddf6c41eba34780412b34108d47ef25"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#acddf6c41eba34780412b34108d47ef25">frogfs_is_file</a> (const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry)</td></tr>
+<tr class="memdesc:acddf6c41eba34780412b34108d47ef25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if entry is a file.  <br /></td></tr>
+<tr class="memitem:ab15f4e7d153ea696127928885d20a229" id="r_ab15f4e7d153ea696127928885d20a229"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab15f4e7d153ea696127928885d20a229">frogfs_stat</a> (const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs, const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry, <a class="el" href="structfrogfs__stat__t.html">frogfs_stat_t</a> *st)</td></tr>
+<tr class="memdesc:ab15f4e7d153ea696127928885d20a229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get information about a frogfs entry.  <br /></td></tr>
+<tr class="memitem:a271e38abf0007e612b5c72e7dad6e815" id="r_a271e38abf0007e612b5c72e7dad6e815"><td class="memItemLeft"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a271e38abf0007e612b5c72e7dad6e815">frogfs_open</a> (const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs, const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry, unsigned int flags)</td></tr>
+<tr class="memdesc:a271e38abf0007e612b5c72e7dad6e815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a frogfs entry as a file from a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance.  <br /></td></tr>
+<tr class="memitem:abbe368892659ca63c3756adbc201f446" id="r_abbe368892659ca63c3756adbc201f446"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abbe368892659ca63c3756adbc201f446">frogfs_close</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh)</td></tr>
+<tr class="memdesc:abbe368892659ca63c3756adbc201f446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close an open file entry.  <br /></td></tr>
+<tr class="memitem:a4be5c32d437c97e0e3dcffc2c741cc86" id="r_a4be5c32d437c97e0e3dcffc2c741cc86"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4be5c32d437c97e0e3dcffc2c741cc86">frogfs_is_raw</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh)</td></tr>
+<tr class="memdesc:a4be5c32d437c97e0e3dcffc2c741cc86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine if file handle is opened raw.  <br /></td></tr>
+<tr class="memitem:a0621b5201c355629d4e6ff9e161dc76e" id="r_a0621b5201c355629d4e6ff9e161dc76e"><td class="memItemLeft"><a class="el" href="frogfs__types_8h.html#a181ea1146e92780d7bf630454c9e954c">frogfs_ssize_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0621b5201c355629d4e6ff9e161dc76e">frogfs_read</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh, void *buf, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> len)</td></tr>
+<tr class="memdesc:a0621b5201c355629d4e6ff9e161dc76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from an open file entry.  <br /></td></tr>
+<tr class="memitem:abc0b9e0cc094e83cfb1ed602fc8004ba" id="r_abc0b9e0cc094e83cfb1ed602fc8004ba"><td class="memItemLeft"><a class="el" href="frogfs__types_8h.html#a181ea1146e92780d7bf630454c9e954c">frogfs_ssize_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#abc0b9e0cc094e83cfb1ed602fc8004ba">frogfs_seek</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh, long offset, int mode)</td></tr>
+<tr class="memdesc:abc0b9e0cc094e83cfb1ed602fc8004ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek to a position within an open file entry.  <br /></td></tr>
+<tr class="memitem:a0f3843f935b8accb62b1caabdee87a7c" id="r_a0f3843f935b8accb62b1caabdee87a7c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0f3843f935b8accb62b1caabdee87a7c">frogfs_tell</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh)</td></tr>
+<tr class="memdesc:a0f3843f935b8accb62b1caabdee87a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current position in an open file entry.  <br /></td></tr>
+<tr class="memitem:a0fc1d7a6a599651601aa30d15f26eed3" id="r_a0fc1d7a6a599651601aa30d15f26eed3"><td class="memItemLeft"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0fc1d7a6a599651601aa30d15f26eed3">frogfs_access</a> (<a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *fh, const void **buf)</td></tr>
+<tr class="memdesc:a0fc1d7a6a599651601aa30d15f26eed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get raw memory for raw file entry.  <br /></td></tr>
+<tr class="memitem:aaa0e36b38008978a59ee3caa5699f22e" id="r_aaa0e36b38008978a59ee3caa5699f22e"><td class="memItemLeft"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaa0e36b38008978a59ee3caa5699f22e">frogfs_opendir</a> (<a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *fs, const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *entry)</td></tr>
+<tr class="memdesc:aaa0e36b38008978a59ee3caa5699f22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a directory for reading child entrys.  <br /></td></tr>
+<tr class="memitem:a10c5d98eff06f20cfd722f3918b26142" id="r_a10c5d98eff06f20cfd722f3918b26142"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a10c5d98eff06f20cfd722f3918b26142">frogfs_closedir</a> (<a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *dh)</td></tr>
+<tr class="memdesc:a10c5d98eff06f20cfd722f3918b26142"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a directory.  <br /></td></tr>
+<tr class="memitem:a14a779ab4d2dba6dbca33910b553ef27" id="r_a14a779ab4d2dba6dbca33910b553ef27"><td class="memItemLeft">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a14a779ab4d2dba6dbca33910b553ef27">frogfs_readdir</a> (<a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *dh)</td></tr>
+<tr class="memdesc:a14a779ab4d2dba6dbca33910b553ef27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next child entry in directory.  <br /></td></tr>
+<tr class="memitem:addfc590cee6988c4a94bdfcccb38096f" id="r_addfc590cee6988c4a94bdfcccb38096f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#addfc590cee6988c4a94bdfcccb38096f">frogfs_seekdir</a> (<a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *dh, long loc)</td></tr>
+<tr class="memdesc:addfc590cee6988c4a94bdfcccb38096f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dir entry index to a value returned by <em class="arg">frogfs_telldir</em> for the current <em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer.  <br /></td></tr>
+<tr class="memitem:a92ce583bfca3b471ca14a8ed2f829143" id="r_a92ce583bfca3b471ca14a8ed2f829143"><td class="memItemLeft">long&#160;</td><td class="memItemRight"><a class="el" href="#a92ce583bfca3b471ca14a8ed2f829143">frogfs_telldir</a> (<a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *dh)</td></tr>
+<tr class="memdesc:a92ce583bfca3b471ca14a8ed2f829143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current entry index for a directory.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9aa8ea0487ecd27f5b1c660f9bc956ed" name="a9aa8ea0487ecd27f5b1c660f9bc956ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa8ea0487ecd27f5b1c660f9bc956ed">&#9670;&#160;</a></span>FROGFS_MAGIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FROGFS_MAGIC&#160;&#160;&#160;0x474F5246 /** FROG */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Magic number used in the frogfs file header. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00019">19</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="af1ebb4a212412d5b99ca106f4f492f87" name="af1ebb4a212412d5b99ca106f4f492f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ebb4a212412d5b99ca106f4f492f87">&#9670;&#160;</a></span>FROGFS_OPEN_RAW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FROGFS_OPEN_RAW&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag for <em class="arg">frogfs_open</em> to open any file as raw. Useful to pass compressed data over a transport such as HTTP. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00035">35</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="a63fc05c29609d5384376a78b69c9510d" name="a63fc05c29609d5384376a78b69c9510d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63fc05c29609d5384376a78b69c9510d">&#9670;&#160;</a></span>FROGFS_VER_MAJOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FROGFS_VER_MAJOR&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Major version this source distribution supports. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00024">24</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="a019d4ae2062c738aaf994d43ec6385b7" name="a019d4ae2062c738aaf994d43ec6385b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a019d4ae2062c738aaf994d43ec6385b7">&#9670;&#160;</a></span>FROGFS_VER_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FROGFS_VER_MINOR&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minor version this source distribution supports. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00029">29</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a2d72edbfa26e468990c4ef62fdc84f8f" name="a2d72edbfa26e468990c4ef62fdc84f8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d72edbfa26e468990c4ef62fdc84f8f">&#9670;&#160;</a></span>frogfs_comp_algo_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">frogfs_comp_algo_t</a> <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">frogfs_comp_algo_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compression algorithm ids. </p>
+
+</div>
+</div>
+<a id="a8f7bc0d1b5bfe20db69f92c3e10e698f" name="a8f7bc0d1b5bfe20db69f92c3e10e698f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f7bc0d1b5bfe20db69f92c3e10e698f">&#9670;&#160;</a></span>frogfs_config_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct frogfs_config_t frogfs_config_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration for the <em class="arg">frogfs_init</em> function. </p>
+
+</div>
+</div>
+<a id="a150c683e080702fee52bc690aad16b53" name="a150c683e080702fee52bc690aad16b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a150c683e080702fee52bc690aad16b53">&#9670;&#160;</a></span>frogfs_dh_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct frogfs_dh_t frogfs_dh_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00081">81</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="a5fadf7336d987bb6050ee6fe54af15fa" name="a5fadf7336d987bb6050ee6fe54af15fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fadf7336d987bb6050ee6fe54af15fa">&#9670;&#160;</a></span>frogfs_entry_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct frogfs_entry_t frogfs_entry_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fiilesystem entry pointer. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00080">80</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="af1d2f4cc2a7356d5333ab68867946550" name="af1d2f4cc2a7356d5333ab68867946550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d2f4cc2a7356d5333ab68867946550">&#9670;&#160;</a></span>frogfs_entry_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1">frogfs_entry_type_t</a> <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1">frogfs_entry_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum of frogfs entry types. </p>
+
+</div>
+</div>
+<a id="ac17e44dacf2d40052f351a82258afc5e" name="ac17e44dacf2d40052f351a82258afc5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17e44dacf2d40052f351a82258afc5e">&#9670;&#160;</a></span>frogfs_fh_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct frogfs_fh_t frogfs_fh_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00082">82</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="a388c40ddcc4a20deb8edb3341ee4426b" name="a388c40ddcc4a20deb8edb3341ee4426b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388c40ddcc4a20deb8edb3341ee4426b">&#9670;&#160;</a></span>frogfs_fs_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A frogfs filesystem handle. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00065">65</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="abb3bb561e37238bf8e34f10f29e16872" name="abb3bb561e37238bf8e34f10f29e16872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3bb561e37238bf8e34f10f29e16872">&#9670;&#160;</a></span>frogfs_stat_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct frogfs_stat_t frogfs_stat_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Structure filled by the <em class="arg">frogfs_stat</em> function. </p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="a43eac5e9ec9f51bc2a867a7cbb7209a6" name="a43eac5e9ec9f51bc2a867a7cbb7209a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">&#9670;&#160;</a></span>frogfs_comp_algo_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a43eac5e9ec9f51bc2a867a7cbb7209a6">frogfs_comp_algo_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compression algorithm ids. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a43eac5e9ec9f51bc2a867a7cbb7209a6a0338001aec2a3edc168599ae761c5b99" name="a43eac5e9ec9f51bc2a867a7cbb7209a6a0338001aec2a3edc168599ae761c5b99"></a>FROGFS_COMP_ALGO_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a43eac5e9ec9f51bc2a867a7cbb7209a6a17c6e20b76810c076a448b7edb999937" name="a43eac5e9ec9f51bc2a867a7cbb7209a6a17c6e20b76810c076a448b7edb999937"></a>FROGFS_COMP_ALGO_ZLIB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a43eac5e9ec9f51bc2a867a7cbb7209a6ab263d5517bce3a40366b0f31b8d01159" name="a43eac5e9ec9f51bc2a867a7cbb7209a6ab263d5517bce3a40366b0f31b8d01159"></a>FROGFS_COMP_ALGO_HEATSHRINK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a43eac5e9ec9f51bc2a867a7cbb7209a6a7c3cb817ee288230514c1d9d53b6471d" name="a43eac5e9ec9f51bc2a867a7cbb7209a6a7c3cb817ee288230514c1d9d53b6471d"></a>FROGFS_COMP_ALGO_GZIP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00048">48</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a id="ad02060de27bb3f72ddb866f3860858e1" name="ad02060de27bb3f72ddb866f3860858e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02060de27bb3f72ddb866f3860858e1">&#9670;&#160;</a></span>frogfs_entry_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad02060de27bb3f72ddb866f3860858e1">frogfs_entry_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum of frogfs entry types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ad02060de27bb3f72ddb866f3860858e1a5d971c7a4d83ac800e8bfcdb34fe8989" name="ad02060de27bb3f72ddb866f3860858e1a5d971c7a4d83ac800e8bfcdb34fe8989"></a>FROGFS_ENTRY_TYPE_DIR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad02060de27bb3f72ddb866f3860858e1a6ec52feedad7eaeee49e24fad8e3c133" name="ad02060de27bb3f72ddb866f3860858e1a6ec52feedad7eaeee49e24fad8e3c133"></a>FROGFS_ENTRY_TYPE_FILE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="frogfs_8h_source.html#l00040">40</a> del archivo <a class="el" href="frogfs_8h_source.html">frogfs.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a0fc1d7a6a599651601aa30d15f26eed3" name="a0fc1d7a6a599651601aa30d15f26eed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fc1d7a6a599651601aa30d15f26eed3">&#9670;&#160;</a></span>frogfs_access()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> frogfs_access </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void **</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get raw memory for raw file entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>pointer pointer to buf </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>length of raw data </dd></dl>
+
+</div>
+</div>
+<a id="abbe368892659ca63c3756adbc201f446" name="abbe368892659ca63c3756adbc201f446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe368892659ca63c3756adbc201f446">&#9670;&#160;</a></span>frogfs_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frogfs_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close an open file entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10c5d98eff06f20cfd722f3918b26142" name="a10c5d98eff06f20cfd722f3918b26142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c5d98eff06f20cfd722f3918b26142">&#9670;&#160;</a></span>frogfs_closedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frogfs_closedir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close a directory. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td><em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad1ff95d5c5b312f7f68bcc33bc0983e" name="aad1ff95d5c5b312f7f68bcc33bc0983e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1ff95d5c5b312f7f68bcc33bc0983e">&#9670;&#160;</a></span>frogfs_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frogfs_deinit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tear down a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a147d6dfbf61f14647c8fa7c37e26a39f" name="a147d6dfbf61f14647c8fa7c37e26a39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147d6dfbf61f14647c8fa7c37e26a39f">&#9670;&#160;</a></span>frogfs_get_entry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> * frogfs_get_entry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get frogfs entry for path. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>path string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer or <em class="arg">NULL</em> if path was not found </dd></dl>
+
+</div>
+</div>
+<a id="a23880d70f8dc382a3d072b277bac3c20" name="a23880d70f8dc382a3d072b277bac3c20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23880d70f8dc382a3d072b277bac3c20">&#9670;&#160;</a></span>frogfs_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * frogfs_get_name </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get name for frogfs entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>name string, caller is expected to free </dd></dl>
+
+</div>
+</div>
+<a id="a5b3a7ede4f56ada81913a147c75ec02f" name="a5b3a7ede4f56ada81913a147c75ec02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3a7ede4f56ada81913a147c75ec02f">&#9670;&#160;</a></span>frogfs_get_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * frogfs_get_path </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get full path for frogfs entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>full path string or <em class="arg">NULL</em> if entry is NULL, caller is expected to free </dd></dl>
+
+</div>
+</div>
+<a id="a3cd293bda6e6814bfa27dc3771974400" name="a3cd293bda6e6814bfa27dc3771974400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd293bda6e6814bfa27dc3771974400">&#9670;&#160;</a></span>frogfs_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> * frogfs_init </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__config__t.html">frogfs_config_t</a> *</td>          <td class="paramname"><span class="paramname"><em>conf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize and return a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>frogfs configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer or <em class="arg">NULL</em> on error </dd></dl>
+
+</div>
+</div>
+<a id="a78ae34e4745da0aa7d9947e37211c04f" name="a78ae34e4745da0aa7d9947e37211c04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ae34e4745da0aa7d9947e37211c04f">&#9670;&#160;</a></span>frogfs_is_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int frogfs_is_dir </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return if entry is a directory. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>1 if directory, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="acddf6c41eba34780412b34108d47ef25" name="acddf6c41eba34780412b34108d47ef25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddf6c41eba34780412b34108d47ef25">&#9670;&#160;</a></span>frogfs_is_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int frogfs_is_file </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return if entry is a file. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>1 if file, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a4be5c32d437c97e0e3dcffc2c741cc86" name="a4be5c32d437c97e0e3dcffc2c741cc86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be5c32d437c97e0e3dcffc2c741cc86">&#9670;&#160;</a></span>frogfs_is_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int frogfs_is_raw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Determine if file handle is opened raw. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>1 if file is open raw, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a271e38abf0007e612b5c72e7dad6e815" name="a271e38abf0007e612b5c72e7dad6e815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a271e38abf0007e612b5c72e7dad6e815">&#9670;&#160;</a></span>frogfs_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> * frogfs_open </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a frogfs entry as a file from a <em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> instance. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> poitner </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>open flags </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> or <em class="arg">NULL</em> if not found </dd></dl>
+
+</div>
+</div>
+<a id="aaa0e36b38008978a59ee3caa5699f22e" name="aaa0e36b38008978a59ee3caa5699f22e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa0e36b38008978a59ee3caa5699f22e">&#9670;&#160;</a></span>frogfs_opendir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> * frogfs_opendir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a directory for reading child entrys. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer to root director </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer or <em class="arg">NULL</em> if invalid </dd></dl>
+
+</div>
+</div>
+<a id="a0621b5201c355629d4e6ff9e161dc76e" name="a0621b5201c355629d4e6ff9e161dc76e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0621b5201c355629d4e6ff9e161dc76e">&#9670;&#160;</a></span>frogfs_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="frogfs__types_8h.html#a181ea1146e92780d7bf630454c9e954c">frogfs_ssize_t</a> frogfs_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read data from an open file entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>buffer to read into </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>maximum number of bytes to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>actual number of bytes read, zero if end of file reached </dd></dl>
+
+</div>
+</div>
+<a id="a14a779ab4d2dba6dbca33910b553ef27" name="a14a779ab4d2dba6dbca33910b553ef27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14a779ab4d2dba6dbca33910b553ef27">&#9670;&#160;</a></span>frogfs_readdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> * frogfs_readdir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the next child entry in directory. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td><em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer or <em class="arg">NULL</em> if end has been reached </dd></dl>
+
+</div>
+</div>
+<a id="abc0b9e0cc094e83cfb1ed602fc8004ba" name="abc0b9e0cc094e83cfb1ed602fc8004ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0b9e0cc094e83cfb1ed602fc8004ba">&#9670;&#160;</a></span>frogfs_seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="frogfs__types_8h.html#a181ea1146e92780d7bf630454c9e954c">frogfs_ssize_t</a> frogfs_seek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seek to a position within an open file entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>file position (relative or absolute) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td><em class="arg">SEEK_SET</em>, <em class="arg">SEEK_CUR</em>, or <em class="arg">SEEK_END</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>current position in file or &lt; 0 upon error </dd></dl>
+
+<p class="reference">Hace referencia a <a class="el" href="heart_rate_8c_source.html#l00070">offset</a>.</p>
+
+</div>
+</div>
+<a id="addfc590cee6988c4a94bdfcccb38096f" name="addfc590cee6988c4a94bdfcccb38096f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addfc590cee6988c4a94bdfcccb38096f">&#9670;&#160;</a></span>frogfs_seekdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frogfs_seekdir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>loc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set dir entry index to a value returned by <em class="arg">frogfs_telldir</em> for the current <em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td><em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">loc</td><td>entry index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab15f4e7d153ea696127928885d20a229" name="ab15f4e7d153ea696127928885d20a229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15f4e7d153ea696127928885d20a229">&#9670;&#160;</a></span>frogfs_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void frogfs_stat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b">frogfs_fs_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structfrogfs__entry__t.html">frogfs_entry_t</a> *</td>          <td class="paramname"><span class="paramname"><em>entry</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfrogfs__stat__t.html">frogfs_stat_t</a> *</td>          <td class="paramname"><span class="paramname"><em>st</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get information about a frogfs entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fs</td><td><em class="arg"><a class="el" href="#a388c40ddcc4a20deb8edb3341ee4426b" title="A frogfs filesystem handle.">frogfs_fs_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">entry</td><td><em class="arg"><a class="el" href="structfrogfs__entry__t.html" title="Entry header.">frogfs_entry_t</a></em> pointer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">st</td><td><em class="arg"><a class="el" href="structfrogfs__stat__t.html" title="Structure filled by the frogfs_stat function.">frogfs_stat_t</a></em> structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0f3843f935b8accb62b1caabdee87a7c" name="a0f3843f935b8accb62b1caabdee87a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3843f935b8accb62b1caabdee87a7c">&#9670;&#160;</a></span>frogfs_tell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> frogfs_tell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__fh__t.html">frogfs_fh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>fh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current position in an open file entry. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td><em class="arg"><a class="el" href="structfrogfs__fh__t.html" title="A frogfs file handle.">frogfs_fh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>current position in file or &lt; 0 upon error </dd></dl>
+
+</div>
+</div>
+<a id="a92ce583bfca3b471ca14a8ed2f829143" name="a92ce583bfca3b471ca14a8ed2f829143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92ce583bfca3b471ca14a8ed2f829143">&#9670;&#160;</a></span>frogfs_telldir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long frogfs_telldir </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfrogfs__dh__t.html">frogfs_dh_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dh</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the current entry index for a directory. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">d</td><td><em class="arg"><a class="el" href="structfrogfs__dh__t.html" title="A frogfs directory handle.">frogfs_dh_t</a></em> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>entry index </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_5f15c64a648eaeb802aa13d0bcde5c72.html">libs</a></li><li class="navelem"><a href="dir_4584776af4feed196926486383df74d5.html">frogfs</a></li><li class="navelem"><a href="dir_48388d084bade0d47de47a8dc04be151.html">include</a></li><li class="navelem"><a href="dir_4e51b89561a6cd8602e023f7ea48ee26.html">frogfs</a></li><li class="navelem"><a href="frogfs_8h.html">frogfs.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

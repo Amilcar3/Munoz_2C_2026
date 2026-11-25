@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/image/lv_bin_decoder.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__bin__decoder_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_bin_decoder.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__image__decoder__private_8h_source.html">lv_image_decoder_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__rle__private_8h_source.html">../libs/rle/lv_rle_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../core/lv_global.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__bin__decoder_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:_5Flv_5Fimage_5Fcompressed_5Ft" id="r__5Flv_5Fimage_5Fcompressed_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct__lv__image__compressed__t.html">_lv_image_compressed_t</a></td></tr>
+<tr class="memitem:decoder_5Fdata_5Ft" id="r_decoder_5Fdata_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdecoder__data__t.html">decoder_data_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a7cc7b4538e369818e76584d33cf860cd" id="r_a7cc7b4538e369818e76584d33cf860cd"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7cc7b4538e369818e76584d33cf860cd">DECODER_NAME</a>&#160;&#160;&#160;&quot;BIN&quot;</td></tr>
+<tr class="memitem:aa35d94ecebc815fe92b37b5ca2359ff1" id="r_aa35d94ecebc815fe92b37b5ca2359ff1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa35d94ecebc815fe92b37b5ca2359ff1">image_cache_draw_buf_handlers</a>&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;image_cache_draw_buf_handlers)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a86e8f20793a9431ba3baa8c58fd6d558" id="r_a86e8f20793a9431ba3baa8c58fd6d558"><td class="memItemLeft">typedef struct <a class="el" href="struct__lv__image__compressed__t.html">_lv_image_compressed_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a86e8f20793a9431ba3baa8c58fd6d558">lv_image_compressed_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9bc32f2e2199ae0872b90793bf504c3b" id="r_a9bc32f2e2199ae0872b90793bf504c3b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9bc32f2e2199ae0872b90793bf504c3b">lv_bin_decoder_init</a> (void)</td></tr>
+<tr class="memitem:a25e1523d88b409c545f1a02945c2c224" id="r_a25e1523d88b409c545f1a02945c2c224"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a25e1523d88b409c545f1a02945c2c224">lv_bin_decoder_info</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc, <a class="el" href="structlv__image__header__t.html">lv_image_header_t</a> *header)</td></tr>
+<tr class="memitem:a1efbd8eac54d64de1aa4028bacb3267c" id="r_a1efbd8eac54d64de1aa4028bacb3267c"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1efbd8eac54d64de1aa4028bacb3267c">lv_bin_decoder_open</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a4388a1dd1e14b6538b8b5979a60db701" id="r_a4388a1dd1e14b6538b8b5979a60db701"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4388a1dd1e14b6538b8b5979a60db701">lv_bin_decoder_close</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a8773202ff5cf463ae75116c62ff8937f" id="r_a8773202ff5cf463ae75116c62ff8937f"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8773202ff5cf463ae75116c62ff8937f">lv_bin_decoder_get_area</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *full_area, <a class="el" href="structlv__area__t.html">lv_area_t</a> *decoded_area)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a7cc7b4538e369818e76584d33cf860cd" name="a7cc7b4538e369818e76584d33cf860cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cc7b4538e369818e76584d33cf860cd">&#9670;&#160;</a></span>DECODER_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DECODER_NAME&#160;&#160;&#160;&quot;BIN&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00026">26</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="aa35d94ecebc815fe92b37b5ca2359ff1" name="aa35d94ecebc815fe92b37b5ca2359ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35d94ecebc815fe92b37b5ca2359ff1">&#9670;&#160;</a></span>image_cache_draw_buf_handlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define image_cache_draw_buf_handlers&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;image_cache_draw_buf_handlers)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00028">28</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a86e8f20793a9431ba3baa8c58fd6d558" name="a86e8f20793a9431ba3baa8c58fd6d558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e8f20793a9431ba3baa8c58fd6d558">&#9670;&#160;</a></span>lv_image_compressed_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__lv__image__compressed__t.html">_lv_image_compressed_t</a> <a class="el" href="#a86e8f20793a9431ba3baa8c58fd6d558">lv_image_compressed_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Data format for compressed image data. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a4388a1dd1e14b6538b8b5979a60db701" name="a4388a1dd1e14b6538b8b5979a60db701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4388a1dd1e14b6538b8b5979a60db701">&#9670;&#160;</a></span>lv_bin_decoder_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bin_decoder_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close the pending decoding. Free resources etc. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to the decoder the function associated with </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to decoder descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00383">383</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bin__decoder_8c_source.html#l00054">decoder_data_t::decoded_partial</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00376">lv_draw_buf_destroy()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00405">LV_UNUSED</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__image__decoder__private_8h_source.html#l00116">_lv_image_decoder_dsc_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a8773202ff5cf463ae75116c62ff8937f" name="a8773202ff5cf463ae75116c62ff8937f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8773202ff5cf463ae75116c62ff8937f">&#9670;&#160;</a></span>lv_bin_decoder_get_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_bin_decoder_get_area </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>full_area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoded_area</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00397">397</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00096">_lv_draw_buf_t::data</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00097">_lv_image_decoder_dsc_t::decoded</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00054">decoder_data_t::decoded_partial</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00047">decoder_data_t::f</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00239">f</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00115">lv_image_header_t::h</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00093">_lv_image_decoder_dsc_t::header</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00019">image_cache_draw_buf_handlers</a>, <a class="el" href="lv__area_8c_source.html#l00543">lv_area_get_width()</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00080">LV_ASSERT_NULL</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00136">LV_CHECK_ARG_MSG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00155">LV_COLOR_FORMAT_ARGB8565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="lv__color_8c_source.html#l00043">lv_color_format_get_bpp()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00204">LV_COLOR_FORMAT_IS_INDEXED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00158">LV_COLOR_FORMAT_RGB565_SWAPPED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00156">LV_COLOR_FORMAT_RGB565A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00217">LV_COORD_MIN</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00277">lv_draw_buf_create_ex()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00376">lv_draw_buf_destroy()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00350">lv_draw_buf_reshape()</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00035">LV_FS_RES_OK</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00048">LV_FS_RES_UNKNOWN</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00027">LV_STRIDE_AUTO</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00405">LV_UNUSED</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="heart_rate_8c_source.html#l00070">offset</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00099">_lv_image_decoder_dsc_t::palette</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00100">_lv_image_decoder_dsc_t::palette_size</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00085">_lv_image_decoder_dsc_t::src</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00088">_lv_image_decoder_dsc_t::src_type</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00116">lv_image_header_t::stride</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00116">_lv_image_decoder_dsc_t::user_data</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00114">lv_image_header_t::w</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area_t::x1</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00045">lv_area_t::x2</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area_t::y1</a> y <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00046">lv_area_t::y2</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a25e1523d88b409c545f1a02945c2c224" name="a25e1523d88b409c545f1a02945c2c224"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e1523d88b409c545f1a02945c2c224">&#9670;&#160;</a></span>lv_bin_decoder_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_bin_decoder_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__image__header__t.html">lv_image_header_t</a> *</td>          <td class="paramname"><span class="paramname"><em>header</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get info about a lvgl binary image </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>the decoder where this function belongs </td></tr>
+    <tr><td class="paramname">dsc</td><td>image descriptor containing the source and type of the image and other info. </td></tr>
+    <tr><td class="paramname">header</td><td>store the image data here </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: the info is successfully stored in <span class="tt"><a class="el" href="namespaceheader.html">header</a></span>; LV_RESULT_INVALID: unknown format or other error. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Tareas pendientes</a></b></dt><dd>This is a temp backward compatibility solution after adding magic in image header. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00109">109</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00090">_lv_image_decoder_dsc_t::file</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00151">LV_COLOR_FORMAT_A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00140">LV_COLOR_FORMAT_UNKNOWN</a>, <a class="el" href="lv__fs_8c_source.html#l00629">lv_fs_get_ext()</a>, <a class="el" href="lv__fs_8c_source.html#l00226">lv_fs_read()</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00035">LV_FS_RES_OK</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00072">LV_IMAGE_FLAGS_MODIFIABLE</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00053">LV_IMAGE_FLAGS_PREMULTIPLIED</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00025">LV_IMAGE_HEADER_MAGIC</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00036">LV_IMAGE_SRC_SYMBOL</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00034">LV_IMAGE_SRC_VARIABLE</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00038">LV_PRIu32</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00283">lv_strcmp()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00405">LV_UNUSED</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00085">_lv_image_decoder_dsc_t::src</a> y <a class="el" href="lv__image__decoder__private_8h_source.html#l00088">_lv_image_decoder_dsc_t::src_type</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a9bc32f2e2199ae0872b90793bf504c3b" name="a9bc32f2e2199ae0872b90793bf504c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc32f2e2199ae0872b90793bf504c3b">&#9670;&#160;</a></span>lv_bin_decoder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bin_decoder_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the lvgl binary image decoder module</p>
+<p>Initialize the binary image decoder module </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00091">91</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bin__decoder_8c_source.html#l00026">DECODER_NAME</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00383">lv_bin_decoder_close()</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00397">lv_bin_decoder_get_area()</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00109">lv_bin_decoder_info()</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00179">lv_bin_decoder_open()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00242">lv_image_decoder_create()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00291">lv_image_decoder_set_close_cb()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00284">lv_image_decoder_set_get_area_cb()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00270">lv_image_decoder_set_info_cb()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00277">lv_image_decoder_set_open_cb()</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00052">_lv_image_decoder_t::name</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00158">lv_init()</a>.</p>
+
+</div>
+</div>
+<a id="a1efbd8eac54d64de1aa4028bacb3267c" name="a1efbd8eac54d64de1aa4028bacb3267c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1efbd8eac54d64de1aa4028bacb3267c">&#9670;&#160;</a></span>lv_bin_decoder_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_bin_decoder_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Open a lvgl binary image </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>the decoder where this function belongs </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to decoder descriptor. <span class="tt">src</span>, <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#ae2d8d510e182d47de5eabcb13b717c5f">style</a></span> are already initialized in it. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: the info is successfully stored in <span class="tt"><a class="el" href="namespaceheader.html">header</a></span>; LV_RESULT_INVALID: unknown format or other error. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bin__decoder_8c_source.html#l00179">179</a> del archivo <a class="el" href="lv__bin__decoder_8c_source.html">lv_bin_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00082">_lv_image_decoder_dsc_t::args</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00053">decoder_data_t::c_array</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00113">_lv_image_decoder_dsc_t::cache_entry</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00095">_lv_draw_buf_t::data_size</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00097">_lv_image_decoder_dsc_t::decoded</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00051">decoder_data_t::decoded</a>, <a class="el" href="lv__bin__decoder_8c_source.html#l00047">decoder_data_t::f</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00239">f</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00112">lv_image_header_t::flags</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00041">_lv_image_decoder_args_t::flush_cache</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00093">_lv_image_decoder_dsc_t::header</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00144">lv_image_dsc_t::header</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00151">LV_COLOR_FORMAT_A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00155">LV_COLOR_FORMAT_ARGB8565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="lv__color_8c_source.html#l00043">lv_color_format_get_bpp()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00203">LV_COLOR_FORMAT_IS_ALPHA_ONLY</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00204">LV_COLOR_FORMAT_IS_INDEXED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00158">LV_COLOR_FORMAT_RGB565_SWAPPED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00156">LV_COLOR_FORMAT_RGB565A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00548">lv_draw_buf_from_image()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00598">lv_draw_buf_set_flag()</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__fs_8c_source.html#l00629">lv_fs_get_ext()</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00056">LV_FS_MODE_RD</a>, <a class="el" href="lv__fs_8c_source.html#l00072">lv_fs_open()</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00035">LV_FS_RES_OK</a>, <a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html#l00048">LV_FS_RES_UNKNOWN</a>, <a class="el" href="lv__image__cache_8c_source.html#l00102">lv_image_cache_is_enabled()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00298">lv_image_decoder_add_to_cache()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00324">lv_image_decoder_post_process()</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00066">LV_IMAGE_FLAGS_ALLOCATED</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00059">LV_IMAGE_FLAGS_COMPRESSED</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00053">LV_IMAGE_FLAGS_PREMULTIPLIED</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00042">LV_IMAGE_FLAGS_USER_MASK</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00034">LV_IMAGE_SRC_VARIABLE</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00283">lv_strcmp()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00405">LV_UNUSED</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00039">_lv_image_decoder_args_t::no_cache</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__cache_8h_source.html#l00182">_lv_cache_slot_size_t::size</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00058">_lv_image_cache_data_t::slot</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00060">_lv_image_cache_data_t::src</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00085">_lv_image_decoder_dsc_t::src</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00061">_lv_image_cache_data_t::src_type</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00088">_lv_image_decoder_dsc_t::src_type</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00116">lv_image_header_t::stride</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00040">_lv_image_decoder_args_t::use_indexed</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00116">_lv_image_decoder_dsc_t::user_data</a> y <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00114">lv_image_header_t::w</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_066d33789e3ed9ee056e5e6a8ada1e48.html">image</a></li><li class="navelem"><a href="lv__bin__decoder_8c.html">lv_bin_decoder.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

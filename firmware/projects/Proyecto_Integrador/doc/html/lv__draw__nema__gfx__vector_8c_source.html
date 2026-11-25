@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_vector.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__nema__gfx__vector_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_draw_nema_gfx_vector.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__draw__nema__gfx__vector_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if LV_USE_NEMA_GFX &amp;&amp; LV_USE_VECTOR_GRAPHIC &amp;&amp; LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="lv__nema__gfx__path_8h.html">lv_nema_gfx_path.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__vector__private_8h.html">../lv_draw_vector_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    lv_draw_nema_gfx_unit_t * u;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">float</span> rel_translate_x;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">float</span> rel_translate_y;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} ctx_t;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  STATIC PROTOTYPES</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">static</span> <span class="keywordtype">void</span> task_draw_cb(<span class="keywordtype">void</span> * ctx, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#afe0adeb6066ac24b5068593fc98e2299">lv_vector_path_t</a> * path, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a3fb8ddb9146563c8d160a013d60cd8a8">lv_vector_path_ctx_t</a> * dsc);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *  STATIC VARIABLES</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> lv_draw_nema_gfx_vector(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * t, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a8643cf985de5354ae6098b49d05f9b48">lv_draw_vector_dsc_t</a> * dsc,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                             <span class="keyword">const</span> <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> * coords)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    ctx_t c;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    c.u = (lv_draw_nema_gfx_unit_t *) t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">draw_unit</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * layer = t-&gt;target_layer;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> rel_clip_area;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    rel_clip_area = t-&gt;clip_area;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a>(&amp;rel_clip_area, -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    c.rel_translate_x = -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    c.rel_translate_y = -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#ae1091e3619d2c4e53e99f69dac1865f7">nema_set_clip</a>(rel_clip_area.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, rel_clip_area.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a>(&amp;rel_clip_area),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                  <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a>(&amp;rel_clip_area));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_enumeration" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a> dst_cf = layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">draw_buf</a>-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">header</a>.<a class="code hl_variable" href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">cf</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> dst_nema_cf = lv_nemagfx_cf_to_nema(dst_cf);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">/* the stride should be computed internally for NEMA_TSC images and images missing a stride value */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> stride = (dst_cf &gt;= <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a97afc9c52ee20793425c62e7d63dae13">LV_COLOR_FORMAT_NEMA_TSC_START</a> &amp;&amp; dst_cf &lt;= <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a6efb61491bf639af316b1eb3a5e2eb61">LV_COLOR_FORMAT_NEMA_TSC_END</a>) ?</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                     -1 : <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a>(&amp;(layer-&gt;buf_area)) * <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#af32de6483e3a70fd6544aed8f40ec889">lv_color_format_get_size</a>(dst_cf);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#ab00135eb84f8300bb32efd289468bf93">nema_bind_dst_tex</a>((<a class="code hl_typedef" href="stdint_8h.html#a31b85deecb45924320becd11d3ee16ce">uintptr_t</a>)NEMA_VIRT2PHYS(layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">draw_buf</a>-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#abe222f6d3581e7920dcad5306cc906a8">data</a>), <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a>(&amp;(layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>)),</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                      <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a>(&amp;(layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>)), dst_nema_cf, stride);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#acd973997f98069c905ba492524360d0a">nema_vg_set_blend</a>(<a class="code hl_define" href="cortex__m33_2nema__blender_8h.html#ae2018a681a02e53d1989fbc8f04a8b1d">NEMA_BL_SRC_OVER</a> | <a class="code hl_define" href="cortex__m33_2nema__blender_8h.html#a7711991d870bda22b86142e207e63f87">NEMA_BLOP_SRC_PREMULT</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    lv_vector_for_each_destroy_tasks(dsc-&gt;task_list, task_draw_cb, &amp;c);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"> *   STATIC FUNCTIONS</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">static</span> <span class="keywordtype">void</span> task_draw_cb(<span class="keywordtype">void</span> * ctx, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#afe0adeb6066ac24b5068593fc98e2299">lv_vector_path_t</a> * path, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a3fb8ddb9146563c8d160a013d60cd8a8">lv_vector_path_ctx_t</a> * dsc)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    ctx_t * c = ctx;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    lv_draw_nema_gfx_unit_t * u = c-&gt;u;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span>(!path) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__path_8h.html#a465c83bf3341dd015da8f7308257ede2">nema_vg_path_clear</a>(u-&gt;path);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#af248cecf504695708767910102654bd1">nema_vg_paint_clear</a>(u-&gt;paint);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ad7620d0ff6c0768bc5bf21fe640aaf0d">nema_vg_paint_set_type</a>(u-&gt;paint, <a class="code hl_define" href="cortex__m33_2nema__vg__paint_8h.html#ac0902382176e3b27d5348b2d49bd6a1f">NEMA_VG_PAINT_COLOR</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aecc04bfa364c7b83d110a05b4fb24495">lv_matrix_t</a> matrix = dsc-&gt;matrix;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    matrix.m[0][2] += c-&gt;rel_translate_x;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    matrix.m[1][2] += c-&gt;rel_translate_y;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__path_8h.html#a3180f5580fbaa0ce795bfd697135273e">nema_vg_path_set_matrix</a>(c-&gt;u-&gt;path, (<span class="keywordtype">void</span> *) &amp;matrix);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">/* the path ops array needs to be translated to nema&#39;s opcodes */</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    lv_vector_path_op_t * ops = lv_array_front(&amp;<a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;ops);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> op_count = lv_array_size(&amp;<a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;ops);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * nema_ops = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc</a>(op_count * <span class="keyword">sizeof</span>(*nema_ops));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__assert_8h.html#a124f08761ffc45565d4511eaf68f777e">LV_ASSERT_MALLOC</a>(nema_ops);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> i = 0; i &lt; op_count; i++) {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        nema_ops[i] = ops[i] == LV_VECTOR_PATH_OP_MOVE_TO  ? <a class="code hl_define" href="cortex__m33_2nema__vg__path_8h.html#a57ee1439e5850e9ac89d72cdd77fc098">NEMA_VG_PRIM_MOVE</a> :</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                      ops[i] == LV_VECTOR_PATH_OP_LINE_TO  ? <a class="code hl_define" href="cortex__m33_2nema__vg__path_8h.html#a316b9f06155845f33e6dd74277ae95ac">NEMA_VG_PRIM_LINE</a> :</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                      ops[i] == LV_VECTOR_PATH_OP_QUAD_TO  ? <a class="code hl_define" href="cortex__m33_2nema__vg__path_8h.html#a0d044741e227dcd37381441ef1223e33">NEMA_VG_PRIM_BEZIER_QUAD</a> :</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                      ops[i] == LV_VECTOR_PATH_OP_CUBIC_TO ? <a class="code hl_define" href="cortex__m33_2nema__vg__path_8h.html#ac636a3cbf11a91997552b1a6c7185237">NEMA_VG_PRIM_BEZIER_CUBIC</a> :</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                      <span class="comment">/*LV_VECTOR_PATH_OP_CLOSE*/</span>            <a class="code hl_define" href="cortex__m33_2nema__vg__path_8h.html#ae5929cb90acc832e4c0c25e4be6c352f">NEMA_VG_PRIM_CLOSE</a>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">/* the path points array is in the right format for nema to use as-is */</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> point_count = lv_array_size(&amp;<a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;points);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">float</span> * points = lv_array_front(&amp;<a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;points);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__path_8h.html#a60a2ba6746342c23cf5e1be4558b9c8b">nema_vg_path_set_shape</a>(u-&gt;path, op_count, nema_ops, point_count, points);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#a9d64191b1ebcc68dd88807b695bc5670">nema_vg_set_quality</a>(<a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;quality == LV_VECTOR_PATH_QUALITY_LOW    ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#ae4c03e1d9548199a3d48b1aa138f1472">NEMA_VG_QUALITY_FASTER</a> :</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                        <a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>-&gt;quality == LV_VECTOR_PATH_QUALITY_MEDIUM ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#aefc8aa7e5c55cd848ad5315dcac0d10f">NEMA_VG_QUALITY_BETTER</a> :</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        <span class="comment">/*LV_VECTOR_PATH_QUALITY_HIGH*/</span>                  <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a4d43dd56077b4c0976d11c8d39dd6be9">NEMA_VG_QUALITY_MAXIMUM</a>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span>(dsc-&gt;fill_dsc.opa) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#a8b66c9f2ae242d799d667f4f6db5d3a8">nema_vg_set_fill_rule</a>(dsc-&gt;fill_dsc.fill_rule == LV_VECTOR_FILL_NONZERO ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a9fe22754dc9bcef1f12b67825aabf9de">NEMA_VG_FILL_NON_ZERO</a> :</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                              <span class="comment">/*LV_VECTOR_FILL_EVENODD*/</span>                          <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#ad87a3a98f299b64407711f38a8fb7ec6">NEMA_VG_FILL_EVEN_ODD</a>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> nema_dsc_color = <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#a6867f473b5cd05bcd605e6d76b109014">nema_rgba</a>(dsc-&gt;fill_dsc.color.red, dsc-&gt;fill_dsc.color.green,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                            dsc-&gt;fill_dsc.color.blue, dsc-&gt;fill_dsc.color.alpha);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ac3c00e4772d213ffadbc83f3aad40414">nema_vg_paint_set_paint_color</a>(u-&gt;paint, nema_dsc_color);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="cortex__m33_2nema__vg_8h.html#a91a5e8a806cc7f9f310519fc7351e8b9">nema_vg_draw_path</a>(u-&gt;path, u-&gt;paint);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span>(dsc-&gt;stroke_dsc.opa) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#a8b66c9f2ae242d799d667f4f6db5d3a8">nema_vg_set_fill_rule</a>(<a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a753486d742373c22c1a6065cac404611">NEMA_VG_STROKE</a>);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#acfa10e367af63534dfab7258cf0fd5fd">nema_vg_stroke_set_width</a>(dsc-&gt;stroke_dsc.width);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> cap = dsc-&gt;stroke_dsc.cap == LV_VECTOR_STROKE_CAP_BUTT   ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a8a69b1e81ed7caf1acd8d9e3856528ed">NEMA_VG_CAP_BUTT</a> :</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                      dsc-&gt;stroke_dsc.cap == LV_VECTOR_STROKE_CAP_SQUARE ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#aa5ab695914ea192e3503640c5170f922">NEMA_VG_CAP_SQUARE</a> :</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                      <span class="comment">/*LV_VECTOR_STROKE_CAP_ROUND*/</span>                       <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a2b4cdf3111e84168e0fed4abd721003c">NEMA_VG_CAP_ROUND</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#a4e741e6a6e8e7826863184b80674d690">nema_vg_stroke_set_cap_style</a>(cap, cap);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> join = dsc-&gt;stroke_dsc.join == LV_VECTOR_STROKE_JOIN_MITER ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a698b9820f046786c79259ce859b5770f">NEMA_VG_JOIN_MITER</a> :</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                       dsc-&gt;stroke_dsc.join == LV_VECTOR_STROKE_JOIN_BEVEL ? <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a20072fd937511d84df49e674140b058c">NEMA_VG_JOIN_BEVEL</a> :</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                       <span class="comment">/*LV_VECTOR_STROKE_JOIN_ROUND*/</span>                       <a class="code hl_define" href="cortex__m33_2nema__vg__context_8h.html#a3fc4a80cef27cd88fba93160c32e1403">NEMA_VG_JOIN_ROUND</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#aa68924813011cfaacf879b3698b08d65">nema_vg_stroke_set_join_style</a>(join);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#a4189a09b933a6d206b137e5527d7629f">nema_vg_stroke_set_miter_limit</a>(dsc-&gt;stroke_dsc.miter_limit);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> nema_dsc_color = <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#a6867f473b5cd05bcd605e6d76b109014">nema_rgba</a>(dsc-&gt;stroke_dsc.color.red, dsc-&gt;stroke_dsc.color.green,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                            dsc-&gt;stroke_dsc.color.blue, dsc-&gt;stroke_dsc.color.alpha);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ac3c00e4772d213ffadbc83f3aad40414">nema_vg_paint_set_paint_color</a>(u-&gt;paint, nema_dsc_color);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="cortex__m33_2nema__vg_8h.html#a91a5e8a806cc7f9f310519fc7351e8b9">nema_vg_draw_path</a>(u-&gt;path, u-&gt;paint);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a>(&amp;c-&gt;u-&gt;cl);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a>(&amp;u-&gt;cl);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a>(nema_ops);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#endif </span><span class="comment">/*LV_USE_NEMA_GFX &amp;&amp; LV_USE_VECTOR_GRAPHIC &amp;&amp; LV_USE_NEMA_VG*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="acortex__m33_2nema__blender_8h_html_a7711991d870bda22b86142e207e63f87"><div class="ttname"><a href="cortex__m33_2nema__blender_8h.html#a7711991d870bda22b86142e207e63f87">NEMA_BLOP_SRC_PREMULT</a></div><div class="ttdeci">#define NEMA_BLOP_SRC_PREMULT</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__blender_8h_source.html#l00077">nema_blender.h:77</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__blender_8h_html_ae2018a681a02e53d1989fbc8f04a8b1d"><div class="ttname"><a href="cortex__m33_2nema__blender_8h.html#ae2018a681a02e53d1989fbc8f04a8b1d">NEMA_BL_SRC_OVER</a></div><div class="ttdeci">#define NEMA_BL_SRC_OVER</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__blender_8h_source.html#l00058">nema_blender.h:58</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_a18682aec6ae10597259998723e52c20d"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a></div><div class="ttdeci">void nema_cl_submit(nema_cmdlist_t *cl)</div><div class="ttdoc">Enqueue Command List to the Ring Buffer for execution.</div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_aa522f8367066a40d6a8507abcf64d682"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a></div><div class="ttdeci">int nema_cl_wait(nema_cmdlist_t *cl)</div><div class="ttdoc">Wait for Command List to finish.</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_a6867f473b5cd05bcd605e6d76b109014"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#a6867f473b5cd05bcd605e6d76b109014">nema_rgba</a></div><div class="ttdeci">uint32_t nema_rgba(unsigned char R, unsigned char G, unsigned char B, unsigned char A)</div><div class="ttdoc">Return Nema internal RGBA color.</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_ab00135eb84f8300bb32efd289468bf93"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#ab00135eb84f8300bb32efd289468bf93">nema_bind_dst_tex</a></div><div class="ttdeci">void nema_bind_dst_tex(uintptr_t baseaddr_phys, uint32_t width, uint32_t height, nema_tex_format_t format, int32_t stride)</div><div class="ttdoc">Program Texture Unit with a destination texture (NEMA_TEX0).</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_ae1091e3619d2c4e53e99f69dac1865f7"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#ae1091e3619d2c4e53e99f69dac1865f7">nema_set_clip</a></div><div class="ttdeci">void nema_set_clip(int32_t x, int32_t y, uint32_t w, uint32_t h)</div><div class="ttdoc">Sets the drawing area&#39;s Clipping Rectangle.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg_8h_html_a91a5e8a806cc7f9f310519fc7351e8b9"><div class="ttname"><a href="cortex__m33_2nema__vg_8h.html#a91a5e8a806cc7f9f310519fc7351e8b9">nema_vg_draw_path</a></div><div class="ttdeci">uint32_t nema_vg_draw_path(NEMA_VG_PATH_HANDLE path, NEMA_VG_PAINT_HANDLE paint)</div><div class="ttdoc">Draw a path using a specified paint object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a20072fd937511d84df49e674140b058c"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a20072fd937511d84df49e674140b058c">NEMA_VG_JOIN_BEVEL</a></div><div class="ttdeci">#define NEMA_VG_JOIN_BEVEL</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00103">nema_vg_context.h:103</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a2b4cdf3111e84168e0fed4abd721003c"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a2b4cdf3111e84168e0fed4abd721003c">NEMA_VG_CAP_ROUND</a></div><div class="ttdeci">#define NEMA_VG_CAP_ROUND</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00099">nema_vg_context.h:99</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a3fc4a80cef27cd88fba93160c32e1403"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a3fc4a80cef27cd88fba93160c32e1403">NEMA_VG_JOIN_ROUND</a></div><div class="ttdeci">#define NEMA_VG_JOIN_ROUND</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00105">nema_vg_context.h:105</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a4189a09b933a6d206b137e5527d7629f"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a4189a09b933a6d206b137e5527d7629f">nema_vg_stroke_set_miter_limit</a></div><div class="ttdeci">void nema_vg_stroke_set_miter_limit(float miter_limit)</div><div class="ttdoc">Set stroke miter limit If miter join is chosen and miter length is bigger than the product of miter l...</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a4d43dd56077b4c0976d11c8d39dd6be9"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a4d43dd56077b4c0976d11c8d39dd6be9">NEMA_VG_QUALITY_MAXIMUM</a></div><div class="ttdeci">#define NEMA_VG_QUALITY_MAXIMUM</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00095">nema_vg_context.h:95</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a4e741e6a6e8e7826863184b80674d690"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a4e741e6a6e8e7826863184b80674d690">nema_vg_stroke_set_cap_style</a></div><div class="ttdeci">void nema_vg_stroke_set_cap_style(uint8_t start_cap_style, uint8_t end_cap_style)</div><div class="ttdoc">Set stroke cap style.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a698b9820f046786c79259ce859b5770f"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a698b9820f046786c79259ce859b5770f">NEMA_VG_JOIN_MITER</a></div><div class="ttdeci">#define NEMA_VG_JOIN_MITER</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00104">nema_vg_context.h:104</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a753486d742373c22c1a6065cac404611"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a753486d742373c22c1a6065cac404611">NEMA_VG_STROKE</a></div><div class="ttdeci">#define NEMA_VG_STROKE</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00089">nema_vg_context.h:89</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a8a69b1e81ed7caf1acd8d9e3856528ed"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a8a69b1e81ed7caf1acd8d9e3856528ed">NEMA_VG_CAP_BUTT</a></div><div class="ttdeci">#define NEMA_VG_CAP_BUTT</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00098">nema_vg_context.h:98</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a8b66c9f2ae242d799d667f4f6db5d3a8"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a8b66c9f2ae242d799d667f4f6db5d3a8">nema_vg_set_fill_rule</a></div><div class="ttdeci">void nema_vg_set_fill_rule(uint8_t fill_rule)</div><div class="ttdoc">Set the fill rule that will be applied when rendering a path.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a9d64191b1ebcc68dd88807b695bc5670"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a9d64191b1ebcc68dd88807b695bc5670">nema_vg_set_quality</a></div><div class="ttdeci">void nema_vg_set_quality(uint8_t quality)</div><div class="ttdoc">Set the rendering quality.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_a9fe22754dc9bcef1f12b67825aabf9de"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#a9fe22754dc9bcef1f12b67825aabf9de">NEMA_VG_FILL_NON_ZERO</a></div><div class="ttdeci">#define NEMA_VG_FILL_NON_ZERO</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00091">nema_vg_context.h:91</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_aa5ab695914ea192e3503640c5170f922"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#aa5ab695914ea192e3503640c5170f922">NEMA_VG_CAP_SQUARE</a></div><div class="ttdeci">#define NEMA_VG_CAP_SQUARE</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00100">nema_vg_context.h:100</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_aa68924813011cfaacf879b3698b08d65"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#aa68924813011cfaacf879b3698b08d65">nema_vg_stroke_set_join_style</a></div><div class="ttdeci">void nema_vg_stroke_set_join_style(uint8_t join_style)</div><div class="ttdoc">Set stroke join style.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_acd973997f98069c905ba492524360d0a"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#acd973997f98069c905ba492524360d0a">nema_vg_set_blend</a></div><div class="ttdeci">void nema_vg_set_blend(uint32_t blend)</div><div class="ttdoc">Set the blending mode for VG operations (see nema_blender.h documentation in NemaGFX API Manual) Addi...</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_acfa10e367af63534dfab7258cf0fd5fd"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#acfa10e367af63534dfab7258cf0fd5fd">nema_vg_stroke_set_width</a></div><div class="ttdeci">void nema_vg_stroke_set_width(float width)</div><div class="ttdoc">Set the stroke width that will be applied when stroking a path.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_ad87a3a98f299b64407711f38a8fb7ec6"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#ad87a3a98f299b64407711f38a8fb7ec6">NEMA_VG_FILL_EVEN_ODD</a></div><div class="ttdeci">#define NEMA_VG_FILL_EVEN_ODD</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00090">nema_vg_context.h:90</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_ae4c03e1d9548199a3d48b1aa138f1472"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#ae4c03e1d9548199a3d48b1aa138f1472">NEMA_VG_QUALITY_FASTER</a></div><div class="ttdeci">#define NEMA_VG_QUALITY_FASTER</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00094">nema_vg_context.h:94</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_aefc8aa7e5c55cd848ad5315dcac0d10f"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#aefc8aa7e5c55cd848ad5315dcac0d10f">NEMA_VG_QUALITY_BETTER</a></div><div class="ttdeci">#define NEMA_VG_QUALITY_BETTER</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__context_8h_source.html#l00093">nema_vg_context.h:93</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ac0902382176e3b27d5348b2d49bd6a1f"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ac0902382176e3b27d5348b2d49bd6a1f">NEMA_VG_PAINT_COLOR</a></div><div class="ttdeci">#define NEMA_VG_PAINT_COLOR</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__paint_8h_source.html#l00047">nema_vg_paint.h:47</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ac3c00e4772d213ffadbc83f3aad40414"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ac3c00e4772d213ffadbc83f3aad40414">nema_vg_paint_set_paint_color</a></div><div class="ttdeci">void nema_vg_paint_set_paint_color(NEMA_VG_PAINT_HANDLE paint, uint32_t rgba)</div><div class="ttdoc">Set the paint color.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ad7620d0ff6c0768bc5bf21fe640aaf0d"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ad7620d0ff6c0768bc5bf21fe640aaf0d">nema_vg_paint_set_type</a></div><div class="ttdeci">void nema_vg_paint_set_type(NEMA_VG_PAINT_HANDLE paint, uint8_t type)</div><div class="ttdoc">Set the paint type.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_af248cecf504695708767910102654bd1"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#af248cecf504695708767910102654bd1">nema_vg_paint_clear</a></div><div class="ttdeci">void nema_vg_paint_clear(NEMA_VG_PAINT_HANDLE paint)</div><div class="ttdoc">Clear the parameters of a paint object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a0d044741e227dcd37381441ef1223e33"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a0d044741e227dcd37381441ef1223e33">NEMA_VG_PRIM_BEZIER_QUAD</a></div><div class="ttdeci">#define NEMA_VG_PRIM_BEZIER_QUAD</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__path_8h_source.html#l00052">nema_vg_path.h:52</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a316b9f06155845f33e6dd74277ae95ac"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a316b9f06155845f33e6dd74277ae95ac">NEMA_VG_PRIM_LINE</a></div><div class="ttdeci">#define NEMA_VG_PRIM_LINE</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__path_8h_source.html#l00049">nema_vg_path.h:49</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a3180f5580fbaa0ce795bfd697135273e"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a3180f5580fbaa0ce795bfd697135273e">nema_vg_path_set_matrix</a></div><div class="ttdeci">void nema_vg_path_set_matrix(NEMA_VG_PATH_HANDLE path, nema_matrix3x3_t m)</div><div class="ttdoc">Set affine transformation matrix.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a465c83bf3341dd015da8f7308257ede2"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a465c83bf3341dd015da8f7308257ede2">nema_vg_path_clear</a></div><div class="ttdeci">void nema_vg_path_clear(NEMA_VG_PATH_HANDLE path)</div><div class="ttdoc">Clear path.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a57ee1439e5850e9ac89d72cdd77fc098"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a57ee1439e5850e9ac89d72cdd77fc098">NEMA_VG_PRIM_MOVE</a></div><div class="ttdeci">#define NEMA_VG_PRIM_MOVE</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__path_8h_source.html#l00048">nema_vg_path.h:48</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a60a2ba6746342c23cf5e1be4558b9c8b"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a60a2ba6746342c23cf5e1be4558b9c8b">nema_vg_path_set_shape</a></div><div class="ttdeci">void nema_vg_path_set_shape(NEMA_VG_PATH_HANDLE path, const size_t seg_size, const uint8_t *seg, const size_t data_size, const nema_vg_float_t *data)</div><div class="ttdoc">Set path shape (vertex buffer).</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_ac636a3cbf11a91997552b1a6c7185237"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#ac636a3cbf11a91997552b1a6c7185237">NEMA_VG_PRIM_BEZIER_CUBIC</a></div><div class="ttdeci">#define NEMA_VG_PRIM_BEZIER_CUBIC</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__path_8h_source.html#l00053">nema_vg_path.h:53</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_ae5929cb90acc832e4c0c25e4be6c352f"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#ae5929cb90acc832e4c0c25e4be6c352f">NEMA_VG_PRIM_CLOSE</a></div><div class="ttdeci">#define NEMA_VG_PRIM_CLOSE</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__path_8h_source.html#l00047">nema_vg_path.h:47</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a7171303afa691c85cb264d01671c6be9"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a></div><div class="ttdeci">int32_t lv_area_get_height(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00549">lv_area.c:549</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_aac11b92df2af8c3c7f003975c401df87"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a></div><div class="ttdeci">void lv_area_move(lv_area_t *area, int32_t x_ofs, int32_t y_ofs)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00091">lv_area.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_ad13c9f67788081fc1236a36d0e1f29cb"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a></div><div class="ttdeci">int32_t lv_area_get_width(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00543">lv_area.c:543</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2debugging_2lv__assert_8h_html_a124f08761ffc45565d4511eaf68f777e"><div class="ttname"><a href="include_2lvgl_2debugging_2lv__assert_8h.html#a124f08761ffc45565d4511eaf68f777e">LV_ASSERT_MALLOC</a></div><div class="ttdeci">#define LV_ASSERT_MALLOC(p)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">lv_assert.h:86</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a></div><div class="ttdeci">lv_color_format_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00139">lv_color.h:139</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932a6efb61491bf639af316b1eb3a5e2eb61"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a6efb61491bf639af316b1eb3a5e2eb61">LV_COLOR_FORMAT_NEMA_TSC_END</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_NEMA_TSC_END</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00199">lv_color.h:199</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932a97afc9c52ee20793425c62e7d63dae13"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a97afc9c52ee20793425c62e7d63dae13">LV_COLOR_FORMAT_NEMA_TSC_START</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_NEMA_TSC_START</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00192">lv_color.h:192</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_af32de6483e3a70fd6544aed8f40ec889"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#af32de6483e3a70fd6544aed8f40ec889">lv_color_format_get_size</a></div><div class="ttdeci">uint8_t lv_color_format_get_size(lv_color_format_t cf)</div><div class="ttdef"><b>Definition</b> <a href="lv__color_8c_source.html#l00261">lv_color.c:261</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a3fb8ddb9146563c8d160a013d60cd8a8"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a3fb8ddb9146563c8d160a013d60cd8a8">lv_vector_path_ctx_t</a></div><div class="ttdeci">struct _lv_vector_path_ctx_t lv_vector_path_ctx_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00316">lv_types.h:316</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a582c22621ba5b1fdf40a96325a0564e9"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a></div><div class="ttdeci">struct _lv_layer_t lv_layer_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00121">lv_types.h:121</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a8643cf985de5354ae6098b49d05f9b48"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a8643cf985de5354ae6098b49d05f9b48">lv_draw_vector_dsc_t</a></div><div class="ttdeci">struct _lv_draw_vector_dsc_t lv_draw_vector_dsc_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00318">lv_types.h:318</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a9d358cfe063f80d7499a72b46429bf61"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a></div><div class="ttdeci">struct _lv_draw_task_t lv_draw_task_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00123">lv_types.h:123</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aecc04bfa364c7b83d110a05b4fb24495"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aecc04bfa364c7b83d110a05b4fb24495">lv_matrix_t</a></div><div class="ttdeci">struct _lv_matrix_t lv_matrix_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00306">lv_types.h:306</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_afe0adeb6066ac24b5068593fc98e2299"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#afe0adeb6066ac24b5068593fc98e2299">lv_vector_path_t</a></div><div class="ttdeci">struct _lv_vector_path_t lv_vector_path_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00308">lv_types.h:308</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7455e11b1593bd5d98475bde81b97171"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a></div><div class="ttdeci">void lv_free(void *data)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00131">lv_mem.c:131</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7c725dea849c62a365099eb5783cd7a9"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc</a></div><div class="ttdeci">void * lv_malloc(size_t size)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00059">lv_mem.c:59</a></div></div>
+<div class="ttc" id="alv__draw__nema__gfx_8h_html"><div class="ttname"><a href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a></div></div>
+<div class="ttc" id="alv__draw__vector__private_8h_html"><div class="ttname"><a href="lv__draw__vector__private_8h.html">lv_draw_vector_private.h</a></div></div>
+<div class="ttc" id="alv__nema__gfx__path_8h_html"><div class="ttname"><a href="lv__nema__gfx__path_8h.html">lv_nema_gfx_path.h</a></div></div>
+<div class="ttc" id="anamespacecheck__file__template_html_aa28dc103258589d9cb421197fe2de90b"><div class="ttname"><a href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">check_file_template.path</a></div><div class="ttdeci">path</div><div class="ttdef"><b>Definition</b> <a href="check__file__template_8py_source.html#l00113">check_file_template.py:113</a></div></div>
+<div class="ttc" id="astdint_8h_html_a31b85deecb45924320becd11d3ee16ce"><div class="ttname"><a href="stdint_8h.html#a31b85deecb45924320becd11d3ee16ce">uintptr_t</a></div><div class="ttdeci">_W64 unsigned int uintptr_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00165">stdint.h:165</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__t_html_a0fafdd32ced7869f3b5a0bde84cb9329"><div class="ttname"><a href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">_lv_draw_buf_t::header</a></div><div class="ttdeci">lv_image_header_t header</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">lv_draw_buf.h:94</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__t_html_abe222f6d3581e7920dcad5306cc906a8"><div class="ttname"><a href="struct__lv__draw__buf__t.html#abe222f6d3581e7920dcad5306cc906a8">_lv_draw_buf_t::data</a></div><div class="ttdeci">uint8_t * data</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00096">lv_draw_buf.h:96</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a2ad9255e9c76b693a7ba3f50d1c3cfb2"><div class="ttname"><a href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">_lv_draw_task_t::draw_unit</a></div><div class="ttdeci">lv_draw_unit_t * draw_unit</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00059">lv_draw_private.h:59</a></div></div>
+<div class="ttc" id="astruct__lv__layer__t_html_a3d01d8a9b86b99401cab67b2ae32a2dc"><div class="ttname"><a href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">_lv_layer_t::buf_area</a></div><div class="ttdeci">lv_area_t buf_area</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00118">lv_draw.h:118</a></div></div>
+<div class="ttc" id="astruct__lv__layer__t_html_a74b9d911bd9840d84788e0587844e91f"><div class="ttname"><a href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">_lv_layer_t::draw_buf</a></div><div class="ttdeci">lv_draw_buf_t * draw_buf</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00100">lv_draw.h:100</a></div></div>
+<div class="ttc" id="astructlv__area__t_html"><div class="ttname"><a href="structlv__area__t.html">lv_area_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00042">lv_area.h:42</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a00eed38fb678bbe97965bd9fdf9af6dc"><div class="ttname"><a href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">lv_area_t::x1</a></div><div class="ttdeci">int32_t x1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area.h:43</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_ae7d9f6a7144e1bf81a6dd4d1308e2578"><div class="ttname"><a href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">lv_area_t::y1</a></div><div class="ttdeci">int32_t y1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area.h:44</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html_ac1a1d0af0ba96d034c8339af33dce82f"><div class="ttname"><a href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">lv_image_header_t::cf</a></div><div class="ttdeci">uint32_t cf</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_dsc.h:111</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_23a653447504d8eae6a2882d11b89ec8.html">nema_gfx</a></li><li class="navelem"><a href="lv__draw__nema__gfx__vector_8c.html">lv_draw_nema_gfx_vector.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

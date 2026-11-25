@@ -1,0 +1,814 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/thorvg.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('thorvg_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">thorvg.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="thorvg_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _THORVG_H_</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _THORVG_H_</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="lvgl__public_8h.html">../../lvgl_public.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*Testing of dependencies*/</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#if LV_USE_THORVG &amp;&amp; LV_USE_VECTOR_GRAPHIC == 0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">    #error &quot;ThorVG: LV_USE_VECTOR_GRAPHIC is required. Enable it in lv_conf.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if LV_USE_THORVG_INTERNAL</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define TVG_BUILD 1</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifdef TVG_API</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">    #undef TVG_API</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#ifndef TVG_STATIC</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    #ifdef _WIN32</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">        #if TVG_BUILD</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">            #define TVG_API __declspec(dllexport)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">        #else</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">            #define TVG_API __declspec(dllimport)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    #elif (defined(__SUNPRO_C)  || defined(__SUNPRO_CC))</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">        #define TVG_API __global</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">    #else</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">        #if (defined(__GNUC__) &amp;&amp; __GNUC__ &gt;= 4) || defined(__INTEL_COMPILER)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">            #define TVG_API __attribute__ ((visibility(&quot;default&quot;)))</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">        #else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">            #define TVG_API</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">        #endif</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">    #define TVG_API</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#ifdef TVG_DEPRECATED</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">    #undef TVG_DEPRECATED</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">    #define TVG_DEPRECATED __declspec(deprecated)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#elif __GNUC__ &gt; 3 || (__GNUC__ == 3 &amp;&amp; __GNUC_MINOR__ &gt;= 1)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #define TVG_DEPRECATED __attribute__ ((__deprecated__))</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    #define TVG_DEPRECATED</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#define _TVG_DECLARE_PRIVATE(A) \</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    struct Impl; \</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    Impl* pImpl; \</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">protected: \</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">    A(const A&amp;) = delete; \</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">    const A&amp; operator=(const A&amp;) = delete; \</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">    A()</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define _TVG_DISABLE_CTOR(A) \</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">    A() = delete; \</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">    ~A() = delete</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define _TVG_DECLARE_ACCESSOR(A) \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">    friend A</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">namespace </span>tvg</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">class </span>RenderMethod;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">class </span>Animation;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">enum class</span> Result</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Success = 0,           </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    InvalidArguments,      </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    InsufficientCondition, </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    FailedAllocation,      </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    MemoryCorruption,      </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    NonSupport,            </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    Unknown                </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">enum class</span> PathCommand</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    Close = 0, </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    MoveTo,    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    LineTo,    </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    CubicTo    </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">enum class</span> StrokeCap</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    Square = 0, </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    Round,      </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    Butt        </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">enum class</span> StrokeJoin</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    Bevel = 0, </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    Round,     </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    Miter      </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>};</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword">enum class</span> FillSpread</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>{</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    Pad = 0, </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    Reflect, </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    Repeat   </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>};</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">enum class</span> FillRule</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    Winding = 0, </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    EvenOdd      </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">enum class</span> CompositeMethod</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_variable" href="namespacemain.html#ac7485dcc8d256a6f197ed7802687f252">None</a> = 0,           </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    ClipPath,           </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    AlphaMask,          </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    InvAlphaMask,       </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    LumaMask,           </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    InvLumaMask,        </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    AddMask,            </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    SubtractMask,       </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    IntersectMask,      </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    DifferenceMask,     </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    LightenMask,        </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    DarkenMask          </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>};</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keyword">enum class</span> BlendMethod : <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>{</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    Normal = 0,        </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    Multiply,          </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    Screen,            </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    Overlay,           </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    SrcOver,           </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    Darken,            </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    Lighten,           </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    ColorDodge,        </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    ColorBurn,         </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    HardLight,         </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    SoftLight,         </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    Difference,        </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    Exclusion,         </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    Hue,               </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    Saturation,        </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    Color,             </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    Luminosity,        </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    Add,               </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    HardMix            </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>};</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword">enum class</span> SceneEffect : <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>{</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    ClearAll = 0,      </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    GaussianBlur       </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>};</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keyword">enum class</span> CanvasEngine</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>{</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    Sw = (1 &lt;&lt; 1), </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    Gl = (1 &lt;&lt; 2), </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    Wg = (1 &lt;&lt; 3), </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>};</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> : <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>{</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    Undefined = 0,         </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    Shape,                 </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    Scene,                 </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    Picture,               </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    Text,                  </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    LinearGradient = 10,   </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    RadialGradient         </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>};</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="keyword">struct </span>Point</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordtype">float</span> x, y;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>};</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="keyword">struct </span>Matrix</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>{</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordtype">float</span> e11, e12, e13;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <span class="keywordtype">float</span> e21, e22, e23;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordtype">float</span> e31, e32, e33;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>};</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keyword">class </span>TVG_API Paint</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>{</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">virtual</span> ~Paint();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    Result rotate(<span class="keywordtype">float</span> degree) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    Result scale(<span class="keywordtype">float</span> factor) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    Result translate(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span></div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    Result transform(<span class="keyword">const</span> Matrix&amp; m) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span></div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>    Matrix transform() noexcept;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span></div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    Result opacity(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> o) noexcept;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span></div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    Result composite(std::unique_ptr&lt;Paint&gt; target, CompositeMethod <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a3ecd6cbe9363278778bfba3839e02734">method</a>) noexcept;</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    Result clip(std::unique_ptr&lt;Paint&gt; clipper) noexcept;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    Result blend(BlendMethod <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a3ecd6cbe9363278778bfba3839e02734">method</a>) noexcept;</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span></div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    TVG_DEPRECATED Result bounds(<span class="keywordtype">float</span>* x, <span class="keywordtype">float</span>* y, <span class="keywordtype">float</span>* w, <span class="keywordtype">float</span>* h) const noexcept;</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span></div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    Result bounds(<span class="keywordtype">float</span>* x, <span class="keywordtype">float</span>* y, <span class="keywordtype">float</span>* w, <span class="keywordtype">float</span>* h, <span class="keywordtype">bool</span> transformed) const noexcept;</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span></div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    Paint* duplicate() const noexcept;</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span></div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>    <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> opacity() const noexcept;</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span></div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    CompositeMethod composite(const Paint** target) const noexcept;</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span></div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>    virtual <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept = 0;</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span></div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <span class="keywordtype">id</span> = 0;</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span></div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>    TVG_DEPRECATED <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() const noexcept;</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span> </div>
+<div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>    _TVG_DECLARE_PRIVATE(Paint);</div>
+<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>};</div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span> </div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span></div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>class TVG_API <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a></div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>{</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    <span class="keyword">struct </span>ColorStop</div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>    {</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="heart_rate_8c.html#aa9fff43968831437a312428836cab362">offset</a>; </div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> r;    </div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> g;    </div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_variable" href="namespacefiletohex.html#a21ad0bd836b90d08f4cf640b4c298e7c">b</a>;    </div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_variable" href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a>;    </div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    };</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <span class="keyword">virtual</span> ~Fill();</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>    Result colorStops(<span class="keyword">const</span> ColorStop* colorStops, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> cnt) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span></div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>    Result spread(FillSpread s) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    Result transform(<span class="keyword">const</span> Matrix&amp; m) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> colorStops(<span class="keyword">const</span> ColorStop** colorStops) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span></div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    FillSpread spread() const noexcept;</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span></div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    Matrix transform() const noexcept;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span></div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>* duplicate() const noexcept;</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span></div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    virtual <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept = 0;</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span></div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    TVG_DEPRECATED <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() const noexcept;</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    _TVG_DECLARE_PRIVATE(<a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>);</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>};</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span></div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>class TVG_API Canvas</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>{</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    Canvas(RenderMethod*);</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>    <span class="keyword">virtual</span> ~Canvas();</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    TVG_DEPRECATED Result reserve(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> n) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    std::list&lt;Paint*&gt;&amp; paints() noexcept;</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span></div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    virtual Result push(std::unique_ptr&lt;Paint&gt; paint) noexcept;</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span></div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    virtual Result clear(<span class="keywordtype">bool</span> <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ab6e8ea9afb890e5aa11a519977ebe2e3">free</a> = <a class="code hl_define" href="efi_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a>) noexcept;</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span></div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    virtual Result update(Paint* paint = <span class="keywordtype">nullptr</span>) noexcept;</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span></div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>    virtual Result draw() noexcept;</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span></div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>    virtual Result viewport(<a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h) noexcept;</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span></div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    virtual Result sync() noexcept;</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span> </div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>    _TVG_DECLARE_PRIVATE(Canvas);</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>};</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span> </div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span></div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>class TVG_API LinearGradient final : public <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a></div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>{</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>    ~LinearGradient();</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span></div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>    Result linear(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span></div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    Result linear(<span class="keywordtype">float</span>* x1, <span class="keywordtype">float</span>* y1, <span class="keywordtype">float</span>* x2, <span class="keywordtype">float</span>* y2) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span></div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keyword">static</span> std::unique_ptr&lt;LinearGradient&gt; gen() noexcept;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span></div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span></div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>    TVG_DEPRECATED static <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() noexcept;</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span> </div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    _TVG_DECLARE_PRIVATE(LinearGradient);</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>};</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span> </div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span></div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>class TVG_API RadialGradient final : public <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a></div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>{</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    ~RadialGradient();</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span></div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    Result radial(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> radius) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span></div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>    Result radial(<span class="keywordtype">float</span>* cx, <span class="keywordtype">float</span>* cy, <span class="keywordtype">float</span>* radius) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span></div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    <span class="keyword">static</span> std::unique_ptr&lt;RadialGradient&gt; gen() noexcept;</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span></div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span></div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    TVG_DEPRECATED static <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() noexcept;</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span> </div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>    _TVG_DECLARE_PRIVATE(RadialGradient);</div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>};</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span> </div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span></div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>class TVG_API Shape final : public Paint</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>{</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    ~Shape();</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span></div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    Result reset() noexcept;</div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span></div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    Result moveTo(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) noexcept;</div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span></div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>    Result lineTo(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) noexcept;</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span></div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    Result cubicTo(<span class="keywordtype">float</span> cx1, <span class="keywordtype">float</span> cy1, <span class="keywordtype">float</span> cx2, <span class="keywordtype">float</span> cy2, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y) noexcept;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span></div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    Result close() noexcept;</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span></div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    Result appendRect(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h, <span class="keywordtype">float</span> rx = 0, <span class="keywordtype">float</span> ry = 0) noexcept;</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span></div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    Result appendCircle(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> rx, <span class="keywordtype">float</span> ry) noexcept;</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span></div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    Result appendArc(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> startAngle, <span class="keywordtype">float</span> sweep, <span class="keywordtype">bool</span> pie) noexcept;</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span></div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    Result appendPath(const PathCommand* cmds, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> cmdCnt, const Point* pts, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ptsCnt) noexcept;</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span></div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>    Result stroke(<span class="keywordtype">float</span> width) noexcept;</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span></div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>    Result stroke(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> r, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> g, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> b, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_variable" href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a> = 255) noexcept;</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span></div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>    Result stroke(std::unique_ptr&lt;<a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>&gt; <a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) noexcept;</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span></div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    Result stroke(const <span class="keywordtype">float</span>* dashPattern, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> cnt) noexcept;</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span></div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    Result stroke(StrokeCap cap) noexcept;</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span></div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>    Result stroke(StrokeJoin join) noexcept;</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span></div>
+<div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>    Result strokeMiterlimit(<span class="keywordtype">float</span> miterlimit) noexcept;</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span></div>
+<div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>    Result strokeTrim(<span class="keywordtype">float</span> begin, <span class="keywordtype">float</span> end, <span class="keywordtype">bool</span> simultaneous = <a class="code hl_define" href="efi_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a>) noexcept;</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span></div>
+<div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>    Result fill(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> r, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> g, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> b, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <a class="code hl_variable" href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a> = 255) noexcept;</div>
+<div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span></div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    Result fill(std::unique_ptr&lt;<a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>&gt; <a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) noexcept;</div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span></div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>    Result fill(FillRule r) noexcept;</div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span></div>
+<div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    Result <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ad36ee2c2c777074da83c20d1df62be0e">order</a>(<span class="keywordtype">bool</span> strokeFirst) noexcept;</div>
+<div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span></div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pathCommands(const PathCommand** cmds) const noexcept;</div>
+<div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span></div>
+<div class="line"><a id="l01136" name="l01136"></a><span class="lineno"> 1136</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pathCoords(const Point** pts) const noexcept;</div>
+<div class="line"><a id="l01137" name="l01137"></a><span class="lineno"> 1137</span></div>
+<div class="line"><a id="l01143" name="l01143"></a><span class="lineno"> 1143</span>    const <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>* fill() const noexcept;</div>
+<div class="line"><a id="l01144" name="l01144"></a><span class="lineno"> 1144</span></div>
+<div class="line"><a id="l01154" name="l01154"></a><span class="lineno"> 1154</span>    Result fillColor(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* r, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* g, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* b, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* <a class="code hl_variable" href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a> = <span class="keywordtype">nullptr</span>) const noexcept;</div>
+<div class="line"><a id="l01155" name="l01155"></a><span class="lineno"> 1155</span></div>
+<div class="line"><a id="l01161" name="l01161"></a><span class="lineno"> 1161</span>    FillRule fillRule() const noexcept;</div>
+<div class="line"><a id="l01162" name="l01162"></a><span class="lineno"> 1162</span></div>
+<div class="line"><a id="l01168" name="l01168"></a><span class="lineno"> 1168</span>    <span class="keywordtype">float</span> strokeWidth() const noexcept;</div>
+<div class="line"><a id="l01169" name="l01169"></a><span class="lineno"> 1169</span></div>
+<div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>    Result strokeColor(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* r, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* g, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* b, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>* <a class="code hl_variable" href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a> = <span class="keywordtype">nullptr</span>) const noexcept;</div>
+<div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span></div>
+<div class="line"><a id="l01186" name="l01186"></a><span class="lineno"> 1186</span>    const <a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>* strokeFill() const noexcept;</div>
+<div class="line"><a id="l01187" name="l01187"></a><span class="lineno"> 1187</span></div>
+<div class="line"><a id="l01195" name="l01195"></a><span class="lineno"> 1195</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> strokeDash(const <span class="keywordtype">float</span>** dashPattern) const noexcept;</div>
+<div class="line"><a id="l01196" name="l01196"></a><span class="lineno"> 1196</span></div>
+<div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    StrokeCap strokeCap() const noexcept;</div>
+<div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span></div>
+<div class="line"><a id="l01209" name="l01209"></a><span class="lineno"> 1209</span>    StrokeJoin strokeJoin() const noexcept;</div>
+<div class="line"><a id="l01210" name="l01210"></a><span class="lineno"> 1210</span></div>
+<div class="line"><a id="l01218" name="l01218"></a><span class="lineno"> 1218</span>    <span class="keywordtype">float</span> strokeMiterlimit() const noexcept;</div>
+<div class="line"><a id="l01219" name="l01219"></a><span class="lineno"> 1219</span></div>
+<div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>    static std::unique_ptr&lt;Shape&gt; gen() noexcept;</div>
+<div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span></div>
+<div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span></div>
+<div class="line"><a id="l01241" name="l01241"></a><span class="lineno"> 1241</span>    TVG_DEPRECATED static <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() noexcept;</div>
+<div class="line"><a id="l01242" name="l01242"></a><span class="lineno"> 1242</span> </div>
+<div class="line"><a id="l01243" name="l01243"></a><span class="lineno"> 1243</span>    _TVG_DECLARE_PRIVATE(Shape);</div>
+<div class="line"><a id="l01244" name="l01244"></a><span class="lineno"> 1244</span>};</div>
+<div class="line"><a id="l01245" name="l01245"></a><span class="lineno"> 1245</span> </div>
+<div class="line"><a id="l01246" name="l01246"></a><span class="lineno"> 1246</span></div>
+<div class="line"><a id="l01256" name="l01256"></a><span class="lineno"> 1256</span>class TVG_API Picture final : public Paint</div>
+<div class="line"><a id="l01257" name="l01257"></a><span class="lineno"> 1257</span>{</div>
+<div class="line"><a id="l01258" name="l01258"></a><span class="lineno"> 1258</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01259" name="l01259"></a><span class="lineno"> 1259</span>    ~Picture();</div>
+<div class="line"><a id="l01260" name="l01260"></a><span class="lineno"> 1260</span></div>
+<div class="line"><a id="l01276" name="l01276"></a><span class="lineno"> 1276</span>    Result <a class="code hl_function" href="namespaceconfig__headers_1_1parse.html#a451a956fb47411fc6efdb1edfb767b91">load</a>(<span class="keyword">const</span> std::string&amp; path) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01277" name="l01277"></a><span class="lineno"> 1277</span></div>
+<div class="line"><a id="l01281" name="l01281"></a><span class="lineno"> 1281</span>    TVG_DEPRECATED Result <a class="code hl_function" href="namespaceconfig__headers_1_1parse.html#a451a956fb47411fc6efdb1edfb767b91">load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* data, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size, <span class="keywordtype">bool</span> <a class="code hl_variable" href="_l_i_c_e_n_c_e_8txt.html#a229785445d334dbb4ab7fb3ccccce608">copy</a> = <span class="keyword">false</span>) noexcept;</div>
+<div class="line"><a id="l01282" name="l01282"></a><span class="lineno"> 1282</span></div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span>    Result load(const <span class="keywordtype">char</span>* data, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size, const std::<span class="keywordtype">string</span>&amp; mimeType, <span class="keywordtype">bool</span> <a class="code hl_variable" href="_l_i_c_e_n_c_e_8txt.html#a229785445d334dbb4ab7fb3ccccce608">copy</a> = <a class="code hl_define" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>) noexcept;</div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span></div>
+<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span>    Result size(<span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h) noexcept;</div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span></div>
+<div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span>    Result size(<span class="keywordtype">float</span>* w, <span class="keywordtype">float</span>* h) const noexcept;</div>
+<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span></div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>    Result load(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* data, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> w, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> h, <span class="keywordtype">bool</span> <a class="code hl_variable" href="_l_i_c_e_n_c_e_8txt.html#a229785445d334dbb4ab7fb3ccccce608">copy</a>) noexcept;</div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span></div>
+<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>    const Paint* paint(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <span class="keywordtype">id</span>) noexcept;</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span></div>
+<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>    static std::unique_ptr&lt;Picture&gt; gen() noexcept;</div>
+<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span></div>
+<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span></div>
+<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>    TVG_DEPRECATED static <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() noexcept;</div>
+<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span> </div>
+<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>    _TVG_DECLARE_ACCESSOR(Animation);</div>
+<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>    _TVG_DECLARE_PRIVATE(Picture);</div>
+<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>};</div>
+<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span> </div>
+<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span></div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>class TVG_API Scene final : public Paint</div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>{</div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>    ~Scene();</div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span></div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>    Result push(std::unique_ptr&lt;Paint&gt; paint) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span> </div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>    TVG_DEPRECATED Result reserve(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span></div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>    std::list&lt;Paint*&gt;&amp; paints() noexcept;</div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span></div>
+<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>    Result clear(<span class="keywordtype">bool</span> <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ab6e8ea9afb890e5aa11a519977ebe2e3">free</a> = <a class="code hl_define" href="efi_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a>) noexcept;</div>
+<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span></div>
+<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>    Result push(SceneEffect effect, ...) noexcept;</div>
+<div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span></div>
+<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>    static std::unique_ptr&lt;Scene&gt; gen() noexcept;</div>
+<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span></div>
+<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span></div>
+<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>    TVG_DEPRECATED static <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> identifier() noexcept;</div>
+<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span> </div>
+<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>    _TVG_DECLARE_PRIVATE(Scene);</div>
+<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>};</div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span> </div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span></div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>class TVG_API Text final : public Paint</div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>{</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>    ~Text();</div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span></div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>    Result font(<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keywordtype">float</span> size, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="include_2lvgl_2core_2lv__obj__style_8h.html#ae2d8d510e182d47de5eabcb13b717c5f">style</a> = <span class="keyword">nullptr</span>) noexcept;</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span></div>
+<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>    Result <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a>(const <span class="keywordtype">char</span>* <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a>) noexcept;</div>
+<div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span></div>
+<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>    Result fill(<a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> r, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> g, <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> b) noexcept;</div>
+<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span></div>
+<div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span>    Result fill(std::unique_ptr&lt;<a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>&gt; <a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) noexcept;</div>
+<div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span></div>
+<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>    static Result load(const std::<span class="keywordtype">string</span>&amp; path) noexcept;</div>
+<div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span></div>
+<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>    static Result load(const <span class="keywordtype">char</span>* name, const <span class="keywordtype">char</span>* data, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> size, const std::<span class="keywordtype">string</span>&amp; mimeType = <span class="stringliteral">&quot;ttf&quot;</span>, <span class="keywordtype">bool</span> <a class="code hl_variable" href="_l_i_c_e_n_c_e_8txt.html#a229785445d334dbb4ab7fb3ccccce608">copy</a> = <a class="code hl_define" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>) noexcept;</div>
+<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span></div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>    static Result unload(const std::<span class="keywordtype">string</span>&amp; path) noexcept;</div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span></div>
+<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>    static std::unique_ptr&lt;Text&gt; gen() noexcept;</div>
+<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span></div>
+<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>    <a class="code hl_enumeration" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type() const noexcept override;</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span> </div>
+<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>    _TVG_DECLARE_PRIVATE(Text);</div>
+<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>};</div>
+<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span> </div>
+<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span></div>
+<div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>class TVG_API SwCanvas final : public Canvas</div>
+<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>{</div>
+<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>    ~SwCanvas();</div>
+<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span></div>
+<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>    <span class="keyword">enum</span> Colorspace</div>
+<div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span>    {</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>        ABGR8888 = 0,      </div>
+<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>        ARGB8888,          </div>
+<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>        ABGR8888S,         </div>
+<div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>        ARGB8888S,         </div>
+<div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>    };</div>
+<div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span></div>
+<div class="line"><a id="l01663" name="l01663"></a><span class="lineno"> 1663</span>    <span class="keyword">enum</span> MempoolPolicy</div>
+<div class="line"><a id="l01664" name="l01664"></a><span class="lineno"> 1664</span>    {</div>
+<div class="line"><a id="l01665" name="l01665"></a><span class="lineno"> 1665</span>        Default = 0, </div>
+<div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span>        Shareable,   </div>
+<div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span>        Individual   </div>
+<div class="line"><a id="l01668" name="l01668"></a><span class="lineno"> 1668</span>    };</div>
+<div class="line"><a id="l01669" name="l01669"></a><span class="lineno"> 1669</span></div>
+<div class="line"><a id="l01690" name="l01690"></a><span class="lineno"> 1690</span>    Result target(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* <a class="code hl_variable" href="mpu6050_8c.html#a174887a700c9f9e196a6504506d757e7">buffer</a>, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> stride, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> w, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> h, Colorspace cs) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span></div>
+<div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span>    Result mempool(MempoolPolicy policy) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span></div>
+<div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>    <span class="keyword">static</span> std::unique_ptr&lt;SwCanvas&gt; gen() noexcept;</div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span> </div>
+<div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>    _TVG_DECLARE_PRIVATE(SwCanvas);</div>
+<div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span>};</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span> </div>
+<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span></div>
+<div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>class TVG_API GlCanvas final : public Canvas</div>
+<div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span>{</div>
+<div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>    ~GlCanvas();</div>
+<div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span></div>
+<div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>    Result target(<a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <span class="keywordtype">id</span>, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> w, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> h) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span></div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>    <span class="keyword">static</span> std::unique_ptr&lt;GlCanvas&gt; gen() noexcept;</div>
+<div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span> </div>
+<div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span>    _TVG_DECLARE_PRIVATE(GlCanvas);</div>
+<div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>};</div>
+<div class="line"><a id="l01770" name="l01770"></a><span class="lineno"> 1770</span> </div>
+<div class="line"><a id="l01771" name="l01771"></a><span class="lineno"> 1771</span></div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>class TVG_API WgCanvas final : public Canvas</div>
+<div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>{</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>    ~WgCanvas();</div>
+<div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span></div>
+<div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span>    Result target(<span class="keywordtype">void</span>* instance, <span class="keywordtype">void</span>* surface, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> w, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> h, <span class="keywordtype">void</span>* device = <span class="keyword">nullptr</span>) noexcept;</div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span></div>
+<div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span>    static std::unique_ptr&lt;WgCanvas&gt; gen() noexcept;</div>
+<div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span> </div>
+<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>    _TVG_DECLARE_PRIVATE(WgCanvas);</div>
+<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>};</div>
+<div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span> </div>
+<div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span></div>
+<div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>class TVG_API Initializer final</div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>{</div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01842" name="l01842"></a><span class="lineno"> 1842</span>    <span class="keyword">static</span> Result init(CanvasEngine <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a2a01fe1da8658f40c9d09528b903abaf">engine</a>, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> threads) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01843" name="l01843"></a><span class="lineno"> 1843</span></div>
+<div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span>    <span class="keyword">static</span> Result term(CanvasEngine <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a2a01fe1da8658f40c9d09528b903abaf">engine</a>) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span></div>
+<div class="line"><a id="l01868" name="l01868"></a><span class="lineno"> 1868</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="namespaceupdate__version.html#a4c7a521b8f1a0769c09bfa4a1fca7dab">version</a>(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* major, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* minor, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>* micro) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01869" name="l01869"></a><span class="lineno"> 1869</span> </div>
+<div class="line"><a id="l01870" name="l01870"></a><span class="lineno"> 1870</span>    _TVG_DISABLE_CTOR(Initializer);</div>
+<div class="line"><a id="l01871" name="l01871"></a><span class="lineno"> 1871</span>};</div>
+<div class="line"><a id="l01872" name="l01872"></a><span class="lineno"> 1872</span> </div>
+<div class="line"><a id="l01873" name="l01873"></a><span class="lineno"> 1873</span></div>
+<div class="line"><a id="l01883" name="l01883"></a><span class="lineno"> 1883</span> </div>
+<div class="line"><a id="l01884" name="l01884"></a><span class="lineno"> 1884</span><span class="keyword">class </span>TVG_API Animation</div>
+<div class="line"><a id="l01885" name="l01885"></a><span class="lineno"> 1885</span>{</div>
+<div class="line"><a id="l01886" name="l01886"></a><span class="lineno"> 1886</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l01887" name="l01887"></a><span class="lineno"> 1887</span>    ~Animation();</div>
+<div class="line"><a id="l01888" name="l01888"></a><span class="lineno"> 1888</span></div>
+<div class="line"><a id="l01904" name="l01904"></a><span class="lineno"> 1904</span>    Result frame(<span class="keywordtype">float</span> no) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l01905" name="l01905"></a><span class="lineno"> 1905</span></div>
+<div class="line"><a id="l01918" name="l01918"></a><span class="lineno"> 1918</span>    Picture* <a class="code hl_variable" href="esp__edu__pic_8c.html#a77c066df4233921c33ca1e1733bb54c7">picture</a>() const noexcept;</div>
+<div class="line"><a id="l01919" name="l01919"></a><span class="lineno"> 1919</span></div>
+<div class="line"><a id="l01931" name="l01931"></a><span class="lineno"> 1931</span>    <span class="keywordtype">float</span> curFrame() const noexcept;</div>
+<div class="line"><a id="l01932" name="l01932"></a><span class="lineno"> 1932</span></div>
+<div class="line"><a id="l01942" name="l01942"></a><span class="lineno"> 1942</span>    <span class="keywordtype">float</span> totalFrame() const noexcept;</div>
+<div class="line"><a id="l01943" name="l01943"></a><span class="lineno"> 1943</span></div>
+<div class="line"><a id="l01952" name="l01952"></a><span class="lineno"> 1952</span>    <span class="keywordtype">float</span> duration() const noexcept;</div>
+<div class="line"><a id="l01953" name="l01953"></a><span class="lineno"> 1953</span></div>
+<div class="line"><a id="l01974" name="l01974"></a><span class="lineno"> 1974</span>    Result segment(<span class="keywordtype">float</span> begin, <span class="keywordtype">float</span> end) noexcept;</div>
+<div class="line"><a id="l01975" name="l01975"></a><span class="lineno"> 1975</span></div>
+<div class="line"><a id="l01987" name="l01987"></a><span class="lineno"> 1987</span>    Result segment(<span class="keywordtype">float</span>* begin, <span class="keywordtype">float</span>* end = <span class="keywordtype">nullptr</span>) noexcept;</div>
+<div class="line"><a id="l01988" name="l01988"></a><span class="lineno"> 1988</span></div>
+<div class="line"><a id="l01995" name="l01995"></a><span class="lineno"> 1995</span>    static std::unique_ptr&lt;Animation&gt; gen() noexcept;</div>
+<div class="line"><a id="l01996" name="l01996"></a><span class="lineno"> 1996</span> </div>
+<div class="line"><a id="l01997" name="l01997"></a><span class="lineno"> 1997</span>    _TVG_DECLARE_PRIVATE(Animation);</div>
+<div class="line"><a id="l01998" name="l01998"></a><span class="lineno"> 1998</span>};</div>
+<div class="line"><a id="l01999" name="l01999"></a><span class="lineno"> 1999</span> </div>
+<div class="line"><a id="l02000" name="l02000"></a><span class="lineno"> 2000</span></div>
+<div class="line"><a id="l02018" name="l02018"></a><span class="lineno"> 2018</span>class TVG_API Saver final</div>
+<div class="line"><a id="l02019" name="l02019"></a><span class="lineno"> 2019</span>{</div>
+<div class="line"><a id="l02020" name="l02020"></a><span class="lineno"> 2020</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02021" name="l02021"></a><span class="lineno"> 2021</span>    ~Saver();</div>
+<div class="line"><a id="l02022" name="l02022"></a><span class="lineno"> 2022</span></div>
+<div class="line"><a id="l02030" name="l02030"></a><span class="lineno"> 2030</span>    Result background(std::unique_ptr&lt;Paint&gt; paint) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l02031" name="l02031"></a><span class="lineno"> 2031</span></div>
+<div class="line"><a id="l02052" name="l02052"></a><span class="lineno"> 2052</span>    Result save(std::unique_ptr&lt;Paint&gt; paint, <span class="keyword">const</span> std::string&amp; path, <span class="keywordtype">bool</span> compress = <span class="keyword">true</span>) noexcept;</div>
+<div class="line"><a id="l02053" name="l02053"></a><span class="lineno"> 2053</span></div>
+<div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>    Result save(std::unique_ptr&lt;Animation&gt; animation, const std::<span class="keywordtype">string</span>&amp; path, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> quality = 100, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> fps = 0) noexcept;</div>
+<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span></div>
+<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>    Result sync() noexcept;</div>
+<div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span></div>
+<div class="line"><a id="l02098" name="l02098"></a><span class="lineno"> 2098</span>    static std::unique_ptr&lt;Saver&gt; gen() noexcept;</div>
+<div class="line"><a id="l02099" name="l02099"></a><span class="lineno"> 2099</span> </div>
+<div class="line"><a id="l02100" name="l02100"></a><span class="lineno"> 2100</span>    _TVG_DECLARE_PRIVATE(Saver);</div>
+<div class="line"><a id="l02101" name="l02101"></a><span class="lineno"> 2101</span>};</div>
+<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span> </div>
+<div class="line"><a id="l02103" name="l02103"></a><span class="lineno"> 2103</span></div>
+<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>class TVG_API Accessor final</div>
+<div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span>{</div>
+<div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l02118" name="l02118"></a><span class="lineno"> 2118</span>    ~Accessor();</div>
+<div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span> </div>
+<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>    TVG_DEPRECATED std::unique_ptr&lt;Picture&gt; <a class="code hl_function" href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt.html#a4226a4a554b8818e3295ef3e75d38d03">set</a>(std::unique_ptr&lt;Picture&gt; <a class="code hl_variable" href="esp__edu__pic_8c.html#a77c066df4233921c33ca1e1733bb54c7">picture</a>, std::function&lt;<span class="keywordtype">bool</span>(<span class="keyword">const</span> Paint* paint)&gt; func) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span></div>
+<div class="line"><a id="l02133" name="l02133"></a><span class="lineno"> 2133</span>    Result <a class="code hl_function" href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt.html#a4226a4a554b8818e3295ef3e75d38d03">set</a>(<span class="keyword">const</span> Picture* <a class="code hl_variable" href="esp__edu__pic_8c.html#a77c066df4233921c33ca1e1733bb54c7">picture</a>, std::function&lt;<span class="keywordtype">bool</span>(<span class="keyword">const</span> Paint* paint, <span class="keywordtype">void</span>* data)&gt; func, <span class="keywordtype">void</span>* data) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l02134" name="l02134"></a><span class="lineno"> 2134</span></div>
+<div class="line"><a id="l02149" name="l02149"></a><span class="lineno"> 2149</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> id(<span class="keyword">const</span> <span class="keywordtype">char</span>* name) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l02150" name="l02150"></a><span class="lineno"> 2150</span></div>
+<div class="line"><a id="l02156" name="l02156"></a><span class="lineno"> 2156</span>    <span class="keyword">static</span> std::unique_ptr&lt;Accessor&gt; gen() noexcept;</div>
+<div class="line"><a id="l02157" name="l02157"></a><span class="lineno"> 2157</span> </div>
+<div class="line"><a id="l02158" name="l02158"></a><span class="lineno"> 2158</span>    _TVG_DECLARE_PRIVATE(Accessor);</div>
+<div class="line"><a id="l02159" name="l02159"></a><span class="lineno"> 2159</span>};</div>
+<div class="line"><a id="l02160" name="l02160"></a><span class="lineno"> 2160</span> </div>
+<div class="line"><a id="l02161" name="l02161"></a><span class="lineno"> 2161</span></div>
+<div class="line"><a id="l02166" name="l02166"></a><span class="lineno"> 2166</span>template&lt;typename T = tvg::Paint&gt;</div>
+<div class="line"><a id="l02167" name="l02167"></a><span class="lineno"> 2167</span>std::unique_ptr&lt;T&gt; cast(Paint* paint)</div>
+<div class="line"><a id="l02168" name="l02168"></a><span class="lineno"> 2168</span>{</div>
+<div class="line"><a id="l02169" name="l02169"></a><span class="lineno"> 2169</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;T&gt;(<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(paint));</div>
+<div class="line"><a id="l02170" name="l02170"></a><span class="lineno"> 2170</span>}</div>
+<div class="line"><a id="l02171" name="l02171"></a><span class="lineno"> 2171</span> </div>
+<div class="line"><a id="l02172" name="l02172"></a><span class="lineno"> 2172</span></div>
+<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T = tvg::Fill&gt;</div>
+<div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>std::unique_ptr&lt;T&gt; cast(<a class="code hl_function" href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a>* fill)</div>
+<div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>{</div>
+<div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>    <span class="keywordflow">return</span> std::unique_ptr&lt;T&gt;(<span class="keyword">static_cast&lt;</span>T*<span class="keyword">&gt;</span>(fill));</div>
+<div class="line"><a id="l02181" name="l02181"></a><span class="lineno"> 2181</span>}</div>
+<div class="line"><a id="l02182" name="l02182"></a><span class="lineno"> 2182</span> </div>
+<div class="line"><a id="l02183" name="l02183"></a><span class="lineno"> 2183</span></div>
+<div class="line"><a id="l02185" name="l02185"></a><span class="lineno"> 2185</span> </div>
+<div class="line"><a id="l02186" name="l02186"></a><span class="lineno"> 2186</span>} <span class="comment">//namespace</span></div>
+<div class="line"><a id="l02187" name="l02187"></a><span class="lineno"> 2187</span> </div>
+<div class="line"><a id="l02188" name="l02188"></a><span class="lineno"> 2188</span><span class="preprocessor">#endif </span><span class="comment">//_THORVG_H_</span></div>
+<div class="line"><a id="l02189" name="l02189"></a><span class="lineno"> 2189</span> </div>
+<div class="line"><a id="l02190" name="l02190"></a><span class="lineno"> 2190</span><span class="preprocessor">#endif </span><span class="comment">/* LV_USE_THORVG_INTERNAL */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l02191" name="l02191"></a><span class="lineno"> 2191</span> </div>
+<div class="ttc" id="a_l_i_c_e_n_c_e_8txt_html_a229785445d334dbb4ab7fb3ccccce608"><div class="ttname"><a href="_l_i_c_e_n_c_e_8txt.html#a229785445d334dbb4ab7fb3ccccce608">copy</a></div><div class="ttdeci">MIT licence free of to any person obtaining a copy of this software and associated documentation to deal in the Software without including without limitation the rights to copy</div><div class="ttdef"><b>Definition</b> <a href="_l_i_c_e_n_c_e_8txt_source.html#l00004">LICENCE.txt:4</a></div></div>
+<div class="ttc" id="aefi_8h_html_a41f9c5fb8b08eb5dc3edce4dcb37fee7"><div class="ttname"><a href="efi_8h.html#a41f9c5fb8b08eb5dc3edce4dcb37fee7">true</a></div><div class="ttdeci">#define true</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00083">efi.h:83</a></div></div>
+<div class="ttc" id="aefi_8h_html_a65e9886d74aaee76545e83dd09011727"><div class="ttname"><a href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a></div><div class="ttdeci">#define false</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00082">efi.h:82</a></div></div>
+<div class="ttc" id="aesp__edu__pic_8c_html_a77c066df4233921c33ca1e1733bb54c7"><div class="ttname"><a href="esp__edu__pic_8c.html#a77c066df4233921c33ca1e1733bb54c7">picture</a></div><div class="ttdeci">const uint8_t picture[]</div><div class="ttdef"><b>Definition</b> <a href="esp__edu__pic_8c_source.html#l00003">esp_edu_pic.c:3</a></div></div>
+<div class="ttc" id="afreetype-_l_i_c_e_n_s_e_8txt_html_a2a01fe1da8658f40c9d09528b903abaf"><div class="ttname"><a href="freetype-_l_i_c_e_n_s_e_8txt.html#a2a01fe1da8658f40c9d09528b903abaf">engine</a></div><div class="ttdeci">some of them may in addition to the FreeType font engine</div><div class="ttdef"><b>Definition</b> <a href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00015">freetype-LICENSE.txt:15</a></div></div>
+<div class="ttc" id="afreetype-_l_i_c_e_n_s_e_8txt_html_a37b112ef047aa5e18e9681fdd373ea8f"><div class="ttname"><a href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a></div><div class="ttdeci">some of them may in addition to the FreeType font various tools and contributions which rely or relate the FreeType Project This license applies to all files found in such and which do not fall under their own license The license affects thus the FreeType font the test documentation and at the very least This license was inspired by the and which all encourage inclusion and use of free software in commercial and freeware products alike As a its main points are we will be interested in any kind of bug in parts or full without having to pay or only parts of in a you must acknowledge somewhere in your documentation that you have used the FreeType with or without in commercial products We disclaim all warranties covering The FreeType Project and assume no liability related to The FreeType Project many people asked us for a preferred form for a credit disclaimer to use in compliance with this license We thus encourage you to use the following text</div><div class="ttdef"><b>Definition</b> <a href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00048">freetype-LICENSE.txt:65</a></div></div>
+<div class="ttc" id="aheart_rate_8c_html_aa9fff43968831437a312428836cab362"><div class="ttname"><a href="heart_rate_8c.html#aa9fff43968831437a312428836cab362">offset</a></div><div class="ttdeci">uint8_t offset</div><div class="ttdef"><b>Definition</b> <a href="heart_rate_8c_source.html#l00070">heartRate.c:70</a></div></div>
+<div class="ttc" id="aili9341_8c_html_a1398b648b9ae023e8c33ac565fc9eaff"><div class="ttname"><a href="ili9341_8c.html#a1398b648b9ae023e8c33ac565fc9eaff">Fill</a></div><div class="ttdeci">void Fill(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color)</div><div class="ttdoc">Fill an srea of LCD with a determined color.</div><div class="ttdef"><b>Definition</b> <a href="ili9341_8c_source.html#l00234">ili9341.c:234</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a2eb0b42e4093af18beb31744eb94a90c"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></div><div class="ttdeci">lv_obj_flag_t f</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj_8h_source.html#l00239">lv_obj.h:239</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style_8h_html_ae2d8d510e182d47de5eabcb13b717c5f"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style_8h.html#ae2d8d510e182d47de5eabcb13b717c5f">style</a></div><div class="ttdeci">const lv_style_t * style</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00205">lv_obj_style.h:205</a></div></div>
+<div class="ttc" id="alv__example__anim__3_8c_html_aeeddce917cf130d62c370b8f216026dd"><div class="ttname"><a href="lv__example__anim__3_8c.html#aeeddce917cf130d62c370b8f216026dd">a</a></div><div class="ttdeci">lv_anim_t a</div><div class="ttdef"><b>Definition</b> <a href="lv__example__anim__3_8c_source.html#l00017">lv_example_anim_3.c:17</a></div></div>
+<div class="ttc" id="alvgl__public_8h_html"><div class="ttname"><a href="lvgl__public_8h.html">lvgl_public.h</a></div></div>
+<div class="ttc" id="ampu6050_8c_html_a174887a700c9f9e196a6504506d757e7"><div class="ttname"><a href="mpu6050_8c.html#a174887a700c9f9e196a6504506d757e7">buffer</a></div><div class="ttdeci">uint8_t buffer[14]</div><div class="ttdef"><b>Definition</b> <a href="mpu6050_8c_source.html#l00020">mpu6050.c:20</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1parse_html_a451a956fb47411fc6efdb1edfb767b91"><div class="ttname"><a href="namespaceconfig__headers_1_1parse.html#a451a956fb47411fc6efdb1edfb767b91">config_headers.parse.load</a></div><div class="ttdeci">Kconfig load(str path)</div><div class="ttdef"><b>Definition</b> <a href="parse_8py_source.html#l00146">parse.py:146</a></div></div>
+<div class="ttc" id="anamespacefiletohex_html_a21ad0bd836b90d08f4cf640b4c298e7c"><div class="ttname"><a href="namespacefiletohex.html#a21ad0bd836b90d08f4cf640b4c298e7c">filetohex.b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition</b> <a href="filetohex_8py_source.html#l00009">filetohex.py:9</a></div></div>
+<div class="ttc" id="anamespacemain_html_ac7485dcc8d256a6f197ed7802687f252"><div class="ttname"><a href="namespacemain.html#ac7485dcc8d256a6f197ed7802687f252">main.None</a></div><div class="ttdeci">None</div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00472">main.py:472</a></div></div>
+<div class="ttc" id="anamespaceupdate__version_html_a4c7a521b8f1a0769c09bfa4a1fca7dab"><div class="ttname"><a href="namespaceupdate__version.html#a4c7a521b8f1a0769c09bfa4a1fca7dab">update_version.version</a></div><div class="ttdeci">version</div><div class="ttdef"><b>Definition</b> <a href="update__version_8py_source.html#l00223">update_version.py:223</a></div></div>
+<div class="ttc" id="aprojects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt_html_a4226a4a554b8818e3295ef3e75d38d03"><div class="ttname"><a href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt.html#a4226a4a554b8818e3295ef3e75d38d03">set</a></div><div class="ttdeci">set(FLAG_CHECK_WHITELIST --coverage -fsanitize=address -Werror) include(CheckCCompilerFlag) include(CheckCXXCompilerFlag) function(filter_compiler_options lang options_out) set(options $</div><div class="ttdef"><b>Definition</b> <a href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt_source.html#l00020">CMakeLists.txt:20</a></div></div>
+<div class="ttc" id="arapidjson_8h_html_a1d1cfd8ffb84e947f82999c682b666a7"><div class="ttname"><a href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Type of JSON value.</div><div class="ttdef"><b>Definition</b> <a href="rapidjson_8h_source.html#l00729">rapidjson.h:729</a></div></div>
+<div class="ttc" id="asrc_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_html_a3ecd6cbe9363278778bfba3839e02734"><div class="ttname"><a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a3ecd6cbe9363278778bfba3839e02734">method</a></div><div class="ttdeci">or b any new file in Source Code Form that contains any Covered Software Patent Claims of a Contributor means any patent including without method</div><div class="ttdef"><b>Definition</b> <a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00066">LICENSE.txt:66</a></div></div>
+<div class="ttc" id="asrc_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_html_ab6e8ea9afb890e5aa11a519977ebe2e3"><div class="ttname"><a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ab6e8ea9afb890e5aa11a519977ebe2e3">free</a></div><div class="ttdeci">or b any new file in Source Code Form that contains any Covered Software Patent Claims of a Contributor means any patent including without and apparatus in any patent Licensable by such Contributor that would be but for the grant of the by the offering for having or transfer of either its Contributions or its Contributor Version Secondary License means either the GNU General Public the GNU Lesser General Public the GNU Affero General Public or any later versions of those licenses Source Code Form means the form of the work preferred for making modifications You includes any entity that is controlled or is under common control with You For purposes of this control direct or to cause the direction or management of such whether by contract or royalty free</div><div class="ttdef"><b>Definition</b> <a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00097">LICENSE.txt:97</a></div></div>
+<div class="ttc" id="asrc_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_html_ad36ee2c2c777074da83c20d1df62be0e"><div class="ttname"><a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ad36ee2c2c777074da83c20d1df62be0e">order</a></div><div class="ttdeci">and b You may distribute such Executable Form under the terms of this or sublicense it under different provided that the license for the Executable Form does not attempt to limit or alter the recipients rights in the Source Code Form under this License Distribution of a Larger Work You may create and distribute a Larger Work under terms of Your provided that You also comply with the requirements of this License for the Covered Software If the Larger Work is a combination of Covered Software with a work governed by one or more Secondary and the Covered Software is not Incompatible With Secondary this License permits You to additionally distribute such Covered Software under the terms of such Secondary so that the recipient of the Larger Work at their further distribute the Covered Software under the terms of either this License or such Secondary patent disclaimers of or limitations of liability contained within the Source Code Form of the Covered except that You may alter any license notices to the extent required to remedy known factual inaccuracies Application of Additional Terms You may choose to and to charge a fee indemnity or liability obligations to one or more recipients of Covered Software You may do so only on Your own and not on behalf of any Contributor You must make it absolutely clear that any such or liability obligation is offered by You and You hereby agree to indemnify every Contributor for any liability incurred by such Contributor as a result of indemnity or liability terms You offer You may include additional disclaimers of warranty and limitations of liability specific to any jurisdiction Inability to Comply Due to Statute or Regulation If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Covered Software due to judicial order</div><div class="ttdef"><b>Definition</b> <a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00228">LICENSE.txt:228</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_5f15c64a648eaeb802aa13d0bcde5c72.html">libs</a></li><li class="navelem"><a href="dir_685db568d1ab90617949c6e80c8758c3.html">thorvg</a></li><li class="navelem"><a href="thorvg_8h.html">thorvg.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

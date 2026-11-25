@@ -1,0 +1,1602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/scale/lv_scale.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__scale_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_scale.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__scale__private_8h_source.html">lv_scale_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__private_8h_source.html">../../misc/lv_text_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__observer__private_8h_source.html">../../core/lv_observer_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__style__private_8h_source.html">../../misc/lv_style_private.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__scale_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:bind_5Felement_5Fneedle_5Ft" id="r_bind_5Felement_5Fneedle_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structbind__element__needle__t.html">bind_element_needle_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#ae9b706fc381a35904ea542290c326614">lv_scale_class</a>)</td></tr>
+<tr class="memitem:afc529529e3a5256f97f9d337fb1e002b" id="r_afc529529e3a5256f97f9d337fb1e002b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afc529529e3a5256f97f9d337fb1e002b">LV_SCALE_LABEL_TXT_LEN</a>&#160;&#160;&#160;(20U)</td></tr>
+<tr class="memitem:a8fa10e380978f9da55aa56cb107b7529" id="r_a8fa10e380978f9da55aa56cb107b7529"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8fa10e380978f9da55aa56cb107b7529">LV_SCALE_DEFAULT_ANGLE_RANGE</a>&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 270U)</td></tr>
+<tr class="memitem:a0a059ab2dade8038ff7f4d3ae2d79eaf" id="r_a0a059ab2dade8038ff7f4d3ae2d79eaf"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0a059ab2dade8038ff7f4d3ae2d79eaf">LV_SCALE_DEFAULT_ROTATION</a>&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>) 135U)</td></tr>
+<tr class="memitem:aaa98e14c68e9f1676be0eb45e213b8ea" id="r_aaa98e14c68e9f1676be0eb45e213b8ea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaa98e14c68e9f1676be0eb45e213b8ea">LV_SCALE_TICK_IDX_DEFAULT_ID</a>&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 255U)</td></tr>
+<tr class="memitem:a08e559b1c31f9282ddbb43a0d6713da5" id="r_a08e559b1c31f9282ddbb43a0d6713da5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a08e559b1c31f9282ddbb43a0d6713da5">LV_SCALE_DEFAULT_LABEL_GAP</a>&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 15U)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ad417eeb975ea27a47468e019c8b3eb71" id="r_ad417eeb975ea27a47468e019c8b3eb71"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad417eeb975ea27a47468e019c8b3eb71">lv_scale_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a52d7aac55b34a9386a602ee2dafcc9d6" id="r_a52d7aac55b34a9386a602ee2dafcc9d6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a52d7aac55b34a9386a602ee2dafcc9d6">lv_scale_set_mode</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a> mode)</td></tr>
+<tr class="memitem:a7c6a3812fc00767036a43199f2df191c" id="r_a7c6a3812fc00767036a43199f2df191c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7c6a3812fc00767036a43199f2df191c">lv_scale_set_total_tick_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> total_tick_count)</td></tr>
+<tr class="memitem:a8d6f8a28b8c231f93af1c254b53a46b6" id="r_a8d6f8a28b8c231f93af1c254b53a46b6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d6f8a28b8c231f93af1c254b53a46b6">lv_scale_set_major_tick_every</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> major_tick_every)</td></tr>
+<tr class="memitem:a6bea8b1e8cf18aff7ad6345040d46a2e" id="r_a6bea8b1e8cf18aff7ad6345040d46a2e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6bea8b1e8cf18aff7ad6345040d46a2e">lv_scale_set_label_show</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> show_label)</td></tr>
+<tr class="memitem:a1ceed3b44783e08519b2fabf2351bc8a" id="r_a1ceed3b44783e08519b2fabf2351bc8a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1ceed3b44783e08519b2fabf2351bc8a">lv_scale_set_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:aa63a385154cb7e8a4e4e763daa9a7eb1" id="r_aa63a385154cb7e8a4e4e763daa9a7eb1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa63a385154cb7e8a4e4e763daa9a7eb1">lv_scale_set_min_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min)</td></tr>
+<tr class="memitem:a2b98e333acf3ecc687f947da7676dca6" id="r_a2b98e333acf3ecc687f947da7676dca6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b98e333acf3ecc687f947da7676dca6">lv_scale_set_max_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:acc7a4cb528fbdb5ef9bfcacca4bf7421" id="r_acc7a4cb528fbdb5ef9bfcacca4bf7421"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acc7a4cb528fbdb5ef9bfcacca4bf7421">lv_scale_set_angle_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> angle_range)</td></tr>
+<tr class="memitem:af80c33356bfdbfedb23495f3850cac19" id="r_af80c33356bfdbfedb23495f3850cac19"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af80c33356bfdbfedb23495f3850cac19">lv_scale_set_rotation</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> rotation)</td></tr>
+<tr class="memitem:aa1727f0f38679f29a95e3966a995e823" id="r_aa1727f0f38679f29a95e3966a995e823"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1727f0f38679f29a95e3966a995e823">lv_scale_set_line_needle_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *needle_line, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> needle_length, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> value)</td></tr>
+<tr class="memitem:ab9bd70c622bb170c28b36483513c00cc" id="r_ab9bd70c622bb170c28b36483513c00cc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab9bd70c622bb170c28b36483513c00cc">lv_scale_set_image_needle_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *needle_img, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> value)</td></tr>
+<tr class="memitem:afe2269bb3442b45ec223541771e1b60b" id="r_afe2269bb3442b45ec223541771e1b60b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe2269bb3442b45ec223541771e1b60b">lv_scale_set_text_src</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *txt_src[])</td></tr>
+<tr class="memitem:a464efca286ba19cde5b12023cea73dac" id="r_a464efca286ba19cde5b12023cea73dac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a464efca286ba19cde5b12023cea73dac">lv_scale_set_post_draw</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> en)</td></tr>
+<tr class="memitem:a66ebcbd4ae6978d67d4305d41c7e5076" id="r_a66ebcbd4ae6978d67d4305d41c7e5076"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a66ebcbd4ae6978d67d4305d41c7e5076">lv_scale_set_draw_ticks_on_top</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> en)</td></tr>
+<tr class="memitem:aa12a6bbeeb69f134edfd616ade3a48cd" id="r_aa12a6bbeeb69f134edfd616ade3a48cd"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa12a6bbeeb69f134edfd616ade3a48cd">lv_scale_add_section</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a3276971ccbe31ba002a9c21204d2cc30" id="r_a3276971ccbe31ba002a9c21204d2cc30"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3276971ccbe31ba002a9c21204d2cc30">lv_scale_set_section_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:a06844a6b61c4bed9c759ab2cb5c02275" id="r_a06844a6b61c4bed9c759ab2cb5c02275"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a06844a6b61c4bed9c759ab2cb5c02275">lv_scale_set_section_min_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min)</td></tr>
+<tr class="memitem:a73ba82d1d9e0db2919abdc301af53a93" id="r_a73ba82d1d9e0db2919abdc301af53a93"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a73ba82d1d9e0db2919abdc301af53a93">lv_scale_set_section_max_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:aa212a987e733104fe8d80d2503b44101" id="r_aa212a987e733104fe8d80d2503b44101"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa212a987e733104fe8d80d2503b44101">lv_scale_section_set_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:a95706ee5c7219a20ca50500701ec6e86" id="r_a95706ee5c7219a20ca50500701ec6e86"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95706ee5c7219a20ca50500701ec6e86">lv_scale_set_section_style_main</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, const <a class="el" href="structlv__style__t.html">lv_style_t</a> *style)</td></tr>
+<tr class="memitem:a20dc58e55bafbe702f1ae7304382d649" id="r_a20dc58e55bafbe702f1ae7304382d649"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20dc58e55bafbe702f1ae7304382d649">lv_scale_set_section_style_indicator</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, const <a class="el" href="structlv__style__t.html">lv_style_t</a> *style)</td></tr>
+<tr class="memitem:a764243ee6a6536d9d7076f559b75fa03" id="r_a764243ee6a6536d9d7076f559b75fa03"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a764243ee6a6536d9d7076f559b75fa03">lv_scale_set_section_style_items</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *scale, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, const <a class="el" href="structlv__style__t.html">lv_style_t</a> *style)</td></tr>
+<tr class="memitem:aa6ef2951e7139335ed36ad8b45d058bd" id="r_aa6ef2951e7139335ed36ad8b45d058bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6ef2951e7139335ed36ad8b45d058bd">lv_scale_section_set_style</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#a257703cf7a0b9e5501dd50339a5a4e74">lv_part_t</a> part, <a class="el" href="structlv__style__t.html">lv_style_t</a> *section_part_style)</td></tr>
+<tr class="memitem:a35850dd2202197062220ca79bed298fb" id="r_a35850dd2202197062220ca79bed298fb"><td class="memItemLeft"><a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a35850dd2202197062220ca79bed298fb">lv_scale_get_mode</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a11c542ae7b253bb756d8e665cea26d96" id="r_a11c542ae7b253bb756d8e665cea26d96"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a11c542ae7b253bb756d8e665cea26d96">lv_scale_get_total_tick_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ae9ca07a0d33a6597190a24c593ec47b3" id="r_ae9ca07a0d33a6597190a24c593ec47b3"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae9ca07a0d33a6597190a24c593ec47b3">lv_scale_get_major_tick_every</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ac587b316d835be4c3401209ddcada615" id="r_ac587b316d835be4c3401209ddcada615"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac587b316d835be4c3401209ddcada615">lv_scale_get_rotation</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a56fd478903bb1923bf3288095202e672" id="r_a56fd478903bb1923bf3288095202e672"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a56fd478903bb1923bf3288095202e672">lv_scale_get_label_show</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ae18d522ef42852ae4ab62d8f5fbccb47" id="r_ae18d522ef42852ae4ab62d8f5fbccb47"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae18d522ef42852ae4ab62d8f5fbccb47">lv_scale_get_angle_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a03bcc2d1076c5ed9b00cdfce379df7ed" id="r_a03bcc2d1076c5ed9b00cdfce379df7ed"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a03bcc2d1076c5ed9b00cdfce379df7ed">lv_scale_get_range_min_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a654894cdecd22c25172017bf0b461839" id="r_a654894cdecd22c25172017bf0b461839"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a654894cdecd22c25172017bf0b461839">lv_scale_get_range_max_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ace1d2d6860baa5328751e0d8c491f3e6" id="r_ace1d2d6860baa5328751e0d8c491f3e6"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ace1d2d6860baa5328751e0d8c491f3e6">lv_scale_bind_section_min_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *subject)</td></tr>
+<tr class="memitem:a333ffcd25d7ca9aaf8ec5a2fc0c28db0" id="r_a333ffcd25d7ca9aaf8ec5a2fc0c28db0"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a333ffcd25d7ca9aaf8ec5a2fc0c28db0">lv_scale_bind_section_max_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *section, <a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *subject)</td></tr>
+<tr class="memitem:a6f8c961a9482596aa3e72dcc72ad5ef5" id="r_a6f8c961a9482596aa3e72dcc72ad5ef5"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6f8c961a9482596aa3e72dcc72ad5ef5">lv_scale_bind_line_needle_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *needle_line, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> needle_length, <a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *subject)</td></tr>
+<tr class="memitem:ab3875402eb6c4667a6e5ef6bd274babe" id="r_ab3875402eb6c4667a6e5ef6bd274babe"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab3875402eb6c4667a6e5ef6bd274babe">lv_scale_bind_image_needle_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *needle_img, <a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *subject)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae9b706fc381a35904ea542290c326614" id="r_ae9b706fc381a35904ea542290c326614"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae9b706fc381a35904ea542290c326614">lv_scale_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a8fa10e380978f9da55aa56cb107b7529" name="a8fa10e380978f9da55aa56cb107b7529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa10e380978f9da55aa56cb107b7529">&#9670;&#160;</a></span>LV_SCALE_DEFAULT_ANGLE_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_SCALE_DEFAULT_ANGLE_RANGE&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 270U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00026">26</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+</div>
+</div>
+<a id="a08e559b1c31f9282ddbb43a0d6713da5" name="a08e559b1c31f9282ddbb43a0d6713da5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e559b1c31f9282ddbb43a0d6713da5">&#9670;&#160;</a></span>LV_SCALE_DEFAULT_LABEL_GAP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_SCALE_DEFAULT_LABEL_GAP&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 15U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00029">29</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+</div>
+</div>
+<a id="a0a059ab2dade8038ff7f4d3ae2d79eaf" name="a0a059ab2dade8038ff7f4d3ae2d79eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a059ab2dade8038ff7f4d3ae2d79eaf">&#9670;&#160;</a></span>LV_SCALE_DEFAULT_ROTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_SCALE_DEFAULT_ROTATION&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>) 135U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00027">27</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+</div>
+</div>
+<a id="afc529529e3a5256f97f9d337fb1e002b" name="afc529529e3a5256f97f9d337fb1e002b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc529529e3a5256f97f9d337fb1e002b">&#9670;&#160;</a></span>LV_SCALE_LABEL_TXT_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_SCALE_LABEL_TXT_LEN&#160;&#160;&#160;(20U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00025">25</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+</div>
+</div>
+<a id="aaa98e14c68e9f1676be0eb45e213b8ea" name="aaa98e14c68e9f1676be0eb45e213b8ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa98e14c68e9f1676be0eb45e213b8ea">&#9670;&#160;</a></span>LV_SCALE_TICK_IDX_DEFAULT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_SCALE_TICK_IDX_DEFAULT_ID&#160;&#160;&#160;((<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>) 255U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00028">28</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__scale_8c_source.html#l00429">lv_scale_add_section()</a>.</p>
+
+</div>
+</div>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#ae9b706fc381a35904ea542290c326614">lv_scale_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00023">23</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="aa12a6bbeeb69f134edfd616ade3a48cd" name="aa12a6bbeeb69f134edfd616ade3a48cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa12a6bbeeb69f134edfd616ade3a48cd">&#9670;&#160;</a></span>lv_scale_add_section()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> * lv_scale_add_section </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a Section to specified Scale. Section will not be drawn until a valid range is set for it using <span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#a3276971ccbe31ba002a9c21204d2cc30">lv_scale_set_section_range()</a></span>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to new Section </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00429">429</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__scale__private_8h_source.html#l00047">_lv_scale_section_t::first_tick_idx_in_section</a>, <a class="el" href="lv__scale__private_8h_source.html#l00049">_lv_scale_section_t::last_tick_idx_in_section</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__ll_8c_source.html#l00059">lv_ll_ins_head()</a>, <a class="el" href="lv__scale_8c_source.html#l00028">LV_SCALE_TICK_IDX_DEFAULT_ID</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__scale__private_8h_source.html#l00046">_lv_scale_section_t::range_max</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="ab3875402eb6c4667a6e5ef6bd274babe" name="ab3875402eb6c4667a6e5ef6bd274babe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3875402eb6c4667a6e5ef6bd274babe">&#9670;&#160;</a></span>lv_scale_bind_image_needle_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> * lv_scale_bind_image_needle_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>needle_img</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subject</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind an integer subject to a scale's image needle value </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Scale </td></tr>
+    <tr><td class="paramname">needle_img</td><td>pointer to an image needle </td></tr>
+    <tr><td class="paramname">subject</td><td>pointer to a Subject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to newly-created Observer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00674">674</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00037">LV_SUBJECT_TYPE_INT</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">subject</a>.</p>
+
+</div>
+</div>
+<a id="a6f8c961a9482596aa3e72dcc72ad5ef5" name="a6f8c961a9482596aa3e72dcc72ad5ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8c961a9482596aa3e72dcc72ad5ef5">&#9670;&#160;</a></span>lv_scale_bind_line_needle_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> * lv_scale_bind_line_needle_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>needle_line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>needle_length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subject</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind an integer subject to a scale's line needle value </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Scale </td></tr>
+    <tr><td class="paramname">needle_line</td><td>pointer to a line needle </td></tr>
+    <tr><td class="paramname">needle_length</td><td>length of the needle </td></tr>
+    <tr><td class="paramname">subject</td><td>pointer to a Subject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to newly-created Observer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00642">642</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__observer__private_8h_source.html#l00038">_lv_observer_t::auto_free_user_data</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00037">LV_SUBJECT_TYPE_INT</a>, <a class="el" href="lv__mem_8c_source.html#l00126">lv_zalloc()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__scale_8c_source.html#l00037">bind_element_needle_t::needle_length</a>, <a class="el" href="lv__scale_8c_source.html#l00036">bind_element_needle_t::needle_line</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">subject</a>.</p>
+
+</div>
+</div>
+<a id="a333ffcd25d7ca9aaf8ec5a2fc0c28db0" name="a333ffcd25d7ca9aaf8ec5a2fc0c28db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333ffcd25d7ca9aaf8ec5a2fc0c28db0">&#9670;&#160;</a></span>lv_scale_bind_section_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> * lv_scale_bind_section_max_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subject</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind an integer subject to a scales section maximum value </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to an Scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to a Scale section </td></tr>
+    <tr><td class="paramname">subject</td><td>pointer to a Subject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to newly-created Observer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00627">627</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00037">LV_SUBJECT_TYPE_INT</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">subject</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="ace1d2d6860baa5328751e0d8c491f3e6" name="ace1d2d6860baa5328751e0d8c491f3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace1d2d6860baa5328751e0d8c491f3e6">&#9670;&#160;</a></span>lv_scale_bind_section_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> * lv_scale_bind_section_min_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subject</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind an integer subject to a scales section minimum value </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to a Scale section </td></tr>
+    <tr><td class="paramname">subject</td><td>pointer to a Subject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to newly-created Observer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00612">612</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00037">LV_SUBJECT_TYPE_INT</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">subject</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="ad417eeb975ea27a47468e019c8b3eb71" name="ad417eeb975ea27a47468e019c8b3eb71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad417eeb975ea27a47468e019c8b3eb71">&#9670;&#160;</a></span>lv_scale_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_scale_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create an scale object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to created Scale Widget </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00158">158</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__chart__ticks__labels_8c_source.html#l00019">lv_example_chart_ticks_labels()</a>, <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="ae18d522ef42852ae4ab62d8f5fbccb47" name="ae18d522ef42852ae4ab62d8f5fbccb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18d522ef42852ae4ab62d8f5fbccb47">&#9670;&#160;</a></span>lv_scale_get_angle_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_scale_get_angle_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get Scale's range in degrees </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale's angle_range </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00582">582</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a56fd478903bb1923bf3288095202e672" name="a56fd478903bb1923bf3288095202e672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fd478903bb1923bf3288095202e672">&#9670;&#160;</a></span>lv_scale_get_label_show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_scale_get_label_show </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Gets label visibility </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true if tick label is enabled, false otherwise </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00574">574</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="ae9ca07a0d33a6597190a24c593ec47b3" name="ae9ca07a0d33a6597190a24c593ec47b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9ca07a0d33a6597190a24c593ec47b3">&#9670;&#160;</a></span>lv_scale_get_major_tick_every()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_scale_get_major_tick_every </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get how often the major tick will be drawn </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale major tick every count </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00558">558</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a35850dd2202197062220ca79bed298fb" name="a35850dd2202197062220ca79bed298fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35850dd2202197062220ca79bed298fb">&#9670;&#160;</a></span>lv_scale_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a> lv_scale_get_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get scale mode. See <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale mode </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00542">542</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html#l00049">LV_SCALE_MODE_HORIZONTAL_TOP</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a654894cdecd22c25172017bf0b461839" name="a654894cdecd22c25172017bf0b461839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654894cdecd22c25172017bf0b461839">&#9670;&#160;</a></span>lv_scale_get_range_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_scale_get_range_max_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get maximum value for Scale </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale's maximum value </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00598">598</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a03bcc2d1076c5ed9b00cdfce379df7ed" name="a03bcc2d1076c5ed9b00cdfce379df7ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03bcc2d1076c5ed9b00cdfce379df7ed">&#9670;&#160;</a></span>lv_scale_get_range_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_scale_get_range_min_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get minimum value for Scale </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale's minimum value </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00590">590</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="ac587b316d835be4c3401209ddcada615" name="ac587b316d835be4c3401209ddcada615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac587b316d835be4c3401209ddcada615">&#9670;&#160;</a></span>lv_scale_get_rotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_scale_get_rotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get angular location of low end of Scale. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale low end angular location </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00566">566</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a11c542ae7b253bb756d8e665cea26d96" name="a11c542ae7b253bb756d8e665cea26d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11c542ae7b253bb756d8e665cea26d96">&#9670;&#160;</a></span>lv_scale_get_total_tick_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_scale_get_total_tick_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get scale total tick count (including minor and major ticks) </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Scale total tick count </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00550">550</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="aa212a987e733104fe8d80d2503b44101" name="aa212a987e733104fe8d80d2503b44101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa212a987e733104fe8d80d2503b44101">&#9670;&#160;</a></span>lv_scale_section_set_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_section_set_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DEPRECATED, use lv_scale_set_section_range instead. Set range for specified Scale Section </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>pointer to Section </td></tr>
+    <tr><td class="paramname">min</td><td>Section new minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>Section new maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00479">479</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__scale__private_8h_source.html#l00046">_lv_scale_section_t::range_max</a> y <a class="el" href="lv__scale__private_8h_source.html#l00045">_lv_scale_section_t::range_min</a>.</p>
+
+</div>
+</div>
+<a id="aa6ef2951e7139335ed36ad8b45d058bd" name="aa6ef2951e7139335ed36ad8b45d058bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ef2951e7139335ed36ad8b45d058bd">&#9670;&#160;</a></span>lv_scale_section_set_style()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_section_set_style </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#a257703cf7a0b9e5501dd50339a5a4e74">lv_part_t</a></td>          <td class="paramname"><span class="paramname"><em>part</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__style__t.html">lv_style_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section_part_style</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>DEPRECATED, use lv_scale_set_section_style_main/indicator/items instead. Set style for specified part of Section. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">section</td><td>pointer to Section </td></tr>
+    <tr><td class="paramname">part</td><td>the part of the Scale the style will apply to, e.g. LV_PART_INDICATOR </td></tr>
+    <tr><td class="paramname">section_part_style</td><td>pointer to style to apply @nullable. Use NULL to detach a part style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00515">515</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__scale__private_8h_source.html#l00039">_lv_scale_section_t::indicator_style</a>, <a class="el" href="lv__scale__private_8h_source.html#l00043">_lv_scale_section_t::items_style</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00169">LV_LOG_DEPRECATED</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00063">LV_PART_INDICATOR</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00066">LV_PART_ITEMS</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00061">LV_PART_MAIN</a>, <a class="el" href="lv__scale__private_8h_source.html#l00035">_lv_scale_section_t::main_style</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="acc7a4cb528fbdb5ef9bfcacca4bf7421" name="acc7a4cb528fbdb5ef9bfcacca4bf7421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7a4cb528fbdb5ef9bfcacca4bf7421">&#9670;&#160;</a></span>lv_scale_set_angle_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_angle_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>angle_range</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set angle between the low end and the high end of the Scale. (Applies only to round Scales.) </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">angle_range</td><td>angle in degrees from Scale minimum where top end of Scale will be drawn </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00256">256</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a> y <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>.</p>
+
+</div>
+</div>
+<a id="a66ebcbd4ae6978d67d4305d41c7e5076" name="a66ebcbd4ae6978d67d4305d41c7e5076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66ebcbd4ae6978d67d4305d41c7e5076">&#9670;&#160;</a></span>lv_scale_set_draw_ticks_on_top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_draw_ticks_on_top </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>en</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw Scale ticks on top of all other parts. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">en</td><td>true: enable draw ticks on top of all parts </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00419">419</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="ab9bd70c622bb170c28b36483513c00cc" name="ab9bd70c622bb170c28b36483513c00cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9bd70c622bb170c28b36483513c00cc">&#9670;&#160;</a></span>lv_scale_set_image_needle_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_image_needle_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>needle_img</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Point image needle to specified value; image must point to the right. E.g. -O------&gt; </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">needle_img</td><td>pointer to needle's Image </td></tr>
+    <tr><td class="paramname">value</td><td>Scale value needle will point to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00368">368</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__image_8c_source.html#l00282">lv_image_set_rotation()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html#l00053">LV_SCALE_MODE_ROUND_INNER</a>, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html#l00054">LV_SCALE_MODE_ROUND_OUTER</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="pointer_8h_source.html#l01338">value</a>.</p>
+
+</div>
+</div>
+<a id="a6bea8b1e8cf18aff7ad6345040d46a2e" name="a6bea8b1e8cf18aff7ad6345040d46a2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bea8b1e8cf18aff7ad6345040d46a2e">&#9670;&#160;</a></span>lv_scale_set_label_show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_label_show </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>show_label</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets label visibility. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">show_label</td><td>true/false to enable tick label </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00211">211</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="aa1727f0f38679f29a95e3966a995e823" name="aa1727f0f38679f29a95e3966a995e823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1727f0f38679f29a95e3966a995e823">&#9670;&#160;</a></span>lv_scale_set_line_needle_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_line_needle_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>needle_line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>needle_length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Point line needle to specified value. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">needle_line</td><td>needle_line of the Scale. The line points will be allocated and managed by the Scale unless the line point array was previously set using <span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__line_8h.html#ae98c856d82972048e4b03554d159e09a">lv_line_set_points_mutable</a></span>. </td></tr>
+    <tr><td class="paramname">needle_length</td><td>length of the needle<ul>
+<li>needle_length&gt;0: needle_length=needle_length;</li>
+<li>needle_length&lt;0: needle_length=radius-|needle_length|; </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">value</td><td>Scale value needle will point to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00284">284</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00053">LV_ALIGN_TOP_LEFT</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00091">LV_EVENT_DELETE</a>, <a class="el" href="lv__event_8c_source.html#l00228">lv_event_dsc_get_cb()</a>, <a class="el" href="lv__event_8c_source.html#l00234">lv_event_dsc_get_user_data()</a>, <a class="el" href="lv__line_8c_source.html#l00114">lv_line_get_point_count()</a>, <a class="el" href="lv__line_8c_source.html#l00130">lv_line_get_points_mutable()</a>, <a class="el" href="lv__line_8c_source.html#l00122">lv_line_is_point_array_mutable()</a>, <a class="el" href="lv__line_8c_source.html#l00083">lv_line_set_points_mutable()</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00106">lv_obj_add_event_cb()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00366">lv_obj_align()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00118">lv_obj_get_event_count()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00125">lv_obj_get_event_dsc()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00061">LV_PART_MAIN</a>, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html#l00053">LV_SCALE_MODE_ROUND_INNER</a>, <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html#l00054">LV_SCALE_MODE_ROUND_OUTER</a>, <a class="el" href="lv__math_8c_source.html#l00463">lv_trigo_cos()</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00023">LV_TRIGO_SHIFT</a>, <a class="el" href="lv__math_8c_source.html#l00053">lv_trigo_sin()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="pointer_8h_source.html#l01338">value</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00037">lv_point_precise_t::x</a> y <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00038">lv_point_precise_t::y</a>.</p>
+
+</div>
+</div>
+<a id="a8d6f8a28b8c231f93af1c254b53a46b6" name="a8d6f8a28b8c231f93af1c254b53a46b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6f8a28b8c231f93af1c254b53a46b6">&#9670;&#160;</a></span>lv_scale_set_major_tick_every()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_major_tick_every </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>major_tick_every</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sets how often major ticks are drawn. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">major_tick_every</td><td>the new count for major tick drawing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00200">200</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__chart__ticks__labels_8c_source.html#l00019">lv_example_chart_ticks_labels()</a>, <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="a2b98e333acf3ecc687f947da7676dca6" name="a2b98e333acf3ecc687f947da7676dca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b98e333acf3ecc687f947da7676dca6">&#9670;&#160;</a></span>lv_scale_set_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_max_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set maximum values on Scale. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">max</td><td>maximum value of Scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00245">245</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="aa63a385154cb7e8a4e4e763daa9a7eb1" name="aa63a385154cb7e8a4e4e763daa9a7eb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63a385154cb7e8a4e4e763daa9a7eb1">&#9670;&#160;</a></span>lv_scale_set_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_min_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set minimum values on Scale. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">min</td><td>minimum value of Scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00234">234</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="a52d7aac55b34a9386a602ee2dafcc9d6" name="a52d7aac55b34a9386a602ee2dafcc9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d7aac55b34a9386a602ee2dafcc9d6">&#9670;&#160;</a></span>lv_scale_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set scale mode. See <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#acdaa38c1677a56722126c755293f3d3d">lv_scale_mode_t</a>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">mode</td><td>the new scale mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00178">178</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__chart__ticks__labels_8c_source.html#l00019">lv_example_chart_ticks_labels()</a>, <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a id="a464efca286ba19cde5b12023cea73dac" name="a464efca286ba19cde5b12023cea73dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464efca286ba19cde5b12023cea73dac">&#9670;&#160;</a></span>lv_scale_set_post_draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_post_draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>en</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw Scale after all its children are drawn. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">en</td><td>true: enable post draw </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00409">409</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="a1ceed3b44783e08519b2fabf2351bc8a" name="a1ceed3b44783e08519b2fabf2351bc8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ceed3b44783e08519b2fabf2351bc8a">&#9670;&#160;</a></span>lv_scale_set_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set minimum and maximum values on Scale. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">min</td><td>minimum value of Scale </td></tr>
+    <tr><td class="paramname">max</td><td>maximum value of Scale </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00222">222</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a> y <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>.</p>
+
+</div>
+</div>
+<a id="af80c33356bfdbfedb23495f3850cac19" name="af80c33356bfdbfedb23495f3850cac19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80c33356bfdbfedb23495f3850cac19">&#9670;&#160;</a></span>lv_scale_set_rotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_rotation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set angular offset from the 3-o'clock position of the low end of the Scale. (Applies only to round Scales.) </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">rotation</td><td>clockwise angular offset (in degrees) from the 3-o'clock position of the low end of the scale; negative and &gt;360 values are first normalized to range [0..360]. Examples:<ul>
+<li>0 = 3 o'clock (right side)</li>
+<li>30 = 4 o'clock</li>
+<li>60 = 5 o'clock</li>
+<li>90 = 6 o'clock</li>
+<li>135 = midway between 7 and 8 o'clock (default)</li>
+<li>180 = 9 o'clock</li>
+<li>270 = 12 o'clock</li>
+<li>300 = 1 o'clock</li>
+<li>330 = 2 o'clock</li>
+<li>-30 = 2 o'clock</li>
+<li>390 = 4 o'clock </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00266">266</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a> y <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>.</p>
+
+</div>
+</div>
+<a id="a73ba82d1d9e0db2919abdc301af53a93" name="a73ba82d1d9e0db2919abdc301af53a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ba82d1d9e0db2919abdc301af53a93">&#9670;&#160;</a></span>lv_scale_set_section_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_max_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the maximum value of a scale section </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">max</td><td>the section's new maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00469">469</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__scale__private_8h_source.html#l00046">_lv_scale_section_t::range_max</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__scale_8c_source.html#l00450">lv_scale_set_section_range()</a>.</p>
+
+</div>
+</div>
+<a id="a06844a6b61c4bed9c759ab2cb5c02275" name="a06844a6b61c4bed9c759ab2cb5c02275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06844a6b61c4bed9c759ab2cb5c02275">&#9670;&#160;</a></span>lv_scale_set_section_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_min_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the minimum value of a scale section </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">min</td><td>the section's new minimum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00459">459</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__scale__private_8h_source.html#l00045">_lv_scale_section_t::range_min</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__scale_8c_source.html#l00450">lv_scale_set_section_range()</a>.</p>
+
+</div>
+</div>
+<a id="a3276971ccbe31ba002a9c21204d2cc30" name="a3276971ccbe31ba002a9c21204d2cc30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3276971ccbe31ba002a9c21204d2cc30">&#9670;&#160;</a></span>lv_scale_set_section_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the range of a scale section </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">min</td><td>the section's new minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>the section's new maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00450">450</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__scale_8c_source.html#l00469">lv_scale_set_section_max_value()</a>, <a class="el" href="lv__scale_8c_source.html#l00459">lv_scale_set_section_min_value()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a20dc58e55bafbe702f1ae7304382d649" name="a20dc58e55bafbe702f1ae7304382d649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20dc58e55bafbe702f1ae7304382d649">&#9670;&#160;</a></span>lv_scale_set_section_style_indicator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_style_indicator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__style__t.html">lv_style_t</a> *</td>          <td class="paramname"><span class="paramname"><em>style</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the style of the major ticks and label on a section. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">style</td><td>pointer to a style. @nullable Use NULL to detach the previous indicatior style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00497">497</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__scale__private_8h_source.html#l00039">_lv_scale_section_t::indicator_style</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00205">style</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="a764243ee6a6536d9d7076f559b75fa03" name="a764243ee6a6536d9d7076f559b75fa03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764243ee6a6536d9d7076f559b75fa03">&#9670;&#160;</a></span>lv_scale_set_section_style_items()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_style_items </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__style__t.html">lv_style_t</a> *</td>          <td class="paramname"><span class="paramname"><em>style</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the style of the minor ticks on a section. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">style</td><td>pointer to a style. @nullable Use NULL to detach the previous items style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00506">506</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__scale__private_8h_source.html#l00043">_lv_scale_section_t::items_style</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00205">style</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="a95706ee5c7219a20ca50500701ec6e86" name="a95706ee5c7219a20ca50500701ec6e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95706ee5c7219a20ca50500701ec6e86">&#9670;&#160;</a></span>lv_scale_set_section_style_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_section_style_main </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aba96f5e0f7de86ea266d1e5085ceb49c">lv_scale_section_t</a> *</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__style__t.html">lv_style_t</a> *</td>          <td class="paramname"><span class="paramname"><em>style</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the style of the line on a section. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>pointer to scale </td></tr>
+    <tr><td class="paramname">section</td><td>pointer to section </td></tr>
+    <tr><td class="paramname">style</td><td>pointer to a style. @nullable Use NULL to detach the previous main style </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00488">488</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__scale__private_8h_source.html#l00035">_lv_scale_section_t::main_style</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00205">style</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>.</p>
+
+</div>
+</div>
+<a id="afe2269bb3442b45ec223541771e1b60b" name="afe2269bb3442b45ec223541771e1b60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe2269bb3442b45ec223541771e1b60b">&#9670;&#160;</a></span>lv_scale_set_text_src()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_text_src </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>txt_src</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set custom text source for major ticks labels. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">txt_src</td><td>pointer to an array of strings which will be display at major ticks; last element must be a NULL pointer. @nullable. Use NULL to detach the previous major ticks text </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00391">391</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__chart__ticks__labels_8c_source.html#l00019">lv_example_chart_ticks_labels()</a> y <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>.</p>
+
+</div>
+</div>
+<a id="a7c6a3812fc00767036a43199f2df191c" name="a7c6a3812fc00767036a43199f2df191c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c6a3812fc00767036a43199f2df191c">&#9670;&#160;</a></span>lv_scale_set_total_tick_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_scale_set_total_tick_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>total_tick_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set scale total tick count (including minor and major ticks). </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Scale Widget </td></tr>
+    <tr><td class="paramname">total_tick_count</td><td>New total tick count </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00189">189</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__chart__scrollable_8c_source.html#l00018">lv_example_chart_scrollable()</a>, <a class="el" href="lv__example__chart__ticks__labels_8c_source.html#l00019">lv_example_chart_ticks_labels()</a>, <a class="el" href="lv__example__scale__bind__section_8c_source.html#l00017">lv_example_scale_bind_section()</a>, <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scale__modes_8c_source.html#l00017">lv_example_scale_modes()</a>, <a class="el" href="lv__example__scale__needles_8c_source.html#l00031">lv_example_scale_needles()</a>, <a class="el" href="lv__example__scale__range_8c_source.html#l00018">lv_example_scale_range()</a>, <a class="el" href="lv__example__scale__styling_8c_source.html#l00025">lv_example_scale_styling()</a> y <a class="el" href="lv__example__scale__ticks_8c_source.html#l00017">lv_example_scale_ticks()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="ae9b706fc381a35904ea542290c326614" name="ae9b706fc381a35904ea542290c326614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b706fc381a35904ea542290c326614">&#9670;&#160;</a></span>lv_scale_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_scale_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                     = {</div>
+<div class="line">    .constructor_cb = lv_scale_constructor,</div>
+<div class="line">    .destructor_cb = lv_scale_destructor,</div>
+<div class="line">    .event_cb = lv_scale_event,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#ab66cb74ffdb9c6898603ab67bbf66832">lv_scale_t</a>),</div>
+<div class="line">    .editable = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8">LV_OBJ_CLASS_EDITABLE_TRUE</a>,</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_scale&quot;</span>,</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a3dac7d854054ae797b657fb483eb75ab"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_obj_class</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00348">lv_obj.c:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8">LV_OBJ_CLASS_EDITABLE_TRUE</a></div><div class="ttdeci">@ LV_OBJ_CLASS_EDITABLE_TRUE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__class_8h_source.html#l00030">lv_obj_class.h:30</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ab66cb74ffdb9c6898603ab67bbf66832"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ab66cb74ffdb9c6898603ab67bbf66832">lv_scale_t</a></div><div class="ttdeci">struct _lv_scale_t lv_scale_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00244">lv_types.h:244</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__scale_8c_source.html#l00139">139</a> del archivo <a class="el" href="lv__scale_8c_source.html">lv_scale.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__scale_8h.html#ab74742b49efa8cc1be6545601b0b6f7d">LV_EXPORT_CONST_INT()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_fa3a36805e301e36677ebfe48c259280.html">scale</a></li><li class="navelem"><a href="lv__scale_8c.html">lv_scale.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

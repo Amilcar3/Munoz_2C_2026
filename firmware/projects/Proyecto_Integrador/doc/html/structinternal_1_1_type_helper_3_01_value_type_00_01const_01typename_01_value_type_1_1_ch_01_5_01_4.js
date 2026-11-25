@@ -1,0 +1,4 @@
+var structinternal_1_1_type_helper_3_01_value_type_00_01const_01typename_01_value_type_1_1_ch_01_5_01_4 =
+[
+    [ "StringType", "structinternal_1_1_type_helper_3_01_value_type_00_01const_01typename_01_value_type_1_1_ch_01_5_01_4.html#aa82546365f70e2f6727ecc0580139bbb", null ]
+];

@@ -1,0 +1,617 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/themes/default/lv_theme_default.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__theme__default_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_theme_default.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__theme__private_8h_source.html">../lv_theme_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__display__private_8h_source.html">../../display/lv_display_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../../core/lv_global.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__theme__default_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:my_5Ftheme_5Fstyles_5Ft" id="r_my_5Ftheme_5Fstyles_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmy__theme__styles__t.html">my_theme_styles_t</a></td></tr>
+<tr class="memitem:_5Fmy_5Ftheme_5Ft" id="r__5Fmy_5Ftheme_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct__my__theme__t.html">_my_theme_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9744fca2a31ff9aa94573084eb1a837c" id="r_a9744fca2a31ff9aa94573084eb1a837c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9744fca2a31ff9aa94573084eb1a837c">theme_def</a>&#160;&#160;&#160;(*(<a class="el" href="#a4ee14a1d67129a28317f4037ff33db38">my_theme_t</a> **)(&amp;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;theme_default))</td></tr>
+<tr class="memitem:a4b7a2384ead30d43caff63b6a873cf00" id="r_a4b7a2384ead30d43caff63b6a873cf00"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4b7a2384ead30d43caff63b6a873cf00">MODE_DARK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a6dfedc9b51c224902aba429949ec2d17" id="r_a6dfedc9b51c224902aba429949ec2d17"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6dfedc9b51c224902aba429949ec2d17">RADIUS_DEFAULT</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 12 : 8)</td></tr>
+<tr class="memitem:a6570b8c095ca00a7eb3888a1a7ac2914" id="r_a6570b8c095ca00a7eb3888a1a7ac2914"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6570b8c095ca00a7eb3888a1a7ac2914">LIGHT_COLOR_SCR</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 4)</td></tr>
+<tr class="memitem:afb787989f75c8729922e909d97f8336b" id="r_afb787989f75c8729922e909d97f8336b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afb787989f75c8729922e909d97f8336b">LIGHT_COLOR_CARD</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#ae88f1b549583615e288c9c3557cd249b">lv_color_white</a>()</td></tr>
+<tr class="memitem:ad6455fa10cf4d2e5b3987b98867a99dc" id="r_ad6455fa10cf4d2e5b3987b98867a99dc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad6455fa10cf4d2e5b3987b98867a99dc">LIGHT_COLOR_TEXT</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#a024d5d5539910f590b43b23f5908c695">lv_palette_darken</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 4)</td></tr>
+<tr class="memitem:a2f03a6ee62cf0e369ec07fff73a73283" id="r_a2f03a6ee62cf0e369ec07fff73a73283"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2f03a6ee62cf0e369ec07fff73a73283">LIGHT_COLOR_GREY</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 2)</td></tr>
+<tr class="memitem:aa331416cb41d1efc9633e3a4a4eb8085" id="r_aa331416cb41d1efc9633e3a4a4eb8085"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa331416cb41d1efc9633e3a4a4eb8085">DARK_COLOR_SCR</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x15171A)</td></tr>
+<tr class="memitem:a425d4929207e57bf45988363f62011c4" id="r_a425d4929207e57bf45988363f62011c4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a425d4929207e57bf45988363f62011c4">DARK_COLOR_CARD</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x282b30)</td></tr>
+<tr class="memitem:aa76d84d2777c8e873641a895df37088b" id="r_aa76d84d2777c8e873641a895df37088b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa76d84d2777c8e873641a895df37088b">DARK_COLOR_TEXT</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 5)</td></tr>
+<tr class="memitem:a93feb80a79fc2b3635b61684c582209e" id="r_a93feb80a79fc2b3635b61684c582209e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a93feb80a79fc2b3635b61684c582209e">DARK_COLOR_GREY</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x2f3237)</td></tr>
+<tr class="memitem:ac43c8a65e3b989abe0c91ed52678208c" id="r_ac43c8a65e3b989abe0c91ed52678208c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac43c8a65e3b989abe0c91ed52678208c">TRANSITION_TIME</a>&#160;&#160;&#160;<a class="el" href="lv__conf__cmsis_8h.html#a4cf6d2bbdde57ce13d52d38aa5eac1fa">LV_THEME_DEFAULT_TRANSITION_TIME</a></td></tr>
+<tr class="memitem:a4221b0a24a1716cf086b820f988e4285" id="r_a4221b0a24a1716cf086b820f988e4285"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4221b0a24a1716cf086b820f988e4285">BORDER_WIDTH</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, 2)</td></tr>
+<tr class="memitem:a38a1f439739ede11aa608ea45eaf24e5" id="r_a38a1f439739ede11aa608ea45eaf24e5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a38a1f439739ede11aa608ea45eaf24e5">OUTLINE_WIDTH</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, 3)</td></tr>
+<tr class="memitem:ae7fc5706849a1cbed0dff712f908a723" id="r_ae7fc5706849a1cbed0dff712f908a723"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae7fc5706849a1cbed0dff712f908a723">PAD_DEF</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 24 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 20 : 16)</td></tr>
+<tr class="memitem:a57869815479a48a8fc921f43e0844b2f" id="r_a57869815479a48a8fc921f43e0844b2f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a57869815479a48a8fc921f43e0844b2f">PAD_SMALL</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 14 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 12 : 10)</td></tr>
+<tr class="memitem:a710b5e605b3d584daef7b2df5e74a9ca" id="r_a710b5e605b3d584daef7b2df5e74a9ca"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a710b5e605b3d584daef7b2df5e74a9ca">PAD_TINY</a>&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 8 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 6 : 2)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a4ee14a1d67129a28317f4037ff33db38" id="r_a4ee14a1d67129a28317f4037ff33db38"><td class="memItemLeft">typedef struct <a class="el" href="struct__my__theme__t.html">_my_theme_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ee14a1d67129a28317f4037ff33db38">my_theme_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a25d2034c6c5483e5889ec2d57c10bfa8" id="r_a25d2034c6c5483e5889ec2d57c10bfa8"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8">disp_size_t</a> { <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a18bc08b5f547e0aa3acca21d220b9457">DISP_SMALL</a> = 3
+, <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> = 2
+, <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> = 1
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aedb38e1c1f4b3410aacf52ffdbde2e5b" id="r_aedb38e1c1f4b3410aacf52ffdbde2e5b"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a028e2d4002c963c60ebd3cc2641da3c1">lv_theme_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aedb38e1c1f4b3410aacf52ffdbde2e5b">lv_theme_default_init</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> *disp, <a class="el" href="structlv__color__t.html">lv_color_t</a> color_primary, <a class="el" href="structlv__color__t.html">lv_color_t</a> color_secondary, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> dark, const <a class="el" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> *font)</td></tr>
+<tr class="memitem:a0c6f8ca7dac961072a65f0d7f3487519" id="r_a0c6f8ca7dac961072a65f0d7f3487519"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0c6f8ca7dac961072a65f0d7f3487519">lv_theme_default_is_inited</a> (void)</td></tr>
+<tr class="memitem:a36c3aedbfb08ee9b98594e9d41773f6d" id="r_a36c3aedbfb08ee9b98594e9d41773f6d"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a028e2d4002c963c60ebd3cc2641da3c1">lv_theme_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a36c3aedbfb08ee9b98594e9d41773f6d">lv_theme_default_get</a> (void)</td></tr>
+<tr class="memitem:a57af520a4d93120ee5f411ea104447f1" id="r_a57af520a4d93120ee5f411ea104447f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a57af520a4d93120ee5f411ea104447f1">lv_theme_default_deinit</a> (void)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a4221b0a24a1716cf086b820f988e4285" name="a4221b0a24a1716cf086b820f988e4285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4221b0a24a1716cf086b820f988e4285">&#9670;&#160;</a></span>BORDER_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BORDER_WIDTH&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00040">40</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a425d4929207e57bf45988363f62011c4" name="a425d4929207e57bf45988363f62011c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425d4929207e57bf45988363f62011c4">&#9670;&#160;</a></span>DARK_COLOR_CARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARK_COLOR_CARD&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x282b30)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00035">35</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a93feb80a79fc2b3635b61684c582209e" name="a93feb80a79fc2b3635b61684c582209e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93feb80a79fc2b3635b61684c582209e">&#9670;&#160;</a></span>DARK_COLOR_GREY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARK_COLOR_GREY&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x2f3237)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00037">37</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="aa331416cb41d1efc9633e3a4a4eb8085" name="aa331416cb41d1efc9633e3a4a4eb8085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa331416cb41d1efc9633e3a4a4eb8085">&#9670;&#160;</a></span>DARK_COLOR_SCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARK_COLOR_SCR&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(0x15171A)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00034">34</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="aa76d84d2777c8e873641a895df37088b" name="aa76d84d2777c8e873641a895df37088b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76d84d2777c8e873641a895df37088b">&#9670;&#160;</a></span>DARK_COLOR_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DARK_COLOR_TEXT&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00036">36</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="afb787989f75c8729922e909d97f8336b" name="afb787989f75c8729922e909d97f8336b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb787989f75c8729922e909d97f8336b">&#9670;&#160;</a></span>LIGHT_COLOR_CARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIGHT_COLOR_CARD&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#ae88f1b549583615e288c9c3557cd249b">lv_color_white</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00031">31</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a2f03a6ee62cf0e369ec07fff73a73283" name="a2f03a6ee62cf0e369ec07fff73a73283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f03a6ee62cf0e369ec07fff73a73283">&#9670;&#160;</a></span>LIGHT_COLOR_GREY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIGHT_COLOR_GREY&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00033">33</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a6570b8c095ca00a7eb3888a1a7ac2914" name="a6570b8c095ca00a7eb3888a1a7ac2914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6570b8c095ca00a7eb3888a1a7ac2914">&#9670;&#160;</a></span>LIGHT_COLOR_SCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIGHT_COLOR_SCR&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#acf087458512c83eba0b5feacc3e26396">lv_palette_lighten</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00030">30</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="ad6455fa10cf4d2e5b3987b98867a99dc" name="ad6455fa10cf4d2e5b3987b98867a99dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6455fa10cf4d2e5b3987b98867a99dc">&#9670;&#160;</a></span>LIGHT_COLOR_TEXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIGHT_COLOR_TEXT&#160;&#160;&#160;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#a024d5d5539910f590b43b23f5908c695">lv_palette_darken</a>(<a class="el" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9caffdd132d4990d4a81fd60ead14b5600e">LV_PALETTE_GREY</a>, 4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00032">32</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a4b7a2384ead30d43caff63b6a873cf00" name="a4b7a2384ead30d43caff63b6a873cf00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7a2384ead30d43caff63b6a873cf00">&#9670;&#160;</a></span>MODE_DARK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODE_DARK&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00026">26</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__theme__default_8c_source.html#l00626">lv_theme_default_init()</a>.</p>
+
+</div>
+</div>
+<a id="a38a1f439739ede11aa608ea45eaf24e5" name="a38a1f439739ede11aa608ea45eaf24e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a1f439739ede11aa608ea45eaf24e5">&#9670;&#160;</a></span>OUTLINE_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OUTLINE_WIDTH&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00041">41</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="ae7fc5706849a1cbed0dff712f908a723" name="ae7fc5706849a1cbed0dff712f908a723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7fc5706849a1cbed0dff712f908a723">&#9670;&#160;</a></span>PAD_DEF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAD_DEF&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 24 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 20 : 16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00043">43</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a57869815479a48a8fc921f43e0844b2f" name="a57869815479a48a8fc921f43e0844b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57869815479a48a8fc921f43e0844b2f">&#9670;&#160;</a></span>PAD_SMALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAD_SMALL&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 14 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 12 : 10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00044">44</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a710b5e605b3d584daef7b2df5e74a9ca" name="a710b5e605b3d584daef7b2df5e74a9ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a710b5e605b3d584daef7b2df5e74a9ca">&#9670;&#160;</a></span>PAD_TINY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PAD_TINY&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 8 : theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379">DISP_MEDIUM</a> ? 6 : 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00045">45</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a6dfedc9b51c224902aba429949ec2d17" name="a6dfedc9b51c224902aba429949ec2d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dfedc9b51c224902aba429949ec2d17">&#9670;&#160;</a></span>RADIUS_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RADIUS_DEFAULT&#160;&#160;&#160;<a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ac061d4e3b0c3e14ce430b6127d53715f">LV_DPX_CALC</a>(theme-&gt;disp_dpi, theme-&gt;disp_size == <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b">DISP_LARGE</a> ? 12 : 8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00027">27</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a id="a9744fca2a31ff9aa94573084eb1a837c" name="a9744fca2a31ff9aa94573084eb1a837c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9744fca2a31ff9aa94573084eb1a837c">&#9670;&#160;</a></span>theme_def</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define theme_def&#160;&#160;&#160;(*(<a class="el" href="#a4ee14a1d67129a28317f4037ff33db38">my_theme_t</a> **)(&amp;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;theme_default))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00024">24</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__theme__default_8c_source.html#l00718">lv_theme_default_deinit()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00709">lv_theme_default_get()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00626">lv_theme_default_init()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00702">lv_theme_default_is_inited()</a>, <a class="el" href="lv__theme__mono_8c_source.html#l00260">lv_theme_mono_deinit()</a>, <a class="el" href="lv__theme__mono_8c_source.html#l00251">lv_theme_mono_get()</a>, <a class="el" href="lv__theme__mono_8c_source.html#l00209">lv_theme_mono_init()</a>, <a class="el" href="lv__theme__mono_8c_source.html#l00244">lv_theme_mono_is_inited()</a>, <a class="el" href="lv__theme__simple_8c_source.html#l00194">lv_theme_simple_deinit()</a>, <a class="el" href="lv__theme__simple_8c_source.html#l00185">lv_theme_simple_get()</a>, <a class="el" href="lv__theme__simple_8c_source.html#l00145">lv_theme_simple_init()</a> y <a class="el" href="lv__theme__simple_8c_source.html#l00178">lv_theme_simple_is_inited()</a>.</p>
+
+</div>
+</div>
+<a id="ac43c8a65e3b989abe0c91ed52678208c" name="ac43c8a65e3b989abe0c91ed52678208c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac43c8a65e3b989abe0c91ed52678208c">&#9670;&#160;</a></span>TRANSITION_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRANSITION_TIME&#160;&#160;&#160;<a class="el" href="lv__conf__cmsis_8h.html#a4cf6d2bbdde57ce13d52d38aa5eac1fa">LV_THEME_DEFAULT_TRANSITION_TIME</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00039">39</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a4ee14a1d67129a28317f4037ff33db38" name="a4ee14a1d67129a28317f4037ff33db38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee14a1d67129a28317f4037ff33db38">&#9670;&#160;</a></span>my_theme_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct__my__theme__t.html">_my_theme_t</a> <a class="el" href="#a4ee14a1d67129a28317f4037ff33db38">my_theme_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00022">22</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="a25d2034c6c5483e5889ec2d57c10bfa8" name="a25d2034c6c5483e5889ec2d57c10bfa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25d2034c6c5483e5889ec2d57c10bfa8">&#9670;&#160;</a></span>disp_size_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a25d2034c6c5483e5889ec2d57c10bfa8">disp_size_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a25d2034c6c5483e5889ec2d57c10bfa8a18bc08b5f547e0aa3acca21d220b9457" name="a25d2034c6c5483e5889ec2d57c10bfa8a18bc08b5f547e0aa3acca21d220b9457"></a>DISP_SMALL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379" name="a25d2034c6c5483e5889ec2d57c10bfa8a96925af6e84dc0c2d05c39464abef379"></a>DISP_MEDIUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b" name="a25d2034c6c5483e5889ec2d57c10bfa8a64502cac6507c6f0ad7f4c520a8e0a8b"></a>DISP_LARGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00156">156</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a57af520a4d93120ee5f411ea104447f1" name="a57af520a4d93120ee5f411ea104447f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57af520a4d93120ee5f411ea104447f1">&#9670;&#160;</a></span>lv_theme_default_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_theme_default_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deinitialize the default theme </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00718">718</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__theme__default_8c_source.html#l00163">_my_theme_t::base</a>, <a class="el" href="lv__theme__default_8c_source.html#l00170">_my_theme_t::inited</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__style_8c_source.html#l00199">lv_style_reset()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__theme__default_8c_source.html#l00171">_my_theme_t::styles</a> y <a class="el" href="lv__theme__default_8c_source.html#l00024">theme_def</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00406">lv_deinit()</a>.</p>
+
+</div>
+</div>
+<a id="a36c3aedbfb08ee9b98594e9d41773f6d" name="a36c3aedbfb08ee9b98594e9d41773f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c3aedbfb08ee9b98594e9d41773f6d">&#9670;&#160;</a></span>lv_theme_default_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a028e2d4002c963c60ebd3cc2641da3c1">lv_theme_t</a> * lv_theme_default_get </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get default theme </p><dl class="section return"><dt>Devuelve</dt><dd>a pointer to default theme, or NULL if this is not initialized </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00709">709</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__theme__default_8c_source.html#l00702">lv_theme_default_is_inited()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__theme__default_8c_source.html#l00024">theme_def</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>.</p>
+
+</div>
+</div>
+<a id="aedb38e1c1f4b3410aacf52ffdbde2e5b" name="aedb38e1c1f4b3410aacf52ffdbde2e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb38e1c1f4b3410aacf52ffdbde2e5b">&#9670;&#160;</a></span>lv_theme_default_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a028e2d4002c963c60ebd3cc2641da3c1">lv_theme_t</a> * lv_theme_default_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> *</td>          <td class="paramname"><span class="paramname"><em>disp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__color__t.html">lv_color_t</a></td>          <td class="paramname"><span class="paramname"><em>color_primary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__color__t.html">lv_color_t</a></td>          <td class="paramname"><span class="paramname"><em>color_secondary</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>dark</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the theme </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disp</td><td>pointer to display. @nullable When NULL the default display is used. </td></tr>
+    <tr><td class="paramname">color_primary</td><td>the primary color of the theme </td></tr>
+    <tr><td class="paramname">color_secondary</td><td>the secondary color for the theme </td></tr>
+    <tr><td class="paramname">dark</td><td></td></tr>
+    <tr><td class="paramname">font</td><td>pointer to a font to use. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>a pointer to reference this theme later </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00626">626</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__theme__private_8h_source.html#l00031">_lv_theme_t::apply_cb</a>, <a class="el" href="lv__theme__default_8c_source.html#l00163">_my_theme_t::base</a>, <a class="el" href="lv__theme__private_8h_source.html#l00035">_lv_theme_t::color_primary</a>, <a class="el" href="lv__theme__private_8h_source.html#l00036">_lv_theme_t::color_secondary</a>, <a class="el" href="lv__theme__private_8h_source.html#l00034">_lv_theme_t::disp</a>, <a class="el" href="lv__theme__default_8c_source.html#l00165">_my_theme_t::disp_dpi</a>, <a class="el" href="lv__theme__default_8c_source.html#l00159">DISP_LARGE</a>, <a class="el" href="lv__theme__default_8c_source.html#l00158">DISP_MEDIUM</a>, <a class="el" href="lv__theme__default_8c_source.html#l00164">_my_theme_t::disp_size</a>, <a class="el" href="lv__theme__default_8c_source.html#l00157">DISP_SMALL</a>, <a class="el" href="lv__theme__private_8h_source.html#l00040">_lv_theme_t::flags</a>, <a class="el" href="lv__theme__private_8h_source.html#l00039">_lv_theme_t::font_large</a>, <a class="el" href="lv__theme__private_8h_source.html#l00038">_lv_theme_t::font_normal</a>, <a class="el" href="lv__theme__private_8h_source.html#l00037">_lv_theme_t::font_small</a>, <a class="el" href="lv__theme__default_8c_source.html#l00170">_my_theme_t::inited</a>, <a class="el" href="lv__display__private_8h_source.html#l00023">LOG_NULL_DISPLAY_DEPRECATED_MESSAGE</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__color_8c_source.html#l00272">lv_color_eq()</a>, <a class="el" href="lv__display_8c_source.html#l01046">lv_display_add_event_cb()</a>, <a class="el" href="lv__display_8c_source.html#l00266">lv_display_get_default()</a>, <a class="el" href="lv__display_8c_source.html#l00476">lv_display_get_dpi()</a>, <a class="el" href="lv__display_8c_source.html#l00344">lv_display_get_horizontal_resolution()</a>, <a class="el" href="lv__display_8c_source.html#l01179">lv_display_get_theme()</a>, <a class="el" href="lv__display_8c_source.html#l00362">lv_display_get_vertical_resolution()</a>, <a class="el" href="lv__display_8c_source.html#l01074">lv_display_remove_event_cb_with_user_data()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00110">LV_EVENT_RESOLUTION_CHANGED</a>, <a class="el" href="lv__mem_8c_source.html#l00089">lv_malloc_zeroed()</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00156">LV_MAX</a>, <a class="el" href="lv__obj__style_8c_source.html#l00257">lv_obj_report_style_change()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00702">lv_theme_default_is_inited()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00026">MODE_DARK</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__theme__default_8c_source.html#l00024">theme_def</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>.</p>
+
+</div>
+</div>
+<a id="a0c6f8ca7dac961072a65f0d7f3487519" name="a0c6f8ca7dac961072a65f0d7f3487519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c6f8ca7dac961072a65f0d7f3487519">&#9670;&#160;</a></span>lv_theme_default_is_inited()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_theme_default_is_inited </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if default theme is initialized </p><dl class="section return"><dt>Devuelve</dt><dd>true if default theme is initialized, false otherwise </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__theme__default_8c_source.html#l00702">702</a> del archivo <a class="el" href="lv__theme__default_8c_source.html">lv_theme_default.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__theme__default_8c_source.html#l00170">_my_theme_t::inited</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__theme__default_8c_source.html#l00024">theme_def</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>, <a class="el" href="lv__theme__default_8c_source.html#l00709">lv_theme_default_get()</a> y <a class="el" href="lv__theme__default_8c_source.html#l00626">lv_theme_default_init()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_5a446a08db46641a0b89ec7bb8a60208.html">themes</a></li><li class="navelem"><a href="dir_c57b3fb58cfefb1b936f191fa3d8f9c2.html">default</a></li><li class="navelem"><a href="lv__theme__default_8c.html">lv_theme_default.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

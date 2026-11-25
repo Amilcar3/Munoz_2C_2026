@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Proyecto Integrador - Prototipo de Smartwatch</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('index.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Proyecto Integrador - Prototipo de Smartwatch </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="genDesc"></a>
+Descripción General</h1>
+<p>Firmwar del Prototipo de Smartwatch basado en la placa ESP-EDU (ESP32-C6) usando los modulos MAX30102 y GC9A *01. El sistema adquiere señales fotopletismográficas (PPG) mediante un sensor óptico MAX30102, calcula en tiempo real la frecuencia cardíaca (HR) y la saturación de oxígeno en sangre (SpO2), y presenta los resultados en un display TFT redondo GC9A01 de 1.28" (240×240 px) con interfaz gráfica LVGL.
+
+La interfaz de usuario ofrece tres vistas intercambiables:
+- &lt;strong&gt;ALL&lt;/strong&gt;: reloj analógico + HR + SpO2 + curva PPG reducida.
+- &lt;strong&gt;CLOCK&lt;/strong&gt;: reloj analógico a pantalla completa.
+- &lt;strong&gt;PARAMS&lt;/strong&gt;: HR + SpO2 + curva PPG ampliada con anillo de latido animado.
+
+El cambio de vista se controla mediante SWITCH_1 (GPIO_4) o por BLE desde una
+aplicación móvil. Los datos de HR, SpO2 y la señal PPG se transmiten
+periódicamente por BLE para su visualización remota.
+
+La arquitectura del firmware se organiza en cuatro tareas FreeRTOS comunicadas
+mediante colas:
+- &lt;strong&gt;readTask&lt;/strong&gt; (prioridad 5): lectura de la FIFO del MAX30102 a 100 Hz.
+- &lt;strong&gt;ProcessTask&lt;/strong&gt; (prioridad 4): filtrado de la señal PPG, cálculo de HR/SpO2
+  y detección de latidos.
+- &lt;strong&gt;DisplayTask&lt;/strong&gt; (prioridad 3): renderizado de la interfaz gráfica con LVGL.
+- &lt;strong&gt;BleTask&lt;/strong&gt; (prioridad 2): transmisión de datos por Bluetooth Low Energy.
+
+@section hardConn Conexión de Hardware
+
+@subsection displayConn Display GC9A01 (SPI)
+
+&lt;table class="markdownTable"&gt;
+  &lt;tr class="markdownTableHead"&gt;    &lt;th class="markdownTableHeadCenter"&gt; Display GC9A01  </p>
+<p>ESP-EDU  </p>
+<p>SCL / CLK  </p>
+<p>GPIO_20  </p>
+<p>SDA / DIN (MOSI)  </p>
+<p>GPIO_21  </p>
+<p>CS  </p>
+<p>GPIO_19 (SPI_1)  </p>
+<p>DC  </p>
+<p>GPIO_9  </p>
+<p>RST  </p>
+<p>GPIO_18  </p>
+<p>VCC  </p>
+<p>3V3  </p>
+<p>GND  </p>
+<p>GND  </p>
+<h2 class="doxsection"><a class="anchor" id="sensorConn"></a>
+Sensor MAX30102 (I2C)</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">MAX30102  </th><th class="markdownTableHeadLeft">ESP-EDU  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">SDA  </td><td class="markdownTableBodyLeft">GPIO_6  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">SCL  </td><td class="markdownTableBodyLeft">GPIO_7  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">VCC  </td><td class="markdownTableBodyLeft">3V3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">GND  </td><td class="markdownTableBodyLeft">GND  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="switchConn"></a>
+Pulsador</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Pulsador  </th><th class="markdownTableHeadLeft">ESP-EDU  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">SWITCH_1  </td><td class="markdownTableBodyLeft">GPIO_4  </td></tr>
+</table>
+<h1 class="doxsection"><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Date  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">04/11/2026  </td><td class="markdownTableBodyLeft">Creación del documento  </td></tr>
+</table>
+<dl class="section author"><dt>Autor</dt><dd>Amilcar Muñoz (<a href="#" onclick="location.href='mai'+'lto:'+'ami'+'lc'+'ar.'+'mu'+'nio'+'z@'+'gma'+'il'+'.co'+'m'; return false;">amilc<span class="obfuscator">.nosp@m.</span>ar.m<span class="obfuscator">.nosp@m.</span>unioz<span class="obfuscator">.nosp@m.</span>@gma<span class="obfuscator">.nosp@m.</span>il.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"></a>
+</div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

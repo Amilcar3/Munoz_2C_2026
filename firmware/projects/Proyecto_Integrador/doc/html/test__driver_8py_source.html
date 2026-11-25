@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/generators/config_headers/test/test_driver.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__driver_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_driver.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__driver_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;Smoke tests for the whole-file driver (emit.py).</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral">Asserts that each config type lands in the right target of the assembled</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">files - not exact layout (that&#39;s the per-type tests&#39; job).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="" data-end="">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a4eafcecf9312e055fa1ea08376746d52">    7</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a4eafcecf9312e055fa1ea08376746d52">test_template_has_scalars_and_enum_macros</a>(generated):</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    t = generated[<span class="stringliteral">&quot;template&quot;</span>]</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_USE_WAYLAND 0&quot;</span> <span class="keywordflow">in</span> t</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_DEF_REFR_PERIOD 33&quot;</span> <span class="keywordflow">in</span> t</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_USE_STDLIB_MALLOC LV_STDLIB_BUILTIN&quot;</span> <span class="keywordflow">in</span> t</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_USE_OS LV_OS_NONE&quot;</span> <span class="keywordflow">in</span> t</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_COLOR_DEPTH 16&quot;</span> <span class="keywordflow">in</span> t</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+</div>
+<div class="foldopen" id="foldopen00016" data-start="" data-end="">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#ab6425d0e0926fb73aa5e24d5cdf3c4ba">   16</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#ab6425d0e0926fb73aa5e24d5cdf3c4ba">test_template_excludes_derived_flag</a>(generated):</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment"># Internal capability flags are never offered to the user as their own</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment"># option (they may still be named in a &quot;Select:&quot; comment of what selects</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment"># them, which is fine - that is documentation, not a #define).</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_DRAW_HAS_VECTOR_SUPPORT&quot;</span> <span class="keywordflow">not</span> <span class="keywordflow">in</span> generated[<span class="stringliteral">&quot;template&quot;</span>]</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+</div>
+<div class="foldopen" id="foldopen00023" data-start="" data-end="">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#ae333c4484264dd620a48f5f4353ee81e">   23</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#ae333c4484264dd620a48f5f4353ee81e">test_internal_has_config_options_block</a>(generated):</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    i = generated[<span class="stringliteral">&quot;internal&quot;</span>]</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment"># Enum tokens are defined once, near the top: ConstToken constants and the</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment"># inline MEMBER_IS_TOKEN choice tokens.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_STDLIB_BUILTIN&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_OS_NONE&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment"># LV_LOG_LEVEL_* are member == token values defined into the header (no C</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment"># header owns them), like LV_OS_*.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_LOG_LEVEL_WARN&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+</div>
+<div class="foldopen" id="foldopen00034" data-start="" data-end="">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a843dee82f35e567ffc586453c1bbc6a3">   34</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a843dee82f35e567ffc586453c1bbc6a3">test_internal_defers_derived_flag_to_footer</a>(generated):</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    i = generated[<span class="stringliteral">&quot;internal&quot;</span>]</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#if (LV_USE_DRAW_VG_LITE || LV_USE_DRAW_NANOVG)&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment"># ... and it comes after the body&#39;s option ladders.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">assert</span> i.index(<span class="stringliteral">&quot;LV_DRAW_HAS_VECTOR_SUPPORT&quot;</span>) &gt; i.index(<span class="stringliteral">&quot;LV_USE_WAYLAND&quot;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+</div>
+<div class="foldopen" id="foldopen00041" data-start="" data-end="">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a752a8e3e5cd4087e133fd8c5bc664695">   41</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#a752a8e3e5cd4087e133fd8c5bc664695">test_internal_wraps_options_in_kconfig_ladder</a>(generated):</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#ifdef CONFIG_LV_USE_WAYLAND&quot;</span> <span class="keywordflow">in</span> generated[<span class="stringliteral">&quot;internal&quot;</span>]</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+</div>
+<div class="foldopen" id="foldopen00045" data-start="" data-end="">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#adcfc70c78bb0776a02e8575615910076">   45</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#adcfc70c78bb0776a02e8575615910076">test_internal_footer_has_static_derivations</a>(generated):</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    i = generated[<span class="stringliteral">&quot;internal&quot;</span>]</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment"># The *_EXTERNAL compatibility shims, the inconsistent-name alias, and the</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment"># trailing LV_KCONFIG_PRESENT cleanup.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;LV_USE_THORVG_EXTERNAL&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;LV_USE_LZ4_EXTERNAL&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_USE_ANIMIMAGE LV_USE_ANIMIMG&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#undef LV_KCONFIG_PRESENT&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+</div>
+<div class="foldopen" id="foldopen00055" data-start="" data-end="">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespaceconfig__headers_1_1test_1_1test__driver.html#acb6ace9468ed23f9eb12611d1031a683">   55</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceconfig__headers_1_1test_1_1test__driver.html#acb6ace9468ed23f9eb12611d1031a683">test_internal_has_legacy_autobackend_shim</a>(generated):</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    i = generated[<span class="stringliteral">&quot;internal&quot;</span>]</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#if LV_USE_LINUX_DRM &amp;&amp; LV_LINUX_DRM_AUTO_BACKEND&quot;</span> <span class="keywordflow">in</span> i</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    drm_auto = i[i.index(<span class="stringliteral">&quot;#ifndef LV_LINUX_DRM_AUTO_BACKEND&quot;</span>) :]</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">assert</span> <span class="stringliteral">&quot;#define LV_LINUX_DRM_AUTO_BACKEND LV_USE_LINUX_DRM&quot;</span> <span class="keywordflow">in</span> drm_auto[:400]</div>
+</div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_a4eafcecf9312e055fa1ea08376746d52"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#a4eafcecf9312e055fa1ea08376746d52">config_headers.test.test_driver.test_template_has_scalars_and_enum_macros</a></div><div class="ttdeci">test_template_has_scalars_and_enum_macros(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00007">test_driver.py:7</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_a752a8e3e5cd4087e133fd8c5bc664695"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#a752a8e3e5cd4087e133fd8c5bc664695">config_headers.test.test_driver.test_internal_wraps_options_in_kconfig_ladder</a></div><div class="ttdeci">test_internal_wraps_options_in_kconfig_ladder(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">test_driver.py:41</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_a843dee82f35e567ffc586453c1bbc6a3"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#a843dee82f35e567ffc586453c1bbc6a3">config_headers.test.test_driver.test_internal_defers_derived_flag_to_footer</a></div><div class="ttdeci">test_internal_defers_derived_flag_to_footer(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">test_driver.py:34</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_ab6425d0e0926fb73aa5e24d5cdf3c4ba"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#ab6425d0e0926fb73aa5e24d5cdf3c4ba">config_headers.test.test_driver.test_template_excludes_derived_flag</a></div><div class="ttdeci">test_template_excludes_derived_flag(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00016">test_driver.py:16</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_acb6ace9468ed23f9eb12611d1031a683"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#acb6ace9468ed23f9eb12611d1031a683">config_headers.test.test_driver.test_internal_has_legacy_autobackend_shim</a></div><div class="ttdeci">test_internal_has_legacy_autobackend_shim(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">test_driver.py:55</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_adcfc70c78bb0776a02e8575615910076"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#adcfc70c78bb0776a02e8575615910076">config_headers.test.test_driver.test_internal_footer_has_static_derivations</a></div><div class="ttdeci">test_internal_footer_has_static_derivations(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">test_driver.py:45</a></div></div>
+<div class="ttc" id="anamespaceconfig__headers_1_1test_1_1test__driver_html_ae333c4484264dd620a48f5f4353ee81e"><div class="ttname"><a href="namespaceconfig__headers_1_1test_1_1test__driver.html#ae333c4484264dd620a48f5f4353ee81e">config_headers.test.test_driver.test_internal_has_config_options_block</a></div><div class="ttdeci">test_internal_has_config_options_block(generated)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">test_driver.py:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_61b3af5ed844b8f59be1a03953634437.html">generators</a></li><li class="navelem"><a href="dir_fffacb41e4aee9be2b075a3716a03e87.html">config_headers</a></li><li class="navelem"><a href="dir_7090f4cdd3de8bd6d7cd6a9057cb3512.html">test</a></li><li class="navelem"><a href="test__driver_8py.html">test_driver.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

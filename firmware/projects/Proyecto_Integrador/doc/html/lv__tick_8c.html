@@ -1,0 +1,386 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/tick/lv_tick.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__tick_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_tick.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__tick__private_8h_source.html">lv_tick_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../core/lv_global.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__tick_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a17ba9d3d3f420182822febf73adca0a4" id="r_a17ba9d3d3f420182822febf73adca0a4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a17ba9d3d3f420182822febf73adca0a4">state</a>&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;tick_state</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9e26999086dd60626e8a03aca21143a7" id="r_a9e26999086dd60626e8a03aca21143a7"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a969183113f0383dfc9f6febfeb265559">LV_ATTRIBUTE_TICK_INC</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a9e26999086dd60626e8a03aca21143a7">lv_tick_inc</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> tick_period)</td></tr>
+<tr class="memitem:a051c47bcfb48282a75834d8dd0a8470c" id="r_a051c47bcfb48282a75834d8dd0a8470c"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a051c47bcfb48282a75834d8dd0a8470c">lv_tick_get</a> (void)</td></tr>
+<tr class="memitem:a632b8bf9b03d3a809d053508c06dc6d9" id="r_a632b8bf9b03d3a809d053508c06dc6d9"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a632b8bf9b03d3a809d053508c06dc6d9">lv_tick_elaps</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> prev_tick)</td></tr>
+<tr class="memitem:a9b879e9ab72d3cd06d7605e861c32c67" id="r_a9b879e9ab72d3cd06d7605e861c32c67"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9b879e9ab72d3cd06d7605e861c32c67">lv_tick_diff</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> tick, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> prev_tick)</td></tr>
+<tr class="memitem:ae6d51f7677241d44c6bfc1eb242b4ed3" id="r_ae6d51f7677241d44c6bfc1eb242b4ed3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae6d51f7677241d44c6bfc1eb242b4ed3">lv_delay_ms</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ms)</td></tr>
+<tr class="memitem:a846b334f5e2132a974468cb9f8bb1b74" id="r_a846b334f5e2132a974468cb9f8bb1b74"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a846b334f5e2132a974468cb9f8bb1b74">lv_tick_set_cb</a> (<a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a9eedcd41b8dfde8993c9e16e370dcf0e">lv_tick_get_cb_t</a> cb)</td></tr>
+<tr class="memitem:a350fc222eab94e4e04fa86ce28031223" id="r_a350fc222eab94e4e04fa86ce28031223"><td class="memItemLeft"><a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a9eedcd41b8dfde8993c9e16e370dcf0e">lv_tick_get_cb_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a350fc222eab94e4e04fa86ce28031223">lv_tick_get_cb</a> (void)</td></tr>
+<tr class="memitem:af2d3326e40e165ff7cb2145dde5ec1cd" id="r_af2d3326e40e165ff7cb2145dde5ec1cd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2d3326e40e165ff7cb2145dde5ec1cd">lv_delay_set_cb</a> (<a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a95843e6a55bae660260116a01b076857">lv_delay_cb_t</a> cb)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Provide access to the system tick with 1 millisecond resolution </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a17ba9d3d3f420182822febf73adca0a4" name="a17ba9d3d3f420182822febf73adca0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ba9d3d3f420182822febf73adca0a4">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define state&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;tick_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00015">15</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="ae6d51f7677241d44c6bfc1eb242b4ed3" name="ae6d51f7677241d44c6bfc1eb242b4ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6d51f7677241d44c6bfc1eb242b4ed3">&#9670;&#160;</a></span>lv_delay_ms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_delay_ms </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delay for the given milliseconds. By default it's a blocking delay, but with <span class="tt"><a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#af2d3326e40e165ff7cb2145dde5ec1cd">lv_delay_set_cb()</a></span> a custom delay function can be set too </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>the number of milliseconds to delay </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00077">77</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a> y <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__os_8c_source.html#l00069">lv_sleep_ms()</a>.</p>
+
+</div>
+</div>
+<a id="af2d3326e40e165ff7cb2145dde5ec1cd" name="af2d3326e40e165ff7cb2145dde5ec1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d3326e40e165ff7cb2145dde5ec1cd">&#9670;&#160;</a></span>lv_delay_set_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_delay_set_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a95843e6a55bae660260116a01b076857">lv_delay_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a callback for a blocking delay </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>pointer to a callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00105">105</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+<a id="a9b879e9ab72d3cd06d7605e861c32c67" name="a9b879e9ab72d3cd06d7605e861c32c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b879e9ab72d3cd06d7605e861c32c67">&#9670;&#160;</a></span>lv_tick_diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_tick_diff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>tick</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>prev_tick</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the elapsed milliseconds between two time stamps </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>a time stamp </td></tr>
+    <tr><td class="paramname">prev_tick</td><td>a time stamp before <span class="tt">tick</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the elapsed milliseconds between <span class="tt">prev_tick</span> and <span class="tt">tick</span> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00071">71</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>.</p>
+
+</div>
+</div>
+<a id="a632b8bf9b03d3a809d053508c06dc6d9" name="a632b8bf9b03d3a809d053508c06dc6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a632b8bf9b03d3a809d053508c06dc6d9">&#9670;&#160;</a></span>lv_tick_elaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_tick_elaps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>prev_tick</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the elapsed milliseconds since a previous time stamp </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prev_tick</td><td>a previous time stamp (return value of <a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a051c47bcfb48282a75834d8dd0a8470c">lv_tick_get()</a> ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the elapsed milliseconds since 'prev_tick' </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00066">66</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__tick_8c_source.html#l00071">lv_tick_diff()</a> y <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tick_8c_source.html#l00077">lv_delay_ms()</a>, <a class="el" href="lv__display_8c_source.html#l01189">lv_display_get_inactive_time()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>, <a class="el" href="lv__timer_8c_source.html#l00298">lv_timer_handler_run_in_period()</a> y <a class="el" href="lv__timer_8c_source.html#l00153">lv_timer_periodic_handler()</a>.</p>
+
+</div>
+</div>
+<a id="a051c47bcfb48282a75834d8dd0a8470c" name="a051c47bcfb48282a75834d8dd0a8470c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051c47bcfb48282a75834d8dd0a8470c">&#9670;&#160;</a></span>lv_tick_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_tick_get </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the elapsed milliseconds since start up </p><dl class="section return"><dt>Devuelve</dt><dd>the elapsed milliseconds </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00045">45</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>, <a class="el" href="lv__tick__private_8h_source.html#l00029">lv_tick_state_t::sys_irq_flag</a>, <a class="el" href="lv__tick__private_8h_source.html#l00028">lv_tick_state_t::sys_time</a> y <a class="el" href="lv__tick__private_8h_source.html#l00030">lv_tick_state_t::tick_get_cb</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__anim_8c_source.html#l00118">lv_anim_start()</a>, <a class="el" href="lv__tick_8c_source.html#l00077">lv_delay_ms()</a>, <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>, <a class="el" href="lv__display_8c_source.html#l01207">lv_display_trigger_activity()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__indev_8c_source.html#l00450">lv_indev_reset_long_press()</a>, <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>, <a class="el" href="lv__timer_8c_source.html#l00168">lv_timer_create()</a>, <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>, <a class="el" href="lv__timer_8c_source.html#l00298">lv_timer_handler_run_in_period()</a>, <a class="el" href="lv__timer_8c_source.html#l00153">lv_timer_periodic_handler()</a>, <a class="el" href="lv__timer_8c_source.html#l00237">lv_timer_ready()</a> y <a class="el" href="lv__timer_8c_source.html#l00262">lv_timer_reset()</a>.</p>
+
+</div>
+</div>
+<a id="a350fc222eab94e4e04fa86ce28031223" name="a350fc222eab94e4e04fa86ce28031223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a350fc222eab94e4e04fa86ce28031223">&#9670;&#160;</a></span>lv_tick_get_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a9eedcd41b8dfde8993c9e16e370dcf0e">lv_tick_get_cb_t</a> lv_tick_get_cb </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the custom callback for 'lv_tick_get' </p><dl class="section return"><dt>Devuelve</dt><dd>call this callback on 'lv_tick_get' </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00100">100</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+<a id="a9e26999086dd60626e8a03aca21143a7" name="a9e26999086dd60626e8a03aca21143a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e26999086dd60626e8a03aca21143a7">&#9670;&#160;</a></span>lv_tick_inc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a969183113f0383dfc9f6febfeb265559">LV_ATTRIBUTE_TICK_INC</a> void lv_tick_inc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>tick_period</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>You have to call this function periodically. It is typically safe to call from an interrupt handler or a different thread. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick_period</td><td>the call period of this function in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00037">37</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05193">LV_ATTRIBUTE_TICK_INC</a>, <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>, <a class="el" href="lv__tick__private_8h_source.html#l00029">lv_tick_state_t::sys_irq_flag</a> y <a class="el" href="lv__tick__private_8h_source.html#l00028">lv_tick_state_t::sys_time</a>.</p>
+
+</div>
+</div>
+<a id="a846b334f5e2132a974468cb9f8bb1b74" name="a846b334f5e2132a974468cb9f8bb1b74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a846b334f5e2132a974468cb9f8bb1b74">&#9670;&#160;</a></span>lv_tick_set_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_tick_set_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2tick_2lv__tick_8h.html#a9eedcd41b8dfde8993c9e16e370dcf0e">lv_tick_get_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the custom callback for 'lv_tick_get' </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>call this callback on 'lv_tick_get' </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tick_8c_source.html#l00095">95</a> del archivo <a class="el" href="lv__tick_8c_source.html">lv_tick.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_11ad1ab10c93872e053da42263f09707.html">tick</a></li><li class="navelem"><a href="lv__tick_8c.html">lv_tick.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

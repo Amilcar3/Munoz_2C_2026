@@ -1,0 +1,26 @@
+var include_2lvgl_2api__map_2lv__api__map__v9__5_8h =
+[
+    [ "LV_COLOR_FORMAT_NATIVE", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a282f99b52d452f9c1e4f55ec025f13b5", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#aa21a72816524676acac936622a3fdd81", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a5217960dce73288d676250cb2d06b695", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a8381aafc3291fe04d3321e2bf6a972d7", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_I1", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#adef1f7d0cae3089288372c550272b499", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_L8", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a862b5812e346c27e5ae2fb88a39902b0", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a3fd6b50b53b51a36f4506a38bd2c5424", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB565_SWAPPED", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a094812b6a43d13f9d5fe96e92b8e8313", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_RGB888", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#acaedcc1e401dbb9fd75bba19ffff0298", null ],
+    [ "LV_COLOR_FORMAT_NATIVE_WITH_ALPHA_OF_LV_COLOR_FORMAT_XRGB8888", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#af0c60bee91de7a5c1884122feb65c414", null ],
+    [ "lv_display_delete_event", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a9c66aab820bc77164693634747ad64fc", null ],
+    [ "lv_draw_sw_i1_convert_to_vtiled", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#ae65a781e63747534107a777b7a3c63c5", null ],
+    [ "lv_draw_sw_i1_invert", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a677b66cc74c6940997781bf4f1fa29db", null ],
+    [ "lv_draw_sw_i1_to_argb8888", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a251e61e60677f1b46ef492449588e702", null ],
+    [ "lv_draw_sw_rgb565_swap", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#ac59f5d5c509dbb1ae9d54dd60de205eb", null ],
+    [ "lv_draw_sw_rotate", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a94c7be56f0cfc618e6c58378c5ce7cbb", null ],
+    [ "lv_obj_is_valid", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a20f8875d3982b8c9982b9aa980c3cd8a", null ],
+    [ "lv_observer_remove", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#aaba4b9e7399468639c027a3dc68f60eb", null ],
+    [ "lv_style_get_prop_inlined", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#ae3bb059a47a7d0ebb414e472b1314a3c", null ],
+    [ "lv_subject_copy_string", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a634da6dbcb64eb05ef16d66a84270e6e", null ],
+    [ "lv_wayland_assign_physical_display", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#ade3a7a0d24e5a2da93f2e81ad4dcd1f4", null ],
+    [ "lv_wayland_unassign_physical_display", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a46fc4a8d50372a410676bed5d71b5134", null ],
+    [ "lv_disp_rotation_t", "include_2lvgl_2api__map_2lv__api__map__v9__5_8h.html#a5892780f0a08d565cab88ae6254de653", null ]
+];

@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/misc/cache/instance/lv_image_header_cache.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__image__header__cache_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_image_header_cache.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__image__header__cache_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="lv__image__decoder__private_8h.html">../../../image/lv_image_decoder_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="lv__global_8h.html">../../../core/lv_global.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="lv__cache__entry_8h.html">../lv_cache_entry.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="lv__image__header__cache_8h.html">lv_image_header_cache.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="lv__iter__private_8h.html">../../lv_iter_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#a4defd7d9ea42864851e706223296e522">   21</a></span><span class="preprocessor">#define CACHE_NAME  &quot;IMAGE_HEADER&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#a792ad4612dc42e8832ad879a42c01829">   23</a></span><span class="preprocessor">#define img_header_cache_p (LV_GLOBAL_DEFAULT()-&gt;img_header_cache)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  STATIC PROTOTYPES</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">static</span> <a class="code hl_typedef" href="lv__cache_8h.html#ae05bf8aeda1f8048a4eb666f28ba8fa0">lv_cache_compare_res_t</a> image_header_cache_compare_cb(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * lhs,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                                                            <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * rhs);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">static</span> <span class="keywordtype">void</span> image_header_cache_free_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * entry, <span class="keywordtype">void</span> * user_data);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">static</span> <span class="keywordtype">void</span> iter_inspect_cb(<span class="keywordtype">void</span> * elem);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> *  GLOBAL VARIABLES</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> *  STATIC VARIABLES</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#ab7ebdf7698f289da8a019bc515d50631">   54</a></span><a class="code hl_enumeration" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> <a class="code hl_function" href="lv__image__header__cache_8c.html#ab7ebdf7698f289da8a019bc515d50631">lv_image_header_cache_init</a>(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> count)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a> != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a> = <a class="code hl_function" href="lv__cache_8c.html#a797d9e98602bb59a80a23e3bfcaa0ea2">lv_cache_create</a>(&amp;<a class="code hl_variable" href="lv__cache__lru__rb_8c.html#a99cb7a21157dc4b46a55a29a3cae3784">lv_cache_class_lru_rb_count</a>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a>), count, (<a class="code hl_typedef" href="lv__cache_8h.html#a16540f0e3156a0914ed09aa5a42a1ed6">lv_cache_ops_t</a>) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        .compare_cb = (<a class="code hl_typedef" href="lv__cache_8h.html#a13269596d14620d4cd5b5cf3e527337e">lv_cache_compare_cb_t</a>) image_header_cache_compare_cb,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        .create_cb = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        .free_cb = (<a class="code hl_typedef" href="lv__cache_8h.html#a0d4dc554d7ed32a73dcce30b5bb7ad8d">lv_cache_free_cb_t</a>) image_header_cache_free_cb</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    });</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="lv__cache_8c.html#a22d310545cc33d5f5e4cd7864e9c3b12">lv_cache_set_name</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>, <a class="code hl_define" href="lv__image__cache_8c.html#a4defd7d9ea42864851e706223296e522">CACHE_NAME</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a> != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> ? <a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a> : <a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#a130ffbc626d4d3b99c7c8f857af5427b">   71</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__image__header__cache_8c.html#a130ffbc626d4d3b99c7c8f857af5427b">lv_image_header_cache_resize</a>(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> count, <span class="keywordtype">bool</span> evict_now)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="lv__cache_8c.html#ab8e8bb2d5d8f9b2f99d9c051451b18af">lv_cache_set_max_size</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>, count, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span>(evict_now) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_function" href="lv__cache_8c.html#ae6f241201bcadcb9f1a1ef3ae49c8489">lv_cache_reserve</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>, count, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#a2c504cc7c4d9b08fc8022d28316aef2d">   79</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__image__header__cache_8c.html#a2c504cc7c4d9b08fc8022d28316aef2d">lv_image_header_cache_drop</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> * src)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span>(src == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_function" href="lv__cache_8c.html#a26dc72ad0bda53b507a9790a97e723c8">lv_cache_drop_all</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> search_key = {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        .src = src,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        .src_type = <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__image_8h.html#a50b21044e521ad809b032bb1b6bc9311">lv_image_src_get_type</a>(src),</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    };</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="lv__cache_8c.html#a9303ebcdb36aa01c7e54b02816d860e5">lv_cache_drop</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>, &amp;search_key, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#af9558235e04e07e9fa71d7cd831648c4">   94</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="lv__image__header__cache_8c.html#af9558235e04e07e9fa71d7cd831648c4">lv_image_header_cache_is_enabled</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="lv__cache_8c.html#ad2dfa7068f785267445f412a9f7dc821">lv_cache_is_enabled</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#aef0931add7ba37bd35b7847e659eb322">   99</a></span><a class="code hl_typedef" href="lv__iter__private_8h.html#a65133c6e9aa193ab7a0b82afe93a8882">lv_iter_t</a> * <a class="code hl_function" href="lv__image__header__cache_8c.html#aef0931add7ba37bd35b7847e659eb322">lv_image_header_cache_iter_create</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="lv__cache_8c.html#a44ba72db279b94a6deea40006e83d68f">lv_cache_iter_create</a>(<a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="lv__image__header__cache_8c.html#a32545b13aab51052e10e9091ecc1533c">  104</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__image__header__cache_8c.html#a32545b13aab51052e10e9091ecc1533c">lv_image_header_cache_dump</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_typedef" href="lv__iter__private_8h.html#a65133c6e9aa193ab7a0b82afe93a8882">lv_iter_t</a> * iter = <a class="code hl_function" href="lv__image__header__cache_8c.html#aef0931add7ba37bd35b7847e659eb322">lv_image_header_cache_iter_create</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">if</span>(iter == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<span class="stringliteral">&quot;Image cache dump:&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<span class="stringliteral">&quot;\tsize\tdata_size\tcf\trc\ttype\tdecoded\t\t\tsrc&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="lv__iter_8c.html#acbe59d9c6830f2e3f00fcd6ceb68f24d">lv_iter_inspect</a>(iter, iter_inspect_cb);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_function" href="lv__iter_8c.html#a4f20f9c5d73b821490dabb27945f05c9">lv_iter_destroy</a>(iter);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> *   STATIC FUNCTIONS</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_typedef" href="lv__cache_8h.html#ae05bf8aeda1f8048a4eb666f28ba8fa0">lv_cache_compare_res_t</a> image_cache_common_compare(<span class="keyword">const</span> <span class="keywordtype">void</span> * lhs_src, <a class="code hl_enumeration" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18">lv_image_src_t</a> lhs_src_type,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                                                                <span class="keyword">const</span> <span class="keywordtype">void</span> * rhs_src, <a class="code hl_enumeration" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18">lv_image_src_t</a> rhs_src_type)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">if</span>(lhs_src_type == rhs_src_type) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">if</span>(lhs_src_type == <a class="code hl_enumvalue" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a38422f36699d98017700d7f0d8fecac8">LV_IMAGE_SRC_FILE</a>) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> cmp_res = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#a4a2dc2ce66aa512f8642885dc0a7e8e4">lv_strcmp</a>(lhs_src, rhs_src);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span>(cmp_res != 0) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">return</span> cmp_res &gt; 0 ? 1 : -1;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(lhs_src_type == <a class="code hl_enumvalue" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a285f3fae7a8e041d13a900c4e65d61ad">LV_IMAGE_SRC_VARIABLE</a>) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">if</span>(lhs_src != rhs_src) {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                <span class="keywordflow">return</span> lhs_src &gt; rhs_src ? 1 : -1;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">return</span> lhs_src_type &gt; rhs_src_type ? 1 : -1;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">static</span> <a class="code hl_typedef" href="lv__cache_8h.html#ae05bf8aeda1f8048a4eb666f28ba8fa0">lv_cache_compare_res_t</a> image_header_cache_compare_cb(</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * lhs,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * rhs)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>{</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordflow">return</span> image_cache_common_compare(lhs-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#ab3b4066b211a3d1de8f72e90b2bca8ab">src</a>, lhs-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#a22554adf7de0151da781374c4cbe9340">src_type</a>, rhs-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#ab3b4066b211a3d1de8f72e90b2bca8ab">src</a>, rhs-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#a22554adf7de0151da781374c4cbe9340">src_type</a>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>}</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keyword">static</span> <span class="keywordtype">void</span> image_header_cache_free_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a> * entry, <span class="keywordtype">void</span> * user_data)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>{</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(user_data); <span class="comment">/*Unused*/</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span>(entry-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#a22554adf7de0151da781374c4cbe9340">src_type</a> == <a class="code hl_enumvalue" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a38422f36699d98017700d7f0d8fecac8">LV_IMAGE_SRC_FILE</a>) <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a>((<span class="keywordtype">void</span> *)entry-&gt;<a class="code hl_variable" href="struct__lv__image__header__cache__data__t.html#ab3b4066b211a3d1de8f72e90b2bca8ab">src</a>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">static</span> <span class="keywordtype">void</span> iter_inspect_cb(<span class="keywordtype">void</span> * elem)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>{</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a947669f390edb235e66f88746ab7b158">lv_image_cache_data_t</a> * <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a> = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a947669f390edb235e66f88746ab7b158">lv_image_cache_data_t</a> *)elem;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * decoded = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *)<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;decoded;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_struct" href="structlv__image__header__t.html">lv_image_header_t</a> * <a class="code hl_namespace" href="namespaceheader.html">header</a> = &amp;decoded-&gt;header;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_typedef" href="lv__cache_8h.html#acc3bb05738d33b35c54cff5dcfec50a5">lv_cache_entry_t</a> * entry = <a class="code hl_function" href="lv__cache__entry_8c.html#a780d30d5c7e31a9d588c061477555e38">lv_cache_entry_get_entry</a>(data, <a class="code hl_define" href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>-&gt;node_size);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(decoded);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(<a class="code hl_namespace" href="namespaceheader.html">header</a>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(entry);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">/*  size    data_size   cf  rc  type    decoded         src*/</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#define IMAGE_CACHE_DUMP_FORMAT &quot;   %4dx%-4d    %9&quot;LV_PRIu32&quot;   %d  %&quot; LV_PRId32 &quot;  &quot;</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">switch</span>(<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;src_type) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a38422f36699d98017700d7f0d8fecac8">LV_IMAGE_SRC_FILE</a>:</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<a class="code hl_define" href="lv__image__cache_8c.html#aa3f90615237f69c657291b342ff4c1d2">IMAGE_CACHE_DUMP_FORMAT</a> <span class="stringliteral">&quot;file\t%-12p\t%s&quot;</span>, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;w, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;h, decoded-&gt;data_size, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;cf,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                        <a class="code hl_function" href="lv__cache__entry_8c.html#a6416112f45675f0a6d8c2277aecff3ba">lv_cache_entry_get_ref</a>(entry), (<span class="keywordtype">void</span> *)<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;decoded, (<span class="keywordtype">char</span> *)<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;src);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a285f3fae7a8e041d13a900c4e65d61ad">LV_IMAGE_SRC_VARIABLE</a>:</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<a class="code hl_define" href="lv__image__cache_8c.html#aa3f90615237f69c657291b342ff4c1d2">IMAGE_CACHE_DUMP_FORMAT</a> <span class="stringliteral">&quot;var \t%-12p\t%p&quot;</span>, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;w, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;h, decoded-&gt;data_size, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;cf,</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                        <a class="code hl_function" href="lv__cache__entry_8c.html#a6416112f45675f0a6d8c2277aecff3ba">lv_cache_entry_get_ref</a>(entry), (<span class="keywordtype">void</span> *)<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;decoded, <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;src);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<a class="code hl_define" href="lv__image__cache_8c.html#aa3f90615237f69c657291b342ff4c1d2">IMAGE_CACHE_DUMP_FORMAT</a> <span class="stringliteral">&quot;unkn\t%-12p\t%p&quot;</span>, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;w, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;h, decoded-&gt;data_size, <a class="code hl_namespace" href="namespaceheader.html">header</a>-&gt;cf,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                        <a class="code hl_function" href="lv__cache__entry_8c.html#a6416112f45675f0a6d8c2277aecff3ba">lv_cache_entry_get_ref</a>(entry), (<span class="keywordtype">void</span> *)<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;decoded, <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;src);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__image_8h_html_a50b21044e521ad809b032bb1b6bc9311"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__image_8h.html#a50b21044e521ad809b032bb1b6bc9311">lv_image_src_get_type</a></div><div class="ttdeci">lv_image_src_t lv_image_src_get_type(const void *src)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__image_8c_source.html#l00206">lv_draw_image.c:206</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2image_2lv__image__decoder_8h_html_acd24602bce640a0081d7644747d8be18"><div class="ttname"><a href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18">lv_image_src_t</a></div><div class="ttdeci">lv_image_src_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00033">lv_image_decoder.h:33</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2image_2lv__image__decoder_8h_html_acd24602bce640a0081d7644747d8be18a285f3fae7a8e041d13a900c4e65d61ad"><div class="ttname"><a href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a285f3fae7a8e041d13a900c4e65d61ad">LV_IMAGE_SRC_VARIABLE</a></div><div class="ttdeci">@ LV_IMAGE_SRC_VARIABLE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00034">lv_image_decoder.h:34</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2image_2lv__image__decoder_8h_html_acd24602bce640a0081d7644747d8be18a38422f36699d98017700d7f0d8fecac8"><div class="ttname"><a href="include_2lvgl_2image_2lv__image__decoder_8h.html#acd24602bce640a0081d7644747d8be18a38422f36699d98017700d7f0d8fecac8">LV_IMAGE_SRC_FILE</a></div><div class="ttdeci">@ LV_IMAGE_SRC_FILE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">lv_image_decoder.h:35</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_a619d6a9db17a9c1edb492ab026815696"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a></div><div class="ttdeci">#define LV_LOG_USER(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00166">lv_log.h:166</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5718549f1d16e97ce6ecd0cbc0c9d7a9"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5718549f1d16e97ce6ecd0cbc0c9d7a9">lv_image_header_cache_data_t</a></div><div class="ttdeci">struct _lv_image_header_cache_data_t lv_image_header_cache_data_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00166">lv_types.h:166</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a></div><div class="ttdeci">lv_result_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00064">lv_types.h:64</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div><div class="ttdeci">@ LV_RESULT_INVALID</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00065">lv_types.h:65</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a></div><div class="ttdeci">@ LV_RESULT_OK</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00067">lv_types.h:67</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a947669f390edb235e66f88746ab7b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a947669f390edb235e66f88746ab7b158">lv_image_cache_data_t</a></div><div class="ttdeci">struct _lv_image_cache_data_t lv_image_cache_data_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00164">lv_types.h:164</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ad07f3715eae2cfee3d5e0000edb150d7"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a></div><div class="ttdeci">#define LV_UNUSED(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00405">lv_types.h:405</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aef095d20cced64810944ca64aab7ca31"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a></div><div class="ttdeci">struct _lv_draw_buf_t lv_draw_buf_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00360">lv_types.h:360</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7455e11b1593bd5d98475bde81b97171"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a></div><div class="ttdeci">void lv_free(void *data)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00131">lv_mem.c:131</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__string_8h_html_a4a2dc2ce66aa512f8642885dc0a7e8e4"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__string_8h.html#a4a2dc2ce66aa512f8642885dc0a7e8e4">lv_strcmp</a></div><div class="ttdeci">int lv_strcmp(const char *s1, const char *s2)</div><div class="ttdoc">This function will compare two strings without specified length.</div><div class="ttdef"><b>Definition</b> <a href="lv__string__builtin_8c_source.html#l00283">lv_string_builtin.c:283</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_a22d310545cc33d5f5e4cd7864e9c3b12"><div class="ttname"><a href="lv__cache_8c.html#a22d310545cc33d5f5e4cd7864e9c3b12">lv_cache_set_name</a></div><div class="ttdeci">void lv_cache_set_name(lv_cache_t *cache, const char *name)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00285">lv_cache.c:285</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_a26dc72ad0bda53b507a9790a97e723c8"><div class="ttname"><a href="lv__cache_8c.html#a26dc72ad0bda53b507a9790a97e723c8">lv_cache_drop_all</a></div><div class="ttdeci">void lv_cache_drop_all(lv_cache_t *cache, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00233">lv_cache.c:233</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_a44ba72db279b94a6deea40006e83d68f"><div class="ttname"><a href="lv__cache_8c.html#a44ba72db279b94a6deea40006e83d68f">lv_cache_iter_create</a></div><div class="ttdeci">lv_iter_t * lv_cache_iter_create(lv_cache_t *cache)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00295">lv_cache.c:295</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_a797d9e98602bb59a80a23e3bfcaa0ea2"><div class="ttname"><a href="lv__cache_8c.html#a797d9e98602bb59a80a23e3bfcaa0ea2">lv_cache_create</a></div><div class="ttdeci">lv_cache_t * lv_cache_create(const lv_cache_class_t *cache_class, size_t node_size, size_t max_size, lv_cache_ops_t ops)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00043">lv_cache.c:43</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_a9303ebcdb36aa01c7e54b02816d860e5"><div class="ttname"><a href="lv__cache_8c.html#a9303ebcdb36aa01c7e54b02816d860e5">lv_cache_drop</a></div><div class="ttdeci">void lv_cache_drop(lv_cache_t *cache, const void *key, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00207">lv_cache.c:207</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_ab8e8bb2d5d8f9b2f99d9c051451b18af"><div class="ttname"><a href="lv__cache_8c.html#ab8e8bb2d5d8f9b2f99d9c051451b18af">lv_cache_set_max_size</a></div><div class="ttdeci">void lv_cache_set_max_size(lv_cache_t *cache, size_t max_size, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00246">lv_cache.c:246</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_ad2dfa7068f785267445f412a9f7dc821"><div class="ttname"><a href="lv__cache_8c.html#ad2dfa7068f785267445f412a9f7dc821">lv_cache_is_enabled</a></div><div class="ttdeci">bool lv_cache_is_enabled(lv_cache_t *cache)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00266">lv_cache.c:266</a></div></div>
+<div class="ttc" id="alv__cache_8c_html_ae6f241201bcadcb9f1a1ef3ae49c8489"><div class="ttname"><a href="lv__cache_8c.html#ae6f241201bcadcb9f1a1ef3ae49c8489">lv_cache_reserve</a></div><div class="ttdeci">void lv_cache_reserve(lv_cache_t *cache, uint32_t reserved_size, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8c_source.html#l00194">lv_cache.c:194</a></div></div>
+<div class="ttc" id="alv__cache_8h_html_a0d4dc554d7ed32a73dcce30b5bb7ad8d"><div class="ttname"><a href="lv__cache_8h.html#a0d4dc554d7ed32a73dcce30b5bb7ad8d">lv_cache_free_cb_t</a></div><div class="ttdeci">void(* lv_cache_free_cb_t)(void *node, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8h_source.html#l00048">lv_cache.h:48</a></div></div>
+<div class="ttc" id="alv__cache_8h_html_a13269596d14620d4cd5b5cf3e527337e"><div class="ttname"><a href="lv__cache_8h.html#a13269596d14620d4cd5b5cf3e527337e">lv_cache_compare_cb_t</a></div><div class="ttdeci">lv_cache_compare_res_t(* lv_cache_compare_cb_t)(const void *a, const void *b)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8h_source.html#l00049">lv_cache.h:49</a></div></div>
+<div class="ttc" id="alv__cache_8h_html_a16540f0e3156a0914ed09aa5a42a1ed6"><div class="ttname"><a href="lv__cache_8h.html#a16540f0e3156a0914ed09aa5a42a1ed6">lv_cache_ops_t</a></div><div class="ttdeci">struct _lv_cache_ops_t lv_cache_ops_t</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8h_source.html#l00043">lv_cache.h:43</a></div></div>
+<div class="ttc" id="alv__cache_8h_html_acc3bb05738d33b35c54cff5dcfec50a5"><div class="ttname"><a href="lv__cache_8h.html#acc3bb05738d33b35c54cff5dcfec50a5">lv_cache_entry_t</a></div><div class="ttdeci">struct _lv_cache_entry_t lv_cache_entry_t</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8h_source.html#l00029">lv_cache.h:29</a></div></div>
+<div class="ttc" id="alv__cache_8h_html_ae05bf8aeda1f8048a4eb666f28ba8fa0"><div class="ttname"><a href="lv__cache_8h.html#ae05bf8aeda1f8048a4eb666f28ba8fa0">lv_cache_compare_res_t</a></div><div class="ttdeci">int32_t lv_cache_compare_res_t</div><div class="ttdef"><b>Definition</b> <a href="lv__cache_8h_source.html#l00046">lv_cache.h:46</a></div></div>
+<div class="ttc" id="alv__cache__entry_8c_html_a6416112f45675f0a6d8c2277aecff3ba"><div class="ttname"><a href="lv__cache__entry_8c.html#a6416112f45675f0a6d8c2277aecff3ba">lv_cache_entry_get_ref</a></div><div class="ttdeci">int32_t lv_cache_entry_get_ref(lv_cache_entry_t *entry)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache__entry_8c_source.html#l00064">lv_cache_entry.c:64</a></div></div>
+<div class="ttc" id="alv__cache__entry_8c_html_a780d30d5c7e31a9d588c061477555e38"><div class="ttname"><a href="lv__cache__entry_8c.html#a780d30d5c7e31a9d588c061477555e38">lv_cache_entry_get_entry</a></div><div class="ttdeci">lv_cache_entry_t * lv_cache_entry_get_entry(void *data, const uint32_t node_size)</div><div class="ttdef"><b>Definition</b> <a href="lv__cache__entry_8c_source.html#l00115">lv_cache_entry.c:115</a></div></div>
+<div class="ttc" id="alv__cache__entry_8h_html"><div class="ttname"><a href="lv__cache__entry_8h.html">lv_cache_entry.h</a></div></div>
+<div class="ttc" id="alv__cache__lru__rb_8c_html_a99cb7a21157dc4b46a55a29a3cae3784"><div class="ttname"><a href="lv__cache__lru__rb_8c.html#a99cb7a21157dc4b46a55a29a3cae3784">lv_cache_class_lru_rb_count</a></div><div class="ttdeci">const lv_cache_class_t lv_cache_class_lru_rb_count</div><div class="ttdef"><b>Definition</b> <a href="lv__cache__lru__rb_8c_source.html#l00101">lv_cache_lru_rb.c:101</a></div></div>
+<div class="ttc" id="alv__global_8h_html"><div class="ttname"><a href="lv__global_8h.html">lv_global.h</a></div></div>
+<div class="ttc" id="alv__image__cache_8c_html_a4defd7d9ea42864851e706223296e522"><div class="ttname"><a href="lv__image__cache_8c.html#a4defd7d9ea42864851e706223296e522">CACHE_NAME</a></div><div class="ttdeci">#define CACHE_NAME</div><div class="ttdef"><b>Definition</b> <a href="lv__image__cache_8c_source.html#l00022">lv_image_cache.c:22</a></div></div>
+<div class="ttc" id="alv__image__cache_8c_html_aa3f90615237f69c657291b342ff4c1d2"><div class="ttname"><a href="lv__image__cache_8c.html#aa3f90615237f69c657291b342ff4c1d2">IMAGE_CACHE_DUMP_FORMAT</a></div><div class="ttdeci">#define IMAGE_CACHE_DUMP_FORMAT</div></div>
+<div class="ttc" id="alv__image__decoder_8c_html_a792ad4612dc42e8832ad879a42c01829"><div class="ttname"><a href="lv__image__decoder_8c.html#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a></div><div class="ttdeci">#define img_header_cache_p</div><div class="ttdef"><b>Definition</b> <a href="lv__image__decoder_8c_source.html#l00022">lv_image_decoder.c:22</a></div></div>
+<div class="ttc" id="alv__image__decoder__private_8h_html"><div class="ttname"><a href="lv__image__decoder__private_8h.html">lv_image_decoder_private.h</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_a130ffbc626d4d3b99c7c8f857af5427b"><div class="ttname"><a href="lv__image__header__cache_8c.html#a130ffbc626d4d3b99c7c8f857af5427b">lv_image_header_cache_resize</a></div><div class="ttdeci">void lv_image_header_cache_resize(uint32_t count, bool evict_now)</div><div class="ttdef"><b>Definition</b> <a href="#l00071">lv_image_header_cache.c:71</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_a2c504cc7c4d9b08fc8022d28316aef2d"><div class="ttname"><a href="lv__image__header__cache_8c.html#a2c504cc7c4d9b08fc8022d28316aef2d">lv_image_header_cache_drop</a></div><div class="ttdeci">void lv_image_header_cache_drop(const void *src)</div><div class="ttdef"><b>Definition</b> <a href="#l00079">lv_image_header_cache.c:79</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_a32545b13aab51052e10e9091ecc1533c"><div class="ttname"><a href="lv__image__header__cache_8c.html#a32545b13aab51052e10e9091ecc1533c">lv_image_header_cache_dump</a></div><div class="ttdeci">void lv_image_header_cache_dump(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00104">lv_image_header_cache.c:104</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_ab7ebdf7698f289da8a019bc515d50631"><div class="ttname"><a href="lv__image__header__cache_8c.html#ab7ebdf7698f289da8a019bc515d50631">lv_image_header_cache_init</a></div><div class="ttdeci">lv_result_t lv_image_header_cache_init(uint32_t count)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">lv_image_header_cache.c:54</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_aef0931add7ba37bd35b7847e659eb322"><div class="ttname"><a href="lv__image__header__cache_8c.html#aef0931add7ba37bd35b7847e659eb322">lv_image_header_cache_iter_create</a></div><div class="ttdeci">lv_iter_t * lv_image_header_cache_iter_create(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00099">lv_image_header_cache.c:99</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8c_html_af9558235e04e07e9fa71d7cd831648c4"><div class="ttname"><a href="lv__image__header__cache_8c.html#af9558235e04e07e9fa71d7cd831648c4">lv_image_header_cache_is_enabled</a></div><div class="ttdeci">bool lv_image_header_cache_is_enabled(void)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">lv_image_header_cache.c:94</a></div></div>
+<div class="ttc" id="alv__image__header__cache_8h_html"><div class="ttname"><a href="lv__image__header__cache_8h.html">lv_image_header_cache.h</a></div></div>
+<div class="ttc" id="alv__iter_8c_html_a4f20f9c5d73b821490dabb27945f05c9"><div class="ttname"><a href="lv__iter_8c.html#a4f20f9c5d73b821490dabb27945f05c9">lv_iter_destroy</a></div><div class="ttdeci">void lv_iter_destroy(lv_iter_t *iter)</div><div class="ttdef"><b>Definition</b> <a href="lv__iter_8c_source.html#l00089">lv_iter.c:89</a></div></div>
+<div class="ttc" id="alv__iter_8c_html_acbe59d9c6830f2e3f00fcd6ceb68f24d"><div class="ttname"><a href="lv__iter_8c.html#acbe59d9c6830f2e3f00fcd6ceb68f24d">lv_iter_inspect</a></div><div class="ttdeci">void lv_iter_inspect(lv_iter_t *iter, const lv_iter_inspect_cb inspect_cb)</div><div class="ttdef"><b>Definition</b> <a href="lv__iter_8c_source.html#l00176">lv_iter.c:176</a></div></div>
+<div class="ttc" id="alv__iter__private_8h_html"><div class="ttname"><a href="lv__iter__private_8h.html">lv_iter_private.h</a></div></div>
+<div class="ttc" id="alv__iter__private_8h_html_a65133c6e9aa193ab7a0b82afe93a8882"><div class="ttname"><a href="lv__iter__private_8h.html#a65133c6e9aa193ab7a0b82afe93a8882">lv_iter_t</a></div><div class="ttdeci">struct _lv_iter_t lv_iter_t</div><div class="ttdef"><b>Definition</b> <a href="lv__iter__private_8h_source.html#l00028">lv_iter_private.h:28</a></div></div>
+<div class="ttc" id="anamespaceheader_html"><div class="ttname"><a href="namespaceheader.html">header</a></div><div class="ttdef"><b>Definition</b> <a href="header_8py_source.html#l00001">header.py:1</a></div></div>
+<div class="ttc" id="anamespacejpg__to__sjpg_html_a511ae0b1c13f95e5f08f1a0dd3da3d93"><div class="ttname"><a href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">jpg_to_sjpg.data</a></div><div class="ttdeci">data</div><div class="ttdef"><b>Definition</b> <a href="jpg__to__sjpg_8py_source.html#l00096">jpg_to_sjpg.py:96</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astruct__lv__image__header__cache__data__t_html_a22554adf7de0151da781374c4cbe9340"><div class="ttname"><a href="struct__lv__image__header__cache__data__t.html#a22554adf7de0151da781374c4cbe9340">_lv_image_header_cache_data_t::src_type</a></div><div class="ttdeci">lv_image_src_t src_type</div><div class="ttdef"><b>Definition</b> <a href="lv__image__decoder__private_8h_source.html#l00070">lv_image_decoder_private.h:70</a></div></div>
+<div class="ttc" id="astruct__lv__image__header__cache__data__t_html_ab3b4066b211a3d1de8f72e90b2bca8ab"><div class="ttname"><a href="struct__lv__image__header__cache__data__t.html#ab3b4066b211a3d1de8f72e90b2bca8ab">_lv_image_header_cache_data_t::src</a></div><div class="ttdeci">const void * src</div><div class="ttdef"><b>Definition</b> <a href="lv__image__decoder__private_8h_source.html#l00069">lv_image_decoder_private.h:69</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html"><div class="ttname"><a href="structlv__image__header__t.html">lv_image_header_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00109">lv_image_dsc.h:109</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_32c820c032576f8606561fc14ebf0e8c.html">misc</a></li><li class="navelem"><a href="dir_9646cce9b236386e8fb84bb7e798b612.html">cache</a></li><li class="navelem"><a href="dir_e8ebe8866690f7cd456077866ff7e98b.html">instance</a></li><li class="navelem"><a href="lv__image__header__cache_8c.html">lv_image_header_cache.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+var cortex__m55__m7_2nema__hal_8h =
+[
+    [ "nema_buffer_t_", "structnema__buffer__t__.html", "structnema__buffer__t__" ],
+    [ "MUTEX_FLUSH", "cortex__m55__m7_2nema__hal_8h.html#a9467d90ba3b9b1571f2445790e44385a", null ],
+    [ "MUTEX_MALLOC", "cortex__m55__m7_2nema__hal_8h.html#a9ef0fb56e2dc7f0b0ca57ab4b861339c", null ],
+    [ "MUTEX_MAX", "cortex__m55__m7_2nema__hal_8h.html#a4666632045037b9b14f005e3ce786945", null ],
+    [ "MUTEX_RB", "cortex__m55__m7_2nema__hal_8h.html#a232f417c834a036d33d0c74b5ffef092", null ],
+    [ "nema_buffer_t", "cortex__m55__m7_2nema__hal_8h.html#aaf4fdd75a994a7d3763561468c37830b", null ],
+    [ "nema_buffer_create", "cortex__m55__m7_2nema__hal_8h.html#aede9439e0b2165e324d3fcad1637e16a", null ],
+    [ "nema_buffer_create_pool", "cortex__m55__m7_2nema__hal_8h.html#a390e07e26b661ec055858daaf97ea99f", null ],
+    [ "nema_buffer_destroy", "cortex__m55__m7_2nema__hal_8h.html#ac39c69745b438411bfdd57f84900890a", null ],
+    [ "nema_buffer_flush", "cortex__m55__m7_2nema__hal_8h.html#a513908df36f5b7a1050c8d4857d3de04", null ],
+    [ "nema_buffer_map", "cortex__m55__m7_2nema__hal_8h.html#a629e8b254e52465e02ad96e9abb0f283", null ],
+    [ "nema_buffer_phys", "cortex__m55__m7_2nema__hal_8h.html#a0bf4f709cc61650092b303b71fe62583", null ],
+    [ "nema_buffer_unmap", "cortex__m55__m7_2nema__hal_8h.html#a1452c1ffd0193164a8727ed1a83f9e52", null ],
+    [ "nema_host_free", "cortex__m55__m7_2nema__hal_8h.html#aae046a44e832d62c34bdb7c87b21b985", null ],
+    [ "nema_host_malloc", "cortex__m55__m7_2nema__hal_8h.html#ace25a9bb561a119a598983532b942a4c", null ],
+    [ "nema_mutex_lock", "cortex__m55__m7_2nema__hal_8h.html#ae5acd9902606ed5470ed365c5b328b7b", null ],
+    [ "nema_mutex_unlock", "cortex__m55__m7_2nema__hal_8h.html#aa799eb4c11d13fe10416c1e3e7f391d0", null ],
+    [ "nema_reg_read", "cortex__m55__m7_2nema__hal_8h.html#a76e0118c6cc5bedcc101b5cd8ad9f715", null ],
+    [ "nema_reg_write", "cortex__m55__m7_2nema__hal_8h.html#a16e171fa08d0be68bcd4980b5ddb9eb9", null ],
+    [ "nema_sys_init", "cortex__m55__m7_2nema__hal_8h.html#a5c75584882ccdcc861f93081ff7eac34", null ],
+    [ "nema_wait_irq", "cortex__m55__m7_2nema__hal_8h.html#a0b08adf2ead81411beee8c269f536569", null ],
+    [ "nema_wait_irq_brk", "cortex__m55__m7_2nema__hal_8h.html#ad2f4da995bdd267d99092edfc7646c67", null ],
+    [ "nema_wait_irq_cl", "cortex__m55__m7_2nema__hal_8h.html#a1da530d75a03613191b001c39e0cb31a", null ]
+];

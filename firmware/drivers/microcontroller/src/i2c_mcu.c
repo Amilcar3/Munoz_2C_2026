@@ -2,7 +2,7 @@
  * @file i2c_mcu.c
  * @author Juan Cerrudo (juan.cerrudo@uner.edu.ar)
  * @brief 
- * @version 0.1
+ * @version 0.2
  * @date 2024-01-30
  * 
  * @copyright Copyright (c) 2024
@@ -57,8 +57,6 @@ static int i2c_mcu_timeout_ms(uint16_t timeout)
 {
     return (timeout > 0) ? (int)timeout : I2C_MASTER_TIMEOUT_MS;
 }
-
-/*==================[internal functions declaration]=========================*/
 
 /*==================[external functions definition]==========================*/
 
@@ -178,6 +176,31 @@ int8_t I2C_readBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *
     return (ret == ESP_OK) ? length : 0;
 }
 
+/** Read multiple bytes from device without specifying a register address.
+ *  Used by devices like MAX3010x that auto-increment their read pointer.
+ * @param devAddr I2C slave device address
+ * @param length Number of bytes to read
+ * @param data Buffer to store read data in
+ * @param timeout Optional read timeout in milliseconds (0 to disable)
+ * @return Number of bytes read, 0 on failure
+ */
+int8_t I2C_requestBytes(uint8_t devAddr, uint8_t length, uint8_t *data, uint16_t timeout) {
+    i2c_master_dev_handle_t dev_handle = NULL;
+    esp_err_t ret = ESP_FAIL;
+
+    if (data == NULL || length == 0) {
+        return 0;
+    }
+
+    ret = i2c_mcu_get_device_handle(devAddr, &dev_handle);
+    if (ret == ESP_OK) {
+        ret = i2c_master_receive(dev_handle, data, length, i2c_mcu_timeout_ms(timeout));
+    }
+
+    i2c_mcu_release_device_handle(dev_handle);
+    return (ret == ESP_OK) ? length : 0;
+}
+
 bool I2C_writeWord(uint8_t devAddr, uint8_t regAddr, uint16_t data){
 
 	uint8_t data1[] = {(uint8_t)(data>>8), (uint8_t)(data & 0xff)};
@@ -258,7 +281,7 @@ bool I2C_writeByte(uint8_t devAddr, uint8_t regAddr, uint8_t data) {
     return (ret == ESP_OK);
 }
 
-/** Write single byte to an 8-bit device register.
+/** Write multiple bytes to device.
  * @param devAddr I2C slave device address
  * @param regAddr Register address to write to
  * @param length Number of bytes to write
@@ -292,6 +315,23 @@ bool I2C_writeBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *d
     return (ret == ESP_OK);
 }
 
+/** Write a register address to a device (without data).
+ * @param devAddr I2C slave device address
+ * @param regAddr Register address to write
+ * @return Status of operation (true = success)
+ */
+bool I2C_writeREG(uint8_t devAddr, uint8_t regAddr){
+    uint8_t reg = regAddr;
+    i2c_master_dev_handle_t dev_handle = NULL;
+    esp_err_t ret = i2c_mcu_get_device_handle(devAddr, &dev_handle);
+
+    if (ret == ESP_OK) {
+        ret = i2c_master_transmit(dev_handle, &reg, 1, i2c_mcu_timeout_ms(0));
+    }
+
+    i2c_mcu_release_device_handle(dev_handle);
+    return (ret == ESP_OK);
+}
 
 /**
  * read word

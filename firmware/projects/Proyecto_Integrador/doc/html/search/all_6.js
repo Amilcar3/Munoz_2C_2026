@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['60_0',['60',['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2proc5dc0c203440805b49031137e71402d4.html#autotoc_md107',1,'order: 60'],['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2proa55d87ea8aaf29205ef106d8a329a6c5.html#autotoc_md119',1,'order: 60'],['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2pro5386b44de372a33d272597ca5280ddb7.html#autotoc_md208',1,'order: 60']]],
+  ['64b_20lv_5fconf_5fperf64b_1',['64b lv_conf_perf64b',['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2pro1fbb1623c071882f184a9797236e6d8a.html#autotoc_md299',1,'ARM Emulated 64b - lv_conf_perf64b'],['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2pro1fc4d2e09361a6636eb045e5b37220ff.html#autotoc_md302',1,'ARM Emulated 64b - lv_conf_perf64b']]],
+  ['65_2',['65',['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2pro849772744b23336a9b42fa882a2d9f08.html#autotoc_md143',1,'order: 65'],['../md__c_1_2_users_2amilc_2_documents_2_programable_2_repositorio_2_munoz__2_c__2026_2firmware_2pro2945e2f211b6f6b3e6831e6fb2465820.html#autotoc_md210',1,'order: 65']]]
+];

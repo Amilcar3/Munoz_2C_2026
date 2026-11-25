@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/src/test_cases/draw/test_image_recolor_xrgb8888.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__image__recolor__xrgb8888_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_image_recolor_xrgb8888.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__image__recolor__xrgb8888_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if LV_BUILD_TEST</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../lvgl.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../../lvgl_private.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="unity_8h.html">unity/unity.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keywordtype">void</span> setUp(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__tree_8h.html#ab9e1d84b921e63d1da83fe711b214aea">lv_obj_clean</a>(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a>());</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> tearDown(<span class="keywordtype">void</span>) { }</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> test_image_recolor_xrgb8888_preserves_opaque_x_byte(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> * disp = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span>(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a7d4cd11beb6c46fe0883647bd4ab3a05">lv_display_get_color_format</a>(disp) != <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;test display is not XRGB8888&quot;</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> pixels[2 * 64] = {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        0x40, 0x80, 0xC0, 0xFF,  0x40, 0x80, 0xC0, 0xFF,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        0x40, 0x80, 0xC0, 0xFF,  0x40, 0x80, 0xC0, 0xFF,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00,  0x00, 0x00, 0x00, 0x00</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    };</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structlv__image__dsc__t.html">lv_image_dsc_t</a> src = {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        .header = {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            .magic = <a class="code hl_define" href="include_2lvgl_2draw_2lv__image__dsc_8h.html#a6e696c21fccd59770c4c0cca52e0ff64">LV_IMAGE_HEADER_MAGIC</a>,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            .cf = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            .w = 2,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            .h = 2,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            .stride = 64 <span class="comment">/*For VG-Lite*/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        },</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        .data_size = <span class="keyword">sizeof</span>(pixels),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        .data = pixels,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    };</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * <a class="code hl_variable" href="namespaceimage__viewer.html#a86d0d51ceb4bc3bd26707520f257a5a4">img</a> = <a class="code hl_function" href="include_2lvgl_2widgets_2lv__image_8h.html#a19767f394f06e2931b825411cdabedfc">lv_image_create</a>(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a>());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__image_8h.html#abd50066a66f6c4496c5d9149dbb67cfd">lv_image_set_src</a>(img, &amp;src);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#adf890070561785900f96ff340c4bb6f7">lv_obj_set_style_image_recolor</a>(img, <a class="code hl_function" href="include_2lvgl_2draw_2lv__palette_8h.html#a02d11c7e2f70e8b777901d9e403c6b34">lv_palette_main</a>(<a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9ca8999c470e63be2ac021fde7d612ef9b5">LV_PALETTE_RED</a>), 0);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ab96c4223720cd63efd91f1f5984af4af">lv_obj_set_style_image_recolor_opa</a>(img, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a519758c4538a66db53b951157a879532">LV_OPA_70</a>, 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__refr_8h.html#a46355e9677a6d10d50a513f66226c1e0">lv_refr_now</a>(<a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a> = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae492a0185f0b49be320c228f9584ae72">lv_display_get_buf_active</a>(disp);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w = <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a>-&gt;header.w;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h = <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a>-&gt;header.h;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> stride = <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a>-&gt;header.stride;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a> = <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a>-&gt;data;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span>(<a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y = 0; y &lt; h; y++) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> * row = <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a> + y * stride;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">for</span>(<a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x = 0; x &lt; w; x++) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            TEST_ASSERT_EQUAL_HEX8(0xff, row[x * 4 + 3]);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_ab96c4223720cd63efd91f1f5984af4af"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ab96c4223720cd63efd91f1f5984af4af">lv_obj_set_style_image_recolor_opa</a></div><div class="ttdeci">void lv_obj_set_style_image_recolor_opa(lv_obj_t *obj, lv_opa_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01443">lv_obj_style_gen.c:1443</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_adf890070561785900f96ff340c4bb6f7"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#adf890070561785900f96ff340c4bb6f7">lv_obj_set_style_image_recolor</a></div><div class="ttdeci">void lv_obj_set_style_image_recolor(lv_obj_t *obj, lv_color_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01434">lv_obj_style_gen.c:1434</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__tree_8h_html_ab9e1d84b921e63d1da83fe711b214aea"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__tree_8h.html#ab9e1d84b921e63d1da83fe711b214aea">lv_obj_clean</a></div><div class="ttdeci">void lv_obj_clean(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__tree_8c_source.html#l00091">lv_obj_tree.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__refr_8h_html_a46355e9677a6d10d50a513f66226c1e0"><div class="ttname"><a href="include_2lvgl_2core_2lv__refr_8h.html#a46355e9677a6d10d50a513f66226c1e0">lv_refr_now</a></div><div class="ttdeci">void lv_refr_now(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__refr_8c_source.html#l00088">lv_refr.c:88</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a2afebbc012fa142caacfaf6f86172798"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a></div><div class="ttdeci">lv_display_t * lv_display_get_default(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00266">lv_display.c:266</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a7d4cd11beb6c46fe0883647bd4ab3a05"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a7d4cd11beb6c46fe0883647bd4ab3a05">lv_display_get_color_format</a></div><div class="ttdeci">lv_color_format_t lv_display_get_color_format(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00672">lv_display.c:672</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ae492a0185f0b49be320c228f9584ae72"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ae492a0185f0b49be320c228f9584ae72">lv_display_get_buf_active</a></div><div class="ttdeci">lv_draw_buf_t * lv_display_get_buf_active(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01356">lv_display.c:1356</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ae5c93629ebabaee2d7cd4461f4ccd128"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a></div><div class="ttdeci">lv_obj_t * lv_screen_active(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01496">lv_display.c:1496</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a1ad2ded4e489aa575d8bc5a9bd9df954a519758c4538a66db53b951157a879532"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a519758c4538a66db53b951157a879532">LV_OPA_70</a></div><div class="ttdeci">@ LV_OPA_70</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00049">lv_color.h:49</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_XRGB8888</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">lv_color.h:163</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__image__dsc_8h_html_a6e696c21fccd59770c4c0cca52e0ff64"><div class="ttname"><a href="include_2lvgl_2draw_2lv__image__dsc_8h.html#a6e696c21fccd59770c4c0cca52e0ff64">LV_IMAGE_HEADER_MAGIC</a></div><div class="ttdeci">#define LV_IMAGE_HEADER_MAGIC</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00025">lv_image_dsc.h:25</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__palette_8h_html_a02d11c7e2f70e8b777901d9e403c6b34"><div class="ttname"><a href="include_2lvgl_2draw_2lv__palette_8h.html#a02d11c7e2f70e8b777901d9e403c6b34">lv_palette_main</a></div><div class="ttdeci">lv_color_t lv_palette_main(lv_palette_t p)</div><div class="ttdef"><b>Definition</b> <a href="lv__palette_8c_source.html#l00036">lv_palette.c:36</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__palette_8h_html_ab9eb65d3f0938343eac9418471bd0d9ca8999c470e63be2ac021fde7d612ef9b5"><div class="ttname"><a href="include_2lvgl_2draw_2lv__palette_8h.html#ab9eb65d3f0938343eac9418471bd0d9ca8999c470e63be2ac021fde7d612ef9b5">LV_PALETTE_RED</a></div><div class="ttdeci">@ LV_PALETTE_RED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__palette_8h_source.html#l00027">lv_palette.h:27</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a6e34268a0a7129745629c71f74e86265"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a></div><div class="ttdeci">struct _lv_display_t lv_display_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00119">lv_types.h:119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aef095d20cced64810944ca64aab7ca31"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a></div><div class="ttdeci">struct _lv_draw_buf_t lv_draw_buf_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00360">lv_types.h:360</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_a19767f394f06e2931b825411cdabedfc"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#a19767f394f06e2931b825411cdabedfc">lv_image_create</a></div><div class="ttdeci">lv_obj_t * lv_image_create(lv_obj_t *parent)</div><div class="ttdef"><b>Definition</b> <a href="lv__image_8c_source.html#l00136">lv_image.c:136</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_abd50066a66f6c4496c5d9149dbb67cfd"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#abd50066a66f6c4496c5d9149dbb67cfd">lv_image_set_src</a></div><div class="ttdeci">void lv_image_set_src(lv_obj_t *obj, const void *src)</div><div class="ttdef"><b>Definition</b> <a href="lv__image_8c_source.html#l00148">lv_image.c:148</a></div></div>
+<div class="ttc" id="anamespaceimage__viewer_html_a86d0d51ceb4bc3bd26707520f257a5a4"><div class="ttname"><a href="namespaceimage__viewer.html#a86d0d51ceb4bc3bd26707520f257a5a4">image_viewer.img</a></div><div class="ttdeci">img</div><div class="ttdef"><b>Definition</b> <a href="image__viewer_8py_source.html#l00019">image_viewer.py:19</a></div></div>
+<div class="ttc" id="anamespacejpg__to__sjpg_html_a511ae0b1c13f95e5f08f1a0dd3da3d93"><div class="ttname"><a href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">jpg_to_sjpg.data</a></div><div class="ttdeci">data</div><div class="ttdef"><b>Definition</b> <a href="jpg__to__sjpg_8py_source.html#l00096">jpg_to_sjpg.py:96</a></div></div>
+<div class="ttc" id="anamespacemicropy__test_1_1micropy_html_a680ed5d3fdf874dd4c8685cb51c3f1a6"><div class="ttname"><a href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">micropy_test.micropy.buf</a></div><div class="ttdeci">buf</div><div class="ttdef"><b>Definition</b> <a href="micropy_8py_source.html#l00019">micropy.py:19</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+<div class="ttc" id="astructlv__image__dsc__t_html"><div class="ttname"><a href="structlv__image__dsc__t.html">lv_image_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00143">lv_image_dsc.h:143</a></div></div>
+<div class="ttc" id="aunity_8h_html"><div class="ttname"><a href="unity_8h.html">unity.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_a2db2b5e922be370ef89e28f89eca8b6.html">src</a></li><li class="navelem"><a href="dir_0da03cef61f81ff608e9e8a57be45fcc.html">test_cases</a></li><li class="navelem"><a href="dir_247ca5e5fde0bc3fd34405ca634b5b05.html">draw</a></li><li class="navelem"><a href="test__image__recolor__xrgb8888_8c.html">test_image_recolor_xrgb8888.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

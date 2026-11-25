@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/include/lvgl/core/lv_obj_event.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('include_2lvgl_2core_2lv__obj__event_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_obj_event.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html">lv_event.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2lv__types_8h_source.html">../lv_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2indev_2lv__indev_8h_source.html">../indev/lv_indev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html">lv_obj_style.h</a>&quot;</code><br />
+</div>
+<p><a href="include_2lvgl_2core_2lv__obj__event_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ab574311d5f23b50737c863f8c6259a41" id="r_ab574311d5f23b50737c863f8c6259a41"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ab574311d5f23b50737c863f8c6259a41">lv_cover_res_t</a> { <a class="el" href="#ab574311d5f23b50737c863f8c6259a41a8e420e84dc7f1e5036469721270f7eb6">LV_COVER_RES_COVER</a> = 0
+, <a class="el" href="#ab574311d5f23b50737c863f8c6259a41abc6d14becf0d8485a91607fbb300e754">LV_COVER_RES_NOT_COVER</a> = 1
+, <a class="el" href="#ab574311d5f23b50737c863f8c6259a41a377d981a1d974fde8f3336971bc965c3">LV_COVER_RES_MASKED</a> = 2
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a13bd931332f561598a06b676f6552966" id="r_a13bd931332f561598a06b676f6552966"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a13bd931332f561598a06b676f6552966">lv_obj_send_event</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771">lv_event_code_t</a> event_code, void *param)</td></tr>
+<tr class="memitem:af60f5e31c608d60cfb1543219cb384a0" id="r_af60f5e31c608d60cfb1543219cb384a0"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af60f5e31c608d60cfb1543219cb384a0">lv_obj_event_base</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> *class_p, <a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a3221a063986ac95a00736fba6fd161d6" id="r_a3221a063986ac95a00736fba6fd161d6"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3221a063986ac95a00736fba6fd161d6">lv_event_get_current_target_obj</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a9836e4681e7edd9b9b48407b01cc76ad" id="r_a9836e4681e7edd9b9b48407b01cc76ad"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9836e4681e7edd9b9b48407b01cc76ad">lv_event_get_target_obj</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a13335793b24322d550c8faa8e3dda247" id="r_a13335793b24322d550c8faa8e3dda247"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a> event_cb, <a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771">lv_event_code_t</a> filter, void *user_data)</td></tr>
+<tr class="memitem:ae7513937354c28291645a0e1d674dafa" id="r_ae7513937354c28291645a0e1d674dafa"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae7513937354c28291645a0e1d674dafa">lv_obj_get_event_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a23ab8b5f84d8326eb30dd14639b352e6" id="r_a23ab8b5f84d8326eb30dd14639b352e6"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a23ab8b5f84d8326eb30dd14639b352e6">lv_obj_get_event_dsc</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> index)</td></tr>
+<tr class="memitem:a22908f98a2d51b1b86d60295a6d3f304" id="r_a22908f98a2d51b1b86d60295a6d3f304"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a22908f98a2d51b1b86d60295a6d3f304">lv_obj_remove_event</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> index)</td></tr>
+<tr class="memitem:ac345b287f0b8ee1df4e35dc2f80c964c" id="r_ac345b287f0b8ee1df4e35dc2f80c964c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac345b287f0b8ee1df4e35dc2f80c964c">lv_obj_remove_event_dsc</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a1ed67bd1529b8770c680d5cfcafcc08a" id="r_a1ed67bd1529b8770c680d5cfcafcc08a"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1ed67bd1529b8770c680d5cfcafcc08a">lv_obj_remove_event_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a> event_cb)</td></tr>
+<tr class="memitem:a7598dc8e86403cad1ded936e1a5b45ff" id="r_a7598dc8e86403cad1ded936e1a5b45ff"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7598dc8e86403cad1ded936e1a5b45ff">lv_obj_remove_event_cb_with_user_data</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a> event_cb, void *user_data)</td></tr>
+<tr class="memitem:a6d16f115cc8d248f35051330e795356d" id="r_a6d16f115cc8d248f35051330e795356d"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6d16f115cc8d248f35051330e795356d">lv_event_get_indev</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a0bc76acfc9b531293fc6a5480fbb697b" id="r_a0bc76acfc9b531293fc6a5480fbb697b"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0bc76acfc9b531293fc6a5480fbb697b">lv_event_get_layer</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a2565a7c2315d339714a6289ac6b650e9" id="r_a2565a7c2315d339714a6289ac6b650e9"><td class="memItemLeft">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2565a7c2315d339714a6289ac6b650e9">lv_event_get_old_size</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:aba1cc652c9b3b1d78a25932e89c81dce" id="r_aba1cc652c9b3b1d78a25932e89c81dce"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba1cc652c9b3b1d78a25932e89c81dce">lv_event_get_key</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a6d9e6435bcd0c82612e8eac2b9d7b43f" id="r_a6d9e6435bcd0c82612e8eac2b9d7b43f"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6d9e6435bcd0c82612e8eac2b9d7b43f">lv_event_get_rotary_diff</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a20a21d5fbd41d3e76f7114816f71e474" id="r_a20a21d5fbd41d3e76f7114816f71e474"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a94df93c022dc57ee917b4757e50ebe22">lv_anim_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a20a21d5fbd41d3e76f7114816f71e474">lv_event_get_scroll_anim</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a531a44ed40fed91e0048a745c8d549c1" id="r_a531a44ed40fed91e0048a745c8d549c1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a531a44ed40fed91e0048a745c8d549c1">lv_event_set_ext_draw_size</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> size)</td></tr>
+<tr class="memitem:a3b000e98c0ba320d1f8e72d5612029c5" id="r_a3b000e98c0ba320d1f8e72d5612029c5"><td class="memItemLeft"><a class="el" href="structlv__point__t.html">lv_point_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a3b000e98c0ba320d1f8e72d5612029c5">lv_event_get_self_size_info</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:abf3d45600f31aeecbdc5ef4728da245a" id="r_abf3d45600f31aeecbdc5ef4728da245a"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ad8007303eb3a55ddf0231fe53f683e99">lv_hit_test_info_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abf3d45600f31aeecbdc5ef4728da245a">lv_event_get_hit_test_info</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a7dd7fadb05f3f6a95aa9fca64cfeadf6" id="r_a7dd7fadb05f3f6a95aa9fca64cfeadf6"><td class="memItemLeft">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7dd7fadb05f3f6a95aa9fca64cfeadf6">lv_event_get_cover_area</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:a164f8baaeac9e3e2a77410de2175147c" id="r_a164f8baaeac9e3e2a77410de2175147c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a164f8baaeac9e3e2a77410de2175147c">lv_event_set_cover_res</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e, <a class="el" href="#ab574311d5f23b50737c863f8c6259a41">lv_cover_res_t</a> res)</td></tr>
+<tr class="memitem:a05d64da0f1a9fbcafa70fde9d7100a87" id="r_a05d64da0f1a9fbcafa70fde9d7100a87"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a05d64da0f1a9fbcafa70fde9d7100a87">lv_event_get_draw_task</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+<tr class="memitem:aa153ebf35d5fd8442e303d4d37bfbd8a" id="r_aa153ebf35d5fd8442e303d4d37bfbd8a"><td class="memItemLeft"><a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#a1a992070c236042354cd579c43c4f5e5">lv_state_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa153ebf35d5fd8442e303d4d37bfbd8a">lv_event_get_prev_state</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *e)</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="ab574311d5f23b50737c863f8c6259a41" name="ab574311d5f23b50737c863f8c6259a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab574311d5f23b50737c863f8c6259a41">&#9670;&#160;</a></span>lv_cover_res_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab574311d5f23b50737c863f8c6259a41">lv_cover_res_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cover check results. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ab574311d5f23b50737c863f8c6259a41a8e420e84dc7f1e5036469721270f7eb6" name="ab574311d5f23b50737c863f8c6259a41a8e420e84dc7f1e5036469721270f7eb6"></a>LV_COVER_RES_COVER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab574311d5f23b50737c863f8c6259a41abc6d14becf0d8485a91607fbb300e754" name="ab574311d5f23b50737c863f8c6259a41abc6d14becf0d8485a91607fbb300e754"></a>LV_COVER_RES_NOT_COVER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab574311d5f23b50737c863f8c6259a41a377d981a1d974fde8f3336971bc965c3" name="ab574311d5f23b50737c863f8c6259a41a377d981a1d974fde8f3336971bc965c3"></a>LV_COVER_RES_MASKED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2core_2lv__obj__event_8h_source.html#l00030">30</a> del archivo <a class="el" href="include_2lvgl_2core_2lv__obj__event_8h_source.html">lv_obj_event.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a7dd7fadb05f3f6a95aa9fca64cfeadf6" name="a7dd7fadb05f3f6a95aa9fca64cfeadf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd7fadb05f3f6a95aa9fca64cfeadf6">&#9670;&#160;</a></span>lv_event_get_cover_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlv__area__t.html">lv_area_t</a> * lv_event_get_cover_area </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a pointer to an area which should be examined whether the object fully covers it or not. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771ac8d8b62da30cda383ee339236a9744f0">LV_EVENT_HIT_TEST</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>an area with absolute coordinates to check </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00307">307</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__event__private_8h_source.html#l00046">_lv_cover_check_info_t::area</a>, <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00069">LV_EVENT_COVER_CHECK</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a3221a063986ac95a00736fba6fd161d6" name="a3221a063986ac95a00736fba6fd161d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3221a063986ac95a00736fba6fd161d6">&#9670;&#160;</a></span>lv_event_get_current_target_obj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_event_get_current_target_obj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current target of the event. It's the object which event handler being called. If the event is not bubbled it's the same as "original" target. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to the event descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the target of the event_code </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00190">190</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00275">lv_event_get_current_target()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a05d64da0f1a9fbcafa70fde9d7100a87" name="a05d64da0f1a9fbcafa70fde9d7100a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d64da0f1a9fbcafa70fde9d7100a87">&#9670;&#160;</a></span>lv_event_get_draw_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * lv_event_get_draw_task </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the draw task which was just added. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a04f3236e4a0344f14b11a89fa4a3abc2">LV_EVENT_DRAW_TASK_ADDED</a> event</span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the added draw task </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00327">327</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00077">LV_EVENT_DRAW_TASK_ADDED</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="abf3d45600f31aeecbdc5ef4728da245a" name="abf3d45600f31aeecbdc5ef4728da245a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf3d45600f31aeecbdc5ef4728da245a">&#9670;&#160;</a></span>lv_event_get_hit_test_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ad8007303eb3a55ddf0231fe53f683e99">lv_hit_test_info_t</a> * lv_event_get_hit_test_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a pointer to an <span class="tt"><a class="el" href="include_2lvgl_2lv__types_8h.html#ad8007303eb3a55ddf0231fe53f683e99">lv_hit_test_info_t</a></span> variable in which the hit test result should be saved. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771ac8d8b62da30cda383ee339236a9744f0">LV_EVENT_HIT_TEST</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to <span class="tt"><a class="el" href="include_2lvgl_2lv__types_8h.html#ad8007303eb3a55ddf0231fe53f683e99">lv_hit_test_info_t</a></span> or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00298">298</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00063">LV_EVENT_HIT_TEST</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a6d16f115cc8d248f35051330e795356d" name="a6d16f115cc8d248f35051330e795356d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d16f115cc8d248f35051330e795356d">&#9670;&#160;</a></span>lv_event_get_indev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * lv_event_get_indev </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the input device passed as parameter to indev related events. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the indev that triggered the event or NULL if called on a not indev related event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00202">202</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00047">LV_EVENT_CLICKED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00061">LV_EVENT_DEFOCUSED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00060">LV_EVENT_FOCUSED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00053">LV_EVENT_GESTURE</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00055">LV_EVENT_GESTURE_DOWN</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00056">LV_EVENT_GESTURE_LEFT</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00057">LV_EVENT_GESTURE_RIGHT</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00054">LV_EVENT_GESTURE_UP</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00066">LV_EVENT_HOVER_LEAVE</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00065">LV_EVENT_HOVER_OVER</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00058">LV_EVENT_KEY</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00062">LV_EVENT_LEAVE</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00045">LV_EVENT_LONG_PRESSED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00046">LV_EVENT_LONG_PRESSED_REPEAT</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00040">LV_EVENT_PRESS_LOST</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00038">LV_EVENT_PRESSED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00039">LV_EVENT_PRESSING</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00048">LV_EVENT_RELEASED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00052">LV_EVENT_SCROLL</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00049">LV_EVENT_SCROLL_BEGIN</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00051">LV_EVENT_SCROLL_END</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00041">LV_EVENT_SHORT_CLICKED</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="aba1cc652c9b3b1d78a25932e89c81dce" name="aba1cc652c9b3b1d78a25932e89c81dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba1cc652c9b3b1d78a25932e89c81dce">&#9670;&#160;</a></span>lv_event_get_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_event_get_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the key passed as parameter to an event. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a26e32d4cfa8793473e2050455ad157eb">LV_EVENT_KEY</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the triggering key or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00250">250</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00058">LV_EVENT_KEY</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a0bc76acfc9b531293fc6a5480fbb697b" name="a0bc76acfc9b531293fc6a5480fbb697b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc76acfc9b531293fc6a5480fbb697b">&#9670;&#160;</a></span>lv_event_get_layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * lv_event_get_layer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the draw context which should be the first parameter of the draw functions. Namely: <span class="tt">LV_EVENT_DRAW_MAIN/POST</span>, <span class="tt">LV_EVENT_DRAW_MAIN/POST_BEGIN</span>, <span class="tt">LV_EVENT_DRAW_MAIN/POST_END</span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to a draw context or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00225">225</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00072">LV_EVENT_DRAW_MAIN</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00071">LV_EVENT_DRAW_MAIN_BEGIN</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00073">LV_EVENT_DRAW_MAIN_END</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00075">LV_EVENT_DRAW_POST</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00074">LV_EVENT_DRAW_POST_BEGIN</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00076">LV_EVENT_DRAW_POST_END</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a2565a7c2315d339714a6289ac6b650e9" name="a2565a7c2315d339714a6289ac6b650e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2565a7c2315d339714a6289ac6b650e9">&#9670;&#160;</a></span>lv_event_get_old_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structlv__area__t.html">lv_area_t</a> * lv_event_get_old_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the old area of the object before its size was changed. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a03d23f5f80feee2e3c8069efa2b01278">LV_EVENT_SIZE_CHANGED</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the old absolute area of the object or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00241">241</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00099">LV_EVENT_SIZE_CHANGED</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="aa153ebf35d5fd8442e303d4d37bfbd8a" name="aa153ebf35d5fd8442e303d4d37bfbd8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa153ebf35d5fd8442e303d4d37bfbd8a">&#9670;&#160;</a></span>lv_event_get_prev_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#a1a992070c236042354cd579c43c4f5e5">lv_state_t</a> lv_event_get_prev_state </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the previous state before the state change. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771ae38023f659995573178f235fb162d2ee">LV_EVENT_STATE_CHANGED</a></span> event </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the previous state </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00336">336</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00085">LV_EVENT_STATE_CHANGED</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+<a id="a6d9e6435bcd0c82612e8eac2b9d7b43f" name="a6d9e6435bcd0c82612e8eac2b9d7b43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9e6435bcd0c82612e8eac2b9d7b43f">&#9670;&#160;</a></span>lv_event_get_rotary_diff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_event_get_rotary_diff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the signed rotary encoder diff. passed as parameter to an event. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771ae83b4059740a73b4cb2ac1fe11ca4e7b">LV_EVENT_ROTARY</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the triggering key or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00260">260</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00059">LV_EVENT_ROTARY</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a20a21d5fbd41d3e76f7114816f71e474" name="a20a21d5fbd41d3e76f7114816f71e474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a21d5fbd41d3e76f7114816f71e474">&#9670;&#160;</a></span>lv_event_get_scroll_anim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a94df93c022dc57ee917b4757e50ebe22">lv_anim_t</a> * lv_event_get_scroll_anim </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the animation descriptor of a scrolling. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a75436c74b3a1b914bd216280c1a08039">LV_EVENT_SCROLL_BEGIN</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the animation that will scroll the object. (can be modified as required) </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00270">270</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00049">LV_EVENT_SCROLL_BEGIN</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a3b000e98c0ba320d1f8e72d5612029c5" name="a3b000e98c0ba320d1f8e72d5612029c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b000e98c0ba320d1f8e72d5612029c5">&#9670;&#160;</a></span>lv_event_get_self_size_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__point__t.html">lv_point_t</a> * lv_event_get_self_size_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a pointer to an <span class="tt"><a class="el" href="structlv__point__t.html">lv_point_t</a></span> variable in which the self size should be saved (width in <span class="tt">point-&gt;x</span> and height <span class="tt">point-&gt;y</span>). Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a4c5c66de5c2cf0e6be8f55f072e9e664">LV_EVENT_GET_SELF_SIZE</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to <span class="tt"><a class="el" href="structlv__point__t.html">lv_point_t</a></span> or NULL if called on an unrelated event </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00289">289</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00102">LV_EVENT_GET_SELF_SIZE</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a9836e4681e7edd9b9b48407b01cc76ad" name="a9836e4681e7edd9b9b48407b01cc76ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9836e4681e7edd9b9b48407b01cc76ad">&#9670;&#160;</a></span>lv_event_get_target_obj()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_event_get_target_obj </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the object originally targeted by the event. It's the same even if the event is bubbled. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to the event descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the original target of the event_code </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00196">196</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00281">lv_event_get_target()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a164f8baaeac9e3e2a77410de2175147c" name="a164f8baaeac9e3e2a77410de2175147c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164f8baaeac9e3e2a77410de2175147c">&#9670;&#160;</a></span>lv_event_set_cover_res()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_event_set_cover_res </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab574311d5f23b50737c863f8c6259a41">lv_cover_res_t</a></td>          <td class="paramname"><span class="paramname"><em>res</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the result of cover checking. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a59dba93643f8aea4bb1517e26198d48f">LV_EVENT_COVER_CHECK</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+    <tr><td class="paramname">res</td><td>an element of <a class="el" href="include_2lvgl_2lv__types_8h.html#ab8e37d9debdeaaf39cefacfa89b87f7c">lv_cover_check_info_t</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00317">317</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00069">LV_EVENT_COVER_CHECK</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__event__private_8h_source.html#l00045">_lv_cover_check_info_t::res</a>.</p>
+
+</div>
+</div>
+<a id="a531a44ed40fed91e0048a745c8d549c1" name="a531a44ed40fed91e0048a745c8d549c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a531a44ed40fed91e0048a745c8d549c1">&#9670;&#160;</a></span>lv_event_set_ext_draw_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_event_set_ext_draw_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the new extra draw size. Can be used in <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a2b71f7dae4b8c429981b4496f7710d9a">LV_EVENT_REFR_EXT_DRAW_SIZE</a></span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>pointer to an event </td></tr>
+    <tr><td class="paramname">size</td><td>The new extra draw size </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00279">279</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__event_8c_source.html#l00293">lv_event_get_param()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00070">LV_EVENT_REFR_EXT_DRAW_SIZE</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00156">LV_MAX</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00037">LV_PRId32</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a13335793b24322d550c8faa8e3dda247" name="a13335793b24322d550c8faa8e3dda247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13335793b24322d550c8faa8e3dda247">&#9670;&#160;</a></span>lv_obj_add_event_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> * lv_obj_add_event_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>event_cb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771">lv_event_code_t</a></td>          <td class="paramname"><span class="paramname"><em>filter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an event handler function for an object. Used by the user to react on event which happens with the object. An object can have multiple event handler. They will be called in the same order as they were added. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to an object </td></tr>
+    <tr><td class="paramname">filter</td><td>an event code (e.g. <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771aa02bc86fc8e7a7edab3634a816c19ab6">LV_EVENT_CLICKED</a></span>) on which the event should be called. <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a1abba2082b450de63c0052c342a4d66a">LV_EVENT_ALL</a></span> can be used to receive all the events. </td></tr>
+    <tr><td class="paramname">event_cb</td><td>the new event function </td></tr>
+    <tr><td class="paramname">user_data</td><td>custom data will be available in <span class="tt">event_cb</span> @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>handler to the event. It can be used in <span class="tt"><a class="el" href="#ac345b287f0b8ee1df4e35dc2f80c964c">lv_obj_remove_event_dsc</a></span>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00106">106</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__private_8h_source.html#l00038">_lv_obj_spec_attr_t::event_list</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__event_8c_source.html#l00154">lv_event_add()</a>, <a class="el" href="lv__obj_8c_source.html#l01251">lv_obj_allocate_spec_attr()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__private_8h_source.html#l00064">_lv_obj_t::spec_attr</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__arc_8c_source.html#l00470">lv_arc_bind_value()</a>, <a class="el" href="lv__dropdown_8c_source.html#l00720">lv_dropdown_bind_value()</a>, <a class="el" href="lv__example__anim__1_8c_source.html#l00047">lv_example_anim_1()</a>, <a class="el" href="lv__example__anim__4_8c_source.html#l00056">lv_example_anim_4()</a>, <a class="el" href="lv__example__anim__timeline__1_8c_source.html#l00060">lv_example_anim_timeline_1()</a>, <a class="el" href="lv__example__arc__event_8c_source.html#l00025">lv_example_arc_event()</a>, <a class="el" href="lv__example__arc__knob__widget_8c_source.html#l00028">lv_example_arc_knob_widget()</a>, <a class="el" href="lv__example__button__event_8c_source.html#l00024">lv_example_button_event()</a>, <a class="el" href="lv__example__buttonmatrix__event_8c_source.html#l00024">lv_example_buttonmatrix_event()</a>, <a class="el" href="lv__example__calendar__highlighted__days_8c_source.html#l00030">lv_example_calendar_highlighted_days()</a>, <a class="el" href="lv__example__chart__area__gradient_8c_source.html#l00023">lv_example_chart_area_gradient()</a>, <a class="el" href="lv__example__chart__pressed__tooltip_8c_source.html#l00087">lv_example_chart_pressed_tooltip()</a>, <a class="el" href="lv__example__chart__recolor__bars_8c_source.html#l00035">lv_example_chart_recolor_bars()</a>, <a class="el" href="lv__example__chart__scatter_8c_source.html#l00053">lv_example_chart_scatter()</a>, <a class="el" href="lv__example__checkbox__event_8c_source.html#l00023">lv_example_checkbox_event()</a>, <a class="el" href="lv__example__dropdown__event_8c_source.html#l00024">lv_example_dropdown_event()</a>, <a class="el" href="lv__example__event__bubble_8c_source.html#l00029">lv_example_event_bubble()</a>, <a class="el" href="lv__example__event__button_8c_source.html#l00037">lv_example_event_button()</a>, <a class="el" href="lv__example__event__click_8c_source.html#l00023">lv_example_event_click()</a>, <a class="el" href="lv__example__event__draw_8c_source.html#l00058">lv_example_event_draw()</a>, <a class="el" href="lv__example__event__streak_8c_source.html#l00031">lv_example_event_streak()</a>, <a class="el" href="lv__example__flex__list_8c_source.html#l00159">lv_example_flex_list()</a>, <a class="el" href="lv__example__flex__win_8c_source.html#l00142">lv_example_flex_win()</a>, <a class="el" href="lv__example__get__started__button_8c_source.html#l00027">lv_example_get_started_button()</a>, <a class="el" href="lv__example__grad__1_8c_source.html#l00075">lv_example_grad_1()</a>, <a class="el" href="lv__example__keyboard__custom__draw_8c_source.html#l00064">lv_example_keyboard_custom_draw()</a>, <a class="el" href="lv__example__list__reorder_8c_source.html#l00126">lv_example_list_reorder()</a>, <a class="el" href="lv__example__list__sections_8c_source.html#l00029">lv_example_list_sections()</a>, <a class="el" href="lv__example__menu__floating__button_8c_source.html#l00049">lv_example_menu_floating_button()</a>, <a class="el" href="lv__example__menu__root__back__button_8c_source.html#l00035">lv_example_menu_root_back_button()</a>, <a class="el" href="lv__example__menu__sidebar_8c_source.html#l00039">lv_example_menu_sidebar()</a>, <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a>, <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a>, <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a>, <a class="el" href="lv__example__obj__draggable_8c_source.html#l00029">lv_example_obj_draggable()</a>, <a class="el" href="lv__example__observer__5_8c_source.html#l00038">lv_example_observer_5()</a>, <a class="el" href="lv__example__osal_8c_source.html#l00054">lv_example_osal()</a>, <a class="el" href="lv__example__roller__event_8c_source.html#l00023">lv_example_roller_event()</a>, <a class="el" href="lv__example__scale__compass_8c_source.html#l00066">lv_example_scale_compass()</a>, <a class="el" href="lv__example__scale__label__recolor_8c_source.html#l00061">lv_example_scale_label_recolor()</a>, <a class="el" href="lv__example__scroll__events_8c_source.html#l00027">lv_example_scroll_events()</a>, <a class="el" href="lv__example__scroll__infinite_8c_source.html#l00080">lv_example_scroll_infinite()</a>, <a class="el" href="lv__example__scroll__translate_8c_source.html#l00052">lv_example_scroll_translate()</a>, <a class="el" href="lv__example__slider__event_8c_source.html#l00031">lv_example_slider_event()</a>, <a class="el" href="lv__example__span__hittest_8c_source.html#l00025">lv_example_span_hittest()</a>, <a class="el" href="lv__example__spinbox__with__buttons_8c_source.html#l00033">lv_example_spinbox_with_buttons()</a>, <a class="el" href="lv__example__split_8c_source.html#l00046">lv_example_split()</a>, <a class="el" href="lv__example__split__vertical_8c_source.html#l00045">lv_example_split_vertical()</a>, <a class="el" href="lv__example__style__transform__card_8c_source.html#l00063">lv_example_style_transform_card()</a>, <a class="el" href="lv__example__switch__event_8c_source.html#l00022">lv_example_switch_event()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__example__textarea__buttonmatrix_8c_source.html#l00034">lv_example_textarea_buttonmatrix()</a>, <a class="el" href="lv__example__textarea__format_8c_source.html#l00019">lv_example_textarea_format()</a>, <a class="el" href="lv__example__win__toolbar_8c_source.html#l00029">lv_example_win_toolbar()</a>, <a class="el" href="lv__menu_8c_source.html#l00400">lv_menu_set_load_page_event()</a>, <a class="el" href="lv__menu_8c_source.html#l00309">lv_menu_set_sidebar_page()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00254">lv_msgbox_add_close_button()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00104">lv_msgbox_create()</a>, <a class="el" href="lv__obj_8c_source.html#l01438">lv_obj_add_delete_cb()</a>, <a class="el" href="lv__obj_8c_source.html#l01386">lv_obj_add_play_timeline_event()</a>, <a class="el" href="lv__obj_8c_source.html#l01368">lv_obj_add_screen_create_event()</a>, <a class="el" href="lv__obj_8c_source.html#l01350">lv_obj_add_screen_load_event()</a>, <a class="el" href="lv__observer_8c_source.html#l00650">lv_obj_add_subject_increment_event()</a>, <a class="el" href="lv__observer_8c_source.html#l00735">lv_obj_add_subject_set_int_event()</a>, <a class="el" href="lv__observer_8c_source.html#l00777">lv_obj_add_subject_set_string_event()</a>, <a class="el" href="lv__observer_8c_source.html#l00726">lv_obj_add_subject_toggle_event()</a>, <a class="el" href="lv__observer_8c_source.html#l01066">lv_obj_bind_checked()</a>, <a class="el" href="lv__obj_8c_source.html#l01325">lv_obj_null_on_delete()</a>, <a class="el" href="lv__obj__draw_8c_source.html#l00370">lv_obj_set_ext_draw_size()</a>, <a class="el" href="lv__roller_8c_source.html#l00298">lv_roller_bind_value()</a>, <a class="el" href="lv__scale_8c_source.html#l00284">lv_scale_set_line_needle_value()</a>, <a class="el" href="lv__slider_8c_source.html#l00244">lv_slider_bind_value()</a>, <a class="el" href="lv__spinbox_8c_source.html#l00409">lv_spinbox_bind_value()</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a> y <a class="el" href="lv__tabview_8c_source.html#l00093">lv_tabview_add_tab()</a>.</p>
+
+</div>
+</div>
+<a id="af60f5e31c608d60cfb1543219cb384a0" name="af60f5e31c608d60cfb1543219cb384a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af60f5e31c608d60cfb1543219cb384a0">&#9670;&#160;</a></span>lv_obj_event_base()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_obj_event_base </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> *</td>          <td class="paramname"><span class="paramname"><em>class_p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> *</td>          <td class="paramname"><span class="paramname"><em>e</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Used by the widgets internally to call the ancestor widget types's event handler </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">class_p</td><td>pointer to the class of the widget (NOT the ancestor class). @nullable When NULL the current target's own class is used. </td></tr>
+    <tr><td class="paramname">e</td><td>pointer to the event descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: the target object was not deleted in the event; LV_RESULT_INVALID: it was deleted in the event_code </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00078">78</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__class__private_8h_source.html#l00032">_lv_obj_class_t::base_class</a>, <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="lv__event__private_8h_source.html#l00038">_lv_event_t::current_target</a>, <a class="el" href="lv__event__private_8h_source.html#l00044">_lv_event_t::deleted</a>, <a class="el" href="lv__obj__class__private_8h_source.html#l00038">_lv_obj_class_t::event_cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00351">lv_event_code_get_name()</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00184">LV_PROFILER_EVENT_BEGIN_TAG</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00185">LV_PROFILER_EVENT_END_TAG</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__event__private_8h_source.html#l00041">_lv_event_t::user_data</a>.</p>
+
+</div>
+</div>
+<a id="ae7513937354c28291645a0e1d674dafa" name="ae7513937354c28291645a0e1d674dafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7513937354c28291645a0e1d674dafa">&#9670;&#160;</a></span>lv_obj_get_event_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_obj_get_event_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00118">118</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__private_8h_source.html#l00038">_lv_obj_spec_attr_t::event_list</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00215">lv_event_get_count()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__private_8h_source.html#l00064">_lv_obj_t::spec_attr</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__menu_8c_source.html#l00400">lv_menu_set_load_page_event()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00148">lv_obj_remove_event_cb()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00169">lv_obj_remove_event_cb_with_user_data()</a> y <a class="el" href="lv__scale_8c_source.html#l00284">lv_scale_set_line_needle_value()</a>.</p>
+
+</div>
+</div>
+<a id="a23ab8b5f84d8326eb30dd14639b352e6" name="a23ab8b5f84d8326eb30dd14639b352e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ab8b5f84d8326eb30dd14639b352e6">&#9670;&#160;</a></span>lv_obj_get_event_dsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> * lv_obj_get_event_dsc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00125">125</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__private_8h_source.html#l00038">_lv_obj_spec_attr_t::event_list</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00221">lv_event_get_dsc()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__private_8h_source.html#l00064">_lv_obj_t::spec_attr</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__menu_8c_source.html#l00400">lv_menu_set_load_page_event()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00148">lv_obj_remove_event_cb()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00169">lv_obj_remove_event_cb_with_user_data()</a>, <a class="el" href="lv__observer_8c_source.html#l00591">lv_obj_remove_from_subject()</a> y <a class="el" href="lv__scale_8c_source.html#l00284">lv_scale_set_line_needle_value()</a>.</p>
+
+</div>
+</div>
+<a id="a22908f98a2d51b1b86d60295a6d3f304" name="a22908f98a2d51b1b86d60295a6d3f304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22908f98a2d51b1b86d60295a6d3f304">&#9670;&#160;</a></span>lv_obj_remove_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_obj_remove_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00132">132</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__private_8h_source.html#l00038">_lv_obj_spec_attr_t::event_list</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00241">lv_event_remove()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__private_8h_source.html#l00064">_lv_obj_t::spec_attr</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__menu_8c_source.html#l00400">lv_menu_set_load_page_event()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00148">lv_obj_remove_event_cb()</a> y <a class="el" href="lv__obj__event_8c_source.html#l00169">lv_obj_remove_event_cb_with_user_data()</a>.</p>
+
+</div>
+</div>
+<a id="a1ed67bd1529b8770c680d5cfcafcc08a" name="a1ed67bd1529b8770c680d5cfcafcc08a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed67bd1529b8770c680d5cfcafcc08a">&#9670;&#160;</a></span>lv_obj_remove_event_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_obj_remove_event_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>event_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove an event_cb from an object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a obj </td></tr>
+    <tr><td class="paramname">event_cb</td><td>the event_cb of the event to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the count of the event removed </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00148">148</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00032">_lv_event_dsc_t::cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__obj__event_8c_source.html#l00118">lv_obj_get_event_count()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00125">lv_obj_get_event_dsc()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00132">lv_obj_remove_event()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__obj__draw_8c_source.html#l00370">lv_obj_set_ext_draw_size()</a>.</p>
+
+</div>
+</div>
+<a id="a7598dc8e86403cad1ded936e1a5b45ff" name="a7598dc8e86403cad1ded936e1a5b45ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7598dc8e86403cad1ded936e1a5b45ff">&#9670;&#160;</a></span>lv_obj_remove_event_cb_with_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_obj_remove_event_cb_with_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a1d7efbeaef5477ecbcf4d6e799694338">lv_event_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>event_cb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Remove an event_cb with user_data </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a obj </td></tr>
+    <tr><td class="paramname">event_cb</td><td>the event_cb of the event to remove </td></tr>
+    <tr><td class="paramname">user_data</td><td>user_data @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the count of the event removed </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00169">169</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00032">_lv_event_dsc_t::cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__obj__event_8c_source.html#l00118">lv_obj_get_event_count()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00125">lv_obj_get_event_dsc()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00132">lv_obj_remove_event()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__event__private_8h_source.html#l00033">_lv_event_dsc_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__obj_8c_source.html#l01459">lv_obj_remove_delete_cb()</a>, <a class="el" href="lv__observer_8c_source.html#l00591">lv_obj_remove_from_subject()</a> y <a class="el" href="lv__observer_8c_source.html#l00572">lv_observer_delete()</a>.</p>
+
+</div>
+</div>
+<a id="ac345b287f0b8ee1df4e35dc2f80c964c" name="ac345b287f0b8ee1df4e35dc2f80c964c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac345b287f0b8ee1df4e35dc2f80c964c">&#9670;&#160;</a></span>lv_obj_remove_event_dsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_obj_remove_event_dsc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#ab42bca9bdf429577209b23c0fb53d6b7">lv_event_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00139">139</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__obj__private_8h_source.html#l00038">_lv_obj_spec_attr_t::event_list</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__event_8c_source.html#l00191">lv_event_remove_dsc()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__obj__private_8h_source.html#l00064">_lv_obj_t::spec_attr</a>.</p>
+
+</div>
+</div>
+<a id="a13bd931332f561598a06b676f6552966" name="a13bd931332f561598a06b676f6552966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bd931332f561598a06b676f6552966">&#9670;&#160;</a></span>lv_obj_send_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_obj_send_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771">lv_event_code_t</a></td>          <td class="paramname"><span class="paramname"><em>event_code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Send an event to the object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to an object </td></tr>
+    <tr><td class="paramname">event_code</td><td>the type of the event from <span class="tt"><a class="el" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a></span> </td></tr>
+    <tr><td class="paramname">param</td><td>arbitrary data depending on the widget type and the event. @nullable (Usually NULL) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: <span class="tt">obj</span> was not deleted in the event; LV_RESULT_INVALID: <span class="tt">obj</span> was deleted in the event_code </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__obj__event_8c_source.html#l00052">52</a> del archivo <a class="el" href="lv__obj__event_8c_source.html">lv_obj_event.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__event__private_8h_source.html#l00040">_lv_event_t::code</a>, <a class="el" href="lv__event__private_8h_source.html#l00038">_lv_event_t::current_target</a>, <a class="el" href="lv__event__private_8h_source.html#l00044">_lv_event_t::deleted</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__event_8c_source.html#l00074">lv_event_pop()</a>, <a class="el" href="lv__event_8c_source.html#l00064">lv_event_push()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__event__private_8h_source.html#l00039">_lv_event_t::original_target</a>, <a class="el" href="lv__event__private_8h_source.html#l00042">_lv_event_t::param</a>, <a class="el" href="lv__event__private_8h_source.html#l00046">_lv_event_t::stop_bubbling</a>, <a class="el" href="lv__event__private_8h_source.html#l00045">_lv_event_t::stop_processing</a>, <a class="el" href="lv__event__private_8h_source.html#l00047">_lv_event_t::stop_trickling</a> y <a class="el" href="lv__event__private_8h_source.html#l00041">_lv_event_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>, <a class="el" href="lv__draw_8c_source.html#l00129">lv_draw_finalize_task_creation()</a>, <a class="el" href="lv__draw__mask_8c_source.html#l00051">lv_draw_mask_rect()</a>, <a class="el" href="lv__dropdown_8c_source.html#l00697">lv_dropdown_close()</a>, <a class="el" href="lv__dropdown_8c_source.html#l00595">lv_dropdown_open()</a>, <a class="el" href="lv__example__arc__knob__widget_8c_source.html#l00028">lv_example_arc_knob_widget()</a>, <a class="el" href="lv__example__menu__sidebar_8c_source.html#l00039">lv_example_menu_sidebar()</a>, <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a>, <a class="el" href="lv__example__scroll__translate_8c_source.html#l00052">lv_example_scroll_translate()</a>, <a class="el" href="lv__group_8c_source.html#l00077">lv_group_delete()</a>, <a class="el" href="lv__group_8c_source.html#l00240">lv_group_focus_obj()</a>, <a class="el" href="lv__group_8c_source.html#l00220">lv_group_remove_all_objs()</a>, <a class="el" href="lv__group_8c_source.html#l00181">lv_group_remove_obj()</a>, <a class="el" href="lv__group_8c_source.html#l00303">lv_group_send_data()</a>, <a class="el" href="lv__group_8c_source.html#l00329">lv_group_set_editing()</a>, <a class="el" href="lv__indev__scroll_8c_source.html#l00048">lv_indev_scroll_handler()</a>, <a class="el" href="lv__indev__scroll_8c_source.html#l00125">lv_indev_scroll_throw_handler()</a>, <a class="el" href="lv__keyboard_8c_source.html#l00326">lv_keyboard_def_event_cb()</a>, <a class="el" href="lv__menu_8c_source.html#l00228">lv_menu_set_page()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00091">lv_obj_clean()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00054">lv_obj_delete()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00654">lv_obj_get_self_height()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00645">lv_obj_get_self_width()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01231">lv_obj_hit_test()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00891">lv_obj_move_to()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00192">lv_obj_move_to_index()</a>, <a class="el" href="lv__refr_8c_source.html#l00105">lv_obj_redraw()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00119">lv_obj_refr_size()</a>, <a class="el" href="lv__obj__draw_8c_source.html#l00425">lv_obj_refresh_ext_draw_size()</a>, <a class="el" href="lv__obj__style_8c_source.html#l00271">lv_obj_refresh_style()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00343">lv_obj_scroll_by()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00462">lv_obj_scroll_by_raw()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00149">lv_obj_set_parent()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00241">lv_obj_swap()</a>, <a class="el" href="lv__refr_8c_source.html#l00470">lv_refr_get_top_obj()</a>, <a class="el" href="lv__display_8c_source.html#l00879">lv_screen_load_anim()</a>, <a class="el" href="lv__table_8c_source.html#l00404">lv_table_set_selected_cell()</a>, <a class="el" href="lv__textarea_8c_source.html#l00183">lv_textarea_add_char()</a>, <a class="el" href="lv__textarea_8c_source.html#l00194">lv_textarea_add_text()</a>, <a class="el" href="lv__textarea_8c_source.html#l00243">lv_textarea_delete_char()</a> y <a class="el" href="lv__textarea_8c_source.html#l00301">lv_textarea_set_text()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_9217fd4f896c7dabfd10ab01c3bac1ef.html">include</a></li><li class="navelem"><a href="dir_f3987adca4f4e4d8dfc0669d06d0d161.html">lvgl</a></li><li class="navelem"><a href="dir_d75b0167c9a9a3b7bd213d4d790c834f.html">core</a></li><li class="navelem"><a href="include_2lvgl_2core_2lv__obj__event_8h.html">lv_obj_event.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

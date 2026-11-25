@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/examples/widgets/msgbox/lv_example_msgbox_modal.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__example__msgbox__modal_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_example_msgbox_modal.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__example__msgbox__modal_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="lv__examples_8h.html">../../lv_examples.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#if LV_USE_MSGBOX &amp;&amp; LV_BUILD_EXAMPLES</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">static</span> <span class="keywordtype">void</span> event_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> * e)</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * btn = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a9836e4681e7edd9b9b48407b01cc76ad">lv_event_get_target_obj</a>(e);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * label = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__tree_8h.html#a3e24ca3582751e4755957221ea5fdca5">lv_obj_get_child</a>(btn, 0);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(label);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a>(<span class="stringliteral">&quot;Button %s clicked&quot;</span>, <a class="code hl_function" href="include_2lvgl_2widgets_2lv__label_8h.html#a873d6a5794146bfe75ad1a992b43b167">lv_label_get_text</a>(label));</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="lv__example__msgbox_8h.html#afcf09b1f457f3fc17e67ba0c0c26045b">   24</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__example__msgbox__modal_8c.html#afcf09b1f457f3fc17e67ba0c0c26045b">lv_example_msgbox_modal</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * mbox1 = <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a4760cf6b1e589282355e61ae73520d3f">lv_msgbox_create</a>(<a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a336ef244fe64b8c30c8b96f35cb80fe2">lv_msgbox_add_title</a>(mbox1, <span class="stringliteral">&quot;Hello&quot;</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#aa492235d31b15c9c3588c9d4f6b209a2">lv_msgbox_add_text</a>(mbox1, <span class="stringliteral">&quot;This is a message box with two buttons.&quot;</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#ac76d126418665aaf82a675e2fc52f9e3">lv_msgbox_add_close_button</a>(mbox1);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * btn;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    btn = <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a9895b7f3ac046fc0970d3688b8960cbf">lv_msgbox_add_footer_button</a>(mbox1, <span class="stringliteral">&quot;Apply&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(btn, event_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771aa02bc86fc8e7a7edab3634a816c19ab6">LV_EVENT_CLICKED</a>, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    btn = <a class="code hl_function" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a9895b7f3ac046fc0970d3688b8960cbf">lv_msgbox_add_footer_button</a>(mbox1, <span class="stringliteral">&quot;Cancel&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(btn, event_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771aa02bc86fc8e7a7edab3634a816c19ab6">LV_EVENT_CLICKED</a>, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_a34581e6a5056b169f0a229f3e51c7771aa02bc86fc8e7a7edab3634a816c19ab6"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771aa02bc86fc8e7a7edab3634a816c19ab6">LV_EVENT_CLICKED</a></div><div class="ttdeci">@ LV_EVENT_CLICKED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__event_8h_source.html#l00047">lv_event.h:47</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__event_8h_html_a13335793b24322d550c8faa8e3dda247"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a></div><div class="ttdeci">lv_event_dsc_t * lv_obj_add_event_cb(lv_obj_t *obj, lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__event_8c_source.html#l00106">lv_obj_event.c:106</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__event_8h_html_a9836e4681e7edd9b9b48407b01cc76ad"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__event_8h.html#a9836e4681e7edd9b9b48407b01cc76ad">lv_event_get_target_obj</a></div><div class="ttdeci">lv_obj_t * lv_event_get_target_obj(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__event_8c_source.html#l00196">lv_obj_event.c:196</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__tree_8h_html_a3e24ca3582751e4755957221ea5fdca5"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__tree_8h.html#a3e24ca3582751e4755957221ea5fdca5">lv_obj_get_child</a></div><div class="ttdeci">lv_obj_t * lv_obj_get_child(const lv_obj_t *obj, int32_t idx)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__tree_8c_source.html#l00318">lv_obj_tree.c:318</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_a619d6a9db17a9c1edb492ab026815696"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#a619d6a9db17a9c1edb492ab026815696">LV_LOG_USER</a></div><div class="ttdeci">#define LV_LOG_USER(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00166">lv_log.h:166</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a21b130dbe9349eab447cf0c891517272"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a></div><div class="ttdeci">struct _lv_event_t lv_event_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00127">lv_types.h:127</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ad07f3715eae2cfee3d5e0000edb150d7"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a></div><div class="ttdeci">#define LV_UNUSED(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00405">lv_types.h:405</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__label_8h_html_a873d6a5794146bfe75ad1a992b43b167"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__label_8h.html#a873d6a5794146bfe75ad1a992b43b167">lv_label_get_text</a></div><div class="ttdeci">char * lv_label_get_text(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__label_8c_source.html#l00290">lv_label.c:290</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__msgbox_8h_html_a336ef244fe64b8c30c8b96f35cb80fe2"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a336ef244fe64b8c30c8b96f35cb80fe2">lv_msgbox_add_title</a></div><div class="ttdeci">lv_obj_t * lv_msgbox_add_title(lv_obj_t *obj, const char *title)</div><div class="ttdef"><b>Definition</b> <a href="lv__msgbox_8c_source.html#l00140">lv_msgbox.c:140</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__msgbox_8h_html_a4760cf6b1e589282355e61ae73520d3f"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a4760cf6b1e589282355e61ae73520d3f">lv_msgbox_create</a></div><div class="ttdeci">lv_obj_t * lv_msgbox_create(lv_obj_t *parent)</div><div class="ttdef"><b>Definition</b> <a href="lv__msgbox_8c_source.html#l00104">lv_msgbox.c:104</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__msgbox_8h_html_a9895b7f3ac046fc0970d3688b8960cbf"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a9895b7f3ac046fc0970d3688b8960cbf">lv_msgbox_add_footer_button</a></div><div class="ttdeci">lv_obj_t lv_obj_t * lv_msgbox_add_footer_button(lv_obj_t *obj, const char *text)</div><div class="ttdef"><b>Definition</b> <a href="lv__msgbox_8c_source.html#l00223">lv_msgbox.c:223</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__msgbox_8h_html_aa492235d31b15c9c3588c9d4f6b209a2"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__msgbox_8h.html#aa492235d31b15c9c3588c9d4f6b209a2">lv_msgbox_add_text</a></div><div class="ttdeci">lv_obj_t * lv_msgbox_add_text(lv_obj_t *obj, const char *text)</div><div class="ttdef"><b>Definition</b> <a href="lv__msgbox_8c_source.html#l00192">lv_msgbox.c:192</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__msgbox_8h_html_ac76d126418665aaf82a675e2fc52f9e3"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__msgbox_8h.html#ac76d126418665aaf82a675e2fc52f9e3">lv_msgbox_add_close_button</a></div><div class="ttdeci">lv_obj_t * lv_msgbox_add_close_button(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__msgbox_8c_source.html#l00254">lv_msgbox.c:254</a></div></div>
+<div class="ttc" id="alv__example__msgbox__modal_8c_html_afcf09b1f457f3fc17e67ba0c0c26045b"><div class="ttname"><a href="lv__example__msgbox__modal_8c.html#afcf09b1f457f3fc17e67ba0c0c26045b">lv_example_msgbox_modal</a></div><div class="ttdeci">void lv_example_msgbox_modal(void)</div><div class="ttdoc">A modal &quot;Hello&quot; dialog with Apply and Cancel footer buttons and a close icon.</div><div class="ttdef"><b>Definition</b> <a href="#l00024">lv_example_msgbox_modal.c:24</a></div></div>
+<div class="ttc" id="alv__examples_8h_html"><div class="ttname"><a href="lv__examples_8h.html">lv_examples.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_6737de13d9a79a1758473b4bb2fc9a44.html">examples</a></li><li class="navelem"><a href="dir_ffdad785ff4b0bb092ef6796208e937b.html">widgets</a></li><li class="navelem"><a href="dir_f4cf1b263a3a8e0f4c701330976f99c9.html">msgbox</a></li><li class="navelem"><a href="lv__example__msgbox__modal_8c.html">lv_example_msgbox_modal.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

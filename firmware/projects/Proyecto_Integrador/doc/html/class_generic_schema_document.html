@@ -1,0 +1,907 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia de la plantilla de la clase GenericSchemaDocument&lt; ValueT, Allocator &gt;</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_generic_schema_document.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la plantilla de la clase GenericSchemaDocument&lt; ValueT, Allocator &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>JSON schema document.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="schema_8h_source.html">schema.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:a10b843fba2f32761b707fafe0d9ce802" id="r_a10b843fba2f32761b707fafe0d9ce802"><td class="memItemLeft">typedef ValueT&#160;</td><td class="memItemRight"><a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a></td></tr>
+<tr class="memitem:afa312c5e3978992d8f887fdfd146091c" id="r_afa312c5e3978992d8f887fdfd146091c"><td class="memItemLeft">typedef <a class="el" href="class_i_generic_remote_schema_document_provider.html">IGenericRemoteSchemaDocumentProvider</a>&lt; <a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afa312c5e3978992d8f887fdfd146091c">IRemoteSchemaDocumentProviderType</a></td></tr>
+<tr class="memitem:a9ef808f72e1794946cc557e2a9a546ff" id="r_a9ef808f72e1794946cc557e2a9a546ff"><td class="memItemLeft">typedef <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9ef808f72e1794946cc557e2a9a546ff">AllocatorType</a></td></tr>
+<tr class="memitem:a44ad096a6ef84b62bf807b1732a59dd0" id="r_a44ad096a6ef84b62bf807b1732a59dd0"><td class="memItemLeft">typedef ValueType::EncodingType&#160;</td><td class="memItemRight"><a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a></td></tr>
+<tr class="memitem:a35703406564c3147489128e59bafc246" id="r_a35703406564c3147489128e59bafc246"><td class="memItemLeft">typedef EncodingType::Ch&#160;</td><td class="memItemRight"><a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a></td></tr>
+<tr class="memitem:a97542beaaf6d81626888d9320510da35" id="r_a97542beaaf6d81626888d9320510da35"><td class="memItemLeft">typedef <a class="el" href="classinternal_1_1_schema.html">internal::Schema</a>&lt; <a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a97542beaaf6d81626888d9320510da35">SchemaType</a></td></tr>
+<tr class="memitem:aecb14e3a778b77bca5aa590d20206673" id="r_aecb14e3a778b77bca5aa590d20206673"><td class="memItemLeft">typedef <a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a>, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a></td></tr>
+<tr class="memitem:a7eaac7d2a22f57d2c91e740122a58dbb" id="r_a7eaac7d2a22f57d2c91e740122a58dbb"><td class="memItemLeft">typedef <a class="el" href="class_generic_value.html">GenericValue</a>&lt; <a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a>, <a class="el" href="#a9ef808f72e1794946cc557e2a9a546ff">AllocatorType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a></td></tr>
+<tr class="memitem:a687e0447cc56a32eeb7c0e0312ddebd1" id="r_a687e0447cc56a32eeb7c0e0312ddebd1"><td class="memItemLeft">typedef <a class="el" href="class_generic_uri.html">GenericUri</a>&lt; <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a>, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a687e0447cc56a32eeb7c0e0312ddebd1">UriType</a></td></tr>
+<tr class="memitem:a1a7478cece39a7044feb4d91021a7d5c" id="r_a1a7478cece39a7044feb4d91021a7d5c"><td class="memItemLeft">typedef <a class="el" href="struct_generic_string_ref.html">GenericStringRef</a>&lt; <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a7478cece39a7044feb4d91021a7d5c">StringRefType</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a9e5391fa7464ebf150c83837763bf26a" id="r_a9e5391fa7464ebf150c83837763bf26a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9e5391fa7464ebf150c83837763bf26a">GenericSchemaDocument</a> (const <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a> &amp;document, const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *uri=0, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> uriLength=0, <a class="el" href="#afa312c5e3978992d8f887fdfd146091c">IRemoteSchemaDocumentProviderType</a> *remoteProvider=0, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0, const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;pointer=<a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a>(), const <a class="el" href="struct_specification.html">Specification</a> &amp;spec=<a class="el" href="struct_specification.html">Specification</a>(<a class="el" href="schema_8h.html#a9804f9d7d7bd63131facb12bbeed41a9aa83888819bf813bd89c4c50f8c3275e4">kDraft04</a>))</td></tr>
+<tr class="memdesc:a9e5391fa7464ebf150c83837763bf26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a49ad7f9625252491fa0b06aae02670ca" id="r_a49ad7f9625252491fa0b06aae02670ca"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a49ad7f9625252491fa0b06aae02670ca">~GenericSchemaDocument</a> ()</td></tr>
+<tr class="memdesc:a49ad7f9625252491fa0b06aae02670ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a553fbdb1c812693d3bc02c0a2f6cb620" id="r_a553fbdb1c812693d3bc02c0a2f6cb620"><td class="memItemLeft">const <a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a553fbdb1c812693d3bc02c0a2f6cb620">GetURI</a> () const</td></tr>
+<tr class="memitem:ad327806c2491d9e39ad4af841c3169fa" id="r_ad327806c2491d9e39ad4af841c3169fa"><td class="memItemLeft">const <a class="el" href="struct_specification.html">Specification</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad327806c2491d9e39ad4af841c3169fa">GetSpecification</a> () const</td></tr>
+<tr class="memitem:a19844f16894f818c91ab353863ed649a" id="r_a19844f16894f818c91ab353863ed649a"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a19844f16894f818c91ab353863ed649a">IsSupportedSpecification</a> () const</td></tr>
+<tr class="memitem:a1f69c9281ed13d0a9f8e68e59bfac007" id="r_a1f69c9281ed13d0a9f8e68e59bfac007"><td class="memItemLeft">const <a class="el" href="#a97542beaaf6d81626888d9320510da35">SchemaType</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1f69c9281ed13d0a9f8e68e59bfac007">GetRoot</a> () const</td></tr>
+<tr class="memdesc:a1f69c9281ed13d0a9f8e68e59bfac007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the root schema.  <br /></td></tr>
+<tr class="memitem:a4cba2923c8cfbee18d6cafb7a976936e" id="r_a4cba2923c8cfbee18d6cafb7a976936e"><td class="memItemLeft"><a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a4cba2923c8cfbee18d6cafb7a976936e">GetError</a> ()</td></tr>
+<tr class="memdesc:a4cba2923c8cfbee18d6cafb7a976936e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error object.  <br /></td></tr>
+<tr class="memitem:a5d41c23859446daaa75e39291f16c19b" id="r_a5d41c23859446daaa75e39291f16c19b"><td class="memItemLeft">const <a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5d41c23859446daaa75e39291f16c19b">GetError</a> () const</td></tr>
+<tr class="memitem:a801ff420b9ea655f249198a9a85a9261" id="r_a801ff420b9ea655f249198a9a85a9261"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a801ff420b9ea655f249198a9a85a9261">SchemaError</a> (const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a> code, const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;location)</td></tr>
+<tr class="memdesc:a801ff420b9ea655f249198a9a85a9261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default error method.  <br /></td></tr>
+<tr class="memitem:af9445ea6d8fd2f5bc76d61ce3ce9d055" id="r_af9445ea6d8fd2f5bc76d61ce3ce9d055"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af9445ea6d8fd2f5bc76d61ce3ce9d055">SchemaErrorValue</a> (const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a> code, const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;location, const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *value, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length)</td></tr>
+<tr class="memdesc:af9445ea6d8fd2f5bc76d61ce3ce9d055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for error with single string value insert.  <br /></td></tr>
+<tr class="memitem:a2e5009c11135a5865d491072b8c10f5a" id="r_a2e5009c11135a5865d491072b8c10f5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e5009c11135a5865d491072b8c10f5a">SchemaErrorPointer</a> (const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a> code, const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;location, const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *value, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;pointer)</td></tr>
+<tr class="memdesc:a2e5009c11135a5865d491072b8c10f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for error with invalid pointer.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Métodos públicos estáticos</h2></td></tr>
+<tr class="memitem:a331ec57bce3dd233fa778657add5b379" id="r_a331ec57bce3dd233fa778657add5b379"><td class="memItemLeft">static const <a class="el" href="struct_specification.html">Specification</a>&#160;</td><td class="memItemRight"><a class="el" href="#a331ec57bce3dd233fa778657add5b379">GetSpecification</a> (const <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a> &amp;document)</td></tr>
+<tr class="memdesc:a331ec57bce3dd233fa778657add5b379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static method to get the specification of any schema document.  <br /></td></tr>
+<tr class="memitem:ac35d9b92d5f50296ea7f8f1f1031321e" id="r_ac35d9b92d5f50296ea7f8f1f1031321e"><td class="memItemLeft">static const <a class="el" href="#a1a7478cece39a7044feb4d91021a7d5c">StringRefType</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ac35d9b92d5f50296ea7f8f1f1031321e">GetSchemaErrorKeyword</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a> schemaErrorCode)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a706511849688d9245fc37109f02a03c4" id="r_a706511849688d9245fc37109f02a03c4"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#a706511849688d9245fc37109f02a03c4">internal::Schema&lt; GenericSchemaDocument &gt;</a></td></tr>
+<tr class="memitem:afcc03e6ba8f1a819e1a028c31ad38347" id="r_afcc03e6ba8f1a819e1a028c31ad38347"><td class="memTemplParams" colspan="2">template&lt;typename, typename, typename&gt; </td></tr>
+<tr class="memitem:afcc03e6ba8f1a819e1a028c31ad38347 template"><td class="memItemLeft">class&#160;</td><td class="memItemRight"><a class="el" href="#afcc03e6ba8f1a819e1a028c31ad38347">GenericSchemaValidator</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt;<br />
+class GenericSchemaDocument&lt; ValueT, Allocator &gt;</div><p>JSON schema document. </p>
+<p>A JSON schema document is a compiled version of a JSON schema. It is basically a tree of <a class="el" href="classinternal_1_1_schema.html">internal::Schema</a>.</p>
+<dl class="section note"><dt>Nota</dt><dd>This is an immutable class (i.e. its instance cannot be modified after construction). </dd></dl>
+<dl class="tparams"><dt>Parámetros de plantilla</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueT</td><td><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type of JSON value.">Type</a> of JSON value (e.g. <code><a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a></code> ), which also determine the encoding. </td></tr>
+    <tr><td class="paramname">Allocator</td><td><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> type for allocating memory of this document. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01816">1816</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="a9ef808f72e1794946cc557e2a9a546ff" name="a9ef808f72e1794946cc557e2a9a546ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef808f72e1794946cc557e2a9a546ff">&#9670;&#160;</a></span>AllocatorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> <a class="el" href="#a9ef808f72e1794946cc557e2a9a546ff">AllocatorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01820">1820</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a35703406564c3147489128e59bafc246" name="a35703406564c3147489128e59bafc246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35703406564c3147489128e59bafc246">&#9670;&#160;</a></span>Ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef EncodingType::Ch <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01822">1822</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a44ad096a6ef84b62bf807b1732a59dd0" name="a44ad096a6ef84b62bf807b1732a59dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ad096a6ef84b62bf807b1732a59dd0">&#9670;&#160;</a></span>EncodingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueType::EncodingType <a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01821">1821</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a7eaac7d2a22f57d2c91e740122a58dbb" name="a7eaac7d2a22f57d2c91e740122a58dbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eaac7d2a22f57d2c91e740122a58dbb">&#9670;&#160;</a></span>GValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_generic_value.html">GenericValue</a>&lt;<a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a>, <a class="el" href="#a9ef808f72e1794946cc557e2a9a546ff">AllocatorType</a>&gt; <a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01825">1825</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="afa312c5e3978992d8f887fdfd146091c" name="afa312c5e3978992d8f887fdfd146091c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa312c5e3978992d8f887fdfd146091c">&#9670;&#160;</a></span>IRemoteSchemaDocumentProviderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_i_generic_remote_schema_document_provider.html">IGenericRemoteSchemaDocumentProvider</a>&lt;<a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a>&gt; <a class="el" href="#afa312c5e3978992d8f887fdfd146091c">IRemoteSchemaDocumentProviderType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01819">1819</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="aecb14e3a778b77bca5aa590d20206673" name="aecb14e3a778b77bca5aa590d20206673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb14e3a778b77bca5aa590d20206673">&#9670;&#160;</a></span>PointerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt;<a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a>, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>&gt; <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01824">1824</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a97542beaaf6d81626888d9320510da35" name="a97542beaaf6d81626888d9320510da35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97542beaaf6d81626888d9320510da35">&#9670;&#160;</a></span>SchemaType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classinternal_1_1_schema.html">internal::Schema</a>&lt;<a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a>&gt; <a class="el" href="#a97542beaaf6d81626888d9320510da35">SchemaType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01823">1823</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a7478cece39a7044feb4d91021a7d5c" name="a1a7478cece39a7044feb4d91021a7d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7478cece39a7044feb4d91021a7d5c">&#9670;&#160;</a></span>StringRefType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="struct_generic_string_ref.html">GenericStringRef</a>&lt;<a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a>&gt; <a class="el" href="#a1a7478cece39a7044feb4d91021a7d5c">StringRefType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01827">1827</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a687e0447cc56a32eeb7c0e0312ddebd1" name="a687e0447cc56a32eeb7c0e0312ddebd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687e0447cc56a32eeb7c0e0312ddebd1">&#9670;&#160;</a></span>UriType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_generic_uri.html">GenericUri</a>&lt;<a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a>, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>&gt; <a class="el" href="#a687e0447cc56a32eeb7c0e0312ddebd1">UriType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01826">1826</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a10b843fba2f32761b707fafe0d9ce802" name="a10b843fba2f32761b707fafe0d9ce802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b843fba2f32761b707fafe0d9ce802">&#9670;&#160;</a></span>ValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueT <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01818">1818</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a9e5391fa7464ebf150c83837763bf26a" name="a9e5391fa7464ebf150c83837763bf26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5391fa7464ebf150c83837763bf26a">&#9670;&#160;</a></span>GenericSchemaDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>document</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>uri</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>uriLength</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afa312c5e3978992d8f887fdfd146091c">IRemoteSchemaDocumentProviderType</a> *</td>          <td class="paramname"><span class="paramname"><em>remoteProvider</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pointer</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a>()</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_specification.html">Specification</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>spec</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="struct_specification.html">Specification</a>(<a class="el" href="schema_8h.html#a9804f9d7d7bd63131facb12bbeed41a9aa83888819bf813bd89c4c50f8c3275e4">kDraft04</a>)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Compile a JSON document into schema document.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">document</td><td>A JSON document as source. </td></tr>
+    <tr><td class="paramname">uri</td><td>The base URI of this schema document for purposes of violation reporting. </td></tr>
+    <tr><td class="paramname">uriLength</td><td>Length of <code>name</code>, in code points. </td></tr>
+    <tr><td class="paramname">remoteProvider</td><td>An optional remote schema document provider for resolving remote reference. Can be null. </td></tr>
+    <tr><td class="paramname">allocator</td><td>An optional allocator instance for allocating memory. Can be null. </td></tr>
+    <tr><td class="paramname">pointer</td><td>An optional JSON pointer to the start of the schema document </td></tr>
+    <tr><td class="paramname">spec</td><td>Optional schema draft or OpenAPI version. Used if no specification in document. Defaults to draft-04. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01844">1844</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a49ad7f9625252491fa0b06aae02670ca" name="a49ad7f9625252491fa0b06aae02670ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49ad7f9625252491fa0b06aae02670ca">&#9670;&#160;</a></span>~GenericSchemaDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01919">1919</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a4cba2923c8cfbee18d6cafb7a976936e" name="a4cba2923c8cfbee18d6cafb7a976936e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cba2923c8cfbee18d6cafb7a976936e">&#9670;&#160;</a></span>GetError() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp; GetError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the error object. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01959">1959</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a5d41c23859446daaa75e39291f16c19b" name="a5d41c23859446daaa75e39291f16c19b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d41c23859446daaa75e39291f16c19b">&#9670;&#160;</a></span>GetError() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp; GetError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01960">1960</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f69c9281ed13d0a9f8e68e59bfac007" name="a1f69c9281ed13d0a9f8e68e59bfac007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f69c9281ed13d0a9f8e68e59bfac007">&#9670;&#160;</a></span>GetRoot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a97542beaaf6d81626888d9320510da35">SchemaType</a> &amp; GetRoot </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the root schema. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01956">1956</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="ac35d9b92d5f50296ea7f8f1f1031321e" name="ac35d9b92d5f50296ea7f8f1f1031321e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35d9b92d5f50296ea7f8f1f1031321e">&#9670;&#160;</a></span>GetSchemaErrorKeyword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a1a7478cece39a7044feb4d91021a7d5c">StringRefType</a> &amp; GetSchemaErrorKeyword </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>schemaErrorCode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01962">1962</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="ad327806c2491d9e39ad4af841c3169fa" name="ad327806c2491d9e39ad4af841c3169fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad327806c2491d9e39ad4af841c3169fa">&#9670;&#160;</a></span>GetSpecification() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_specification.html">Specification</a> &amp; GetSpecification </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01938">1938</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a331ec57bce3dd233fa778657add5b379" name="a331ec57bce3dd233fa778657add5b379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331ec57bce3dd233fa778657add5b379">&#9670;&#160;</a></span>GetSpecification() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="struct_specification.html">Specification</a> GetSpecification </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a10b843fba2f32761b707fafe0d9ce802">ValueType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>document</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static method to get the specification of any schema document. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01943">1943</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a553fbdb1c812693d3bc02c0a2f6cb620" name="a553fbdb1c812693d3bc02c0a2f6cb620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a553fbdb1c812693d3bc02c0a2f6cb620">&#9670;&#160;</a></span>GetURI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a7eaac7d2a22f57d2c91e740122a58dbb">GValue</a> &amp; GetURI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01936">1936</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a19844f16894f818c91ab353863ed649a" name="a19844f16894f818c91ab353863ed649a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19844f16894f818c91ab353863ed649a">&#9670;&#160;</a></span>IsSupportedSpecification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> IsSupportedSpecification </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01939">1939</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a801ff420b9ea655f249198a9a85a9261" name="a801ff420b9ea655f249198a9a85a9261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a801ff420b9ea655f249198a9a85a9261">&#9670;&#160;</a></span>SchemaError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchemaError </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>location</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default error method. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01982">1982</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a2e5009c11135a5865d491072b8c10f5a" name="a2e5009c11135a5865d491072b8c10f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e5009c11135a5865d491072b8c10f5a">&#9670;&#160;</a></span>SchemaErrorPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchemaErrorPointer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>pointer</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method for error with invalid pointer. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01995">1995</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="af9445ea6d8fd2f5bc76d61ce3ce9d055" name="af9445ea6d8fd2f5bc76d61ce3ce9d055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9445ea6d8fd2f5bc76d61ce3ce9d055">&#9670;&#160;</a></span>SchemaErrorValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SchemaErrorValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga64f496d2cee8c9673f3105ec6008f290">SchemaErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#aecb14e3a778b77bca5aa590d20206673">PointerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>location</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a35703406564c3147489128e59bafc246">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method for error with single string value insert. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01988">1988</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01844">GenericSchemaDocument&lt; Value, CrtAllocator &gt;::GenericSchemaDocument()</a>.</p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Documentación de símbolos amigos y relacionados</h2>
+<a id="afcc03e6ba8f1a819e1a028c31ad38347" name="afcc03e6ba8f1a819e1a028c31ad38347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc03e6ba8f1a819e1a028c31ad38347">&#9670;&#160;</a></span>GenericSchemaValidator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename, typename, typename&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_generic_schema_validator.html">GenericSchemaValidator</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01830">1830</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a706511849688d9245fc37109f02a03c4" name="a706511849688d9245fc37109f02a03c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a706511849688d9245fc37109f02a03c4">&#9670;&#160;</a></span>internal::Schema&lt; GenericSchemaDocument &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueT, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classinternal_1_1_schema.html">internal::Schema</a>&lt; <a class="el" href="class_generic_schema_document.html">GenericSchemaDocument</a> &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l01827">1827</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="fwd_8h_source.html">fwd.h</a></li>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="schema_8h_source.html">schema.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_generic_schema_document.html">GenericSchemaDocument</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

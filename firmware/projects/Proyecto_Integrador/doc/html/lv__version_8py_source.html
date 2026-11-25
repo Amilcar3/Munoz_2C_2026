@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/cmds/misc/lv_version.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__version_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_version.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__version_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html">    1</a></span><span class="keyword">import</span> os</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> gdb</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> lvglgdb</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="" data-end="">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">    9</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">_call</a>(expression):</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordflow">return</span> gdb.parse_and_eval(expression)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">except</span> gdb.error:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#aa6d883696329b3711dd0bd9ed56924ea">   16</a></span>_VERSION_MACRO = re.compile(</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="stringliteral">r&quot;#define\s+LVGL_VERSION_(MAJOR|MINOR|PATCH|INFO)\s+(\S+)&quot;</span>)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="" data-end="">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a00bd6399d78614f20d3dfe839a5990e0">   20</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a00bd6399d78614f20d3dfe839a5990e0">version_from_sources</a>():</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="stringliteral">&quot;&quot;&quot;The version read from the lv_version.h the target was built against.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">    Neither way of asking the binary is dependable. lv_version_major() is</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">    `static inline`, so it is dropped unless something calls it, and the macros</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">    need -g3 *and* a stop inside a translation unit that included lv_version.h -</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">    lv_timer.c, where a breakpoint on lv_timer_handler lands, does not.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="stringliteral">    DWARF does record the path of every source file, so the LVGL tree can be</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">    found through any of its symbols and the version header read from disk.</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral">    Returns (major, minor, patch, info) or None.</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">for</span> symbol <span class="keywordflow">in</span> (<span class="stringliteral">&quot;lv_obj_create&quot;</span>, <span class="stringliteral">&quot;lv_timer_handler&quot;</span>, <span class="stringliteral">&quot;lv_init&quot;</span>):</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            found = gdb.lookup_global_symbol(symbol)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> found <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> found.symtab <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="comment"># DWARF records whatever separator the compiler used, which is not</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment"># always the host&#39;s: a MinGW build writes forward slashes.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            path = found.symtab.fullname().replace(<span class="stringliteral">&quot;\\&quot;</span>, <span class="stringliteral">&quot;/&quot;</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            marker = <span class="stringliteral">&quot;/src/&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> marker <span class="keywordflow">not</span> <span class="keywordflow">in</span> path:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            root = path[:path.rindex(marker)]</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="comment"># Since 9.6 the public headers live in include/lvgl/ and the</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment"># top-level lv_version.h is a deprecated wrapper that only includes</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="comment"># the real one, so the defines are not in it. Read that one first</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="comment"># and keep the top-level file for the releases that still have it.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">for</span> header <span class="keywordflow">in</span> (os.path.join(root, <span class="stringliteral">&quot;include&quot;</span>, <span class="stringliteral">&quot;lvgl&quot;</span>, <span class="stringliteral">&quot;lv_version.h&quot;</span>),</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                           os.path.join(root, <span class="stringliteral">&quot;lv_version.h&quot;</span>)):</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.exists(header):</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keyword">with</span> open(header) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    macros = dict(_VERSION_MACRO.findall(f.read()))</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                <span class="keywordflow">if</span> <span class="keywordflow">not</span> {<span class="stringliteral">&quot;MAJOR&quot;</span>, <span class="stringliteral">&quot;MINOR&quot;</span>, <span class="stringliteral">&quot;PATCH&quot;</span>} &lt;= <a class="code hl_function" href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt.html#a4226a4a554b8818e3295ef3e75d38d03">set</a>(macros):</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">return</span> (int(macros[<span class="stringliteral">&quot;MAJOR&quot;</span>]), int(macros[<span class="stringliteral">&quot;MINOR&quot;</span>]),</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                        int(macros[<span class="stringliteral">&quot;PATCH&quot;</span>]), macros.get(<span class="stringliteral">&quot;INFO&quot;</span>, <span class="stringliteral">&#39;&quot;&quot;&#39;</span>).strip(<span class="stringliteral">&#39;&quot;&#39;</span>))</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">except</span> (gdb.error, OSError, ValueError):</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+</div>
+<div class="foldopen" id="foldopen00063" data-start="" data-end="">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a67057ddbe1d1057088b30a336cde1b60">   63</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a67057ddbe1d1057088b30a336cde1b60">lvgl_version</a>():</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="stringliteral">&quot;&quot;&quot;The LVGL version of the target, as (major, minor, patch, info).</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="stringliteral">    lv_version_major() and friends in lvgl.h are the intended way to ask, with</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="stringliteral">    the version macros as a second try. Both depend on how the target was</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="stringliteral">    built, so lv_version.h itself is the third and most dependable one.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="stringliteral">    Fields that cannot be read come back as None.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    parts = []</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">for</span> name <span class="keywordflow">in</span> (<span class="stringliteral">&quot;major&quot;</span>, <span class="stringliteral">&quot;minor&quot;</span>, <span class="stringliteral">&quot;patch&quot;</span>):</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        value = <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">_call</a>(f<span class="stringliteral">&quot;lv_version_{name}()&quot;</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span> value <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            value = <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">_call</a>(f<span class="stringliteral">&quot;LVGL_VERSION_{name.upper()}&quot;</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        parts.append(int(value) <span class="keywordflow">if</span> value <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">else</span> <span class="keywordtype">None</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    info = <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">_call</a>(<span class="stringliteral">&quot;lv_version_info()&quot;</span>) <span class="keywordflow">or</span> <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">_call</a>(<span class="stringliteral">&quot;LVGL_VERSION_INFO&quot;</span>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        info = info.string() <span class="keywordflow">if</span> info <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">else</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">except</span> gdb.error:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        info = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment"># `info` counts as missing too: a build that hides it loses the &quot;-dev&quot; that</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment"># tells a development version from a release.</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> any(p <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">for</span> p <span class="keywordflow">in</span> parts) <span class="keywordflow">or</span> info <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        from_sources = <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a00bd6399d78614f20d3dfe839a5990e0">version_from_sources</a>()</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> from_sources <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">return</span> from_sources</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">return</span> (*parts, info)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+</div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7fca92a582e058d741560e5941958090">   94</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7fca92a582e058d741560e5941958090">version_string</a>():</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="stringliteral">&quot;&quot;&quot;&quot;9.6.0-dev&quot;, or as much of it as the target makes readable.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    major, minor, patch, info = <a class="code hl_function" href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a67057ddbe1d1057088b30a336cde1b60">lvgl_version</a>()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> major <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> (<span class="stringliteral">&quot;unknown: lv_version_major() was inlined away, the version &quot;</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="stringliteral">&quot;macros need a -g3 build, and LVGL&#39;s sources are not on disk&quot;</span>)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    numbers = <span class="stringliteral">&quot;.&quot;</span>.join(<span class="stringliteral">&quot;?&quot;</span> <span class="keywordflow">if</span> p <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">else</span> str(p) <span class="keywordflow">for</span> p <span class="keywordflow">in</span> (major, minor, patch))</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> numbers + (f<span class="stringliteral">&quot;-{info}&quot;</span> <span class="keywordflow">if</span> info <span class="keywordflow">else</span> <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+</div>
+<div class="foldopen" id="foldopen00104" data-start="" data-end="">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html">  104</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html">InfoVersion</a>(gdb.Command):</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="stringliteral">&quot;&quot;&quot;print the LVGL version of the target, and this plugin&#39;s version&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00107" data-start="" data-end="">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#abdd362d5f799ad16b5d6700efe590290">  107</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#abdd362d5f799ad16b5d6700efe590290">__init__</a>(self):</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        super(InfoVersion, self).<a class="code hl_function" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#abdd362d5f799ad16b5d6700efe590290">__init__</a>(</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="stringliteral">&quot;info lvgl_version&quot;</span>, gdb.COMMAND_USER, gdb.COMPLETE_NONE</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        )</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+</div>
+<div class="foldopen" id="foldopen00112" data-start="" data-end="">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#ad2773e43428cb9148db93183ea57e589">  112</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#ad2773e43428cb9148db93183ea57e589">invoke</a>(self, args, from_tty):</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        print(f<span class="stringliteral">&quot;LVGL:    {version_string()}&quot;</span>)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        print(f<span class="stringliteral">&quot;lvglgdb: {lvglgdb.__version__}&quot;</span>)</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version_html"><div class="ttname"><a href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html">lvglgdb.cmds.misc.lv_version.InfoVersion</a></div><div class="ttdef"><b>Definition</b> <a href="#l00104">lv_version.py:104</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version_html_abdd362d5f799ad16b5d6700efe590290"><div class="ttname"><a href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#abdd362d5f799ad16b5d6700efe590290">lvglgdb.cmds.misc.lv_version.InfoVersion.__init__</a></div><div class="ttdeci">__init__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00107">lv_version.py:107</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version_html_ad2773e43428cb9148db93183ea57e589"><div class="ttname"><a href="classlvglgdb_1_1cmds_1_1misc_1_1lv__version_1_1_info_version.html#ad2773e43428cb9148db93183ea57e589">lvglgdb.cmds.misc.lv_version.InfoVersion.invoke</a></div><div class="ttdeci">invoke(self, args, from_tty)</div><div class="ttdef"><b>Definition</b> <a href="#l00112">lv_version.py:112</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1cmds_1_1misc_1_1lv__version_html_a00bd6399d78614f20d3dfe839a5990e0"><div class="ttname"><a href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a00bd6399d78614f20d3dfe839a5990e0">lvglgdb.cmds.misc.lv_version.version_from_sources</a></div><div class="ttdeci">version_from_sources()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">lv_version.py:20</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1cmds_1_1misc_1_1lv__version_html_a67057ddbe1d1057088b30a336cde1b60"><div class="ttname"><a href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a67057ddbe1d1057088b30a336cde1b60">lvglgdb.cmds.misc.lv_version.lvgl_version</a></div><div class="ttdeci">lvgl_version()</div><div class="ttdef"><b>Definition</b> <a href="#l00063">lv_version.py:63</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1cmds_1_1misc_1_1lv__version_html_a7ce1fbaa12d6b1c2111747ceef308f6b"><div class="ttname"><a href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7ce1fbaa12d6b1c2111747ceef308f6b">lvglgdb.cmds.misc.lv_version._call</a></div><div class="ttdeci">_call(expression)</div><div class="ttdef"><b>Definition</b> <a href="#l00009">lv_version.py:9</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1cmds_1_1misc_1_1lv__version_html_a7fca92a582e058d741560e5941958090"><div class="ttname"><a href="namespacelvglgdb_1_1cmds_1_1misc_1_1lv__version.html#a7fca92a582e058d741560e5941958090">lvglgdb.cmds.misc.lv_version.version_string</a></div><div class="ttdeci">version_string()</div><div class="ttdef"><b>Definition</b> <a href="#l00094">lv_version.py:94</a></div></div>
+<div class="ttc" id="aprojects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt_html_a4226a4a554b8818e3295ef3e75d38d03"><div class="ttname"><a href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt.html#a4226a4a554b8818e3295ef3e75d38d03">set</a></div><div class="ttdeci">set(FLAG_CHECK_WHITELIST --coverage -fsanitize=address -Werror) include(CheckCCompilerFlag) include(CheckCXXCompilerFlag) function(filter_compiler_options lang options_out) set(options $</div><div class="ttdef"><b>Definition</b> <a href="projects_2_proyecto___integrador_2managed__components_2lvgl____lvgl_2tests_2_c_make_lists_8txt_source.html#l00020">CMakeLists.txt:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_af16e2ef5ad565f41a40cc35cf6587a4.html">cmds</a></li><li class="navelem"><a href="dir_f5cc739760a50abd38a44806e3358148.html">misc</a></li><li class="navelem"><a href="lv__version_8py.html">lv_version.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/src/test_cases/refr/test_refr_layer.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__refr__layer_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_refr_layer.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__refr__layer_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#if LV_BUILD_TEST</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="lv__test__refr_8h.html">refr/lv_test_refr.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> setUp(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    refr_ctx_reset();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> tearDown(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    refr_disp_delete();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> test_refr_bottom_layer_is_drawn_when_nothing_covers(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * scr = refr_screen();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style_8h.html#a331a3302010cebbd6bba3c392a129b18">lv_obj_remove_style_all</a>(scr);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a>(scr, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954ac5670b24820d02ac0fe11ff8a1ad00c0">LV_OPA_TRANSP</a>, 0);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * bottom = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a06025655ba5e3bcbf29b654e90f706c8">lv_display_get_layer_bottom</a>(refr_ctx.disp);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a>(bottom, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a">LV_OPA_COVER</a>, 0);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ac2b8606916fe040950505ca45fa74eeb">lv_obj_set_style_bg_color</a>(bottom, <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(REFR_COLOR_BLUE), 0);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(scr);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    refr_frame();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    ASSERT_PX_EQ(REFR_COLOR_BLUE, refr_screen_px(30, 30));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/*An opaque screen covers the bottom layer, so it is not drawn at all*/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a>(scr, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a">LV_OPA_COVER</a>, 0);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ac2b8606916fe040950505ca45fa74eeb">lv_obj_set_style_bg_color</a>(scr, <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(REFR_COLOR_RED), 0);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(scr);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    refr_frame();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(30, 30));</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> test_refr_top_and_sys_layers_are_always_drawn(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/*The screen covers everything below, but the top and sys layers are above it*/</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    refr_rect_create(refr_screen(), 0, 0, 64, 64, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    refr_rect_create(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ac346c13b04ed4260b8224acf8844f503">lv_display_get_layer_top</a>(refr_ctx.disp), 0, 0, 20, 20, REFR_COLOR_GREEN);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    refr_rect_create(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#acf47dfce1e0ebf072ab9f0bbc67da8b0">lv_display_get_layer_sys</a>(refr_ctx.disp), 30, 0, 20, 20, REFR_COLOR_BLUE);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    refr_frame();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    ASSERT_PX_EQ(REFR_COLOR_GREEN, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ASSERT_PX_EQ(REFR_COLOR_BLUE, refr_screen_px(40, 10));</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(10, 40));</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> test_refr_previous_screen_drawn_below_the_active_one(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> * <a class="code hl_define" href="lv__display_8c.html#ad5fb9a9d56b46aaaf4052b95e224727a">disp_def</a> = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a5a12be09b7011c8e3a296b0dc24cad42">lv_display_set_default</a>(refr_ctx.disp);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * prev = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj_8h.html#acf57dc362a43990cbad93921da833b5d">lv_obj_create</a>(<a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a5a12be09b7011c8e3a296b0dc24cad42">lv_display_set_default</a>(<a class="code hl_define" href="lv__display_8c.html#ad5fb9a9d56b46aaaf4052b95e224727a">disp_def</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style_8h.html#a331a3302010cebbd6bba3c392a129b18">lv_obj_remove_style_all</a>(prev);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a>(prev, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a">LV_OPA_COVER</a>, 0);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ac2b8606916fe040950505ca45fa74eeb">lv_obj_set_style_bg_color</a>(prev, <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(REFR_COLOR_GREEN), 0);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    refr_screen_set_color(REFR_COLOR_RED);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">/*Both screens cover the display. The active one is drawn last, so it wins.*/</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    refr_ctx.disp-&gt;prev_scr = prev;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    refr_ctx.disp-&gt;draw_prev_over_act = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    refr_frame();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(30, 30));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">/*With draw_prev_over_act the previous screen is drawn on top*/</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    refr_ctx.disp-&gt;draw_prev_over_act = 1;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    refr_frame();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    ASSERT_PX_EQ(REFR_COLOR_GREEN, refr_screen_px(30, 30));</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    refr_ctx.disp-&gt;prev_scr = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    refr_ctx.disp-&gt;draw_prev_over_act = 0;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__tree_8h.html#aeaa0347dd6107388289b8806e440d39c">lv_obj_delete</a>(prev);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> test_refr_screen_load_animation(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> * <a class="code hl_define" href="lv__display_8c.html#ad5fb9a9d56b46aaaf4052b95e224727a">disp_def</a> = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a5a12be09b7011c8e3a296b0dc24cad42">lv_display_set_default</a>(refr_ctx.disp);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    refr_screen_set_color(REFR_COLOR_RED);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * next = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj_8h.html#acf57dc362a43990cbad93921da833b5d">lv_obj_create</a>(<a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style_8h.html#a331a3302010cebbd6bba3c392a129b18">lv_obj_remove_style_all</a>(next);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a>(next, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a">LV_OPA_COVER</a>, 0);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ac2b8606916fe040950505ca45fa74eeb">lv_obj_set_style_bg_color</a>(next, <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a>(REFR_COLOR_GREEN), 0);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#aab3658c2cfa840241d48fd23b2dfa7fd">lv_screen_load_anim</a>(next, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a7222183909f247555bc12568fc1d1c42ab4b8c05d06b1417cf825376409ed7d8f">LV_SCREEN_LOAD_ANIM_MOVE_LEFT</a>, 100, 0, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">/*Half way through the animation both screens are on the display*/</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_function" href="include_2lvgl_2tick_2lv__tick_8h.html#a9e26999086dd60626e8a03aca21143a7">lv_tick_inc</a>(50);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    refr_frame();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    TEST_ASSERT_NOT_NULL(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ab65f83be14de04ad8671779c07603694">lv_display_get_screen_prev</a>(refr_ctx.disp));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">bool</span> red_seen = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">bool</span> green_seen = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">for</span>(x = 0; x &lt; 64; x++) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> px = refr_screen_px(x, 30);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span>(px == REFR_COLOR_RED) red_seen = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span>(px == REFR_COLOR_GREEN) green_seen = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    ASSERT_PX_TRUE(red_seen);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    ASSERT_PX_TRUE(green_seen);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">/*At the end only the new screen is left*/</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_function" href="include_2lvgl_2tick_2lv__tick_8h.html#a9e26999086dd60626e8a03aca21143a7">lv_tick_inc</a>(100);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler</a>();</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    refr_frame();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    TEST_ASSERT_NULL(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ab65f83be14de04ad8671779c07603694">lv_display_get_screen_prev</a>(refr_ctx.disp));</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    ASSERT_PX_EQ(REFR_COLOR_GREEN, refr_screen_px(30, 30));</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a5a12be09b7011c8e3a296b0dc24cad42">lv_display_set_default</a>(<a class="code hl_define" href="lv__display_8c.html#ad5fb9a9d56b46aaaf4052b95e224727a">disp_def</a>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keywordtype">void</span> test_refr_hidden_object_is_not_drawn(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>{</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 10, 10, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj_8h.html#a68d00213906652fd3ab84f2e7dd4f133">lv_obj_set_hidden</a>(obj, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    refr_frame();</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    TEST_ASSERT_EQUAL_UINT32(0, draw_cnt);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(15, 15));</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keywordtype">void</span> test_refr_fully_transparent_layer_is_not_drawn(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 10, 10, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ad898d1c6125fb749caff3c93519cad1d">lv_obj_set_style_opa_layered</a>(obj, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954ac5670b24820d02ac0fe11ff8a1ad00c0">LV_OPA_TRANSP</a>, 0);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    refr_frame();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    TEST_ASSERT_EQUAL_UINT32(0, draw_cnt);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(15, 15));</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keywordtype">void</span> test_refr_layered_opacity_is_blended(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>{</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 10, 10, 20, 20, REFR_COLOR_WHITE);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ad898d1c6125fb749caff3c93519cad1d">lv_obj_set_style_opa_layered</a>(obj, 128, 0);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    refr_frame();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> px = refr_screen_px(15, 15);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> r = (px &gt;&gt; 16) &amp; 0xFF;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">/*White over black with 50% opacity*/</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    ASSERT_PX_WITHIN(4, 128, r);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="keywordtype">void</span> test_refr_simple_layer_is_split_into_chunks(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>{</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">/*A simple layer is rendered in chunks that fit into LV_DRAW_LAYER_SIMPLE_BUF_SIZE*/</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w = 200;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h = 100;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    refr_disp_create(w + 20, h + 20, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176">LV_COLOR_FORMAT_RGB565</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, h + 20);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 0, 0, w, h, REFR_COLOR_WHITE);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ad898d1c6125fb749caff3c93519cad1d">lv_obj_set_style_opa_layered</a>(obj, 128, 0);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    refr_frame();</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">/*The object is opaque, so the chunks are rendered without an alpha channel*/</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> px_size = <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#af32de6483e3a70fd6544aed8f40ec889">lv_color_format_get_size</a>(<a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176">LV_COLOR_FORMAT_RGB565</a>);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_rgb_rows = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aa82ae682af36a01ad4678760c31e0479">LV_DRAW_LAYER_SIMPLE_BUF_SIZE</a> / (<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)w / px_size;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> expected_rgb = ((<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)h + max_rgb_rows - 1) / max_rgb_rows;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    TEST_ASSERT_EQUAL_UINT32(expected_rgb, draw_cnt);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="comment">/*Every chunk is blended the same way*/</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> reference = refr_screen_px(w / 2, 0);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    ASSERT_PX_WITHIN(12, 128, (reference &gt;&gt; 16) &amp; 0xFF);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">for</span>(y = 0; y &lt; h; y += 7) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        ASSERT_PX_EQ(reference, refr_screen_px(w / 2, y));</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">/*With a rounded corner the layer needs an alpha channel, so the chunks are smaller*/</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    draw_cnt = 0;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aafbced440d05287d7cc3c8422e8184aa">lv_obj_set_style_radius</a>(obj, 20, 0);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    refr_frame();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_argb_rows = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aa82ae682af36a01ad4678760c31e0479">LV_DRAW_LAYER_SIMPLE_BUF_SIZE</a> / (<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)w / <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structlv__color32__t.html">lv_color32_t</a>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> expected_argb = ((<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)h + max_argb_rows - 1) / max_argb_rows;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    TEST_ASSERT_EQUAL_UINT32(expected_argb, draw_cnt);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    TEST_ASSERT_TRUE(expected_argb &gt;= expected_rgb);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keywordtype">void</span> test_refr_bitmap_mask_forces_an_alpha_layer(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="comment">/*An object with a bitmap mask always needs an alpha channel, even if it is</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">     *opaque. So its layer is split into the smaller, ARGB sized chunks.*/</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w = 200;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h = 100;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    refr_disp_create(w + 20, h + 20, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176">LV_COLOR_FORMAT_RGB565</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, h + 20);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 0, 0, w, h, REFR_COLOR_WHITE);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">/*Keep the object on a layer of its own in every configuration*/</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ad898d1c6125fb749caff3c93519cad1d">lv_obj_set_style_opa_layered</a>(obj, 128, 0);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    refr_frame();</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> px_size = <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#af32de6483e3a70fd6544aed8f40ec889">lv_color_format_get_size</a>(<a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176">LV_COLOR_FORMAT_RGB565</a>);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_rgb_rows = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aa82ae682af36a01ad4678760c31e0479">LV_DRAW_LAYER_SIMPLE_BUF_SIZE</a> / (<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)w / px_size;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    TEST_ASSERT_EQUAL_UINT32(((<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)h + max_rgb_rows - 1) / max_rgb_rows, draw_cnt);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_define" href="include_2lvgl_2widgets_2lv__image_8h.html#a70b145ff399d333d2087f80f7096ecac">LV_IMAGE_DECLARE</a>(test_image_cogwheel_a8);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a9ccbbcdd087754885db069bd5d5c5354">lv_obj_set_style_bitmap_mask_src</a>(obj, &amp;test_image_cogwheel_a8, 0);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a45d68dba59547d6869f93925a165be3b">LV_LAYER_TYPE_SIMPLE</a>, <a class="code hl_function" href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a>(obj));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    draw_cnt = 0;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    refr_frame();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> max_argb_rows = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aa82ae682af36a01ad4678760c31e0479">LV_DRAW_LAYER_SIMPLE_BUF_SIZE</a> / (<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)w / <span class="keyword">sizeof</span>(<a class="code hl_struct" href="structlv__color32__t.html">lv_color32_t</a>);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    TEST_ASSERT_EQUAL_UINT32(((<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)h + max_argb_rows - 1) / max_argb_rows, draw_cnt);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keywordtype">void</span> test_refr_children_of_a_transparent_parent_are_skipped(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>{</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * parent = refr_rect_create(refr_screen(), 10, 10, 60, 60, REFR_COLOR_BLUE);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * child = refr_rect_create(parent, 0, 0, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> child_draw_cnt = 0;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(child, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;child_draw_cnt);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">/*A completely transparent parent makes the whole subtree invisible*/</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a4368effcf2ef581d71d29eae5e6e1c47">lv_obj_set_style_opa</a>(parent, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954ac5670b24820d02ac0fe11ff8a1ad00c0">LV_OPA_TRANSP</a>, 0);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    refr_frame();</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    TEST_ASSERT_EQUAL_UINT32(0, child_draw_cnt);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(15, 15));</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keywordtype">void</span> test_refr_without_active_screen(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>{</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> * disp = <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a>();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * scr = disp-&gt;<a class="code hl_variable" href="struct__lv__display__t.html#aa102f077700d6a20c01d8ade42e06cc8">act_scr</a>;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    disp-&gt;<a class="code hl_variable" href="struct__lv__display__t.html#aa102f077700d6a20c01d8ade42e06cc8">act_scr</a> = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__refr_8h.html#a46355e9677a6d10d50a513f66226c1e0">lv_refr_now</a>(disp);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    disp-&gt;<a class="code hl_variable" href="struct__lv__display__t.html#aa102f077700d6a20c01d8ade42e06cc8">act_scr</a> = scr;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">/* if no assertion fired we&#39;re good*/</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    TEST_PASS();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>}</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="preprocessor">#endif </span><span class="comment">/*LV_BUILD_TEST*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a></div><div class="ttdeci">@ LV_EVENT_DRAW_MAIN</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__event_8h_source.html#l00072">lv_event.h:72</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a68d00213906652fd3ab84f2e7dd4f133"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a68d00213906652fd3ab84f2e7dd4f133">lv_obj_set_hidden</a></div><div class="ttdeci">void lv_obj_set_hidden(lv_obj_t *obj, bool en)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00506">lv_obj.c:506</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_acf57dc362a43990cbad93921da833b5d"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#acf57dc362a43990cbad93921da833b5d">lv_obj_create</a></div><div class="ttdeci">lv_obj_t * lv_obj_create(lv_obj_t *parent)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00370">lv_obj.c:370</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__draw_8h_html_aaeb21c6eea41dba9d1140ace157efce8a45d68dba59547d6869f93925a165be3b"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a45d68dba59547d6869f93925a165be3b">LV_LAYER_TYPE_SIMPLE</a></div><div class="ttdeci">@ LV_LAYER_TYPE_SIMPLE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__draw_8h_source.html#l00044">lv_obj_draw.h:44</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__event_8h_html_a13335793b24322d550c8faa8e3dda247"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a></div><div class="ttdeci">lv_event_dsc_t * lv_obj_add_event_cb(lv_obj_t *obj, lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__event_8c_source.html#l00106">lv_obj_event.c:106</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_a32abbcce30358cd46c4a68261a2b6898"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a></div><div class="ttdeci">lv_result_t lv_obj_invalidate(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l01119">lv_obj_pos.c:1119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style_8h_html_a331a3302010cebbd6bba3c392a129b18"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style_8h.html#a331a3302010cebbd6bba3c392a129b18">lv_obj_remove_style_all</a></div><div class="ttdeci">void lv_obj_remove_style_all(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style_8c_source.html#l00250">lv_obj_style.c:250</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a4368effcf2ef581d71d29eae5e6e1c47"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a4368effcf2ef581d71d29eae5e6e1c47">lv_obj_set_style_opa</a></div><div class="ttdeci">void lv_obj_set_style_opa(lv_obj_t *obj, lv_opa_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01768">lv_obj_style_gen.c:1768</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a9ccbbcdd087754885db069bd5d5c5354"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a9ccbbcdd087754885db069bd5d5c5354">lv_obj_set_style_bitmap_mask_src</a></div><div class="ttdeci">void lv_obj_set_style_bitmap_mask_src(lv_obj_t *obj, const void *value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01876">lv_obj_style_gen.c:1876</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_aaaa05e6da2370944c1834581f293946c"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aaaa05e6da2370944c1834581f293946c">lv_obj_set_style_bg_opa</a></div><div class="ttdeci">void lv_obj_set_style_bg_opa(lv_obj_t *obj, lv_opa_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01173">lv_obj_style_gen.c:1173</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_aafbced440d05287d7cc3c8422e8184aa"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aafbced440d05287d7cc3c8422e8184aa">lv_obj_set_style_radius</a></div><div class="ttdeci">void lv_obj_set_style_radius(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01741">lv_obj_style_gen.c:1741</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_ac2b8606916fe040950505ca45fa74eeb"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ac2b8606916fe040950505ca45fa74eeb">lv_obj_set_style_bg_color</a></div><div class="ttdeci">void lv_obj_set_style_bg_color(lv_obj_t *obj, lv_color_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01164">lv_obj_style_gen.c:1164</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_ad898d1c6125fb749caff3c93519cad1d"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ad898d1c6125fb749caff3c93519cad1d">lv_obj_set_style_opa_layered</a></div><div class="ttdeci">void lv_obj_set_style_opa_layered(lv_obj_t *obj, lv_opa_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01777">lv_obj_style_gen.c:1777</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__tree_8h_html_aeaa0347dd6107388289b8806e440d39c"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__tree_8h.html#aeaa0347dd6107388289b8806e440d39c">lv_obj_delete</a></div><div class="ttdeci">void lv_obj_delete(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__tree_8c_source.html#l00054">lv_obj_tree.c:54</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__refr_8h_html_a46355e9677a6d10d50a513f66226c1e0"><div class="ttname"><a href="include_2lvgl_2core_2lv__refr_8h.html#a46355e9677a6d10d50a513f66226c1e0">lv_refr_now</a></div><div class="ttdeci">void lv_refr_now(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__refr_8c_source.html#l00088">lv_refr.c:88</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_adb5cfb35b8a8ffe081b95c92b29c7c8c"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler</a></div><div class="ttdeci">LV_ATTRIBUTE_TIMER_HANDLER uint32_t lv_timer_handler(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00058">lv_timer.c:58</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a06025655ba5e3bcbf29b654e90f706c8"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a06025655ba5e3bcbf29b654e90f706c8">lv_display_get_layer_bottom</a></div><div class="ttdeci">lv_obj_t * lv_display_get_layer_bottom(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00839">lv_display.c:839</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a2afebbc012fa142caacfaf6f86172798"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a2afebbc012fa142caacfaf6f86172798">lv_display_get_default</a></div><div class="ttdeci">lv_display_t * lv_display_get_default(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00266">lv_display.c:266</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a></div><div class="ttdeci">@ LV_DISPLAY_RENDER_MODE_DIRECT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00053">lv_display.h:53</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a5a12be09b7011c8e3a296b0dc24cad42"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a5a12be09b7011c8e3a296b0dc24cad42">lv_display_set_default</a></div><div class="ttdeci">void lv_display_set_default(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00261">lv_display.c:261</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a7222183909f247555bc12568fc1d1c42ab4b8c05d06b1417cf825376409ed7d8f"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a7222183909f247555bc12568fc1d1c42ab4b8c05d06b1417cf825376409ed7d8f">LV_SCREEN_LOAD_ANIM_MOVE_LEFT</a></div><div class="ttdeci">@ LV_SCREEN_LOAD_ANIM_MOVE_LEFT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00068">lv_display.h:68</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_aab3658c2cfa840241d48fd23b2dfa7fd"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#aab3658c2cfa840241d48fd23b2dfa7fd">lv_screen_load_anim</a></div><div class="ttdeci">void lv_screen_load_anim(lv_obj_t *scr, lv_screen_load_anim_t anim_type, uint32_t time, uint32_t delay, bool auto_del)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00879">lv_display.c:879</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ab65f83be14de04ad8671779c07603694"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ab65f83be14de04ad8671779c07603694">lv_display_get_screen_prev</a></div><div class="ttdeci">lv_obj_t * lv_display_get_screen_prev(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00806">lv_display.c:806</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ac346c13b04ed4260b8224acf8844f503"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ac346c13b04ed4260b8224acf8844f503">lv_display_get_layer_top</a></div><div class="ttdeci">lv_obj_t * lv_display_get_layer_top(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00817">lv_display.c:817</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_acf47dfce1e0ebf072ab9f0bbc67da8b0"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#acf47dfce1e0ebf072ab9f0bbc67da8b0">lv_display_get_layer_sys</a></div><div class="ttdeci">lv_obj_t * lv_display_get_layer_sys(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00828">lv_display.c:828</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954a13cdfbbe767edf76dc4f53389dfeca4a">LV_OPA_COVER</a></div><div class="ttdeci">@ LV_OPA_COVER</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">lv_color.h:53</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a1ad2ded4e489aa575d8bc5a9bd9df954ac5670b24820d02ac0fe11ff8a1ad00c0"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a1ad2ded4e489aa575d8bc5a9bd9df954ac5670b24820d02ac0fe11ff8a1ad00c0">LV_OPA_TRANSP</a></div><div class="ttdeci">@ LV_OPA_TRANSP</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00041">lv_color.h:41</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a678b5a785e1e6bbeffba7c045e312176">LV_COLOR_FORMAT_RGB565</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_RGB565</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">lv_color.h:154</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_XRGB8888</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">lv_color.h:163</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a683fc45072eabc9c74257af7fc36345f"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a683fc45072eabc9c74257af7fc36345f">lv_color_hex</a></div><div class="ttdeci">lv_color_t lv_color_hex(uint32_t c)</div><div class="ttdef"><b>Definition</b> <a href="lv__color_8c_source.html#l00282">lv_color.c:282</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_af32de6483e3a70fd6544aed8f40ec889"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#af32de6483e3a70fd6544aed8f40ec889">lv_color_format_get_size</a></div><div class="ttdeci">uint8_t lv_color_format_get_size(lv_color_format_t cf)</div><div class="ttdef"><b>Definition</b> <a href="lv__color_8c_source.html#l00261">lv_color.c:261</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a6e34268a0a7129745629c71f74e86265"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a></div><div class="ttdeci">struct _lv_display_t lv_display_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00119">lv_types.h:119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2tick_2lv__tick_8h_html_a9e26999086dd60626e8a03aca21143a7"><div class="ttname"><a href="include_2lvgl_2tick_2lv__tick_8h.html#a9e26999086dd60626e8a03aca21143a7">lv_tick_inc</a></div><div class="ttdeci">LV_ATTRIBUTE_TICK_INC void lv_tick_inc(uint32_t tick_period)</div><div class="ttdef"><b>Definition</b> <a href="lv__tick_8c_source.html#l00037">lv_tick.c:37</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_a70b145ff399d333d2087f80f7096ecac"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#a70b145ff399d333d2087f80f7096ecac">LV_IMAGE_DECLARE</a></div><div class="ttdeci">#define LV_IMAGE_DECLARE(var_name)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2widgets_2lv__image_8h_source.html#l00357">lv_image.h:357</a></div></div>
+<div class="ttc" id="alv__conf__cmsis_8h_html_aa82ae682af36a01ad4678760c31e0479"><div class="ttname"><a href="lv__conf__cmsis_8h.html#aa82ae682af36a01ad4678760c31e0479">LV_DRAW_LAYER_SIMPLE_BUF_SIZE</a></div><div class="ttdeci">#define LV_DRAW_LAYER_SIMPLE_BUF_SIZE</div><div class="ttdef"><b>Definition</b> <a href="lv__conf__cmsis_8h_source.html#l00175">lv_conf_cmsis.h:175</a></div></div>
+<div class="ttc" id="alv__display_8c_html_ad5fb9a9d56b46aaaf4052b95e224727a"><div class="ttname"><a href="lv__display_8c.html#ad5fb9a9d56b46aaaf4052b95e224727a">disp_def</a></div><div class="ttdeci">#define disp_def</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00021">lv_display.c:21</a></div></div>
+<div class="ttc" id="alv__obj__draw_8c_html_a7dd2d330382933034e1568e170c5ddbb"><div class="ttname"><a href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a></div><div class="ttdeci">lv_layer_type_t lv_obj_get_layer_type(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__draw_8c_source.html#l00460">lv_obj_draw.c:460</a></div></div>
+<div class="ttc" id="alv__test__refr_8h_html"><div class="ttname"><a href="lv__test__refr_8h.html">lv_test_refr.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astruct__lv__display__t_html_aa102f077700d6a20c01d8ade42e06cc8"><div class="ttname"><a href="struct__lv__display__t.html#aa102f077700d6a20c01d8ade42e06cc8">_lv_display_t::act_scr</a></div><div class="ttdeci">lv_obj_t * act_scr</div><div class="ttdef"><b>Definition</b> <a href="lv__display__private_8h_source.html#l00150">lv_display_private.h:150</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html"><div class="ttname"><a href="structlv__color32__t.html">lv_color32_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00121">lv_color.h:121</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_a2db2b5e922be370ef89e28f89eca8b6.html">src</a></li><li class="navelem"><a href="dir_0da03cef61f81ff608e9e8a57be45fcc.html">test_cases</a></li><li class="navelem"><a href="dir_7a4dd5a7596719f070cd6920c14b426d.html">refr</a></li><li class="navelem"><a href="test__refr__layer_8c.html">test_refr_layer.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

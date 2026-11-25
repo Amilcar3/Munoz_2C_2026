@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/nema_gfx/lv_draw_nema_gfx.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__nema__gfx_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_draw_nema_gfx.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__draw__nema__gfx_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if LV_USE_NEMA_GFX</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#define DRAW_UNIT_ID_NEMA_GFX 7</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#if LV_USE_OS</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">typedef</span> <span class="keyword">struct </span>_nema_gfx_draw_task_t {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * task;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">bool</span> flushed;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>} nema_gfx_draw_task_t;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"> *  STATIC PROTOTYPES</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#if LV_USE_OS</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_render_thread_cb(<span class="keywordtype">void</span> * ptr);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_execute_drawing(lv_draw_nema_gfx_unit_t * u);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_dispatch(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * layer);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_evaluate(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * task);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_delete(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_wait_for_finish(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_init_handlers(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a3b8ae1591dcf4cc645174c9162755bec">lv_draw_buf_handlers_t</a> * handlers);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_draw_buf_nema_gfx_init_handlers(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"> *  STATIC VARIABLES</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keywordtype">void</span> lv_draw_nema_gfx_init(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw_8h.html#ab7c58b87e84d6b99117fecfc06fcdc0a">lv_draw_create_unit</a>(<span class="keyword">sizeof</span>(lv_draw_nema_gfx_unit_t));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">/*Initialize NemaGFX*/</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#a5d89f80e3906e76d1c07d97600c13c1c">nema_init</a>();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    lv_draw_buf_nema_gfx_init_handlers();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    draw_nema_gfx_unit-&gt;base_unit.dispatch_cb = nema_gfx_dispatch;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    draw_nema_gfx_unit-&gt;base_unit.evaluate_cb = nema_gfx_evaluate;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    draw_nema_gfx_unit-&gt;base_unit.delete_cb = nema_gfx_delete;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    draw_nema_gfx_unit-&gt;base_unit.wait_for_finish_cb = nema_gfx_wait_for_finish;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    draw_nema_gfx_unit-&gt;base_unit.name = <span class="stringliteral">&quot;NEMA_GFX&quot;</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#if LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">/*Initialize NemaVG */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_function" href="cortex__m33_2nema__vg_8h.html#a2bad1ab4f7550c4983fce543cb06d2e6">nema_vg_init</a>(<a class="code hl_define" href="include_2lvgl_2config_2lv__conf__internal_8h.html#ad4ad715b0c204b2e090a46b3365aebc2">LV_NEMA_GFX_MAX_RESX</a>, <a class="code hl_define" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a1faca55b39d15babfa507661df7b811d">LV_NEMA_GFX_MAX_RESY</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">/* Allocate VG Buffers*/</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    draw_nema_gfx_unit-&gt;paint = <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ad6bb961d27230d8fd6e17df9dda08227">nema_vg_paint_create</a>();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    draw_nema_gfx_unit-&gt;gradient = <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#aa60fb25b085e639e56d6a6ad0ccd0a27">nema_vg_grad_create</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    draw_nema_gfx_unit-&gt;path = <a class="code hl_function" href="cortex__m33_2nema__vg__path_8h.html#a4cd96a80b9d3e3720fcc3c4f5ab48f8a">nema_vg_path_create</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">/*Initialize Freetype Support*/</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    lv_draw_nema_gfx_label_init(&amp;(draw_nema_gfx_unit-&gt;base_unit));</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">/*Create GPU Command List*/</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    draw_nema_gfx_unit-&gt;cl = <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#aceffff0db109b49f32b1ab97e28be3a5">nema_cl_create</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="comment">/*Bind Command List*/</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#a689f1a3bbcc1ede893e31e4ebe2cd7c9">nema_cl_bind_circular</a>(&amp;(draw_nema_gfx_unit-&gt;cl));</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#if LV_USE_OS</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_function" href="lv__os__custom__c_8txt.html#ac4b62e53f11770b6716a50141fccb55a">lv_thread_init</a>(&amp;draw_nema_gfx_unit-&gt;thread, <span class="stringliteral">&quot;nemagfx&quot;</span>, <a class="code hl_define" href="include_2lvgl_2config_2lv__conf__internal_8h.html#ac625c6111a24e08a81176e2c75e205b1">LV_DRAW_THREAD_PRIO</a>, nema_gfx_render_thread_cb, 2 * 1024,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                   draw_nema_gfx_unit);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keywordtype">void</span> lv_draw_nema_gfx_deinit(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> *   STATIC FUNCTIONS</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_init_handlers(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a3b8ae1591dcf4cc645174c9162755bec">lv_draw_buf_handlers_t</a> * handlers)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>{</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#if LV_NEMA_USE_CACHE</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    handlers-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__handlers__t.html#a71821f93b288ae3cca090518731ae5c1">invalidate_cache_cb</a> = lv_draw_nema_gfx_invalidate_cache;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    handlers-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__handlers__t.html#a7f8c4d8f77340056df6332373b72ab90">flush_cache_cb</a> = lv_draw_nema_gfx_flush_cache;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_draw_buf_nema_gfx_init_handlers(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    nema_gfx_init_handlers(<a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a5c274ee329e7ee2af59d61198af80175">lv_draw_buf_get_handlers</a>());</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    nema_gfx_init_handlers(<a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#ac254dd7bee8c6d5bf97f9b0591bc8a41">lv_draw_buf_get_font_handlers</a>());</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    nema_gfx_init_handlers(<a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a0d599e43a8cd6ffe9aab2cf08b782f91">lv_draw_buf_get_image_handlers</a>());</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_wait_for_finish(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>{</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *)draw_unit;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a>(&amp;(draw_nema_gfx_unit-&gt;cl));</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a>(&amp;(draw_nema_gfx_unit-&gt;cl));</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_evaluate(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * task)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *)draw_unit;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">switch</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a15c530b807c23a4a4faa6ffcc8a699ad">type</a>) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a5577994eb1b4db6c4bda372cabefee36">LV_DRAW_TASK_TYPE_LAYER</a>: {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">#if LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ad5fb24d59205f886eb6d970b0940456a">LV_DRAW_TASK_TYPE_TRIANGLE</a>:</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a9fb346adfcaee36afb59b91c3a39ddac">LV_DRAW_TASK_TYPE_ARC</a>:</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a1aabddd98e976cfa0b4abe1f658ce000">LV_DRAW_TASK_TYPE_FILL</a>: {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a1aabddd98e976cfa0b4abe1f658ce000">LV_DRAW_TASK_TYPE_FILL</a>: {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <a class="code hl_struct" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> * draw_fill_dsc = (<a class="code hl_struct" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                <span class="keywordflow">if</span>((draw_fill_dsc-&gt;grad.dir == (<a class="code hl_enumeration" href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90">lv_grad_dir_t</a>)<a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90a60a3da887d76575265882bdf7be3e3ae">LV_GRAD_DIR_NONE</a>)) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                    }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ad5fb24d59205f886eb6d970b0940456a">LV_DRAW_TASK_TYPE_TRIANGLE</a>: {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                <a class="code hl_struct" href="structlv__draw__triangle__dsc__t.html">lv_draw_triangle_dsc_t</a> * draw_triangle_dsc = (<a class="code hl_struct" href="structlv__draw__triangle__dsc__t.html">lv_draw_triangle_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>                <span class="keywordflow">if</span>((draw_triangle_dsc-&gt;grad.dir == (<a class="code hl_enumeration" href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90">lv_grad_dir_t</a>)<a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90a60a3da887d76575265882bdf7be3e3ae">LV_GRAD_DIR_NONE</a>)) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ac7db1e07a0e2c0a3e80249dbd13e3157">LV_DRAW_TASK_TYPE_IMAGE</a>: {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#ac28823722a4ebd410c27ae51d1b7bb24">lv_draw_image_dsc_t</a> * draw_image_dsc = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#ac28823722a4ebd410c27ae51d1b7bb24">lv_draw_image_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                <span class="comment">/*Guard for previous NemaGFX Version*/</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="preprocessor">#ifndef NEMA_BLOP_RECOLOR</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">if</span>(draw_image_dsc-&gt;recolor_opa &gt; <a class="code hl_define" href="include_2lvgl_2draw_2lv__color_8h.html#ac614bb0f5acc68f3b921f3213d46ac0f">LV_OPA_MIN</a>)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                <span class="keyword">const</span> <a class="code hl_struct" href="structlv__image__dsc__t.html">lv_image_dsc_t</a> * img_dsc = draw_image_dsc-&gt;src;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                <span class="keywordflow">if</span>(!lv_nemagfx_is_cf_supported(img_dsc-&gt;<a class="code hl_variable" href="structlv__image__dsc__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">header</a>.<a class="code hl_variable" href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">cf</a>))</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                <span class="keywordflow">if</span>(draw_image_dsc-&gt;blend_mode != <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__style_8h.html#a2e4fe7f18d18a05b245ee4a1fdaca0f9a632a80f5de7303b6f69c97dde652ac75">LV_BLEND_MODE_SUBTRACTIVE</a>) {</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a8739f8b909590e7ec949216954d73ad9">LV_DRAW_TASK_TYPE_LABEL</a>: {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <a class="code hl_struct" href="structlv__draw__label__dsc__t.html">lv_draw_label_dsc_t</a> * draw_label_dsc = (<a class="code hl_struct" href="structlv__draw__label__dsc__t.html">lv_draw_label_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                <a class="code hl_struct" href="structlv__font__fmt__txt__dsc__t.html">lv_font_fmt_txt_dsc_t</a> * fdsc = (<a class="code hl_struct" href="structlv__font__fmt__txt__dsc__t.html">lv_font_fmt_txt_dsc_t</a> *)(draw_label_dsc-&gt;font-&gt;dsc);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                <span class="keywordflow">if</span>(fdsc-&gt;<a class="code hl_variable" href="structlv__font__fmt__txt__dsc__t.html#af8b98795c6216b987c94c80fe1e16f5d">bitmap_format</a> != <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font__fmt__txt_8h.html#a76209871fa3571e5ca4f968ae5795b86ad65b5c6c4019594eb3539cf386d2e8e5">LV_FONT_FMT_TXT_COMPRESSED</a>) {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                    }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                }</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ae649a7e718e838c59cee472d14d0082a">LV_DRAW_TASK_TYPE_LINE</a>: {</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <a class="code hl_struct" href="structlv__draw__line__dsc__t.html">lv_draw_line_dsc_t</a> * draw_line_dsc = (<a class="code hl_struct" href="structlv__draw__line__dsc__t.html">lv_draw_line_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                <span class="keywordtype">bool</span> is_dashed = (draw_line_dsc-&gt;dash_width &amp;&amp; draw_line_dsc-&gt;dash_gap);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                <span class="keywordflow">if</span>(!is_dashed &amp;&amp; !(draw_line_dsc-&gt;round_end || draw_line_dsc-&gt;round_start)) {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a217d948fd5ac0018c3411896ff374fdf">LV_DRAW_TASK_TYPE_BORDER</a>: {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                <span class="keyword">const</span> <a class="code hl_struct" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> * draw_dsc = (<a class="code hl_struct" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *) task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                <span class="keywordflow">if</span>((!(draw_dsc-&gt;side != (<a class="code hl_enumeration" href="include_2lvgl_2core_2lv__style_8h.html#a44564ef354741f61227211aa690cc97d">lv_border_side_t</a>)<a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__style_8h.html#a44564ef354741f61227211aa690cc97da9cae2792fb8b898c531ed9e83f2ff79f">LV_BORDER_SIDE_FULL</a> &amp;&amp; draw_dsc-&gt;radius &gt; 0)) &amp;&amp;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                   (draw_dsc-&gt;radius &gt; draw_dsc-&gt;width)) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                    <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                        task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    }</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span><span class="preprocessor">#if LV_USE_VECTOR_GRAPHIC &amp;&amp; LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">case</span> LV_DRAW_TASK_TYPE_VECTOR: {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <span class="keywordflow">if</span>(task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> &gt; 80) {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">preference_score</a> = 80;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                    task-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> = DRAW_UNIT_ID_NEMA_GFX;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>                }</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>            }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a7b1cf93d694c3347df54fead02ccfcb7">LV_DRAW_TASK_TYPE_BOX_SHADOW</a>:</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a8d35594a428553debcccffe74f9b7a4e">LV_DRAW_TASK_TYPE_MASK_RECTANGLE</a>:</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ac313988a09fab193e24f911be2db4d7a">LV_DRAW_TASK_TYPE_MASK_BITMAP</a>:</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    }</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a>(&amp;(draw_nema_gfx_unit-&gt;cl));</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>}</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_dispatch(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * layer)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>{</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *) draw_unit;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">/* Return immediately if it&#39;s busy with draw task. */</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">if</span>(draw_nema_gfx_unit-&gt;task_act)</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="comment">/* Try to get an ready to draw. */</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * t = <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw_8h.html#a98289fd41b3eee7b45a82d5de98a64f8">lv_draw_get_available_task</a>(layer, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, DRAW_UNIT_ID_NEMA_GFX);</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="comment">/* Return 0 is no selection, some tasks can be supported by other units. */</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    <span class="keywordflow">if</span>(t == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> || t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">preferred_draw_unit_id</a> != DRAW_UNIT_ID_NEMA_GFX)</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="include_2lvgl_2draw_2lv__draw_8h.html#a7c617a91edd7bca9968a5cca817cae2d">LV_DRAW_UNIT_IDLE</a>;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordtype">void</span> * <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a> = <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw_8h.html#ad080a3d4c6749f0c14cb6663b4bbdab0">lv_draw_layer_alloc_buf</a>(layer);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">if</span>(buf == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a7722b3e958993a1a070becc413c17c2a">state</a> = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea76e631c7bb54e3eb6418702af2a4fdbe">LV_DRAW_TASK_STATE_FAILED</a>;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="include_2lvgl_2draw_2lv__draw_8h.html#a7c617a91edd7bca9968a5cca817cae2d">LV_DRAW_UNIT_IDLE</a>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a7722b3e958993a1a070becc413c17c2a">state</a> = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea0c0611804d134f66c4ac3e06bf518e1e">LV_DRAW_TASK_STATE_IN_PROGRESS</a>;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    draw_nema_gfx_unit-&gt;task_act = t;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#if LV_USE_OS</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="comment">/* Let the render thread work. */</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordflow">if</span>(draw_nema_gfx_unit-&gt;inited)</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <a class="code hl_function" href="lv__os__custom__c_8txt.html#a2f6ed83957fe7e44fe9e106c13957c92">lv_thread_sync_signal</a>(&amp;draw_nema_gfx_unit-&gt;sync);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    nema_gfx_execute_drawing(draw_nema_gfx_unit);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    draw_nema_gfx_unit-&gt;task_act-&gt;state = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea276d90622548441c3868426c35cbc81a">LV_DRAW_TASK_STATE_FINISHED</a>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    draw_nema_gfx_unit-&gt;task_act = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="comment">/* The draw unit is free now. Request a new dispatching as it can get a new task. */</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw_8h.html#a80d5afeb89b766f10b979b8d84edef7e">lv_draw_dispatch_request</a>();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>}</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_execute_drawing(lv_draw_nema_gfx_unit_t * u)</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>{</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * t = u-&gt;task_act;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="comment">/* remember draw unit for access to unit&#39;s context */</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">draw_unit</a> = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> *)u;</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * layer = t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">target_layer</a>;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> clipped_area;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="lv__area_8c.html#aebf8be947f901f46693b4c2956a805a0">lv_area_intersect</a>(&amp;clipped_area, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#ad117d39430de5b601fe878615e5bd961">_real_area</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a5a6ee2a7baa2a0a2b04811ab1d6f12c0">clip_area</a>)) {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="comment">/* Nothing to do */</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    x = 0 - t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">target_layer</a>-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    y = 0 - t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">target_layer</a>-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a>(&amp;clipped_area, x, y);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="comment">/* Clean cache */</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a4c2e82f6d51b4f38782b3e13917e4d20">lv_draw_buf_flush_cache</a>(layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">draw_buf</a>, &amp;clipped_area);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">switch</span>(t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a15c530b807c23a4a4faa6ffcc8a699ad">type</a>) {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a1aabddd98e976cfa0b4abe1f658ce000">LV_DRAW_TASK_TYPE_FILL</a>:</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            lv_draw_nema_gfx_fill(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ac7db1e07a0e2c0a3e80249dbd13e3157">LV_DRAW_TASK_TYPE_IMAGE</a>:</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            lv_draw_nema_gfx_img(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ad5fb24d59205f886eb6d970b0940456a">LV_DRAW_TASK_TYPE_TRIANGLE</a>:</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            lv_draw_nema_gfx_triangle(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a8739f8b909590e7ec949216954d73ad9">LV_DRAW_TASK_TYPE_LABEL</a>:</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            lv_draw_nema_gfx_label(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a5577994eb1b4db6c4bda372cabefee36">LV_DRAW_TASK_TYPE_LAYER</a>:</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            lv_draw_nema_gfx_layer(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ae649a7e718e838c59cee472d14d0082a">LV_DRAW_TASK_TYPE_LINE</a>:</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__line_8h.html#abb10282b1c0d17f2229b7b130dd227e0">lv_draw_line_iterate</a>(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, lv_draw_nema_gfx_line);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span><span class="preprocessor">#if LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a9fb346adfcaee36afb59b91c3a39ddac">LV_DRAW_TASK_TYPE_ARC</a>:</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            lv_draw_nema_gfx_arc(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a217d948fd5ac0018c3411896ff374fdf">LV_DRAW_TASK_TYPE_BORDER</a>:</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            lv_draw_nema_gfx_border(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="preprocessor">#if LV_USE_VECTOR_GRAPHIC &amp;&amp; LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        <span class="keywordflow">case</span> LV_DRAW_TASK_TYPE_VECTOR:</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>            lv_draw_nema_gfx_vector(t, t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">draw_dsc</a>, &amp;t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">area</a>);</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    }</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">#if !LV_USE_OS</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a>(&amp;(u-&gt;cl));</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="comment">/* Invalidate cache */</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#af73248ab8d53d76ec0026b1f4d9a1011">lv_draw_buf_invalidate_cache</a>(layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">draw_buf</a>, &amp;clipped_area);</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>}</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span> </div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> nema_gfx_delete(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a> * draw_unit)</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>{</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span><span class="preprocessor">#if LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    <span class="comment">/*Free VG Buffers*/</span></div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *) draw_unit;</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#a252d7c7ce2af0e71c6df03c4ec751ecc">nema_vg_paint_destroy</a>(draw_nema_gfx_unit-&gt;paint);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__path_8h.html#a24406eea32e54c11162502add67bfdee">nema_vg_path_destroy</a>(draw_nema_gfx_unit-&gt;path);</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#aa7198e32b48e30694b02616b2f167b54">nema_vg_grad_destroy</a>(draw_nema_gfx_unit-&gt;gradient);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="preprocessor">#if LV_USE_OS</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    lv_draw_nema_gfx_unit_t * _draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *) draw_unit;</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;Cancel NemaGFX draw thread.&quot;</span>);</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    _draw_nema_gfx_unit-&gt;exit_status = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="keywordflow">if</span>(_draw_nema_gfx_unit-&gt;inited)</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        <a class="code hl_function" href="lv__os__custom__c_8txt.html#a2f6ed83957fe7e44fe9e106c13957c92">lv_thread_sync_signal</a>(&amp;_draw_nema_gfx_unit-&gt;sync);</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>    <a class="code hl_enumeration" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> res = <a class="code hl_function" href="lv__os__custom__c_8txt.html#a42a0c6a7d3c107b17c0dc890c2ced9f6">lv_thread_delete</a>(&amp;_draw_nema_gfx_unit-&gt;thread);</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span> </div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span><span class="preprocessor">#if LV_USE_NEMA_VG == 0 &amp;&amp; LV_USE_OS == LV_OS_NONE</span></div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(draw_unit);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>}</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span> </div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span><span class="preprocessor">#if LV_USE_OS</span></div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span><span class="keyword">static</span> <span class="keywordtype">void</span> nema_gfx_render_thread_cb(<span class="keywordtype">void</span> * ptr)</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>{</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    lv_draw_nema_gfx_unit_t * u = ptr;</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>    <a class="code hl_function" href="lv__os__custom__c_8txt.html#a72798d3270549fda2f0a1078bbd304f7">lv_thread_sync_init</a>(&amp;u-&gt;sync);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    u-&gt;inited = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    <span class="keywordflow">while</span>(1) {</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        <span class="comment">/* Wait for sync if there is no task set. */</span></div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <span class="keywordflow">while</span>(u-&gt;task_act == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>            <span class="keywordflow">if</span>(u-&gt;exit_status)</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>            <a class="code hl_function" href="lv__os__custom__c_8txt.html#ac945c17078417f19d5c48c65991ab4d8">lv_thread_sync_wait</a>(&amp;u-&gt;sync);</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>        }</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>        <span class="keywordflow">if</span>(u-&gt;exit_status) {</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>            <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;Ready to exit NemaGFX draw thread.&quot;</span>);</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        }</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        <span class="keywordflow">if</span>(u-&gt;task_act) {</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>            nema_gfx_execute_drawing(u);</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>        }</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>        <span class="comment">/* Signal the ready state to dispatcher. */</span></div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>        u-&gt;task_act-&gt;state = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea276d90622548441c3868426c35cbc81a">LV_DRAW_TASK_STATE_FINISHED</a>;</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        <span class="comment">/* Cleanup. */</span></div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        u-&gt;task_act = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        <span class="comment">/* The draw unit is free now. Request a new dispatching as it can get a new task. */</span></div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>        <a class="code hl_function" href="include_2lvgl_2draw_2lv__draw_8h.html#a80d5afeb89b766f10b979b8d84edef7e">lv_draw_dispatch_request</a>();</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    }</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    u-&gt;inited = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    <a class="code hl_function" href="lv__os__custom__c_8txt.html#ac7315d3dbd6e8ceb41bb37f000ba6616">lv_thread_sync_delete</a>(&amp;u-&gt;sync);</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;Exit NemaGFX draw thread.&quot;</span>);</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>}</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_a18682aec6ae10597259998723e52c20d"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a></div><div class="ttdeci">void nema_cl_submit(nema_cmdlist_t *cl)</div><div class="ttdoc">Enqueue Command List to the Ring Buffer for execution.</div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_a689f1a3bbcc1ede893e31e4ebe2cd7c9"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#a689f1a3bbcc1ede893e31e4ebe2cd7c9">nema_cl_bind_circular</a></div><div class="ttdeci">void nema_cl_bind_circular(nema_cmdlist_t *cl)</div><div class="ttdoc">Define in which Command List each subsequent commands are going to be inserted. Bind this command lis...</div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_aa522f8367066a40d6a8507abcf64d682"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#aa522f8367066a40d6a8507abcf64d682">nema_cl_wait</a></div><div class="ttdeci">int nema_cl_wait(nema_cmdlist_t *cl)</div><div class="ttdoc">Wait for Command List to finish.</div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_aceffff0db109b49f32b1ab97e28be3a5"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#aceffff0db109b49f32b1ab97e28be3a5">nema_cl_create</a></div><div class="ttdeci">nema_cmdlist_t nema_cl_create(void)</div><div class="ttdoc">Create a new expandable Command List.</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_a5d89f80e3906e76d1c07d97600c13c1c"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#a5d89f80e3906e76d1c07d97600c13c1c">nema_init</a></div><div class="ttdeci">int nema_init(void)</div><div class="ttdoc">Initialize NemaGFX library.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg_8h_html_a2bad1ab4f7550c4983fce543cb06d2e6"><div class="ttname"><a href="cortex__m33_2nema__vg_8h.html#a2bad1ab4f7550c4983fce543cb06d2e6">nema_vg_init</a></div><div class="ttdeci">void nema_vg_init(int width, int height)</div><div class="ttdoc">Initializes NemaVG library and allocates the stencil buffer to the default memory pool (NEMA_MEM_POOL...</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_a252d7c7ce2af0e71c6df03c4ec751ecc"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#a252d7c7ce2af0e71c6df03c4ec751ecc">nema_vg_paint_destroy</a></div><div class="ttdeci">void nema_vg_paint_destroy(NEMA_VG_PAINT_HANDLE paint)</div><div class="ttdoc">Destroy a paint object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_aa60fb25b085e639e56d6a6ad0ccd0a27"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#aa60fb25b085e639e56d6a6ad0ccd0a27">nema_vg_grad_create</a></div><div class="ttdeci">NEMA_VG_GRAD_HANDLE nema_vg_grad_create(void)</div><div class="ttdoc">Create gradient object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_aa7198e32b48e30694b02616b2f167b54"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#aa7198e32b48e30694b02616b2f167b54">nema_vg_grad_destroy</a></div><div class="ttdeci">void nema_vg_grad_destroy(NEMA_VG_GRAD_HANDLE grad)</div><div class="ttdoc">Destroy gradient object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ad6bb961d27230d8fd6e17df9dda08227"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ad6bb961d27230d8fd6e17df9dda08227">nema_vg_paint_create</a></div><div class="ttdeci">NEMA_VG_PAINT_HANDLE nema_vg_paint_create()</div><div class="ttdoc">Create a paint object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a24406eea32e54c11162502add67bfdee"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a24406eea32e54c11162502add67bfdee">nema_vg_path_destroy</a></div><div class="ttdeci">void nema_vg_path_destroy(NEMA_VG_PATH_HANDLE path)</div><div class="ttdoc">Destroy path.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__path_8h_html_a4cd96a80b9d3e3720fcc3c4f5ab48f8a"><div class="ttname"><a href="cortex__m33_2nema__vg__path_8h.html#a4cd96a80b9d3e3720fcc3c4f5ab48f8a">nema_vg_path_create</a></div><div class="ttdeci">NEMA_VG_PATH_HANDLE nema_vg_path_create()</div><div class="ttdoc">Create path.</div></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2config_2lv__conf__internal_8h_html_a1faca55b39d15babfa507661df7b811d"><div class="ttname"><a href="include_2lvgl_2config_2lv__conf__internal_8h.html#a1faca55b39d15babfa507661df7b811d">LV_NEMA_GFX_MAX_RESY</a></div><div class="ttdeci">#define LV_NEMA_GFX_MAX_RESY</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l01010">lv_conf_internal.h:1010</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2config_2lv__conf__internal_8h_html_ac625c6111a24e08a81176e2c75e205b1"><div class="ttname"><a href="include_2lvgl_2config_2lv__conf__internal_8h.html#ac625c6111a24e08a81176e2c75e205b1">LV_DRAW_THREAD_PRIO</a></div><div class="ttdeci">#define LV_DRAW_THREAD_PRIO</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l00458">lv_conf_internal.h:458</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2config_2lv__conf__internal_8h_html_ad4ad715b0c204b2e090a46b3365aebc2"><div class="ttname"><a href="include_2lvgl_2config_2lv__conf__internal_8h.html#ad4ad715b0c204b2e090a46b3365aebc2">LV_NEMA_GFX_MAX_RESX</a></div><div class="ttdeci">#define LV_NEMA_GFX_MAX_RESX</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l01002">lv_conf_internal.h:1002</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_aac11b92df2af8c3c7f003975c401df87"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a></div><div class="ttdeci">void lv_area_move(lv_area_t *area, int32_t x_ofs, int32_t y_ofs)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00091">lv_area.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__style_8h_html_a2e4fe7f18d18a05b245ee4a1fdaca0f9a632a80f5de7303b6f69c97dde652ac75"><div class="ttname"><a href="include_2lvgl_2core_2lv__style_8h.html#a2e4fe7f18d18a05b245ee4a1fdaca0f9a632a80f5de7303b6f69c97dde652ac75">LV_BLEND_MODE_SUBTRACTIVE</a></div><div class="ttdeci">@ LV_BLEND_MODE_SUBTRACTIVE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__style_8h_source.html#l00092">lv_style.h:92</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__style_8h_html_a44564ef354741f61227211aa690cc97d"><div class="ttname"><a href="include_2lvgl_2core_2lv__style_8h.html#a44564ef354741f61227211aa690cc97d">lv_border_side_t</a></div><div class="ttdeci">lv_border_side_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__style_8h_source.html#l00111">lv_style.h:111</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__style_8h_html_a44564ef354741f61227211aa690cc97da9cae2792fb8b898c531ed9e83f2ff79f"><div class="ttname"><a href="include_2lvgl_2core_2lv__style_8h.html#a44564ef354741f61227211aa690cc97da9cae2792fb8b898c531ed9e83f2ff79f">LV_BORDER_SIDE_FULL</a></div><div class="ttdeci">@ LV_BORDER_SIDE_FULL</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__style_8h_source.html#l00117">lv_style.h:117</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_ac614bb0f5acc68f3b921f3213d46ac0f"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#ac614bb0f5acc68f3b921f3213d46ac0f">LV_OPA_MIN</a></div><div class="ttdeci">#define LV_OPA_MIN</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">lv_color.h:56</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a1aabddd98e976cfa0b4abe1f658ce000"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a1aabddd98e976cfa0b4abe1f658ce000">LV_DRAW_TASK_TYPE_FILL</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_FILL</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00048">lv_draw.h:48</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a217d948fd5ac0018c3411896ff374fdf"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a217d948fd5ac0018c3411896ff374fdf">LV_DRAW_TASK_TYPE_BORDER</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_BORDER</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00049">lv_draw.h:49</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a5577994eb1b4db6c4bda372cabefee36"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a5577994eb1b4db6c4bda372cabefee36">LV_DRAW_TASK_TYPE_LAYER</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_LAYER</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00054">lv_draw.h:54</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a7b1cf93d694c3347df54fead02ccfcb7"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a7b1cf93d694c3347df54fead02ccfcb7">LV_DRAW_TASK_TYPE_BOX_SHADOW</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_BOX_SHADOW</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00050">lv_draw.h:50</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a8739f8b909590e7ec949216954d73ad9"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a8739f8b909590e7ec949216954d73ad9">LV_DRAW_TASK_TYPE_LABEL</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_LABEL</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00052">lv_draw.h:52</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a8d35594a428553debcccffe74f9b7a4e"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a8d35594a428553debcccffe74f9b7a4e">LV_DRAW_TASK_TYPE_MASK_RECTANGLE</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_MASK_RECTANGLE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00058">lv_draw.h:58</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642a9fb346adfcaee36afb59b91c3a39ddac"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642a9fb346adfcaee36afb59b91c3a39ddac">LV_DRAW_TASK_TYPE_ARC</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_ARC</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00056">lv_draw.h:56</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642ac313988a09fab193e24f911be2db4d7a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ac313988a09fab193e24f911be2db4d7a">LV_DRAW_TASK_TYPE_MASK_BITMAP</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_MASK_BITMAP</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00059">lv_draw.h:59</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642ac7db1e07a0e2c0a3e80249dbd13e3157"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ac7db1e07a0e2c0a3e80249dbd13e3157">LV_DRAW_TASK_TYPE_IMAGE</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_IMAGE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00053">lv_draw.h:53</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642ad5fb24d59205f886eb6d970b0940456a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ad5fb24d59205f886eb6d970b0940456a">LV_DRAW_TASK_TYPE_TRIANGLE</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_TRIANGLE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00057">lv_draw.h:57</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a31081e44ca0ea35ec6ab292936058642ae649a7e718e838c59cee472d14d0082a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a31081e44ca0ea35ec6ab292936058642ae649a7e718e838c59cee472d14d0082a">LV_DRAW_TASK_TYPE_LINE</a></div><div class="ttdeci">@ LV_DRAW_TASK_TYPE_LINE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00055">lv_draw.h:55</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a7c617a91edd7bca9968a5cca817cae2d"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a7c617a91edd7bca9968a5cca817cae2d">LV_DRAW_UNIT_IDLE</a></div><div class="ttdeci">#define LV_DRAW_UNIT_IDLE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00034">lv_draw.h:34</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a80d5afeb89b766f10b979b8d84edef7e"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a80d5afeb89b766f10b979b8d84edef7e">lv_draw_dispatch_request</a></div><div class="ttdeci">void lv_draw_dispatch_request(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw_8c_source.html#l00322">lv_draw.c:322</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_a98289fd41b3eee7b45a82d5de98a64f8"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#a98289fd41b3eee7b45a82d5de98a64f8">lv_draw_get_available_task</a></div><div class="ttdeci">lv_draw_task_t * lv_draw_get_available_task(lv_layer_t *layer, lv_draw_task_t *t_prev, uint8_t draw_unit_id)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw_8c_source.html#l00338">lv_draw.c:338</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_ab7c58b87e84d6b99117fecfc06fcdc0a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#ab7c58b87e84d6b99117fecfc06fcdc0a">lv_draw_create_unit</a></div><div class="ttdeci">void * lv_draw_create_unit(size_t size)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw_8c_source.html#l00076">lv_draw.c:76</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_ad080a3d4c6749f0c14cb6663b4bbdab0"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#ad080a3d4c6749f0c14cb6663b4bbdab0">lv_draw_layer_alloc_buf</a></div><div class="ttdeci">void * lv_draw_layer_alloc_buf(lv_layer_t *layer)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw_8c_source.html#l00501">lv_draw.c:501</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_aeafaca5a968e361b38888e5433f5790ea0c0611804d134f66c4ac3e06bf518e1e"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea0c0611804d134f66c4ac3e06bf518e1e">LV_DRAW_TASK_STATE_IN_PROGRESS</a></div><div class="ttdeci">@ LV_DRAW_TASK_STATE_IN_PROGRESS</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00088">lv_draw.h:88</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_aeafaca5a968e361b38888e5433f5790ea276d90622548441c3868426c35cbc81a"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea276d90622548441c3868426c35cbc81a">LV_DRAW_TASK_STATE_FINISHED</a></div><div class="ttdeci">@ LV_DRAW_TASK_STATE_FINISHED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00092">lv_draw.h:92</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw_8h_html_aeafaca5a968e361b38888e5433f5790ea76e631c7bb54e3eb6418702af2a4fdbe"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw_8h.html#aeafaca5a968e361b38888e5433f5790ea76e631c7bb54e3eb6418702af2a4fdbe">LV_DRAW_TASK_STATE_FAILED</a></div><div class="ttdeci">@ LV_DRAW_TASK_STATE_FAILED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00095">lv_draw.h:95</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__buf_8h_html_a0d599e43a8cd6ffe9aab2cf08b782f91"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a0d599e43a8cd6ffe9aab2cf08b782f91">lv_draw_buf_get_image_handlers</a></div><div class="ttdeci">lv_draw_buf_handlers_t * lv_draw_buf_get_image_handlers(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf_8c_source.html#l00097">lv_draw_buf.c:97</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__buf_8h_html_a4c2e82f6d51b4f38782b3e13917e4d20"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a4c2e82f6d51b4f38782b3e13917e4d20">lv_draw_buf_flush_cache</a></div><div class="ttdeci">void lv_draw_buf_flush_cache(const lv_draw_buf_t *draw_buf, const lv_area_t *area)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf_8c_source.html#l00154">lv_draw_buf.c:154</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__buf_8h_html_a5c274ee329e7ee2af59d61198af80175"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a5c274ee329e7ee2af59d61198af80175">lv_draw_buf_get_handlers</a></div><div class="ttdeci">lv_draw_buf_handlers_t * lv_draw_buf_get_handlers(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf_8c_source.html#l00087">lv_draw_buf.c:87</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__buf_8h_html_ac254dd7bee8c6d5bf97f9b0591bc8a41"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__buf_8h.html#ac254dd7bee8c6d5bf97f9b0591bc8a41">lv_draw_buf_get_font_handlers</a></div><div class="ttdeci">lv_draw_buf_handlers_t * lv_draw_buf_get_font_handlers(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf_8c_source.html#l00092">lv_draw_buf.c:92</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__buf_8h_html_af73248ab8d53d76ec0026b1f4d9a1011"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__buf_8h.html#af73248ab8d53d76ec0026b1f4d9a1011">lv_draw_buf_invalidate_cache</a></div><div class="ttdeci">void lv_draw_buf_invalidate_cache(const lv_draw_buf_t *draw_buf, const lv_area_t *area)</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf_8c_source.html#l00132">lv_draw_buf.c:132</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__draw__line_8h_html_abb10282b1c0d17f2229b7b130dd227e0"><div class="ttname"><a href="include_2lvgl_2draw_2lv__draw__line_8h.html#abb10282b1c0d17f2229b7b130dd227e0">lv_draw_line_iterate</a></div><div class="ttdeci">void lv_draw_line_iterate(lv_draw_task_t *t, lv_draw_line_dsc_t *dsc, void(*draw_line_cb)(lv_draw_task_t *t, const lv_draw_line_dsc_t *dsc))</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__line_8c_source.html#l00135">lv_draw_line.c:135</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__grad_8h_html_a56ae635a653fde43c01434edf9df6a90"><div class="ttname"><a href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90">lv_grad_dir_t</a></div><div class="ttdeci">lv_grad_dir_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00031">lv_grad.h:31</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__grad_8h_html_a56ae635a653fde43c01434edf9df6a90a60a3da887d76575265882bdf7be3e3ae"><div class="ttname"><a href="include_2lvgl_2draw_2lv__grad_8h.html#a56ae635a653fde43c01434edf9df6a90a60a3da887d76575265882bdf7be3e3ae">LV_GRAD_DIR_NONE</a></div><div class="ttdeci">@ LV_GRAD_DIR_NONE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00032">lv_grad.h:32</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__font__fmt__txt_8h_html_a76209871fa3571e5ca4f968ae5795b86ad65b5c6c4019594eb3539cf386d2e8e5"><div class="ttname"><a href="include_2lvgl_2font_2lv__font__fmt__txt_8h.html#a76209871fa3571e5ca4f968ae5795b86ad65b5c6c4019594eb3539cf386d2e8e5">LV_FONT_FMT_TXT_COMPRESSED</a></div><div class="ttdeci">@ LV_FONT_FMT_TXT_COMPRESSED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00148">lv_font_fmt_txt.h:148</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_ad912d92d4a755984e83980ff3ee67673"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a></div><div class="ttdeci">#define LV_LOG_INFO(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">lv_log.h:162</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a3b8ae1591dcf4cc645174c9162755bec"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a3b8ae1591dcf4cc645174c9162755bec">lv_draw_buf_handlers_t</a></div><div class="ttdeci">struct _lv_draw_buf_handlers_t lv_draw_buf_handlers_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00346">lv_types.h:346</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a582c22621ba5b1fdf40a96325a0564e9"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a></div><div class="ttdeci">struct _lv_layer_t lv_layer_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00121">lv_types.h:121</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a></div><div class="ttdeci">lv_result_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00064">lv_types.h:64</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a9d358cfe063f80d7499a72b46429bf61"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a></div><div class="ttdeci">struct _lv_draw_task_t lv_draw_task_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00123">lv_types.h:123</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_abef3cb242f32d3c69635d7f9347620f6"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#abef3cb242f32d3c69635d7f9347620f6">lv_draw_unit_t</a></div><div class="ttdeci">struct _lv_draw_unit_t lv_draw_unit_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00122">lv_types.h:122</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ac28823722a4ebd410c27ae51d1b7bb24"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ac28823722a4ebd410c27ae51d1b7bb24">lv_draw_image_dsc_t</a></div><div class="ttdeci">struct _lv_draw_image_dsc_t lv_draw_image_dsc_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00148">lv_types.h:148</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ad07f3715eae2cfee3d5e0000edb150d7"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a></div><div class="ttdeci">#define LV_UNUSED(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00405">lv_types.h:405</a></div></div>
+<div class="ttc" id="alv__area_8c_html_aebf8be947f901f46693b4c2956a805a0"><div class="ttname"><a href="lv__area_8c.html#aebf8be947f901f46693b4c2956a805a0">lv_area_intersect</a></div><div class="ttdeci">bool lv_area_intersect(lv_area_t *res_p, const lv_area_t *a1_p, const lv_area_t *a2_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00100">lv_area.c:100</a></div></div>
+<div class="ttc" id="alv__draw__nema__gfx_8h_html"><div class="ttname"><a href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_a2f6ed83957fe7e44fe9e106c13957c92"><div class="ttname"><a href="lv__os__custom__c_8txt.html#a2f6ed83957fe7e44fe9e106c13957c92">lv_thread_sync_signal</a></div><div class="ttdeci">lv_result_t lv_thread_sync_signal(lv_thread_sync_t *sync)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00103">lv_os_custom_c.txt:103</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_a42a0c6a7d3c107b17c0dc890c2ced9f6"><div class="ttname"><a href="lv__os__custom__c_8txt.html#a42a0c6a7d3c107b17c0dc890c2ced9f6">lv_thread_delete</a></div><div class="ttdeci">lv_result_t lv_thread_delete(lv_thread_t *thread)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00052">lv_os_custom_c.txt:52</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_a72798d3270549fda2f0a1078bbd304f7"><div class="ttname"><a href="lv__os__custom__c_8txt.html#a72798d3270549fda2f0a1078bbd304f7">lv_thread_sync_init</a></div><div class="ttdeci">lv_result_t lv_thread_sync_init(lv_thread_sync_t *sync)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00089">lv_os_custom_c.txt:89</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_ac4b62e53f11770b6716a50141fccb55a"><div class="ttname"><a href="lv__os__custom__c_8txt.html#ac4b62e53f11770b6716a50141fccb55a">lv_thread_init</a></div><div class="ttdeci">lv_result_t lv_thread_init(lv_thread_t *thread, const char *const name, lv_thread_prio_t prio, void(*callback)(void *), size_t stack_size, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00039">lv_os_custom_c.txt:39</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_ac7315d3dbd6e8ceb41bb37f000ba6616"><div class="ttname"><a href="lv__os__custom__c_8txt.html#ac7315d3dbd6e8ceb41bb37f000ba6616">lv_thread_sync_delete</a></div><div class="ttdeci">lv_result_t lv_thread_sync_delete(lv_thread_sync_t *sync)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00110">lv_os_custom_c.txt:110</a></div></div>
+<div class="ttc" id="alv__os__custom__c_8txt_html_ac945c17078417f19d5c48c65991ab4d8"><div class="ttname"><a href="lv__os__custom__c_8txt.html#ac945c17078417f19d5c48c65991ab4d8">lv_thread_sync_wait</a></div><div class="ttdeci">lv_result_t lv_thread_sync_wait(lv_thread_sync_t *sync)</div><div class="ttdef"><b>Definition</b> <a href="lv__os__custom__c_8txt_source.html#l00096">lv_os_custom_c.txt:96</a></div></div>
+<div class="ttc" id="anamespacemicropy__test_1_1micropy_html_a680ed5d3fdf874dd4c8685cb51c3f1a6"><div class="ttname"><a href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">micropy_test.micropy.buf</a></div><div class="ttdeci">buf</div><div class="ttdef"><b>Definition</b> <a href="micropy_8py_source.html#l00019">micropy.py:19</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__handlers__t_html_a71821f93b288ae3cca090518731ae5c1"><div class="ttname"><a href="struct__lv__draw__buf__handlers__t.html#a71821f93b288ae3cca090518731ae5c1">_lv_draw_buf_handlers_t::invalidate_cache_cb</a></div><div class="ttdeci">lv_draw_buf_cache_operation_cb_t invalidate_cache_cb</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf__private_8h_source.html#l00032">lv_draw_buf_private.h:32</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__handlers__t_html_a7f8c4d8f77340056df6332373b72ab90"><div class="ttname"><a href="struct__lv__draw__buf__handlers__t.html#a7f8c4d8f77340056df6332373b72ab90">_lv_draw_buf_handlers_t::flush_cache_cb</a></div><div class="ttdeci">lv_draw_buf_cache_operation_cb_t flush_cache_cb</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__buf__private_8h_source.html#l00033">lv_draw_buf_private.h:33</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a06033bbeebba9fe22c96be484552a70b"><div class="ttname"><a href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">_lv_draw_task_t::target_layer</a></div><div class="ttdeci">lv_layer_t * target_layer</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00051">lv_draw_private.h:51</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a15c530b807c23a4a4faa6ffcc8a699ad"><div class="ttname"><a href="struct__lv__draw__task__t.html#a15c530b807c23a4a4faa6ffcc8a699ad">_lv_draw_task_t::type</a></div><div class="ttdeci">lv_draw_task_type_t type</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00033">lv_draw_private.h:33</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a2ad9255e9c76b693a7ba3f50d1c3cfb2"><div class="ttname"><a href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">_lv_draw_task_t::draw_unit</a></div><div class="ttdeci">lv_draw_unit_t * draw_unit</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00059">lv_draw_private.h:59</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a5a6ee2a7baa2a0a2b04811ab1d6f12c0"><div class="ttname"><a href="struct__lv__draw__task__t.html#a5a6ee2a7baa2a0a2b04811ab1d6f12c0">_lv_draw_task_t::clip_area</a></div><div class="ttdeci">lv_area_t clip_area</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00050">lv_draw_private.h:50</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a69ff90ce5573e47a938d46d0c8397c9f"><div class="ttname"><a href="struct__lv__draw__task__t.html#a69ff90ce5573e47a938d46d0c8397c9f">_lv_draw_task_t::preferred_draw_unit_id</a></div><div class="ttdeci">uint8_t preferred_draw_unit_id</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00071">lv_draw_private.h:71</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a6dfd071be40fc9c916bbe940b804750f"><div class="ttname"><a href="struct__lv__draw__task__t.html#a6dfd071be40fc9c916bbe940b804750f">_lv_draw_task_t::draw_dsc</a></div><div class="ttdeci">void * draw_dsc</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00063">lv_draw_private.h:63</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a7722b3e958993a1a070becc413c17c2a"><div class="ttname"><a href="struct__lv__draw__task__t.html#a7722b3e958993a1a070becc413c17c2a">_lv_draw_task_t::state</a></div><div class="ttdeci">volatile int state</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00061">lv_draw_private.h:61</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_acf8a60e11a143786402e8d9b57c8e103"><div class="ttname"><a href="struct__lv__draw__task__t.html#acf8a60e11a143786402e8d9b57c8e103">_lv_draw_task_t::area</a></div><div class="ttdeci">lv_area_t area</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00038">lv_draw_private.h:38</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_ad117d39430de5b601fe878615e5bd961"><div class="ttname"><a href="struct__lv__draw__task__t.html#ad117d39430de5b601fe878615e5bd961">_lv_draw_task_t::_real_area</a></div><div class="ttdeci">lv_area_t _real_area</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00043">lv_draw_private.h:43</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_ae97e2e00554cba0d727767423df936a7"><div class="ttname"><a href="struct__lv__draw__task__t.html#ae97e2e00554cba0d727767423df936a7">_lv_draw_task_t::preference_score</a></div><div class="ttdeci">uint8_t preference_score</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00079">lv_draw_private.h:79</a></div></div>
+<div class="ttc" id="astruct__lv__layer__t_html_a3d01d8a9b86b99401cab67b2ae32a2dc"><div class="ttname"><a href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">_lv_layer_t::buf_area</a></div><div class="ttdeci">lv_area_t buf_area</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00118">lv_draw.h:118</a></div></div>
+<div class="ttc" id="astruct__lv__layer__t_html_a74b9d911bd9840d84788e0587844e91f"><div class="ttname"><a href="struct__lv__layer__t.html#a74b9d911bd9840d84788e0587844e91f">_lv_layer_t::draw_buf</a></div><div class="ttdeci">lv_draw_buf_t * draw_buf</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00100">lv_draw.h:100</a></div></div>
+<div class="ttc" id="astructlv__area__t_html"><div class="ttname"><a href="structlv__area__t.html">lv_area_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00042">lv_area.h:42</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a00eed38fb678bbe97965bd9fdf9af6dc"><div class="ttname"><a href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">lv_area_t::x1</a></div><div class="ttdeci">int32_t x1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area.h:43</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_ae7d9f6a7144e1bf81a6dd4d1308e2578"><div class="ttname"><a href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">lv_area_t::y1</a></div><div class="ttdeci">int32_t y1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area.h:44</a></div></div>
+<div class="ttc" id="astructlv__draw__border__dsc__t_html"><div class="ttname"><a href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00095">lv_draw_rect.h:95</a></div></div>
+<div class="ttc" id="astructlv__draw__fill__dsc__t_html"><div class="ttname"><a href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00077">lv_draw_rect.h:77</a></div></div>
+<div class="ttc" id="astructlv__draw__label__dsc__t_html"><div class="ttname"><a href="structlv__draw__label__dsc__t.html">lv_draw_label_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__label_8h_source.html#l00032">lv_draw_label.h:32</a></div></div>
+<div class="ttc" id="astructlv__draw__line__dsc__t_html"><div class="ttname"><a href="structlv__draw__line__dsc__t.html">lv_draw_line_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__line_8h_source.html#l00035">lv_draw_line.h:35</a></div></div>
+<div class="ttc" id="astructlv__draw__triangle__dsc__t_html"><div class="ttname"><a href="structlv__draw__triangle__dsc__t.html">lv_draw_triangle_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__triangle_8h_source.html#l00026">lv_draw_triangle.h:26</a></div></div>
+<div class="ttc" id="astructlv__font__fmt__txt__dsc__t_html"><div class="ttname"><a href="structlv__font__fmt__txt__dsc__t.html">lv_font_fmt_txt_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00153">lv_font_fmt_txt.h:153</a></div></div>
+<div class="ttc" id="astructlv__font__fmt__txt__dsc__t_html_af8b98795c6216b987c94c80fe1e16f5d"><div class="ttname"><a href="structlv__font__fmt__txt__dsc__t.html#af8b98795c6216b987c94c80fe1e16f5d">lv_font_fmt_txt_dsc_t::bitmap_format</a></div><div class="ttdeci">uint8_t bitmap_format</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00190">lv_font_fmt_txt.h:190</a></div></div>
+<div class="ttc" id="astructlv__image__dsc__t_html"><div class="ttname"><a href="structlv__image__dsc__t.html">lv_image_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00143">lv_image_dsc.h:143</a></div></div>
+<div class="ttc" id="astructlv__image__dsc__t_html_a0fafdd32ced7869f3b5a0bde84cb9329"><div class="ttname"><a href="structlv__image__dsc__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">lv_image_dsc_t::header</a></div><div class="ttdeci">lv_image_header_t header</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00144">lv_image_dsc.h:144</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html_ac1a1d0af0ba96d034c8339af33dce82f"><div class="ttname"><a href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">lv_image_header_t::cf</a></div><div class="ttdeci">uint32_t cf</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_dsc.h:111</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_23a653447504d8eae6a2882d11b89ec8.html">nema_gfx</a></li><li class="navelem"><a href="lv__draw__nema__gfx_8c.html">lv_draw_nema_gfx.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

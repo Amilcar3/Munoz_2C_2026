@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/checkbox/lv_checkbox.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__checkbox_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_checkbox.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__checkbox__private_8h_source.html">lv_checkbox_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__private_8h_source.html">../../core/lv_obj_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__private_8h_source.html">../../misc/lv_text_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__ap_8h_source.html">../../misc/lv_text_ap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__font__private_8h_source.html">../../font/lv_font_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__checkbox_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#a8500f971a008e3831092fd22a6d89c95">lv_checkbox_class</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5c5039374c05ef2d4a1fa0e7b1de2dc2" id="r_a5c5039374c05ef2d4a1fa0e7b1de2dc2"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5c5039374c05ef2d4a1fa0e7b1de2dc2">lv_checkbox_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a4c4f7185c4595f43c63f316c275212e4" id="r_a4c4f7185c4595f43c63f316c275212e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c4f7185c4595f43c63f316c275212e4">lv_checkbox_set_text</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *txt)</td></tr>
+<tr class="memitem:aca4212e867b1c88b440b83277cb9a54d" id="r_aca4212e867b1c88b440b83277cb9a54d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aca4212e867b1c88b440b83277cb9a54d">lv_checkbox_set_text_static</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *txt)</td></tr>
+<tr class="memitem:a4bd54cf76cc928c7a02dea491f1849a4" id="r_a4bd54cf76cc928c7a02dea491f1849a4"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a4bd54cf76cc928c7a02dea491f1849a4">lv_checkbox_get_text</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8500f971a008e3831092fd22a6d89c95" id="r_a8500f971a008e3831092fd22a6d89c95"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8500f971a008e3831092fd22a6d89c95">lv_checkbox_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#a8500f971a008e3831092fd22a6d89c95">lv_checkbox_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00024">24</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a5c5039374c05ef2d4a1fa0e7b1de2dc2" name="a5c5039374c05ef2d4a1fa0e7b1de2dc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c5039374c05ef2d4a1fa0e7b1de2dc2">&#9670;&#160;</a></span>lv_checkbox_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_checkbox_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a check box object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the created check box </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00073">73</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__checkbox__bind__checked_8c_source.html#l00022">lv_example_checkbox_bind_checked()</a>, <a class="el" href="lv__example__checkbox__event_8c_source.html#l00023">lv_example_checkbox_event()</a>, <a class="el" href="lv__example__checkbox__states_8c_source.html#l00016">lv_example_checkbox_states()</a>, <a class="el" href="lv__example__checkbox__styling_8c_source.html#l00017">lv_example_checkbox_styling()</a>, <a class="el" href="lv__example__checkbox__text_8c_source.html#l00017">lv_example_checkbox_text()</a> y <a class="el" href="lv__example__flex__align_8c_source.html#l00016">lv_example_flex_align()</a>.</p>
+
+</div>
+</div>
+<a id="a4bd54cf76cc928c7a02dea491f1849a4" name="a4bd54cf76cc928c7a02dea491f1849a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd54cf76cc928c7a02dea491f1849a4">&#9670;&#160;</a></span>lv_checkbox_get_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * lv_checkbox_get_text </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the text of a check box </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to check box object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the text of the check box </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00139">139</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__checkbox__private_8h_source.html#l00036">_lv_checkbox_t::txt</a>.</p>
+
+</div>
+</div>
+<a id="a4c4f7185c4595f43c63f316c275212e4" name="a4c4f7185c4595f43c63f316c275212e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4f7185c4595f43c63f316c275212e4">&#9670;&#160;</a></span>lv_checkbox_set_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_checkbox_set_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>txt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the text of a check box. <span class="tt">txt</span> will be copied and may be deallocated after this function returns. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a check box </td></tr>
+    <tr><td class="paramname">txt</td><td>the text of the check box. @nullable When NULL the widget is only refreshed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00085">85</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a>, <a class="el" href="lv__mem_8c_source.html#l00149">lv_realloc()</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00273">lv_strcpy()</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00222">lv_strlen()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__checkbox__private_8h_source.html#l00037">_lv_checkbox_t::static_txt</a> y <a class="el" href="lv__checkbox__private_8h_source.html#l00036">_lv_checkbox_t::txt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__checkbox__bind__checked_8c_source.html#l00022">lv_example_checkbox_bind_checked()</a>, <a class="el" href="lv__example__checkbox__event_8c_source.html#l00023">lv_example_checkbox_event()</a>, <a class="el" href="lv__example__checkbox__states_8c_source.html#l00016">lv_example_checkbox_states()</a>, <a class="el" href="lv__example__checkbox__styling_8c_source.html#l00017">lv_example_checkbox_styling()</a>, <a class="el" href="lv__example__checkbox__text_8c_source.html#l00017">lv_example_checkbox_text()</a> y <a class="el" href="lv__example__flex__align_8c_source.html#l00016">lv_example_flex_align()</a>.</p>
+
+</div>
+</div>
+<a id="aca4212e867b1c88b440b83277cb9a54d" name="aca4212e867b1c88b440b83277cb9a54d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4212e867b1c88b440b83277cb9a54d">&#9670;&#160;</a></span>lv_checkbox_set_text_static()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_checkbox_set_text_static </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>txt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the text of a check box. <span class="tt">txt</span> must not be deallocated during the life of this checkbox. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a check box </td></tr>
+    <tr><td class="paramname">txt</td><td>the text of the check box. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00119">119</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00759">lv_obj_refresh_self_size()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__checkbox__private_8h_source.html#l00037">_lv_checkbox_t::static_txt</a> y <a class="el" href="lv__checkbox__private_8h_source.html#l00036">_lv_checkbox_t::txt</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a8500f971a008e3831092fd22a6d89c95" name="a8500f971a008e3831092fd22a6d89c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8500f971a008e3831092fd22a6d89c95">&#9670;&#160;</a></span>lv_checkbox_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_checkbox_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                       = {</div>
+<div class="line">    .constructor_cb = lv_checkbox_constructor,</div>
+<div class="line">    .destructor_cb = lv_checkbox_destructor,</div>
+<div class="line">    .event_cb = lv_checkbox_event,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .group_def = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a>,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a4daafad61c6a164984e3dde74d564459">lv_checkbox_t</a>),</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_checkbox&quot;</span>,</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a9b0bd6c8ea66bc349c7c697e46f7cf3c"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a></div><div class="ttdeci">#define LV_SIZE_CONTENT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00220">lv_area.h:220</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a3dac7d854054ae797b657fb483eb75ab"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_obj_class</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00348">lv_obj.c:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a></div><div class="ttdeci">@ LV_OBJ_CLASS_GROUP_DEF_TRUE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__class_8h_source.html#l00036">lv_obj_class.h:36</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a4daafad61c6a164984e3dde74d564459"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a4daafad61c6a164984e3dde74d564459">lv_checkbox_t</a></div><div class="ttdeci">struct _lv_checkbox_t lv_checkbox_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00214">lv_types.h:214</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__checkbox_8c_source.html#l00052">52</a> del archivo <a class="el" href="lv__checkbox_8c_source.html">lv_checkbox.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_e2188af306f86b4010e1cb63b98860b8.html">checkbox</a></li><li class="navelem"><a href="lv__checkbox_8c.html">lv_checkbox.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

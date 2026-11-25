@@ -1,0 +1,1848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: GC9A01</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('group___g_c9_a01.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GC9A01 <div class="ingroups"><a class="el" href="group___drivers___programable.html">Drivers Programable</a> &raquo; <a class="el" href="group___drivers___devices.html">Drivers devices</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Driver para el display TFT redondo de 1.28" (240x240, RGB565) con controlador GC9A01.  
+<a href="#details">Más...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ga3a8ee83d8806d5fd2eea93d6a8ee0e32" id="r_ga3a8ee83d8806d5fd2eea93d6a8ee0e32"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3a8ee83d8806d5fd2eea93d6a8ee0e32">GC9A01_WIDTH</a>&#160;&#160;&#160;240</td></tr>
+<tr class="memitem:ga06dbbc73fcc97ad61eefcebaf8296d09" id="r_ga06dbbc73fcc97ad61eefcebaf8296d09"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga06dbbc73fcc97ad61eefcebaf8296d09">GC9A01_HEIGHT</a>&#160;&#160;&#160;240</td></tr>
+<tr class="memitem:ga4525c4bd609083f6278e88ec0ee543e1" id="r_ga4525c4bd609083f6278e88ec0ee543e1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga4525c4bd609083f6278e88ec0ee543e1">GC9A01_CENTER_X</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memitem:ga0ed2cb2f4403bba61ce22e2886a92176" id="r_ga0ed2cb2f4403bba61ce22e2886a92176"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga0ed2cb2f4403bba61ce22e2886a92176">GC9A01_CENTER_Y</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memitem:ga9b5abf2299d76b8fd29e2050623008a7" id="r_ga9b5abf2299d76b8fd29e2050623008a7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga9b5abf2299d76b8fd29e2050623008a7">GC9A01_RADIUS</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memitem:gadad4b4228e8402bd3791b6749c015227" id="r_gadad4b4228e8402bd3791b6749c015227"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gadad4b4228e8402bd3791b6749c015227">GC9A01_NO_RST</a>&#160;&#160;&#160;0xFF</td></tr>
+<tr class="memitem:ga729bc5fd0ef79dff42b83f9b994ea006" id="r_ga729bc5fd0ef79dff42b83f9b994ea006"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga729bc5fd0ef79dff42b83f9b994ea006">GC9A01_COLOR</a>(r,  g,  b)</td></tr>
+<tr class="memitem:ga4eea514b3f10297e83914b978d87ca83" id="r_ga4eea514b3f10297e83914b978d87ca83"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga4eea514b3f10297e83914b978d87ca83">GC9A01_BLACK</a>&#160;&#160;&#160;0x0000  /*    0,   0,   0 */</td></tr>
+<tr class="memitem:ga1982006bf2c19eed5a37368fd6acb957" id="r_ga1982006bf2c19eed5a37368fd6acb957"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga1982006bf2c19eed5a37368fd6acb957">GC9A01_NAVY</a>&#160;&#160;&#160;0x000F  /*    0,   0, 128 */</td></tr>
+<tr class="memitem:ga167d5d76a0862499204fcd5773803501" id="r_ga167d5d76a0862499204fcd5773803501"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga167d5d76a0862499204fcd5773803501">GC9A01_DARKGREEN</a>&#160;&#160;&#160;0x03E0  /*    0, 128,   0 */</td></tr>
+<tr class="memitem:ga30bf604c3893dd39aadeb75b3fb50523" id="r_ga30bf604c3893dd39aadeb75b3fb50523"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga30bf604c3893dd39aadeb75b3fb50523">GC9A01_DARKCYAN</a>&#160;&#160;&#160;0x03EF  /*    0, 128, 128 */</td></tr>
+<tr class="memitem:ga334156de59c307da103fa1ac738837f5" id="r_ga334156de59c307da103fa1ac738837f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga334156de59c307da103fa1ac738837f5">GC9A01_MAROON</a>&#160;&#160;&#160;0x7800  /*  128,   0,   0 */</td></tr>
+<tr class="memitem:ga884af337a1936a7756029e70e8d780f0" id="r_ga884af337a1936a7756029e70e8d780f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga884af337a1936a7756029e70e8d780f0">GC9A01_PURPLE</a>&#160;&#160;&#160;0x780F  /*  128,   0, 128 */</td></tr>
+<tr class="memitem:ga48ea061eccd56e91aa4b0fc4a0e836b6" id="r_ga48ea061eccd56e91aa4b0fc4a0e836b6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga48ea061eccd56e91aa4b0fc4a0e836b6">GC9A01_OLIVE</a>&#160;&#160;&#160;0x7BE0  /*  128, 128,   0 */</td></tr>
+<tr class="memitem:ga7deb06b3b3f578e792247bc8a6ff988c" id="r_ga7deb06b3b3f578e792247bc8a6ff988c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7deb06b3b3f578e792247bc8a6ff988c">GC9A01_LIGHTGREY</a>&#160;&#160;&#160;0xC618  /*  192, 192, 192 */</td></tr>
+<tr class="memitem:ga8f6d63df26ec3e9db15116776a7816df" id="r_ga8f6d63df26ec3e9db15116776a7816df"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga8f6d63df26ec3e9db15116776a7816df">GC9A01_DARKGREY</a>&#160;&#160;&#160;0x7BEF  /*  128, 128, 128 */</td></tr>
+<tr class="memitem:gab58afddf6ae05aaca87fd6ef0159f67f" id="r_gab58afddf6ae05aaca87fd6ef0159f67f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gab58afddf6ae05aaca87fd6ef0159f67f">GC9A01_BLUE</a>&#160;&#160;&#160;0x001F  /*    0,   0, 255 */</td></tr>
+<tr class="memitem:ga3e6137dedf7cb938878203e7b7ae101b" id="r_ga3e6137dedf7cb938878203e7b7ae101b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga3e6137dedf7cb938878203e7b7ae101b">GC9A01_GREEN</a>&#160;&#160;&#160;0x07E0  /*    0, 255,   0 */</td></tr>
+<tr class="memitem:ga9ab19194482b72903696eda07ada2718" id="r_ga9ab19194482b72903696eda07ada2718"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga9ab19194482b72903696eda07ada2718">GC9A01_CYAN</a>&#160;&#160;&#160;0x07FF  /*    0, 255, 255 */</td></tr>
+<tr class="memitem:gabfc2288cac7e2a62274be3c0319abd8c" id="r_gabfc2288cac7e2a62274be3c0319abd8c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gabfc2288cac7e2a62274be3c0319abd8c">GC9A01_RED</a>&#160;&#160;&#160;0xF800  /*  255,   0,   0 */</td></tr>
+<tr class="memitem:ga474cd8d628f76b85341b3e2d631e1ffc" id="r_ga474cd8d628f76b85341b3e2d631e1ffc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga474cd8d628f76b85341b3e2d631e1ffc">GC9A01_MAGENTA</a>&#160;&#160;&#160;0xF81F  /*  255,   0, 255 */</td></tr>
+<tr class="memitem:gaa4632c5251987331be3de1bdf948e37a" id="r_gaa4632c5251987331be3de1bdf948e37a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaa4632c5251987331be3de1bdf948e37a">GC9A01_YELLOW</a>&#160;&#160;&#160;0xFFE0  /*  255, 255,   0 */</td></tr>
+<tr class="memitem:ga6a1a2592b8671200d66bfdaec6f4b234" id="r_ga6a1a2592b8671200d66bfdaec6f4b234"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6a1a2592b8671200d66bfdaec6f4b234">GC9A01_WHITE</a>&#160;&#160;&#160;0xFFFF  /*  255, 255, 255 */</td></tr>
+<tr class="memitem:ga6646232af8eed7112a8707ce254afef4" id="r_ga6646232af8eed7112a8707ce254afef4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga6646232af8eed7112a8707ce254afef4">GC9A01_ORANGE</a>&#160;&#160;&#160;0xFD20  /*  255, 165,   0 */</td></tr>
+<tr class="memitem:ga72b44f262bdcbe624167846dad3e0b73" id="r_ga72b44f262bdcbe624167846dad3e0b73"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga72b44f262bdcbe624167846dad3e0b73">GC9A01_GREENYELLOW</a>&#160;&#160;&#160;0xAFE5  /*  173, 255,  47 */</td></tr>
+<tr class="memitem:ga29ef2d50acac88b96b414fc3a9380af8" id="r_ga29ef2d50acac88b96b414fc3a9380af8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga29ef2d50acac88b96b414fc3a9380af8">GC9A01_PINK</a>&#160;&#160;&#160;0xFC18  /*  255, 130, 198 */</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:ga7c7b92836c55752912d2b1120216b446" id="r_ga7c7b92836c55752912d2b1120216b446"><td class="memItemLeft">typedef enum <a class="el" href="#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a></td></tr>
+<tr class="memdesc:ga7c7b92836c55752912d2b1120216b446"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotaciones posibles del display (múltiplos de 90 grados).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ga35a060331ab5261b48abcfedde124137" id="r_ga35a060331ab5261b48abcfedde124137"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a> { <a class="el" href="#gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3">GC9A01_ROTATION_0</a>
+, <a class="el" href="#gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39">GC9A01_ROTATION_90</a>
+, <a class="el" href="#gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c">GC9A01_ROTATION_180</a>
+, <a class="el" href="#gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257">GC9A01_ROTATION_270</a>
+ }</td></tr>
+<tr class="memdesc:ga35a060331ab5261b48abcfedde124137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotaciones posibles del display (múltiplos de 90 grados).  <a href="#ga35a060331ab5261b48abcfedde124137">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:gab98bba7e34a665ce7defdc3883a41c4f" id="r_gab98bba7e34a665ce7defdc3883a41c4f"><td class="memItemLeft"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#gab98bba7e34a665ce7defdc3883a41c4f">GC9A01Init</a> (<a class="el" href="group___s_p_i.html#ga7d468ea862538a179a76e97b9085f075">spi_dev_t</a> spi_dev, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> gpio_dc, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> gpio_rst)</td></tr>
+<tr class="memdesc:gab98bba7e34a665ce7defdc3883a41c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el display GC9A01.  <br /></td></tr>
+<tr class="memitem:ga9f66c7d62a651c8622f06c5420ba31bb" id="r_ga9f66c7d62a651c8622f06c5420ba31bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga9f66c7d62a651c8622f06c5420ba31bb">GC9A01DrawPixel</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga9f66c7d62a651c8622f06c5420ba31bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un píxel en el display.  <br /></td></tr>
+<tr class="memitem:gabfddd9754277f82ac98b86d70a2936a9" id="r_gabfddd9754277f82ac98b86d70a2936a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gabfddd9754277f82ac98b86d70a2936a9">GC9A01Fill</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:gabfddd9754277f82ac98b86d70a2936a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Llena todo el display con un color.  <br /></td></tr>
+<tr class="memitem:gaf296c866e3e6d7ce46792bc36cee1a55" id="r_gaf296c866e3e6d7ce46792bc36cee1a55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaf296c866e3e6d7ce46792bc36cee1a55">GC9A01Rotate</a> (<a class="el" href="#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a> rotation)</td></tr>
+<tr class="memdesc:gaf296c866e3e6d7ce46792bc36cee1a55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rota el display a una orientación determinada.  <br /></td></tr>
+<tr class="memitem:gaa9ae53ecfbf183d193cac3014cbee69d" id="r_gaa9ae53ecfbf183d193cac3014cbee69d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gaa9ae53ecfbf183d193cac3014cbee69d">GC9A01Invert</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> invert)</td></tr>
+<tr class="memdesc:gaa9ae53ecfbf183d193cac3014cbee69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activa o desactiva la inversión de colores del display.  <br /></td></tr>
+<tr class="memitem:ga6f46020455db5580ab1ab4a95b6ed357" id="r_ga6f46020455db5580ab1ab4a95b6ed357"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga6f46020455db5580ab1ab4a95b6ed357">GC9A01Sleep</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> sleep)</td></tr>
+<tr class="memdesc:ga6f46020455db5580ab1ab4a95b6ed357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entra o sale del modo de bajo consumo (sleep) del controlador.  <br /></td></tr>
+<tr class="memitem:gaea6616658f8d75e0cf3d191d5788e6e6" id="r_gaea6616658f8d75e0cf3d191d5788e6e6"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#gaea6616658f8d75e0cf3d191d5788e6e6">GC9A01IsVisible</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y)</td></tr>
+<tr class="memdesc:gaea6616658f8d75e0cf3d191d5788e6e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indica si un punto está dentro del círculo visible del display.  <br /></td></tr>
+<tr class="memitem:ga05d860a311c5fd723e38445aecfc6bae" id="r_ga05d860a311c5fd723e38445aecfc6bae"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga05d860a311c5fd723e38445aecfc6bae">GC9A01DrawChar</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, char data, const <a class="el" href="struct_font__t.html">Font_t</a> *font, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> foreground, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> background)</td></tr>
+<tr class="memdesc:ga05d860a311c5fd723e38445aecfc6bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un caracter en el display.  <br /></td></tr>
+<tr class="memitem:ga9057ce8c780f072662c0cda73b42ea85" id="r_ga9057ce8c780f072662c0cda73b42ea85"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga9057ce8c780f072662c0cda73b42ea85">GC9A01DrawIcon</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, <a class="el" href="group___i_c_o_n_s.html#ga945c9cb2ded81b38da222e91d09df40b">icon_t</a> icon, const <a class="el" href="structicon__font__t.html">icon_font_t</a> *icon_font, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> foreground, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> background)</td></tr>
+<tr class="memdesc:ga9057ce8c780f072662c0cda73b42ea85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un ícono en el display.  <br /></td></tr>
+<tr class="memitem:gae225f030628f5cc25bb8f44b86d98419" id="r_gae225f030628f5cc25bb8f44b86d98419"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gae225f030628f5cc25bb8f44b86d98419">GC9A01DrawInt</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> num, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> dig, const <a class="el" href="struct_font__t.html">Font_t</a> *font, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> foreground, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> background)</td></tr>
+<tr class="memdesc:gae225f030628f5cc25bb8f44b86d98419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un número entero en el display.  <br /></td></tr>
+<tr class="memitem:ga3a8fabebccf799b3eeb7c1a07eaadbb8" id="r_ga3a8fabebccf799b3eeb7c1a07eaadbb8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3a8fabebccf799b3eeb7c1a07eaadbb8">GC9A01DrawString</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, const char *str, const <a class="el" href="struct_font__t.html">Font_t</a> *font, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> foreground, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> background)</td></tr>
+<tr class="memdesc:ga3a8fabebccf799b3eeb7c1a07eaadbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una cadena de caracteres en el display.  <br /></td></tr>
+<tr class="memitem:ga1d2f36602472ca0d33821f79c6b99f11" id="r_ga1d2f36602472ca0d33821f79c6b99f11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga1d2f36602472ca0d33821f79c6b99f11">GC9A01GetStringSize</a> (const char *str, const <a class="el" href="struct_font__t.html">Font_t</a> *font, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *width, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *height)</td></tr>
+<tr class="memdesc:ga1d2f36602472ca0d33821f79c6b99f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene el ancho y alto que ocupa una cadena de caracteres.  <br /></td></tr>
+<tr class="memitem:ga390a949658f27dc576780b964b0d6111" id="r_ga390a949658f27dc576780b964b0d6111"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga390a949658f27dc576780b964b0d6111">GC9A01DrawLine</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga390a949658f27dc576780b964b0d6111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una línea en el display.  <br /></td></tr>
+<tr class="memitem:ga97c71ab34d185fcbd175612ff6852a00" id="r_ga97c71ab34d185fcbd175612ff6852a00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga97c71ab34d185fcbd175612ff6852a00">GC9A01DrawRectangle</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga97c71ab34d185fcbd175612ff6852a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un rectángulo en el display.  <br /></td></tr>
+<tr class="memitem:ga24cc5421859284ac70997a3d5885ccc3" id="r_ga24cc5421859284ac70997a3d5885ccc3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga24cc5421859284ac70997a3d5885ccc3">GC9A01DrawFilledRectangle</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y0, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y1, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga24cc5421859284ac70997a3d5885ccc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un rectángulo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga8c5d84f7509392f6635025d094a26ade" id="r_ga8c5d84f7509392f6635025d094a26ade"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga8c5d84f7509392f6635025d094a26ade">GC9A01DrawCircle</a> (<a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> r, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga8c5d84f7509392f6635025d094a26ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un círculo en el display.  <br /></td></tr>
+<tr class="memitem:ga9e503046c4f764ea6c6d190c17f97874" id="r_ga9e503046c4f764ea6c6d190c17f97874"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga9e503046c4f764ea6c6d190c17f97874">GC9A01DrawFilledCircle</a> (<a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> r, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga9e503046c4f764ea6c6d190c17f97874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un círculo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga521c3050df779f5f0a8bf70df8de84f6" id="r_ga521c3050df779f5f0a8bf70df8de84f6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga521c3050df779f5f0a8bf70df8de84f6">GC9A01DrawTriangle</a> (<a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x1, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y1, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x2, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y2, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:ga521c3050df779f5f0a8bf70df8de84f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja el contorno de un triángulo en el display.  <br /></td></tr>
+<tr class="memitem:gabee76a1d7ac171860bc54bcc855483d4" id="r_gabee76a1d7ac171860bc54bcc855483d4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gabee76a1d7ac171860bc54bcc855483d4">GC9A01DrawFilledTriangle</a> (<a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y0, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x1, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y1, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> x2, <a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a> y2, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> color)</td></tr>
+<tr class="memdesc:gabee76a1d7ac171860bc54bcc855483d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja un triángulo relleno en el display.  <br /></td></tr>
+<tr class="memitem:ga2bc2fddcdffe3b489f187dfb39394d96" id="r_ga2bc2fddcdffe3b489f187dfb39394d96"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2bc2fddcdffe3b489f187dfb39394d96">GC9A01DrawPicture</a> (<a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> x, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> y, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> width, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> height, const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *pic)</td></tr>
+<tr class="memdesc:ga2bc2fddcdffe3b489f187dfb39394d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dibuja una imagen en el display.  <br /></td></tr>
+<tr class="memitem:ga49f30e05ccd435918aec9d060528d173" id="r_ga49f30e05ccd435918aec9d060528d173"><td class="memItemLeft"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ga49f30e05ccd435918aec9d060528d173">GC9A01DeInit</a> (void)</td></tr>
+<tr class="memdesc:ga49f30e05ccd435918aec9d060528d173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desinicializa el display (apaga la pantalla).  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Driver para el display TFT redondo de 1.28" (240x240, RGB565) con controlador GC9A01. </p>
+<dl class="section note"><dt>Nota</dt><dd>Este driver sigue la misma estructura y la misma API que el driver ILI9341 de la cátedra (mismos nombres de funciones cambiando el prefijo), de modo que el código que usa el ILI9341 (por ejemplo roll_plot) se pueda portar cambiando solamente el prefijo. Utiliza el puerto SPI del ESP-EDU (spi_mcu) y 2 GPIO adicionales (DC y RST).</dd>
+<dd>
+La memoria de video es de 240x240 píxeles, pero la parte visible es un círculo de 120 px de radio. Los píxeles de las esquinas existen pero no se ven. Se incluye <a class="el" href="#gaea6616658f8d75e0cf3d191d5788e6e6" title="Indica si un punto está dentro del círculo visible del display.">GC9A01IsVisible()</a> para saber si un punto cae dentro del círculo visible.</dd>
+<dd>
+El driver NO es reentrante: usa un buffer interno compartido, por lo que todas las funciones deben llamarse desde una misma tarea (o protegerse con un mutex).</dd>
+<dd>
+Conexiones de hardware (MISO no se utiliza):</dd></dl>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Display GC9A01  </th><th class="markdownTableHeadLeft">ESP-EDU  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">SCL / CLK  </td><td class="markdownTableBodyLeft">GPIO_20  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">SDA / DIN (MOSI)  </td><td class="markdownTableBodyLeft">GPIO_21  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">CS  </td><td class="markdownTableBodyLeft">GPIO_19 (SPI_1)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">DC  </td><td class="markdownTableBodyLeft">GPIOx  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">RST  </td><td class="markdownTableBodyLeft">GPIOy  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">BLK (luz fondo)  </td><td class="markdownTableBodyLeft">3V3  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">VCC  </td><td class="markdownTableBodyLeft">3V3  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">GND  </td><td class="markdownTableBodyLeft">GND  </td></tr>
+</table>
+<dl class="section note"><dt>Nota</dt><dd>Sobre el código de inicialización: la secuencia de registros del controlador proviene del código de inicialización de la librería Adafruit_GC9A01A (Copyright Adafruit Industries, escrita por Limor "ladyada" Fried, licencia BSD). El resto del driver es propio y sigue la estructura del driver ILI9341 de la cátedra.</dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Amilcar Muñoz</dd></dl>
+<h1 class="doxsection"><a class="anchor" id="changelog"></a>
+Changelog</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Date  </th><th class="markdownTableHeadLeft">Description  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">30/09/2026  </td><td class="markdownTableBodyLeft">Creación del documento  </td></tr>
+</table>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="ga4eea514b3f10297e83914b978d87ca83" name="ga4eea514b3f10297e83914b978d87ca83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4eea514b3f10297e83914b978d87ca83">&#9670;&#160;</a></span>GC9A01_BLACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_BLACK&#160;&#160;&#160;0x0000  /*    0,   0,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00073">73</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="gab58afddf6ae05aaca87fd6ef0159f67f" name="gab58afddf6ae05aaca87fd6ef0159f67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab58afddf6ae05aaca87fd6ef0159f67f">&#9670;&#160;</a></span>GC9A01_BLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_BLUE&#160;&#160;&#160;0x001F  /*    0,   0, 255 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00082">82</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga4525c4bd609083f6278e88ec0ee543e1" name="ga4525c4bd609083f6278e88ec0ee543e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4525c4bd609083f6278e88ec0ee543e1">&#9670;&#160;</a></span>GC9A01_CENTER_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_CENTER_X&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coordenada x del centro del círculo visible </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00061">61</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga0ed2cb2f4403bba61ce22e2886a92176" name="ga0ed2cb2f4403bba61ce22e2886a92176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ed2cb2f4403bba61ce22e2886a92176">&#9670;&#160;</a></span>GC9A01_CENTER_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_CENTER_Y&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coordenada y del centro del círculo visible </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00062">62</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga729bc5fd0ef79dff42b83f9b994ea006" name="ga729bc5fd0ef79dff42b83f9b994ea006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga729bc5fd0ef79dff42b83f9b994ea006">&#9670;&#160;</a></span>GC9A01_COLOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_COLOR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">((<a class="code hl_typedef" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>)((((r) &amp; 0xF8) &lt;&lt; 8) | (((g) &amp; 0xFC) &lt;&lt; 3) | ((b) &gt;&gt; 3)))</div>
+<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00125">stdint.h:125</a></div></div>
+</div><!-- fragment --><p>Convierte un color RGB de 8 bits por canal a RGB565 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00070">70</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9ab19194482b72903696eda07ada2718" name="ga9ab19194482b72903696eda07ada2718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ab19194482b72903696eda07ada2718">&#9670;&#160;</a></span>GC9A01_CYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_CYAN&#160;&#160;&#160;0x07FF  /*    0, 255, 255 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00084">84</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga30bf604c3893dd39aadeb75b3fb50523" name="ga30bf604c3893dd39aadeb75b3fb50523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30bf604c3893dd39aadeb75b3fb50523">&#9670;&#160;</a></span>GC9A01_DARKCYAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_DARKCYAN&#160;&#160;&#160;0x03EF  /*    0, 128, 128 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00076">76</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga167d5d76a0862499204fcd5773803501" name="ga167d5d76a0862499204fcd5773803501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga167d5d76a0862499204fcd5773803501">&#9670;&#160;</a></span>GC9A01_DARKGREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_DARKGREEN&#160;&#160;&#160;0x03E0  /*    0, 128,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00075">75</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga8f6d63df26ec3e9db15116776a7816df" name="ga8f6d63df26ec3e9db15116776a7816df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f6d63df26ec3e9db15116776a7816df">&#9670;&#160;</a></span>GC9A01_DARKGREY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_DARKGREY&#160;&#160;&#160;0x7BEF  /*  128, 128, 128 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00081">81</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3e6137dedf7cb938878203e7b7ae101b" name="ga3e6137dedf7cb938878203e7b7ae101b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e6137dedf7cb938878203e7b7ae101b">&#9670;&#160;</a></span>GC9A01_GREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_GREEN&#160;&#160;&#160;0x07E0  /*    0, 255,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00083">83</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga72b44f262bdcbe624167846dad3e0b73" name="ga72b44f262bdcbe624167846dad3e0b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72b44f262bdcbe624167846dad3e0b73">&#9670;&#160;</a></span>GC9A01_GREENYELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_GREENYELLOW&#160;&#160;&#160;0xAFE5  /*  173, 255,  47 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00090">90</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga06dbbc73fcc97ad61eefcebaf8296d09" name="ga06dbbc73fcc97ad61eefcebaf8296d09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06dbbc73fcc97ad61eefcebaf8296d09">&#9670;&#160;</a></span>GC9A01_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_HEIGHT&#160;&#160;&#160;240</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Alto del display en píxeles </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00060">60</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00629">GC9A01DrawPicture()</a>, <a class="el" href="gc9a01_8c_source.html#l00351">GC9A01DrawPixel()</a>, <a class="el" href="gc9a01_8c_source.html#l00360">GC9A01Fill()</a> y <a class="el" href="gc9a01_8c_source.html#l00399">GC9A01IsVisible()</a>.</p>
+
+</div>
+</div>
+<a id="ga7deb06b3b3f578e792247bc8a6ff988c" name="ga7deb06b3b3f578e792247bc8a6ff988c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7deb06b3b3f578e792247bc8a6ff988c">&#9670;&#160;</a></span>GC9A01_LIGHTGREY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_LIGHTGREY&#160;&#160;&#160;0xC618  /*  192, 192, 192 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00080">80</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga474cd8d628f76b85341b3e2d631e1ffc" name="ga474cd8d628f76b85341b3e2d631e1ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga474cd8d628f76b85341b3e2d631e1ffc">&#9670;&#160;</a></span>GC9A01_MAGENTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_MAGENTA&#160;&#160;&#160;0xF81F  /*  255,   0, 255 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00086">86</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga334156de59c307da103fa1ac738837f5" name="ga334156de59c307da103fa1ac738837f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga334156de59c307da103fa1ac738837f5">&#9670;&#160;</a></span>GC9A01_MAROON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_MAROON&#160;&#160;&#160;0x7800  /*  128,   0,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00077">77</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga1982006bf2c19eed5a37368fd6acb957" name="ga1982006bf2c19eed5a37368fd6acb957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1982006bf2c19eed5a37368fd6acb957">&#9670;&#160;</a></span>GC9A01_NAVY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_NAVY&#160;&#160;&#160;0x000F  /*    0,   0, 128 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00074">74</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="gadad4b4228e8402bd3791b6749c015227" name="gadad4b4228e8402bd3791b6749c015227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadad4b4228e8402bd3791b6749c015227">&#9670;&#160;</a></span>GC9A01_NO_RST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_NO_RST&#160;&#160;&#160;0xFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Valor a pasar como gpio_rst en <a class="el" href="#gab98bba7e34a665ce7defdc3883a41c4f" title="Inicializa el display GC9A01.">GC9A01Init()</a> si el pin RST del display no está conectado (en ese caso se usa reset por software) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00067">67</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="ga48ea061eccd56e91aa4b0fc4a0e836b6" name="ga48ea061eccd56e91aa4b0fc4a0e836b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48ea061eccd56e91aa4b0fc4a0e836b6">&#9670;&#160;</a></span>GC9A01_OLIVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_OLIVE&#160;&#160;&#160;0x7BE0  /*  128, 128,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00079">79</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga6646232af8eed7112a8707ce254afef4" name="ga6646232af8eed7112a8707ce254afef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6646232af8eed7112a8707ce254afef4">&#9670;&#160;</a></span>GC9A01_ORANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_ORANGE&#160;&#160;&#160;0xFD20  /*  255, 165,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00089">89</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga29ef2d50acac88b96b414fc3a9380af8" name="ga29ef2d50acac88b96b414fc3a9380af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29ef2d50acac88b96b414fc3a9380af8">&#9670;&#160;</a></span>GC9A01_PINK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_PINK&#160;&#160;&#160;0xFC18  /*  255, 130, 198 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00091">91</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga884af337a1936a7756029e70e8d780f0" name="ga884af337a1936a7756029e70e8d780f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga884af337a1936a7756029e70e8d780f0">&#9670;&#160;</a></span>GC9A01_PURPLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_PURPLE&#160;&#160;&#160;0x780F  /*  128,   0, 128 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00078">78</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga9b5abf2299d76b8fd29e2050623008a7" name="ga9b5abf2299d76b8fd29e2050623008a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b5abf2299d76b8fd29e2050623008a7">&#9670;&#160;</a></span>GC9A01_RADIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_RADIUS&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio del círculo visible en píxeles </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00063">63</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00399">GC9A01IsVisible()</a>.</p>
+
+</div>
+</div>
+<a id="gabfc2288cac7e2a62274be3c0319abd8c" name="gabfc2288cac7e2a62274be3c0319abd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabfc2288cac7e2a62274be3c0319abd8c">&#9670;&#160;</a></span>GC9A01_RED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_RED&#160;&#160;&#160;0xF800  /*  255,   0,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00085">85</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga6a1a2592b8671200d66bfdaec6f4b234" name="ga6a1a2592b8671200d66bfdaec6f4b234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6a1a2592b8671200d66bfdaec6f4b234">&#9670;&#160;</a></span>GC9A01_WHITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_WHITE&#160;&#160;&#160;0xFFFF  /*  255, 255, 255 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00088">88</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a id="ga3a8ee83d8806d5fd2eea93d6a8ee0e32" name="ga3a8ee83d8806d5fd2eea93d6a8ee0e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a8ee83d8806d5fd2eea93d6a8ee0e32">&#9670;&#160;</a></span>GC9A01_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_WIDTH&#160;&#160;&#160;240</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ancho del display en píxeles </p>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00059">59</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00629">GC9A01DrawPicture()</a>, <a class="el" href="gc9a01_8c_source.html#l00351">GC9A01DrawPixel()</a>, <a class="el" href="gc9a01_8c_source.html#l00360">GC9A01Fill()</a> y <a class="el" href="gc9a01_8c_source.html#l00399">GC9A01IsVisible()</a>.</p>
+
+</div>
+</div>
+<a id="gaa4632c5251987331be3de1bdf948e37a" name="gaa4632c5251987331be3de1bdf948e37a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4632c5251987331be3de1bdf948e37a">&#9670;&#160;</a></span>GC9A01_YELLOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GC9A01_YELLOW&#160;&#160;&#160;0xFFE0  /*  255, 255,   0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00087">87</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="ga7c7b92836c55752912d2b1120216b446" name="ga7c7b92836c55752912d2b1120216b446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c7b92836c55752912d2b1120216b446">&#9670;&#160;</a></span>gc9a01_rotation_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a> <a class="el" href="#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotaciones posibles del display (múltiplos de 90 grados). </p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="ga35a060331ab5261b48abcfedde124137" name="ga35a060331ab5261b48abcfedde124137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35a060331ab5261b48abcfedde124137">&#9670;&#160;</a></span>gc9a01_rotation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ga35a060331ab5261b48abcfedde124137">gc9a01_rotation</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotaciones posibles del display (múltiplos de 90 grados). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3" name="gga35a060331ab5261b48abcfedde124137a52f5a2dc20804e6e090c7ef56e29f5d3"></a>GC9A01_ROTATION_0&#160;</td><td class="fielddoc"><p>Orientación por defecto después de <a class="el" href="#gab98bba7e34a665ce7defdc3883a41c4f" title="Inicializa el display GC9A01.">GC9A01Init()</a> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39" name="gga35a060331ab5261b48abcfedde124137ab358427e7c30c77beff303d68b435a39"></a>GC9A01_ROTATION_90&#160;</td><td class="fielddoc"><p>Rotado 90 grados respecto de la orientación por defecto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c" name="gga35a060331ab5261b48abcfedde124137a3672946329fc744c93c8583c68ca572c"></a>GC9A01_ROTATION_180&#160;</td><td class="fielddoc"><p>Rotado 180 grados respecto de la orientación por defecto </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257" name="gga35a060331ab5261b48abcfedde124137a1554d35d83eedc6f447d64ec98700257"></a>GC9A01_ROTATION_270&#160;</td><td class="fielddoc"><p>Rotado 270 grados respecto de la orientación por defecto </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8h_source.html#l00096">96</a> del archivo <a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="ga49f30e05ccd435918aec9d060528d173" name="ga49f30e05ccd435918aec9d060528d173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49f30e05ccd435918aec9d060528d173">&#9670;&#160;</a></span>GC9A01DeInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> GC9A01DeInit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Desinicializa el display (apaga la pantalla). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>si tuvo éxito, 0 si falla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00662">662</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8c_source.html#l00041">CMD_DISPOFF</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="ga05d860a311c5fd723e38445aecfc6bae" name="ga05d860a311c5fd723e38445aecfc6bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05d860a311c5fd723e38445aecfc6bae">&#9670;&#160;</a></span>GC9A01DrawChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawChar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_font__t.html">Font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>foreground</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>background</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un caracter en el display. </p>
+<dl class="section note"><dt>Nota</dt><dd>Si el caracter no entra completo en pantalla se recorta. Los caracteres fuera del rango <a class="el" href="struct_a_s_c_i_i.html" title="ASCII encoding.">ASCII</a> 32 a 126 no se dibujan. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>Caracter a mostrar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Puntero a la fuente a utilizar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foreground</td><td>Color del caracter (RGB565) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Color de fondo del caracter (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00407">407</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="fonts_8h_source.html#l00046">Font_t::data</a>, <a class="el" href="fonts_8h_source.html#l00044">Font_t::font_height</a>, <a class="el" href="fonts_8h_source.html#l00045">Font_t::info</a>, <a class="el" href="fonts_8h_source.html#l00038">char_info_t::offset</a> y <a class="el" href="fonts_8h_source.html#l00037">char_info_t::width</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00421">GC9A01DrawInt()</a> y <a class="el" href="gc9a01_8c_source.html#l00447">GC9A01DrawString()</a>.</p>
+
+</div>
+</div>
+<a id="ga8c5d84f7509392f6635025d094a26ade" name="ga8c5d84f7509392f6635025d094a26ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c5d84f7509392f6635025d094a26ade">&#9670;&#160;</a></span>GC9A01DrawCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawCircle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja el contorno de un círculo en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x del centro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y del centro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Radio del círculo </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del círculo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00541">541</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ga9e503046c4f764ea6c6d190c17f97874" name="ga9e503046c4f764ea6c6d190c17f97874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e503046c4f764ea6c6d190c17f97874">&#9670;&#160;</a></span>GC9A01DrawFilledCircle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawFilledCircle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un círculo relleno en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x del centro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y del centro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Radio del círculo </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del círculo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00566">566</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ga24cc5421859284ac70997a3d5885ccc3" name="ga24cc5421859284ac70997a3d5885ccc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24cc5421859284ac70997a3d5885ccc3">&#9670;&#160;</a></span>GC9A01DrawFilledRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawFilledRectangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un rectángulo relleno en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x de un vértice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y de un vértice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Coordenada x del vértice opuesto </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Coordenada y del vértice opuesto </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del rectángulo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00537">537</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="gabee76a1d7ac171860bc54bcc855483d4" name="gabee76a1d7ac171860bc54bcc855483d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabee76a1d7ac171860bc54bcc855483d4">&#9670;&#160;</a></span>GC9A01DrawFilledTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawFilledTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un triángulo relleno en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x del vértice 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y del vértice 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Coordenada x del vértice 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Coordenada y del vértice 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>Coordenada x del vértice 2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y2</td><td>Coordenada y del vértice 2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del triángulo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00594">594</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00086">by</a>.</p>
+
+</div>
+</div>
+<a id="ga9057ce8c780f072662c0cda73b42ea85" name="ga9057ce8c780f072662c0cda73b42ea85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9057ce8c780f072662c0cda73b42ea85">&#9670;&#160;</a></span>GC9A01DrawIcon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawIcon </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___i_c_o_n_s.html#ga945c9cb2ded81b38da222e91d09df40b">icon_t</a></td>          <td class="paramname"><span class="paramname"><em>icon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structicon__font__t.html">icon_font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>icon_font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>foreground</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>background</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un ícono en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">icon</td><td>Ícono a mostrar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">icon_font</td><td>Puntero a la fuente de íconos a utilizar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foreground</td><td>Color del ícono (RGB565) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Color de fondo del ícono (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00416">416</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="icons_8h_source.html#l00108">icon_font_t::data</a>, <a class="el" href="icons_8h_source.html#l00105">icon_font_t::height</a>, <a class="el" href="icons_8h_source.html#l00107">icon_font_t::offset</a> y <a class="el" href="icons_8h_source.html#l00106">icon_font_t::width</a>.</p>
+
+</div>
+</div>
+<a id="gae225f030628f5cc25bb8f44b86d98419" name="gae225f030628f5cc25bb8f44b86d98419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae225f030628f5cc25bb8f44b86d98419">&#9670;&#160;</a></span>GC9A01DrawInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawInt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>num</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>dig</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_font__t.html">Font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>foreground</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>background</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un número entero en el display. </p>
+<dl class="section note"><dt>Nota</dt><dd>Siempre se muestran "dig" dígitos: si el número tiene menos, se completa con ceros a la izquierda; si tiene más, se muestran solo los "dig" menos significativos. Cada dígito ocupa una celda de ancho fijo (el del dígito más ancho de la fuente + 1 píxel), por lo que los dígitos no se superponen y al redibujar un número que cambia no quedan restos del valor anterior. El ancho total es dig * (ancho de celda). </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y de la esquina superior izquierda </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num</td><td>Número a mostrar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dig</td><td>Cantidad de dígitos a mostrar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Puntero a la fuente a utilizar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foreground</td><td>Color del caracter (RGB565) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Color de fondo del caracter (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00421">421</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="fonts_8h_source.html#l00044">Font_t::font_height</a>, <a class="el" href="gc9a01_8c_source.html#l00407">GC9A01DrawChar()</a>, <a class="el" href="fonts_8h_source.html#l00045">Font_t::info</a> y <a class="el" href="fonts_8h_source.html#l00037">char_info_t::width</a>.</p>
+
+</div>
+</div>
+<a id="ga390a949658f27dc576780b964b0d6111" name="ga390a949658f27dc576780b964b0d6111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga390a949658f27dc576780b964b0d6111">&#9670;&#160;</a></span>GC9A01DrawLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja una línea en el display. </p>
+<dl class="section note"><dt>Nota</dt><dd>La línea se recorta al área de pantalla, por lo que se pueden pasar puntos fuera del display. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x del punto inicial </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y del punto inicial </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Coordenada x del punto final </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Coordenada y del punto final </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color de la línea (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00476">476</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ga2bc2fddcdffe3b489f187dfb39394d96" name="ga2bc2fddcdffe3b489f187dfb39394d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bc2fddcdffe3b489f187dfb39394d96">&#9670;&#160;</a></span>GC9A01DrawPicture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawPicture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> *</td>          <td class="paramname"><span class="paramname"><em>pic</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja una imagen en el display. </p>
+<dl class="section note"><dt>Nota</dt><dd>La imagen debe estar convertida a un arreglo de <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> con 2 bytes por píxel (RGB565, byte alto primero). Para eso se puede usar <a href="http://www.digole.com/tools/PicturetoC_Hex_converter.php">http://www.digole.com/tools/PicturetoC_Hex_converter.php</a>, seleccionando la opción "65K Color (2 bytes/pixel)". Si la imagen no entra completa en pantalla se recorta. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x de la esquina superior izquierda de la imagen </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y de la esquina superior izquierda de la imagen </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Ancho de la imagen en píxeles </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Alto de la imagen en píxeles </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pic</td><td>Puntero al primer byte de la imagen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00629">629</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8h_source.html#l00060">GC9A01_HEIGHT</a>, <a class="el" href="gc9a01_8h_source.html#l00059">GC9A01_WIDTH</a> y <a class="el" href="gc9a01_8c_source.html#l00029">TX_BUF_SIZE</a>.</p>
+
+</div>
+</div>
+<a id="ga9f66c7d62a651c8622f06c5420ba31bb" name="ga9f66c7d62a651c8622f06c5420ba31bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f66c7d62a651c8622f06c5420ba31bb">&#9670;&#160;</a></span>GC9A01DrawPixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawPixel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja un píxel en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x del píxel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y del píxel </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del píxel (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00351">351</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8c_source.html#l00045">CMD_RAMWR</a>, <a class="el" href="gc9a01_8h_source.html#l00060">GC9A01_HEIGHT</a> y <a class="el" href="gc9a01_8h_source.html#l00059">GC9A01_WIDTH</a>.</p>
+
+</div>
+</div>
+<a id="ga97c71ab34d185fcbd175612ff6852a00" name="ga97c71ab34d185fcbd175612ff6852a00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97c71ab34d185fcbd175612ff6852a00">&#9670;&#160;</a></span>GC9A01DrawRectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawRectangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja el contorno de un rectángulo en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x de un vértice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y de un vértice </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Coordenada x del vértice opuesto </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Coordenada y del vértice opuesto </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del rectángulo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00527">527</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="ga3a8fabebccf799b3eeb7c1a07eaadbb8" name="ga3a8fabebccf799b3eeb7c1a07eaadbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a8fabebccf799b3eeb7c1a07eaadbb8">&#9670;&#160;</a></span>GC9A01DrawString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_font__t.html">Font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>foreground</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>background</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja una cadena de caracteres en el display. </p>
+<dl class="section note"><dt>Nota</dt><dd>'<br  />
+' baja una línea y vuelve a la posición x inicial. '\r' vuelve al borde izquierdo. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x de la esquina superior izquierda del primer caracter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y de la esquina superior izquierda del primer caracter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Puntero al primer caracter de la cadena </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Puntero a la fuente a utilizar </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foreground</td><td>Color de la cadena (RGB565) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">background</td><td>Color de fondo de la cadena (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00447">447</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="fonts_8h_source.html#l00044">Font_t::font_height</a>, <a class="el" href="gc9a01_8c_source.html#l00407">GC9A01DrawChar()</a>, <a class="el" href="fonts_8h_source.html#l00045">Font_t::info</a> y <a class="el" href="fonts_8h_source.html#l00037">char_info_t::width</a>.</p>
+
+</div>
+</div>
+<a id="ga521c3050df779f5f0a8bf70df8de84f6" name="ga521c3050df779f5f0a8bf70df8de84f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga521c3050df779f5f0a8bf70df8de84f6">&#9670;&#160;</a></span>GC9A01DrawTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01DrawTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dibuja el contorno de un triángulo en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>Coordenada x del vértice 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y0</td><td>Coordenada y del vértice 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>Coordenada x del vértice 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y1</td><td>Coordenada y del vértice 1 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x2</td><td>Coordenada x del vértice 2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y2</td><td>Coordenada y del vértice 2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color del triángulo (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00587">587</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+</div>
+</div>
+<a id="gabfddd9754277f82ac98b86d70a2936a9" name="gabfddd9754277f82ac98b86d70a2936a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabfddd9754277f82ac98b86d70a2936a9">&#9670;&#160;</a></span>GC9A01Fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01Fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Llena todo el display con un color. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>Color de relleno (RGB565) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00360">360</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8h_source.html#l00060">GC9A01_HEIGHT</a> y <a class="el" href="gc9a01_8h_source.html#l00059">GC9A01_WIDTH</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="gc9a01_8c_source.html#l00290">GC9A01Init()</a>.</p>
+
+</div>
+</div>
+<a id="ga1d2f36602472ca0d33821f79c6b99f11" name="ga1d2f36602472ca0d33821f79c6b99f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d2f36602472ca0d33821f79c6b99f11">&#9670;&#160;</a></span>GC9A01GetStringSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01GetStringSize </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_font__t.html">Font_t</a> *</td>          <td class="paramname"><span class="paramname"><em>font</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> *</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene el ancho y alto que ocupa una cadena de caracteres. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Puntero al primer caracter de la cadena </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>Puntero a la fuente a utilizar </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">width</td><td>Puntero a la variable donde se guarda el ancho </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">height</td><td>Puntero a la variable donde se guarda el alto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00464">464</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="fonts_8h_source.html#l00044">Font_t::font_height</a>, <a class="el" href="fonts_8h_source.html#l00045">Font_t::info</a> y <a class="el" href="fonts_8h_source.html#l00037">char_info_t::width</a>.</p>
+
+</div>
+</div>
+<a id="gab98bba7e34a665ce7defdc3883a41c4f" name="gab98bba7e34a665ce7defdc3883a41c4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab98bba7e34a665ce7defdc3883a41c4f">&#9670;&#160;</a></span>GC9A01Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> GC9A01Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_p_i.html#ga7d468ea862538a179a76e97b9085f075">spi_dev_t</a></td>          <td class="paramname"><span class="paramname"><em>spi_dev</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>gpio_dc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>gpio_rst</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el display GC9A01. </p>
+<dl class="section note"><dt>Nota</dt><dd>Configura el puerto SPI (modo 0, 20 MHz por defecto), los pines DC y RST, envía la secuencia de inicialización y deja la pantalla en negro y encendida. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">spi_dev</td><td>Dispositivo SPI (chip select) al que está conectado el display </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gpio_dc</td><td>Pin GPIO usado como Data/Command </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gpio_rst</td><td>Pin GPIO usado como reset por hardware (o GC9A01_NO_RST si no se conecta) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">1</td><td>si tuvo éxito, 0 si falla </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00290">290</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="bootloader-cfgcmd_8txt_source.html#l00001">cmd</a>, <a class="el" href="gc9a01_8c_source.html#l00042">CMD_DISPON</a>, <a class="el" href="gc9a01_8c_source.html#l00038">CMD_SLPOUT</a>, <a class="el" href="gc9a01_8c_source.html#l00036">CMD_SWRESET</a>, <a class="el" href="gc9a01_8c_source.html#l00032">DELAY_FLAG</a>, <a class="el" href="delay__mcu_8c_source.html#l00045">DelayMs()</a>, <a class="el" href="gc9a01_8h_source.html#l00073">GC9A01_BLACK</a>, <a class="el" href="gc9a01_8h_source.html#l00067">GC9A01_NO_RST</a>, <a class="el" href="gc9a01_8c_source.html#l00026">GC9A01_SPI_BR</a>, <a class="el" href="gc9a01_8c_source.html#l00360">GC9A01Fill()</a>, <a class="el" href="gpio__mcu_8h_source.html#l00044">GPIO_OUTPUT</a>, <a class="el" href="gpio__mcu_8c_source.html#l00067">GPIOInit()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00086">GPIOOff()</a>, <a class="el" href="gpio__mcu_8c_source.html#l00081">GPIOOn()</a>, <a class="el" href="gc9a01_8c_source.html#l00033">INIT_DELAY_MS</a>, <a class="el" href="gc9a01_8c_source.html#l00031">INIT_PARAM_MAX</a>, <a class="el" href="spi__mcu_8h_source.html#l00047">MODE0</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="ili9341_8c_source.html#l00177">spi_conf</a>, <a class="el" href="spi__mcu_8h_source.html#l00057">SPI_POLLING</a> y <a class="el" href="spi__mcu_8c_source.html#l00059">SpiInit()</a>.</p>
+
+</div>
+</div>
+<a id="gaa9ae53ecfbf183d193cac3014cbee69d" name="gaa9ae53ecfbf183d193cac3014cbee69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9ae53ecfbf183d193cac3014cbee69d">&#9670;&#160;</a></span>GC9A01Invert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01Invert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>invert</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activa o desactiva la inversión de colores del display. </p>
+<dl class="section note"><dt>Nota</dt><dd>Por defecto la inversión queda activada, que es lo que necesita la mayoría de los módulos GC9A01 para mostrar los colores correctos. Si los colores se ven invertidos (por ejemplo el negro se ve blanco) llamar con false. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">invert</td><td>true para invertir, false para colores normales </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00385">385</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8c_source.html#l00039">CMD_INVOFF</a>, <a class="el" href="gc9a01_8c_source.html#l00040">CMD_INVON</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="gaea6616658f8d75e0cf3d191d5788e6e6" name="gaea6616658f8d75e0cf3d191d5788e6e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea6616658f8d75e0cf3d191d5788e6e6">&#9670;&#160;</a></span>GC9A01IsVisible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> GC9A01IsVisible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indica si un punto está dentro del círculo visible del display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>Posición x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>Posición y </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>si el punto es visible, false si cae en las esquinas (no visibles) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00399">399</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8h_source.html#l00060">GC9A01_HEIGHT</a>, <a class="el" href="gc9a01_8h_source.html#l00063">GC9A01_RADIUS</a> y <a class="el" href="gc9a01_8h_source.html#l00059">GC9A01_WIDTH</a>.</p>
+
+</div>
+</div>
+<a id="gaf296c866e3e6d7ce46792bc36cee1a55" name="gaf296c866e3e6d7ce46792bc36cee1a55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf296c866e3e6d7ce46792bc36cee1a55">&#9670;&#160;</a></span>GC9A01Rotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01Rotate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga7c7b92836c55752912d2b1120216b446">gc9a01_rotation_t</a></td>          <td class="paramname"><span class="paramname"><em>rotation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rota el display a una orientación determinada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rotation</td><td>Rotación deseada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00364">364</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8c_source.html#l00047">CMD_MADCTL</a>, <a class="el" href="gc9a01_8h_source.html#l00097">GC9A01_ROTATION_0</a>, <a class="el" href="gc9a01_8h_source.html#l00099">GC9A01_ROTATION_180</a>, <a class="el" href="gc9a01_8h_source.html#l00100">GC9A01_ROTATION_270</a>, <a class="el" href="gc9a01_8h_source.html#l00098">GC9A01_ROTATION_90</a>, <a class="el" href="gc9a01_8c_source.html#l00064">MADCTL_BGR</a>, <a class="el" href="gc9a01_8c_source.html#l00063">MADCTL_MV</a>, <a class="el" href="gc9a01_8c_source.html#l00062">MADCTL_MX</a> y <a class="el" href="gc9a01_8c_source.html#l00061">MADCTL_MY</a>.</p>
+
+</div>
+</div>
+<a id="ga6f46020455db5580ab1ab4a95b6ed357" name="ga6f46020455db5580ab1ab4a95b6ed357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f46020455db5580ab1ab4a95b6ed357">&#9670;&#160;</a></span>GC9A01Sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GC9A01Sleep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>sleep</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Entra o sale del modo de bajo consumo (sleep) del controlador. </p>
+<dl class="section note"><dt>Nota</dt><dd>Al salir del sleep se espera el tiempo necesario antes de poder dibujar. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sleep</td><td>true para entrar en sleep, false para salir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="gc9a01_8c_source.html#l00389">389</a> del archivo <a class="el" href="gc9a01_8c_source.html">gc9a01.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="gc9a01_8c_source.html#l00037">CMD_SLPIN</a>, <a class="el" href="gc9a01_8c_source.html#l00038">CMD_SLPOUT</a>, <a class="el" href="delay__mcu_8c_source.html#l00045">DelayMs()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

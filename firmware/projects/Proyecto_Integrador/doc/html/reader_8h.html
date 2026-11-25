@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/reader.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('reader_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo reader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="allocators_8h_source.html">allocators.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stream_8h_source.html">stream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="encodedstream_8h_source.html">encodedstream.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="clzll_8h_source.html">internal/clzll.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meta_8h_source.html">internal/meta.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="stack_8h_source.html">internal/stack.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="strtod_8h_source.html">internal/strtod.h</a>&quot;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &quot;<a class="el" href="error_8h_source.html">error/error.h</a>&quot;</code><br />
+</div>
+<p><a href="reader_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:BaseReaderHandler_3C_20Encoding_2C_20Derived_20_3E" id="r_BaseReaderHandler_3C_20Encoding_2C_20Derived_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_base_reader_handler.html">BaseReaderHandler&lt; Encoding, Derived &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default implementation of <a class="el" href="classrapidjson_1_1_handler.html" title="Concept for receiving events from GenericReader upon parsing. The functions return true if no error o...">Handler</a>.  <a href="struct_base_reader_handler.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:StreamLocalCopy_3C_20Stream_2C_201_20_3E" id="r_StreamLocalCopy_3C_20Stream_2C_201_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classinternal_1_1_stream_local_copy_3_01_stream_00_011_01_4.html">StreamLocalCopy&lt; Stream, 1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do copy optimization.  <a href="classinternal_1_1_stream_local_copy_3_01_stream_00_011_01_4.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:StreamLocalCopy_3C_20Stream_2C_200_20_3E" id="r_StreamLocalCopy_3C_20Stream_2C_200_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classinternal_1_1_stream_local_copy_3_01_stream_00_010_01_4.html">StreamLocalCopy&lt; Stream, 0 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep reference.  <a href="classinternal_1_1_stream_local_copy_3_01_stream_00_010_01_4.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:GenericReader_3C_20SourceEncoding_2C_20TargetEncoding_2C_20StackAllocator_20_3E" id="r_GenericReader_3C_20SourceEncoding_2C_20TargetEncoding_2C_20StackAllocator_20_3E"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_generic_reader.html">GenericReader&lt; SourceEncoding, TargetEncoding, StackAllocator &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SAX-style JSON parser. Use <a class="el" href="#a84f3b66a66647f4ac4267078359188ba" title="Reader">Reader</a> for <a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8</a> encoding and default allocator.  <a href="class_generic_reader.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espacios de nombres</h2></td></tr>
+<tr class="memitem:internal" id="r_internal"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceinternal.html">internal</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ga7f8c4265b2edda78568ae3338aaf1461" id="r_ga7f8c4265b2edda78568ae3338aaf1461"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga7f8c4265b2edda78568ae3338aaf1461">RAPIDJSON_PARSE_ERROR_NORETURN</a>(parseErrorCode,  <a class="el" href="heart_rate_8c.html#aa9fff43968831437a312428836cab362">offset</a>)</td></tr>
+<tr class="memdesc:ga7f8c4265b2edda78568ae3338aaf1461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to indicate a parse error.  <br /></td></tr>
+<tr class="memitem:gae3689840fa6e89a241313f33b602f865" id="r_gae3689840fa6e89a241313f33b602f865"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#gae3689840fa6e89a241313f33b602f865">RAPIDJSON_PARSE_ERROR</a>(parseErrorCode,  <a class="el" href="heart_rate_8c.html#aa9fff43968831437a312428836cab362">offset</a>)</td></tr>
+<tr class="memdesc:gae3689840fa6e89a241313f33b602f865"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) macro to indicate and handle a parse error.  <br /></td></tr>
+<tr class="memitem:a77005e892e6601599beaf421b0395c31" id="r_a77005e892e6601599beaf421b0395c31"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a77005e892e6601599beaf421b0395c31">RAPIDJSON_PARSE_DEFAULT_FLAGS</a>&#160;&#160;&#160;<a class="el" href="#ab7be7dabe6ffcba60fad441505583450a1af603dc5f65bb815316589e782bc71a">kParseNoFlags</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a84f3b66a66647f4ac4267078359188ba" id="r_a84f3b66a66647f4ac4267078359188ba"><td class="memItemLeft">typedef <a class="el" href="class_generic_reader.html">GenericReader</a>&lt; <a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt;, <a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a84f3b66a66647f4ac4267078359188ba">Reader</a></td></tr>
+<tr class="memdesc:a84f3b66a66647f4ac4267078359188ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a84f3b66a66647f4ac4267078359188ba" title="Reader with UTF8 encoding and default allocator.">Reader</a> with <a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8</a> encoding and default allocator.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ab7be7dabe6ffcba60fad441505583450" id="r_ab7be7dabe6ffcba60fad441505583450"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ab7be7dabe6ffcba60fad441505583450">ParseFlag</a> { <br />
+&#160;&#160;<a class="el" href="#ab7be7dabe6ffcba60fad441505583450a1af603dc5f65bb815316589e782bc71a">kParseNoFlags</a> = 0
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a13188bd483b4df0b6582bebe2aeb5b01">kParseInsituFlag</a> = 1
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a9b3baa16346575d2dc072b23a88e1928">kParseValidateEncodingFlag</a> = 2
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450aadb14f5a3b6b33e28055e913a2eae5e9">kParseIterativeFlag</a> = 4
+, <br />
+&#160;&#160;<a class="el" href="#ab7be7dabe6ffcba60fad441505583450af77d115d3bbed0a448b6b335f3b93b36">kParseStopWhenDoneFlag</a> = 8
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a057fbeacafb16bb7d24c9998262cae46">kParseFullPrecisionFlag</a> = 16
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a245d1b6af730f47f0e7bd27078f5e8c1">kParseCommentsFlag</a> = 32
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450aa951ab03a51b32b60164436bc280cf01">kParseNumbersAsStringsFlag</a> = 64
+, <br />
+&#160;&#160;<a class="el" href="#ab7be7dabe6ffcba60fad441505583450a953d6381de950e25c8c97ad54f52370a">kParseTrailingCommasFlag</a> = 128
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a9849d65c1d3edd796bd75897c6a37eb6">kParseNanAndInfFlag</a> = 256
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a7593d429928f1a8224c5793928d4db3e">kParseEscapedApostropheFlag</a> = 512
+, <a class="el" href="#ab7be7dabe6ffcba60fad441505583450a9104b0946d648e9467cb7a967401ec80">kParseDefaultFlags</a> = RAPIDJSON_PARSE_DEFAULT_FLAGS
+<br />
+ }</td></tr>
+<tr class="memdesc:ab7be7dabe6ffcba60fad441505583450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combination of parseFlags.  <a href="#ab7be7dabe6ffcba60fad441505583450">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a60338858b2582eca23f3e509a2d82e0e" id="r_a60338858b2582eca23f3e509a2d82e0e"><td class="memTemplParams" colspan="2">template&lt;typename InputStream&gt; </td></tr>
+<tr class="memitem:a60338858b2582eca23f3e509a2d82e0e template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a60338858b2582eca23f3e509a2d82e0e">SkipWhitespace</a> (InputStream &amp;is)</td></tr>
+<tr class="memdesc:a60338858b2582eca23f3e509a2d82e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skip the JSON white spaces in a stream.  <br /></td></tr>
+<tr class="memitem:aeddf0374b22926be76140ec6708dc203" id="r_aeddf0374b22926be76140ec6708dc203"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#aeddf0374b22926be76140ec6708dc203">SkipWhitespace</a> (const char *p, const char *end)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a77005e892e6601599beaf421b0395c31" name="a77005e892e6601599beaf421b0395c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77005e892e6601599beaf421b0395c31">&#9670;&#160;</a></span>RAPIDJSON_PARSE_DEFAULT_FLAGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAPIDJSON_PARSE_DEFAULT_FLAGS&#160;&#160;&#160;<a class="el" href="#ab7be7dabe6ffcba60fad441505583450a1af603dc5f65bb815316589e782bc71a">kParseNoFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reader_8h_source.html#l00140">140</a> del archivo <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a84f3b66a66647f4ac4267078359188ba" name="a84f3b66a66647f4ac4267078359188ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f3b66a66647f4ac4267078359188ba">&#9670;&#160;</a></span>Reader</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_generic_reader.html">GenericReader</a>&lt;<a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt;, <a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt; &gt; <a class="el" href="fwd_8h.html#ab7f1c1207749ff25c0d7f0cc88e62788">Reader</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a84f3b66a66647f4ac4267078359188ba" title="Reader with UTF8 encoding and default allocator.">Reader</a> with <a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8</a> encoding and default allocator. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="reader_8h_source.html#l02233">2233</a> del archivo <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="ab7be7dabe6ffcba60fad441505583450" name="ab7be7dabe6ffcba60fad441505583450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7be7dabe6ffcba60fad441505583450">&#9670;&#160;</a></span>ParseFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab7be7dabe6ffcba60fad441505583450">ParseFlag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Combination of parseFlags. </p>
+<dl class="section see"><dt>Ver también</dt><dd><a class="el" href="class_generic_reader.html#a33bfcbda5ffaee102d69d25e03859203">Reader::Parse</a>, <a class="el" href="class_generic_document.html#a77f089c9fec348a92fa30c5f3a9aa32e">Document::Parse</a>, <a class="el" href="class_generic_document.html#ac185c559bff2b7dd5b6ba350430c0f46">Document::ParseInsitu</a>, <a class="el" href="class_generic_document.html#a1d77c63480c5ed9adb7bc72352aef20e">Document::ParseStream</a> </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a1af603dc5f65bb815316589e782bc71a" name="ab7be7dabe6ffcba60fad441505583450a1af603dc5f65bb815316589e782bc71a"></a>kParseNoFlags&#160;</td><td class="fielddoc"><p>No flags are set. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a13188bd483b4df0b6582bebe2aeb5b01" name="ab7be7dabe6ffcba60fad441505583450a13188bd483b4df0b6582bebe2aeb5b01"></a>kParseInsituFlag&#160;</td><td class="fielddoc"><p>In-situ(destructive) parsing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a9b3baa16346575d2dc072b23a88e1928" name="ab7be7dabe6ffcba60fad441505583450a9b3baa16346575d2dc072b23a88e1928"></a>kParseValidateEncodingFlag&#160;</td><td class="fielddoc"><p>Validate encoding of JSON strings. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450aadb14f5a3b6b33e28055e913a2eae5e9" name="ab7be7dabe6ffcba60fad441505583450aadb14f5a3b6b33e28055e913a2eae5e9"></a>kParseIterativeFlag&#160;</td><td class="fielddoc"><p>Iterative(constant complexity in terms of function call stack size) parsing. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450af77d115d3bbed0a448b6b335f3b93b36" name="ab7be7dabe6ffcba60fad441505583450af77d115d3bbed0a448b6b335f3b93b36"></a>kParseStopWhenDoneFlag&#160;</td><td class="fielddoc"><p>After parsing a complete JSON root from stream, stop further processing the rest of stream. When this flag is used, parser will not generate kParseErrorDocumentRootNotSingular error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a057fbeacafb16bb7d24c9998262cae46" name="ab7be7dabe6ffcba60fad441505583450a057fbeacafb16bb7d24c9998262cae46"></a>kParseFullPrecisionFlag&#160;</td><td class="fielddoc"><p>Parse number in full precision (but slower). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a245d1b6af730f47f0e7bd27078f5e8c1" name="ab7be7dabe6ffcba60fad441505583450a245d1b6af730f47f0e7bd27078f5e8c1"></a>kParseCommentsFlag&#160;</td><td class="fielddoc"><p>Allow one-line (//) and multi-line (/&zwj;**/) comments. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450aa951ab03a51b32b60164436bc280cf01" name="ab7be7dabe6ffcba60fad441505583450aa951ab03a51b32b60164436bc280cf01"></a>kParseNumbersAsStringsFlag&#160;</td><td class="fielddoc"><p>Parse all numbers (ints/doubles) as strings. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a953d6381de950e25c8c97ad54f52370a" name="ab7be7dabe6ffcba60fad441505583450a953d6381de950e25c8c97ad54f52370a"></a>kParseTrailingCommasFlag&#160;</td><td class="fielddoc"><p>Allow trailing commas at the end of objects and arrays. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a9849d65c1d3edd796bd75897c6a37eb6" name="ab7be7dabe6ffcba60fad441505583450a9849d65c1d3edd796bd75897c6a37eb6"></a>kParseNanAndInfFlag&#160;</td><td class="fielddoc"><p>Allow parsing NaN, Inf, Infinity, -Inf and -Infinity as doubles. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a7593d429928f1a8224c5793928d4db3e" name="ab7be7dabe6ffcba60fad441505583450a7593d429928f1a8224c5793928d4db3e"></a>kParseEscapedApostropheFlag&#160;</td><td class="fielddoc"><p>Allow escaped apostrophe in strings. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab7be7dabe6ffcba60fad441505583450a9104b0946d648e9467cb7a967401ec80" name="ab7be7dabe6ffcba60fad441505583450a9104b0946d648e9467cb7a967401ec80"></a>kParseDefaultFlags&#160;</td><td class="fielddoc"><p>Default parse flags. Can be customized by defining RAPIDJSON_PARSE_DEFAULT_FLAGS. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="reader_8h_source.html#l00146">146</a> del archivo <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="aeddf0374b22926be76140ec6708dc203" name="aeddf0374b22926be76140ec6708dc203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddf0374b22926be76140ec6708dc203">&#9670;&#160;</a></span>SkipWhitespace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * SkipWhitespace </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>end</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="reader_8h_source.html#l00275">275</a> del archivo <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+</div>
+</div>
+<a id="a60338858b2582eca23f3e509a2d82e0e" name="a60338858b2582eca23f3e509a2d82e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60338858b2582eca23f3e509a2d82e0e">&#9670;&#160;</a></span>SkipWhitespace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputStream&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkipWhitespace </td>
+          <td>(</td>
+          <td class="paramtype">InputStream &amp;</td>          <td class="paramname"><span class="paramname"><em>is</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Skip the JSON white spaces in a stream. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>A input stream for skipping white spaces. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>This function has SSE2/SSE4.2 specialization. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="reader_8h_source.html#l00266">266</a> del archivo <a class="el" href="reader_8h_source.html">reader.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_l_i_c_e_n_c_e_8txt_source.html#l00004">copy</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_5f15c64a648eaeb802aa13d0bcde5c72.html">libs</a></li><li class="navelem"><a href="dir_685db568d1ab90617949c6e80c8758c3.html">thorvg</a></li><li class="navelem"><a href="dir_0f3ce60766fe891654efc8c578c2ec5d.html">rapidjson</a></li><li class="navelem"><a href="reader_8h.html">reader.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

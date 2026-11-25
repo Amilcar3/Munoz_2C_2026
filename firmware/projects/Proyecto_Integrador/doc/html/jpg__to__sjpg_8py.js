@@ -1,0 +1,26 @@
+var jpg__to__sjpg_8py =
+[
+    [ "jpg_to_sjpg.a", "namespacejpg__to__sjpg.html#a4124bc0a9335c27f086f24ba207a4912", null ],
+    [ "jpg_to_sjpg.block_size", "namespacejpg__to__sjpg.html#a70b27761c7d0bd5cd90f4fe47e569b94", null ],
+    [ "jpg_to_sjpg.c_code", "namespacejpg__to__sjpg.html#a15bda30e2916adfe763812a96b0e91c2", null ],
+    [ "jpg_to_sjpg.crop", "namespacejpg__to__sjpg.html#a5df04043129da34114b747f8863e7d9d", null ],
+    [ "jpg_to_sjpg.data", "namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93", null ],
+    [ "jpg_to_sjpg.f", "namespacejpg__to__sjpg.html#a633de4b0c14ca52ea2432a3c8a5c4c31", null ],
+    [ "jpg_to_sjpg.header", "namespacejpg__to__sjpg.html#ae8f626807b2dddc1872b3005556939cd", null ],
+    [ "jpg_to_sjpg.height", "namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810", null ],
+    [ "jpg_to_sjpg.im", "namespacejpg__to__sjpg.html#a36aff75e89a0f2a99eca767b6ece034d", null ],
+    [ "jpg_to_sjpg.INPUT_FILE", "namespacejpg__to__sjpg.html#a0a1bd9957a9528c45d038ba991e5cc2b", null ],
+    [ "jpg_to_sjpg.JPEG_SPLIT_HEIGHT", "namespacejpg__to__sjpg.html#a3ce73593caa0d89f2d03d8172e9b612b", null ],
+    [ "jpg_to_sjpg.lenbuf", "namespacejpg__to__sjpg.html#a0a6d7513b6074ded61aeb73f330a6041", null ],
+    [ "jpg_to_sjpg.new_line_threshold", "namespacejpg__to__sjpg.html#a05d7f4936fa23f65591839d88bc31203", null ],
+    [ "jpg_to_sjpg.OUTPUT_FILE_NAME", "namespacejpg__to__sjpg.html#a99f3e73b1b6a032190ab14c597bdd039", null ],
+    [ "jpg_to_sjpg.quality", "namespacejpg__to__sjpg.html#a517dde945463233a0d8c0a5b124ce917", null ],
+    [ "jpg_to_sjpg.row_remaining", "namespacejpg__to__sjpg.html#ae215fa4eb6c1246c7988af5b7093a339", null ],
+    [ "jpg_to_sjpg.sjpeg", "namespacejpg__to__sjpg.html#a75f024d20b0a1fd8cae16dd5ee7c62d5", null ],
+    [ "jpg_to_sjpg.sjpeg_data", "namespacejpg__to__sjpg.html#ab125245974f215524ecf860a9cf6c0b9", null ],
+    [ "jpg_to_sjpg.SJPG_FILE_FORMAT_VERSION", "namespacejpg__to__sjpg.html#a9e71a25bf94dbf3c74b9441135d89d45", null ],
+    [ "jpg_to_sjpg.splits", "namespacejpg__to__sjpg.html#a001ef9e857118ccf6a7720cdc2f8e61e", null ],
+    [ "jpg_to_sjpg.start_time", "namespacejpg__to__sjpg.html#a2530c3908f0179486a4c2255f792e27a", null ],
+    [ "jpg_to_sjpg.time_taken", "namespacejpg__to__sjpg.html#a72339cfde7d501a8d06d15b517334358", null ],
+    [ "jpg_to_sjpg.width", "namespacejpg__to__sjpg.html#a5558ace5433f9aabbf0a0ec059900d94", null ]
+];

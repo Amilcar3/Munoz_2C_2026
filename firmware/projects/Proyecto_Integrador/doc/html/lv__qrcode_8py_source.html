@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/widgets/lv_qrcode.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__qrcode_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_qrcode.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__qrcode_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">Auto-generated wrapper for lv_qrcode_t.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">Do not edit manually. Regenerate from the GDB script root with:</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">    python3 scripts/generate_all.py</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">from</span> .lv_canvas <span class="keyword">import</span> LVCanvas</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">from</span> ._helpers <span class="keyword">import</span> ptr_or_none, safe_color</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="" data-end="">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html">LVQrcode</a>(<a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__canvas_1_1_l_v_canvas.html">LVCanvas</a>):</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL qrcode widget (lv_qrcode_t).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ad0e14a97d790539fe72203c0c835a61c">   15</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(self, obj):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super().<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(obj)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">   17</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a> = self.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">cast</a>(<span class="stringliteral">&quot;lv_qrcode_t&quot;</span>, ptr=<span class="keyword">True</span>) <span class="keywordflow">or</span> self</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html">   18</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__canvas_1_1_l_v_canvas.html">_wv</a> = self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00021" data-start="" data-end="">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ea3abb7257cdcca910dc57963b5343d">   21</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ea3abb7257cdcca910dc57963b5343d">dark_color</a>(self):</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">return</span> safe_color(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>, <span class="stringliteral">&quot;dark_color&quot;</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00025" data-start="" data-end="">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aeec6d10de48e7a5c3759c71783e809c7">   25</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aeec6d10de48e7a5c3759c71783e809c7">light_color</a>(self):</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">return</span> safe_color(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>, <span class="stringliteral">&quot;light_color&quot;</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00029" data-start="" data-end="">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a3b55317842e1bf489393134b2da1988d">   29</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a3b55317842e1bf489393134b2da1988d">data</a>(self):</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="stringliteral">&quot;&quot;&quot;Copy of the payload, kept so the bitmap can be re-encoded on a property change&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> ptr_or_none(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;data&quot;</span>))</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00034" data-start="" data-end="">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aa6df78a1db5306e6944b10a19b59223a">   34</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aa6df78a1db5306e6944b10a19b59223a">data_len</a>(self):</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="stringliteral">&quot;&quot;&quot;Stored payload length in bytes&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;data_len&quot;</span>, 0))</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00039" data-start="" data-end="">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ed05bd7b12d6109fb436eaa5983be6a">   39</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ed05bd7b12d6109fb436eaa5983be6a">quiet_zone</a>(self):</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="stringliteral">&quot;&quot;&quot;Add the QR spec&#39;s blank margin around the code (boolean toggle)&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;quiet_zone&quot;</span>, 0))</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00044" data-start="" data-end="">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a9c04e01b7d7f96afcea856c7973c7c28">   44</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a9c04e01b7d7f96afcea856c7973c7c28">update_mode</a>(self):</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="stringliteral">&quot;&quot;&quot;lv_qrcode_update_mode_t: when a property change is re-encoded&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;update_mode&quot;</span>, 0))</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00049" data-start="" data-end="">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a7eeef3a01366bf89cfc88119b82f3c8f">   49</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a7eeef3a01366bf89cfc88119b82f3c8f">needs_update</a>(self):</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="stringliteral">&quot;&quot;&quot;The bitmap is out of date; re-encoded on the next redraw (deferred mode)&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;needs_update&quot;</span>, 0))</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00054" data-start="" data-end="">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ae969959392575f9581017232c455ccbd">   54</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ae969959392575f9581017232c455ccbd">render_valid</a>(self):</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="stringliteral">&quot;&quot;&quot;No encode attempt is known to have failed; a change re-arms it&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">_wv_lv_qrcode_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;render_valid&quot;</span>, 0))</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+</div>
+<div class="foldopen" id="foldopen00058" data-start="" data-end="">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a58a8e7ac184a990e83950901f11ac838">   58</a></span>    <span class="keyword">def </span>snapshot(self, include_children=False, include_styles=False):</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="stringliteral">&quot;&quot;&quot;Snapshot with widget-specific fields in widget_data.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        s = super().snapshot(include_children=include_children, include_styles=include_styles)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        d = s.get(<span class="stringliteral">&#39;widget_data&#39;</span>) <span class="keywordflow">or</span> {}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        d[<span class="stringliteral">&quot;dark_color&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ea3abb7257cdcca910dc57963b5343d">dark_color</a></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        d[<span class="stringliteral">&quot;light_color&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aeec6d10de48e7a5c3759c71783e809c7">light_color</a></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        d[<span class="stringliteral">&quot;data&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a3b55317842e1bf489393134b2da1988d">data</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        d[<span class="stringliteral">&quot;data_len&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aa6df78a1db5306e6944b10a19b59223a">data_len</a></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        d[<span class="stringliteral">&quot;quiet_zone&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ed05bd7b12d6109fb436eaa5983be6a">quiet_zone</a></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        d[<span class="stringliteral">&quot;update_mode&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a9c04e01b7d7f96afcea856c7973c7c28">update_mode</a></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        d[<span class="stringliteral">&quot;needs_update&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a7eeef3a01366bf89cfc88119b82f3c8f">needs_update</a></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        d[<span class="stringliteral">&quot;render_valid&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ae969959392575f9581017232c455ccbd">render_valid</a></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        s[<span class="stringliteral">&#39;widget_data&#39;</span>] = d</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> s</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__canvas_1_1_l_v_canvas_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__canvas_1_1_l_v_canvas.html">lvglgdb.lvgl.widgets.lv_canvas.LVCanvas</a></div><div class="ttdef"><b>Definition</b> <a href="lv__canvas_8py_source.html#l00012">lv_canvas.py:12</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">lv_qrcode.py:12</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a356471791695fb4e6eb2d3be70286b95"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a356471791695fb4e6eb2d3be70286b95">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode._wv_lv_qrcode_t</a></div><div class="ttdeci">_wv_lv_qrcode_t</div><div class="ttdef"><b>Definition</b> <a href="#l00017">lv_qrcode.py:17</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a3b55317842e1bf489393134b2da1988d"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a3b55317842e1bf489393134b2da1988d">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.data</a></div><div class="ttdeci">data(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00029">lv_qrcode.py:29</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a4ea3abb7257cdcca910dc57963b5343d"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ea3abb7257cdcca910dc57963b5343d">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.dark_color</a></div><div class="ttdeci">dark_color(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00021">lv_qrcode.py:21</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a4ed05bd7b12d6109fb436eaa5983be6a"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ed05bd7b12d6109fb436eaa5983be6a">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.quiet_zone</a></div><div class="ttdeci">quiet_zone(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">lv_qrcode.py:39</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a7eeef3a01366bf89cfc88119b82f3c8f"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a7eeef3a01366bf89cfc88119b82f3c8f">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.needs_update</a></div><div class="ttdeci">needs_update(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">lv_qrcode.py:49</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_a9c04e01b7d7f96afcea856c7973c7c28"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a9c04e01b7d7f96afcea856c7973c7c28">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.update_mode</a></div><div class="ttdeci">update_mode(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">lv_qrcode.py:44</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_aa6df78a1db5306e6944b10a19b59223a"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aa6df78a1db5306e6944b10a19b59223a">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.data_len</a></div><div class="ttdeci">data_len(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">lv_qrcode.py:34</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_ad0e14a97d790539fe72203c0c835a61c"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ad0e14a97d790539fe72203c0c835a61c">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.__init__</a></div><div class="ttdeci">__init__(self, obj)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">lv_qrcode.py:15</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_ae969959392575f9581017232c455ccbd"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#ae969959392575f9581017232c455ccbd">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.render_valid</a></div><div class="ttdeci">render_valid(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">lv_qrcode.py:54</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode_html_aeec6d10de48e7a5c3759c71783e809c7"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#aeec6d10de48e7a5c3759c71783e809c7">lvglgdb.lvgl.widgets.lv_qrcode.LVQrcode.light_color</a></div><div class="ttdeci">light_color(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">lv_qrcode.py:25</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a042905354ccf68cda661c3303c15a3d2"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">lvglgdb.value.Value.safe_field</a></div><div class="ttdeci">safe_field(self, str attr, default=None, cast=None)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00216">value.py:216</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a50db75204e74779840c3025b9211aabe"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">lvglgdb.value.Value.cast</a></div><div class="ttdeci">Optional[Union[&quot;Value&quot;, &quot;CorruptedValue&quot;]] cast(self, Union[str, gdb.Type] type_name, bool ptr=False)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00196">value.py:198</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_201b7a9d9a46579215ae39de1754cc76.html">widgets</a></li><li class="navelem"><a href="lv__qrcode_8py.html">lv_qrcode.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

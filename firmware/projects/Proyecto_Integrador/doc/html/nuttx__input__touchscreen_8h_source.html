@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/drivers/nuttx/mock/nuttx_input_touchscreen.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('nuttx__input__touchscreen_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">nuttx_input_touchscreen.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="nuttx__input__touchscreen_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef NUTTX_INPUT_TOUCHSCREEN_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define NUTTX_INPUT_TOUCHSCREEN_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include LV_STDINT_INCLUDE</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a064f80406bc8ce1dbed4a818bee673cd">   23</a></span><span class="preprocessor">#define _TSIOC(x) (x)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/* Common TSC IOCTL commands */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ac0a92a27fa3055894d9fdc93bd64267e">   27</a></span><span class="preprocessor">#define TSIOC_SETXRCAL       _TSIOC(0x0001) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a77a4188ceae8ae460b33c86da746f5ba">   28</a></span><span class="comment">                                             * int Xplate R calibration value</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a3e9dac97aababeb21fba17c8d5b09392">   29</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a4d6dc4cdc1f5a4347b88ff149f4ea1a9">   30</a></span><span class="preprocessor">#define TSIOC_GETXRCAL       _TSIOC(0x0002) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a76784523b7bbb53ddf7a00835d402d70">   31</a></span><span class="comment">                                             * int Xplate R calibration value</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ad9e6d3fd2f2d660975891e637ddc3c2b">   32</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#adf3d966ef8f248f10c389e2549138694">   33</a></span><span class="preprocessor">#define TSIOC_SETFREQUENCY   _TSIOC(0x0003) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a3fec4afab4a50d75319c22ca7999bdbe">   34</a></span><span class="comment">                                             * uint32_t frequency value</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a8ab122b8d74038d32461ee0ac3a39074">   35</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ac626ef55bb9b39e463a2f878356bd3d7">   36</a></span><span class="preprocessor">#define TSIOC_GETFREQUENCY   _TSIOC(0x0004) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#aaa014c8cbf7dd25237af238eb5244eb2">   37</a></span><span class="comment">                                             *  uint32_t frequency value</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ab49bf0b95e58cb1fca9a1379c2e3a945">   38</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a610d4b48e2462d3d55fc278c865113c0">   39</a></span><span class="preprocessor">#define TSIOC_GETFWVERSION   _TSIOC(0x0005) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">                                             * uint32_t firmware version</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a74b08c4ad7b9a4ef01ccfeb7707d89aa">   41</a></span><span class="comment">                                             * value</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">                                             * */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a93b939d2dbe6a2b58fd7fee86fa56aa5">   43</a></span><span class="preprocessor">#define TSIOC_ENABLEGESTURE  _TSIOC(0x0006) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a6a19c90eb8fd1b4f668b32a466bd9565">   44</a></span><span class="comment">                                             * int for enable gesture feature</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define TSIOC_DOACALIB       _TSIOC(0x0007) </span><span class="comment">/* arg: none.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">                                             * Initiate TS auto calibration</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define TSIOC_CALDATA        _TSIOC(0x0008) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a1ea19c312a20c9d48db1205d94d0279d">   50</a></span><span class="comment">                                             * struct g_tscaldata_s</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ae08a78bd6704ad18855c1edb210d0af8">   51</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a06402e4baf90a258dbffc869fc6d1e46">   52</a></span><span class="preprocessor">#define TSIOC_USESCALED      _TSIOC(0x0009) </span><span class="comment">/* arg: bool, yes/no */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#aa9821747ba785d00b3acb01e7de576d0">   53</a></span><span class="preprocessor">#define TSIOC_GETOFFSETX     _TSIOC(0x000a) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a92dd6479505168eaf47633058c8d6c5b">   54</a></span><span class="comment">                                             * int X offset value</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#a8bbe08ba68af8ecdae7b2cd6e550839d">   55</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#ae217ca7a1bfbff6059d75b05712750a8">   56</a></span><span class="preprocessor">#define TSIOC_GETOFFSETY     _TSIOC(0x000b) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="nuttx__input__touchscreen_8h.html#adb208664aed35712bb0b9a00df5f72b3">   57</a></span><span class="comment">                                             * int Y offset value</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define TSIOC_GETTHRESHX     _TSIOC(0x000c) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">                                             * int X threshold value</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define TSIOC_GETTHRESHY     _TSIOC(0x000d) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="};">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structtouch__point__s.html">   63</a></span><span class="comment">                                             * int Y threshold value</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a1e6927fa1486224044e568f9c370519b">   64</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#aa2585d779da0ab21273a8d92de9a0ebe">   65</a></span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#ae1c2d516777e6b42af0d281c9ecc7375">   66</a></span><span class="preprocessor">#define TSIOC_GRAB           _TSIOC(0x000e) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#af77b1a54442f2443cf64a4766f916bcd">   67</a></span><span class="comment">                                             * int for enable grab</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a07aee00b586757c172a00115d405eb04">   68</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a8f206d24f2add84b30197958cfdf81ba">   69</a></span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#aaa41549deec6abbbda916ea70d531f93">   70</a></span><span class="preprocessor">#define TSIOC_GETMAXPOINTS   _TSIOC(0x000f) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a8f079b1c606a20607e789abe28c98c25">   71</a></span><span class="comment">                                             * uint8_t max touch point</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a274ba6223fb9b66a9e0122c1f0334f79">   72</a></span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structtouch__point__s.html#a465bef81f6478756e5443025b1f2ddfa">   73</a></span><span class="preprocessor">#define TSIOC_GETRESOLUTION  _TSIOC(0x0010) </span><span class="comment">/* arg: Pointer to</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">                                             * struct touch_resolution_s</span></div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">                                             */</span><span class="preprocessor"></span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structtouch__sample__s.html">   76</a></span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structtouch__sample__s.html#a9868603d2d0fb77367887544fbcd8517">   77</a></span><span class="comment">/* These definitions provide the meaning of all of the bits that may be</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structtouch__sample__s.html#aa512dbc0f18602d652c4cb7e6686d676">   78</a></span><span class="comment"> * reported in the struct touch_point_s flags.</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structtouch__sample__s.html#a30a6124cc786403ec7c672f6021c49aa">   79</a></span><span class="comment"> */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define TOUCH_DOWN           (1 &lt;&lt; 0) </span><span class="comment">/* A new touch contact is established */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define TOUCH_MOVE           (1 &lt;&lt; 1) </span><span class="comment">/* Movement occurred with previously reported contact */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define TOUCH_UP             (1 &lt;&lt; 2) </span><span class="comment">/* The touch contact was lost */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define TOUCH_ID_VALID       (1 &lt;&lt; 3) </span><span class="comment">/* Touch ID is certain */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#define TOUCH_POS_VALID      (1 &lt;&lt; 4) </span><span class="comment">/* Hardware provided a valid X/Y position */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#define TOUCH_PRESSURE_VALID (1 &lt;&lt; 5) </span><span class="comment">/* Hardware provided a valid pressure */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define TOUCH_SIZE_VALID     (1 &lt;&lt; 6) </span><span class="comment">/* Hardware provided a valid H/W contact size */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define TOUCH_GESTURE_VALID  (1 &lt;&lt; 7) </span><span class="comment">/* Hardware provided a valid gesture */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">struct </span><a class="code hl_struct" href="structtouch__point__s.html">touch_point_s</a> {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#a1e6927fa1486224044e568f9c370519b">id</a>;        <span class="comment">/* Unique identifies contact; Same in all reports for the contact */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#aa2585d779da0ab21273a8d92de9a0ebe">flags</a>;     <span class="comment">/* See TOUCH_* definitions above */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_typedef" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#ae1c2d516777e6b42af0d281c9ecc7375">x</a>;         <span class="comment">/* X coordinate of the touch point (uncalibrated) */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_typedef" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#af77b1a54442f2443cf64a4766f916bcd">y</a>;         <span class="comment">/* Y coordinate of the touch point (uncalibrated) */</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_typedef" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#a07aee00b586757c172a00115d405eb04">h</a>;         <span class="comment">/* Height of touch point (uncalibrated) */</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_typedef" href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a>  <a class="code hl_variable" href="structtouch__point__s.html#a8f206d24f2add84b30197958cfdf81ba">w</a>;         <span class="comment">/* Width of touch point (uncalibrated) */</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_typedef" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code hl_variable" href="structtouch__point__s.html#aaa41549deec6abbbda916ea70d531f93">gesture</a>;   <span class="comment">/* Gesture of touchscreen contact */</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_typedef" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code hl_variable" href="structtouch__point__s.html#a8f079b1c606a20607e789abe28c98c25">pressure</a>;  <span class="comment">/* Touch pressure */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_typedef" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="code hl_variable" href="structtouch__sample__s.html#aa512dbc0f18602d652c4cb7e6686d676">dummy</a>;     <span class="comment">/* Padded with 2 bytes here */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> <a class="code hl_variable" href="structtouch__point__s.html#a465bef81f6478756e5443025b1f2ddfa">timestamp</a>; <span class="comment">/* Touch event time stamp, in microseconds */</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">struct </span><a class="code hl_struct" href="structtouch__sample__s.html">touch_sample_s</a> {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="structtouch__sample__s.html#a9868603d2d0fb77367887544fbcd8517">npoints</a>;               <span class="comment">/* The number of touch points in point[] */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="structtouch__sample__s.html#aa512dbc0f18602d652c4cb7e6686d676">dummy</a>;                 <span class="comment">/* Padded with 4 bytes here */</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structtouch__point__s.html">touch_point_s</a> <a class="code hl_variable" href="structtouch__sample__s.html#a30a6124cc786403ec7c672f6021c49aa">point</a>[1]; <span class="comment">/* Actual dimension is npoints */</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> * GLOBAL PROTOTYPES</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>} <span class="comment">/*extern &quot;C&quot;*/</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif </span><span class="comment">/*NUTTX_INPUT_TOUCHSCREEN_H*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="astdint_8h_html_a269259c924dce846340ddbb810db2e3c"><div class="ttname"><a href="stdint_8h.html#a269259c924dce846340ddbb810db2e3c">int16_t</a></div><div class="ttdeci">signed short int16_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00122">stdint.h:122</a></div></div>
+<div class="ttc" id="astdint_8h_html_a273cf69d639a59973b6019625df33e30"><div class="ttname"><a href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00125">stdint.h:125</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+<div class="ttc" id="astdint_8h_html_aec6fcb673ff035718c238c8c9d544c47"><div class="ttname"><a href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a></div><div class="ttdeci">unsigned __int64 uint64_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00136">stdint.h:136</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html"><div class="ttname"><a href="structtouch__point__s.html">touch_point_s</a></div><div class="ttdef"><b>Definition</b> <a href="#l00063">nuttx_input_touchscreen.h:63</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_a07aee00b586757c172a00115d405eb04"><div class="ttname"><a href="structtouch__point__s.html#a07aee00b586757c172a00115d405eb04">touch_point_s::h</a></div><div class="ttdeci">int16_t h</div><div class="ttdef"><b>Definition</b> <a href="#l00068">nuttx_input_touchscreen.h:68</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_a1e6927fa1486224044e568f9c370519b"><div class="ttname"><a href="structtouch__point__s.html#a1e6927fa1486224044e568f9c370519b">touch_point_s::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdef"><b>Definition</b> <a href="#l00064">nuttx_input_touchscreen.h:64</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_a465bef81f6478756e5443025b1f2ddfa"><div class="ttname"><a href="structtouch__point__s.html#a465bef81f6478756e5443025b1f2ddfa">touch_point_s::timestamp</a></div><div class="ttdeci">uint64_t timestamp</div><div class="ttdef"><b>Definition</b> <a href="#l00073">nuttx_input_touchscreen.h:73</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_a8f079b1c606a20607e789abe28c98c25"><div class="ttname"><a href="structtouch__point__s.html#a8f079b1c606a20607e789abe28c98c25">touch_point_s::pressure</a></div><div class="ttdeci">uint16_t pressure</div><div class="ttdef"><b>Definition</b> <a href="#l00071">nuttx_input_touchscreen.h:71</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_a8f206d24f2add84b30197958cfdf81ba"><div class="ttname"><a href="structtouch__point__s.html#a8f206d24f2add84b30197958cfdf81ba">touch_point_s::w</a></div><div class="ttdeci">int16_t w</div><div class="ttdef"><b>Definition</b> <a href="#l00069">nuttx_input_touchscreen.h:69</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_aa2585d779da0ab21273a8d92de9a0ebe"><div class="ttname"><a href="structtouch__point__s.html#aa2585d779da0ab21273a8d92de9a0ebe">touch_point_s::flags</a></div><div class="ttdeci">uint8_t flags</div><div class="ttdef"><b>Definition</b> <a href="#l00065">nuttx_input_touchscreen.h:65</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_aaa41549deec6abbbda916ea70d531f93"><div class="ttname"><a href="structtouch__point__s.html#aaa41549deec6abbbda916ea70d531f93">touch_point_s::gesture</a></div><div class="ttdeci">uint16_t gesture</div><div class="ttdef"><b>Definition</b> <a href="#l00070">nuttx_input_touchscreen.h:70</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_ae1c2d516777e6b42af0d281c9ecc7375"><div class="ttname"><a href="structtouch__point__s.html#ae1c2d516777e6b42af0d281c9ecc7375">touch_point_s::x</a></div><div class="ttdeci">int16_t x</div><div class="ttdef"><b>Definition</b> <a href="#l00066">nuttx_input_touchscreen.h:66</a></div></div>
+<div class="ttc" id="astructtouch__point__s_html_af77b1a54442f2443cf64a4766f916bcd"><div class="ttname"><a href="structtouch__point__s.html#af77b1a54442f2443cf64a4766f916bcd">touch_point_s::y</a></div><div class="ttdeci">int16_t y</div><div class="ttdef"><b>Definition</b> <a href="#l00067">nuttx_input_touchscreen.h:67</a></div></div>
+<div class="ttc" id="astructtouch__sample__s_html"><div class="ttname"><a href="structtouch__sample__s.html">touch_sample_s</a></div><div class="ttdef"><b>Definition</b> <a href="#l00076">nuttx_input_touchscreen.h:76</a></div></div>
+<div class="ttc" id="astructtouch__sample__s_html_a30a6124cc786403ec7c672f6021c49aa"><div class="ttname"><a href="structtouch__sample__s.html#a30a6124cc786403ec7c672f6021c49aa">touch_sample_s::point</a></div><div class="ttdeci">struct touch_point_s point[1]</div><div class="ttdef"><b>Definition</b> <a href="#l00079">nuttx_input_touchscreen.h:79</a></div></div>
+<div class="ttc" id="astructtouch__sample__s_html_a9868603d2d0fb77367887544fbcd8517"><div class="ttname"><a href="structtouch__sample__s.html#a9868603d2d0fb77367887544fbcd8517">touch_sample_s::npoints</a></div><div class="ttdeci">int32_t npoints</div><div class="ttdef"><b>Definition</b> <a href="#l00077">nuttx_input_touchscreen.h:77</a></div></div>
+<div class="ttc" id="astructtouch__sample__s_html_aa512dbc0f18602d652c4cb7e6686d676"><div class="ttname"><a href="structtouch__sample__s.html#aa512dbc0f18602d652c4cb7e6686d676">touch_sample_s::dummy</a></div><div class="ttdeci">int32_t dummy</div><div class="ttdef"><b>Definition</b> <a href="#l00078">nuttx_input_touchscreen.h:78</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_f3def1a0aa02097d7e8c0e4b8cca1ae4.html">drivers</a></li><li class="navelem"><a href="dir_181cd89fa5035a80201781c2ee2e4462.html">nuttx</a></li><li class="navelem"><a href="dir_f5afd6d549ad0c838c713b57ec58fc47.html">mock</a></li><li class="navelem"><a href="nuttx__input__touchscreen_8h.html">nuttx_input_touchscreen.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

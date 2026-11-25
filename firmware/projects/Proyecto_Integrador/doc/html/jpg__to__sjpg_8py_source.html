@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/jpg_to_sjpg.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('jpg__to__sjpg_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">jpg_to_sjpg.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="jpg__to__sjpg_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html">    1</a></span><span class="comment">#!/usr/bin/env python3</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a9e71a25bf94dbf3c74b9441135d89d45">    7</a></span>SJPG_FILE_FORMAT_VERSION = <span class="stringliteral">&quot;V1.00&quot;</span>  <span class="comment">#</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a3ce73593caa0d89f2d03d8172e9b612b">    8</a></span>JPEG_SPLIT_HEIGHT   = 16</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> math, os, sys, time</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a99f3e73b1b6a032190ab14c597bdd039">   14</a></span>OUTPUT_FILE_NAME = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a0a1bd9957a9528c45d038ba991e5cc2b">   15</a></span>INPUT_FILE       = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordflow">if</span> len(sys.argv) == 2:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    INPUT_FILE = sys.argv[1]</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    OUTPUT_FILE_NAME = INPUT_FILE.split(<span class="stringliteral">&quot;/&quot;</span>)[-1].split(<span class="stringliteral">&quot;\\&quot;</span>)[-1].split(<span class="stringliteral">&quot;.&quot;</span>)[0]</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    print(<span class="stringliteral">&quot;usage:\n\t python &quot;</span> + sys.argv[0] + <span class="stringliteral">&quot; input_file.jpg&quot;</span>)</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    sys.exit(0)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a36aff75e89a0f2a99eca767b6ece034d">   26</a></span>    im = Image.open(INPUT_FILE)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordflow">except</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    print(<span class="stringliteral">&quot;\nFile not found!&quot;</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    sys.exit(0)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>print(<span class="stringliteral">&quot;\nConversion started...\n&quot;</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a2530c3908f0179486a4c2255f792e27a">   33</a></span>start_time = time.time()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810">   34</a></span>width, height = im.size</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>print(<span class="stringliteral">&quot;Input:&quot;</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>print(<span class="stringliteral">&quot;\t&quot;</span> + INPUT_FILE)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>print(<span class="stringliteral">&quot;\tRES = &quot;</span> + str(width) + <span class="stringliteral">&quot; x &quot;</span> + str(height) + <span class="stringliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a0a6d7513b6074ded61aeb73f330a6041">   41</a></span>lenbuf = []</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a70b27761c7d0bd5cd90f4fe47e569b94">   42</a></span>block_size = JPEG_SPLIT_HEIGHT;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a001ef9e857118ccf6a7720cdc2f8e61e">   43</a></span>splits = math.ceil(height/block_size)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a15bda30e2916adfe763812a96b0e91c2">   45</a></span>c_code = <span class="stringliteral">&#39;&#39;&#39;//LVGL SJPG C ARRAY\n#include &quot;lvgl/lvgl.h&quot;\n\nconst uint8_t &#39;&#39;&#39;</span> + OUTPUT_FILE_NAME + <span class="stringliteral">&#39;&#39;&#39;_map[] = {\n&#39;&#39;&#39;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#ab125245974f215524ecf860a9cf6c0b9">   47</a></span>sjpeg_data = bytearray()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a75f024d20b0a1fd8cae16dd5ee7c62d5">   48</a></span>sjpeg = bytearray()</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#ae215fa4eb6c1246c7988af5b7093a339">   51</a></span>row_remaining = height;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(splits):</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> row_remaining &lt; block_size:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a5df04043129da34114b747f8863e7d9d">   54</a></span>        crop = im.crop((0, i*block_size, width, row_remaining + i*block_size))</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        crop = im.crop((0, i*block_size, width, block_size + i*block_size))</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    row_remaining = row_remaining - block_size;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a517dde945463233a0d8c0a5b124ce917">   59</a></span>    crop.save(str(i)+<span class="stringliteral">&quot;.jpg&quot;</span>, quality=90)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(splits):</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a633de4b0c14ca52ea2432a3c8a5c4c31">   65</a></span>    f = open(str(i)+<span class="stringliteral">&quot;.jpg&quot;</span>, <span class="stringliteral">&quot;rb&quot;</span>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a4124bc0a9335c27f086f24ba207a4912">   66</a></span>    a = f.read()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    f.close()</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    sjpeg_data = sjpeg_data + a</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    lenbuf.append(len(a))</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#ae8f626807b2dddc1872b3005556939cd">   71</a></span>header = bytearray()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">#4 BYTES</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>header = header + bytearray(<span class="stringliteral">&quot;_SJPG__&quot;</span>.encode(<span class="stringliteral">&quot;UTF-8&quot;</span>));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">#6 BYTES VERSION</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>header = header + bytearray((<span class="stringliteral">&quot;\x00&quot;</span> + SJPG_FILE_FORMAT_VERSION + <span class="stringliteral">&quot;\x00&quot;</span>).encode(<span class="stringliteral">&quot;UTF-8&quot;</span>));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">#WIDTH 2 BYTES</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>header = header + width.to_bytes(2, byteorder=<span class="stringliteral">&#39;little&#39;</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">#HEIGHT 2 BYTES</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>header = header + height.to_bytes(2, byteorder=<span class="stringliteral">&#39;little&#39;</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">#NUMBER OF ITEMS 2 BYTES</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>header = header + splits.to_bytes(2, byteorder=<span class="stringliteral">&#39;little&#39;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">#NUMBER OF ITEMS 2 BYTES</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>header = header + int(JPEG_SPLIT_HEIGHT).to_bytes(2, byteorder=<span class="stringliteral">&#39;little&#39;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordflow">for</span> item_len <span class="keywordflow">in</span> lenbuf:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment"># WIDTH 2 BYTES</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    header = header + item_len.to_bytes(2, byteorder=<span class="stringliteral">&#39;little&#39;</span>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">   96</a></span>data = bytearray()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>sjpeg = header + sjpeg_data;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keywordflow">if</span> 1:</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(lenbuf)):</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        os.remove(str(i) + <span class="stringliteral">&quot;.jpg&quot;</span>)</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>f = open(OUTPUT_FILE_NAME+<span class="stringliteral">&quot;.sjpg&quot;</span>,<span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>f.write(sjpeg)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>f.close()</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a05d7f4936fa23f65591839d88bc31203">  109</a></span>new_line_threshold = 0</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(len(sjpeg)):</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    c_code = c_code + <span class="stringliteral">&quot;\t&quot;</span> + str(hex(sjpeg[i])) + <span class="stringliteral">&quot;,&quot;</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    new_line_threshold = new_line_threshold + 1</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (new_line_threshold &gt;= 16):</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        c_code = c_code + <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        new_line_threshold = 0</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>c_code = c_code + <span class="stringliteral">&quot;\n};\n\nlv_image_dsc_t &quot;</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>c_code = c_code + OUTPUT_FILE_NAME + <span class="stringliteral">&quot; = {\n&quot;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>c_code = c_code + <span class="stringliteral">&quot;\t.header.always_zero = 0,\n&quot;</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>c_code = c_code + <span class="stringliteral">&quot;\t.header.w = &quot;</span> + str(width) + <span class="stringliteral">&quot;,\n&quot;</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>c_code = c_code + <span class="stringliteral">&quot;\t.header.h = &quot;</span> + str(height) + <span class="stringliteral">&quot;,\n&quot;</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>c_code = c_code + <span class="stringliteral">&quot;\t.data_size = &quot;</span> + str(len(sjpeg)) + <span class="stringliteral">&quot;,\n&quot;</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>c_code = c_code + <span class="stringliteral">&quot;\t.header.cf = LV_IMG_CF_RAW,\n&quot;</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>c_code = c_code + <span class="stringliteral">&quot;\t.data = &quot;</span> + OUTPUT_FILE_NAME+<span class="stringliteral">&quot;_map&quot;</span> + <span class="stringliteral">&quot;,\n};&quot;</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>f = open(OUTPUT_FILE_NAME + <span class="stringliteral">&#39;.c&#39;</span>, <span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>f.write(c_code)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>f.close()</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="namespacejpg__to__sjpg.html#a72339cfde7d501a8d06d15b517334358">  133</a></span>time_taken = (time.time() - start_time)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>print(<span class="stringliteral">&quot;Output:&quot;</span>)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>print(<span class="stringliteral">&quot;\tTime taken = &quot;</span> + str(round(time_taken,2)) + <span class="stringliteral">&quot; sec&quot;</span>)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>print(<span class="stringliteral">&quot;\tbin size = &quot;</span> + str(round(len(sjpeg)/1024, 1)) + <span class="stringliteral">&quot; KB&quot;</span> )</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>print(<span class="stringliteral">&quot;\t&quot;</span> + OUTPUT_FILE_NAME + <span class="stringliteral">&quot;.sjpg\t(bin file)&quot;</span> + <span class="stringliteral">&quot;\n\t&quot;</span> + OUTPUT_FILE_NAME + <span class="stringliteral">&quot;.c\t\t(c array)&quot;</span>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>print(<span class="stringliteral">&quot;\nAll good!&quot;</span>)</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="jpg__to__sjpg_8py.html">jpg_to_sjpg.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

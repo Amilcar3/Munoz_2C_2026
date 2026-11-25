@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/src/test_cases/test_font_manager.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__font__manager_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_font_manager.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__font__manager_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if LV_BUILD_TEST</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../lvgl.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="unity_8h.html">unity/unity.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#if LV_USE_FONT_MANAGER \</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">    &amp;&amp; LV_FONT_MONTSERRAT_14 &amp;&amp; LV_FONT_MONTSERRAT_32 \</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">    &amp;&amp; LV_USE_FREETYPE \</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">    &amp;&amp; LV_USE_TINY_TTF &amp;&amp; LV_TINY_TTF_FILE_SUPPORT</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifndef NON_AMD64_BUILD</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">    #define EXT_NAME &quot;.lp64.png&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">    #define EXT_NAME &quot;.lp32.png&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">static</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a977c39306808d71024c4f654d46cdb98">lv_font_manager_t</a> * g_font_manager = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">typedef</span> <a class="code hl_typedef" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> (*add_src_cb_t)(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a977c39306808d71024c4f654d46cdb98">lv_font_manager_t</a> * manager,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                             <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="namespaceimage__viewer.html#ab74e6bf80237ddc4109968cedc58c151">name</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                             <span class="keyword">const</span> <span class="keywordtype">void</span> * src,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                             <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a41617a4e6527620532aa99b156e4aa4b">lv_font_class_t</a> * class_p);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> setUp(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> tearDown(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__tree_8h.html#ab9e1d84b921e63d1da83fe711b214aea">lv_obj_clean</a>(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">static</span> <span class="keywordtype">void</span> test_font_manager_src(add_src_cb_t add_src_cb)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    g_font_manager = lv_font_manager_create(2);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    TEST_ASSERT_NOT_NULL(g_font_manager);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">/* Register built-in font sources */</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structlv__builtin__font__src__t.html">lv_builtin_font_src_t</a> builtin_font_src[3] = { 0 };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    builtin_font_src[0].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#a8660aa7e53f0bafeba0e4654634e407b">font_p</a> = &amp;<a class="code hl_variable" href="lv__font__montserrat__14_8c.html#afa00efdd6d033ab1919fbfdd23fd60d9">lv_font_montserrat_14</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    builtin_font_src[0].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#ab2c6b258f02add8fdf4cfc7c371dd772">size</a> = 14;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    builtin_font_src[1].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#a8660aa7e53f0bafeba0e4654634e407b">font_p</a> = &amp;lv_font_montserrat_32;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    builtin_font_src[1].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#ab2c6b258f02add8fdf4cfc7c371dd772">size</a> = 32;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/* IMPORTANT! Marking the end of the array */</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    builtin_font_src[2].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#a8660aa7e53f0bafeba0e4654634e407b">font_p</a> = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    builtin_font_src[2].<a class="code hl_variable" href="structlv__builtin__font__src__t.html#ab2c6b258f02add8fdf4cfc7c371dd772">size</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">bool</span> add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                     <span class="stringliteral">&quot;Montserrat&quot;</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                     builtin_font_src,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                                     &amp;<a class="code hl_variable" href="include_2lvgl_2font_2lv__font__fmt__txt_8h.html#a5603f93684da417e5021e1f65d22b0c3">lv_builtin_font_class</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">/* Try to add the same source again, should fail */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                <span class="stringliteral">&quot;Montserrat&quot;</span>,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                                builtin_font_src,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                &amp;<a class="code hl_variable" href="include_2lvgl_2font_2lv__font__fmt__txt_8h.html#a5603f93684da417e5021e1f65d22b0c3">lv_builtin_font_class</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    TEST_ASSERT_FALSE(add_src_result);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">/* Register FreeType font source */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                <span class="stringliteral">&quot;NotoSansSC-Regular&quot;</span>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                <span class="stringliteral">&quot;./src/test_files/fonts/noto/NotoSansSC-Regular.ttf&quot;</span>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                &amp;lv_freetype_font_class);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">/* Register TinyTTF font source */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">extern</span> <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> test_ubuntu_font[];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">extern</span> <span class="keywordtype">size_t</span> test_ubuntu_font_size;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">static</span> lv_tiny_ttf_font_src_t tiny_ttf_font_data_src = { 0 };</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    tiny_ttf_font_data_src.data = test_ubuntu_font;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    tiny_ttf_font_data_src.data_size = test_ubuntu_font_size;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                                <span class="stringliteral">&quot;Ubuntu-Medium&quot;</span>,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                &amp;tiny_ttf_font_data_src,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                &amp;lv_tiny_ttf_font_class);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">static</span> lv_tiny_ttf_font_src_t tiny_ttf_font_file_src = { 0 };</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    tiny_ttf_font_file_src.path = <span class="stringliteral">&quot;A:src/test_files/fonts/noto/NotoSansSC-Regular.ttf&quot;</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                                <span class="stringliteral">&quot;NotoSansSC-Regular-2&quot;</span>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                                &amp;tiny_ttf_font_file_src,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                                &amp;lv_tiny_ttf_font_class);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">/* Register binary font source */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_struct" href="structlv__binfont__font__src__t.html">lv_binfont_font_src_t</a> binfont_font_file_src = {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        .font_size = 20,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        .path = <span class="stringliteral">&quot;A:src/test_assets/test_font_3.fnt&quot;</span>,</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        .buffer = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        .buffer_size = 0,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    };</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                                <span class="stringliteral">&quot;RobotoMono-Regular-file&quot;</span>,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                                &amp;binfont_font_file_src,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                                &amp;<a class="code hl_variable" href="include_2lvgl_2font_2lv__binfont__loader_8h.html#a1b8d655734b5629aa43fc35db05499cb">lv_binfont_font_class</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> <span class="keyword">const</span> test_font_3_buf[4892];</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">static</span> <a class="code hl_struct" href="structlv__binfont__font__src__t.html">lv_binfont_font_src_t</a> binfont_font_buffer_src = { 0 };</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    binfont_font_buffer_src.<a class="code hl_variable" href="structlv__binfont__font__src__t.html#a16cd4409e9fac2cb0ec756f0e4738869">font_size</a> = 20;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    binfont_font_buffer_src.<a class="code hl_variable" href="structlv__binfont__font__src__t.html#aa4a5cb1231b31b80d904fe064aa6f5ff">buffer</a> = test_font_3_buf;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    binfont_font_buffer_src.<a class="code hl_variable" href="structlv__binfont__font__src__t.html#ab4bab919e0d995ad7249474cd9028105">buffer_size</a> = <span class="keyword">sizeof</span>(test_font_3_buf);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    add_src_result = add_src_cb(g_font_manager,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                                <span class="stringliteral">&quot;RobotoMono-Regular-buffer&quot;</span>,</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                                &amp;binfont_font_buffer_src,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                                &amp;<a class="code hl_variable" href="include_2lvgl_2font_2lv__binfont__loader_8h.html#a1b8d655734b5629aa43fc35db05499cb">lv_binfont_font_class</a>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    TEST_ASSERT_TRUE(add_src_result);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">/* Create font from font manager */</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment">/* Try to create font with unknown name, should fail */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_unknown = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                                           <span class="stringliteral">&quot;UNKNOWN_FONT_NAME&quot;</span>,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                                           0,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                                           10,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                                           0,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                                           <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    TEST_ASSERT_NULL(font_unknown);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_14 = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                                      <span class="stringliteral">&quot;NotoSansSC-Regular,Ubuntu-Medium,Montserrat,UNKNOWN_FONT_NAME&quot;</span>,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                                                      LV_FREETYPE_FONT_RENDER_MODE_BITMAP,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                                                      14,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                                                      LV_FREETYPE_FONT_STYLE_NORMAL,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                                                      <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    TEST_ASSERT_NOT_NULL(font_14);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_32 = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                                      <span class="stringliteral">&quot;Ubuntu-Medium,NotoSansSC-Regular,Montserrat&quot;</span>,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                                                      LV_FREETYPE_FONT_RENDER_MODE_BITMAP,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                                                      32,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                                                      LV_FREETYPE_FONT_STYLE_NORMAL,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                                                      <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    TEST_ASSERT_NOT_NULL(font_32);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_40 = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                                      <span class="stringliteral">&quot;Ubuntu-Medium,NotoSansSC-Regular-2,Montserrat&quot;</span>,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                                      0,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                                      40,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                                                      0,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                                                      <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    TEST_ASSERT_NOT_NULL(font_40);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_file_20 = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                                                           <span class="stringliteral">&quot;RobotoMono-Regular-file,NotoSansSC-Regular-2&quot;</span>,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                                                           0,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                                                           20,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                                                           0,</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                                                           <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    TEST_ASSERT_NOT_NULL(font_file_20);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font_buffer_20 = lv_font_manager_create_font(g_font_manager,</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                                                             <span class="stringliteral">&quot;RobotoMono-Regular-buffer,NotoSansSC-Regular-2&quot;</span>,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                                                             0,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                                             20,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                                             0,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                                                             <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a>);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    TEST_ASSERT_NOT_NULL(font_file_20);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">/* Create label with the font */</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * label = <a class="code hl_function" href="include_2lvgl_2widgets_2lv__label_8h.html#a9b7eac4c1840d44582995efda39ef466">lv_label_create</a>(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a>());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__label_8h.html#ac0a3691e31b2defebc1eab701a35d63b">lv_label_set_text</a>(label,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                      <span class="stringliteral">&quot;这是一段中文。\n&quot;</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                      <span class="stringliteral">&quot;This is a English text.\n&quot;</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                      <span class="stringliteral">&quot;Symbols: &quot;</span> <a class="code hl_define" href="include_2lvgl_2font_2lv__symbol__def_8h.html#abbfa485495b9c32d2c7e7294acb06827">LV_SYMBOL_OK</a> <a class="code hl_define" href="include_2lvgl_2font_2lv__symbol__def_8h.html#af8dc1c20ac68b07323dae4ec823a02ec">LV_SYMBOL_CLOSE</a>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a21d7569df12139c33619786d4ff63dcf">lv_obj_center</a>(label);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a>(label, font_14, 0);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_define" href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a>(<span class="stringliteral">&quot;libs/font_manager_1&quot;</span> EXT_NAME);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a>(label, font_32, 0);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <a class="code hl_define" href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a>(<span class="stringliteral">&quot;libs/font_manager_2&quot;</span> EXT_NAME);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a>(label, font_40, 0);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_define" href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a>(<span class="stringliteral">&quot;libs/font_manager_3&quot;</span> EXT_NAME);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">/* Freetype fonts have not been tested, so there is no need to distinguish and process images */</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a>(label, font_file_20, 0);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_define" href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a>(<span class="stringliteral">&quot;libs/font_manager_4.png&quot;</span>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">/* Rendered images should be the same */</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a>(label, font_buffer_20, 0);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_define" href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a>(<span class="stringliteral">&quot;libs/font_manager_4.png&quot;</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">/* Should not be deleted successfully, because it is used by the label */</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordtype">bool</span> delete_result = lv_font_manager_delete(g_font_manager);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    TEST_ASSERT_FALSE(delete_result);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">/* Source should not be removed successfully, because it is used by the fonts */</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    delete_result = lv_font_manager_remove_src(g_font_manager, <span class="stringliteral">&quot;Montserrat&quot;</span>);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    TEST_ASSERT_FALSE(delete_result);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__tree_8h.html#aeaa0347dd6107388289b8806e440d39c">lv_obj_delete</a>(label);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    lv_font_manager_delete_font(g_font_manager, font_14);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    lv_font_manager_delete_font(g_font_manager, font_32);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    lv_font_manager_delete_font(g_font_manager, font_40);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    lv_font_manager_delete_font(g_font_manager, font_file_20);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    lv_font_manager_delete_font(g_font_manager, font_buffer_20);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">/* Source should be removed successfully, now that it&#39;s not used by any fonts */</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    delete_result = lv_font_manager_remove_src(g_font_manager, <span class="stringliteral">&quot;Montserrat&quot;</span>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    TEST_ASSERT_TRUE(delete_result);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="comment">/* Trying to delete a font that was not created by the font manager, it needs to handle this situation */</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    lv_font_manager_delete_font(g_font_manager, (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> *)<a class="code hl_define" href="lv__conf__cmsis_8h.html#a09b9a62c2b0986bedd3e720286631dd5">LV_FONT_DEFAULT</a>);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    lv_font_manager_delete_font(g_font_manager, (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> *)&amp;lv_font_montserrat_32);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    delete_result = lv_font_manager_delete(g_font_manager);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    TEST_ASSERT_TRUE(delete_result);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    g_font_manager = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>}</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keywordtype">void</span> test_font_manager_src_normal(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>{</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    test_font_manager_src(lv_font_manager_add_src);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keywordtype">void</span> test_font_manager_src_static(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>{</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    test_font_manager_src(lv_font_manager_add_src_static);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordtype">void</span> setUp(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>{</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keywordtype">void</span> tearDown(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keywordtype">void</span> test_font_manager_src_normal(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>{</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>}</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keywordtype">void</span> test_font_manager_src_static(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>{</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#endif </span><span class="comment">/* LV_BUILD_TEST */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="aefi_8h_html_a3a69c4a11d4f8ab9401271364ae45b18"><div class="ttname"><a href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></div><div class="ttdeci">UINT8 bool</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00077">efi.h:77</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_a21d7569df12139c33619786d4ff63dcf"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#a21d7569df12139c33619786d4ff63dcf">lv_obj_center</a></div><div class="ttdeci">void lv_obj_center(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l01268">lv_obj_pos.c:1268</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a831d931ce2c7b3c5689b6ab468df9764"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a831d931ce2c7b3c5689b6ab468df9764">lv_obj_set_style_text_font</a></div><div class="ttdeci">void lv_obj_set_style_text_font(lv_obj_t *obj, const lv_font_t *value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01578">lv_obj_style_gen.c:1578</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__tree_8h_html_ab9e1d84b921e63d1da83fe711b214aea"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__tree_8h.html#ab9e1d84b921e63d1da83fe711b214aea">lv_obj_clean</a></div><div class="ttdeci">void lv_obj_clean(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__tree_8c_source.html#l00091">lv_obj_tree.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__tree_8h_html_aeaa0347dd6107388289b8806e440d39c"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__tree_8h.html#aeaa0347dd6107388289b8806e440d39c">lv_obj_delete</a></div><div class="ttdeci">void lv_obj_delete(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__tree_8c_source.html#l00054">lv_obj_tree.c:54</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ae5c93629ebabaee2d7cd4461f4ccd128"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ae5c93629ebabaee2d7cd4461f4ccd128">lv_screen_active</a></div><div class="ttdeci">lv_obj_t * lv_screen_active(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01496">lv_display.c:1496</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__binfont__loader_8h_html_a1b8d655734b5629aa43fc35db05499cb"><div class="ttname"><a href="include_2lvgl_2font_2lv__binfont__loader_8h.html#a1b8d655734b5629aa43fc35db05499cb">lv_binfont_font_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_font_class_t lv_binfont_font_class</div><div class="ttdef"><b>Definition</b> <a href="lv__binfont__loader_8c_source.html#l00103">lv_binfont_loader.c:103</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__font_8h_html_a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685"><div class="ttname"><a href="include_2lvgl_2font_2lv__font_8h.html#a8895b7fe9511b895cf98203c81a983b2a60330de27d10a1521624e3df6d7e0685">LV_FONT_KERNING_NONE</a></div><div class="ttdeci">@ LV_FONT_KERNING_NONE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font_8h_source.html#l00088">lv_font.h:88</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__font__fmt__txt_8h_html_a5603f93684da417e5021e1f65d22b0c3"><div class="ttname"><a href="include_2lvgl_2font_2lv__font__fmt__txt_8h.html#a5603f93684da417e5021e1f65d22b0c3">lv_builtin_font_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_font_class_t lv_builtin_font_class</div><div class="ttdef"><b>Definition</b> <a href="lv__font__fmt__txt_8c_source.html#l00070">lv_font_fmt_txt.c:70</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__symbol__def_8h_html_abbfa485495b9c32d2c7e7294acb06827"><div class="ttname"><a href="include_2lvgl_2font_2lv__symbol__def_8h.html#abbfa485495b9c32d2c7e7294acb06827">LV_SYMBOL_OK</a></div><div class="ttdeci">#define LV_SYMBOL_OK</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__symbol__def_8h_source.html#l00052">lv_symbol_def.h:52</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__symbol__def_8h_html_af8dc1c20ac68b07323dae4ec823a02ec"><div class="ttname"><a href="include_2lvgl_2font_2lv__symbol__def_8h.html#af8dc1c20ac68b07323dae4ec823a02ec">LV_SYMBOL_CLOSE</a></div><div class="ttdeci">#define LV_SYMBOL_CLOSE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__symbol__def_8h_source.html#l00056">lv_symbol_def.h:56</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a11e3396cab33231964d98046c4e436af"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a></div><div class="ttdeci">struct _lv_font_t lv_font_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00138">lv_types.h:138</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a41617a4e6527620532aa99b156e4aa4b"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a41617a4e6527620532aa99b156e4aa4b">lv_font_class_t</a></div><div class="ttdeci">struct _lv_font_class_t lv_font_class_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00139">lv_types.h:139</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a977c39306808d71024c4f654d46cdb98"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a977c39306808d71024c4f654d46cdb98">lv_font_manager_t</a></div><div class="ttdeci">struct _lv_font_manager_t lv_font_manager_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00142">lv_types.h:142</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__label_8h_html_a9b7eac4c1840d44582995efda39ef466"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__label_8h.html#a9b7eac4c1840d44582995efda39ef466">lv_label_create</a></div><div class="ttdeci">lv_obj_t * lv_label_create(lv_obj_t *parent)</div><div class="ttdef"><b>Definition</b> <a href="lv__label_8c_source.html#l00120">lv_label.c:120</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__label_8h_html_ac0a3691e31b2defebc1eab701a35d63b"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__label_8h.html#ac0a3691e31b2defebc1eab701a35d63b">lv_label_set_text</a></div><div class="ttdeci">void lv_label_set_text(lv_obj_t *obj, const char *text)</div><div class="ttdef"><b>Definition</b> <a href="lv__label_8c_source.html#l00132">lv_label.c:132</a></div></div>
+<div class="ttc" id="alv__conf__cmsis_8h_html_a09b9a62c2b0986bedd3e720286631dd5"><div class="ttname"><a href="lv__conf__cmsis_8h.html#a09b9a62c2b0986bedd3e720286631dd5">LV_FONT_DEFAULT</a></div><div class="ttdeci">#define LV_FONT_DEFAULT</div><div class="ttdef"><b>Definition</b> <a href="lv__conf__cmsis_8h_source.html#l01097">lv_conf_cmsis.h:1097</a></div></div>
+<div class="ttc" id="alv__font__montserrat__14_8c_html_afa00efdd6d033ab1919fbfdd23fd60d9"><div class="ttname"><a href="lv__font__montserrat__14_8c.html#afa00efdd6d033ab1919fbfdd23fd60d9">lv_font_montserrat_14</a></div><div class="ttdeci">const lv_font_t lv_font_montserrat_14</div><div class="ttdef"><b>Definition</b> <a href="lv__font__montserrat__14_8c_source.html#l02191">lv_font_montserrat_14.c:2191</a></div></div>
+<div class="ttc" id="anamespaceimage__viewer_html_ab74e6bf80237ddc4109968cedc58c151"><div class="ttname"><a href="namespaceimage__viewer.html#ab74e6bf80237ddc4109968cedc58c151">image_viewer.name</a></div><div class="ttdeci">name</div><div class="ttdef"><b>Definition</b> <a href="image__viewer_8py_source.html#l00014">image_viewer.py:14</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+<div class="ttc" id="astructlv__binfont__font__src__t_html"><div class="ttname"><a href="structlv__binfont__font__src__t.html">lv_binfont_font_src_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__binfont__loader_8h_source.html#l00027">lv_binfont_loader.h:27</a></div></div>
+<div class="ttc" id="astructlv__binfont__font__src__t_html_a16cd4409e9fac2cb0ec756f0e4738869"><div class="ttname"><a href="structlv__binfont__font__src__t.html#a16cd4409e9fac2cb0ec756f0e4738869">lv_binfont_font_src_t::font_size</a></div><div class="ttdeci">uint32_t font_size</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__binfont__loader_8h_source.html#l00028">lv_binfont_loader.h:28</a></div></div>
+<div class="ttc" id="astructlv__binfont__font__src__t_html_aa4a5cb1231b31b80d904fe064aa6f5ff"><div class="ttname"><a href="structlv__binfont__font__src__t.html#aa4a5cb1231b31b80d904fe064aa6f5ff">lv_binfont_font_src_t::buffer</a></div><div class="ttdeci">const void * buffer</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__binfont__loader_8h_source.html#l00030">lv_binfont_loader.h:30</a></div></div>
+<div class="ttc" id="astructlv__binfont__font__src__t_html_ab4bab919e0d995ad7249474cd9028105"><div class="ttname"><a href="structlv__binfont__font__src__t.html#ab4bab919e0d995ad7249474cd9028105">lv_binfont_font_src_t::buffer_size</a></div><div class="ttdeci">uint32_t buffer_size</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__binfont__loader_8h_source.html#l00031">lv_binfont_loader.h:31</a></div></div>
+<div class="ttc" id="astructlv__builtin__font__src__t_html"><div class="ttname"><a href="structlv__builtin__font__src__t.html">lv_builtin_font_src_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00209">lv_font_fmt_txt.h:209</a></div></div>
+<div class="ttc" id="astructlv__builtin__font__src__t_html_a8660aa7e53f0bafeba0e4654634e407b"><div class="ttname"><a href="structlv__builtin__font__src__t.html#a8660aa7e53f0bafeba0e4654634e407b">lv_builtin_font_src_t::font_p</a></div><div class="ttdeci">const lv_font_t * font_p</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00210">lv_font_fmt_txt.h:210</a></div></div>
+<div class="ttc" id="astructlv__builtin__font__src__t_html_ab2c6b258f02add8fdf4cfc7c371dd772"><div class="ttname"><a href="structlv__builtin__font__src__t.html#ab2c6b258f02add8fdf4cfc7c371dd772">lv_builtin_font_src_t::size</a></div><div class="ttdeci">uint32_t size</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html#l00211">lv_font_fmt_txt.h:211</a></div></div>
+<div class="ttc" id="aunity_8h_html"><div class="ttname"><a href="unity_8h.html">unity.h</a></div></div>
+<div class="ttc" id="aunity__support_8h_html_a1569409b36f7232cf050ab2f9d536cd0"><div class="ttname"><a href="unity__support_8h.html#a1569409b36f7232cf050ab2f9d536cd0">TEST_ASSERT_EQUAL_SCREENSHOT</a></div><div class="ttdeci">#define TEST_ASSERT_EQUAL_SCREENSHOT(path)</div><div class="ttdef"><b>Definition</b> <a href="unity__support_8h_source.html#l00012">unity_support.h:12</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_a2db2b5e922be370ef89e28f89eca8b6.html">src</a></li><li class="navelem"><a href="dir_0da03cef61f81ff608e9e8a57be45fcc.html">test_cases</a></li><li class="navelem"><a href="test__font__manager_8c.html">test_font_manager.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

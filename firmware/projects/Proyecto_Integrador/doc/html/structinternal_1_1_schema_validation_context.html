@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia de la plantilla de la estructura SchemaValidationContext&lt; SchemaDocumentType &gt;</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('structinternal_1_1_schema_validation_context.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la plantilla de la estructura SchemaValidationContext&lt; SchemaDocumentType &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="schema_8h_source.html">schema.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:ad1fcfceca733bb70cc7aaf620acf0c06" id="r_ad1fcfceca733bb70cc7aaf620acf0c06"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a> { <a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06ab5cf03cc1756aa763560be9fbd8f89ff">kPatternValidatorOnly</a>
+, <a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06a1adba79f0f75fb9a463fce8a694bb78b">kPatternValidatorWithProperty</a>
+, <a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06af4cfa2b61faf08fcb20fc291d2d2c618">kPatternValidatorWithAdditionalProperty</a>
+ }</td></tr>
+<tr class="memitem:a72699c76e0d63308916c671c71e0da83" id="r_a72699c76e0d63308916c671c71e0da83"><td class="memItemLeft">typedef <a class="el" href="classinternal_1_1_schema.html">Schema</a>&lt; SchemaDocumentType &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a></td></tr>
+<tr class="memitem:ada2bf61985cf7e2ac9f1a7617e33cb27" id="r_ada2bf61985cf7e2ac9f1a7617e33cb27"><td class="memItemLeft">typedef <a class="el" href="classinternal_1_1_i_schema_state_factory.html">ISchemaStateFactory</a>&lt; <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a></td></tr>
+<tr class="memitem:ade2d2efba224ad1eea9d1120329b387c" id="r_ade2d2efba224ad1eea9d1120329b387c"><td class="memItemLeft">typedef <a class="el" href="classinternal_1_1_i_validation_error_handler.html">IValidationErrorHandler</a>&lt; <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a></td></tr>
+<tr class="memitem:ad6a4c18b27266af09220ea31fd2c6040" id="r_ad6a4c18b27266af09220ea31fd2c6040"><td class="memItemLeft">typedef <a class="el" href="classinternal_1_1_schema.html#a32599b40427c60e99c8f8c879c2c9b27">SchemaType::ValueType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad6a4c18b27266af09220ea31fd2c6040">ValueType</a></td></tr>
+<tr class="memitem:a0412994b5b9254612a891dc7a4ec6a6b" id="r_a0412994b5b9254612a891dc7a4ec6a6b"><td class="memItemLeft">typedef ValueType::Ch&#160;</td><td class="memItemRight"><a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a36989e10610240122ee690f8978045ac" id="r_a36989e10610240122ee690f8978045ac"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a36989e10610240122ee690f8978045ac">SchemaValidationContext</a> (<a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a> &amp;f, <a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a> &amp;eh, const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> *s, unsigned fl=0)</td></tr>
+<tr class="memitem:a11fd4a87450c7adff7f441efb57d00d4" id="r_a11fd4a87450c7adff7f441efb57d00d4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a11fd4a87450c7adff7f441efb57d00d4">~SchemaValidationContext</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Campos de datos</h2></td></tr>
+<tr class="memitem:add6097c949d935f7ac713488fa256a03" id="r_add6097c949d935f7ac713488fa256a03"><td class="memItemLeft"><a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#add6097c949d935f7ac713488fa256a03">factory</a></td></tr>
+<tr class="memitem:a7fafffa58980e474ed1dd22a773e909b" id="r_a7fafffa58980e474ed1dd22a773e909b"><td class="memItemLeft"><a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7fafffa58980e474ed1dd22a773e909b">error_handler</a></td></tr>
+<tr class="memitem:a20a7bb804e9932ed8696a91a4c492e0c" id="r_a20a7bb804e9932ed8696a91a4c492e0c"><td class="memItemLeft">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a20a7bb804e9932ed8696a91a4c492e0c">schema</a></td></tr>
+<tr class="memitem:a8b08a4d2ec878257d64c55f64a62242c" id="r_a8b08a4d2ec878257d64c55f64a62242c"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a8b08a4d2ec878257d64c55f64a62242c">flags</a></td></tr>
+<tr class="memitem:a2468f1f8adde4c45b694e98e8ca6b0d1" id="r_a2468f1f8adde4c45b694e98e8ca6b0d1"><td class="memItemLeft">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2468f1f8adde4c45b694e98e8ca6b0d1">valueSchema</a></td></tr>
+<tr class="memitem:af6d3b84081485022a3c41c920f688fe1" id="r_af6d3b84081485022a3c41c920f688fe1"><td class="memItemLeft">const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af6d3b84081485022a3c41c920f688fe1">invalidKeyword</a></td></tr>
+<tr class="memitem:a705176c89a3c542aaf185849156b8241" id="r_a705176c89a3c542aaf185849156b8241"><td class="memItemLeft"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga2e1f88f94a5d9a6817a5de0ed2f0105a">ValidateErrorCode</a>&#160;</td><td class="memItemRight"><a class="el" href="#a705176c89a3c542aaf185849156b8241">invalidCode</a></td></tr>
+<tr class="memitem:aa2bb5c8abf4949586e88d4647ff1da7f" id="r_aa2bb5c8abf4949586e88d4647ff1da7f"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#aa2bb5c8abf4949586e88d4647ff1da7f">hasher</a></td></tr>
+<tr class="memitem:a69de368cf3194b20cdc24ca25a111b88" id="r_a69de368cf3194b20cdc24ca25a111b88"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#a69de368cf3194b20cdc24ca25a111b88">arrayElementHashCodes</a></td></tr>
+<tr class="memitem:a7b5a122e0d9579cc2e0b2b4186319522" id="r_a7b5a122e0d9579cc2e0b2b4186319522"><td class="memItemLeft"><a class="el" href="classinternal_1_1_i_schema_validator.html">ISchemaValidator</a> **&#160;</td><td class="memItemRight"><a class="el" href="#a7b5a122e0d9579cc2e0b2b4186319522">validators</a></td></tr>
+<tr class="memitem:a1e4af77c43b9f30d2d8962927d028005" id="r_a1e4af77c43b9f30d2d8962927d028005"><td class="memItemLeft"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1e4af77c43b9f30d2d8962927d028005">validatorCount</a></td></tr>
+<tr class="memitem:ac0f55ebeee76dae3afa0508806c9a90d" id="r_ac0f55ebeee76dae3afa0508806c9a90d"><td class="memItemLeft"><a class="el" href="classinternal_1_1_i_schema_validator.html">ISchemaValidator</a> **&#160;</td><td class="memItemRight"><a class="el" href="#ac0f55ebeee76dae3afa0508806c9a90d">patternPropertiesValidators</a></td></tr>
+<tr class="memitem:a03e768923d05fe0a629295ae272c949a" id="r_a03e768923d05fe0a629295ae272c949a"><td class="memItemLeft"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a03e768923d05fe0a629295ae272c949a">patternPropertiesValidatorCount</a></td></tr>
+<tr class="memitem:ab7f2172a66de606531dccc232b0d4ee4" id="r_ab7f2172a66de606531dccc232b0d4ee4"><td class="memItemLeft">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> **&#160;</td><td class="memItemRight"><a class="el" href="#ab7f2172a66de606531dccc232b0d4ee4">patternPropertiesSchemas</a></td></tr>
+<tr class="memitem:ab71cfd92f9c18909d7c78d17a382a06b" id="r_ab71cfd92f9c18909d7c78d17a382a06b"><td class="memItemLeft"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab71cfd92f9c18909d7c78d17a382a06b">patternPropertiesSchemaCount</a></td></tr>
+<tr class="memitem:a2d2b37f61d668581ece601d09472e703" id="r_a2d2b37f61d668581ece601d09472e703"><td class="memItemLeft"><a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2d2b37f61d668581ece601d09472e703">valuePatternValidatorType</a></td></tr>
+<tr class="memitem:acc3f95c0cb9fca10f96c5b4c0acf5138" id="r_acc3f95c0cb9fca10f96c5b4c0acf5138"><td class="memItemLeft"><a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a>&#160;</td><td class="memItemRight"><a class="el" href="#acc3f95c0cb9fca10f96c5b4c0acf5138">objectPatternValidatorType</a></td></tr>
+<tr class="memitem:a3c8ab487300872ff9aa1d6a4b5d718f8" id="r_a3c8ab487300872ff9aa1d6a4b5d718f8"><td class="memItemLeft"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3c8ab487300872ff9aa1d6a4b5d718f8">arrayElementIndex</a></td></tr>
+<tr class="memitem:ac545f9204f743ee623a0fb22329d2134" id="r_ac545f9204f743ee623a0fb22329d2134"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac545f9204f743ee623a0fb22329d2134">propertyExist</a></td></tr>
+<tr class="memitem:a1d3a7c1e39b75728428c8234fc184461" id="r_a1d3a7c1e39b75728428c8234fc184461"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1d3a7c1e39b75728428c8234fc184461">inArray</a></td></tr>
+<tr class="memitem:a6504d17169050f896901c40be0c0efe3" id="r_a6504d17169050f896901c40be0c0efe3"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6504d17169050f896901c40be0c0efe3">valueUniqueness</a></td></tr>
+<tr class="memitem:a585b3b6952d9897a10dda6a7f3c63c9e" id="r_a585b3b6952d9897a10dda6a7f3c63c9e"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a585b3b6952d9897a10dda6a7f3c63c9e">arrayUniqueness</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename SchemaDocumentType&gt;<br />
+struct internal::SchemaValidationContext&lt; SchemaDocumentType &gt;</div>
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00432">432</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="a0412994b5b9254612a891dc7a4ec6a6b" name="a0412994b5b9254612a891dc7a4ec6a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0412994b5b9254612a891dc7a4ec6a6b">&#9670;&#160;</a></span>Ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueType::Ch <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00437">437</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="ade2d2efba224ad1eea9d1120329b387c" name="ade2d2efba224ad1eea9d1120329b387c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2d2efba224ad1eea9d1120329b387c">&#9670;&#160;</a></span>ErrorHandlerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classinternal_1_1_i_validation_error_handler.html">IValidationErrorHandler</a>&lt;<a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a>&gt; <a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00435">435</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="a72699c76e0d63308916c671c71e0da83" name="a72699c76e0d63308916c671c71e0da83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72699c76e0d63308916c671c71e0da83">&#9670;&#160;</a></span>SchemaType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classinternal_1_1_schema.html">Schema</a>&lt;SchemaDocumentType&gt; <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00433">433</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="ada2bf61985cf7e2ac9f1a7617e33cb27" name="ada2bf61985cf7e2ac9f1a7617e33cb27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2bf61985cf7e2ac9f1a7617e33cb27">&#9670;&#160;</a></span>SchemaValidatorFactoryType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classinternal_1_1_i_schema_state_factory.html">ISchemaStateFactory</a>&lt;<a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a>&gt; <a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00434">434</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6a4c18b27266af09220ea31fd2c6040" name="ad6a4c18b27266af09220ea31fd2c6040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a4c18b27266af09220ea31fd2c6040">&#9670;&#160;</a></span>ValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classinternal_1_1_schema.html#a32599b40427c60e99c8f8c879c2c9b27">SchemaType::ValueType</a> <a class="el" href="#ad6a4c18b27266af09220ea31fd2c6040">ValueType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00436">436</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de las enumeraciones miembro de la clase</h2>
+<a id="ad1fcfceca733bb70cc7aaf620acf0c06" name="ad1fcfceca733bb70cc7aaf620acf0c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1fcfceca733bb70cc7aaf620acf0c06">&#9670;&#160;</a></span>PatternValidatorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ad1fcfceca733bb70cc7aaf620acf0c06ab5cf03cc1756aa763560be9fbd8f89ff" name="ad1fcfceca733bb70cc7aaf620acf0c06ab5cf03cc1756aa763560be9fbd8f89ff"></a>kPatternValidatorOnly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1fcfceca733bb70cc7aaf620acf0c06a1adba79f0f75fb9a463fce8a694bb78b" name="ad1fcfceca733bb70cc7aaf620acf0c06a1adba79f0f75fb9a463fce8a694bb78b"></a>kPatternValidatorWithProperty&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad1fcfceca733bb70cc7aaf620acf0c06af4cfa2b61faf08fcb20fc291d2d2c618" name="ad1fcfceca733bb70cc7aaf620acf0c06af4cfa2b61faf08fcb20fc291d2d2c618"></a>kPatternValidatorWithAdditionalProperty&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00439">439</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a36989e10610240122ee690f8978045ac" name="a36989e10610240122ee690f8978045ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36989e10610240122ee690f8978045ac">&#9670;&#160;</a></span>SchemaValidationContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SchemaValidationContext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>eh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a> *</td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>fl</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00445">445</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="schema_8h_source.html#l00502">arrayElementHashCodes</a>, <a class="el" href="schema_8h_source.html#l00515">arrayUniqueness</a>, <a class="el" href="schema_8h_source.html#l00495">error_handler</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00239">f</a>, <a class="el" href="schema_8h_source.html#l00494">factory</a>, <a class="el" href="efi_8h_source.html#l00082">false</a>, <a class="el" href="schema_8h_source.html#l00497">flags</a>, <a class="el" href="schema_8h_source.html#l00501">hasher</a>, <a class="el" href="schema_8h_source.html#l00513">inArray</a>, <a class="el" href="schema_8h_source.html#l00500">invalidCode</a>, <a class="el" href="schema_8h_source.html#l00499">invalidKeyword</a>, <a class="el" href="schema_8h_source.html#l00440">kPatternValidatorOnly</a>, <a class="el" href="schema_8h_source.html#l00508">patternPropertiesSchemaCount</a>, <a class="el" href="schema_8h_source.html#l00507">patternPropertiesSchemas</a>, <a class="el" href="schema_8h_source.html#l00506">patternPropertiesValidatorCount</a>, <a class="el" href="schema_8h_source.html#l00505">patternPropertiesValidators</a>, <a class="el" href="schema_8h_source.html#l00512">propertyExist</a>, <a class="el" href="schema_8h_source.html#l00496">schema</a>, <a class="el" href="schema_8h_source.html#l00504">validatorCount</a>, <a class="el" href="schema_8h_source.html#l00503">validators</a>, <a class="el" href="schema_8h_source.html#l00509">valuePatternValidatorType</a>, <a class="el" href="schema_8h_source.html#l00498">valueSchema</a> y <a class="el" href="schema_8h_source.html#l00514">valueUniqueness</a>.</p>
+
+</div>
+</div>
+<a id="a11fd4a87450c7adff7f441efb57d00d4" name="a11fd4a87450c7adff7f441efb57d00d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fd4a87450c7adff7f441efb57d00d4">&#9670;&#160;</a></span>~SchemaValidationContext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="#a36989e10610240122ee690f8978045ac">SchemaValidationContext</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00469">469</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="schema_8h_source.html#l00494">factory</a>, <a class="el" href="schema_8h_source.html#l00501">hasher</a>, <a class="el" href="schema_8h_source.html#l00507">patternPropertiesSchemas</a>, <a class="el" href="schema_8h_source.html#l00506">patternPropertiesValidatorCount</a>, <a class="el" href="schema_8h_source.html#l00505">patternPropertiesValidators</a>, <a class="el" href="schema_8h_source.html#l00512">propertyExist</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a>, <a class="el" href="schema_8h_source.html#l00504">validatorCount</a> y <a class="el" href="schema_8h_source.html#l00503">validators</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a69de368cf3194b20cdc24ca25a111b88" name="a69de368cf3194b20cdc24ca25a111b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69de368cf3194b20cdc24ca25a111b88">&#9670;&#160;</a></span>arrayElementHashCodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void* arrayElementHashCodes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00502">502</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a3c8ab487300872ff9aa1d6a4b5d718f8" name="a3c8ab487300872ff9aa1d6a4b5d718f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8ab487300872ff9aa1d6a4b5d718f8">&#9670;&#160;</a></span>arrayElementIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> arrayElementIndex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00511">511</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00871">Schema&lt; GenericSchemaDocument &gt;::BeginValue()</a> y <a class="el" href="schema_8h_source.html#l01209">Schema&lt; GenericSchemaDocument &gt;::StartArray()</a>.</p>
+
+</div>
+</div>
+<a id="a585b3b6952d9897a10dda6a7f3c63c9e" name="a585b3b6952d9897a10dda6a7f3c63c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585b3b6952d9897a10dda6a7f3c63c9e">&#9670;&#160;</a></span>arrayUniqueness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> arrayUniqueness</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00515">515</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a7fafffa58980e474ed1dd22a773e909b" name="a7fafffa58980e474ed1dd22a773e909b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fafffa58980e474ed1dd22a773e909b">&#9670;&#160;</a></span>error_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ade2d2efba224ad1eea9d1120329b387c">ErrorHandlerType</a>&amp; error_handler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00495">495</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00871">Schema&lt; GenericSchemaDocument &gt;::BeginValue()</a>, <a class="el" href="schema_8h_source.html#l01222">Schema&lt; GenericSchemaDocument &gt;::EndArray()</a>, <a class="el" href="schema_8h_source.html#l01161">Schema&lt; GenericSchemaDocument &gt;::EndObject()</a>, <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l01057">Schema&lt; GenericSchemaDocument &gt;::String()</a>.</p>
+
+</div>
+</div>
+<a id="add6097c949d935f7ac713488fa256a03" name="add6097c949d935f7ac713488fa256a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6097c949d935f7ac713488fa256a03">&#9670;&#160;</a></span>factory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ada2bf61985cf7e2ac9f1a7617e33cb27">SchemaValidatorFactoryType</a>&amp; factory</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00494">494</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>, <a class="el" href="schema_8h_source.html#l01086">Schema&lt; GenericSchemaDocument &gt;::StartObject()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a8b08a4d2ec878257d64c55f64a62242c" name="a8b08a4d2ec878257d64c55f64a62242c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b08a4d2ec878257d64c55f64a62242c">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00497">497</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="aa2bb5c8abf4949586e88d4647ff1da7f" name="aa2bb5c8abf4949586e88d4647ff1da7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2bb5c8abf4949586e88d4647ff1da7f">&#9670;&#160;</a></span>hasher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void* hasher</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00501">501</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a1d3a7c1e39b75728428c8234fc184461" name="a1d3a7c1e39b75728428c8234fc184461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d3a7c1e39b75728428c8234fc184461">&#9670;&#160;</a></span>inArray</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> inArray</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00513">513</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00871">Schema&lt; GenericSchemaDocument &gt;::BeginValue()</a>, <a class="el" href="schema_8h_source.html#l01222">Schema&lt; GenericSchemaDocument &gt;::EndArray()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l01209">Schema&lt; GenericSchemaDocument &gt;::StartArray()</a>.</p>
+
+</div>
+</div>
+<a id="a705176c89a3c542aaf185849156b8241" name="a705176c89a3c542aaf185849156b8241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705176c89a3c542aaf185849156b8241">&#9670;&#160;</a></span>invalidCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga2e1f88f94a5d9a6817a5de0ed2f0105a">ValidateErrorCode</a> invalidCode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00500">500</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="af6d3b84081485022a3c41c920f688fe1" name="af6d3b84081485022a3c41c920f688fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d3b84081485022a3c41c920f688fe1">&#9670;&#160;</a></span>invalidKeyword</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a>* invalidKeyword</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00499">499</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="acc3f95c0cb9fca10f96c5b4c0acf5138" name="acc3f95c0cb9fca10f96c5b4c0acf5138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc3f95c0cb9fca10f96c5b4c0acf5138">&#9670;&#160;</a></span>objectPatternValidatorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a> objectPatternValidatorType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00510">510</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>.</p>
+
+</div>
+</div>
+<a id="ab71cfd92f9c18909d7c78d17a382a06b" name="ab71cfd92f9c18909d7c78d17a382a06b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71cfd92f9c18909d7c78d17a382a06b">&#9670;&#160;</a></span>patternPropertiesSchemaCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> patternPropertiesSchemaCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00508">508</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l01086">Schema&lt; GenericSchemaDocument &gt;::StartObject()</a>.</p>
+
+</div>
+</div>
+<a id="ab7f2172a66de606531dccc232b0d4ee4" name="ab7f2172a66de606531dccc232b0d4ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f2172a66de606531dccc232b0d4ee4">&#9670;&#160;</a></span>patternPropertiesSchemas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a>** patternPropertiesSchemas</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00507">507</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>, <a class="el" href="schema_8h_source.html#l01086">Schema&lt; GenericSchemaDocument &gt;::StartObject()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a03e768923d05fe0a629295ae272c949a" name="a03e768923d05fe0a629295ae272c949a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e768923d05fe0a629295ae272c949a">&#9670;&#160;</a></span>patternPropertiesValidatorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> patternPropertiesValidatorCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00506">506</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="ac0f55ebeee76dae3afa0508806c9a90d" name="ac0f55ebeee76dae3afa0508806c9a90d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f55ebeee76dae3afa0508806c9a90d">&#9670;&#160;</a></span>patternPropertiesValidators</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classinternal_1_1_i_schema_validator.html">ISchemaValidator</a>** patternPropertiesValidators</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00505">505</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="ac545f9204f743ee623a0fb22329d2134" name="ac545f9204f743ee623a0fb22329d2134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac545f9204f743ee623a0fb22329d2134">&#9670;&#160;</a></span>propertyExist</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>* propertyExist</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00512">512</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01161">Schema&lt; GenericSchemaDocument &gt;::EndObject()</a>, <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>, <a class="el" href="schema_8h_source.html#l01086">Schema&lt; GenericSchemaDocument &gt;::StartObject()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a20a7bb804e9932ed8696a91a4c492e0c" name="a20a7bb804e9932ed8696a91a4c492e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a7bb804e9932ed8696a91a4c492e0c">&#9670;&#160;</a></span>schema</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a>* schema</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00496">496</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a1e4af77c43b9f30d2d8962927d028005" name="a1e4af77c43b9f30d2d8962927d028005"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4af77c43b9f30d2d8962927d028005">&#9670;&#160;</a></span>validatorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> validatorCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00504">504</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a7b5a122e0d9579cc2e0b2b4186319522" name="a7b5a122e0d9579cc2e0b2b4186319522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b5a122e0d9579cc2e0b2b4186319522">&#9670;&#160;</a></span>validators</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classinternal_1_1_i_schema_validator.html">ISchemaValidator</a>** validators</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00503">503</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01161">Schema&lt; GenericSchemaDocument &gt;::EndObject()</a>, <a class="el" href="schema_8h_source.html#l00903">Schema&lt; GenericSchemaDocument &gt;::EndValue()</a>, <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a> y <a class="el" href="schema_8h_source.html#l00469">~SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a2d2b37f61d668581ece601d09472e703" name="a2d2b37f61d668581ece601d09472e703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d2b37f61d668581ece601d09472e703">&#9670;&#160;</a></span>valuePatternValidatorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ad1fcfceca733bb70cc7aaf620acf0c06">PatternValidatorType</a> valuePatternValidatorType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00509">509</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a> y <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a2468f1f8adde4c45b694e98e8ca6b0d1" name="a2468f1f8adde4c45b694e98e8ca6b0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2468f1f8adde4c45b694e98e8ca6b0d1">&#9670;&#160;</a></span>valueSchema</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="#a72699c76e0d63308916c671c71e0da83">SchemaType</a>* valueSchema</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00498">498</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00871">Schema&lt; GenericSchemaDocument &gt;::BeginValue()</a>, <a class="el" href="schema_8h_source.html#l01108">Schema&lt; GenericSchemaDocument &gt;::Key()</a> y <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<a id="a6504d17169050f896901c40be0c0efe3" name="a6504d17169050f896901c40be0c0efe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6504d17169050f896901c40be0c0efe3">&#9670;&#160;</a></span>valueUniqueness</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename SchemaDocumentType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> valueUniqueness</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="schema_8h_source.html#l00514">514</a> del archivo <a class="el" href="schema_8h_source.html">schema.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="schema_8h_source.html#l00871">Schema&lt; GenericSchemaDocument &gt;::BeginValue()</a> y <a class="el" href="schema_8h_source.html#l00445">SchemaValidationContext()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="schema_8h_source.html">schema.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespaceinternal.html">internal</a></li><li class="navelem"><a href="structinternal_1_1_schema_validation_context.html">SchemaValidationContext</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

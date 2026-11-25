@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/include/lvgl/lvgl.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('include_2lvgl_2lvgl_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lvgl.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="include_2lvgl_2lv__version_8h_source.html">lv_version.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_23d_2lv__3dmath_8h_source.html">3d/lv_3dmath.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_23d_2lv__gltf__environment_8h_source.html">3d/lv_gltf_environment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_23d_2lv__gltf__model_8h_source.html">3d/lv_gltf_model.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_23d_2lv__gltf__model__loader_8h_source.html">3d/lv_gltf_model_loader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_23d_2lv__gltf__model__node_8h_source.html">3d/lv_gltf_model_node.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html">config/lv_conf_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2config_2lv__conf__kconfig_8h_source.html">config/lv_conf_kconfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__anim_8h_source.html">core/lv_anim.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__anim__timeline_8h_source.html">core/lv_anim_timeline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html">core/lv_area.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html">core/lv_event.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__ext__data_8h_source.html">core/lv_ext_data.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__group_8h_source.html">core/lv_group.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__init_8h_source.html">core/lv_init.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__matrix_8h_source.html">core/lv_matrix.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html">core/lv_obj.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__class_8h_source.html">core/lv_obj_class.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__draw_8h_source.html">core/lv_obj_draw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__event_8h_source.html">core/lv_obj_event.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__pos_8h_source.html">core/lv_obj_pos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__property_8h_source.html">core/lv_obj_property.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__property__names_8h_source.html">core/lv_obj_property_names.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__scroll_8h_source.html">core/lv_obj_scroll.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html">core/lv_obj_style.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__style__gen_8h_source.html">core/lv_obj_style_gen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__tree_8h_source.html">core/lv_obj_tree.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html">core/lv_observer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__refr_8h_source.html">core/lv_refr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html">core/lv_style.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__style__gen_8h_source.html">core/lv_style_gen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__style__properties_8h_source.html">core/lv_style_properties.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__timer_8h_source.html">core/lv_timer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__translation_8h_source.html">core/lv_translation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html">debugging/lv_assert.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html">debugging/lv_check_arg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__check__obj_8h_source.html">debugging/lv_check_obj.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2lv__monkey_8h_source.html">debugging/lv_monkey.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2lv__sysmon_8h_source.html">debugging/lv_sysmon.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html">debugging/profiler/lv_profiler.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler__builtin_8h_source.html">debugging/profiler/lv_profiler_builtin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test_8h_source.html">debugging/test/lv_test.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__display_8h_source.html">debugging/test/lv_test_display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__fs_8h_source.html">debugging/test/lv_test_fs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__helpers_8h_source.html">debugging/test/lv_test_helpers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__indev_8h_source.html">debugging/test/lv_test_indev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__indev__gesture_8h_source.html">debugging/test/lv_test_indev_gesture.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2debugging_2test_2lv__test__screenshot__compare_8h_source.html">debugging/test/lv_test_screenshot_compare.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2display_2lv__display_8h_source.html">display/lv_display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html">draw/lv_color.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__color__op_8h_source.html">draw/lv_color_op.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html">draw/lv_draw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__3d_8h_source.html">draw/lv_draw_3d.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html">draw/lv_draw_arc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__blur_8h_source.html">draw/lv_draw_blur.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html">draw/lv_draw_buf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html">draw/lv_draw_image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__label_8h_source.html">draw/lv_draw_label.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__line_8h_source.html">draw/lv_draw_line.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__mask_8h_source.html">draw/lv_draw_mask.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html">draw/lv_draw_rect.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__triangle_8h_source.html">draw/lv_draw_triangle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__draw__vector_8h_source.html">draw/lv_draw_vector.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html">draw/lv_grad.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html">draw/lv_image_dsc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__palette_8h_source.html">draw/lv_palette.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2draw_2lv__snapshot_8h_source.html">draw/lv_snapshot.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__draw__utils_8h_source.html">draw/lv_draw_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__linux__drm_8h_source.html">drivers/display/lv_linux_drm.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__draw__eve__display_8h_source.html">drivers/display/lv_draw_eve_display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__draw__eve__display__defines_8h_source.html">drivers/display/lv_draw_eve_display_defines.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__draw__eve__target_8h_source.html">drivers/display/lv_draw_eve_target.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__linux__fbdev_8h_source.html">drivers/display/lv_linux_fbdev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__ft81x_8h_source.html">drivers/display/lv_ft81x.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__ili9341_8h_source.html">drivers/display/lv_ili9341.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__lcd__generic__mipi_8h_source.html">drivers/display/lv_lcd_generic_mipi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__lovyan__gfx_8h_source.html">drivers/display/lv_lovyan_gfx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__nv3007_8h_source.html">drivers/display/lv_nv3007.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__nxp__elcdif_8h_source.html">drivers/display/lv_nxp_elcdif.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__renesas__glcdc_8h_source.html">drivers/display/lv_renesas_glcdc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__st7735_8h_source.html">drivers/display/lv_st7735.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__st7789_8h_source.html">drivers/display/lv_st7789.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__st7796_8h_source.html">drivers/display/lv_st7796.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__st__ltdc_8h_source.html">drivers/display/lv_st_ltdc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2display_2lv__tft__espi_8h_source.html">drivers/display/lv_tft_espi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2indev_2lv__evdev_8h_source.html">drivers/indev/lv_evdev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2indev_2lv__libinput_8h_source.html">drivers/indev/lv_libinput.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2indev_2lv__xkb_8h_source.html">drivers/indev/lv_xkb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2nuttx_2lv__nuttx__entry_8h_source.html">drivers/nuttx/lv_nuttx_entry.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2nuttx_2lv__nuttx__fbdev_8h_source.html">drivers/nuttx/lv_nuttx_fbdev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2nuttx_2lv__nuttx__lcd_8h_source.html">drivers/nuttx/lv_nuttx_lcd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2nuttx_2lv__nuttx__libuv_8h_source.html">drivers/nuttx/lv_nuttx_libuv.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2nuttx_2lv__nuttx__touchscreen_8h_source.html">drivers/nuttx/lv_nuttx_touchscreen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2opengles_2lv__opengles__driver_8h_source.html">drivers/opengles/lv_opengles_driver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2opengles_2lv__opengles__glfw_8h_source.html">drivers/opengles/lv_opengles_glfw.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2opengles_2lv__opengles__texture_8h_source.html">drivers/opengles/lv_opengles_texture.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2opengles_2lv__opengles__window_8h_source.html">drivers/opengles/lv_opengles_window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2qnx_2lv__qnx_8h_source.html">drivers/qnx/lv_qnx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2sdl_2lv__sdl__keyboard_8h_source.html">drivers/sdl/lv_sdl_keyboard.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2sdl_2lv__sdl__mouse_8h_source.html">drivers/sdl/lv_sdl_mouse.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2sdl_2lv__sdl__mousewheel_8h_source.html">drivers/sdl/lv_sdl_mousewheel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2sdl_2lv__sdl__window_8h_source.html">drivers/sdl/lv_sdl_window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi_8h_source.html">drivers/uefi/lv_uefi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi__context_8h_source.html">drivers/uefi/lv_uefi_context.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi__display_8h_source.html">drivers/uefi/lv_uefi_display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi__edk2_8h_source.html">drivers/uefi/lv_uefi_edk2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi__gnu__efi_8h_source.html">drivers/uefi/lv_uefi_gnu_efi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2uefi_2lv__uefi__indev_8h_source.html">drivers/uefi/lv_uefi_indev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland_8h_source.html">drivers/wayland/lv_wayland.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland__keyboard_8h_source.html">drivers/wayland/lv_wayland_keyboard.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland__pointer_8h_source.html">drivers/wayland/lv_wayland_pointer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland__pointer__axis_8h_source.html">drivers/wayland/lv_wayland_pointer_axis.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland__touch_8h_source.html">drivers/wayland/lv_wayland_touch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2wayland_2lv__wayland__window_8h_source.html">drivers/wayland/lv_wayland_window.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2windows_2lv__windows__display_8h_source.html">drivers/windows/lv_windows_display.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2windows_2lv__windows__input_8h_source.html">drivers/windows/lv_windows_input.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2drivers_2x11_2lv__x11_8h_source.html">drivers/x11/lv_x11.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__bidi_8h_source.html">font/lv_bidi.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__binfont__loader_8h_source.html">font/lv_binfont_loader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__font_8h_source.html">font/lv_font.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__font__fmt__txt_8h_source.html">font/lv_font_fmt_txt.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__font__manager_8h_source.html">font/lv_font_manager.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__freetype_8h_source.html">font/lv_freetype.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__imgfont_8h_source.html">font/lv_imgfont.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__symbol__def_8h_source.html">font/lv_symbol_def.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__text_8h_source.html">font/lv_text.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2font_2lv__tiny__ttf_8h_source.html">font/lv_tiny_ttf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2fs_2lv__fs_8h_source.html">fs/lv_fs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2fs_2lv__fsdrv_8h_source.html">fs/lv_fsdrv.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__bin__decoder_8h_source.html">image/lv_bin_decoder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__bmp_8h_source.html">image/lv_bmp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__libjpeg__turbo_8h_source.html">image/lv_libjpeg_turbo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__libpng_8h_source.html">image/lv_libpng.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__libwebp_8h_source.html">image/lv_libwebp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__lodepng_8h_source.html">image/lv_lodepng.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html">image/lv_image_decoder.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__svg_8h_source.html">image/lv_svg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2image_2lv__tjpgd_8h_source.html">image/lv_tjpgd.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2indev_2lv__gridnav_8h_source.html">indev/lv_gridnav.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2indev_2lv__indev_8h_source.html">indev/lv_indev.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2indev_2lv__indev__gesture_8h_source.html">indev/lv_indev_gesture.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html">layouts/lv_flex.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2layouts_2lv__grid_8h_source.html">layouts/lv_grid.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2layouts_2lv__layout_8h_source.html">layouts/lv_layout.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html">logging/lv_log.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2lv__types_8h_source.html">lv_types.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2misc_2lv__async_8h_source.html">misc/lv_async.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html">misc/lv_math.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2misc_2lv__ll_8h_source.html">misc/lv_ll.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2osal_2lv__os_8h_source.html">osal/lv_os.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2others_2file__explorer_2lv__file__explorer_8h_source.html">others/file_explorer/lv_file_explorer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2others_2fragment_2lv__fragment_8h_source.html">others/fragment/lv_fragment.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2stdlib_2lv__mem_8h_source.html">stdlib/lv_mem.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html">stdlib/lv_sprintf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2stdlib_2lv__string_8h_source.html">stdlib/lv_string.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2themes_2lv__theme_8h_source.html">themes/lv_theme.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2themes_2lv__theme__default_8h_source.html">themes/lv_theme_default.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2themes_2lv__theme__mono_8h_source.html">themes/lv_theme_mono.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2themes_2lv__theme__simple_8h_source.html">themes/lv_theme_simple.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2tick_2lv__tick_8h_source.html">tick/lv_tick.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__3dtexture_8h_source.html">widgets/lv_3dtexture.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__animimage_8h_source.html">widgets/lv_animimage.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__arc_8h_source.html">widgets/lv_arc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__arclabel_8h_source.html">widgets/lv_arclabel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html">widgets/lv_bar.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__barcode_8h_source.html">widgets/lv_barcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__button_8h_source.html">widgets/lv_button.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html">widgets/lv_buttonmatrix.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__calendar_8h_source.html">widgets/lv_calendar.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__calendar__chinese_8h_source.html">widgets/lv_calendar_chinese.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__calendar__header__arrow_8h_source.html">widgets/lv_calendar_header_arrow.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__calendar__header__dropdown_8h_source.html">widgets/lv_calendar_header_dropdown.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h_source.html">widgets/lv_canvas.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__chart_8h_source.html">widgets/lv_chart.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__checkbox_8h_source.html">widgets/lv_checkbox.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__dropdown_8h_source.html">widgets/lv_dropdown.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__ffmpeg_8h_source.html">widgets/lv_ffmpeg.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__gif_8h_source.html">widgets/lv_gif.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__gltf_8h_source.html">widgets/lv_gltf.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__gstreamer_8h_source.html">widgets/lv_gstreamer.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__image_8h_source.html">widgets/lv_image.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__imagebutton_8h_source.html">widgets/lv_imagebutton.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__ime__pinyin_8h_source.html">widgets/lv_ime_pinyin.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__keyboard_8h_source.html">widgets/lv_keyboard.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__label_8h_source.html">widgets/lv_label.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__led_8h_source.html">widgets/lv_led.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__line_8h_source.html">widgets/lv_line.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__list_8h_source.html">widgets/lv_list.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__lottie_8h_source.html">widgets/lv_lottie.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__menu_8h_source.html">widgets/lv_menu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h_source.html">widgets/lv_msgbox.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__qrcode_8h_source.html">widgets/lv_qrcode.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__rlottie_8h_source.html">widgets/lv_rlottie.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__roller_8h_source.html">widgets/lv_roller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__scale_8h_source.html">widgets/lv_scale.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__slider_8h_source.html">widgets/lv_slider.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__span_8h_source.html">widgets/lv_span.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__spinbox_8h_source.html">widgets/lv_spinbox.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__spinner_8h_source.html">widgets/lv_spinner.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__switch_8h_source.html">widgets/lv_switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__table_8h_source.html">widgets/lv_table.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__tabview_8h_source.html">widgets/lv_tabview.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__textarea_8h_source.html">widgets/lv_textarea.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__tileview_8h_source.html">widgets/lv_tileview.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__win_8h_source.html">widgets/lv_win.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v8_8h_source.html">api_map/lv_api_map_v8.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__0_8h_source.html">api_map/lv_api_map_v9_0.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__1_8h_source.html">api_map/lv_api_map_v9_1.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__2_8h_source.html">api_map/lv_api_map_v9_2.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__3_8h_source.html">api_map/lv_api_map_v9_3.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__4_8h_source.html">api_map/lv_api_map_v9_4.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2api__map_2lv__api__map__v9__5_8h_source.html">api_map/lv_api_map_v9_5.h</a>&quot;</code><br />
+</div>
+<p><a href="include_2lvgl_2lvgl_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae53fb44157a7f8d2b4edac52dd39fdf4" id="r_ae53fb44157a7f8d2b4edac52dd39fdf4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae53fb44157a7f8d2b4edac52dd39fdf4">LV_VERSION_CHECK</a>(x,  y,  z)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="ae53fb44157a7f8d2b4edac52dd39fdf4" name="ae53fb44157a7f8d2b4edac52dd39fdf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53fb44157a7f8d2b4edac52dd39fdf4">&#9670;&#160;</a></span>LV_VERSION_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_VERSION_CHECK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(x == <a class="code hl_define" href="include_2lvgl_2lv__version_8h.html#a9c133c35dad430c2120b0ac5a4c05ee8">LVGL_VERSION_MAJOR</a> &amp;&amp; (y &lt; <a class="code hl_define" href="include_2lvgl_2lv__version_8h.html#aa747cad9d3885ca2806a0c2d1518104f">LVGL_VERSION_MINOR</a> || (y == <a class="code hl_define" href="include_2lvgl_2lv__version_8h.html#aa747cad9d3885ca2806a0c2d1518104f">LVGL_VERSION_MINOR</a> &amp;&amp; z &lt;= <a class="code hl_define" href="include_2lvgl_2lv__version_8h.html#aab8dce6b82062dda61da04e332712e70">LVGL_VERSION_PATCH</a>)))</div>
+<div class="ttc" id="ainclude_2lvgl_2lv__version_8h_html_a9c133c35dad430c2120b0ac5a4c05ee8"><div class="ttname"><a href="include_2lvgl_2lv__version_8h.html#a9c133c35dad430c2120b0ac5a4c05ee8">LVGL_VERSION_MAJOR</a></div><div class="ttdeci">#define LVGL_VERSION_MAJOR</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__version_8h_source.html#l00009">lv_version.h:9</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__version_8h_html_aa747cad9d3885ca2806a0c2d1518104f"><div class="ttname"><a href="include_2lvgl_2lv__version_8h.html#aa747cad9d3885ca2806a0c2d1518104f">LVGL_VERSION_MINOR</a></div><div class="ttdeci">#define LVGL_VERSION_MINOR</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__version_8h_source.html#l00010">lv_version.h:10</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__version_8h_html_aab8dce6b82062dda61da04e332712e70"><div class="ttname"><a href="include_2lvgl_2lv__version_8h.html#aab8dce6b82062dda61da04e332712e70">LVGL_VERSION_PATCH</a></div><div class="ttdeci">#define LVGL_VERSION_PATCH</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__version_8h_source.html#l00011">lv_version.h:11</a></div></div>
+</div><!-- fragment --><p>Gives 1 if the x.y.z version is supported in the current version</p>
+<p>Usage:</p>
+<p>Require v6: </p><div class="fragment"><div class="line"><span class="preprocessor">#if LV_VERSION_CHECK(6, 0, 0)</span></div>
+<div class="line">    new_func_in_v6();</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><p>Require at least v5.3: </p><div class="fragment"><div class="line"><span class="preprocessor">#if LV_VERSION_CHECK(5, 3, 0)</span></div>
+<div class="line">    new_feature_from_v5_3();</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><p>Require v5.3.2 bugfixes: </p><div class="fragment"><div class="line"><span class="preprocessor">#if LV_VERSION_CHECK(5, 3, 2)</span></div>
+<div class="line">    bugfix_in_v5_3_2();</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+</div><!-- fragment --><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>major version to check against </td></tr>
+    <tr><td class="paramname">y</td><td>minor version to check against </td></tr>
+    <tr><td class="paramname">z</td><td>patch version to check against </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2lvgl_8h_source.html#l00253">253</a> del archivo <a class="el" href="include_2lvgl_2lvgl_8h_source.html">lvgl.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_9217fd4f896c7dabfd10ab01c3bac1ef.html">include</a></li><li class="navelem"><a href="dir_f3987adca4f4e4d8dfc0669d06d0d161.html">lvgl</a></li><li class="navelem"><a href="include_2lvgl_2lvgl_8h.html">lvgl.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/table/lv_table.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__table_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_table.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__table__private_8h_source.html">lv_table_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__area__private_8h_source.html">../../misc/lv_area_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__private_8h_source.html">../../core/lv_obj_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__private_8h_source.html">../../misc/lv_text_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__ap_8h_source.html">../../misc/lv_text_ap.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__draw__private_8h_source.html">../../draw/lv_draw_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__font__private_8h_source.html">../../font/lv_font_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__table_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#a7c00c4f098408fea49b61476850734e9">lv_table_class</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a82e9898115534ebfce431eb100cf2186" id="r_a82e9898115534ebfce431eb100cf2186"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a82e9898115534ebfce431eb100cf2186">lv_table_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a0cdd714aa2f27c648a57831745bc88ce" id="r_a0cdd714aa2f27c648a57831745bc88ce"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0cdd714aa2f27c648a57831745bc88ce">lv_table_set_cell_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col, const char *txt)</td></tr>
+<tr class="memitem:a473229081ddd51ea40bcfd50fad55bb2" id="r_a473229081ddd51ea40bcfd50fad55bb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a473229081ddd51ea40bcfd50fad55bb2">lv_table_set_cell_value_fmt</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col, const char *fmt,...)</td></tr>
+<tr class="memitem:a116d5dc0ce4768f67a1f34d66bc3bb39" id="r_a116d5dc0ce4768f67a1f34d66bc3bb39"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a116d5dc0ce4768f67a1f34d66bc3bb39">lv_table_set_row_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row_cnt)</td></tr>
+<tr class="memitem:a8bbce75377afaa0f9aab16d820af27c7" id="r_a8bbce75377afaa0f9aab16d820af27c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8bbce75377afaa0f9aab16d820af27c7">lv_table_set_column_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col_cnt)</td></tr>
+<tr class="memitem:a245ed180c06a8513efe8c16ccd8bed6b" id="r_a245ed180c06a8513efe8c16ccd8bed6b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a245ed180c06a8513efe8c16ccd8bed6b">lv_table_set_column_width</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col_id, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w)</td></tr>
+<tr class="memitem:a7d275b3535752945c6ba148ac6394744" id="r_a7d275b3535752945c6ba148ac6394744"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7d275b3535752945c6ba148ac6394744">lv_table_set_cell_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col, <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:a003d6ef4a4cc83731648116def1fc4f1" id="r_a003d6ef4a4cc83731648116def1fc4f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a003d6ef4a4cc83731648116def1fc4f1">lv_table_clear_cell_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col, <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:add7ded3caf53f651101cb913aa410d2a" id="r_add7ded3caf53f651101cb913aa410d2a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#add7ded3caf53f651101cb913aa410d2a">lv_table_set_cell_user_data</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> row, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> col, void *user_data)</td></tr>
+<tr class="memitem:a77fe6d4703e9630ed87b0190ee95e753" id="r_a77fe6d4703e9630ed87b0190ee95e753"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a77fe6d4703e9630ed87b0190ee95e753">lv_table_set_selected_cell</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> row, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> col)</td></tr>
+<tr class="memitem:a005bc78b3edf3ea05f2125eeed2f1d91" id="r_a005bc78b3edf3ea05f2125eeed2f1d91"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a005bc78b3edf3ea05f2125eeed2f1d91">lv_table_get_cell_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col)</td></tr>
+<tr class="memitem:ae3b536e864ac674034d14ea0f3d3d3ab" id="r_ae3b536e864ac674034d14ea0f3d3d3ab"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae3b536e864ac674034d14ea0f3d3d3ab">lv_table_get_row_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a7779525496f450a3a4042d90d7c75b55" id="r_a7779525496f450a3a4042d90d7c75b55"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7779525496f450a3a4042d90d7c75b55">lv_table_get_column_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:abfd88953080a08bc86d7b990e76973be" id="r_abfd88953080a08bc86d7b990e76973be"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#abfd88953080a08bc86d7b990e76973be">lv_table_get_column_width</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col)</td></tr>
+<tr class="memitem:a8ef6a34db3d3a5ccfffe1998d11823e5" id="r_a8ef6a34db3d3a5ccfffe1998d11823e5"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8ef6a34db3d3a5ccfffe1998d11823e5">lv_table_has_cell_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> col, <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:a2877b73f257c01ae7019f15de8eb049b" id="r_a2877b73f257c01ae7019f15de8eb049b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2877b73f257c01ae7019f15de8eb049b">lv_table_get_selected_cell</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *row, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *col)</td></tr>
+<tr class="memitem:aace3bf5b468de84b45b520c01e6bcf7f" id="r_aace3bf5b468de84b45b520c01e6bcf7f"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#aace3bf5b468de84b45b520c01e6bcf7f">lv_table_get_cell_user_data</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> row, <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> col)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7c00c4f098408fea49b61476850734e9" id="r_a7c00c4f098408fea49b61476850734e9"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7c00c4f098408fea49b61476850734e9">lv_table_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#a7c00c4f098408fea49b61476850734e9">lv_table_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00027">27</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a003d6ef4a4cc83731648116def1fc4f1" name="a003d6ef4a4cc83731648116def1fc4f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003d6ef4a4cc83731648116def1fc4f1">&#9670;&#160;</a></span>lv_table_clear_cell_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_clear_cell_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clear control bits of the cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+    <tr><td class="paramname">ctrl</td><td>OR-ed values from <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00354">354</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a>, <a class="el" href="lv__table_8c_source.html#l00221">lv_table_set_row_count()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00034">_lv_table_cell_t::txt</a> y <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a82e9898115534ebfce431eb100cf2186" name="a82e9898115534ebfce431eb100cf2186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e9898115534ebfce431eb100cf2186">&#9670;&#160;</a></span>lv_table_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_table_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a table object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the created table </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00096">96</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__spinner__styling_8c_source.html#l00019">lv_example_spinner_styling()</a>, <a class="el" href="lv__example__table__cells_8c_source.html#l00018">lv_example_table_cells()</a>, <a class="el" href="lv__example__table__merge__cells_8c_source.html#l00020">lv_example_table_merge_cells()</a>, <a class="el" href="lv__example__table__rows__columns_8c_source.html#l00021">lv_example_table_rows_columns()</a>, <a class="el" href="lv__example__table__scroll_8c_source.html#l00019">lv_example_table_scroll()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__example__table__styling_8c_source.html#l00019">lv_example_table_styling()</a> y <a class="el" href="lv__example__table__width_8c_source.html#l00018">lv_example_table_width()</a>.</p>
+
+</div>
+</div>
+<a id="aace3bf5b468de84b45b520c01e6bcf7f" name="aace3bf5b468de84b45b520c01e6bcf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace3bf5b468de84b45b520c01e6bcf7f">&#9670;&#160;</a></span>lv_table_get_cell_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * lv_table_get_cell_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get custom user data to the cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00497">497</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a005bc78b3edf3ea05f2125eeed2f1d91" name="a005bc78b3edf3ea05f2125eeed2f1d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005bc78b3edf3ea05f2125eeed2f1d91">&#9670;&#160;</a></span>lv_table_get_cell_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * lv_table_get_cell_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the value of a cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>text in the cell </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00428">428</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__table__private_8h_source.html#l00034">_lv_table_cell_t::txt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a7779525496f450a3a4042d90d7c75b55" name="a7779525496f450a3a4042d90d7c75b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7779525496f450a3a4042d90d7c75b55">&#9670;&#160;</a></span>lv_table_get_column_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_table_get_column_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the number of columns. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>number of columns. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00449">449</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="abfd88953080a08bc86d7b990e76973be" name="abfd88953080a08bc86d7b990e76973be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfd88953080a08bc86d7b990e76973be">&#9670;&#160;</a></span>lv_table_get_column_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_table_get_column_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the width of a column </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. LV_TABLE_COL_MAX -1] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>width of the column </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00457">457</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00044">_lv_table_t::col_w</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="ae3b536e864ac674034d14ea0f3d3d3ab" name="ae3b536e864ac674034d14ea0f3d3d3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b536e864ac674034d14ea0f3d3d3ab">&#9670;&#160;</a></span>lv_table_get_row_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_table_get_row_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the number of rows. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>number of rows. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00441">441</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a2877b73f257c01ae7019f15de8eb049b" name="a2877b73f257c01ae7019f15de8eb049b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2877b73f257c01ae7019f15de8eb049b">&#9670;&#160;</a></span>lv_table_get_selected_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_get_selected_cell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> *</td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the selected cell (pressed and or focused) </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a table object </td></tr>
+    <tr><td class="paramname">row</td><td>pointer to variable to store the selected row (LV_TABLE_CELL_NONE: if no cell selected) </td></tr>
+    <tr><td class="paramname">col</td><td>pointer to variable to store the selected column (LV_TABLE_CELL_NONE: if no cell selected) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00486">486</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00045">_lv_table_t::col_act</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__table__private_8h_source.html#l00046">_lv_table_t::row_act</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a8ef6a34db3d3a5ccfffe1998d11823e5" name="a8ef6a34db3d3a5ccfffe1998d11823e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef6a34db3d3a5ccfffe1998d11823e5">&#9670;&#160;</a></span>lv_table_has_cell_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_table_has_cell_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get whether a cell has the control bits </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+    <tr><td class="paramname">ctrl</td><td>OR-ed values from <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true: all control bits are set; false: not all control bits are set </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00471">471</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a7d275b3535752945c6ba148ac6394744" name="a7d275b3535752945c6ba148ac6394744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d275b3535752945c6ba148ac6394744">&#9670;&#160;</a></span>lv_table_set_cell_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_cell_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add control bits to the cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+    <tr><td class="paramname">ctrl</td><td>OR-ed values from <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#aac01effc11861f1385776997ab4303f6">lv_table_cell_ctrl_t</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00328">328</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a>, <a class="el" href="lv__table_8c_source.html#l00221">lv_table_set_row_count()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00034">_lv_table_cell_t::txt</a> y <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__table__merge__cells_8c_source.html#l00020">lv_example_table_merge_cells()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="add7ded3caf53f651101cb913aa410d2a" name="add7ded3caf53f651101cb913aa410d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add7ded3caf53f651101cb913aa410d2a">&#9670;&#160;</a></span>lv_table_set_cell_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_cell_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add custom user data to the cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+    <tr><td class="paramname">user_data</td><td>pointer to the new user_data. @nullable Should be allocated by <span class="tt"><a class="el" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc</a></span>, and it will be freed automatically when the table is deleted or when the cell is dropped due to lower row or column count. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00379">379</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a>, <a class="el" href="lv__table_8c_source.html#l00221">lv_table_set_row_count()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00034">_lv_table_cell_t::txt</a> y <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a0cdd714aa2f27c648a57831745bc88ce" name="a0cdd714aa2f27c648a57831745bc88ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cdd714aa2f27c648a57831745bc88ce">&#9670;&#160;</a></span>lv_table_set_cell_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_cell_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>txt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the value of a cell. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a Table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the row [0 .. row_cnt -1] </td></tr>
+    <tr><td class="paramname">col</td><td>id of the column [0 .. col_cnt -1] </td></tr>
+    <tr><td class="paramname">txt</td><td>text to display in the cell. It will be copied and saved so this variable is not required after this function call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>New roes/columns are added automatically if required </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00108">108</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00149">lv_realloc()</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a>, <a class="el" href="lv__table_8c_source.html#l00221">lv_table_set_row_count()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a> y <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__spinner__styling_8c_source.html#l00019">lv_example_spinner_styling()</a>, <a class="el" href="lv__example__table__cells_8c_source.html#l00018">lv_example_table_cells()</a>, <a class="el" href="lv__example__table__merge__cells_8c_source.html#l00020">lv_example_table_merge_cells()</a>, <a class="el" href="lv__example__table__rows__columns_8c_source.html#l00021">lv_example_table_rows_columns()</a>, <a class="el" href="lv__example__table__scroll_8c_source.html#l00019">lv_example_table_scroll()</a>, <a class="el" href="lv__example__table__styling_8c_source.html#l00019">lv_example_table_styling()</a> y <a class="el" href="lv__example__table__width_8c_source.html#l00018">lv_example_table_width()</a>.</p>
+
+</div>
+</div>
+<a id="a473229081ddd51ea40bcfd50fad55bb2" name="a473229081ddd51ea40bcfd50fad55bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a473229081ddd51ea40bcfd50fad55bb2">&#9670;&#160;</a></span>lv_table_set_cell_value_fmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_cell_value_fmt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00143">143</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00032">_lv_table_cell_t::ctrl</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__mem_8c_source.html#l00149">lv_realloc()</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a>, <a class="el" href="lv__table_8c_source.html#l00221">lv_table_set_row_count()</a>, <a class="el" href="lv__sprintf__builtin_8c_source.html#l00872">lv_vsnprintf()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00034">_lv_table_cell_t::txt</a>, <a class="el" href="lv__table__private_8h_source.html#l00033">_lv_table_cell_t::user_data</a>, <a class="el" href="efi_8h_source.html#l00141">va_copy</a>, <a class="el" href="efi_8h_source.html#l00140">va_end</a> y <a class="el" href="efi_8h_source.html#l00138">va_start</a>.</p>
+
+</div>
+</div>
+<a id="a8bbce75377afaa0f9aab16d820af27c7" name="a8bbce75377afaa0f9aab16d820af27c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbce75377afaa0f9aab16d820af27c7">&#9670;&#160;</a></span>lv_table_set_column_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_column_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col_cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the number of columns </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+    <tr><td class="paramname">col_cnt</td><td>number of columns. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00260">260</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00044">_lv_table_t::col_w</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__conf__cmsis_8h_source.html#l00151">LV_DPI_DEF</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__mem_8c_source.html#l00059">lv_malloc()</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00152">LV_MIN</a>, <a class="el" href="lv__mem_8c_source.html#l00149">lv_realloc()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__spinner__styling_8c_source.html#l00019">lv_example_spinner_styling()</a>, <a class="el" href="lv__example__table__cells_8c_source.html#l00018">lv_example_table_cells()</a>, <a class="el" href="lv__example__table__rows__columns_8c_source.html#l00021">lv_example_table_rows_columns()</a>, <a class="el" href="lv__example__table__scroll_8c_source.html#l00019">lv_example_table_scroll()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__example__table__styling_8c_source.html#l00019">lv_example_table_styling()</a>, <a class="el" href="lv__example__table__width_8c_source.html#l00018">lv_example_table_width()</a>, <a class="el" href="lv__table_8c_source.html#l00354">lv_table_clear_cell_ctrl()</a>, <a class="el" href="lv__table_8c_source.html#l00328">lv_table_set_cell_ctrl()</a>, <a class="el" href="lv__table_8c_source.html#l00379">lv_table_set_cell_user_data()</a>, <a class="el" href="lv__table_8c_source.html#l00108">lv_table_set_cell_value()</a>, <a class="el" href="lv__table_8c_source.html#l00143">lv_table_set_cell_value_fmt()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a> y <a class="el" href="lv__table_8c_source.html#l00315">lv_table_set_column_width()</a>.</p>
+
+</div>
+</div>
+<a id="a245ed180c06a8513efe8c16ccd8bed6b" name="a245ed180c06a8513efe8c16ccd8bed6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a245ed180c06a8513efe8c16ccd8bed6b">&#9670;&#160;</a></span>lv_table_set_column_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_column_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>col_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the width of a column </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+    <tr><td class="paramname">col_id</td><td>id of the column [0 .. LV_TABLE_COL_MAX -1] </td></tr>
+    <tr><td class="paramname">w</td><td>width of the column </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00315">315</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__table__private_8h_source.html#l00044">_lv_table_t::col_w</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__table_8c_source.html#l00260">lv_table_set_column_count()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__table__scroll_8c_source.html#l00019">lv_example_table_scroll()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__example__table__width_8c_source.html#l00018">lv_example_table_width()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a116d5dc0ce4768f67a1f34d66bc3bb39" name="a116d5dc0ce4768f67a1f34d66bc3bb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116d5dc0ce4768f67a1f34d66bc3bb39">&#9670;&#160;</a></span>lv_table_set_row_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_row_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>row_cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the number of rows </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>table pointer to a Table object </td></tr>
+    <tr><td class="paramname">row_cnt</td><td>number of rows </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00221">221</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00042">_lv_table_t::cell_data</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__mem_8c_source.html#l00149">lv_realloc()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a> y <a class="el" href="lv__table__private_8h_source.html#l00043">_lv_table_t::row_h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__spinner__styling_8c_source.html#l00019">lv_example_spinner_styling()</a>, <a class="el" href="lv__example__table__cells_8c_source.html#l00018">lv_example_table_cells()</a>, <a class="el" href="lv__example__table__rows__columns_8c_source.html#l00021">lv_example_table_rows_columns()</a>, <a class="el" href="lv__example__table__scroll_8c_source.html#l00019">lv_example_table_scroll()</a>, <a class="el" href="lv__example__table__scrollable__list_8c_source.html#l00072">lv_example_table_scrollable_list()</a>, <a class="el" href="lv__example__table__styling_8c_source.html#l00019">lv_example_table_styling()</a>, <a class="el" href="lv__example__table__width_8c_source.html#l00018">lv_example_table_width()</a>, <a class="el" href="lv__table_8c_source.html#l00354">lv_table_clear_cell_ctrl()</a>, <a class="el" href="lv__table_8c_source.html#l00328">lv_table_set_cell_ctrl()</a>, <a class="el" href="lv__table_8c_source.html#l00379">lv_table_set_cell_user_data()</a>, <a class="el" href="lv__table_8c_source.html#l00108">lv_table_set_cell_value()</a>, <a class="el" href="lv__table_8c_source.html#l00143">lv_table_set_cell_value_fmt()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a77fe6d4703e9630ed87b0190ee95e753" name="a77fe6d4703e9630ed87b0190ee95e753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77fe6d4703e9630ed87b0190ee95e753">&#9670;&#160;</a></span>lv_table_set_selected_cell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_table_set_selected_cell </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a></td>          <td class="paramname"><span class="paramname"><em>col</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the selected cell </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a table object </td></tr>
+    <tr><td class="paramname">row</td><td>id of the cell row to select </td></tr>
+    <tr><td class="paramname">col</td><td>id of the cell column to select </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00404">404</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__table__private_8h_source.html#l00045">_lv_table_t::col_act</a>, <a class="el" href="lv__table__private_8h_source.html#l00040">_lv_table_t::col_cnt</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00080">LV_EVENT_VALUE_CHANGED</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00052">lv_obj_send_event()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__table__private_8h_source.html#l00046">_lv_table_t::row_act</a> y <a class="el" href="lv__table__private_8h_source.html#l00041">_lv_table_t::row_cnt</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__table_8h.html#a429fc1028e603e9229a72544f3e0d6f9">lv_table_set_cell_value_fmt()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a7c00c4f098408fea49b61476850734e9" name="a7c00c4f098408fea49b61476850734e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c00c4f098408fea49b61476850734e9">&#9670;&#160;</a></span>lv_table_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_table_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                     = {</div>
+<div class="line">    .constructor_cb = lv_table_constructor,</div>
+<div class="line">    .destructor_cb = lv_table_destructor,</div>
+<div class="line">    .event_cb = lv_table_event,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .editable = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8">LV_OBJ_CLASS_EDITABLE_TRUE</a>,</div>
+<div class="line">    .group_def = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a>,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aec18880cb34c9e823136ace96ff1a848">lv_table_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_table&quot;</span>,</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a9b0bd6c8ea66bc349c7c697e46f7cf3c"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a></div><div class="ttdeci">#define LV_SIZE_CONTENT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00220">lv_area.h:220</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a3dac7d854054ae797b657fb483eb75ab"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_obj_class</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00348">lv_obj.c:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#a86f3f042b274542776ab1a066cfe7c82ab638a87144f8d50dcb2c5cea91e718f8">LV_OBJ_CLASS_EDITABLE_TRUE</a></div><div class="ttdeci">@ LV_OBJ_CLASS_EDITABLE_TRUE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__class_8h_source.html#l00030">lv_obj_class.h:30</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a></div><div class="ttdeci">@ LV_OBJ_CLASS_GROUP_DEF_TRUE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__class_8h_source.html#l00036">lv_obj_class.h:36</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aec18880cb34c9e823136ace96ff1a848"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aec18880cb34c9e823136ace96ff1a848">lv_table_t</a></div><div class="ttdeci">struct _lv_table_t lv_table_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00260">lv_types.h:260</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__table_8c_source.html#l00075">75</a> del archivo <a class="el" href="lv__table_8c_source.html">lv_table.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_ed475babb21322a471c802ed378a852b.html">table</a></li><li class="navelem"><a href="lv__table_8c.html">lv_table.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/scripts/generators/gen_draw_consts.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('gen__draw__consts_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">gen_draw_consts.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="gen__draw__consts_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html">    1</a></span><span class="comment">#!/usr/bin/env python3</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">&quot;&quot;&quot;Generate draw constant tables from LVGL headers and source files.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> sys</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>sys.path.insert(0, str(Path(__file__).resolve().parent.parent))</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">from</span> lvgl_paths <span class="keyword">import</span> include_dir, lvgl_root</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">from</span> enum_parser <span class="keyword">import</span> parse_enum, generate_dict_module</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#aefd2fba5ea03678dea1f53bed291a8db">   12</a></span>LVGL_ROOT = lvgl_root(__file__)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#ab1ef19ba12bacd39137cafdfe9309de2">   13</a></span>LVGL_SRC = LVGL_ROOT / <span class="stringliteral">&quot;src&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#a914645f4327da82115c130f2c54587d0">   14</a></span>LVGL_INC = include_dir(LVGL_ROOT)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#af35c873a525c395bbe3782ea863a75e6">   15</a></span>OUTPUT = Path(__file__).parent.parent.parent / <span class="stringliteral">&quot;lvglgdb&quot;</span> / <span class="stringliteral">&quot;lvgl&quot;</span> / <span class="stringliteral">&quot;draw&quot;</span> / <span class="stringliteral">&quot;lv_draw_consts.py&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#a1de5372e3cda04d1f84c1f82be86b949">   17</a></span>DRAW_H = LVGL_INC / <span class="stringliteral">&quot;draw&quot;</span> / <span class="stringliteral">&quot;lv_draw.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#a64680406ae003f48ef1c3c05a24e2f78">   18</a></span>DRAW_DIR = LVGL_SRC / <span class="stringliteral">&quot;draw&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="" data-end="">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#abc039b5200f5b283abfccd68b90f4472">   21</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerators_1_1gen__draw__consts.html#abc039b5200f5b283abfccd68b90f4472">parse_draw_unit_types</a>(draw_dir: Path) -&gt; dict[str, str]:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="stringliteral">&quot;&quot;&quot;Scan draw unit .c files for name-to-struct-type mappings.</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">    Looks for patterns like: unit-&gt;base_unit.name = &quot;SW&quot;;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">    Then finds the corresponding struct type from the variable declaration.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    mappings = {}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">for</span> c_file <span class="keywordflow">in</span> draw_dir.rglob(<span class="stringliteral">&quot;*.c&quot;</span>):</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        text = c_file.read_text()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">for</span> m <span class="keywordflow">in</span> re.finditer(<span class="stringliteral">r&#39;(\w+)-&gt;base_unit\.name\s*=\s*&quot;(\w+)&quot;&#39;</span>, text):</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            var_name = m.group(1)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            unit_name = m.group(2)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            decl = re.search(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                rf<span class="stringliteral">&quot;(lv_draw_\w+_unit_t)\s*\*\s*{re.escape(var_name)}\b&quot;</span>, text</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            )</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">if</span> decl:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                mappings[unit_name] = decl.group(1)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> mappings</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+</div>
+<div class="foldopen" id="foldopen00041" data-start="" data-end="">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacegenerators_1_1gen__draw__consts.html#a51af30a60f9f02777c6396b8247e356f">   41</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerators_1_1gen__draw__consts.html#a51af30a60f9f02777c6396b8247e356f">main</a>():</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    task_types = parse_enum(DRAW_H, <span class="stringliteral">&quot;lv_draw_task_type_t&quot;</span>, <span class="stringliteral">&quot;LV_DRAW_TASK_TYPE_&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    task_states = parse_enum(DRAW_H, <span class="stringliteral">&quot;lv_draw_task_state_t&quot;</span>, <span class="stringliteral">&quot;LV_DRAW_TASK_STATE_&quot;</span>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    unit_types = <a class="code hl_function" href="namespacegenerators_1_1gen__draw__consts.html#abc039b5200f5b283abfccd68b90f4472">parse_draw_unit_types</a>(DRAW_DIR)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    src = generate_dict_module(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="stringliteral">&quot;draw constants from LVGL headers&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="stringliteral">&quot;DRAW_TASK_TYPE_NAMES&quot;</span>: task_types,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="stringliteral">&quot;DRAW_TASK_STATE_NAMES&quot;</span>: task_states,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="stringliteral">&quot;DRAW_UNIT_TYPE_NAMES&quot;</span>: unit_types,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        },</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    )</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    OUTPUT.write_text(src)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    print(</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        f<span class="stringliteral">&quot;Generated {OUTPUT.name} ({len(task_types)} task types, &quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        f<span class="stringliteral">&quot;{len(task_states)} task states, {len(unit_types)} unit types)&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    )</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_namespace" href="namespacemain.html">main</a>()</div>
+<div class="ttc" id="anamespacegenerators_1_1gen__draw__consts_html_a51af30a60f9f02777c6396b8247e356f"><div class="ttname"><a href="namespacegenerators_1_1gen__draw__consts.html#a51af30a60f9f02777c6396b8247e356f">generators.gen_draw_consts.main</a></div><div class="ttdeci">main()</div><div class="ttdef"><b>Definition</b> <a href="#l00041">gen_draw_consts.py:41</a></div></div>
+<div class="ttc" id="anamespacegenerators_1_1gen__draw__consts_html_abc039b5200f5b283abfccd68b90f4472"><div class="ttname"><a href="namespacegenerators_1_1gen__draw__consts.html#abc039b5200f5b283abfccd68b90f4472">generators.gen_draw_consts.parse_draw_unit_types</a></div><div class="ttdeci">dict[str, str] parse_draw_unit_types(Path draw_dir)</div><div class="ttdef"><b>Definition</b> <a href="#l00021">gen_draw_consts.py:21</a></div></div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_916bfc93ee72cae30abe1b8249e8651c.html">scripts</a></li><li class="navelem"><a href="dir_8332eb50f11ae42459c1dfb39b162543.html">generators</a></li><li class="navelem"><a href="gen__draw__consts_8py.html">gen_draw_consts.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

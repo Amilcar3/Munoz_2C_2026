@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/msgbox/lv_msgbox.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__msgbox_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_msgbox.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__msgbox__private_8h_source.html">lv_msgbox_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__private_8h_source.html">../../core/lv_obj_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__private_8h_source.html">../../misc/lv_text_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__msgbox_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#ae0a4040421686796c8017e34ffc57b57">lv_msgbox_class</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a4760cf6b1e589282355e61ae73520d3f" id="r_a4760cf6b1e589282355e61ae73520d3f"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4760cf6b1e589282355e61ae73520d3f">lv_msgbox_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a336ef244fe64b8c30c8b96f35cb80fe2" id="r_a336ef244fe64b8c30c8b96f35cb80fe2"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a336ef244fe64b8c30c8b96f35cb80fe2">lv_msgbox_add_title</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *title)</td></tr>
+<tr class="memitem:a23e914f41d7a87f896fcb1ace1eb41dd" id="r_a23e914f41d7a87f896fcb1ace1eb41dd"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a23e914f41d7a87f896fcb1ace1eb41dd">lv_msgbox_add_header_button</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const void *icon)</td></tr>
+<tr class="memitem:aa492235d31b15c9c3588c9d4f6b209a2" id="r_aa492235d31b15c9c3588c9d4f6b209a2"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa492235d31b15c9c3588c9d4f6b209a2">lv_msgbox_add_text</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *text)</td></tr>
+<tr class="memitem:a4b62b612c33395039d67f3b35c7b3eb7" id="r_a4b62b612c33395039d67f3b35c7b3eb7"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4b62b612c33395039d67f3b35c7b3eb7">lv_msgbox_add_text_fmt</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *fmt,...)</td></tr>
+<tr class="memitem:add3504afe467eeda6093707af5e9c0e5" id="r_add3504afe467eeda6093707af5e9c0e5"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#add3504afe467eeda6093707af5e9c0e5">lv_msgbox_add_footer_button</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *text)</td></tr>
+<tr class="memitem:ac76d126418665aaf82a675e2fc52f9e3" id="r_ac76d126418665aaf82a675e2fc52f9e3"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac76d126418665aaf82a675e2fc52f9e3">lv_msgbox_add_close_button</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a17e5b824d03bb3f270e9f126e9c63c1b" id="r_a17e5b824d03bb3f270e9f126e9c63c1b"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a17e5b824d03bb3f270e9f126e9c63c1b">lv_msgbox_get_header</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a34be3e4f2e8f4687e3fa05b98be0d158" id="r_a34be3e4f2e8f4687e3fa05b98be0d158"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a34be3e4f2e8f4687e3fa05b98be0d158">lv_msgbox_get_footer</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:affba3bfb629099672248cd048f0d61f9" id="r_affba3bfb629099672248cd048f0d61f9"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#affba3bfb629099672248cd048f0d61f9">lv_msgbox_get_content</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a627ea11b1f5176ec8d17d7c3bb8298b0" id="r_a627ea11b1f5176ec8d17d7c3bb8298b0"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a627ea11b1f5176ec8d17d7c3bb8298b0">lv_msgbox_get_title</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a102e75153a6e136a69975909604df710" id="r_a102e75153a6e136a69975909604df710"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a102e75153a6e136a69975909604df710">lv_msgbox_close</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a1bf3c9d082e77b595e8c07ec5e9c7074" id="r_a1bf3c9d082e77b595e8c07ec5e9c7074"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1bf3c9d082e77b595e8c07ec5e9c7074">lv_msgbox_close_async</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ae0a4040421686796c8017e34ffc57b57" id="r_ae0a4040421686796c8017e34ffc57b57"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae0a4040421686796c8017e34ffc57b57">lv_msgbox_class</a></td></tr>
+<tr class="memitem:afff912979bfe620594b8800a39ebd1d5" id="r_afff912979bfe620594b8800a39ebd1d5"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#afff912979bfe620594b8800a39ebd1d5">lv_msgbox_header_class</a></td></tr>
+<tr class="memitem:a7c13f656e8caab4e33719740f6a37e3f" id="r_a7c13f656e8caab4e33719740f6a37e3f"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7c13f656e8caab4e33719740f6a37e3f">lv_msgbox_content_class</a></td></tr>
+<tr class="memitem:ab7906862b4052431b4536a6d31b826f2" id="r_ab7906862b4052431b4536a6d31b826f2"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab7906862b4052431b4536a6d31b826f2">lv_msgbox_footer_class</a></td></tr>
+<tr class="memitem:ab1fefaeda653275216715debcb10200c" id="r_ab1fefaeda653275216715debcb10200c"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab1fefaeda653275216715debcb10200c">lv_msgbox_footer_button_class</a></td></tr>
+<tr class="memitem:ac59bc671540f266db34d74843fc892bb" id="r_ac59bc671540f266db34d74843fc892bb"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac59bc671540f266db34d74843fc892bb">lv_msgbox_header_button_class</a></td></tr>
+<tr class="memitem:a9bbbef8ac4a2760f02f54f367d6b41e0" id="r_a9bbbef8ac4a2760f02f54f367d6b41e0"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9bbbef8ac4a2760f02f54f367d6b41e0">lv_msgbox_backdrop_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#ae0a4040421686796c8017e34ffc57b57">lv_msgbox_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00023">23</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="ac76d126418665aaf82a675e2fc52f9e3" name="ac76d126418665aaf82a675e2fc52f9e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac76d126418665aaf82a675e2fc52f9e3">&#9670;&#160;</a></span>lv_msgbox_add_close_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_close_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a close button to the message box. It also creates a header. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created close button </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00254">254</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00047">LV_EVENT_CLICKED</a>, <a class="el" href="lv__msgbox_8c_source.html#l00168">lv_msgbox_add_header_button()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00106">lv_obj_add_event_cb()</a>, <a class="el" href="include_2lvgl_2font_2lv__symbol__def_8h_source.html#l00056">LV_SYMBOL_CLOSE</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a>, <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="add3504afe467eeda6093707af5e9c0e5" name="add3504afe467eeda6093707af5e9c0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3504afe467eeda6093707af5e9c0e5">&#9670;&#160;</a></span>lv_msgbox_add_footer_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_footer_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a button to the footer of to the message box. It also creates a footer. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+    <tr><td class="paramname">text</td><td>the text of the button @nullable. When NULL an empty button is created </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created button </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00223">223</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00038">_lv_msgbox_t::footer</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00061">LV_ALIGN_CENTER</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00038">LV_FLEX_ALIGN_CENTER</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00039">LV_FLEX_ALIGN_SPACE_EVENLY</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00045">LV_FLEX_FLOW_ROW</a>, <a class="el" href="lv__label_8c_source.html#l00120">lv_label_create()</a>, <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00070">lv_msgbox_footer_button_class</a>, <a class="el" href="lv__msgbox_8c_source.html#l00062">lv_msgbox_footer_class</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00366">lv_obj_align()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a>, <a class="el" href="lv__flex_8c_source.html#l00117">lv_obj_set_flex_align()</a>, <a class="el" href="lv__flex_8c_source.html#l00109">lv_obj_set_flex_flow()</a>, <a class="el" href="lv__obj_8c_source.html#l00558">lv_obj_set_scrollable()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00065">text</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a>, <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a23e914f41d7a87f896fcb1ace1eb41dd" name="a23e914f41d7a87f896fcb1ace1eb41dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e914f41d7a87f896fcb1ace1eb41dd">&#9670;&#160;</a></span>lv_msgbox_add_header_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_header_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>icon</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a button to the header of to the message box. It also creates a header. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+    <tr><td class="paramname">icon</td><td>the icon of the button. @nullable. When NULL an empty button is created </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created button </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00168">168</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00036">_lv_msgbox_t::header</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00061">LV_ALIGN_CENTER</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__image_8c_source.html#l00136">lv_image_create()</a>, <a class="el" href="lv__image_8c_source.html#l00148">lv_image_set_src()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00140">lv_msgbox_add_title()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00079">lv_msgbox_header_button_class</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00366">lv_obj_align()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a>, <a class="el" href="lv__obj_8c_source.html#l00558">lv_obj_set_scrollable()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="lv__msgbox_8c_source.html#l00254">lv_msgbox_add_close_button()</a>.</p>
+
+</div>
+</div>
+<a id="aa492235d31b15c9c3588c9d4f6b209a2" name="aa492235d31b15c9c3588c9d4f6b209a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa492235d31b15c9c3588c9d4f6b209a2">&#9670;&#160;</a></span>lv_msgbox_add_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>text</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a text to the content area of message box. Multiple texts will be created below each other. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+    <tr><td class="paramname">text</td><td>text to add </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created label </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00192">192</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00037">_lv_msgbox_t::content</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__label_8c_source.html#l00120">lv_label_create()</a>, <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00240">lv_obj_set_width()</a>, <a class="el" href="lv__area_8c_source.html#l00611">lv_pct()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00065">text</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a> y <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a>.</p>
+
+</div>
+</div>
+<a id="a4b62b612c33395039d67f3b35c7b3eb7" name="a4b62b612c33395039d67f3b35c7b3eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b62b612c33395039d67f3b35c7b3eb7">&#9670;&#160;</a></span>lv_msgbox_add_text_fmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_text_fmt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>fmt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>...</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00206">206</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00037">_lv_msgbox_t::content</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__label_8c_source.html#l00120">lv_label_create()</a>, <a class="el" href="lv__label_8c_source.html#l00150">lv_label_set_text_vfmt()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00240">lv_obj_set_width()</a>, <a class="el" href="lv__area_8c_source.html#l00611">lv_pct()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="efi_8h_source.html#l00140">va_end</a> y <a class="el" href="efi_8h_source.html#l00138">va_start</a>.</p>
+
+</div>
+</div>
+<a id="a336ef244fe64b8c30c8b96f35cb80fe2" name="a336ef244fe64b8c30c8b96f35cb80fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a336ef244fe64b8c30c8b96f35cb80fe2">&#9670;&#160;</a></span>lv_msgbox_add_title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_add_title </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>title</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add title to the message box. It also creates a header for the title. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+    <tr><td class="paramname">title</td><td>the text of the tile. @nullable. See the default behaviour of <a class="el" href="include_2lvgl_2widgets_2lv__label_8h.html#ac0a3691e31b2defebc1eab701a35d63b" title="lv_label_set_text">lv_label_set_text</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created title label </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00140">140</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00036">_lv_msgbox_t::header</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__display_8c_source.html#l00476">lv_display_get_dpi()</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00038">LV_FLEX_ALIGN_CENTER</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00036">LV_FLEX_ALIGN_START</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00045">LV_FLEX_FLOW_ROW</a>, <a class="el" href="lv__label_8c_source.html#l00120">lv_label_create()</a>, <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="lv__msgbox_8c_source.html#l00046">lv_msgbox_header_class</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00289">lv_obj_get_display()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00192">lv_obj_move_to_index()</a>, <a class="el" href="lv__flex_8c_source.html#l00117">lv_obj_set_flex_align()</a>, <a class="el" href="lv__flex_8c_source.html#l00109">lv_obj_set_flex_flow()</a>, <a class="el" href="lv__flex_8c_source.html#l00128">lv_obj_set_flex_grow()</a>, <a class="el" href="lv__obj_8c_source.html#l00558">lv_obj_set_scrollable()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00232">lv_obj_set_size()</a>, <a class="el" href="lv__area_8c_source.html#l00611">lv_pct()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__msgbox__private_8h_source.html#l00039">_lv_msgbox_t::title</a> y <a class="el" href="lv__example__scroll__properties_8c_source.html#l00009">title</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a>, <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a>, <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="lv__msgbox_8c_source.html#l00168">lv_msgbox_add_header_button()</a>.</p>
+
+</div>
+</div>
+<a id="a102e75153a6e136a69975909604df710" name="a102e75153a6e136a69975909604df710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102e75153a6e136a69975909604df710">&#9670;&#160;</a></span>lv_msgbox_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_msgbox_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close a message box </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00291">291</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00040">_lv_msgbox_t::auto_parent</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00054">lv_obj_delete()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00311">lv_obj_get_parent()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a1bf3c9d082e77b595e8c07ec5e9c7074" name="a1bf3c9d082e77b595e8c07ec5e9c7074"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf3c9d082e77b595e8c07ec5e9c7074">&#9670;&#160;</a></span>lv_msgbox_close_async()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_msgbox_close_async </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close a message box in the next call of the message box </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00299">299</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00040">_lv_msgbox_t::auto_parent</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00142">lv_obj_delete_async()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00311">lv_obj_get_parent()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a4760cf6b1e589282355e61ae73520d3f" name="a4760cf6b1e589282355e61ae73520d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4760cf6b1e589282355e61ae73520d3f">&#9670;&#160;</a></span>lv_msgbox_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create an empty message box </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created on the top layer of the default screen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created message box </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00104">104</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00040">_lv_msgbox_t::auto_parent</a>, <a class="el" href="lv__msgbox__private_8h_source.html#l00037">_lv_msgbox_t::content</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00099">LV_EVENT_SIZE_CHANGED</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00046">LV_FLEX_FLOW_COLUMN</a>, <a class="el" href="lv__display_8c_source.html#l01501">lv_layer_top()</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__msgbox_8c_source.html#l00088">lv_msgbox_backdrop_class</a>, <a class="el" href="lv__msgbox_8c_source.html#l00038">lv_msgbox_class</a>, <a class="el" href="lv__msgbox_8c_source.html#l00054">lv_msgbox_content_class</a>, <a class="el" href="lv__obj__event_8c_source.html#l00106">lv_obj_add_event_cb()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01268">lv_obj_center()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00054">lv_obj_delete()</a>, <a class="el" href="lv__flex_8c_source.html#l00109">lv_obj_set_flex_flow()</a>, <a class="el" href="lv__obj_8c_source.html#l00662">lv_obj_set_ignore_layout()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00232">lv_obj_set_size()</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00226">LV_PCT</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a>, <a class="el" href="lv__example__msgbox__modal_8c_source.html#l00024">lv_example_msgbox_modal()</a> y <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a>.</p>
+
+</div>
+</div>
+<a id="affba3bfb629099672248cd048f0d61f9" name="affba3bfb629099672248cd048f0d61f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affba3bfb629099672248cd048f0d61f9">&#9670;&#160;</a></span>lv_msgbox_get_content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_get_content </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the content widget </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the content </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00277">277</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00037">_lv_msgbox_t::content</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a34be3e4f2e8f4687e3fa05b98be0d158" name="a34be3e4f2e8f4687e3fa05b98be0d158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34be3e4f2e8f4687e3fa05b98be0d158">&#9670;&#160;</a></span>lv_msgbox_get_footer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_get_footer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the footer widget </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the footer, or NULL if not exists </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00270">270</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00038">_lv_msgbox_t::footer</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__settings_8c_source.html#l00023">lv_example_msgbox_settings()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a17e5b824d03bb3f270e9f126e9c63c1b" name="a17e5b824d03bb3f270e9f126e9c63c1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e5b824d03bb3f270e9f126e9c63c1b">&#9670;&#160;</a></span>lv_msgbox_get_header()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_get_header </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the header widget </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the header, or NULL if not exists </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00263">263</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__msgbox__private_8h_source.html#l00036">_lv_msgbox_t::header</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__msgbox__blur_8c_source.html#l00035">lv_example_msgbox_blur()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a id="a627ea11b1f5176ec8d17d7c3bb8298b0" name="a627ea11b1f5176ec8d17d7c3bb8298b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627ea11b1f5176ec8d17d7c3bb8298b0">&#9670;&#160;</a></span>lv_msgbox_get_title()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_msgbox_get_title </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the title label </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a message box </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the title, or NULL if it does not exist </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00284">284</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__msgbox__private_8h_source.html#l00039">_lv_msgbox_t::title</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="include_2lvgl_2widgets_2lv__msgbox_8h.html#a8a5ecedd09ab371b07de48d27f528bbc">lv_msgbox_add_text_fmt()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a9bbbef8ac4a2760f02f54f367d6b41e0" name="a9bbbef8ac4a2760f02f54f367d6b41e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbbef8ac4a2760f02f54f367d6b41e0">&#9670;&#160;</a></span>lv_msgbox_backdrop_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_backdrop_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                              = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_backdrop&quot;</span>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_ac8ff3dd7fe0c5622285a2741128cf314"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a></div><div class="ttdeci">#define LV_PCT(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00226">lv_area.h:226</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a3dac7d854054ae797b657fb483eb75ab"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_obj_class</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00348">lv_obj.c:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00088">88</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00104">lv_msgbox_create()</a>.</p>
+
+</div>
+</div>
+<a id="ae0a4040421686796c8017e34ffc57b57" name="ae0a4040421686796c8017e34ffc57b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a4040421686796c8017e34ffc57b57">&#9670;&#160;</a></span>lv_msgbox_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                     = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aadf0386c6d60d0c07153b38654f6b6d3">LV_DPI_DEF</a> * 2,</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a4e57b8749946a05256cba04e34711b28">lv_msgbox_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox&quot;</span>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a9b0bd6c8ea66bc349c7c697e46f7cf3c"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a></div><div class="ttdeci">#define LV_SIZE_CONTENT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00220">lv_area.h:220</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a4e57b8749946a05256cba04e34711b28"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a4e57b8749946a05256cba04e34711b28">lv_msgbox_t</a></div><div class="ttdeci">struct _lv_msgbox_t lv_msgbox_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00238">lv_types.h:238</a></div></div>
+<div class="ttc" id="alv__conf__cmsis_8h_html_aadf0386c6d60d0c07153b38654f6b6d3"><div class="ttname"><a href="lv__conf__cmsis_8h.html#aadf0386c6d60d0c07153b38654f6b6d3">LV_DPI_DEF</a></div><div class="ttdeci">#define LV_DPI_DEF</div><div class="ttdef"><b>Definition</b> <a href="lv__conf__cmsis_8h_source.html#l00151">lv_conf_cmsis.h:151</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00038">38</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00104">lv_msgbox_create()</a>.</p>
+
+</div>
+</div>
+<a id="a7c13f656e8caab4e33719740f6a37e3f" name="a7c13f656e8caab4e33719740f6a37e3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c13f656e8caab4e33719740f6a37e3f">&#9670;&#160;</a></span>lv_msgbox_content_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_content_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                             = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_content&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00054">54</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00104">lv_msgbox_create()</a>.</p>
+
+</div>
+</div>
+<a id="ab1fefaeda653275216715debcb10200c" name="ab1fefaeda653275216715debcb10200c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1fefaeda653275216715debcb10200c">&#9670;&#160;</a></span>lv_msgbox_footer_button_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_footer_button_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                                   = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#a9b0bd6c8ea66bc349c7c697e46f7cf3c">LV_SIZE_CONTENT</a>,</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .group_def = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a>,</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_footer_button&quot;</span>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a></div><div class="ttdeci">@ LV_OBJ_CLASS_GROUP_DEF_TRUE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__class_8h_source.html#l00036">lv_obj_class.h:36</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00070">70</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00223">lv_msgbox_add_footer_button()</a>.</p>
+
+</div>
+</div>
+<a id="ab7906862b4052431b4536a6d31b826f2" name="ab7906862b4052431b4536a6d31b826f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7906862b4052431b4536a6d31b826f2">&#9670;&#160;</a></span>lv_msgbox_footer_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_footer_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                            = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .height_def = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aadf0386c6d60d0c07153b38654f6b6d3">LV_DPI_DEF</a> / 3,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_footer&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00062">62</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00223">lv_msgbox_add_footer_button()</a>.</p>
+
+</div>
+</div>
+<a id="ac59bc671540f266db34d74843fc892bb" name="ac59bc671540f266db34d74843fc892bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59bc671540f266db34d74843fc892bb">&#9670;&#160;</a></span>lv_msgbox_header_button_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_header_button_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                                   = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aadf0386c6d60d0c07153b38654f6b6d3">LV_DPI_DEF</a> / 3,</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .group_def = <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__class_8h.html#aebc1dfe87bf60e09142aea1746c6871dae33754a3c5ce1d1ad608b9282fa238ef">LV_OBJ_CLASS_GROUP_DEF_TRUE</a>,</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_header_button&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00079">79</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00168">lv_msgbox_add_header_button()</a>.</p>
+
+</div>
+</div>
+<a id="afff912979bfe620594b8800a39ebd1d5" name="afff912979bfe620594b8800a39ebd1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afff912979bfe620594b8800a39ebd1d5">&#9670;&#160;</a></span>lv_msgbox_header_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_msgbox_header_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                            = {</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .height_def = <a class="code hl_define" href="lv__conf__cmsis_8h.html#aadf0386c6d60d0c07153b38654f6b6d3">LV_DPI_DEF</a> / 3,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_msgbox_header&quot;</span>,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__msgbox_8c_source.html#l00046">46</a> del archivo <a class="el" href="lv__msgbox_8c_source.html">lv_msgbox.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__msgbox_8c_source.html#l00140">lv_msgbox_add_title()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_67f0f3e2e3f3227d74b9cea9797d50d3.html">msgbox</a></li><li class="navelem"><a href="lv__msgbox_8c.html">lv_msgbox.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/sw/lv_draw_sw.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__sw_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_draw_sw.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__draw__sw__private_8h_source.html">lv_draw_sw_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__draw__private_8h_source.html">../lv_draw_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__display__private_8h_source.html">../../display/lv_display_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../../core/lv_global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__area__private_8h_source.html">../../misc/lv_area_private.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__draw__sw_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a2b6fd7a8ee3d85703470cf2155a451a5" id="r_a2b6fd7a8ee3d85703470cf2155a451a5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2b6fd7a8ee3d85703470cf2155a451a5">DRAW_UNIT_ID_SW</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a6f815efdcf93fa0550a49d03a50be4cb" id="r_a6f815efdcf93fa0550a49d03a50be4cb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6f815efdcf93fa0550a49d03a50be4cb">_draw_info</a>&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;draw_info</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0ca9b81db40ec76cdcc0b8da2c5d9314" id="r_a0ca9b81db40ec76cdcc0b8da2c5d9314"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0ca9b81db40ec76cdcc0b8da2c5d9314">lv_draw_sw_init</a> (void)</td></tr>
+<tr class="memitem:aac1dc825aac830fb03d7d20113802292" id="r_aac1dc825aac830fb03d7d20113802292"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aac1dc825aac830fb03d7d20113802292">lv_draw_sw_deinit</a> (void)</td></tr>
+<tr class="memitem:a4f51db676e93ddbbe543d35d04e8e40f" id="r_a4f51db676e93ddbbe543d35d04e8e40f"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4f51db676e93ddbbe543d35d04e8e40f">lv_draw_sw_register_blend_handler</a> (<a class="el" href="structlv__draw__sw__custom__blend__handler__t.html">lv_draw_sw_custom_blend_handler_t</a> *handler)</td></tr>
+<tr class="memitem:a17a8c1ec95f8c49afb5e323db484b44d" id="r_a17a8c1ec95f8c49afb5e323db484b44d"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a17a8c1ec95f8c49afb5e323db484b44d">lv_draw_sw_unregister_blend_handler</a> (<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a> dest_cf)</td></tr>
+<tr class="memitem:a4ee7108e64f6a9f228e286049de6b747" id="r_a4ee7108e64f6a9f228e286049de6b747"><td class="memItemLeft"><a class="el" href="lv__draw__sw__blend_8h.html#a21deaed1d13d230e88b5fc86b88adf18">lv_draw_sw_blend_handler_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ee7108e64f6a9f228e286049de6b747">lv_draw_sw_get_blend_handler</a> (<a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a> dest_cf)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a6f815efdcf93fa0550a49d03a50be4cb" name="a6f815efdcf93fa0550a49d03a50be4cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f815efdcf93fa0550a49d03a50be4cb">&#9670;&#160;</a></span>_draw_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _draw_info&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;draw_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00064">64</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+</div>
+</div>
+<a id="a2b6fd7a8ee3d85703470cf2155a451a5" name="a2b6fd7a8ee3d85703470cf2155a451a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6fd7a8ee3d85703470cf2155a451a5">&#9670;&#160;</a></span>DRAW_UNIT_ID_SW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAW_UNIT_ID_SW&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00038">38</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="aac1dc825aac830fb03d7d20113802292" name="aac1dc825aac830fb03d7d20113802292"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1dc825aac830fb03d7d20113802292">&#9670;&#160;</a></span>lv_draw_sw_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_sw_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deinitialize the SW renderers </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00130">130</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__mask_8c_source.html#l00084">lv_draw_sw_mask_deinit()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00406">lv_deinit()</a>.</p>
+
+</div>
+</div>
+<a id="a4ee7108e64f6a9f228e286049de6b747" name="a4ee7108e64f6a9f228e286049de6b747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee7108e64f6a9f228e286049de6b747">&#9670;&#160;</a></span>lv_draw_sw_get_blend_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lv__draw__sw__blend_8h.html#a21deaed1d13d230e88b5fc86b88adf18">lv_draw_sw_blend_handler_t</a> lv_draw_sw_get_blend_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a></td>          <td class="paramname"><span class="paramname"><em>dest_cf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the blend handler for a color format. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest_cf</td><td>color format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the blend handler or NULL if no handler is registered </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00206">206</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__blend_8h_source.html#l00053">lv_draw_sw_custom_blend_handler_t::dest_cf</a>, <a class="el" href="lv__draw__sw__blend_8h_source.html#l00054">lv_draw_sw_custom_blend_handler_t::handler</a>, <a class="el" href="lv__global_8h_source.html#l00290">LV_GLOBAL_DEFAULT</a>, <a class="el" href="include_2lvgl_2misc_2lv__ll_8h_source.html#l00230">LV_LL_READ</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend_8c_source.html#l00072">lv_draw_sw_blend()</a>.</p>
+
+</div>
+</div>
+<a id="a0ca9b81db40ec76cdcc0b8da2c5d9314" name="a0ca9b81db40ec76cdcc0b8da2c5d9314"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ca9b81db40ec76cdcc0b8da2c5d9314">&#9670;&#160;</a></span>lv_draw_sw_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_sw_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the SW renderer. Called in internally. It creates as many SW renderers as defined in LV_DRAW_SW_DRAW_UNIT_CNT </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00074">74</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__private_8h_source.html#l00045">_lv_draw_sw_unit_t::base_unit</a>, <a class="el" href="lv__draw__private_8h_source.html#l00170">_lv_draw_unit_t::delete_cb</a>, <a class="el" href="lv__draw__private_8h_source.html#l00110">_lv_draw_unit_t::dispatch_cb</a>, <a class="el" href="lv__draw__sw__private_8h_source.html#l00039">lv_draw_sw_thread_dsc_t::draw_unit</a>, <a class="el" href="lv__draw__private_8h_source.html#l00118">_lv_draw_unit_t::evaluate_cb</a>, <a class="el" href="lv__draw__sw__private_8h_source.html#l00040">lv_draw_sw_thread_dsc_t::idx</a>, <a class="el" href="lv__draw_8c_source.html#l00076">lv_draw_create_unit()</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l00654">LV_DRAW_SW_DRAW_UNIT_CNT</a>, <a class="el" href="lv__draw__sw__mask_8c_source.html#l00079">lv_draw_sw_mask_init()</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l00458">LV_DRAW_THREAD_PRIO</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l00450">LV_DRAW_THREAD_STACK_SIZE</a>, <a class="el" href="lv__global_8h_source.html#l00290">LV_GLOBAL_DEFAULT</a>, <a class="el" href="lv__ll_8c_source.html#l00042">lv_ll_init()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00039">lv_thread_init()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00089">lv_thread_sync_init()</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l00328">LV_USE_OS</a>, <a class="el" href="lv__draw__private_8h_source.html#l00093">_lv_draw_unit_t::name</a>, <a class="el" href="lv__draw__sw__private_8h_source.html#l00037">lv_draw_sw_thread_dsc_t::new_task_sync</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__draw__sw__private_8h_source.html#l00038">lv_draw_sw_thread_dsc_t::task_done_sync</a>, <a class="el" href="lv__draw__sw__private_8h_source.html#l00036">lv_draw_sw_thread_dsc_t::thread</a> y <a class="el" href="lv__draw__private_8h_source.html#l00163">_lv_draw_unit_t::wait_for_finish_cb</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00158">lv_init()</a>.</p>
+
+</div>
+</div>
+<a id="a4f51db676e93ddbbe543d35d04e8e40f" name="a4f51db676e93ddbbe543d35d04e8e40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f51db676e93ddbbe543d35d04e8e40f">&#9670;&#160;</a></span>lv_draw_sw_register_blend_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_draw_sw_register_blend_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlv__draw__sw__custom__blend__handler__t.html">lv_draw_sw_custom_blend_handler_t</a> *</td>          <td class="paramname"><span class="paramname"><em>handler</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Register a custom blend handler for a color format. <a class="el" href="classrapidjson_1_1_handler.html" title="Concept for receiving events from GenericReader upon parsing. The functions return true if no error o...">Handler</a> will be called when blending a color or an image to a buffer with the given color format. At most one handler can be registered for a color format. Subsequent registrations will overwrite the previous handler.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handler</td><td>pointer to a blend handler </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true if the handler was registered, false if the handler could not be registered </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00166">166</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__blend_8h_source.html#l00053">lv_draw_sw_custom_blend_handler_t::dest_cf</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__global_8h_source.html#l00290">LV_GLOBAL_DEFAULT</a>, <a class="el" href="lv__ll_8c_source.html#l00059">lv_ll_ins_head()</a>, <a class="el" href="include_2lvgl_2misc_2lv__ll_8h_source.html#l00230">LV_LL_READ</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a17a8c1ec95f8c49afb5e323db484b44d" name="a17a8c1ec95f8c49afb5e323db484b44d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a8c1ec95f8c49afb5e323db484b44d">&#9670;&#160;</a></span>lv_draw_sw_unregister_blend_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_draw_sw_unregister_blend_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a></td>          <td class="paramname"><span class="paramname"><em>dest_cf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unregister a custom blend handler for a color format. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest_cf</td><td>color format </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true if a handler was unregistered, false if no handler was registered </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw_8c_source.html#l00191">191</a> del archivo <a class="el" href="lv__draw__sw_8c_source.html">lv_draw_sw.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__blend_8h_source.html#l00053">lv_draw_sw_custom_blend_handler_t::dest_cf</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__global_8h_source.html#l00290">LV_GLOBAL_DEFAULT</a>, <a class="el" href="include_2lvgl_2misc_2lv__ll_8h_source.html#l00230">LV_LL_READ</a> y <a class="el" href="lv__ll_8c_source.html#l00129">lv_ll_remove()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_538dbfa1981d521c1038df1994fd8c7e.html">sw</a></li><li class="navelem"><a href="lv__draw__sw_8c.html">lv_draw_sw.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

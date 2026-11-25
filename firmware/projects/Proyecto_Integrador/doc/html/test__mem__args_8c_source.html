@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/src/test_cases/public_api/test_mem_args.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__mem__args_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_mem_args.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__mem__args_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#if LV_BUILD_TEST</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;../lvgl.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="unity_8h.html">unity/unity.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">void</span> test_mem_add_pool_size_limits(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> overhead = <a class="code hl_function" href="lv__tlsf_8c.html#a25c6ae0de460d768758484d94ce933f7">lv_tlsf_pool_overhead</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> block_max = <a class="code hl_function" href="lv__tlsf_8c.html#ac0e9ab02e886426d1ebf6ee7301a9293">lv_tlsf_block_size_max</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> mem = lv_test_get_free_mem();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> * pool_mem = malloc(overhead + block_max);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    TEST_ASSERT_NOT_NULL(pool_mem);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">/* A pool of exactly block_size_max would index sl_bitmap out of bounds */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    TEST_ASSERT_NULL(<a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a>(pool_mem, overhead + block_max));</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    TEST_ASSERT_NULL(<a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a>(pool_mem, <a class="code hl_define" href="stdint_8h.html#a3c75bb398badb69c7577b21486f9963f">SIZE_MAX</a>));</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    TEST_ASSERT_NULL(<a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a>(pool_mem, overhead + <a class="code hl_function" href="lv__tlsf_8c.html#ae05c40f2297b026edf3b61f309a9d5f3">lv_tlsf_block_size_min</a>() - 1));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    TEST_ASSERT_NULL(<a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a>(pool_mem, 0));</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">/* One word less is the largest pool the range check accepts */</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_typedef" href="include_2lvgl_2stdlib_2lv__mem_8h.html#ac7f5bc5ba0695e7adef6131ffb1cc5c6">lv_mem_pool_t</a> pool = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a>(pool_mem, overhead + block_max - <a class="code hl_function" href="lv__tlsf_8c.html#ad9d645dd4a1b31826b5a65c7dd033f31">lv_tlsf_align_size</a>());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    TEST_ASSERT_NOT_NULL(pool);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a>, <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a8250978d8cd68d71e74be51a2833d01f">lv_mem_test</a>());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a6b99f4688ecf8cb82fa25cf87a52c875">lv_mem_remove_pool</a>(pool);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_variable" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ab6e8ea9afb890e5aa11a519977ebe2e3">free</a>(pool_mem);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a>, <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a8250978d8cd68d71e74be51a2833d01f">lv_mem_test</a>());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_define" href="unity__support_8h.html#aa51cebdfe3b39ffd6e95d8241b68e9ec">TEST_ASSERT_MEM_LEAK_LESS_THAN</a>(mem, 0);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">/*LV_BUILD_TEST*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275ad0068efa01b913c8dae4647195610fa6">LV_RESULT_OK</a></div><div class="ttdeci">@ LV_RESULT_OK</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00067">lv_types.h:67</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a6b99f4688ecf8cb82fa25cf87a52c875"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a6b99f4688ecf8cb82fa25cf87a52c875">lv_mem_remove_pool</a></div><div class="ttdeci">void lv_mem_remove_pool(lv_mem_pool_t pool)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem__core__builtin_8c_source.html#l00125">lv_mem_core_builtin.c:125</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a79d3d57753503341c7977f5ad8232de3"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a79d3d57753503341c7977f5ad8232de3">lv_mem_add_pool</a></div><div class="ttdeci">lv_mem_pool_t lv_mem_add_pool(void *mem, size_t bytes)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem__core__builtin_8c_source.html#l00107">lv_mem_core_builtin.c:107</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a8250978d8cd68d71e74be51a2833d01f"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a8250978d8cd68d71e74be51a2833d01f">lv_mem_test</a></div><div class="ttdeci">lv_result_t lv_mem_test(void)</div><div class="ttdoc">Tests the memory allocation system by allocating and freeing a block of memory.</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00171">lv_mem.c:171</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_ac7f5bc5ba0695e7adef6131ffb1cc5c6"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#ac7f5bc5ba0695e7adef6131ffb1cc5c6">lv_mem_pool_t</a></div><div class="ttdeci">void * lv_mem_pool_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2stdlib_2lv__mem_8h_source.html#l00028">lv_mem.h:28</a></div></div>
+<div class="ttc" id="alv__tlsf_8c_html_a25c6ae0de460d768758484d94ce933f7"><div class="ttname"><a href="lv__tlsf_8c.html#a25c6ae0de460d768758484d94ce933f7">lv_tlsf_pool_overhead</a></div><div class="ttdeci">size_t lv_tlsf_pool_overhead(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__tlsf_8c_source.html#l00968">lv_tlsf.c:968</a></div></div>
+<div class="ttc" id="alv__tlsf_8c_html_ac0e9ab02e886426d1ebf6ee7301a9293"><div class="ttname"><a href="lv__tlsf_8c.html#ac0e9ab02e886426d1ebf6ee7301a9293">lv_tlsf_block_size_max</a></div><div class="ttdeci">size_t lv_tlsf_block_size_max(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__tlsf_8c_source.html#l00958">lv_tlsf.c:958</a></div></div>
+<div class="ttc" id="alv__tlsf_8c_html_ad9d645dd4a1b31826b5a65c7dd033f31"><div class="ttname"><a href="lv__tlsf_8c.html#ad9d645dd4a1b31826b5a65c7dd033f31">lv_tlsf_align_size</a></div><div class="ttdeci">size_t lv_tlsf_align_size(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__tlsf_8c_source.html#l00948">lv_tlsf.c:948</a></div></div>
+<div class="ttc" id="alv__tlsf_8c_html_ae05c40f2297b026edf3b61f309a9d5f3"><div class="ttname"><a href="lv__tlsf_8c.html#ae05c40f2297b026edf3b61f309a9d5f3">lv_tlsf_block_size_min</a></div><div class="ttdeci">size_t lv_tlsf_block_size_min(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__tlsf_8c_source.html#l00953">lv_tlsf.c:953</a></div></div>
+<div class="ttc" id="asrc_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_html_ab6e8ea9afb890e5aa11a519977ebe2e3"><div class="ttname"><a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ab6e8ea9afb890e5aa11a519977ebe2e3">free</a></div><div class="ttdeci">or b any new file in Source Code Form that contains any Covered Software Patent Claims of a Contributor means any patent including without and apparatus in any patent Licensable by such Contributor that would be but for the grant of the by the offering for having or transfer of either its Contributions or its Contributor Version Secondary License means either the GNU General Public the GNU Lesser General Public the GNU Affero General Public or any later versions of those licenses Source Code Form means the form of the work preferred for making modifications You includes any entity that is controlled or is under common control with You For purposes of this control direct or to cause the direction or management of such whether by contract or royalty free</div><div class="ttdef"><b>Definition</b> <a href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00097">LICENSE.txt:97</a></div></div>
+<div class="ttc" id="astdint_8h_html_a3c75bb398badb69c7577b21486f9963f"><div class="ttname"><a href="stdint_8h.html#a3c75bb398badb69c7577b21486f9963f">SIZE_MAX</a></div><div class="ttdeci">#define SIZE_MAX</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00252">stdint.h:252</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="aunity_8h_html"><div class="ttname"><a href="unity_8h.html">unity.h</a></div></div>
+<div class="ttc" id="aunity__support_8h_html_aa51cebdfe3b39ffd6e95d8241b68e9ec"><div class="ttname"><a href="unity__support_8h.html#aa51cebdfe3b39ffd6e95d8241b68e9ec">TEST_ASSERT_MEM_LEAK_LESS_THAN</a></div><div class="ttdeci">#define TEST_ASSERT_MEM_LEAK_LESS_THAN(prev_usage, threshold)</div><div class="ttdef"><b>Definition</b> <a href="unity__support_8h_source.html#l00042">unity_support.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_a2db2b5e922be370ef89e28f89eca8b6.html">src</a></li><li class="navelem"><a href="dir_0da03cef61f81ff608e9e8a57be45fcc.html">test_cases</a></li><li class="navelem"><a href="dir_0a6b558684c3dd99f6cb143920435f64.html">public_api</a></li><li class="navelem"><a href="test__mem__args_8c.html">test_mem_args.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

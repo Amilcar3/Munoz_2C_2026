@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/sw/blend/lv_draw_sw_blend_to_a8.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__sw__blend__to__a8_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_draw_sw_blend_to_a8.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__draw__sw__blend__to__a8_8h_source.html">lv_draw_sw_blend_to_a8.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__draw__sw__blend__private_8h_source.html">lv_draw_sw_blend_private.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__draw__sw__blend__to__a8_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a436053585f0fa916b4d2e3b8585a5fc4" id="r_a436053585f0fa916b4d2e3b8585a5fc4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a436053585f0fa916b4d2e3b8585a5fc4">BLEND_A8</a>(dest_a,  src_a)</td></tr>
+<tr class="memitem:a4ca75c2ebdeeff429d6cfa85dede29b1" id="r_a4ca75c2ebdeeff429d6cfa85dede29b1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4ca75c2ebdeeff429d6cfa85dede29b1">LV_DRAW_SW_COLOR_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:aee0b83a798159032f581c64b7be39de2" id="r_aee0b83a798159032f581c64b7be39de2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aee0b83a798159032f581c64b7be39de2">LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:a26c931d73b86f9fc01b79d14e07a99bc" id="r_a26c931d73b86f9fc01b79d14e07a99bc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a26c931d73b86f9fc01b79d14e07a99bc">LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:a7c90d87997f5c0cd521003f2b9cbdfa4" id="r_a7c90d87997f5c0cd521003f2b9cbdfa4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7c90d87997f5c0cd521003f2b9cbdfa4">LV_DRAW_SW_COLOR_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+<tr class="memitem:aa9303a1ed5840ecca08a96750e26190d" id="r_aa9303a1ed5840ecca08a96750e26190d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa9303a1ed5840ecca08a96750e26190d">LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:adcf202e4335b7368b5db891c2403f042" id="r_adcf202e4335b7368b5db891c2403f042"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adcf202e4335b7368b5db891c2403f042">LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:ac741e9e288ad95a59fe52838dd8b3e78" id="r_ac741e9e288ad95a59fe52838dd8b3e78"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac741e9e288ad95a59fe52838dd8b3e78">LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:a8f0e418bd40d5291f0de80d91c03c6d2" id="r_a8f0e418bd40d5291f0de80d91c03c6d2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8f0e418bd40d5291f0de80d91c03c6d2">LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+<tr class="memitem:a090c2e5788860675627ee96da9ad409a" id="r_a090c2e5788860675627ee96da9ad409a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a090c2e5788860675627ee96da9ad409a">LV_DRAW_SW_A8_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:a4d6d90ee1c61b3d78b44bef88dd49193" id="r_a4d6d90ee1c61b3d78b44bef88dd49193"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4d6d90ee1c61b3d78b44bef88dd49193">LV_DRAW_SW_A8_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:a7f05edef69b1ba536e6eaaab03a64d9f" id="r_a7f05edef69b1ba536e6eaaab03a64d9f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7f05edef69b1ba536e6eaaab03a64d9f">LV_DRAW_SW_A8_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:a153318583f8fb6a498fa02443b45cb91" id="r_a153318583f8fb6a498fa02443b45cb91"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a153318583f8fb6a498fa02443b45cb91">LV_DRAW_SW_A8_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+<tr class="memitem:a77ff232b0c4a74854507b6c08edd9a6b" id="r_a77ff232b0c4a74854507b6c08edd9a6b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a77ff232b0c4a74854507b6c08edd9a6b">LV_DRAW_SW_AL88_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:adb82c60c66439524d6038fe6d75a8979" id="r_adb82c60c66439524d6038fe6d75a8979"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adb82c60c66439524d6038fe6d75a8979">LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:ade88a61f0559dc3691ec7f155ea848d5" id="r_ade88a61f0559dc3691ec7f155ea848d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ade88a61f0559dc3691ec7f155ea848d5">LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:a8d38b8a26efd18b733e671df5c3ec39f" id="r_a8d38b8a26efd18b733e671df5c3ec39f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8d38b8a26efd18b733e671df5c3ec39f">LV_DRAW_SW_AL88_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+<tr class="memitem:ab239e8653c93d321bd526470d86b9acb" id="r_ab239e8653c93d321bd526470d86b9acb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab239e8653c93d321bd526470d86b9acb">LV_DRAW_SW_ARGB8888_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:a65776f69b6b2f5872732e90e21e637bb" id="r_a65776f69b6b2f5872732e90e21e637bb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a65776f69b6b2f5872732e90e21e637bb">LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:aa5e36dc8d8b4649639c633b9959ac24f" id="r_aa5e36dc8d8b4649639c633b9959ac24f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa5e36dc8d8b4649639c633b9959ac24f">LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:a97c5613808b13cee7de35f3e4f3c0aa4" id="r_a97c5613808b13cee7de35f3e4f3c0aa4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a97c5613808b13cee7de35f3e4f3c0aa4">LV_DRAW_SW_ARGB8888_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+<tr class="memitem:a4e5342d7937f2875c842d08ea6bce702" id="r_a4e5342d7937f2875c842d08ea6bce702"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4e5342d7937f2875c842d08ea6bce702">LV_DRAW_SW_I1_BLEND_TO_A8</a>(...)</td></tr>
+<tr class="memitem:ab7e341dafde2ae7d3e16cbd38cc0456f" id="r_ab7e341dafde2ae7d3e16cbd38cc0456f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab7e341dafde2ae7d3e16cbd38cc0456f">LV_DRAW_SW_I1_BLEND_TO_A8_WITH_OPA</a>(...)</td></tr>
+<tr class="memitem:a9c88d4cfcdea62d80496ceb7ca2d2725" id="r_a9c88d4cfcdea62d80496ceb7ca2d2725"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9c88d4cfcdea62d80496ceb7ca2d2725">LV_DRAW_SW_I1_BLEND_TO_A8_WITH_MASK</a>(...)</td></tr>
+<tr class="memitem:adc1cccdf5859f2ff349a1d39291fb478" id="r_adc1cccdf5859f2ff349a1d39291fb478"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adc1cccdf5859f2ff349a1d39291fb478">LV_DRAW_SW_I1_BLEND_TO_A8_MIX_MASK_OPA</a>(...)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a8a50a810909a9bcd2842b53714e9d5ed" id="r_a8a50a810909a9bcd2842b53714e9d5ed"><td class="memItemLeft">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8a50a810909a9bcd2842b53714e9d5ed">lv_draw_sw_blend_color_to_a8</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aaeb5c9a772646e55a6ad08704d2c7e86">lv_draw_sw_blend_fill_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:ac0e3d68dc522e825fcc48b6ca07087b3" id="r_ac0e3d68dc522e825fcc48b6ca07087b3"><td class="memItemLeft">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac0e3d68dc522e825fcc48b6ca07087b3">lv_draw_sw_blend_image_to_a8</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a3c0d90380e5741b3c1389fb84e8ea00e">lv_draw_sw_blend_image_dsc_t</a> *dsc)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a436053585f0fa916b4d2e3b8585a5fc4" name="a436053585f0fa916b4d2e3b8585a5fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a436053585f0fa916b4d2e3b8585a5fc4">&#9670;&#160;</a></span>BLEND_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLEND_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dest_a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>src_a</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(dest_a &lt; src_a) dest_a = src_a</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00061">61</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">lv_draw_sw_blend_color_to_a8()</a>.</p>
+
+</div>
+</div>
+<a id="a090c2e5788860675627ee96da9ad409a" name="a090c2e5788860675627ee96da9ad409a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a090c2e5788860675627ee96da9ad409a">&#9670;&#160;</a></span>LV_DRAW_SW_A8_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_A8_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div><div class="ttdeci">@ LV_RESULT_INVALID</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00065">lv_types.h:65</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00096">96</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a153318583f8fb6a498fa02443b45cb91" name="a153318583f8fb6a498fa02443b45cb91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153318583f8fb6a498fa02443b45cb91">&#9670;&#160;</a></span>LV_DRAW_SW_A8_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_A8_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00108">108</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a7f05edef69b1ba536e6eaaab03a64d9f" name="a7f05edef69b1ba536e6eaaab03a64d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f05edef69b1ba536e6eaaab03a64d9f">&#9670;&#160;</a></span>LV_DRAW_SW_A8_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_A8_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00104">104</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a4d6d90ee1c61b3d78b44bef88dd49193" name="a4d6d90ee1c61b3d78b44bef88dd49193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d6d90ee1c61b3d78b44bef88dd49193">&#9670;&#160;</a></span>LV_DRAW_SW_A8_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_A8_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00100">100</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a77ff232b0c4a74854507b6c08edd9a6b" name="a77ff232b0c4a74854507b6c08edd9a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ff232b0c4a74854507b6c08edd9a6b">&#9670;&#160;</a></span>LV_DRAW_SW_AL88_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_AL88_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00112">112</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a8d38b8a26efd18b733e671df5c3ec39f" name="a8d38b8a26efd18b733e671df5c3ec39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d38b8a26efd18b733e671df5c3ec39f">&#9670;&#160;</a></span>LV_DRAW_SW_AL88_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_AL88_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00124">124</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="ade88a61f0559dc3691ec7f155ea848d5" name="ade88a61f0559dc3691ec7f155ea848d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade88a61f0559dc3691ec7f155ea848d5">&#9670;&#160;</a></span>LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00120">120</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="adb82c60c66439524d6038fe6d75a8979" name="adb82c60c66439524d6038fe6d75a8979"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb82c60c66439524d6038fe6d75a8979">&#9670;&#160;</a></span>LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_AL88_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00116">116</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="ab239e8653c93d321bd526470d86b9acb" name="ab239e8653c93d321bd526470d86b9acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab239e8653c93d321bd526470d86b9acb">&#9670;&#160;</a></span>LV_DRAW_SW_ARGB8888_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_ARGB8888_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00128">128</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a97c5613808b13cee7de35f3e4f3c0aa4" name="a97c5613808b13cee7de35f3e4f3c0aa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c5613808b13cee7de35f3e4f3c0aa4">&#9670;&#160;</a></span>LV_DRAW_SW_ARGB8888_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_ARGB8888_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00140">140</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="aa5e36dc8d8b4649639c633b9959ac24f" name="aa5e36dc8d8b4649639c633b9959ac24f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e36dc8d8b4649639c633b9959ac24f">&#9670;&#160;</a></span>LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00136">136</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a65776f69b6b2f5872732e90e21e637bb" name="a65776f69b6b2f5872732e90e21e637bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65776f69b6b2f5872732e90e21e637bb">&#9670;&#160;</a></span>LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_ARGB8888_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00132">132</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a4ca75c2ebdeeff429d6cfa85dede29b1" name="a4ca75c2ebdeeff429d6cfa85dede29b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca75c2ebdeeff429d6cfa85dede29b1">&#9670;&#160;</a></span>LV_DRAW_SW_COLOR_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_COLOR_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00064">64</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">lv_draw_sw_blend_color_to_a8()</a>.</p>
+
+</div>
+</div>
+<a id="a7c90d87997f5c0cd521003f2b9cbdfa4" name="a7c90d87997f5c0cd521003f2b9cbdfa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c90d87997f5c0cd521003f2b9cbdfa4">&#9670;&#160;</a></span>LV_DRAW_SW_COLOR_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_COLOR_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00076">76</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">lv_draw_sw_blend_color_to_a8()</a>.</p>
+
+</div>
+</div>
+<a id="a26c931d73b86f9fc01b79d14e07a99bc" name="a26c931d73b86f9fc01b79d14e07a99bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c931d73b86f9fc01b79d14e07a99bc">&#9670;&#160;</a></span>LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00072">72</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">lv_draw_sw_blend_color_to_a8()</a>.</p>
+
+</div>
+</div>
+<a id="aee0b83a798159032f581c64b7be39de2" name="aee0b83a798159032f581c64b7be39de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee0b83a798159032f581c64b7be39de2">&#9670;&#160;</a></span>LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00068">68</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">lv_draw_sw_blend_color_to_a8()</a>.</p>
+
+</div>
+</div>
+<a id="a4e5342d7937f2875c842d08ea6bce702" name="a4e5342d7937f2875c842d08ea6bce702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e5342d7937f2875c842d08ea6bce702">&#9670;&#160;</a></span>LV_DRAW_SW_I1_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_I1_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00146">146</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="adc1cccdf5859f2ff349a1d39291fb478" name="adc1cccdf5859f2ff349a1d39291fb478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1cccdf5859f2ff349a1d39291fb478">&#9670;&#160;</a></span>LV_DRAW_SW_I1_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_I1_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00158">158</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a9c88d4cfcdea62d80496ceb7ca2d2725" name="a9c88d4cfcdea62d80496ceb7ca2d2725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c88d4cfcdea62d80496ceb7ca2d2725">&#9670;&#160;</a></span>LV_DRAW_SW_I1_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_I1_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00154">154</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="ab7e341dafde2ae7d3e16cbd38cc0456f" name="ab7e341dafde2ae7d3e16cbd38cc0456f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7e341dafde2ae7d3e16cbd38cc0456f">&#9670;&#160;</a></span>LV_DRAW_SW_I1_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_I1_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00150">150</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="aa9303a1ed5840ecca08a96750e26190d" name="aa9303a1ed5840ecca08a96750e26190d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9303a1ed5840ecca08a96750e26190d">&#9670;&#160;</a></span>LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00080">80</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="a8f0e418bd40d5291f0de80d91c03c6d2" name="a8f0e418bd40d5291f0de80d91c03c6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f0e418bd40d5291f0de80d91c03c6d2">&#9670;&#160;</a></span>LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_MIX_MASK_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_MIX_MASK_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00092">92</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="ac741e9e288ad95a59fe52838dd8b3e78" name="ac741e9e288ad95a59fe52838dd8b3e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac741e9e288ad95a59fe52838dd8b3e78">&#9670;&#160;</a></span>LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_MASK</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00088">88</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a id="adcf202e4335b7368b5db891c2403f042" name="adcf202e4335b7368b5db891c2403f042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf202e4335b7368b5db891c2403f042">&#9670;&#160;</a></span>LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_OPA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_DRAW_SW_MASK_ONLY_BLEND_TO_A8_WITH_OPA</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_enumvalue" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275a04c7defb6eda9bc6757872e5199fc99d">LV_RESULT_INVALID</a></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00084">84</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a8a50a810909a9bcd2842b53714e9d5ed" name="a8a50a810909a9bcd2842b53714e9d5ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a50a810909a9bcd2842b53714e9d5ed">&#9670;&#160;</a></span>lv_draw_sw_blend_color_to_a8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a> lv_draw_sw_blend_color_to_a8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aaeb5c9a772646e55a6ad08704d2c7e86">lv_draw_sw_blend_fill_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00165">165</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00061">BLEND_A8</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00051">_lv_draw_sw_blend_fill_dsc_t::dest_buf</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00053">_lv_draw_sw_blend_fill_dsc_t::dest_h</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00054">_lv_draw_sw_blend_fill_dsc_t::dest_stride</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00052">_lv_draw_sw_blend_fill_dsc_t::dest_w</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05217">LV_ATTRIBUTE_FAST_MEM</a>, <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00064">LV_DRAW_SW_COLOR_BLEND_TO_A8</a>, <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00076">LV_DRAW_SW_COLOR_BLEND_TO_A8_MIX_MASK_OPA</a>, <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00072">LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_MASK</a>, <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00068">LV_DRAW_SW_COLOR_BLEND_TO_A8_WITH_OPA</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00137">lv_memset()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00057">LV_OPA_MAX</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00217">LV_OPA_MIX2</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00405">LV_UNUSED</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00055">_lv_draw_sw_blend_fill_dsc_t::mask_buf</a>, <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00056">_lv_draw_sw_blend_fill_dsc_t::mask_stride</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00058">_lv_draw_sw_blend_fill_dsc_t::opa</a>.</p>
+
+</div>
+</div>
+<a id="ac0e3d68dc522e825fcc48b6ca07087b3" name="ac0e3d68dc522e825fcc48b6ca07087b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0e3d68dc522e825fcc48b6ca07087b3">&#9670;&#160;</a></span>lv_draw_sw_blend_image_to_a8()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a> lv_draw_sw_blend_image_to_a8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a3c0d90380e5741b3c1389fb84e8ea00e">lv_draw_sw_blend_image_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html#l00240">240</a> del archivo <a class="el" href="lv__draw__sw__blend__to__a8_8c_source.html">lv_draw_sw_blend_to_a8.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05217">LV_ATTRIBUTE_FAST_MEM</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00151">LV_COLOR_FORMAT_A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00157">LV_COLOR_FORMAT_AL88</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00164">LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00147">LV_COLOR_FORMAT_I1</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00146">LV_COLOR_FORMAT_L8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00158">LV_COLOR_FORMAT_RGB565_SWAPPED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a> y <a class="el" href="lv__draw__sw__blend__private_8h_source.html#l00071">_lv_draw_sw_blend_image_dsc_t::src_color_format</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_538dbfa1981d521c1038df1994fd8c7e.html">sw</a></li><li class="navelem"><a href="dir_1b70406028d9cca7011d2af800e01ddf.html">blend</a></li><li class="navelem"><a href="lv__draw__sw__blend__to__a8_8c.html">lv_draw_sw_blend_to_a8.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

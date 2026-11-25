@@ -1,0 +1,27 @@
+var lv__example__styles_8h =
+[
+    [ "lv_example_style_arc", "lv__example__styles_8h.html#a85b91cb4248819df9849865a3c89f63c", null ],
+    [ "lv_example_style_background", "lv__example__styles_8h.html#a85d393b0bde54adeb044f7c99ebe958e", null ],
+    [ "lv_example_style_blur", "lv__example__styles_8h.html#a5288b9d512ddf52f2da14dc6e7be0be9", null ],
+    [ "lv_example_style_border", "lv__example__styles_8h.html#acbeebb9c0b35955e18235521589a6d1f", null ],
+    [ "lv_example_style_drop_shadow", "lv__example__styles_8h.html#a9069846ac4ffae170e2510173e2e12e8", null ],
+    [ "lv_example_style_gradient_buttons", "lv__example__styles_8h.html#a3ea702ec0af6933e0ab4935e0ae0da22", null ],
+    [ "lv_example_style_gradient_conic", "lv__example__styles_8h.html#a14d2ffc214a69cfdfa5f14a23599efbb", null ],
+    [ "lv_example_style_gradient_radial", "lv__example__styles_8h.html#a2f81961a71c007a3711d810e73506fca", null ],
+    [ "lv_example_style_image", "lv__example__styles_8h.html#a29221b658c8b747a1b64635bbb4a3003", null ],
+    [ "lv_example_style_line", "lv__example__styles_8h.html#ab3f580831b262b3baaba3dec845debde", null ],
+    [ "lv_example_style_local", "lv__example__styles_8h.html#aa274659242f9fb6f1cc8a488082dc05a", null ],
+    [ "lv_example_style_margin", "lv__example__styles_8h.html#a12f28422da24eb893e18946fac3036ff", null ],
+    [ "lv_example_style_modal", "lv__example__styles_8h.html#a220ed1ef3b96d94aaf3bf6c781fe6064", null ],
+    [ "lv_example_style_multiple", "lv__example__styles_8h.html#a00a3487c385255124917308bcd9974bd", null ],
+    [ "lv_example_style_opacity_transform", "lv__example__styles_8h.html#af71e4aded61f578b5722a23fbff68758", null ],
+    [ "lv_example_style_outline", "lv__example__styles_8h.html#a9dd01c77ae337a8dbde5da2c0053e333", null ],
+    [ "lv_example_style_padding", "lv__example__styles_8h.html#a133fba3fc936efb08b3af984358b64f6", null ],
+    [ "lv_example_style_parts_states", "lv__example__styles_8h.html#af883708c1f301b8db12575c3162de228", null ],
+    [ "lv_example_style_shadow", "lv__example__styles_8h.html#a90f040be8e15cfe351f4ba2718042b7a", null ],
+    [ "lv_example_style_size_position", "lv__example__styles_8h.html#a883034936bd7ee9e5c0f0342668d7644", null ],
+    [ "lv_example_style_text", "lv__example__styles_8h.html#ad889600d9c479ce949737fc7851c8f8f", null ],
+    [ "lv_example_style_theme", "lv__example__styles_8h.html#a35cc57b85f04367256810aeb30508d5e", null ],
+    [ "lv_example_style_transform_card", "lv__example__styles_8h.html#a35404b0347dd8e09e4f39c3cc717aed3", null ],
+    [ "lv_example_style_transition", "lv__example__styles_8h.html#a88067c8b9d7a11e6f278a9a22b99217a", null ]
+];

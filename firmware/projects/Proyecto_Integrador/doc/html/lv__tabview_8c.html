@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/tabview/lv_tabview.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__tabview_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_tabview.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__tabview__private_8h_source.html">lv_tabview_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__indev__private_8h_source.html">../../indev/lv_indev_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__tabview_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:lv_5Ftabview_5Fcreate_5Finfo_5Ft" id="r_lv_5Ftabview_5Fcreate_5Finfo_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structlv__tabview__create__info__t.html">lv_tabview_create_info_t</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#a47648a87446697e43c6eab994a8bbd45">lv_tabview_class</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5000b5c5aa9193ce16d9a8411eebf1d9" id="r_a5000b5c5aa9193ce16d9a8411eebf1d9"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5000b5c5aa9193ce16d9a8411eebf1d9">lv_tabview_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a7561c0b343421571ef89c2eebd286b05" id="r_a7561c0b343421571ef89c2eebd286b05"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a7561c0b343421571ef89c2eebd286b05">lv_tabview_add_tab</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *name)</td></tr>
+<tr class="memitem:a30c2ec8274c8e793b2680582831b0823" id="r_a30c2ec8274c8e793b2680582831b0823"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30c2ec8274c8e793b2680582831b0823">lv_tabview_set_tab_text</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> idx, const char *new_name)</td></tr>
+<tr class="memitem:a6046c6847a9a5493cd4f93efb2cdcd16" id="r_a6046c6847a9a5493cd4f93efb2cdcd16"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6046c6847a9a5493cd4f93efb2cdcd16">lv_tabview_set_active</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> idx, <a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a> anim_en)</td></tr>
+<tr class="memitem:a5ce312a382406915e8cc98c2a5b231c7" id="r_a5ce312a382406915e8cc98c2a5b231c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ce312a382406915e8cc98c2a5b231c7">lv_tabview_set_tab_bar_position</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2core_2lv__area_8h.html#a3c198d15464c5c78c63caac92e2ab162">lv_dir_t</a> dir)</td></tr>
+<tr class="memitem:a5fa4876f6cffb3eac10c2e7583267e06" id="r_a5fa4876f6cffb3eac10c2e7583267e06"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5fa4876f6cffb3eac10c2e7583267e06">lv_tabview_set_tab_bar_size</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> size)</td></tr>
+<tr class="memitem:a5c968b1693a4e9ad96e179f2183ab421" id="r_a5c968b1693a4e9ad96e179f2183ab421"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5c968b1693a4e9ad96e179f2183ab421">lv_tabview_get_tab_active</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:af4b3fb34016debe3cdcbe4c79e89fd46" id="r_af4b3fb34016debe3cdcbe4c79e89fd46"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#af4b3fb34016debe3cdcbe4c79e89fd46">lv_tabview_get_tab_button</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> idx)</td></tr>
+<tr class="memitem:a729d9e13a9e31a9db7bd4c78c697e545" id="r_a729d9e13a9e31a9db7bd4c78c697e545"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a729d9e13a9e31a9db7bd4c78c697e545">lv_tabview_get_tab_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a18dd299f4c087233be32edf14d67f88f" id="r_a18dd299f4c087233be32edf14d67f88f"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a18dd299f4c087233be32edf14d67f88f">lv_tabview_get_content</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ad9d9b5eb77352526dfbe47b2174e149a" id="r_ad9d9b5eb77352526dfbe47b2174e149a"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad9d9b5eb77352526dfbe47b2174e149a">lv_tabview_get_tab_bar</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ad4c4e36be50effb73ea28df2b79a90ed" id="r_ad4c4e36be50effb73ea28df2b79a90ed"><td class="memItemLeft"><a class="el" href="include_2lvgl_2core_2lv__area_8h.html#a3c198d15464c5c78c63caac92e2ab162">lv_dir_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad4c4e36be50effb73ea28df2b79a90ed">lv_tabview_get_tab_bar_position</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a47648a87446697e43c6eab994a8bbd45" id="r_a47648a87446697e43c6eab994a8bbd45"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a47648a87446697e43c6eab994a8bbd45">lv_tabview_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#a47648a87446697e43c6eab994a8bbd45">lv_tabview_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00020">20</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a7561c0b343421571ef89c2eebd286b05" name="a7561c0b343421571ef89c2eebd286b05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7561c0b343421571ef89c2eebd286b05">&#9670;&#160;</a></span>lv_tabview_add_tab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_tabview_add_tab </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a tab to the tabview </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+    <tr><td class="paramname">name</td><td>the name of the tab to be displayed on the tab bar @nullable When NULL the tab button's label keeps the default label text (<span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__label_8h.html#a9a9e6aa6156648afe7694d974927ec0d">LV_LABEL_DEFAULT_TEXT</a></span>). Useful when the text is set later, e.g. via a translation tag. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the widget where the content of the tab can be created </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00093">93</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2core_2lv__anim_8h_source.html#l00083">LV_ANIM_OFF</a>, <a class="el" href="lv__button_8c_source.html#l00050">lv_button_create()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00047">LV_EVENT_CLICKED</a>, <a class="el" href="lv__group_8c_source.html#l00126">lv_group_add_obj()</a>, <a class="el" href="lv__group_8c_source.html#l00121">lv_group_get_default()</a>, <a class="el" href="lv__label_8c_source.html#l00120">lv_label_create()</a>, <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="lv__obj__event_8c_source.html#l00106">lv_obj_add_event_cb()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01268">lv_obj_center()</a>, <a class="el" href="lv__obj_8c_source.html#l00370">lv_obj_create()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00389">lv_obj_get_child_count()</a>, <a class="el" href="lv__flex_8c_source.html#l00128">lv_obj_set_flex_grow()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00232">lv_obj_set_size()</a>, <a class="el" href="lv__area_8c_source.html#l00611">lv_pct()</a>, <a class="el" href="lv__tabview_8c_source.html#l00302">lv_tabview_get_content()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a>, <a class="el" href="lv__tabview_8c_source.html#l00150">lv_tabview_set_active()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00036">_lv_tabview_t::tab_cur</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__active__tab_8c_source.html#l00016">lv_example_tabview_active_tab()</a>, <a class="el" href="lv__example__tabview__basic_8c_source.html#l00017">lv_example_tabview_basic()</a>, <a class="el" href="lv__example__tabview__tab__bar__position_8c_source.html#l00017">lv_example_tabview_tab_bar_position()</a>, <a class="el" href="lv__example__tabview__tab__bar__style_8c_source.html#l00019">lv_example_tabview_tab_bar_style()</a> y <a class="el" href="lv__example__tabview__tab__button__content_8c_source.html#l00019">lv_example_tabview_tab_button_content()</a>.</p>
+
+</div>
+</div>
+<a id="a5000b5c5aa9193ce16d9a8411eebf1d9" name="a5000b5c5aa9193ce16d9a8411eebf1d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5000b5c5aa9193ce16d9a8411eebf1d9">&#9670;&#160;</a></span>lv_tabview_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_tabview_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a tabview widget </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the created tabview </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00084">84</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__tabview_8c_source.html#l00060">lv_tabview_class</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__active__tab_8c_source.html#l00016">lv_example_tabview_active_tab()</a>, <a class="el" href="lv__example__tabview__basic_8c_source.html#l00017">lv_example_tabview_basic()</a>, <a class="el" href="lv__example__tabview__tab__bar__position_8c_source.html#l00017">lv_example_tabview_tab_bar_position()</a>, <a class="el" href="lv__example__tabview__tab__bar__style_8c_source.html#l00019">lv_example_tabview_tab_bar_style()</a> y <a class="el" href="lv__example__tabview__tab__button__content_8c_source.html#l00019">lv_example_tabview_tab_button_content()</a>.</p>
+
+</div>
+</div>
+<a id="a18dd299f4c087233be32edf14d67f88f" name="a18dd299f4c087233be32edf14d67f88f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18dd299f4c087233be32edf14d67f88f">&#9670;&#160;</a></span>lv_tabview_get_content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_tabview_get_content </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the widget where the container of each tab is created </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the main container widget </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00302">302</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00318">lv_obj_get_child()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tabview_8c_source.html#l00093">lv_tabview_add_tab()</a>, <a class="el" href="lv__tabview_8c_source.html#l00150">lv_tabview_set_active()</a> y <a class="el" href="lv__tabview_8c_source.html#l00195">lv_tabview_set_tab_bar_position()</a>.</p>
+
+</div>
+</div>
+<a id="a5c968b1693a4e9ad96e179f2183ab421" name="a5c968b1693a4e9ad96e179f2183ab421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c968b1693a4e9ad96e179f2183ab421">&#9670;&#160;</a></span>lv_tabview_get_tab_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_tabview_get_tab_active </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current tab's index </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the zero based index of the current tab </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00281">281</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00036">_lv_tabview_t::tab_cur</a>.</p>
+
+</div>
+</div>
+<a id="ad9d9b5eb77352526dfbe47b2174e149a" name="ad9d9b5eb77352526dfbe47b2174e149a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9d9b5eb77352526dfbe47b2174e149a">&#9670;&#160;</a></span>lv_tabview_get_tab_bar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_tabview_get_tab_bar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the tab bar where the buttons are created </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the tab bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00309">309</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00318">lv_obj_get_child()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__tab__bar__style_8c_source.html#l00019">lv_example_tabview_tab_bar_style()</a>, <a class="el" href="lv__tabview_8c_source.html#l00093">lv_tabview_add_tab()</a>, <a class="el" href="lv__tabview_8c_source.html#l00288">lv_tabview_get_tab_button()</a>, <a class="el" href="lv__tabview_8c_source.html#l00295">lv_tabview_get_tab_count()</a>, <a class="el" href="lv__tabview_8c_source.html#l00150">lv_tabview_set_active()</a>, <a class="el" href="lv__tabview_8c_source.html#l00195">lv_tabview_set_tab_bar_position()</a>, <a class="el" href="lv__tabview_8c_source.html#l00266">lv_tabview_set_tab_bar_size()</a> y <a class="el" href="lv__tabview_8c_source.html#l00123">lv_tabview_set_tab_text()</a>.</p>
+
+</div>
+</div>
+<a id="ad4c4e36be50effb73ea28df2b79a90ed" name="ad4c4e36be50effb73ea28df2b79a90ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c4e36be50effb73ea28df2b79a90ed">&#9670;&#160;</a></span>lv_tabview_get_tab_bar_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2core_2lv__area_8h.html#a3c198d15464c5c78c63caac92e2ab162">lv_dir_t</a> lv_tabview_get_tab_bar_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the position of the tab bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_DIR_TOP/BOTTOM/LEFT/RIGHT </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00315">315</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00037">_lv_tabview_t::tab_pos</a>.</p>
+
+</div>
+</div>
+<a id="af4b3fb34016debe3cdcbe4c79e89fd46" name="af4b3fb34016debe3cdcbe4c79e89fd46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b3fb34016debe3cdcbe4c79e89fd46">&#9670;&#160;</a></span>lv_tabview_get_tab_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_tabview_get_tab_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a given tab button by index </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+    <tr><td class="paramname">idx</td><td>zero based index of the tab button to get. &lt; 0 means start counting tab button from the back (-1 is the last tab button) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the tab button, or NULL if the index was out of range </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00288">288</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__button_8c_source.html#l00032">lv_button_class</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00335">lv_obj_get_child_by_type()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__tab__button__content_8c_source.html#l00019">lv_example_tabview_tab_button_content()</a>.</p>
+
+</div>
+</div>
+<a id="a729d9e13a9e31a9db7bd4c78c697e545" name="a729d9e13a9e31a9db7bd4c78c697e545"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729d9e13a9e31a9db7bd4c78c697e545">&#9670;&#160;</a></span>lv_tabview_get_tab_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_tabview_get_tab_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the number of tabs </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the number of tabs </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00295">295</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__button_8c_source.html#l00032">lv_button_class</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00396">lv_obj_get_child_count_by_type()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tabview_8c_source.html#l00150">lv_tabview_set_active()</a>.</p>
+
+</div>
+</div>
+<a id="a6046c6847a9a5493cd4f93efb2cdcd16" name="a6046c6847a9a5493cd4f93efb2cdcd16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6046c6847a9a5493cd4f93efb2cdcd16">&#9670;&#160;</a></span>lv_tabview_set_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_tabview_set_active </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a></td>          <td class="paramname"><span class="paramname"><em>anim_en</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Show a tab </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+    <tr><td class="paramname">idx</td><td>the index of the tab to show </td></tr>
+    <tr><td class="paramname">anim_en</td><td>LV_ANIM_ON/OFF </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00150">150</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2font_2lv__bidi_8h_source.html#l00033">LV_BASE_DIR_RTL</a>, <a class="el" href="lv__button_8c_source.html#l00032">lv_button_class</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00084">LV_DIR_VER</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00335">lv_obj_get_child_by_type()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00622">lv_obj_get_content_height()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00612">lv_obj_get_content_width()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00410">lv_obj_scroll_to_x()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00422">lv_obj_scroll_to_y()</a>, <a class="el" href="lv__obj_8c_source.html#l00771">lv_obj_set_state()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00322">lv_obj_update_layout()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00061">LV_PART_MAIN</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00036">LV_STATE_CHECKED</a>, <a class="el" href="lv__tabview_8c_source.html#l00302">lv_tabview_get_content()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a>, <a class="el" href="lv__tabview_8c_source.html#l00295">lv_tabview_get_tab_count()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__tabview__private_8h_source.html#l00036">_lv_tabview_t::tab_cur</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00037">_lv_tabview_t::tab_pos</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__active__tab_8c_source.html#l00016">lv_example_tabview_active_tab()</a>, <a class="el" href="lv__example__tabview__tab__bar__style_8c_source.html#l00019">lv_example_tabview_tab_bar_style()</a> y <a class="el" href="lv__tabview_8c_source.html#l00093">lv_tabview_add_tab()</a>.</p>
+
+</div>
+</div>
+<a id="a5ce312a382406915e8cc98c2a5b231c7" name="a5ce312a382406915e8cc98c2a5b231c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce312a382406915e8cc98c2a5b231c7">&#9670;&#160;</a></span>lv_tabview_set_tab_bar_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_tabview_set_tab_bar_position </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__area_8h.html#a3c198d15464c5c78c63caac92e2ab162">lv_dir_t</a></td>          <td class="paramname"><span class="paramname"><em>dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the position of the tab bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+    <tr><td class="paramname">dir</td><td>LV_DIR_TOP/BOTTOM/LEFT/RIGHT </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00195">195</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00085">LV_DIR_ALL</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00082">LV_DIR_BOTTOM</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00083">LV_DIR_HOR</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00079">LV_DIR_LEFT</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00078">LV_DIR_NONE</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00080">LV_DIR_RIGHT</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00081">LV_DIR_TOP</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00084">LV_DIR_VER</a>, <a class="el" href="lv__display_8c_source.html#l00476">lv_display_get_dpi()</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00046">LV_FLEX_FLOW_COLUMN</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00051">LV_FLEX_FLOW_COLUMN_REVERSE</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00045">LV_FLEX_FLOW_ROW</a>, <a class="el" href="include_2lvgl_2layouts_2lv__flex_8h_source.html#l00048">LV_FLEX_FLOW_ROW_REVERSE</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00289">lv_obj_get_display()</a>, <a class="el" href="lv__flex_8c_source.html#l00109">lv_obj_set_flex_flow()</a>, <a class="el" href="lv__flex_8c_source.html#l00128">lv_obj_set_flex_grow()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00253">lv_obj_set_height()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00088">lv_obj_set_scroll_snap_x()</a>, <a class="el" href="lv__obj__scroll_8c_source.html#l00098">lv_obj_set_scroll_snap_y()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00232">lv_obj_set_size()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00240">lv_obj_set_width()</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00226">LV_PCT</a>, <a class="el" href="lv__area_8c_source.html#l00611">lv_pct()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__scroll_8h_source.html#l00043">LV_SCROLL_SNAP_CENTER</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__scroll_8h_source.html#l00040">LV_SCROLL_SNAP_NONE</a>, <a class="el" href="lv__tabview_8c_source.html#l00302">lv_tabview_get_content()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a>, <a class="el" href="lv__tabview_8c_source.html#l00266">lv_tabview_set_tab_bar_size()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__tabview__private_8h_source.html#l00038">_lv_tabview_t::tab_bar_size</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00037">_lv_tabview_t::tab_pos</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__tabview__tab__bar__position_8c_source.html#l00017">lv_example_tabview_tab_bar_position()</a> y <a class="el" href="lv__example__tabview__tab__bar__style_8c_source.html#l00019">lv_example_tabview_tab_bar_style()</a>.</p>
+
+</div>
+</div>
+<a id="a5fa4876f6cffb3eac10c2e7583267e06" name="a5fa4876f6cffb3eac10c2e7583267e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa4876f6cffb3eac10c2e7583267e06">&#9670;&#160;</a></span>lv_tabview_set_tab_bar_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_tabview_set_tab_bar_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the width or height of the tab bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to tabview widget </td></tr>
+    <tr><td class="paramname">size</td><td>size of the tab bar in pixels or percentage. will be used as width or height based on the position of the tab bar) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00266">266</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00084">LV_DIR_VER</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00253">lv_obj_set_height()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00240">lv_obj_set_width()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__tabview__private_8h_source.html#l00038">_lv_tabview_t::tab_bar_size</a> y <a class="el" href="lv__tabview__private_8h_source.html#l00037">_lv_tabview_t::tab_pos</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tabview_8c_source.html#l00195">lv_tabview_set_tab_bar_position()</a>.</p>
+
+</div>
+</div>
+<a id="a30c2ec8274c8e793b2680582831b0823" name="a30c2ec8274c8e793b2680582831b0823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30c2ec8274c8e793b2680582831b0823">&#9670;&#160;</a></span>lv_tabview_set_tab_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_tabview_set_tab_text </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>idx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>new_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Change the name of the tab </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a tabview widget </td></tr>
+    <tr><td class="paramname">idx</td><td>the index of the tab to rename </td></tr>
+    <tr><td class="paramname">new_name</td><td>the new name as a string @nullable When NULL the current name is kept and only refreshed, see <a class="el" href="include_2lvgl_2widgets_2lv__label_8h.html#ac0a3691e31b2defebc1eab701a35d63b" title="lv_label_set_text">lv_label_set_text</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00123">123</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__button_8c_source.html#l00032">lv_button_class</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__label_8c_source.html#l00100">lv_label_class</a>, <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00335">lv_obj_get_child_by_type()</a>, <a class="el" href="lv__tabview_8c_source.html#l00309">lv_tabview_get_tab_bar()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a47648a87446697e43c6eab994a8bbd45" name="a47648a87446697e43c6eab994a8bbd45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47648a87446697e43c6eab994a8bbd45">&#9670;&#160;</a></span>lv_tabview_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_tabview_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                      = {</div>
+<div class="line">    .constructor_cb = lv_tabview_constructor,</div>
+<div class="line">    .event_cb = lv_tabview_event,</div>
+<div class="line">    .width_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .height_def = <a class="code hl_define" href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a>(100),</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a>,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6074ffb095a4b5dbcad527504c84b1f8">lv_tabview_t</a>),</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_tabview&quot;</span>,</div>
+<div class="line"> </div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_ac8ff3dd7fe0c5622285a2741128cf314"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#ac8ff3dd7fe0c5622285a2741128cf314">LV_PCT</a></div><div class="ttdeci">#define LV_PCT(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00226">lv_area.h:226</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a3dac7d854054ae797b657fb483eb75ab"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a3dac7d854054ae797b657fb483eb75ab">lv_obj_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_obj_class</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00348">lv_obj.c:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a6074ffb095a4b5dbcad527504c84b1f8"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a6074ffb095a4b5dbcad527504c84b1f8">lv_tabview_t</a></div><div class="ttdeci">struct _lv_tabview_t lv_tabview_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00262">lv_types.h:262</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__tabview_8c_source.html#l00060">60</a> del archivo <a class="el" href="lv__tabview_8c_source.html">lv_tabview.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__tabview_8c_source.html#l00084">lv_tabview_create()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_10617423b30f383752de9dc0b64ed68a.html">tabview</a></li><li class="navelem"><a href="lv__tabview_8c.html">lv_tabview.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

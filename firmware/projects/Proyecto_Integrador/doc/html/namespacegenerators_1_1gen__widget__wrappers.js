@@ -1,0 +1,26 @@
+var namespacegenerators_1_1gen__widget__wrappers =
+[
+    [ "StructField", "classgenerators_1_1gen__widget__wrappers_1_1_struct_field.html", null ],
+    [ "WidgetDef", "classgenerators_1_1gen__widget__wrappers_1_1_widget_def.html", "classgenerators_1_1gen__widget__wrappers_1_1_widget_def" ],
+    [ "_build_auto_spec", "namespacegenerators_1_1gen__widget__wrappers.html#a2cf7704ad0c02b1a6cc34eb92dbc8121", null ],
+    [ "_field_expr", "namespacegenerators_1_1gen__widget__wrappers.html#ac87be3e1e9e80ed461e428972cbab191", null ],
+    [ "_field_type_name", "namespacegenerators_1_1gen__widget__wrappers.html#a6d1d8f9d2cb23a377a960cd0f9820a80", null ],
+    [ "_find_structs", "namespacegenerators_1_1gen__widget__wrappers.html#adc99f29f2fff35c14ad4626b85641443", null ],
+    [ "_scan_enum_types", "namespacegenerators_1_1gen__widget__wrappers.html#abf88fb00545a215a5fcc072f0da64248", null ],
+    [ "_topo_sort", "namespacegenerators_1_1gen__widget__wrappers.html#aca6b20e78ee3aaf95136b053213b2439", null ],
+    [ "gen_helpers", "namespacegenerators_1_1gen__widget__wrappers.html#a6196c8f4ea72d2d02434f133bb579e87", null ],
+    [ "gen_init", "namespacegenerators_1_1gen__widget__wrappers.html#a83f58638317f35439df983eeaeff7147", null ],
+    [ "gen_widget_file", "namespacegenerators_1_1gen__widget__wrappers.html#a499f6a893c7e0fbac92bd8628d559039", null ],
+    [ "main", "namespacegenerators_1_1gen__widget__wrappers.html#a51af30a60f9f02777c6396b8247e356f", null ],
+    [ "parse_struct_fields", "namespacegenerators_1_1gen__widget__wrappers.html#af5702d44d7f3555c9d7641a27b3e3e89", null ],
+    [ "parse_widgets", "namespacegenerators_1_1gen__widget__wrappers.html#aebdae8659e221ed3fe88c7473252df1f", null ],
+    [ "update_specs_json", "namespacegenerators_1_1gen__widget__wrappers.html#a4dc771c786bc4dde6222af509a8c3812", null ],
+    [ "_INT_SAFE_TYPES", "namespacegenerators_1_1gen__widget__wrappers.html#abfc93499fc76cad46aef7da91e10ee6f", null ],
+    [ "LVGL_INC", "namespacegenerators_1_1gen__widget__wrappers.html#a914645f4327da82115c130f2c54587d0", null ],
+    [ "LVGL_ROOT", "namespacegenerators_1_1gen__widget__wrappers.html#aefd2fba5ea03678dea1f53bed291a8db", null ],
+    [ "LVGL_SRC", "namespacegenerators_1_1gen__widget__wrappers.html#ab1ef19ba12bacd39137cafdfe9309de2", null ],
+    [ "OUTPUT_DIR", "namespacegenerators_1_1gen__widget__wrappers.html#a193365a965e66d645617161fb3416d35", null ],
+    [ "SIMPLE_INT_TYPES", "namespacegenerators_1_1gen__widget__wrappers.html#a4dae0aeeb4fb3611bd612de1b05de4b9", null ],
+    [ "SPECS_JSON", "namespacegenerators_1_1gen__widget__wrappers.html#a4accc615564798d6425d912f900c6b74", null ],
+    [ "WIDGETS_DIR", "namespacegenerators_1_1gen__widget__wrappers.html#a9b2371e006523fb6762a589ed7818cf2", null ]
+];

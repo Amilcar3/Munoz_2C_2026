@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['parse_2epy_0',['parse.py',['../parse_8py.html',1,'']]],
+  ['perf_2epy_1',['perf.py',['../perf_8py.html',1,'']]],
+  ['pika_5flv_5fpoint_5ft_2ec_2',['pika_lv_point_t.c',['../pika__lv__point__t_8c.html',1,'']]],
+  ['pika_5flv_5ftimer_5ft_2ec_3',['pika_lv_timer_t.c',['../pika__lv__timer__t_8c.html',1,'']]],
+  ['pika_5flv_5fwegit_2ec_4',['pika_lv_wegit.c',['../pika__lv__wegit_8c.html',1,'']]],
+  ['pika_5flvgl_2ec_5',['pika_lvgl.c',['../pika__lvgl_8c.html',1,'']]],
+  ['pika_5flvgl_5findev_5ft_2ec_6',['pika_lvgl_indev_t.c',['../pika__lvgl__indev__t_8c.html',1,'']]],
+  ['pika_5flvgl_5flv_5fevent_2ec_7',['pika_lvgl_lv_event.c',['../pika__lvgl__lv__event_8c.html',1,'']]],
+  ['pika_5flvgl_5flv_5fobj_2ec_8',['pika_lvgl_lv_obj.c',['../pika__lvgl__lv__obj_8c.html',1,'']]],
+  ['pika_5flvgl_5flv_5fstyle_5ft_2ec_9',['pika_lvgl_lv_style_t.c',['../pika__lvgl__lv__style__t_8c.html',1,'']]],
+  ['pointer_2eh_10',['pointer.h',['../pointer_8h.html',1,'']]],
+  ['pow10_2eh_11',['pow10.h',['../pow10_8h.html',1,'']]],
+  ['pr_5freport_2epy_12',['pr_report.py',['../pr__report_8py.html',1,'']]],
+  ['preprocess_5flv_5fconf_5finternal_2epy_13',['preprocess_lv_conf_internal.py',['../preprocess__lv__conf__internal_8py.html',1,'']]],
+  ['prerequisites_2dapt_2etxt_14',['prerequisites-apt.txt',['../prerequisites-apt_8txt.html',1,'']]],
+  ['prerequisites_2dpip_2etxt_15',['prerequisites-pip.txt',['../prerequisites-pip_8txt.html',1,'']]],
+  ['prettywriter_2eh_16',['prettywriter.h',['../prettywriter_8h.html',1,'']]],
+  ['project_5felf_5fsrc_5fesp32c6_2ec_17',['project_elf_src_esp32c6.c',['../bootloader_2project__elf__src__esp32c6_8c.html',1,'(Espacio de nombres global)'],['../project__elf__src__esp32c6_8c.html',1,'(Espacio de nombres global)']]],
+  ['properties_2epy_18',['properties.py',['../properties_8py.html',1,'']]],
+  ['proyecto_5fintegrador_2ec_19',['Proyecto_Integrador.c',['../_proyecto___integrador_8c.html',1,'']]],
+  ['pwm_5fmcu_2ec_20',['pwm_mcu.c',['../pwm__mcu_8c.html',1,'']]],
+  ['pwm_5fmcu_2eh_21',['pwm_mcu.h',['../pwm__mcu_8h.html',1,'']]],
+  ['pycparser_5fmonkeypatch_2epy_22',['pycparser_monkeypatch.py',['../pycparser__monkeypatch_8py.html',1,'']]]
+];

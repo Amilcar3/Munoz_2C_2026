@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/misc/lv_cache.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lvgl_2misc_2lv__cache_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_cache.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lvgl_2misc_2lv__cache_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__cache.html">    1</a></span><span class="keyword">from</span> typing <span class="keyword">import</span> Union</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> gdb</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1value.html">lvglgdb.value</a> <span class="keyword">import</span> Value, ValueInput</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">from</span> .lv_cache_iter_factory <span class="keyword">import</span> create_cache_iterator</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="" data-end="">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html">LVCache</a>(<a class="code hl_class" href="classlvglgdb_1_1value_1_1_value.html">Value</a>):</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL cache wrapper - focuses on cache-level operations&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a55ffaa158268a0b623efad6768c15185">   11</a></span>    _DISPLAY_SPEC = {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="stringliteral">&quot;info&quot;</span>: [</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            (<span class="stringliteral">&quot;_title&quot;</span>, <span class="keyword">lambda</span> d: <span class="stringliteral">&quot;Cache Info:&quot;</span>),</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            (<span class="stringliteral">&quot;Name&quot;</span>, <span class="stringliteral">&quot;name&quot;</span>),</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            (<span class="stringliteral">&quot;Node Size&quot;</span>, <span class="stringliteral">&quot;node_size&quot;</span>),</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            (<span class="stringliteral">&quot;Max Size&quot;</span>, <span class="stringliteral">&quot;max_size&quot;</span>),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            (<span class="stringliteral">&quot;Current Size&quot;</span>, <span class="stringliteral">&quot;current_size&quot;</span>),</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            (<span class="stringliteral">&quot;Free Size&quot;</span>, <span class="keyword">lambda</span> d: d[<span class="stringliteral">&quot;max_size&quot;</span>] - d[<span class="stringliteral">&quot;current_size&quot;</span>]),</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            (<span class="stringliteral">&quot;Enabled&quot;</span>, <span class="stringliteral">&quot;enabled&quot;</span>),</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            (<span class="stringliteral">&quot;_skip_if&quot;</span>, <span class="stringliteral">&quot;iterator_type&quot;</span>, <span class="keywordtype">None</span>, (<span class="stringliteral">&quot;Iterator Type&quot;</span>, <span class="stringliteral">&quot;iterator_type&quot;</span>)),</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        ],</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;table&quot;</span>: [],</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="stringliteral">&quot;empty_msg&quot;</span>: <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="" data-end="">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa235e97cbb205f4ec3dee23d887a24cd">   26</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa235e97cbb205f4ec3dee23d887a24cd">__init__</a>(self, cache: ValueInput, datatype: Union[gdb.Type, str]):</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        super().<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa235e97cbb205f4ec3dee23d887a24cd">__init__</a>(Value.normalize(cache, <span class="stringliteral">&quot;lv_cache_t&quot;</span>))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a8c2ceee8cb58f8946db5d36f370c7424">   28</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a8c2ceee8cb58f8946db5d36f370c7424">datatype</a> = (</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            gdb.lookup_type(datatype).<a class="code hl_variable" href="pointer_8h.html#aae1f8d263916ad71bd415381591549c0">pointer</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="keywordflow">if</span> isinstance(datatype, str)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">else</span> datatype</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        )</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3cc5beb95fb74f4be44c04f84ed66a82">   35</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3cc5beb95fb74f4be44c04f84ed66a82">name</a>(self) -&gt; str:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">return</span> self.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a87fbc98c449678885f5dba9600e1331c">super_value</a>(<span class="stringliteral">&quot;name&quot;</span>).<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a2bd8036f6ee917ec7f982f925358d395">string</a>(fallback=<span class="stringliteral">&quot;(unnamed)&quot;</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+</div>
+<div class="foldopen" id="foldopen00038" data-start="" data-end="">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a221f9c63ad28edd91c065b215d15fc8a">   38</a></span>    <span class="keyword">def </span>snapshot(self):</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1lvgl_1_1snapshot.html">lvglgdb.lvgl.snapshot</a> <span class="keyword">import</span> Snapshot</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        iter_type = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            iterator = create_cache_iterator(self)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            iter_type = iterator.__class__.__name__</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">except</span> Exception:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordflow">pass</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        d = {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="stringliteral">&quot;addr&quot;</span>: hex(int(self)),</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="stringliteral">&quot;name&quot;</span>: self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3cc5beb95fb74f4be44c04f84ed66a82">name</a>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="stringliteral">&quot;node_size&quot;</span>: int(self.node_size),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="stringliteral">&quot;max_size&quot;</span>: int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">max_size</a>),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="stringliteral">&quot;current_size&quot;</span>: int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa3d6656320f1a7278c0c2c7fdf07617c">size</a>),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="stringliteral">&quot;enabled&quot;</span>: bool(int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">max_size</a>) &gt; 0),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="stringliteral">&quot;iterator_type&quot;</span>: iter_type,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1snapshot_1_1_snapshot.html">Snapshot</a>(d, source=self, display_spec=self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a55ffaa158268a0b623efad6768c15185">_DISPLAY_SPEC</a>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="foldopen" id="foldopen00059" data-start="" data-end="">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ae7358f0c64e3822a93a51ee6c6cf8098">   59</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ae7358f0c64e3822a93a51ee6c6cf8098">is_enabled</a>(self):</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="stringliteral">&quot;&quot;&quot;Check if cache is enabled&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">   61</a></span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">max_size</a>) &gt; 0</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+</div>
+<div class="foldopen" id="foldopen00063" data-start="" data-end="">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#abc732e55bd10e89870de5654309ee3ed">   63</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#abc732e55bd10e89870de5654309ee3ed">get_usage_percentage</a>(self):</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="stringliteral">&quot;&quot;&quot;Get cache usage percentage&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">max_size</a>) == 0:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">return</span> 0.0</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa3d6656320f1a7278c0c2c7fdf07617c">   67</a></span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa3d6656320f1a7278c0c2c7fdf07617c">size</a>) / int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">max_size</a>) * 100.0</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+</div>
+<div class="foldopen" id="foldopen00069" data-start="" data-end="">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3d1374cfb30c05eeeb049c2197b5a824">   69</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3d1374cfb30c05eeeb049c2197b5a824">__iter__</a>(self):</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="stringliteral">&quot;&quot;&quot;Create appropriate iterator based on cache class&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        iterator = create_cache_iterator(self)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> iterator <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <span class="comment"># Returning None here would make `for entry in cache` fail with</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="comment"># TypeError about NoneType, which says nothing about the cache.</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">raise</span> gdb.GdbError(f<span class="stringliteral">&quot;unsupported cache type: {self.name}&quot;</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> iterator</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+</div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ac0f2ca0f86f99878588482b3b0ca92fa">   78</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ac0f2ca0f86f99878588482b3b0ca92fa">items</a>(self):</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="stringliteral">&quot;&quot;&quot;Get all cache entries as a list&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        entries = []</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> entry <span class="keywordflow">in</span> self:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            entries.append(entry)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> entries</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+</div>
+<div class="foldopen" id="foldopen00085" data-start="" data-end="">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a854ad95c6ed069885b16ddc63c952e42">   85</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a854ad95c6ed069885b16ddc63c952e42">sanity_check</a>(self, entry_checker=None):</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="stringliteral">&quot;&quot;&quot;Run sanity check and print results as a table&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1lvgl_1_1formatter.html">lvglgdb.lvgl.formatter</a> <span class="keyword">import</span> print_table</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            iterator = iter(self)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">except</span> gdb.GdbError <span class="keyword">as</span> unsupported:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            iterator = ()</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            errors = [str(unsupported)]</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            errors = iterator.sanity_check(entry_checker)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">if</span> errors:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            rows = [{<span class="stringliteral">&quot;status&quot;</span>: <span class="stringliteral">&quot;FAIL&quot;</span>, <span class="stringliteral">&quot;detail&quot;</span>: e} <span class="keywordflow">for</span> e <span class="keywordflow">in</span> errors]</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            rows = [{<span class="stringliteral">&quot;status&quot;</span>: <span class="stringliteral">&quot;PASS&quot;</span>, <span class="stringliteral">&quot;detail&quot;</span>: f<span class="stringliteral">&quot;all {len(iterator)} entries OK&quot;</span>}]</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        print_table(rows, [<span class="stringliteral">&quot;status&quot;</span>, <span class="stringliteral">&quot;detail&quot;</span>],</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    <span class="keyword">lambda</span> i, d: [d[<span class="stringliteral">&quot;status&quot;</span>], d[<span class="stringliteral">&quot;detail&quot;</span>]], <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    col_align={<span class="stringliteral">&quot;detail&quot;</span>: <span class="stringliteral">&quot;l&quot;</span>})</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> errors</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html">lvglgdb.lvgl.misc.lv_cache.LVCache</a></div><div class="ttdef"><b>Definition</b> <a href="#l00008">lv_cache.py:8</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a13ee0601a62dab9e1016d5f8fd77f9d9"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a13ee0601a62dab9e1016d5f8fd77f9d9">lvglgdb.lvgl.misc.lv_cache.LVCache.max_size</a></div><div class="ttdeci">max_size</div><div class="ttdef"><b>Definition</b> <a href="#l00061">lv_cache.py:61</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a3cc5beb95fb74f4be44c04f84ed66a82"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3cc5beb95fb74f4be44c04f84ed66a82">lvglgdb.lvgl.misc.lv_cache.LVCache.name</a></div><div class="ttdeci">str name(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">lv_cache.py:35</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a3d1374cfb30c05eeeb049c2197b5a824"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a3d1374cfb30c05eeeb049c2197b5a824">lvglgdb.lvgl.misc.lv_cache.LVCache.__iter__</a></div><div class="ttdeci">__iter__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00069">lv_cache.py:69</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a55ffaa158268a0b623efad6768c15185"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a55ffaa158268a0b623efad6768c15185">lvglgdb.lvgl.misc.lv_cache.LVCache._DISPLAY_SPEC</a></div><div class="ttdeci">dict _DISPLAY_SPEC</div><div class="ttdef"><b>Definition</b> <a href="#l00011">lv_cache.py:11</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a854ad95c6ed069885b16ddc63c952e42"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a854ad95c6ed069885b16ddc63c952e42">lvglgdb.lvgl.misc.lv_cache.LVCache.sanity_check</a></div><div class="ttdeci">sanity_check(self, entry_checker=None)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">lv_cache.py:85</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_a8c2ceee8cb58f8946db5d36f370c7424"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#a8c2ceee8cb58f8946db5d36f370c7424">lvglgdb.lvgl.misc.lv_cache.LVCache.datatype</a></div><div class="ttdeci">tuple datatype</div><div class="ttdef"><b>Definition</b> <a href="#l00028">lv_cache.py:28</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_aa235e97cbb205f4ec3dee23d887a24cd"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa235e97cbb205f4ec3dee23d887a24cd">lvglgdb.lvgl.misc.lv_cache.LVCache.__init__</a></div><div class="ttdeci">__init__(self, ValueInput cache, Union[gdb.Type, str] datatype)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">lv_cache.py:26</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_aa3d6656320f1a7278c0c2c7fdf07617c"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#aa3d6656320f1a7278c0c2c7fdf07617c">lvglgdb.lvgl.misc.lv_cache.LVCache.size</a></div><div class="ttdeci">size</div><div class="ttdef"><b>Definition</b> <a href="#l00067">lv_cache.py:67</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_abc732e55bd10e89870de5654309ee3ed"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#abc732e55bd10e89870de5654309ee3ed">lvglgdb.lvgl.misc.lv_cache.LVCache.get_usage_percentage</a></div><div class="ttdeci">get_usage_percentage(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00063">lv_cache.py:63</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_ac0f2ca0f86f99878588482b3b0ca92fa"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ac0f2ca0f86f99878588482b3b0ca92fa">lvglgdb.lvgl.misc.lv_cache.LVCache.items</a></div><div class="ttdeci">items(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00078">lv_cache.py:78</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache_html_ae7358f0c64e3822a93a51ee6c6cf8098"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache_1_1_l_v_cache.html#ae7358f0c64e3822a93a51ee6c6cf8098">lvglgdb.lvgl.misc.lv_cache.LVCache.is_enabled</a></div><div class="ttdeci">is_enabled(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">lv_cache.py:59</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1snapshot_1_1_snapshot_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1snapshot_1_1_snapshot.html">lvglgdb.lvgl.snapshot.Snapshot</a></div><div class="ttdef"><b>Definition</b> <a href="snapshot_8py_source.html#l00005">snapshot.py:5</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html">lvglgdb.value.Value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00006">value.py:6</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a2bd8036f6ee917ec7f982f925358d395"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a2bd8036f6ee917ec7f982f925358d395">lvglgdb.value.Value.string</a></div><div class="ttdeci">str string(self, *args, fallback=None, **kwargs)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00228">value.py:228</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a87fbc98c449678885f5dba9600e1331c"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a87fbc98c449678885f5dba9600e1331c">lvglgdb.value.Value.super_value</a></div><div class="ttdeci">&quot;Value&quot; super_value(self, str attr)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00213">value.py:213</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1formatter_html"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1formatter.html">lvglgdb.lvgl.formatter</a></div><div class="ttdef"><b>Definition</b> <a href="formatter_8py_source.html#l00001">formatter.py:1</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1snapshot_html"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1snapshot.html">lvglgdb.lvgl.snapshot</a></div><div class="ttdef"><b>Definition</b> <a href="snapshot_8py_source.html#l00001">snapshot.py:1</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1value_html"><div class="ttname"><a href="namespacelvglgdb_1_1value.html">lvglgdb.value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00001">value.py:1</a></div></div>
+<div class="ttc" id="apointer_8h_html_aae1f8d263916ad71bd415381591549c0"><div class="ttname"><a href="pointer_8h.html#aae1f8d263916ad71bd415381591549c0">pointer</a></div><div class="ttdeci">const GenericPointer&lt; typename T::ValueType &gt; &amp; pointer</div><div class="ttdef"><b>Definition</b> <a href="pointer_8h_source.html#l01237">pointer.h:1237</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_f8ea00a3c574e198478017a91384b346.html">misc</a></li><li class="navelem"><a href="lvgl_2misc_2lv__cache_8py.html">lv_cache.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

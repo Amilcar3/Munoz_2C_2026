@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/misc/lv_event.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__event_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_event.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__event_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__event.html">    1</a></span><span class="keyword">import</span> gdb</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1value.html">lvglgdb.value</a> <span class="keyword">import</span> Value, ValueInput</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">from</span> .lv_event_consts <span class="keyword">import</span> EVENT_CODE_NAMES</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">from</span> .lv_array <span class="keyword">import</span> LVArray</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="" data-end="">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__event.html#ab9c5c5e9b6c91b91bdea51f519f7e245">    8</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__event.html#ab9c5c5e9b6c91b91bdea51f519f7e245">event_code_name</a>(code: int) -&gt; str:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="stringliteral">&quot;&quot;&quot;Map event code integer to human-readable name.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordflow">return</span> EVENT_CODE_NAMES.get(code, f<span class="stringliteral">&quot;UNKNOWN({code})&quot;</span>)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+</div>
+<div class="foldopen" id="foldopen00013" data-start="" data-end="">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html">LVEvent</a>(<a class="code hl_class" href="classlvglgdb_1_1value_1_1_value.html">Value</a>):</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL event wrapper&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="stringliteral"></span> </div>
+<div class="foldopen" id="foldopen00016" data-start="" data-end="">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#ae5e1c7bc5c04cd271813892ce25a198f">   16</a></span><span class="stringliteral">    def __init__(self, event: ValueInput):</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="stringliteral">        super().__init__(Value.normalize(event, &quot;lv_event_t&quot;))</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00020" data-start="" data-end="">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#af24ac99003ea9aa200a3657cd8a23ca7">   20</a></span><span class="stringliteral">    def code(self) -&gt; int:</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="stringliteral">        return int(self.super_value(&quot;code&quot;))</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00024" data-start="" data-end="">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#ad6e481b129686b41df30ea478a981df7">   24</a></span><span class="stringliteral">    def code_name(self) -&gt; str:</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#afb9ed1b8a27eb20854efe6e23e297683">   25</a></span><span class="stringliteral">        return event_code_name(self.code)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00028" data-start="" data-end="">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#a953c037f168119c4576d494a086b8274">   28</a></span><span class="stringliteral">    def current_target(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">        return self.super_value(&quot;current_target&quot;)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00032" data-start="" data-end="">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#ab234053fcd5e60d00bef9eca852dd9d5">   32</a></span><span class="stringliteral">    def original_target(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">        return self.super_value(&quot;original_target&quot;)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00036" data-start="" data-end="">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#a32735341c37e5908c95a4ca1b787533b">   36</a></span><span class="stringliteral">    def param(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="stringliteral">        return self.super_value(&quot;param&quot;)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00040" data-start="" data-end="">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#a710aab5a5957ffbc1eac96f827a4cf3e">   40</a></span><span class="stringliteral">    def prev(self):</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="stringliteral">        p = self.super_value(&quot;prev&quot;)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="stringliteral">        return LVEvent(p) if int(p) else None</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00045" data-start="" data-end="">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#ac965c9986217806cf762c70994f13993">   45</a></span><span class="stringliteral">    def deleted(self) -&gt; bool:</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="stringliteral">        return bool(int(self.super_value(&quot;deleted&quot;)))</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00049" data-start="" data-end="">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html#a14ca70153b75003feba92769af761623">   49</a></span><span class="stringliteral">    def stop_processing(self) -&gt; bool:</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="stringliteral">        return bool(int(self.super_value(&quot;stop_processing&quot;)))</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="stringliteral"></span> </div>
+</div>
+</div>
+<div class="foldopen" id="foldopen00054" data-start="" data-end="">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html">   54</a></span><span class="stringliteral">class LVEventDsc(Value):</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="stringliteral">    &quot;&quot;&quot;</span>LVGL event descriptor wrappe<span class="stringliteral">r&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="stringliteral"></span> </div>
+<div class="foldopen" id="foldopen00057" data-start="" data-end="">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#ad4c6cd2bc9099cd78f2d6bd5a04ba75c">   57</a></span><span class="stringliteral">    def __init__(self, dsc: ValueInput):</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="stringliteral">        super().__init__(Value.normalize(dsc, &quot;lv_event_dsc_t&quot;))</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00061" data-start="" data-end="">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#a05979700b4e9a4431bdee4f99dcbee5f">   61</a></span><span class="stringliteral">    def cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral">        return self.super_value(&quot;cb&quot;)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00065" data-start="" data-end="">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#a6654f37d5913529ade27452705359fb5">   65</a></span><span class="stringliteral">    def user_data(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="stringliteral">        return self.super_value(&quot;user_data&quot;)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00069" data-start="" data-end="">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#abdf2165a0352c618a72e511d88e6525b">   69</a></span><span class="stringliteral">    def filter(self) -&gt; int:</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="stringliteral">        return int(self.super_value(&quot;filter&quot;))</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00073" data-start="" data-end="">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#a7af187271187a9844d7c84367c65ef40">   73</a></span><span class="stringliteral">    def filter_code(self) -&gt; int:</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="stringliteral">        &quot;&quot;&quot;</span>Event code with flag bits masked off.&quot;&quot;&quot;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        return self.filter &amp; ~(0x8000 | 0x10000)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    @property</div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#af274ecac2908a426e1784781327a755f">   78</a></span>    def filter_name(self) -&gt; str:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#ab6b9211e436b516ed5ffbec173512915">   79</a></span>        return event_code_name(self.filter_code)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    @property</div>
+<div class="foldopen" id="foldopen00082" data-start="" data-end="">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#a0d07749f2283a7ff94d0ae859e0063e0">   82</a></span>    def is_preprocess(self) -&gt; bool:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        return bool(self.filter &amp; 0x8000)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    @property</div>
+<div class="foldopen" id="foldopen00086" data-start="" data-end="">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#abe12b54bea3daf5fe32e7ca48e37e5f0">   86</a></span>    def is_marked_deleting(self) -&gt; bool:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        return bool(self.filter &amp; 0x10000)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+</div>
+<div class="foldopen" id="foldopen00089" data-start="" data-end="">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#a221f9c63ad28edd91c065b215d15fc8a">   89</a></span>    def snapshot(self):</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        from lvglgdb.lvgl.snapshot import Snapshot</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        from lvglgdb.lvgl.data_utils import fmt_cb</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        flags = []</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#aded746b326b81cd8859822f502edcff9">   94</a></span>        if self.is_preprocess:</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            flags.append(&quot;PRE&quot;)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_dsc.html#ae74b4f0711103bbfce11309f38476ec9">   96</a></span>        if self.is_marked_deleting:</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            flags.append(&quot;DEL&quot;)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        d = {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            &quot;cb&quot;: fmt_cb(self.cb),</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            &quot;filter&quot;: self.filter_code,</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            &quot;filter_name&quot;: self.filter_name,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            &quot;is_preprocess&quot;: self.is_preprocess,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            &quot;is_marked_deleting&quot;: self.is_marked_deleting,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            &quot;flags_str&quot;: &quot;,&quot;.join(flags) or &quot;-&quot;,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            &quot;user_data&quot;: str(self.user_data),</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        return Snapshot(d, source=self, display_spec=LVEventList._DISPLAY_SPEC)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+</div>
+</div>
+<div class="foldopen" id="foldopen00110" data-start="" data-end="">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html">  110</a></span>class LVEventList(Value):</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    &quot;&quot;&quot;LVGL event list wrapper (lv_event_list_t contains lv_array_t)&quot;&quot;&quot;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a55ffaa158268a0b623efad6768c15185">  113</a></span>    _DISPLAY_SPEC = {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        &quot;info&quot;: [</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            (&quot;callback&quot;, &quot;cb&quot;),</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            (&quot;filter&quot;, &quot;filter_name&quot;),</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            (&quot;flags&quot;, lambda d: d.get(&quot;flags_str&quot;, &quot;-&quot;)),</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            (&quot;user_data&quot;, &quot;user_data&quot;),</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        ],</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        &quot;table&quot;: [],</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        &quot;empty_msg&quot;: &quot;No event descriptors.&quot;,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="" data-end="">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a32ac13d772e987b23cae0804197c506f">  124</a></span>    def __init__(self, event_list: ValueInput):</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        super().__init__(Value.normalize(event_list, &quot;lv_event_list_t&quot;))</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    @property</div>
+<div class="foldopen" id="foldopen00128" data-start="" data-end="">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a8937db61cdd77063e1937b63d78943da">  128</a></span>    def array(self) -&gt; LVArray:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        &quot;&quot;&quot;Array stores lv_event_dsc_t* pointers (not inline structs).&quot;&quot;&quot;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        dsc_ptr_type = gdb.lookup_type(&quot;lv_event_dsc_t&quot;).pointer()</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        return LVArray(self.super_value(&quot;array&quot;), dsc_ptr_type)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    @property</div>
+<div class="foldopen" id="foldopen00134" data-start="" data-end="">
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#ae408de32d2601239d6856ad69e3eaecf">  134</a></span>    def is_traversing(self) -&gt; bool:</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        return bool(int(self.super_value(&quot;is_traversing&quot;)))</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    @property</div>
+<div class="foldopen" id="foldopen00138" data-start="" data-end="">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a052e58ca4fef65e7457a15ec91f137d3">  138</a></span>    def has_marked_deleting(self) -&gt; bool:</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        return bool(int(self.super_value(&quot;has_marked_deleting&quot;)))</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+</div>
+<div class="foldopen" id="foldopen00141" data-start="" data-end="">
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a3d1374cfb30c05eeeb049c2197b5a824">  141</a></span>    def __iter__(self):</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        &quot;&quot;&quot;Yield LVEventDsc for each pointer stored in the array.&quot;&quot;&quot;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#a41ab4b8b4e6b05e8489555b1bbc7f845">  143</a></span>        for dsc_ptr in self.array:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            yield LVEventDsc(dsc_ptr)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+</div>
+<div class="foldopen" id="foldopen00146" data-start="" data-end="">
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#afd64a095585f64cbe93bdc3b13eba041">  146</a></span>    def __len__(self) -&gt; int:</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        return len(self.array)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    @staticmethod</div>
+<div class="foldopen" id="foldopen00150" data-start="" data-end="">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_list.html#aa5326161f09e3d7985d3c1598e057fb1">  150</a></span>    def snapshots(event_dscs):</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        return [dsc.snapshot() for dsc in event_dscs]</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__event_1_1_l_v_event.html">lvglgdb.lvgl.misc.lv_event.LVEvent</a></div><div class="ttdef"><b>Definition</b> <a href="#l00013">lv_event.py:13</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html">lvglgdb.value.Value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00006">value.py:6</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1misc_1_1lv__event_html_ab9c5c5e9b6c91b91bdea51f519f7e245"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__event.html#ab9c5c5e9b6c91b91bdea51f519f7e245">lvglgdb.lvgl.misc.lv_event.event_code_name</a></div><div class="ttdeci">str event_code_name(int code)</div><div class="ttdef"><b>Definition</b> <a href="#l00008">lv_event.py:8</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1value_html"><div class="ttname"><a href="namespacelvglgdb_1_1value.html">lvglgdb.value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00001">value.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_f8ea00a3c574e198478017a91384b346.html">misc</a></li><li class="navelem"><a href="lv__event_8py.html">lv_event.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

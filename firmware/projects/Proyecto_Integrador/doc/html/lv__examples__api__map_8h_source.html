@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/examples/lv_examples_api_map.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__examples__api__map_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_examples_api_map.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__examples__api__map_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef LV_EXAMPLES_API_MAP_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define LV_EXAMPLES_API_MAP_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> * GLOBAL PROTOTYPES</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/* get_started */</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3800af8579bbe0f6865a9fab620bac35">   40</a></span><span class="preprocessor">#define lv_example_get_started_1       lv_example_get_started_hello_world</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7c43e8bbc52b0e1ecb142bca1312f028">   41</a></span><span class="preprocessor">#define lv_example_get_started_2       lv_example_get_started_button</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a74bd1ef2ed6326eb772103579100f620">   42</a></span><span class="preprocessor">#define lv_example_get_started_3       lv_example_get_started_slider</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8aae7dd5264362e842202bd9b7dbc362">   43</a></span><span class="preprocessor">#define lv_example_get_started_4       lv_example_get_started_styles</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">/* animimg */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1fddc5099dce404794ce2a19ad333928">   46</a></span><span class="preprocessor">#define lv_example_animimg_1       lv_example_animimg_play</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">/* arc */</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a30c2b22ad33dd4c887695591e1c0e884">   49</a></span><span class="preprocessor">#define lv_example_arc_1           lv_example_arc_bind_value</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a5a1c732e427cdc81dc45d9bf2735924d">   50</a></span><span class="preprocessor">#define lv_example_arc_2           lv_example_arc_change_rate</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac2cbf3f4843ae54867dc2f720fa6ef93">   51</a></span><span class="preprocessor">#define lv_example_arc_3           lv_example_arc_event</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">/* arclabel */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab7d156ade6920f15356b6fa47fc805d7">   54</a></span><span class="preprocessor">#define lv_example_arclabel_1      lv_example_arclabel_curved_text</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">/* bar */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#acfaa00c46e73b8e44f23b26f306f0d13">   57</a></span><span class="preprocessor">#define lv_example_bar_1           lv_example_bar_bind_value</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae1e9972829755cb14a7533d7d97664ef">   58</a></span><span class="preprocessor">#define lv_example_bar_2           lv_example_bar_img_indicator</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a79b8da026d665aa0c549e68bf278aead">   59</a></span><span class="preprocessor">#define lv_example_bar_3           lv_example_bar_modes</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a796018598189341793bf78be9df39017">   60</a></span><span class="preprocessor">#define lv_example_bar_4           lv_example_bar_orientation</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3c6db8c5440a885088271eaf0f99fd15">   61</a></span><span class="preprocessor">#define lv_example_bar_5           lv_example_bar_styling</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a10df59d070b3c4d6c639e50532b5716b">   62</a></span><span class="preprocessor">#define lv_example_bar_6           lv_example_bar_value_range</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8d851c5666f7a1972b4aca2274631500">   63</a></span><span class="preprocessor">#define lv_example_bar_7           lv_example_bar_bind_value</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">/* button */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#afea466ae7326787d97f7f592e32a8004">   66</a></span><span class="preprocessor">#define lv_example_button_1        lv_example_button_basic</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8dfd4d6e9268fa8e50eaa9719e81e357">   67</a></span><span class="preprocessor">#define lv_example_button_2        lv_example_button_event</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1262493f64d83ad755b932f07ea9c7b2">   68</a></span><span class="preprocessor">#define lv_example_button_3        lv_example_button_states</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment">/* buttonmatrix */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a60a965ea6cb0319e2bc596dddd21100b">   71</a></span><span class="preprocessor">#define lv_example_buttonmatrix_1  lv_example_buttonmatrix_button_ctrl</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a19adafe89d4dea9727ec85ad56302ea6">   72</a></span><span class="preprocessor">#define lv_example_buttonmatrix_2  lv_example_buttonmatrix_button_width</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3036c884228c0b3206439e089c0cfaa1">   73</a></span><span class="preprocessor">#define lv_example_buttonmatrix_3  lv_example_buttonmatrix_event</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">/* calendar */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a4db75d1f416b7c9b2bda533515103799">   76</a></span><span class="preprocessor">#define lv_example_calendar_1      lv_example_calendar_basic</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1651fb078c99adb39dcfb3a15247de7b">   77</a></span><span class="preprocessor">#define lv_example_calendar_2      lv_example_calendar_chinese</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">/* canvas */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae5fd792e32d6640b9e566030ae29dfcd">   80</a></span><span class="preprocessor">#define lv_example_canvas_1        lv_example_canvas_alpha</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7c2386fdf8fd695b8763aa2f981916ca">   81</a></span><span class="preprocessor">#define lv_example_canvas_2        lv_example_canvas_arc</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae8f5642fc914dcd4865800286a830a3d">   82</a></span><span class="preprocessor">#define lv_example_canvas_3        lv_example_canvas_blur</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a491e6f26efbf6785f5b119cf5714f2c5">   83</a></span><span class="preprocessor">#define lv_example_canvas_4        lv_example_canvas_image</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae0780127f948e6e256baec9e99d87c9a">   84</a></span><span class="preprocessor">#define lv_example_canvas_5        lv_example_canvas_label</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aedc85840e4d15ddc118accf43fa2fcfb">   85</a></span><span class="preprocessor">#define lv_example_canvas_6        lv_example_canvas_line</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aeea6cefb8745ef25eecc862f249a7b5f">   86</a></span><span class="preprocessor">#define lv_example_canvas_7        lv_example_canvas_rectangle</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7325f161711cfe2c1947458aaea8ac17">   87</a></span><span class="preprocessor">#define lv_example_canvas_8        lv_example_canvas_rotate</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8da8c34847c2c986279662e140d5590c">   88</a></span><span class="preprocessor">#define lv_example_canvas_9        lv_example_canvas_triangle</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a6c8143617001e175cb126625d66bfb0a">   89</a></span><span class="preprocessor">#define lv_example_canvas_10       lv_example_canvas_vector</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3298184a770841d1c990c11dce4c21b3">   90</a></span><span class="preprocessor">#define lv_example_canvas_11       lv_example_canvas_wave_text</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a591cda262a56367709986682c8af6491">   91</a></span><span class="preprocessor">#define lv_example_canvas_12       lv_example_canvas_windstorm_text</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">/* chart */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a07618cd5ed7aca645945f4ab063f171c">   94</a></span><span class="preprocessor">#define lv_example_chart_1         lv_example_chart_area_gradient</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a77f6c918998402b6105cb28601212561">   95</a></span><span class="preprocessor">#define lv_example_chart_2         lv_example_chart_circular_gap</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a9ae4e0f53818d4da94843beb5ec30266">   96</a></span><span class="preprocessor">#define lv_example_chart_3         lv_example_chart_cursor</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a884ad1e838f8ee8135243df3a863e73c">   97</a></span><span class="preprocessor">#define lv_example_chart_4         lv_example_chart_pressed_tooltip</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a34f7de1b5d6b65d45cbad87ae27492c7">   98</a></span><span class="preprocessor">#define lv_example_chart_5         lv_example_chart_recolor_bars</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aefa6a15db661b09e12f48f0c03df7319">   99</a></span><span class="preprocessor">#define lv_example_chart_6         lv_example_chart_scatter</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad9a92fcf65294b88139f62a944037f22">  100</a></span><span class="preprocessor">#define lv_example_chart_7         lv_example_chart_scrollable</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a17478df0cc95257172d9b07f39f06ff9">  101</a></span><span class="preprocessor">#define lv_example_chart_8         lv_example_chart_series</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">/* checkbox */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad7a605d72d2514f63c319a6be201a46e">  104</a></span><span class="preprocessor">#define lv_example_checkbox_1      lv_example_checkbox_bind_checked</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a4de808bad097dd08042d31913011e54d">  105</a></span><span class="preprocessor">#define lv_example_checkbox_2      lv_example_checkbox_event</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">/* dropdown */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aea7e2d5847d93b0a3528a921ec275afa">  108</a></span><span class="preprocessor">#define lv_example_dropdown_1      lv_example_dropdown_bind_value</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1da01c230571b4dfd240bef6d95114f0">  109</a></span><span class="preprocessor">#define lv_example_dropdown_2      lv_example_dropdown_direction</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab496f6acc00981dac18ab481513ff37b">  110</a></span><span class="preprocessor">#define lv_example_dropdown_3      lv_example_dropdown_event</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment">/* flex */</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a20d167d1a9daea2148554801133eec7e">  113</a></span><span class="preprocessor">#define lv_example_flex_1          lv_example_flex_align</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad2e294f4c3c67f5da0ad1dd2101ed8b4">  114</a></span><span class="preprocessor">#define lv_example_flex_2          lv_example_flex_flow</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a20644f5c1c44495e5a8f10c0d7a1e1bc">  115</a></span><span class="preprocessor">#define lv_example_flex_3          lv_example_flex_grow</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad473d879ec0018f1417a34373a5dafe0">  116</a></span><span class="preprocessor">#define lv_example_flex_4          lv_example_flex_ignore_layout</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a2c6b6c898f5656bec4c55ab7f60fc172">  117</a></span><span class="preprocessor">#define lv_example_flex_5          lv_example_flex_internal_padding</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa4f3047074ec4d4824c6e7917553224a">  118</a></span><span class="preprocessor">#define lv_example_flex_6          lv_example_flex_new_track</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">/* gif */</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#af7296661307a130d1e0ce193b8d658fe">  121</a></span><span class="preprocessor">#define lv_example_gif_1           lv_example_gif_src</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">/* grid */</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa79273fbbe7fc88623ec218c65a4288d">  124</a></span><span class="preprocessor">#define lv_example_grid_1          lv_example_grid_align</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a71e200839d72e067743de58b8bd67c51">  125</a></span><span class="preprocessor">#define lv_example_grid_2          lv_example_grid_cell_span</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a30c7c12f5cc8279af4aa26a912e7b17a">  126</a></span><span class="preprocessor">#define lv_example_grid_3          lv_example_grid_descriptors</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a46db7eadad01044da82bdda601ef3c07">  127</a></span><span class="preprocessor">#define lv_example_grid_4          lv_example_grid_fr</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a786f9cb82ad38afdb0921b3e3d76d421">  128</a></span><span class="preprocessor">#define lv_example_grid_5          lv_example_grid_ignore_layout</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#af7b38af17d1951dd2d706f87e9685737">  129</a></span><span class="preprocessor">#define lv_example_grid_6          lv_example_grid_internal_padding</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment">/* image */</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aaf4e6a55faa0e7782540c7e3de8e4f92">  132</a></span><span class="preprocessor">#define lv_example_image_1         lv_example_image_inner_align</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a0e8223219768fd6760ea7c6de6017ce1">  133</a></span><span class="preprocessor">#define lv_example_image_2         lv_example_image_recolor</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a23357f1e6ced810d44f1f76639a660cf">  134</a></span><span class="preprocessor">#define lv_example_image_3         lv_example_image_src</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aff7d3185d6229a7c0ad7f22004522ebc">  135</a></span><span class="preprocessor">#define lv_example_image_4         lv_example_image_svg</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a521ea65c7143c890284733556dc6df67">  136</a></span><span class="preprocessor">#define lv_example_image_5         lv_example_image_transformations</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">/* imagebutton */</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aadccf55988f50e67713692c9a4ceac81">  139</a></span><span class="preprocessor">#define lv_example_imagebutton_1   lv_example_imagebutton_transition</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">/* keyboard */</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#acc610af502d2d2edd1b3de7034d39919">  142</a></span><span class="preprocessor">#define lv_example_keyboard_1      lv_example_keyboard_custom_draw</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a90f14207703c4f3478c0a06cafc3c701">  143</a></span><span class="preprocessor">#define lv_example_keyboard_2      lv_example_keyboard_custom_map</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#abc4e1be4971779528b546010209a2a0b">  144</a></span><span class="preprocessor">#define lv_example_keyboard_3      lv_example_keyboard_modes</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment">/* label */</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a0d822baa495237bcc888be408f338030">  147</a></span><span class="preprocessor">#define lv_example_label_1         lv_example_label_bind_text</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#afcb4cd27504cb4b71616e8a026ff680c">  148</a></span><span class="preprocessor">#define lv_example_label_2         lv_example_label_long_mode</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7abb986bc056c9614a06644903802d1c">  149</a></span><span class="preprocessor">#define lv_example_label_3         lv_example_label_recolor</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a16e3ece6f10d2b9e3a14bfd656f1dd6a">  150</a></span><span class="preprocessor">#define lv_example_label_4         lv_example_label_set_text_newline</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a6f5ba06bdb86af6ad41171722e5f9e08">  151</a></span><span class="preprocessor">#define lv_example_label_5         lv_example_label_styling</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab71af08b9f3df82c843f59c28827ec5d">  152</a></span><span class="preprocessor">#define lv_example_label_6         lv_example_label_text_align</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7774eee17ad9042c8bf28d6370704b83">  153</a></span><span class="preprocessor">#define lv_example_label_7         lv_example_label_translation</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">/* led */</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a4b2fbd1801c097eab1c0f848fe5a5706">  156</a></span><span class="preprocessor">#define lv_example_led_1           lv_example_led_brightness</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment">/* line */</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac961a7dee72ca322c9e9dde956a3315e">  159</a></span><span class="preprocessor">#define lv_example_line_1          lv_example_line_points</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">/* list */</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a00d1cfee4da74f17dd8b65821f111d3f">  162</a></span><span class="preprocessor">#define lv_example_list_1          lv_example_list_reorder</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a626d326a2e563fe2eb76b70e8920ed4e">  163</a></span><span class="preprocessor">#define lv_example_list_2          lv_example_list_sections</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">/* lottie */</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a977652b88c64db3abeb8b92a2c4808ce">  166</a></span><span class="preprocessor">#define lv_example_lottie_1        lv_example_lottie_from_data</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa6149eb8cfb936b749adc855434902f5">  167</a></span><span class="preprocessor">#define lv_example_lottie_2        lv_example_lottie_from_file</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment">/* menu */</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a74bfac44f623fa7ba07a9b08ac5f721b">  170</a></span><span class="preprocessor">#define lv_example_menu_1          lv_example_menu_custom_back_button</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac3705ced2ffc51ed6417e04d3938d750">  171</a></span><span class="preprocessor">#define lv_example_menu_2          lv_example_menu_floating_button</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a868ae32dedf3aadbbf59d4400c7f129d">  172</a></span><span class="preprocessor">#define lv_example_menu_3          lv_example_menu_root_back_button</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#abc63abc5e1eb69640bc17cce59b677d7">  173</a></span><span class="preprocessor">#define lv_example_menu_4          lv_example_menu_sidebar</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a76613010dd6b2cfe171dc3f0bf40116c">  174</a></span><span class="preprocessor">#define lv_example_menu_5          lv_example_menu_sub_page</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">/* msgbox */</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa4aec705b3433f87211e82c70ad5513a">  177</a></span><span class="preprocessor">#define lv_example_msgbox_1        lv_example_msgbox_blur</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#acb8336fa962dd24bce09d74c692f5a50">  178</a></span><span class="preprocessor">#define lv_example_msgbox_2        lv_example_msgbox_modal</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab0eb82e261800447587cd5af98454714">  179</a></span><span class="preprocessor">#define lv_example_msgbox_3        lv_example_msgbox_settings</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">/* obj */</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a355bd990618d204264167176c8ee67e7">  182</a></span><span class="preprocessor">#define lv_example_obj_1           lv_example_obj_bind_style</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aabcfd6016a5c518085162cf1afe129cd">  183</a></span><span class="preprocessor">#define lv_example_obj_2           lv_example_obj_draggable</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3dbc0b50cd5f745a40eb7ec1ea697e64">  184</a></span><span class="preprocessor">#define lv_example_obj_3           lv_example_obj_transform</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">/* qrcode */</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7e5b4096ee07615a8d90a5ccc409a41d">  187</a></span><span class="preprocessor">#define lv_example_qrcode_1        lv_example_qrcode_basic</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">/* roller */</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#af699f0a9ba386f11760d50541e1df12c">  190</a></span><span class="preprocessor">#define lv_example_roller_1        lv_example_roller_bind_value</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac92fab7bcb59830f42d462667072a111">  191</a></span><span class="preprocessor">#define lv_example_roller_2        lv_example_roller_event</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a96133db396962874239dec2d1051a63b">  192</a></span><span class="preprocessor">#define lv_example_roller_3        lv_example_roller_fade_mask</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">/* scale */</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7306e000fd12295a2aeee8d416a17af0">  195</a></span><span class="preprocessor">#define lv_example_scale_1         lv_example_scale_bind_section</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae2108e2688dc352c0b8da6cffa225fe9">  196</a></span><span class="preprocessor">#define lv_example_scale_2         lv_example_scale_compass</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab836bae7aef4e99495cc2587ed2c69fb">  197</a></span><span class="preprocessor">#define lv_example_scale_3         lv_example_scale_heart_rate</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a2caf9813e2af8499594a52f9e6e6c9b2">  198</a></span><span class="preprocessor">#define lv_example_scale_4         lv_example_scale_label_recolor</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae273661f4b7eabd9e4f2cb3d7f95aa71">  199</a></span><span class="preprocessor">#define lv_example_scale_5         lv_example_scale_modes</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a4aa799c7049c6774edb919f314b11a03">  200</a></span><span class="preprocessor">#define lv_example_scale_6         lv_example_scale_needles</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a18b3dadbcb384ed79c9e11240ba017b5">  201</a></span><span class="preprocessor">#define lv_example_scale_7         lv_example_scale_range</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aabe7bccc874a905349474a2c932e41d0">  202</a></span><span class="preprocessor">#define lv_example_scale_8         lv_example_scale_styling</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a888b16904b96b7e779cfb7cf89ff6e94">  203</a></span><span class="preprocessor">#define lv_example_scale_9         lv_example_scale_sunset_sunrise</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7f476edb828705de452f107ece1bcb18">  204</a></span><span class="preprocessor">#define lv_example_scale_10        lv_example_scale_ticks</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae55b8b4326eefedc03e47edea3690424">  205</a></span><span class="preprocessor">#define lv_example_scale_11        lv_example_scale_bind_section</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="comment">/* scroll */</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a814b2bc94fedfca756285938945847d8">  208</a></span><span class="preprocessor">#define lv_example_scroll_1        lv_example_scroll_chain</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a38e64987bc37de7639b671f1541e057e">  209</a></span><span class="preprocessor">#define lv_example_scroll_2        lv_example_scroll_circular</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a689788b6a6c49f36d1a6cde46b0ac7d9">  210</a></span><span class="preprocessor">#define lv_example_scroll_3        lv_example_scroll_events</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad8876b5de284e9b6673f9c7a29ce4be1">  211</a></span><span class="preprocessor">#define lv_example_scroll_4        lv_example_scroll_floating</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac96cb5d16b3dc9d18d80f8c6bbaf2fa9">  212</a></span><span class="preprocessor">#define lv_example_scroll_5        lv_example_scroll_infinite</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a267400c4a4b500eccac2296978e85e20">  213</a></span><span class="preprocessor">#define lv_example_scroll_6        lv_example_scroll_one</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a6d6394860e2ba3779f8dca9c8ddb65b9">  214</a></span><span class="preprocessor">#define lv_example_scroll_7        lv_example_scroll_overview</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a5f0b373ceba387d0f6dc5f6a27893604">  215</a></span><span class="preprocessor">#define lv_example_scroll_8        lv_example_scroll_properties</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae0b8e34a767cb0d0a1fd4cd8746f5952">  216</a></span><span class="preprocessor">#define lv_example_scroll_9        lv_example_scroll_rtl</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment">/* slider */</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a26593c4426c6c99101060593f46b4a91">  219</a></span><span class="preprocessor">#define lv_example_slider_1        lv_example_slider_bind_state</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a9340792678828ea1f3fc6ff7edc5e59b">  220</a></span><span class="preprocessor">#define lv_example_slider_2        lv_example_slider_bind_value</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a259dfa0a98acf349ee57ac59560e3f55">  221</a></span><span class="preprocessor">#define lv_example_slider_3        lv_example_slider_event</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a3f5bc542944dd2dd79440b461e006dc2">  222</a></span><span class="preprocessor">#define lv_example_slider_4        lv_example_slider_img_indicator</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">/* span */</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1e9795a913af845e22e93cc1e00be7d9">  225</a></span><span class="preprocessor">#define lv_example_span_1          lv_example_span_hittest</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">/* spinbox */</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a5dc5a7f39ca6264f48842d7852ee30b7">  228</a></span><span class="preprocessor">#define lv_example_spinbox_1       lv_example_spinbox_bind_value</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment">/* spinner */</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aad521ee14d16d2c0cf9be8d03d2b1ff7">  231</a></span><span class="preprocessor">#define lv_example_spinner_1       lv_example_spinner_basic</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">/* styles */</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8f83b019b2568841ac53bb95bfce517f">  234</a></span><span class="preprocessor">#define lv_example_style_1         lv_example_style_arc</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a625e01329cb32910272592af871a09dd">  235</a></span><span class="preprocessor">#define lv_example_style_2         lv_example_style_background</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa3a592944e7519b02b8e7680181396a9">  236</a></span><span class="preprocessor">#define lv_example_style_3         lv_example_style_blur</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a2b582e6cafad00c716bb52c122eb4cfe">  237</a></span><span class="preprocessor">#define lv_example_style_4         lv_example_style_border</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a9572198ba21f20c9d09d59d24df43bb9">  238</a></span><span class="preprocessor">#define lv_example_style_5         lv_example_style_drop_shadow</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a805618b1595383f178f870acd4276c9a">  239</a></span><span class="preprocessor">#define lv_example_style_6         lv_example_style_gradient_buttons</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8149e9b62fe34e99fa2783565f79dc7a">  240</a></span><span class="preprocessor">#define lv_example_style_7         lv_example_style_gradient_conic</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a1153a4a32d5b9ce979ce5d709c065b53">  241</a></span><span class="preprocessor">#define lv_example_style_8         lv_example_style_gradient_radial</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad5b94248baf007d22cf649468d4c44f2">  242</a></span><span class="preprocessor">#define lv_example_style_9         lv_example_style_image</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a9fab0b82da661470883ff9b1e7cc8529">  243</a></span><span class="preprocessor">#define lv_example_style_10        lv_example_style_line</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a861ac955cf6f3f0fcd9daaf3122e5d9c">  244</a></span><span class="preprocessor">#define lv_example_style_11        lv_example_style_local</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a142620b587ba267da17d60b46fa434e5">  245</a></span><span class="preprocessor">#define lv_example_style_12        lv_example_style_margin</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aaaf1c04775ccc74ab7712ced94c12eb5">  246</a></span><span class="preprocessor">#define lv_example_style_13        lv_example_style_modal</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a104abe7f502ddaa6bcd86daadbb38414">  247</a></span><span class="preprocessor">#define lv_example_style_14        lv_example_style_multiple</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a8373fea884f20b3027b6a361c1e06764">  248</a></span><span class="preprocessor">#define lv_example_style_15        lv_example_style_opacity_transform</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ae69d43f9ce7abb923ed1d5c37f24de77">  249</a></span><span class="preprocessor">#define lv_example_style_16        lv_example_style_outline</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab8d39965aa56f68225b7a7e4e3bf71a0">  250</a></span><span class="preprocessor">#define lv_example_style_17        lv_example_style_padding</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ab31c0984a2f87adf755164c320d41885">  251</a></span><span class="preprocessor">#define lv_example_style_18        lv_example_style_parts_states</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#af4ce3bb141aebc94c19e330a226621c3">  252</a></span><span class="preprocessor">#define lv_example_style_19        lv_example_style_shadow</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a153c43cba19d68bb2bfc81ab57247216">  253</a></span><span class="preprocessor">#define lv_example_style_20        lv_example_style_size_position</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a15be9f0e618f578cd132cba22581743c">  254</a></span><span class="preprocessor">#define lv_example_style_21        lv_example_style_text</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment">/* switch */</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad9e1cb460acefb95f25e7af467d16993">  257</a></span><span class="preprocessor">#define lv_example_switch_1        lv_example_switch_event</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aea2f366d605bfa1abd1980d07191a37d">  258</a></span><span class="preprocessor">#define lv_example_switch_2        lv_example_switch_orientation</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment">/* table */</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ac68dac9397ea06e0e028026e8b457b7a">  261</a></span><span class="preprocessor">#define lv_example_table_1         lv_example_table_cells</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aa92daabe296215fc3212982e2d29f94d">  262</a></span><span class="preprocessor">#define lv_example_table_2         lv_example_table_merge_cells</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">/* tabview */</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a2f4aaac68d8a0153a9bb8efb78953e41">  265</a></span><span class="preprocessor">#define lv_example_tabview_1       lv_example_tabview_active_tab</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#aec8643aaa44c3e8a2cbd9021553cb95b">  266</a></span><span class="preprocessor">#define lv_example_tabview_2       lv_example_tabview_basic</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">/* textarea */</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a4e9fd2e8c52f89357d92b839c36fc0b5">  269</a></span><span class="preprocessor">#define lv_example_textarea_1      lv_example_textarea_buttonmatrix</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7afe882a90a8052cb89f77a576fa2ce8">  270</a></span><span class="preprocessor">#define lv_example_textarea_2      lv_example_textarea_cursor</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a03f36bdc753de7b1b83f0b638672faaa">  271</a></span><span class="preprocessor">#define lv_example_textarea_3      lv_example_textarea_format</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#ad54000073f47507edff693a6fe73c6d7">  272</a></span><span class="preprocessor">#define lv_example_textarea_4      lv_example_textarea_password</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="comment">/* tileview */</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a7626f93124bace2dd4a6f300f0c3263f">  275</a></span><span class="preprocessor">#define lv_example_tileview_1      lv_example_tileview_l_shape</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="comment">/* win */</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="lv__examples__api__map_8h.html#a2cfea87c813a75f66fb2dd35b6110c74">  278</a></span><span class="preprocessor">#define lv_example_win_1           lv_example_win_toolbar</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>} <span class="comment">/*extern &quot;C&quot;*/</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="preprocessor">#endif </span><span class="comment">/* LV_EXAMPLES_API_MAP_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_6737de13d9a79a1758473b4bb2fc9a44.html">examples</a></li><li class="navelem"><a href="lv__examples__api__map_8h.html">lv_examples_api_map.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

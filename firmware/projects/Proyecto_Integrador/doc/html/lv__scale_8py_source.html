@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/widgets/lv_scale.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__scale_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_scale.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__scale_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1lv__scale.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">Auto-generated wrapper for lv_scale_t.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">Do not edit manually. Regenerate from the GDB script root with:</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">    python3 scripts/generate_all.py</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj.html">lvglgdb.lvgl.core.lv_obj</a> <span class="keyword">import</span> LVObject</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">from</span> ._helpers <span class="keyword">import</span> ptr_or_none, safe_wrapper</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="" data-end="">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html">LVScale</a>(<a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object.html">LVObject</a>):</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL scale widget (lv_scale_t).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ad0e14a97d790539fe72203c0c835a61c">   15</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(self, obj):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super().<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(obj)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">   17</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a> = self.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">cast</a>(<span class="stringliteral">&quot;lv_scale_t&quot;</span>, ptr=<span class="keyword">True</span>) <span class="keywordflow">or</span> self</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0d0eef48765392521b81d54ddbd1f1e3">   18</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0d0eef48765392521b81d54ddbd1f1e3">_wv</a> = self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00021" data-start="" data-end="">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1d1f0b78ffc9a0a19a3ebf0568e49863">   21</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1d1f0b78ffc9a0a19a3ebf0568e49863">section_ll</a>(self):</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;&quot;&quot;Linked list for the sections (stores lv_scale_section_t)&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> safe_wrapper(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>, <span class="stringliteral">&quot;section_ll&quot;</span>, <span class="stringliteral">&quot;lvglgdb.lvgl.misc.lv_ll&quot;</span>, <span class="stringliteral">&quot;LVList&quot;</span>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00026" data-start="" data-end="">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a5e356042683be815ac6569f082c22b6f">   26</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a5e356042683be815ac6569f082c22b6f">txt_src</a>(self):</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> ptr_or_none(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;txt_src&quot;</span>))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00030" data-start="" data-end="">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1f6d95ba639346539aaf37f43188c9aa">   30</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1f6d95ba639346539aaf37f43188c9aa">mode</a>(self):</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="stringliteral">&quot;&quot;&quot;Orientation and layout of scale.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;mode&quot;</span>, 0))</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab30f6b5cde393244712d2470c01e4570">   35</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab30f6b5cde393244712d2470c01e4570">range_min</a>(self):</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="stringliteral">&quot;&quot;&quot;Scale&#39;s minimum value&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;range_min&quot;</span>, 0))</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00040" data-start="" data-end="">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8fd04f1a18964be73bcf15698b73f3c6">   40</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8fd04f1a18964be73bcf15698b73f3c6">range_max</a>(self):</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;&quot;&quot;Scale&#39;s maximum value&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;range_max&quot;</span>, 0))</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00045" data-start="" data-end="">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8cb2180e000672ec4707fb6a6d073796">   45</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8cb2180e000672ec4707fb6a6d073796">total_tick_count</a>(self):</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="stringliteral">&quot;&quot;&quot;Total number of ticks (major and minor)&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;total_tick_count&quot;</span>, 0))</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00050" data-start="" data-end="">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a882e4823ba76929696e7220eff3f1034">   50</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a882e4823ba76929696e7220eff3f1034">major_tick_every</a>(self):</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="stringliteral">&quot;&quot;&quot;Frequency of major ticks to minor ticks&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;major_tick_every&quot;</span>, 0))</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00055" data-start="" data-end="">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#abcda362ddc336bed7a62af1276fc38fe">   55</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#abcda362ddc336bed7a62af1276fc38fe">label_enabled</a>(self):</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="stringliteral">&quot;&quot;&quot;Draw labels for major ticks?&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;label_enabled&quot;</span>, 0))</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00060" data-start="" data-end="">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a75ad57853fa16c61fc91bcbeb8029910">   60</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a75ad57853fa16c61fc91bcbeb8029910">post_draw</a>(self):</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;post_draw&quot;</span>, 0))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00064" data-start="" data-end="">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a029ee4a4f1be5110238477c567589c8f">   64</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a029ee4a4f1be5110238477c567589c8f">draw_ticks_on_top</a>(self):</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="stringliteral">&quot;&quot;&quot;Draw ticks on top of main line?&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;draw_ticks_on_top&quot;</span>, 0))</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00069" data-start="" data-end="">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0bbbb39478cc60366b1c1b14dfac7da5">   69</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0bbbb39478cc60366b1c1b14dfac7da5">angle_range</a>(self):</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="stringliteral">&quot;&quot;&quot;Degrees between low end and high end of scale&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;angle_range&quot;</span>, 0))</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00074" data-start="" data-end="">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3a933d24d32eebc87c452535c98cc635">   74</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3a933d24d32eebc87c452535c98cc635">rotation</a>(self):</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="stringliteral">&quot;&quot;&quot;Clockwise angular offset from 3-o&#39;clock position of low end of scale&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;rotation&quot;</span>, 0))</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00079" data-start="" data-end="">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3ea432c0b3ec523724c9321dabd4c520">   79</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3ea432c0b3ec523724c9321dabd4c520">custom_label_cnt</a>(self):</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="stringliteral">&quot;&quot;&quot;Number of custom labels provided in `txt_src`&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;custom_label_cnt&quot;</span>, 0))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00084" data-start="" data-end="">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8dae3820becaf8150ffb8df71d52f7a0">   84</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8dae3820becaf8150ffb8df71d52f7a0">last_tick_width</a>(self):</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="stringliteral">&quot;&quot;&quot;Width of last tick in pixels&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;last_tick_width&quot;</span>, 0))</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00089" data-start="" data-end="">
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ade2da74e42366c4033f1b9d6dd232b42">   89</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ade2da74e42366c4033f1b9d6dd232b42">first_tick_width</a>(self):</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="stringliteral">&quot;&quot;&quot;Width of first tick in pixels&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;first_tick_width&quot;</span>, 0))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab9018763eee5f031133b9911efc67c2e">   94</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab9018763eee5f031133b9911efc67c2e">needles</a>(self):</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="stringliteral">&quot;&quot;&quot;Needle list of this scale&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> safe_wrapper(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">_wv_lv_scale_t</a>, <span class="stringliteral">&quot;needles&quot;</span>, <span class="stringliteral">&quot;lvglgdb.lvgl.misc.lv_array&quot;</span>, <span class="stringliteral">&quot;LVArray&quot;</span>)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+</div>
+<div class="foldopen" id="foldopen00098" data-start="" data-end="">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a58a8e7ac184a990e83950901f11ac838">   98</a></span>    <span class="keyword">def </span>snapshot(self, include_children=False, include_styles=False):</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="stringliteral">&quot;&quot;&quot;Snapshot with widget-specific fields in widget_data.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        s = super().snapshot(include_children=include_children, include_styles=include_styles)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        d = s.get(<span class="stringliteral">&#39;widget_data&#39;</span>) <span class="keywordflow">or</span> {}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        d[<span class="stringliteral">&quot;section_ll&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1d1f0b78ffc9a0a19a3ebf0568e49863">section_ll</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        d[<span class="stringliteral">&quot;txt_src&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a5e356042683be815ac6569f082c22b6f">txt_src</a></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        d[<span class="stringliteral">&quot;mode&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1f6d95ba639346539aaf37f43188c9aa">mode</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        d[<span class="stringliteral">&quot;range_min&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab30f6b5cde393244712d2470c01e4570">range_min</a></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        d[<span class="stringliteral">&quot;range_max&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8fd04f1a18964be73bcf15698b73f3c6">range_max</a></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        d[<span class="stringliteral">&quot;total_tick_count&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8cb2180e000672ec4707fb6a6d073796">total_tick_count</a></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        d[<span class="stringliteral">&quot;major_tick_every&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a882e4823ba76929696e7220eff3f1034">major_tick_every</a></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        d[<span class="stringliteral">&quot;label_enabled&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#abcda362ddc336bed7a62af1276fc38fe">label_enabled</a></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        d[<span class="stringliteral">&quot;post_draw&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a75ad57853fa16c61fc91bcbeb8029910">post_draw</a></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        d[<span class="stringliteral">&quot;draw_ticks_on_top&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a029ee4a4f1be5110238477c567589c8f">draw_ticks_on_top</a></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        d[<span class="stringliteral">&quot;angle_range&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0bbbb39478cc60366b1c1b14dfac7da5">angle_range</a></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        d[<span class="stringliteral">&quot;rotation&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3a933d24d32eebc87c452535c98cc635">rotation</a></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        d[<span class="stringliteral">&quot;custom_label_cnt&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3ea432c0b3ec523724c9321dabd4c520">custom_label_cnt</a></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        d[<span class="stringliteral">&quot;last_tick_width&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8dae3820becaf8150ffb8df71d52f7a0">last_tick_width</a></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        d[<span class="stringliteral">&quot;first_tick_width&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ade2da74e42366c4033f1b9d6dd232b42">first_tick_width</a></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        d[<span class="stringliteral">&quot;needles&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab9018763eee5f031133b9911efc67c2e">needles</a></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        s[<span class="stringliteral">&#39;widget_data&#39;</span>] = d</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> s</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object.html">lvglgdb.lvgl.core.lv_obj.LVObject</a></div><div class="ttdef"><b>Definition</b> <a href="lvgl_2core_2lv__obj_8py_source.html#l00042">lv_obj.py:42</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html">lvglgdb.lvgl.widgets.lv_scale.LVScale</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">lv_scale.py:12</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a015a9bde5420b8ca2f6123ee1e7bf41b"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a015a9bde5420b8ca2f6123ee1e7bf41b">lvglgdb.lvgl.widgets.lv_scale.LVScale._wv_lv_scale_t</a></div><div class="ttdeci">_wv_lv_scale_t</div><div class="ttdef"><b>Definition</b> <a href="#l00017">lv_scale.py:17</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a029ee4a4f1be5110238477c567589c8f"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a029ee4a4f1be5110238477c567589c8f">lvglgdb.lvgl.widgets.lv_scale.LVScale.draw_ticks_on_top</a></div><div class="ttdeci">draw_ticks_on_top(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00064">lv_scale.py:64</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a0bbbb39478cc60366b1c1b14dfac7da5"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0bbbb39478cc60366b1c1b14dfac7da5">lvglgdb.lvgl.widgets.lv_scale.LVScale.angle_range</a></div><div class="ttdeci">angle_range(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00069">lv_scale.py:69</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a0d0eef48765392521b81d54ddbd1f1e3"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a0d0eef48765392521b81d54ddbd1f1e3">lvglgdb.lvgl.widgets.lv_scale.LVScale._wv</a></div><div class="ttdeci">_wv</div><div class="ttdef"><b>Definition</b> <a href="#l00018">lv_scale.py:18</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a1d1f0b78ffc9a0a19a3ebf0568e49863"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1d1f0b78ffc9a0a19a3ebf0568e49863">lvglgdb.lvgl.widgets.lv_scale.LVScale.section_ll</a></div><div class="ttdeci">section_ll(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00021">lv_scale.py:21</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a1f6d95ba639346539aaf37f43188c9aa"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a1f6d95ba639346539aaf37f43188c9aa">lvglgdb.lvgl.widgets.lv_scale.LVScale.mode</a></div><div class="ttdeci">mode(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">lv_scale.py:30</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a3a933d24d32eebc87c452535c98cc635"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3a933d24d32eebc87c452535c98cc635">lvglgdb.lvgl.widgets.lv_scale.LVScale.rotation</a></div><div class="ttdeci">rotation(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00074">lv_scale.py:74</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a3ea432c0b3ec523724c9321dabd4c520"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a3ea432c0b3ec523724c9321dabd4c520">lvglgdb.lvgl.widgets.lv_scale.LVScale.custom_label_cnt</a></div><div class="ttdeci">custom_label_cnt(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00079">lv_scale.py:79</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a5e356042683be815ac6569f082c22b6f"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a5e356042683be815ac6569f082c22b6f">lvglgdb.lvgl.widgets.lv_scale.LVScale.txt_src</a></div><div class="ttdeci">txt_src(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">lv_scale.py:26</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a75ad57853fa16c61fc91bcbeb8029910"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a75ad57853fa16c61fc91bcbeb8029910">lvglgdb.lvgl.widgets.lv_scale.LVScale.post_draw</a></div><div class="ttdeci">post_draw(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">lv_scale.py:60</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a882e4823ba76929696e7220eff3f1034"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a882e4823ba76929696e7220eff3f1034">lvglgdb.lvgl.widgets.lv_scale.LVScale.major_tick_every</a></div><div class="ttdeci">major_tick_every(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">lv_scale.py:50</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a8cb2180e000672ec4707fb6a6d073796"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8cb2180e000672ec4707fb6a6d073796">lvglgdb.lvgl.widgets.lv_scale.LVScale.total_tick_count</a></div><div class="ttdeci">total_tick_count(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00045">lv_scale.py:45</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a8dae3820becaf8150ffb8df71d52f7a0"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8dae3820becaf8150ffb8df71d52f7a0">lvglgdb.lvgl.widgets.lv_scale.LVScale.last_tick_width</a></div><div class="ttdeci">last_tick_width(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00084">lv_scale.py:84</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_a8fd04f1a18964be73bcf15698b73f3c6"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#a8fd04f1a18964be73bcf15698b73f3c6">lvglgdb.lvgl.widgets.lv_scale.LVScale.range_max</a></div><div class="ttdeci">range_max(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">lv_scale.py:40</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_ab30f6b5cde393244712d2470c01e4570"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab30f6b5cde393244712d2470c01e4570">lvglgdb.lvgl.widgets.lv_scale.LVScale.range_min</a></div><div class="ttdeci">range_min(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">lv_scale.py:35</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_ab9018763eee5f031133b9911efc67c2e"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ab9018763eee5f031133b9911efc67c2e">lvglgdb.lvgl.widgets.lv_scale.LVScale.needles</a></div><div class="ttdeci">needles(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">lv_scale.py:94</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_abcda362ddc336bed7a62af1276fc38fe"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#abcda362ddc336bed7a62af1276fc38fe">lvglgdb.lvgl.widgets.lv_scale.LVScale.label_enabled</a></div><div class="ttdeci">label_enabled(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">lv_scale.py:55</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_ad0e14a97d790539fe72203c0c835a61c"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ad0e14a97d790539fe72203c0c835a61c">lvglgdb.lvgl.widgets.lv_scale.LVScale.__init__</a></div><div class="ttdeci">__init__(self, obj)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">lv_scale.py:15</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale_html_ade2da74e42366c4033f1b9d6dd232b42"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__scale_1_1_l_v_scale.html#ade2da74e42366c4033f1b9d6dd232b42">lvglgdb.lvgl.widgets.lv_scale.LVScale.first_tick_width</a></div><div class="ttdeci">first_tick_width(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00089">lv_scale.py:89</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a042905354ccf68cda661c3303c15a3d2"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">lvglgdb.value.Value.safe_field</a></div><div class="ttdeci">safe_field(self, str attr, default=None, cast=None)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00216">value.py:216</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a50db75204e74779840c3025b9211aabe"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">lvglgdb.value.Value.cast</a></div><div class="ttdeci">Optional[Union[&quot;Value&quot;, &quot;CorruptedValue&quot;]] cast(self, Union[str, gdb.Type] type_name, bool ptr=False)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00196">value.py:198</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj_html"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj.html">lvglgdb.lvgl.core.lv_obj</a></div><div class="ttdef"><b>Definition</b> <a href="lvgl_2core_2lv__obj_8py_source.html#l00001">lv_obj.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_201b7a9d9a46579215ae39de1754cc76.html">widgets</a></li><li class="navelem"><a href="lv__scale_8py.html">lv_scale.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

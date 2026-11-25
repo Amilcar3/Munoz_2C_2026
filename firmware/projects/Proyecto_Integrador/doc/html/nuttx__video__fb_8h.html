@@ -1,0 +1,1739 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/drivers/nuttx/mock/nuttx_video_fb.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('nuttx__video__fb_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo nuttx_video_fb.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="nuttx__video__fb_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:fb_5Fvideoinfo_5Fs" id="r_fb_5Fvideoinfo_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfb__videoinfo__s.html">fb_videoinfo_s</a></td></tr>
+<tr class="memitem:fb_5Fplaneinfo_5Fs" id="r_fb_5Fplaneinfo_5Fs"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structfb__planeinfo__s.html">fb_planeinfo_s</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9952892c656608ccfee75827c9522555" id="r_a9952892c656608ccfee75827c9522555"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(x)</td></tr>
+<tr class="memitem:a60932f1a6dcc8562c0f46487791cace8" id="r_a60932f1a6dcc8562c0f46487791cace8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a60932f1a6dcc8562c0f46487791cace8">FB_FMT_Y1</a>&#160;&#160;&#160;0         /* BPP=1, monochrome */</td></tr>
+<tr class="memitem:aeb5b40368918e13412dba59058e691c3" id="r_aeb5b40368918e13412dba59058e691c3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aeb5b40368918e13412dba59058e691c3">FB_FMT_Y2</a>&#160;&#160;&#160;1         /* BPP=2, 2-bit uncompressed greyscale */</td></tr>
+<tr class="memitem:adcd94c12228792a71cb9e6b8dd648c71" id="r_adcd94c12228792a71cb9e6b8dd648c71"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adcd94c12228792a71cb9e6b8dd648c71">FB_FMT_Y4</a>&#160;&#160;&#160;2         /* BPP=4, 4-bit uncompressed greyscale */</td></tr>
+<tr class="memitem:a43c2a90c7da5106a27f356767d88978e" id="r_a43c2a90c7da5106a27f356767d88978e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a43c2a90c7da5106a27f356767d88978e">FB_FMT_Y8</a>&#160;&#160;&#160;3         /* BPP=8, 8-bit uncompressed greyscale */</td></tr>
+<tr class="memitem:aa0b22eb1200e8dd2400e4871ac493001" id="r_aa0b22eb1200e8dd2400e4871ac493001"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa0b22eb1200e8dd2400e4871ac493001">FB_FMT_Y16</a>&#160;&#160;&#160;4         /* BPP=16, 16-bit uncompressed greyscale */</td></tr>
+<tr class="memitem:a42ecd2234e17ab2b9af5ecb80c5ecd56" id="r_a42ecd2234e17ab2b9af5ecb80c5ecd56"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a42ecd2234e17ab2b9af5ecb80c5ecd56">FB_FMT_GREY</a>&#160;&#160;&#160;<a class="el" href="#a43c2a90c7da5106a27f356767d88978e">FB_FMT_Y8</a> /* BPP=8 */</td></tr>
+<tr class="memitem:ae9c013af56e7783601246a6968f9b3f6" id="r_ae9c013af56e7783601246a6968f9b3f6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae9c013af56e7783601246a6968f9b3f6">FB_FMT_Y800</a>&#160;&#160;&#160;<a class="el" href="#a43c2a90c7da5106a27f356767d88978e">FB_FMT_Y8</a> /* BPP=8 */</td></tr>
+<tr class="memitem:a0f6e8c709a3c880417d726a4082d238b" id="r_a0f6e8c709a3c880417d726a4082d238b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0f6e8c709a3c880417d726a4082d238b">FB_ISMONO</a>(<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>)</td></tr>
+<tr class="memitem:a88b2e42e2058a8869b0e29616027ea3d" id="r_a88b2e42e2058a8869b0e29616027ea3d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a88b2e42e2058a8869b0e29616027ea3d">FB_FMT_RGB4</a>&#160;&#160;&#160;5           /* BPP=4 */</td></tr>
+<tr class="memitem:a58e71c715573260f0019ccb60113b373" id="r_a58e71c715573260f0019ccb60113b373"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a58e71c715573260f0019ccb60113b373">FB_FMT_RGB8</a>&#160;&#160;&#160;6           /* BPP=8 RGB palette index */</td></tr>
+<tr class="memitem:a726f80944ec8f48c4a0328bba830fd62" id="r_a726f80944ec8f48c4a0328bba830fd62"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a726f80944ec8f48c4a0328bba830fd62">FB_FMT_RGB8_222</a>&#160;&#160;&#160;7           /* BPP=8  R=2, G=2, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=2 */</td></tr>
+<tr class="memitem:ab36ce2a23d935cbebf5348308b16bb48" id="r_ab36ce2a23d935cbebf5348308b16bb48"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab36ce2a23d935cbebf5348308b16bb48">FB_FMT_RGB8_332</a>&#160;&#160;&#160;8           /* BPP=8  R=3, G=3, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=2 */</td></tr>
+<tr class="memitem:a80c2a7b79803efebfb8b4043e7b0de84" id="r_a80c2a7b79803efebfb8b4043e7b0de84"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a80c2a7b79803efebfb8b4043e7b0de84">FB_FMT_RGB12_444</a>&#160;&#160;&#160;9           /* BPP=12 R=4, G=4, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=4 */</td></tr>
+<tr class="memitem:aadec929424acc648f91dadb472960004" id="r_aadec929424acc648f91dadb472960004"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aadec929424acc648f91dadb472960004">FB_FMT_RGB16_555</a>&#160;&#160;&#160;10          /* BPP=16 R=5, G=5, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=5 (1 unused bit) */</td></tr>
+<tr class="memitem:a29ac7e107cb2fa4c6c1d7e1c948ea74c" id="r_a29ac7e107cb2fa4c6c1d7e1c948ea74c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a29ac7e107cb2fa4c6c1d7e1c948ea74c">FB_FMT_RGB16_565</a>&#160;&#160;&#160;11          /* BPP=16 R=5, G=6, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=5 */</td></tr>
+<tr class="memitem:a93ecb528fb2c64300fa48e8e14eef379" id="r_a93ecb528fb2c64300fa48e8e14eef379"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a93ecb528fb2c64300fa48e8e14eef379">FB_FMT_RGB24</a>&#160;&#160;&#160;12          /* BPP=24 */</td></tr>
+<tr class="memitem:a7943b284c135ba2d0e525070e4a01d6d" id="r_a7943b284c135ba2d0e525070e4a01d6d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7943b284c135ba2d0e525070e4a01d6d">FB_FMT_RGB32</a>&#160;&#160;&#160;13          /* BPP=32 */</td></tr>
+<tr class="memitem:a9e1b2c56e16e31acc2e4835e4acc6b51" id="r_a9e1b2c56e16e31acc2e4835e4acc6b51"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9e1b2c56e16e31acc2e4835e4acc6b51">FB_FMT_RGBRLE4</a>&#160;&#160;&#160;14          /* BPP=4 */</td></tr>
+<tr class="memitem:ad7cb4b65ac1639c0e88c74e4aa424199" id="r_ad7cb4b65ac1639c0e88c74e4aa424199"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad7cb4b65ac1639c0e88c74e4aa424199">FB_FMT_RGBRLE8</a>&#160;&#160;&#160;15          /* BPP=8 */</td></tr>
+<tr class="memitem:a988e94e06150b84b889d38fab2833d1b" id="r_a988e94e06150b84b889d38fab2833d1b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a988e94e06150b84b889d38fab2833d1b">FB_FMT_RGBRAW</a>&#160;&#160;&#160;16          /* BPP=? */</td></tr>
+<tr class="memitem:a1cae4e8c4801aec8ba83de7b939b2afc" id="r_a1cae4e8c4801aec8ba83de7b939b2afc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1cae4e8c4801aec8ba83de7b939b2afc">FB_FMT_RGBBTFLD16</a>&#160;&#160;&#160;17          /* BPP=16 */</td></tr>
+<tr class="memitem:a83cfa2279c84d4f7b6440014f09b4068" id="r_a83cfa2279c84d4f7b6440014f09b4068"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a83cfa2279c84d4f7b6440014f09b4068">FB_FMT_RGBBTFLD24</a>&#160;&#160;&#160;18          /* BPP=24 */</td></tr>
+<tr class="memitem:aebfe7c37ed9468ae3fbccd7b0e53b204" id="r_aebfe7c37ed9468ae3fbccd7b0e53b204"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aebfe7c37ed9468ae3fbccd7b0e53b204">FB_FMT_RGBBTFLD32</a>&#160;&#160;&#160;19          /* BPP=32 */</td></tr>
+<tr class="memitem:a19f6d5c2fda44ecb7bdb2cb5c9763aca" id="r_a19f6d5c2fda44ecb7bdb2cb5c9763aca"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a19f6d5c2fda44ecb7bdb2cb5c9763aca">FB_FMT_RGBA16</a>&#160;&#160;&#160;20          /* BPP=16 Raw RGB with <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td></tr>
+<tr class="memitem:a6560a17b9bf7dad1b444e54e3704eaa2" id="r_a6560a17b9bf7dad1b444e54e3704eaa2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6560a17b9bf7dad1b444e54e3704eaa2">FB_FMT_RGBA32</a>&#160;&#160;&#160;21          /* BPP=32 Raw RGB with <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td></tr>
+<tr class="memitem:a093d197ff414f68655315a8154f13b47" id="r_a093d197ff414f68655315a8154f13b47"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a093d197ff414f68655315a8154f13b47">FB_FMT_RGBT16</a>&#160;&#160;&#160;22          /* BPP=16 */</td></tr>
+<tr class="memitem:a3e2585330b7f11e63cfdfdc354256936" id="r_a3e2585330b7f11e63cfdfdc354256936"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3e2585330b7f11e63cfdfdc354256936">FB_FMT_RGBT32</a>&#160;&#160;&#160;23          /* BPP=32 */</td></tr>
+<tr class="memitem:a0d70c0a3c417f0023e3531c0f18b4095" id="r_a0d70c0a3c417f0023e3531c0f18b4095"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0d70c0a3c417f0023e3531c0f18b4095">FB_ISRGB</a>(<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>)</td></tr>
+<tr class="memitem:aa9063ee523a82de0fdebf7f470d83e8f" id="r_aa9063ee523a82de0fdebf7f470d83e8f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa9063ee523a82de0fdebf7f470d83e8f">FB_FMT_AYUV</a>&#160;&#160;&#160;24          /* BPP=32  Combined YUV <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a9e7e2d1d05f358a3091c9a08b7e3d747">and</a> <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td></tr>
+<tr class="memitem:a21e071128740200d7f52cf80b9bb4aea" id="r_a21e071128740200d7f52cf80b9bb4aea"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a21e071128740200d7f52cf80b9bb4aea">FB_FMT_CLJR</a></td></tr>
+<tr class="memitem:a81d5681818e8ef8f32cbe30e5a008020" id="r_a81d5681818e8ef8f32cbe30e5a008020"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a81d5681818e8ef8f32cbe30e5a008020">FB_FMT_CYUV</a></td></tr>
+<tr class="memitem:a511a18b0690f68ee7972857013660b0a" id="r_a511a18b0690f68ee7972857013660b0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a511a18b0690f68ee7972857013660b0a">FB_FMT_IRAW</a>&#160;&#160;&#160;27          /* BPP=?   Intel uncompressed YUV */</td></tr>
+<tr class="memitem:a1a9281ea81b8fe40b2da25da30f4b9f4" id="r_a1a9281ea81b8fe40b2da25da30f4b9f4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1a9281ea81b8fe40b2da25da30f4b9f4">FB_FMT_IUYV</a></td></tr>
+<tr class="memitem:ab33e7b24c9cae677e5dfe26174f0f883" id="r_ab33e7b24c9cae677e5dfe26174f0f883"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab33e7b24c9cae677e5dfe26174f0f883">FB_FMT_IY41</a></td></tr>
+<tr class="memitem:a450db709fb3beadcb12e151c1d61ac1d" id="r_a450db709fb3beadcb12e151c1d61ac1d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a450db709fb3beadcb12e151c1d61ac1d">FB_FMT_IYU2</a>&#160;&#160;&#160;30          /* BPP=24 */</td></tr>
+<tr class="memitem:a01332c16464c0d4df5050572c3add690" id="r_a01332c16464c0d4df5050572c3add690"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a01332c16464c0d4df5050572c3add690">FB_FMT_HDYC</a></td></tr>
+<tr class="memitem:a7a8c7b30684d60aaf9bf58a9fa1eae49" id="r_a7a8c7b30684d60aaf9bf58a9fa1eae49"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7a8c7b30684d60aaf9bf58a9fa1eae49">FB_FMT_UYVP</a></td></tr>
+<tr class="memitem:a2a78b83274e6194df2c606f12d0a0d55" id="r_a2a78b83274e6194df2c606f12d0a0d55"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2a78b83274e6194df2c606f12d0a0d55">FB_FMT_UYVY</a>&#160;&#160;&#160;33          /* BPP=16  YUV 4:2:2 */</td></tr>
+<tr class="memitem:af7b478c6baf2d38f6f665cb2c347f298" id="r_af7b478c6baf2d38f6f665cb2c347f298"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af7b478c6baf2d38f6f665cb2c347f298">FB_FMT_UYNV</a>&#160;&#160;&#160;<a class="el" href="#a2a78b83274e6194df2c606f12d0a0d55">FB_FMT_UYVY</a> /* BPP=16  */</td></tr>
+<tr class="memitem:ad7b2271df6a801daedb66fb7f7b18acb" id="r_ad7b2271df6a801daedb66fb7f7b18acb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad7b2271df6a801daedb66fb7f7b18acb">FB_FMT_Y422</a>&#160;&#160;&#160;<a class="el" href="#a2a78b83274e6194df2c606f12d0a0d55">FB_FMT_UYVY</a> /* BPP=16  */</td></tr>
+<tr class="memitem:a16f010720590fc2d251e6996f4662a91" id="r_a16f010720590fc2d251e6996f4662a91"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a16f010720590fc2d251e6996f4662a91">FB_FMT_V210</a>&#160;&#160;&#160;34          /* BPP=32  10-bit 4:2:2 YCrCb */</td></tr>
+<tr class="memitem:aa3bb0249ab8a9d27828290306b6a248a" id="r_aa3bb0249ab8a9d27828290306b6a248a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa3bb0249ab8a9d27828290306b6a248a">FB_FMT_V422</a>&#160;&#160;&#160;35          /* BPP=16  Upside down version <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#af9b88b3996243ec68fc248bf413cf762">of</a> UYVY */</td></tr>
+<tr class="memitem:a9bbf4f67707d5dd9f1e17ef3d5e73bb3" id="r_a9bbf4f67707d5dd9f1e17ef3d5e73bb3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9bbf4f67707d5dd9f1e17ef3d5e73bb3">FB_FMT_V655</a>&#160;&#160;&#160;36          /* BPP=16? 16-bit YUV 4:2:2 */</td></tr>
+<tr class="memitem:af9fed5fca5f1f04503f46b77bf65d7a6" id="r_af9fed5fca5f1f04503f46b77bf65d7a6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af9fed5fca5f1f04503f46b77bf65d7a6">FB_FMT_VYUY</a>&#160;&#160;&#160;37          /* BPP=?   ATI Packed YUV Data */</td></tr>
+<tr class="memitem:af064a811a3bd3c25e677c35295005680" id="r_af064a811a3bd3c25e677c35295005680"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af064a811a3bd3c25e677c35295005680">FB_FMT_YUYV</a>&#160;&#160;&#160;38          /* BPP=16  YUV 4:2:2 */</td></tr>
+<tr class="memitem:a4cc928b79d653b859d9e1b6916045e69" id="r_a4cc928b79d653b859d9e1b6916045e69"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4cc928b79d653b859d9e1b6916045e69">FB_FMT_YUY2</a>&#160;&#160;&#160;<a class="el" href="#af064a811a3bd3c25e677c35295005680">FB_FMT_YUYV</a> /* BPP=16  YUV 4:2:2 */</td></tr>
+<tr class="memitem:ac28c38ef979a8025c43e1c593715d37b" id="r_ac28c38ef979a8025c43e1c593715d37b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac28c38ef979a8025c43e1c593715d37b">FB_FMT_YUNV</a>&#160;&#160;&#160;<a class="el" href="#af064a811a3bd3c25e677c35295005680">FB_FMT_YUYV</a> /* BPP=16  YUV 4:2:2 */</td></tr>
+<tr class="memitem:a742af95de4172a972d83a1faabe22fc0" id="r_a742af95de4172a972d83a1faabe22fc0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a742af95de4172a972d83a1faabe22fc0">FB_FMT_YVYU</a>&#160;&#160;&#160;39          /* BPP=16  YUV 4:2:2 */</td></tr>
+<tr class="memitem:ae6333a6d084e343ed764cab20cf4eaeb" id="r_ae6333a6d084e343ed764cab20cf4eaeb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae6333a6d084e343ed764cab20cf4eaeb">FB_FMT_Y41P</a>&#160;&#160;&#160;40          /* BPP=12  YUV 4:1:1 */</td></tr>
+<tr class="memitem:adcde5ef4ec841cda19748a0256483eb6" id="r_adcde5ef4ec841cda19748a0256483eb6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adcde5ef4ec841cda19748a0256483eb6">FB_FMT_Y411</a>&#160;&#160;&#160;41          /* BPP=12  YUV 4:1:1 */</td></tr>
+<tr class="memitem:a64e3dec8903da438be814a58bc7aa583" id="r_a64e3dec8903da438be814a58bc7aa583"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a64e3dec8903da438be814a58bc7aa583">FB_FMT_Y211</a>&#160;&#160;&#160;42          /* BPP=8  */</td></tr>
+<tr class="memitem:a4233300c4d029aef6d03bf9ae2552181" id="r_a4233300c4d029aef6d03bf9ae2552181"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4233300c4d029aef6d03bf9ae2552181">FB_FMT_Y41T</a>&#160;&#160;&#160;43          /* BPP=12  Y41P LSB <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a486a224a37654b905ffd6f7bbe11e765">for</a> transparency */</td></tr>
+<tr class="memitem:a1df9886c4d9b16d5ad4f5f48b97e193e" id="r_a1df9886c4d9b16d5ad4f5f48b97e193e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1df9886c4d9b16d5ad4f5f48b97e193e">FB_FMT_Y42T</a>&#160;&#160;&#160;44          /* BPP=16  UYVY LSB <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a486a224a37654b905ffd6f7bbe11e765">for</a> transparency */</td></tr>
+<tr class="memitem:afbbc5243acd50db53ebf849a16f45276" id="r_afbbc5243acd50db53ebf849a16f45276"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afbbc5243acd50db53ebf849a16f45276">FB_FMT_YUVP</a>&#160;&#160;&#160;45          /* BPP=24? YCbCr 4:2:2 Y0U0Y1V0 <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ad36ee2c2c777074da83c20d1df62be0e">order</a> */</td></tr>
+<tr class="memitem:aa6bc068ae2c70768885e4327add27b07" id="r_aa6bc068ae2c70768885e4327add27b07"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa6bc068ae2c70768885e4327add27b07">FB_ISYUVPACKED</a>(<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>)</td></tr>
+<tr class="memitem:a696f2e1f104707a2b2f917b6c9a4ed03" id="r_a696f2e1f104707a2b2f917b6c9a4ed03"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a696f2e1f104707a2b2f917b6c9a4ed03">FB_FMT_YVU9</a></td></tr>
+<tr class="memitem:ac738a1d22a6c629e98fcb677c100b704" id="r_ac738a1d22a6c629e98fcb677c100b704"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac738a1d22a6c629e98fcb677c100b704">FB_FMT_YUV9</a>&#160;&#160;&#160;47          /* BPP=9? */</td></tr>
+<tr class="memitem:a5fa393136b8f889643ef0a55847fb8f0" id="r_a5fa393136b8f889643ef0a55847fb8f0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5fa393136b8f889643ef0a55847fb8f0">FB_FMT_IF09</a></td></tr>
+<tr class="memitem:aabc9d9e203275d60255771c392584be4" id="r_aabc9d9e203275d60255771c392584be4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aabc9d9e203275d60255771c392584be4">FB_FMT_YV16</a></td></tr>
+<tr class="memitem:a7d6a88a03101a2a0aca5377d2fd01c8e" id="r_a7d6a88a03101a2a0aca5377d2fd01c8e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7d6a88a03101a2a0aca5377d2fd01c8e">FB_FMT_YV12</a></td></tr>
+<tr class="memitem:a43b917acce8ce3ce044e305db4ef13cb" id="r_a43b917acce8ce3ce044e305db4ef13cb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a43b917acce8ce3ce044e305db4ef13cb">FB_FMT_I420</a></td></tr>
+<tr class="memitem:a2e0479e7aef62dfafc0ae4d78b5a3ccf" id="r_a2e0479e7aef62dfafc0ae4d78b5a3ccf"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2e0479e7aef62dfafc0ae4d78b5a3ccf">FB_FMT_IYUV</a>&#160;&#160;&#160;<a class="el" href="#a43b917acce8ce3ce044e305db4ef13cb">FB_FMT_I420</a> /* BPP=12 */</td></tr>
+<tr class="memitem:a221439a4ab80d10492a63b49e146565f" id="r_a221439a4ab80d10492a63b49e146565f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a221439a4ab80d10492a63b49e146565f">FB_FMT_NV12</a></td></tr>
+<tr class="memitem:aca925def7ca0f18565d952588bddc361" id="r_aca925def7ca0f18565d952588bddc361"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aca925def7ca0f18565d952588bddc361">FB_FMT_NV21</a>&#160;&#160;&#160;53          /* BPP=12  NV12 with UV reversed */</td></tr>
+<tr class="memitem:a2342d49eb4f36c0e45da92fcd0ca07a8" id="r_a2342d49eb4f36c0e45da92fcd0ca07a8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2342d49eb4f36c0e45da92fcd0ca07a8">FB_FMT_IMC1</a></td></tr>
+<tr class="memitem:a6fc8d52d254113099cbc3b9b7e76d252" id="r_a6fc8d52d254113099cbc3b9b7e76d252"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6fc8d52d254113099cbc3b9b7e76d252">FB_FMT_IMC2</a></td></tr>
+<tr class="memitem:ad57da7a6bb66a19806c7edb649a5751a" id="r_ad57da7a6bb66a19806c7edb649a5751a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad57da7a6bb66a19806c7edb649a5751a">FB_FMT_IMC3</a></td></tr>
+<tr class="memitem:a597724c51f2d1f684273d0c71308b495" id="r_a597724c51f2d1f684273d0c71308b495"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a597724c51f2d1f684273d0c71308b495">FB_FMT_IMC4</a></td></tr>
+<tr class="memitem:a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c" id="r_a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c">FB_FMT_CLPL</a></td></tr>
+<tr class="memitem:a7f170c6c96c9e4d80fc8d968e1d6b6a3" id="r_a7f170c6c96c9e4d80fc8d968e1d6b6a3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7f170c6c96c9e4d80fc8d968e1d6b6a3">FB_FMT_Y41B</a>&#160;&#160;&#160;59          /* BPP=12?  4:1:1 planar. */</td></tr>
+<tr class="memitem:a19683810da4b1b278e05e26702ce5bd3" id="r_a19683810da4b1b278e05e26702ce5bd3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a19683810da4b1b278e05e26702ce5bd3">FB_FMT_Y42B</a>&#160;&#160;&#160;60          /* BPP=16?  YUV 4:2:2 planar. */</td></tr>
+<tr class="memitem:a6602497720c3bfae8df1c1411942781b" id="r_a6602497720c3bfae8df1c1411942781b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6602497720c3bfae8df1c1411942781b">FB_FMT_CXY1</a>&#160;&#160;&#160;61          /* BPP=12 */</td></tr>
+<tr class="memitem:ae9acd43983f725eb94cff032621f70d0" id="r_ae9acd43983f725eb94cff032621f70d0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae9acd43983f725eb94cff032621f70d0">FB_FMT_CXY2</a>&#160;&#160;&#160;62          /* BPP=16 */</td></tr>
+<tr class="memitem:ae1fd25d5b56832e15cb154b7a94b4bba" id="r_ae1fd25d5b56832e15cb154b7a94b4bba"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae1fd25d5b56832e15cb154b7a94b4bba">FB_ISYUVPLANAR</a>(<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>)</td></tr>
+<tr class="memitem:acfdb77e19a955ea242e475d86b506d41" id="r_acfdb77e19a955ea242e475d86b506d41"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acfdb77e19a955ea242e475d86b506d41">FB_ISYUV</a>(<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>)</td></tr>
+<tr class="memitem:a873955c2b4ad74c2bf51e368930608eb" id="r_a873955c2b4ad74c2bf51e368930608eb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a873955c2b4ad74c2bf51e368930608eb">FB_NO_OVERLAY</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="memitem:a7ea5c243e9106817fa51fd13b533d3f6" id="r_a7ea5c243e9106817fa51fd13b533d3f6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7ea5c243e9106817fa51fd13b533d3f6">FBIOGET_VIDEOINFO</a>&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0001)  /* Get color plane info */</td></tr>
+<tr class="memitem:a102ad1acbc09036b3a4943a513760ef4" id="r_a102ad1acbc09036b3a4943a513760ef4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a102ad1acbc09036b3a4943a513760ef4">FBIOGET_PLANEINFO</a>&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0002)  /* Get video plane info */</td></tr>
+<tr class="memitem:a655e64697eccd72a469ce5be0b62c66a" id="r_a655e64697eccd72a469ce5be0b62c66a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a655e64697eccd72a469ce5be0b62c66a">FBIOSET_POWER</a></td></tr>
+<tr class="memitem:aa82373734ca838805bac603c22618f3a" id="r_aa82373734ca838805bac603c22618f3a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa82373734ca838805bac603c22618f3a">FBIOGET_POWER</a></td></tr>
+<tr class="memitem:a8767937829eea72715f4234ad643b632" id="r_a8767937829eea72715f4234ad643b632"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a8767937829eea72715f4234ad643b632">FBIOSET_FRAMERATE</a></td></tr>
+<tr class="memitem:a5929791f89d7cf377a2c378d541e366e" id="r_a5929791f89d7cf377a2c378d541e366e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5929791f89d7cf377a2c378d541e366e">FBIOGET_FRAMERATE</a></td></tr>
+<tr class="memitem:aecf4c24ba1829e6b29e97cccdb8502b5" id="r_aecf4c24ba1829e6b29e97cccdb8502b5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aecf4c24ba1829e6b29e97cccdb8502b5">FBIOPAN_DISPLAY</a></td></tr>
+<tr class="memitem:ae38bf8967e4700c8ea49026b2aca7d96" id="r_ae38bf8967e4700c8ea49026b2aca7d96"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae38bf8967e4700c8ea49026b2aca7d96">FBIOPAN_CLEAR</a>&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0019)  /* Pan clear */</td></tr>
+<tr class="memitem:a7370e1fe2f6362888d85ab34810325d5" id="r_a7370e1fe2f6362888d85ab34810325d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7370e1fe2f6362888d85ab34810325d5">FBIOSET_VSYNCOFFSET</a></td></tr>
+<tr class="memitem:a140bb702dad2959090d3117088b3b412" id="r_a140bb702dad2959090d3117088b3b412"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a140bb702dad2959090d3117088b3b412">FBIOGET_VSCREENINFO</a>&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x001b)  /* Get video variable info */</td></tr>
+<tr class="memitem:a692fc640698d6b00cd291f2b1ce1b1b8" id="r_a692fc640698d6b00cd291f2b1ce1b1b8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a692fc640698d6b00cd291f2b1ce1b1b8">FBIOGET_FSCREENINFO</a>&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x001c)  /* Get video fix info */</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:acf4bc3e298c520d74de09d0d533e2d46" id="r_acf4bc3e298c520d74de09d0d533e2d46"><td class="memItemLeft">typedef <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#acf4bc3e298c520d74de09d0d533e2d46">fb_coord_t</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9952892c656608ccfee75827c9522555" name="a9952892c656608ccfee75827c9522555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9952892c656608ccfee75827c9522555">&#9670;&#160;</a></span>_FBIOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _FBIOC</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(x)</div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00024">24</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aa9063ee523a82de0fdebf7f470d83e8f" name="aa9063ee523a82de0fdebf7f470d83e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9063ee523a82de0fdebf7f470d83e8f">&#9670;&#160;</a></span>FB_FMT_AYUV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_AYUV&#160;&#160;&#160;24          /* BPP=32  Combined YUV <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a9e7e2d1d05f358a3091c9a08b7e3d747">and</a> <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00087">87</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a21e071128740200d7f52cf80b9bb4aea" name="a21e071128740200d7f52cf80b9bb4aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e071128740200d7f52cf80b9bb4aea">&#9670;&#160;</a></span>FB_FMT_CLJR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_CLJR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">25          <span class="comment">/* BPP=8   4 pixels packed into a uint32_t.</span></div>
+<div class="line"><span class="comment">*         YUV 4:1:1 with l&lt; 8 bits</span></div>
+<div class="line"><span class="comment">*         per YUV sample */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00088">88</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c" name="a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ce5a5e0eddaf2cb1e2a9d9b9fc6815c">&#9670;&#160;</a></span>FB_FMT_CLPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_CLPL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">58          <span class="comment">/* BPP=12  YV12 but including a level</span></div>
+<div class="line"><span class="comment">*         of indirection. */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00131">131</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a6602497720c3bfae8df1c1411942781b" name="a6602497720c3bfae8df1c1411942781b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6602497720c3bfae8df1c1411942781b">&#9670;&#160;</a></span>FB_FMT_CXY1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_CXY1&#160;&#160;&#160;61          /* BPP=12 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00134">134</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ae9acd43983f725eb94cff032621f70d0" name="ae9acd43983f725eb94cff032621f70d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9acd43983f725eb94cff032621f70d0">&#9670;&#160;</a></span>FB_FMT_CXY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_CXY2&#160;&#160;&#160;62          /* BPP=16 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00135">135</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a81d5681818e8ef8f32cbe30e5a008020" name="a81d5681818e8ef8f32cbe30e5a008020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81d5681818e8ef8f32cbe30e5a008020">&#9670;&#160;</a></span>FB_FMT_CYUV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_CYUV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">26          <span class="comment">/* BPP=16  UYVY except that height is</span></div>
+<div class="line"><span class="comment">*         reversed */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00089">89</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a42ecd2234e17ab2b9af5ecb80c5ecd56" name="a42ecd2234e17ab2b9af5ecb80c5ecd56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42ecd2234e17ab2b9af5ecb80c5ecd56">&#9670;&#160;</a></span>FB_FMT_GREY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_GREY&#160;&#160;&#160;<a class="el" href="#a43c2a90c7da5106a27f356767d88978e">FB_FMT_Y8</a> /* BPP=8 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00037">37</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a01332c16464c0d4df5050572c3add690" name="a01332c16464c0d4df5050572c3add690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01332c16464c0d4df5050572c3add690">&#9670;&#160;</a></span>FB_FMT_HDYC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_HDYC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">31          <span class="comment">/* BPP=16  UYVY except uses the BT709</span></div>
+<div class="line"><span class="comment">*         color space  */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00094">94</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a43b917acce8ce3ce044e305db4ef13cb" name="a43b917acce8ce3ce044e305db4ef13cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43b917acce8ce3ce044e305db4ef13cb">&#9670;&#160;</a></span>FB_FMT_I420</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_I420</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">51          <span class="comment">/* BPP=12  8-bit Y followed by 8-bit</span></div>
+<div class="line"><span class="comment">*         2x2 UV */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00123">123</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a5fa393136b8f889643ef0a55847fb8f0" name="a5fa393136b8f889643ef0a55847fb8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa393136b8f889643ef0a55847fb8f0">&#9670;&#160;</a></span>FB_FMT_IF09</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IF09</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">48          <span class="comment">/* BPP=9.5 YVU9 + 4x4 plane of delta</span></div>
+<div class="line"><span class="comment">*         relative to tframe. */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00120">120</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a2342d49eb4f36c0e45da92fcd0ca07a8" name="a2342d49eb4f36c0e45da92fcd0ca07a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2342d49eb4f36c0e45da92fcd0ca07a8">&#9670;&#160;</a></span>FB_FMT_IMC1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IMC1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">54          <span class="comment">/* BPP=12  YV12 except UV planes same</span></div>
+<div class="line"><span class="comment">*         stride as Y */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00127">127</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a6fc8d52d254113099cbc3b9b7e76d252" name="a6fc8d52d254113099cbc3b9b7e76d252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc8d52d254113099cbc3b9b7e76d252">&#9670;&#160;</a></span>FB_FMT_IMC2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IMC2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">55          <span class="comment">/* BPP=12  IMC1 except UV lines</span></div>
+<div class="line"><span class="comment">*         interleaved at half stride</span></div>
+<div class="line"><span class="comment">*         boundaries */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00128">128</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ad57da7a6bb66a19806c7edb649a5751a" name="ad57da7a6bb66a19806c7edb649a5751a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad57da7a6bb66a19806c7edb649a5751a">&#9670;&#160;</a></span>FB_FMT_IMC3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IMC3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">56          <span class="comment">/* BPP=12  As IMC1 except that UV</span></div>
+<div class="line"><span class="comment">*         swapped */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00129">129</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a597724c51f2d1f684273d0c71308b495" name="a597724c51f2d1f684273d0c71308b495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a597724c51f2d1f684273d0c71308b495">&#9670;&#160;</a></span>FB_FMT_IMC4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IMC4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">57          <span class="comment">/* BPP=12  As IMC2  except that UV</span></div>
+<div class="line"><span class="comment">*         swapped */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00130">130</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a511a18b0690f68ee7972857013660b0a" name="a511a18b0690f68ee7972857013660b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511a18b0690f68ee7972857013660b0a">&#9670;&#160;</a></span>FB_FMT_IRAW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IRAW&#160;&#160;&#160;27          /* BPP=?   Intel uncompressed YUV */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00090">90</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a9281ea81b8fe40b2da25da30f4b9f4" name="a1a9281ea81b8fe40b2da25da30f4b9f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9281ea81b8fe40b2da25da30f4b9f4">&#9670;&#160;</a></span>FB_FMT_IUYV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IUYV</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">28          <span class="comment">/* BPP=16  Interlaced UYVY (line order</span></div>
+<div class="line"><span class="comment">*         0,2,4,.., 1,3,5...) */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00091">91</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ab33e7b24c9cae677e5dfe26174f0f883" name="ab33e7b24c9cae677e5dfe26174f0f883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33e7b24c9cae677e5dfe26174f0f883">&#9670;&#160;</a></span>FB_FMT_IY41</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IY41</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">29          <span class="comment">/* BPP=12  Interlaced Y41P (line order</span></div>
+<div class="line"><span class="comment">*         0,2,4,.., 1,3,5...) */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00092">92</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a450db709fb3beadcb12e151c1d61ac1d" name="a450db709fb3beadcb12e151c1d61ac1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a450db709fb3beadcb12e151c1d61ac1d">&#9670;&#160;</a></span>FB_FMT_IYU2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IYU2&#160;&#160;&#160;30          /* BPP=24 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00093">93</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a2e0479e7aef62dfafc0ae4d78b5a3ccf" name="a2e0479e7aef62dfafc0ae4d78b5a3ccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0479e7aef62dfafc0ae4d78b5a3ccf">&#9670;&#160;</a></span>FB_FMT_IYUV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_IYUV&#160;&#160;&#160;<a class="el" href="#a43b917acce8ce3ce044e305db4ef13cb">FB_FMT_I420</a> /* BPP=12 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00124">124</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a221439a4ab80d10492a63b49e146565f" name="a221439a4ab80d10492a63b49e146565f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a221439a4ab80d10492a63b49e146565f">&#9670;&#160;</a></span>FB_FMT_NV12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_NV12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">52          <span class="comment">/* BPP=12  8-bit Y followed by an</span></div>
+<div class="line"><span class="comment">*         interleaved 2x2 UV */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00125">125</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aca925def7ca0f18565d952588bddc361" name="aca925def7ca0f18565d952588bddc361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca925def7ca0f18565d952588bddc361">&#9670;&#160;</a></span>FB_FMT_NV21</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_NV21&#160;&#160;&#160;53          /* BPP=12  NV12 with UV reversed */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00126">126</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a80c2a7b79803efebfb8b4043e7b0de84" name="a80c2a7b79803efebfb8b4043e7b0de84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80c2a7b79803efebfb8b4043e7b0de84">&#9670;&#160;</a></span>FB_FMT_RGB12_444</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB12_444&#160;&#160;&#160;9           /* BPP=12 R=4, G=4, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=4 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00050">50</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aadec929424acc648f91dadb472960004" name="aadec929424acc648f91dadb472960004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadec929424acc648f91dadb472960004">&#9670;&#160;</a></span>FB_FMT_RGB16_555</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB16_555&#160;&#160;&#160;10          /* BPP=16 R=5, G=5, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=5 (1 unused bit) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00051">51</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a29ac7e107cb2fa4c6c1d7e1c948ea74c" name="a29ac7e107cb2fa4c6c1d7e1c948ea74c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29ac7e107cb2fa4c6c1d7e1c948ea74c">&#9670;&#160;</a></span>FB_FMT_RGB16_565</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB16_565&#160;&#160;&#160;11          /* BPP=16 R=5, G=6, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=5 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00052">52</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a93ecb528fb2c64300fa48e8e14eef379" name="a93ecb528fb2c64300fa48e8e14eef379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ecb528fb2c64300fa48e8e14eef379">&#9670;&#160;</a></span>FB_FMT_RGB24</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB24&#160;&#160;&#160;12          /* BPP=24 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00053">53</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7943b284c135ba2d0e525070e4a01d6d" name="a7943b284c135ba2d0e525070e4a01d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7943b284c135ba2d0e525070e4a01d6d">&#9670;&#160;</a></span>FB_FMT_RGB32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB32&#160;&#160;&#160;13          /* BPP=32 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00054">54</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a88b2e42e2058a8869b0e29616027ea3d" name="a88b2e42e2058a8869b0e29616027ea3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b2e42e2058a8869b0e29616027ea3d">&#9670;&#160;</a></span>FB_FMT_RGB4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB4&#160;&#160;&#160;5           /* BPP=4 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00046">46</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a58e71c715573260f0019ccb60113b373" name="a58e71c715573260f0019ccb60113b373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e71c715573260f0019ccb60113b373">&#9670;&#160;</a></span>FB_FMT_RGB8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB8&#160;&#160;&#160;6           /* BPP=8 RGB palette index */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00047">47</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a726f80944ec8f48c4a0328bba830fd62" name="a726f80944ec8f48c4a0328bba830fd62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a726f80944ec8f48c4a0328bba830fd62">&#9670;&#160;</a></span>FB_FMT_RGB8_222</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB8_222&#160;&#160;&#160;7           /* BPP=8  R=2, G=2, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00048">48</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ab36ce2a23d935cbebf5348308b16bb48" name="ab36ce2a23d935cbebf5348308b16bb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36ce2a23d935cbebf5348308b16bb48">&#9670;&#160;</a></span>FB_FMT_RGB8_332</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGB8_332&#160;&#160;&#160;8           /* BPP=8  R=3, G=3, <a class="el" href="bootloader-cfgcmd_8txt.html#a1cd56700db92872a86151c738b7e4d41">B</a>=2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00049">49</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a19f6d5c2fda44ecb7bdb2cb5c9763aca" name="a19f6d5c2fda44ecb7bdb2cb5c9763aca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f6d5c2fda44ecb7bdb2cb5c9763aca">&#9670;&#160;</a></span>FB_FMT_RGBA16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBA16&#160;&#160;&#160;20          /* BPP=16 Raw RGB with <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00072">72</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a6560a17b9bf7dad1b444e54e3704eaa2" name="a6560a17b9bf7dad1b444e54e3704eaa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6560a17b9bf7dad1b444e54e3704eaa2">&#9670;&#160;</a></span>FB_FMT_RGBA32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBA32&#160;&#160;&#160;21          /* BPP=32 Raw RGB with <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#a16d9febebb70a5b980d0db2fdd5b4159">alpha</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00073">73</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a1cae4e8c4801aec8ba83de7b939b2afc" name="a1cae4e8c4801aec8ba83de7b939b2afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cae4e8c4801aec8ba83de7b939b2afc">&#9670;&#160;</a></span>FB_FMT_RGBBTFLD16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBBTFLD16&#160;&#160;&#160;17          /* BPP=16 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00069">69</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a83cfa2279c84d4f7b6440014f09b4068" name="a83cfa2279c84d4f7b6440014f09b4068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83cfa2279c84d4f7b6440014f09b4068">&#9670;&#160;</a></span>FB_FMT_RGBBTFLD24</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBBTFLD24&#160;&#160;&#160;18          /* BPP=24 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00070">70</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aebfe7c37ed9468ae3fbccd7b0e53b204" name="aebfe7c37ed9468ae3fbccd7b0e53b204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfe7c37ed9468ae3fbccd7b0e53b204">&#9670;&#160;</a></span>FB_FMT_RGBBTFLD32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBBTFLD32&#160;&#160;&#160;19          /* BPP=32 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00071">71</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a988e94e06150b84b889d38fab2833d1b" name="a988e94e06150b84b889d38fab2833d1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a988e94e06150b84b889d38fab2833d1b">&#9670;&#160;</a></span>FB_FMT_RGBRAW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBRAW&#160;&#160;&#160;16          /* BPP=? */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00063">63</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a9e1b2c56e16e31acc2e4835e4acc6b51" name="a9e1b2c56e16e31acc2e4835e4acc6b51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e1b2c56e16e31acc2e4835e4acc6b51">&#9670;&#160;</a></span>FB_FMT_RGBRLE4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBRLE4&#160;&#160;&#160;14          /* BPP=4 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00058">58</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ad7cb4b65ac1639c0e88c74e4aa424199" name="ad7cb4b65ac1639c0e88c74e4aa424199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7cb4b65ac1639c0e88c74e4aa424199">&#9670;&#160;</a></span>FB_FMT_RGBRLE8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBRLE8&#160;&#160;&#160;15          /* BPP=8 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00059">59</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a093d197ff414f68655315a8154f13b47" name="a093d197ff414f68655315a8154f13b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a093d197ff414f68655315a8154f13b47">&#9670;&#160;</a></span>FB_FMT_RGBT16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBT16&#160;&#160;&#160;22          /* BPP=16 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00080">80</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a3e2585330b7f11e63cfdfdc354256936" name="a3e2585330b7f11e63cfdfdc354256936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e2585330b7f11e63cfdfdc354256936">&#9670;&#160;</a></span>FB_FMT_RGBT32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_RGBT32&#160;&#160;&#160;23          /* BPP=32 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00081">81</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="af7b478c6baf2d38f6f665cb2c347f298" name="af7b478c6baf2d38f6f665cb2c347f298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b478c6baf2d38f6f665cb2c347f298">&#9670;&#160;</a></span>FB_FMT_UYNV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_UYNV&#160;&#160;&#160;<a class="el" href="#a2a78b83274e6194df2c606f12d0a0d55">FB_FMT_UYVY</a> /* BPP=16  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00097">97</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7a8c7b30684d60aaf9bf58a9fa1eae49" name="a7a8c7b30684d60aaf9bf58a9fa1eae49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8c7b30684d60aaf9bf58a9fa1eae49">&#9670;&#160;</a></span>FB_FMT_UYVP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_UYVP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">32          <span class="comment">/* BPP=24? YCbCr 4:2:2, 10-bits per</span></div>
+<div class="line"><span class="comment">*         component in U0Y0V0Y1 order */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00095">95</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a2a78b83274e6194df2c606f12d0a0d55" name="a2a78b83274e6194df2c606f12d0a0d55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a78b83274e6194df2c606f12d0a0d55">&#9670;&#160;</a></span>FB_FMT_UYVY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_UYVY&#160;&#160;&#160;33          /* BPP=16  YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00096">96</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a16f010720590fc2d251e6996f4662a91" name="a16f010720590fc2d251e6996f4662a91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16f010720590fc2d251e6996f4662a91">&#9670;&#160;</a></span>FB_FMT_V210</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_V210&#160;&#160;&#160;34          /* BPP=32  10-bit 4:2:2 YCrCb */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00099">99</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aa3bb0249ab8a9d27828290306b6a248a" name="aa3bb0249ab8a9d27828290306b6a248a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3bb0249ab8a9d27828290306b6a248a">&#9670;&#160;</a></span>FB_FMT_V422</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_V422&#160;&#160;&#160;35          /* BPP=16  Upside down version <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#af9b88b3996243ec68fc248bf413cf762">of</a> UYVY */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00100">100</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a9bbf4f67707d5dd9f1e17ef3d5e73bb3" name="a9bbf4f67707d5dd9f1e17ef3d5e73bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbf4f67707d5dd9f1e17ef3d5e73bb3">&#9670;&#160;</a></span>FB_FMT_V655</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_V655&#160;&#160;&#160;36          /* BPP=16? 16-bit YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00101">101</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="af9fed5fca5f1f04503f46b77bf65d7a6" name="af9fed5fca5f1f04503f46b77bf65d7a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9fed5fca5f1f04503f46b77bf65d7a6">&#9670;&#160;</a></span>FB_FMT_VYUY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_VYUY&#160;&#160;&#160;37          /* BPP=?   ATI Packed YUV Data */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00102">102</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a60932f1a6dcc8562c0f46487791cace8" name="a60932f1a6dcc8562c0f46487791cace8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60932f1a6dcc8562c0f46487791cace8">&#9670;&#160;</a></span>FB_FMT_Y1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y1&#160;&#160;&#160;0         /* BPP=1, monochrome */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00032">32</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aa0b22eb1200e8dd2400e4871ac493001" name="aa0b22eb1200e8dd2400e4871ac493001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b22eb1200e8dd2400e4871ac493001">&#9670;&#160;</a></span>FB_FMT_Y16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y16&#160;&#160;&#160;4         /* BPP=16, 16-bit uncompressed greyscale */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00036">36</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb5b40368918e13412dba59058e691c3" name="aeb5b40368918e13412dba59058e691c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5b40368918e13412dba59058e691c3">&#9670;&#160;</a></span>FB_FMT_Y2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y2&#160;&#160;&#160;1         /* BPP=2, 2-bit uncompressed greyscale */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00033">33</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a64e3dec8903da438be814a58bc7aa583" name="a64e3dec8903da438be814a58bc7aa583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64e3dec8903da438be814a58bc7aa583">&#9670;&#160;</a></span>FB_FMT_Y211</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y211&#160;&#160;&#160;42          /* BPP=8  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00109">109</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="adcd94c12228792a71cb9e6b8dd648c71" name="adcd94c12228792a71cb9e6b8dd648c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd94c12228792a71cb9e6b8dd648c71">&#9670;&#160;</a></span>FB_FMT_Y4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y4&#160;&#160;&#160;2         /* BPP=4, 4-bit uncompressed greyscale */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00034">34</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="adcde5ef4ec841cda19748a0256483eb6" name="adcde5ef4ec841cda19748a0256483eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcde5ef4ec841cda19748a0256483eb6">&#9670;&#160;</a></span>FB_FMT_Y411</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y411&#160;&#160;&#160;41          /* BPP=12  YUV 4:1:1 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00108">108</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7f170c6c96c9e4d80fc8d968e1d6b6a3" name="a7f170c6c96c9e4d80fc8d968e1d6b6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f170c6c96c9e4d80fc8d968e1d6b6a3">&#9670;&#160;</a></span>FB_FMT_Y41B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y41B&#160;&#160;&#160;59          /* BPP=12?  4:1:1 planar. */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00132">132</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ae6333a6d084e343ed764cab20cf4eaeb" name="ae6333a6d084e343ed764cab20cf4eaeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6333a6d084e343ed764cab20cf4eaeb">&#9670;&#160;</a></span>FB_FMT_Y41P</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y41P&#160;&#160;&#160;40          /* BPP=12  YUV 4:1:1 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00107">107</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a4233300c4d029aef6d03bf9ae2552181" name="a4233300c4d029aef6d03bf9ae2552181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4233300c4d029aef6d03bf9ae2552181">&#9670;&#160;</a></span>FB_FMT_Y41T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y41T&#160;&#160;&#160;43          /* BPP=12  Y41P LSB <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a486a224a37654b905ffd6f7bbe11e765">for</a> transparency */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00110">110</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ad7b2271df6a801daedb66fb7f7b18acb" name="ad7b2271df6a801daedb66fb7f7b18acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b2271df6a801daedb66fb7f7b18acb">&#9670;&#160;</a></span>FB_FMT_Y422</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y422&#160;&#160;&#160;<a class="el" href="#a2a78b83274e6194df2c606f12d0a0d55">FB_FMT_UYVY</a> /* BPP=16  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00098">98</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a19683810da4b1b278e05e26702ce5bd3" name="a19683810da4b1b278e05e26702ce5bd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19683810da4b1b278e05e26702ce5bd3">&#9670;&#160;</a></span>FB_FMT_Y42B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y42B&#160;&#160;&#160;60          /* BPP=16?  YUV 4:2:2 planar. */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00133">133</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a1df9886c4d9b16d5ad4f5f48b97e193e" name="a1df9886c4d9b16d5ad4f5f48b97e193e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1df9886c4d9b16d5ad4f5f48b97e193e">&#9670;&#160;</a></span>FB_FMT_Y42T</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y42T&#160;&#160;&#160;44          /* BPP=16  UYVY LSB <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#a486a224a37654b905ffd6f7bbe11e765">for</a> transparency */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00111">111</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a43c2a90c7da5106a27f356767d88978e" name="a43c2a90c7da5106a27f356767d88978e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c2a90c7da5106a27f356767d88978e">&#9670;&#160;</a></span>FB_FMT_Y8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y8&#160;&#160;&#160;3         /* BPP=8, 8-bit uncompressed greyscale */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00035">35</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ae9c013af56e7783601246a6968f9b3f6" name="ae9c013af56e7783601246a6968f9b3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c013af56e7783601246a6968f9b3f6">&#9670;&#160;</a></span>FB_FMT_Y800</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_Y800&#160;&#160;&#160;<a class="el" href="#a43c2a90c7da5106a27f356767d88978e">FB_FMT_Y8</a> /* BPP=8 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00038">38</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ac28c38ef979a8025c43e1c593715d37b" name="ac28c38ef979a8025c43e1c593715d37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28c38ef979a8025c43e1c593715d37b">&#9670;&#160;</a></span>FB_FMT_YUNV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YUNV&#160;&#160;&#160;<a class="el" href="#af064a811a3bd3c25e677c35295005680">FB_FMT_YUYV</a> /* BPP=16  YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00105">105</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ac738a1d22a6c629e98fcb677c100b704" name="ac738a1d22a6c629e98fcb677c100b704"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac738a1d22a6c629e98fcb677c100b704">&#9670;&#160;</a></span>FB_FMT_YUV9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YUV9&#160;&#160;&#160;47          /* BPP=9? */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00119">119</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="afbbc5243acd50db53ebf849a16f45276" name="afbbc5243acd50db53ebf849a16f45276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbc5243acd50db53ebf849a16f45276">&#9670;&#160;</a></span>FB_FMT_YUVP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YUVP&#160;&#160;&#160;45          /* BPP=24? YCbCr 4:2:2 Y0U0Y1V0 <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt.html#ad36ee2c2c777074da83c20d1df62be0e">order</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00112">112</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cc928b79d653b859d9e1b6916045e69" name="a4cc928b79d653b859d9e1b6916045e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc928b79d653b859d9e1b6916045e69">&#9670;&#160;</a></span>FB_FMT_YUY2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YUY2&#160;&#160;&#160;<a class="el" href="#af064a811a3bd3c25e677c35295005680">FB_FMT_YUYV</a> /* BPP=16  YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00104">104</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="af064a811a3bd3c25e677c35295005680" name="af064a811a3bd3c25e677c35295005680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af064a811a3bd3c25e677c35295005680">&#9670;&#160;</a></span>FB_FMT_YUYV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YUYV&#160;&#160;&#160;38          /* BPP=16  YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00103">103</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7d6a88a03101a2a0aca5377d2fd01c8e" name="a7d6a88a03101a2a0aca5377d2fd01c8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d6a88a03101a2a0aca5377d2fd01c8e">&#9670;&#160;</a></span>FB_FMT_YV12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YV12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">50          <span class="comment">/* BPP=12  8-bit Y followed by 8-bit</span></div>
+<div class="line"><span class="comment">*         2x2 VU */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00122">122</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aabc9d9e203275d60255771c392584be4" name="aabc9d9e203275d60255771c392584be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabc9d9e203275d60255771c392584be4">&#9670;&#160;</a></span>FB_FMT_YV16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YV16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">49          <span class="comment">/* BPP=16  8-bit Y followed by 8-bit</span></div>
+<div class="line"><span class="comment">*         2x1 VU */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00121">121</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a696f2e1f104707a2b2f917b6c9a4ed03" name="a696f2e1f104707a2b2f917b6c9a4ed03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a696f2e1f104707a2b2f917b6c9a4ed03">&#9670;&#160;</a></span>FB_FMT_YVU9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YVU9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">46          <span class="comment">/* BPP=9   8-bit Y followed by 8-bit</span></div>
+<div class="line"><span class="comment">*         4x4 VU */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00118">118</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a742af95de4172a972d83a1faabe22fc0" name="a742af95de4172a972d83a1faabe22fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742af95de4172a972d83a1faabe22fc0">&#9670;&#160;</a></span>FB_FMT_YVYU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_FMT_YVYU&#160;&#160;&#160;39          /* BPP=16  YUV 4:2:2 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00106">106</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a0f6e8c709a3c880417d726a4082d238b" name="a0f6e8c709a3c880417d726a4082d238b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6e8c709a3c880417d726a4082d238b">&#9670;&#160;</a></span>FB_ISMONO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_ISMONO</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(((<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &gt;= <a class="code hl_define" href="#a60932f1a6dcc8562c0f46487791cace8">FB_FMT_Y1</a>) &amp;&amp; (<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &lt;= <a class="code hl_define" href="#aa0b22eb1200e8dd2400e4871ac493001">FB_FMT_Y16</a>)</div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj_8h_html_a2eb0b42e4093af18beb31744eb94a90c"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></div><div class="ttdeci">lv_obj_flag_t f</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj_8h_source.html#l00239">lv_obj.h:239</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_a60932f1a6dcc8562c0f46487791cace8"><div class="ttname"><a href="#a60932f1a6dcc8562c0f46487791cace8">FB_FMT_Y1</a></div><div class="ttdeci">#define FB_FMT_Y1</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00032">nuttx_video_fb.h:32</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_aa0b22eb1200e8dd2400e4871ac493001"><div class="ttname"><a href="#aa0b22eb1200e8dd2400e4871ac493001">FB_FMT_Y16</a></div><div class="ttdeci">#define FB_FMT_Y16</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00036">nuttx_video_fb.h:36</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00040">40</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a0d70c0a3c417f0023e3531c0f18b4095" name="a0d70c0a3c417f0023e3531c0f18b4095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d70c0a3c417f0023e3531c0f18b4095">&#9670;&#160;</a></span>FB_ISRGB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_ISRGB</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(((<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &gt;= <a class="code hl_define" href="#a88b2e42e2058a8869b0e29616027ea3d">FB_FMT_RGB4</a>) &amp;&amp; (<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &lt;= <a class="code hl_define" href="#a3e2585330b7f11e63cfdfdc354256936">FB_FMT_RGBT32</a>)</div>
+<div class="ttc" id="anuttx__video__fb_8h_html_a3e2585330b7f11e63cfdfdc354256936"><div class="ttname"><a href="#a3e2585330b7f11e63cfdfdc354256936">FB_FMT_RGBT32</a></div><div class="ttdeci">#define FB_FMT_RGBT32</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00081">nuttx_video_fb.h:81</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_a88b2e42e2058a8869b0e29616027ea3d"><div class="ttname"><a href="#a88b2e42e2058a8869b0e29616027ea3d">FB_FMT_RGB4</a></div><div class="ttdeci">#define FB_FMT_RGB4</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00046">nuttx_video_fb.h:46</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00083">83</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="acfdb77e19a955ea242e475d86b506d41" name="acfdb77e19a955ea242e475d86b506d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdb77e19a955ea242e475d86b506d41">&#9670;&#160;</a></span>FB_ISYUV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_ISYUV</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(<a class="code hl_define" href="#aa6bc068ae2c70768885e4327add27b07">FB_ISYUVPACKED</a>(<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) || <a class="code hl_define" href="#ae1fd25d5b56832e15cb154b7a94b4bba">FB_ISYUVPLANAR</a>(<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>))</div>
+<div class="ttc" id="anuttx__video__fb_8h_html_aa6bc068ae2c70768885e4327add27b07"><div class="ttname"><a href="#aa6bc068ae2c70768885e4327add27b07">FB_ISYUVPACKED</a></div><div class="ttdeci">#define FB_ISYUVPACKED(f)</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00114">nuttx_video_fb.h:114</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_ae1fd25d5b56832e15cb154b7a94b4bba"><div class="ttname"><a href="#ae1fd25d5b56832e15cb154b7a94b4bba">FB_ISYUVPLANAR</a></div><div class="ttdeci">#define FB_ISYUVPLANAR(f)</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00137">nuttx_video_fb.h:137</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00138">138</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aa6bc068ae2c70768885e4327add27b07" name="aa6bc068ae2c70768885e4327add27b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6bc068ae2c70768885e4327add27b07">&#9670;&#160;</a></span>FB_ISYUVPACKED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_ISYUVPACKED</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(((<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &gt;= <a class="code hl_define" href="#aa9063ee523a82de0fdebf7f470d83e8f">FB_FMT_AYUV</a>) &amp;&amp; (<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &lt;= <a class="code hl_define" href="#afbbc5243acd50db53ebf849a16f45276">FB_FMT_YUVP</a>)</div>
+<div class="ttc" id="anuttx__video__fb_8h_html_aa9063ee523a82de0fdebf7f470d83e8f"><div class="ttname"><a href="#aa9063ee523a82de0fdebf7f470d83e8f">FB_FMT_AYUV</a></div><div class="ttdeci">#define FB_FMT_AYUV</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00087">nuttx_video_fb.h:87</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_afbbc5243acd50db53ebf849a16f45276"><div class="ttname"><a href="#afbbc5243acd50db53ebf849a16f45276">FB_FMT_YUVP</a></div><div class="ttdeci">#define FB_FMT_YUVP</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00112">nuttx_video_fb.h:112</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00114">114</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ae1fd25d5b56832e15cb154b7a94b4bba" name="ae1fd25d5b56832e15cb154b7a94b4bba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1fd25d5b56832e15cb154b7a94b4bba">&#9670;&#160;</a></span>FB_ISYUVPLANAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_ISYUVPLANAR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em><a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(((<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &gt;= <a class="code hl_define" href="#a696f2e1f104707a2b2f917b6c9a4ed03">FB_FMT_YVU9</a>) &amp;&amp; (<a class="code hl_variable" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a>) &lt;= <a class="code hl_define" href="#ae9acd43983f725eb94cff032621f70d0">FB_FMT_CXY2</a>)</div>
+<div class="ttc" id="anuttx__video__fb_8h_html_a696f2e1f104707a2b2f917b6c9a4ed03"><div class="ttname"><a href="#a696f2e1f104707a2b2f917b6c9a4ed03">FB_FMT_YVU9</a></div><div class="ttdeci">#define FB_FMT_YVU9</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00118">nuttx_video_fb.h:118</a></div></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_ae9acd43983f725eb94cff032621f70d0"><div class="ttname"><a href="#ae9acd43983f725eb94cff032621f70d0">FB_FMT_CXY2</a></div><div class="ttdeci">#define FB_FMT_CXY2</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00135">nuttx_video_fb.h:135</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00137">137</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a873955c2b4ad74c2bf51e368930608eb" name="a873955c2b4ad74c2bf51e368930608eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a873955c2b4ad74c2bf51e368930608eb">&#9670;&#160;</a></span>FB_NO_OVERLAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FB_NO_OVERLAY&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00152">152</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a5929791f89d7cf377a2c378d541e366e" name="a5929791f89d7cf377a2c378d541e366e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5929791f89d7cf377a2c378d541e366e">&#9670;&#160;</a></span>FBIOGET_FRAMERATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_FRAMERATE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0017)  <span class="comment">/* Get frame rate</span></div>
+<div class="line"><span class="comment">* Argument:            int* */</span></div>
+<div class="ttc" id="anuttx__video__fb_8h_html_a9952892c656608ccfee75827c9522555"><div class="ttname"><a href="#a9952892c656608ccfee75827c9522555">_FBIOC</a></div><div class="ttdeci">#define _FBIOC(x)</div><div class="ttdef"><b>Definition</b> <a href="nuttx__video__fb_8h_source.html#l00024">nuttx_video_fb.h:24</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00259">259</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a692fc640698d6b00cd291f2b1ce1b1b8" name="a692fc640698d6b00cd291f2b1ce1b1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692fc640698d6b00cd291f2b1ce1b1b8">&#9670;&#160;</a></span>FBIOGET_FSCREENINFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_FSCREENINFO&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x001c)  /* Get video fix info */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00274">274</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a102ad1acbc09036b3a4943a513760ef4" name="a102ad1acbc09036b3a4943a513760ef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a102ad1acbc09036b3a4943a513760ef4">&#9670;&#160;</a></span>FBIOGET_PLANEINFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_PLANEINFO&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0002)  /* Get video plane info */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00179">179</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aa82373734ca838805bac603c22618f3a" name="aa82373734ca838805bac603c22618f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa82373734ca838805bac603c22618f3a">&#9670;&#160;</a></span>FBIOGET_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_POWER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0015)  <span class="comment">/* Get panel current power</span></div>
+<div class="line"><span class="comment">* Argument:            int* */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00257">257</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7ea5c243e9106817fa51fd13b533d3f6" name="a7ea5c243e9106817fa51fd13b533d3f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea5c243e9106817fa51fd13b533d3f6">&#9670;&#160;</a></span>FBIOGET_VIDEOINFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_VIDEOINFO&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0001)  /* Get color plane info */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00176">176</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a140bb702dad2959090d3117088b3b412" name="a140bb702dad2959090d3117088b3b412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140bb702dad2959090d3117088b3b412">&#9670;&#160;</a></span>FBIOGET_VSCREENINFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOGET_VSCREENINFO&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x001b)  /* Get video variable info */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00271">271</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="ae38bf8967e4700c8ea49026b2aca7d96" name="ae38bf8967e4700c8ea49026b2aca7d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae38bf8967e4700c8ea49026b2aca7d96">&#9670;&#160;</a></span>FBIOPAN_CLEAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOPAN_CLEAR&#160;&#160;&#160;<a class="el" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0019)  /* Pan clear */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00263">263</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="aecf4c24ba1829e6b29e97cccdb8502b5" name="aecf4c24ba1829e6b29e97cccdb8502b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf4c24ba1829e6b29e97cccdb8502b5">&#9670;&#160;</a></span>FBIOPAN_DISPLAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOPAN_DISPLAY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0018)  <span class="comment">/* Pan display</span></div>
+<div class="line"><span class="comment">* Argument: read-only struct</span></div>
+<div class="line"><span class="comment">*           fb_planeinfo_s* */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00261">261</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a8767937829eea72715f4234ad643b632" name="a8767937829eea72715f4234ad643b632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8767937829eea72715f4234ad643b632">&#9670;&#160;</a></span>FBIOSET_FRAMERATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOSET_FRAMERATE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0016)  <span class="comment">/* Set frame rate</span></div>
+<div class="line"><span class="comment">* Argument:             int */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00258">258</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a655e64697eccd72a469ce5be0b62c66a" name="a655e64697eccd72a469ce5be0b62c66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655e64697eccd72a469ce5be0b62c66a">&#9670;&#160;</a></span>FBIOSET_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOSET_POWER</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x0014)  <span class="comment">/* Set panel power</span></div>
+<div class="line"><span class="comment">* Argument:             int */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00256">256</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a id="a7370e1fe2f6362888d85ab34810325d5" name="a7370e1fe2f6362888d85ab34810325d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7370e1fe2f6362888d85ab34810325d5">&#9670;&#160;</a></span>FBIOSET_VSYNCOFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FBIOSET_VSYNCOFFSET</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#a9952892c656608ccfee75827c9522555">_FBIOC</a>(0x001a)  <span class="comment">/* Set VSync offset in usec</span></div>
+<div class="line"><span class="comment">* Argument:             int */</span></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00267">267</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="acf4bc3e298c520d74de09d0d533e2d46" name="acf4bc3e298c520d74de09d0d533e2d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4bc3e298c520d74de09d0d533e2d46">&#9670;&#160;</a></span>fb_coord_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="stdint_8h.html#a273cf69d639a59973b6019625df33e30">uint16_t</a> <a class="el" href="#acf4bc3e298c520d74de09d0d533e2d46">fb_coord_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="nuttx__video__fb_8h_source.html#l00282">282</a> del archivo <a class="el" href="nuttx__video__fb_8h_source.html">nuttx_video_fb.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_f3def1a0aa02097d7e8c0e4b8cca1ae4.html">drivers</a></li><li class="navelem"><a href="dir_181cd89fa5035a80201781c2ee2e4462.html">nuttx</a></li><li class="navelem"><a href="dir_f5afd6d549ad0c838c713b57ec58fc47.html">mock</a></li><li class="navelem"><a href="nuttx__video__fb_8h.html">nuttx_video_fb.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

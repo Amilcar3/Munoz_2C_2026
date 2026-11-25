@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/misc/lv_anim.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lvgl_2misc_2lv__anim_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_anim.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lvgl_2misc_2lv__anim_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__anim.html">    1</a></span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1value.html">lvglgdb.value</a> <span class="keyword">import</span> Value, ValueInput</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="foldopen" id="foldopen00004" data-start="" data-end="">
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html">    4</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html">LVAnim</a>(<a class="code hl_class" href="classlvglgdb_1_1value_1_1_value.html">Value</a>):</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL animation wrapper&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a55ffaa158268a0b623efad6768c15185">    7</a></span><span class="stringliteral">    _DISPLAY_SPEC = {</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="stringliteral">        &quot;info&quot;: [</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="stringliteral">            (&quot;_title&quot;, lambda d: f&quot;Animation @{d[&#39;addr&#39;]}&quot;),</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="stringliteral">            &quot;var&quot;,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="stringliteral">            &quot;exec_cb&quot;,</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="stringliteral">            &quot;path_cb&quot;,</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="stringliteral">            &quot;start_cb&quot;,</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="stringliteral">            &quot;completed_cb&quot;,</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="stringliteral">            &quot;deleted_cb&quot;,</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="stringliteral">            &quot;user_data&quot;,</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="stringliteral">            (&quot;value&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="stringliteral">                f&quot;{d[&#39;start_value&#39;]} -&gt; {d[&#39;current_value&#39;]}&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="stringliteral">                f&quot; -&gt; {d[&#39;end_value&#39;]}&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="stringliteral">            (&quot;duration&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="stringliteral">                f&quot;{d[&#39;duration&#39;]}ms  act_time={d[&#39;act_time&#39;]}ms&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="stringliteral">            (&quot;repeat&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="stringliteral">                f&quot;{&#39;inf&#39; if d[&#39;repeat_cnt&#39;] == 0xFFFFFFFF else d[&#39;repeat_cnt&#39;]}&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="stringliteral">                f&quot;  repeat_delay={d[&#39;repeat_delay&#39;]}ms&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="stringliteral">            (&quot;reverse&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="stringliteral">                f&quot;dur={d[&#39;reverse_duration&#39;]}ms&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="stringliteral">                f&quot;  delay={d[&#39;reverse_delay&#39;]}ms&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="stringliteral">            (&quot;status&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="stringliteral">                f&quot;{d[&#39;status&#39;]}  early_apply={d[&#39;early_apply&#39;]}&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="stringliteral">        ],</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="stringliteral">        &quot;table&quot;: [</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="stringliteral">            (&quot;value(start/cur/end)&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="stringliteral">                f&quot;{d[&#39;start_value&#39;]}/{d[&#39;current_value&#39;]}/{d[&#39;end_value&#39;]}&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="stringliteral">            (&quot;duration&quot;, lambda d: f&quot;{d[&#39;duration&#39;]}ms&quot;),</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="stringliteral">            (&quot;act_time&quot;, lambda d: f&quot;{d[&#39;act_time&#39;]}ms&quot;),</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="stringliteral">            (&quot;repeat&quot;, lambda d: (</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="stringliteral">                &quot;inf&quot; if d[&quot;repeat_cnt&quot;] == 0xFFFFFFFF</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="stringliteral">                else str(d[&quot;repeat_cnt&quot;])</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="stringliteral">            )),</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="stringliteral">        ],</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="stringliteral">        &quot;empty_msg&quot;: &quot;No active animations.&quot;,</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="stringliteral">    }</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="stringliteral"></span> </div>
+<div class="foldopen" id="foldopen00050" data-start="" data-end="">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a9ea5a09a8090b8e095310d709eb58752">   50</a></span><span class="stringliteral">    def __init__(self, anim: ValueInput):</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="stringliteral">        super().__init__(Value.normalize(anim, &quot;lv_anim_t&quot;))</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00054" data-start="" data-end="">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a25e7a598eadc58f4190bd8da2fbc36d6">   54</a></span><span class="stringliteral">    def var(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="stringliteral">        return self.super_value(&quot;var&quot;)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00058" data-start="" data-end="">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a03b035245ee4b250e5dd3b9a800a7395">   58</a></span><span class="stringliteral">    def exec_cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="stringliteral">        return self.super_value(&quot;exec_cb&quot;)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00062" data-start="" data-end="">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a115017d84daa56ddcb86a10ac61aa566">   62</a></span><span class="stringliteral">    def start_cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">        return self.super_value(&quot;start_cb&quot;)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00066" data-start="" data-end="">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a20e2030013e68665c19815c38c8b08fb">   66</a></span><span class="stringliteral">    def completed_cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="stringliteral">        return self.super_value(&quot;completed_cb&quot;)</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00070" data-start="" data-end="">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a203b35a71e851b8154b6216dcc99bd05">   70</a></span><span class="stringliteral">    def deleted_cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="stringliteral">        return self.super_value(&quot;deleted_cb&quot;)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00074" data-start="" data-end="">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#af72b1809f47fb793e9b6e8837c781559">   74</a></span><span class="stringliteral">    def path_cb(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="stringliteral">        return self.super_value(&quot;path_cb&quot;)</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a6654f37d5913529ade27452705359fb5">   78</a></span><span class="stringliteral">    def user_data(self) -&gt; Value:</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="stringliteral">        return self.super_value(&quot;user_data&quot;)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00082" data-start="" data-end="">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#af74ce8cc0adb0dd6eb60c2af79411151">   82</a></span><span class="stringliteral">    def start_value(self) -&gt; int:</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="stringliteral">        return int(self.super_value(&quot;start_value&quot;))</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00086" data-start="" data-end="">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a79600bc9f182ffc4e38eaba5384244a7">   86</a></span><span class="stringliteral">    def current_value(self) -&gt; int:</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="stringliteral">        return int(self.super_value(&quot;current_value&quot;))</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00090" data-start="" data-end="">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#ae1aeeeec2bbab444f3a73ea4fb63f3a0">   90</a></span><span class="stringliteral">    def end_value(self) -&gt; int:</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="stringliteral">        return int(self.super_value(&quot;end_value&quot;))</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a70e3b61c4e068ed573770de36baeddfd">   94</a></span><span class="stringliteral">    def duration(self) -&gt; int:</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="stringliteral">        return int(self.super_value(&quot;duration&quot;))</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00098" data-start="" data-end="">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a6fdf9524debfe4ac19dc7b9a0ab47246">   98</a></span><span class="stringliteral">    def act_time(self) -&gt; int:</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="stringliteral">        return int(self.super_value(&quot;act_time&quot;))</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00102" data-start="" data-end="">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a036b78a50648f40189a1568e4b46022b">  102</a></span><span class="stringliteral">    def reverse_duration(self) -&gt; int:</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="stringliteral">        return self.safe_field(&quot;reverse_duration&quot;, 0, int)</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00106" data-start="" data-end="">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a4ef3b8dec8e1de2dafd7042fcaacfc03">  106</a></span><span class="stringliteral">    def reverse_delay(self) -&gt; int:</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="stringliteral">        return self.safe_field(&quot;reverse_delay&quot;, 0, int)</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00110" data-start="" data-end="">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a3f7719f7a9a7d630c3c54473a87a7957">  110</a></span><span class="stringliteral">    def repeat_delay(self) -&gt; int:</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="stringliteral">        return int(self.super_value(&quot;repeat_delay&quot;))</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00114" data-start="" data-end="">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#ae10cb33c94d4a123cc0ac95f3a44fe6c">  114</a></span><span class="stringliteral">    def repeat_cnt(self) -&gt; int:</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="stringliteral">        return int(self.super_value(&quot;repeat_cnt&quot;))</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00118" data-start="" data-end="">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#aab203080aaaa226d0978a6bbe145ccb3">  118</a></span><span class="stringliteral">    def is_paused(self) -&gt; bool:</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="stringliteral">        return self.safe_field(&quot;is_paused&quot;, False, bool)</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00122" data-start="" data-end="">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#acc47fa83250426b61355d50b657dbf3c">  122</a></span><span class="stringliteral">    def reverse_play_in_progress(self) -&gt; bool:</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="stringliteral">        return self.safe_field(&quot;reverse_play_in_progress&quot;, False, bool)</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="stringliteral"></span> </div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="stringliteral">    @property</span></div>
+<div class="foldopen" id="foldopen00126" data-start="" data-end="">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#ad862a3d24239f619f94fe9c633905f86">  126</a></span><span class="stringliteral">    def early_apply(self) -&gt; bool:</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="stringliteral">        return self.safe_field(&quot;early_apply&quot;, False, bool)</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="stringliteral"></span> </div>
+</div>
+<div class="foldopen" id="foldopen00129" data-start="" data-end="">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#adf03fb71a81e88972c1538d47c5ab096">  129</a></span><span class="stringliteral">    def _status_str(self) -&gt; str:</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="stringliteral">        &quot;&quot;&quot;</span>Short status string for table display.&quot;&quot;&quot;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a711a1b566bcdb0a7ab8a1af412fd852f">  131</a></span>        if self.is_paused:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            return &quot;paused&quot;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a86f11403b12ec95b93333d92c066c418">  133</a></span>        if self.reverse_play_in_progress:</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            return &quot;reverse&quot;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        return &quot;running&quot;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+</div>
+<div class="foldopen" id="foldopen00137" data-start="" data-end="">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a221f9c63ad28edd91c065b215d15fc8a">  137</a></span>    def snapshot(self):</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        from lvglgdb.lvgl.snapshot import Snapshot</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        from lvglgdb.lvgl.data_utils import fmt_cb, ptr_or_none</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        d = {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            &quot;addr&quot;: hex(int(self)),</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            &quot;var&quot;: str(self.var),</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            &quot;var_addr&quot;: ptr_or_none(self.var),</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            &quot;exec_cb&quot;: fmt_cb(self.exec_cb),</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            &quot;path_cb&quot;: fmt_cb(self.path_cb),</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            &quot;start_cb&quot;: fmt_cb(self.start_cb),</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            &quot;completed_cb&quot;: fmt_cb(self.completed_cb),</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            &quot;deleted_cb&quot;: fmt_cb(self.deleted_cb),</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            &quot;user_data&quot;: str(self.user_data),</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            &quot;start_value&quot;: self.start_value,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            &quot;current_value&quot;: self.current_value,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            &quot;end_value&quot;: self.end_value,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            &quot;duration&quot;: self.duration,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            &quot;act_time&quot;: self.act_time,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            &quot;repeat_cnt&quot;: self.repeat_cnt,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            &quot;repeat_delay&quot;: self.repeat_delay,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            &quot;reverse_duration&quot;: self.reverse_duration,</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            &quot;reverse_delay&quot;: self.reverse_delay,</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            &quot;status&quot;: self._status_str(),</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            &quot;early_apply&quot;: self.early_apply,</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        return Snapshot(d, source=self, display_spec=self._DISPLAY_SPEC)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    @staticmethod</div>
+<div class="foldopen" id="foldopen00166" data-start="" data-end="">
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html#a60b4c4df4ce08e5c5ce3c51816cc562f">  166</a></span>    def snapshots(anims):</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        return [anim.snapshot() for anim in anims]</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__anim_1_1_l_v_anim.html">lvglgdb.lvgl.misc.lv_anim.LVAnim</a></div><div class="ttdef"><b>Definition</b> <a href="#l00004">lv_anim.py:4</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html">lvglgdb.value.Value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00006">value.py:6</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1value_html"><div class="ttname"><a href="namespacelvglgdb_1_1value.html">lvglgdb.value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00001">value.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_f8ea00a3c574e198478017a91384b346.html">misc</a></li><li class="navelem"><a href="lvgl_2misc_2lv__anim_8py.html">lv_anim.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

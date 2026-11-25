@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/misc/lv_text_private.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__text__private_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_text_private.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__text__private_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef LV_TEXT_PRIVATE_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define LV_TEXT_PRIVATE_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="lvgl__public_8h.html">../lvgl_public.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef LV_TXT_COLOR_CMD</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define LV_TXT_COLOR_CMD &quot;#&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#adbd8e12ae313288884071ea860ee9470">   27</a></span><span class="preprocessor">#define LV_TXT_ENC_UTF8 1</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#a7b73200a4867c41de38296a6e5b65233">   28</a></span><span class="preprocessor">#define LV_TXT_ENC_ASCII 2</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#a092e9bff5796901a49f3b4fecbfa6580">   30</a></span><span class="preprocessor">#define LV_TEXT_LEN_MAX UINT32_MAX</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114d">   37</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da2b5fe999a16906b4131f8eae657a293b">   38</a></span>    <a class="code hl_enumvalue" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da2b5fe999a16906b4131f8eae657a293b">LV_TEXT_CMD_STATE_WAIT</a>, </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da7f4be2bb77c23de87f77e962fa29ab8c">   39</a></span>    <a class="code hl_enumvalue" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da7f4be2bb77c23de87f77e962fa29ab8c">LV_TEXT_CMD_STATE_PAR</a>,  </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114daf28008d7d78cceaba9308ac5fe353607">   40</a></span>    <a class="code hl_enumvalue" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114daf28008d7d78cceaba9308ac5fe353607">LV_TEXT_CMD_STATE_IN</a>,   </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>} <a class="code hl_enumeration" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114d">lv_text_cmd_state_t</a>;</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structlv__text__attributes__t.html">   43</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structlv__text__attributes__t.html#ab16dcaffc0987b87d9f623c0bd1f77f2">   44</a></span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="structlv__text__attributes__t.html#ab16dcaffc0987b87d9f623c0bd1f77f2">letter_space</a>;   </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structlv__text__attributes__t.html#abbf62ee132bd47b75361aaa275a733b1">   45</a></span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="structlv__text__attributes__t.html#abbf62ee132bd47b75361aaa275a733b1">line_space</a>;     </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structlv__text__attributes__t.html#a76320b581ed6eed0b1fd167ec083b684">   46</a></span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="structlv__text__attributes__t.html#a76320b581ed6eed0b1fd167ec083b684">max_width</a>;      </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structlv__text__attributes__t.html#ade8f7202ae0aee18a3005ffd0a028e20">   47</a></span>    <a class="code hl_enumeration" href="include_2lvgl_2font_2lv__text_8h.html#a9fe3eca2e243f5215e4f53eabd35cecb">lv_text_flag_t</a> <a class="code hl_variable" href="structlv__text__attributes__t.html#ade8f7202ae0aee18a3005ffd0a028e20">text_flags</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a>;</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> * GLOBAL PROTOTYPES</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#a19ff98a84d2533c79ba59b08198526b9">lv_text_attributes_init</a>(<a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a> * attributes);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#a317ebd3748f8ff82f1dc043ebb5d6552">lv_text_get_size_attributes</a>(<a class="code hl_struct" href="structlv__point__t.html">lv_point_t</a> * size_res, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a>, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                 <a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a> * attributes);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_function" href="lv__text__private_8h.html#ad8be22124adc0fed3dfe21c00c91e2be">lv_text_get_width</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                          <span class="keyword">const</span> <a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a> * attributes);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_function" href="lv__text__private_8h.html#a02562f289f126d7268edb4c0dff06180">lv_text_get_line_width</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> length, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                               <span class="keyword">const</span> <a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a> * attributes);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lv__text__private_8h.html#a74590800e4c1678cb32543a69f647db4">lv_text_is_cmd</a>(<a class="code hl_enumeration" href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114d">lv_text_cmd_state_t</a> * <a class="code hl_define" href="lv__cmsis__pack_8txt.html#a89e4273598e9eb000b5609ef2f65996a">state</a>, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> c);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> <a class="code hl_function" href="lv__text__private_8h.html#a1b7abc0c06adb642ac2d5e15340c2644">lv_text_get_next_line</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> len, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> * used_width,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                               <a class="code hl_struct" href="structlv__text__attributes__t.html">lv_text_attributes_t</a> * attributes);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#a4f370388e0e148c60bc8d294e66ca6ec">lv_text_ins</a>(<span class="keywordtype">char</span> * txt_buf, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pos, <span class="keyword">const</span> <span class="keywordtype">char</span> * ins_txt);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#a3d51fce3d7af4515b6fead0cb2b8117e">lv_text_cut</a>(<span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> pos, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> len);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="lv__text__private_8h.html#ac3e445eb980269d553ff1b70d2538978">  139</a></span><span class="keywordtype">char</span> * <a class="code hl_function" href="lv__text__private_8h.html#ac3e445eb980269d553ff1b70d2538978">lv_text_set_text_vfmt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * fmt, <a class="code hl_typedef" href="efi_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a> ap) <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#a7f9cd8663554d2d676fde390bb00bcd6">LV_FORMAT_ATTRIBUTE</a>(1, 0);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#a0998aa6a472a4b6259ccbbf1844d64f3">lv_text_encoded_letter_next_2</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> * letter, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> * letter_next, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> * ofs);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span> <a class="code hl_function" href="lv__text__private_8h.html#aceda72bd7f8d8bfcc7c70aa7ea4c7f24">lv_text_get_size_internal</a>(<a class="code hl_struct" href="structlv__point__t.html">lv_point_t</a> * size_res, <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a>, <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> letter_space,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                               <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> line_space, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max_width, <a class="code hl_enumeration" href="include_2lvgl_2font_2lv__text_8h.html#a9fe3eca2e243f5215e4f53eabd35cecb">lv_text_flag_t</a> <a class="code hl_variable" href="include_2lvgl_2core_2lv__observer_8h.html#a77d414ff90e339cae0846e84dd6885d3">flag</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> lv_text_is_break_char(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> letter)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> i;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">bool</span> ret = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="comment">/*Compare the letter to TXT_BREAK_CHARS*/</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">for</span>(i = 0; <a class="code hl_define" href="lv__conf__cmsis_8h.html#a39568ba761e0c4ce5af64132e036a7e4">LV_TXT_BREAK_CHARS</a>[i] != <span class="charliteral">&#39;\0&#39;</span>; i++) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordflow">if</span>(letter == (<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>)<a class="code hl_define" href="lv__conf__cmsis_8h.html#a39568ba761e0c4ce5af64132e036a7e4">LV_TXT_BREAK_CHARS</a>[i]) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            ret = <span class="keyword">true</span>; <span class="comment">/*If match then it is break char*/</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>}</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> lv_text_is_hanging_space(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> letter)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>{</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">return</span> letter == <span class="charliteral">&#39; &#39;</span> || letter == <span class="charliteral">&#39;\n&#39;</span> || letter == <span class="charliteral">&#39;\r&#39;</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> lv_text_is_a_word(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> letter)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>{</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">/*Cheap check on invalid letter*/</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span>(letter == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="comment">/*CJK Unified Ideographs*/</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">if</span>(letter &gt;= 0x4E00 &amp;&amp; letter &lt;= 0x9FFF) {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="comment">/*Fullwidth ASCII variants*/</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">if</span>(letter &gt;= 0xFF01 &amp;&amp; letter &lt;= 0xFF5E) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="comment">/*CJK symbols and punctuation*/</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">if</span>(letter &gt;= 0x3000 &amp;&amp; letter &lt;= 0x303F) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">/*CJK Radicals Supplement*/</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">if</span>(letter &gt;= 0x2E80 &amp;&amp; letter &lt;= 0x2EFF) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="comment">/*CJK Strokes*/</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">if</span>(letter &gt;= 0x31C0 &amp;&amp; letter &lt;= 0x31EF) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="comment">/*Hiragana and Katakana*/</span></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordflow">if</span>(letter &gt;= 0x3040 &amp;&amp; letter &lt;= 0x30FF) {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">/*Chinese Vertical Forms*/</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span>(letter &gt;= 0xFE10 &amp;&amp; letter &lt;= 0xFE1F) {</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="comment">/*CJK Compatibility Forms*/</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordflow">if</span>(letter &gt;= 0xFE30 &amp;&amp; letter &lt;= 0xFE4F) {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> lv_text_is_marker(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> letter)</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>{</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span>(letter &lt; 0x20) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="comment">/*U+061C ARABIC LETTER MARK, see https://www.compart.com/en/unicode/block/U+0600*/</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">if</span>(letter == 0x061C) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">/*U+115F HANGUL CHOSEONG FILLER, See https://www.compart.com/en/unicode/block/U+1100*/</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">if</span>(letter == 0x115F) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="comment">/*U+1160 HANGUL JUNGSEONG FILLER*/</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">if</span>(letter == 0x1160) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">/*See https://www.compart.com/en/unicode/block/U+1800*/</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">if</span>(letter &gt;= 0x180B &amp;&amp; letter &lt;= 0x180E) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="comment">/*See https://www.compart.com/en/unicode/block/U+2000*/</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">if</span>(letter &gt;= 0x200B &amp;&amp; letter &lt;= 0x200F) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordflow">if</span>(letter &gt;= 0x2028 &amp;&amp; letter &lt;= 0x202F) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">if</span>(letter &gt;= 0x205F &amp;&amp; letter &lt;= 0x206F) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">/*U+FEFF ZERO WIDTH NO-BREAK SPACE, see https://www.compart.com/en/unicode/block/U+FE70*/</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">if</span>(letter == 0xFEFF) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">if</span>(letter == 0xF8FF) <span class="keywordflow">return</span> <span class="keyword">true</span>; <span class="comment">/*LV_SYMBOL_DUMMY*/</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_font_get_bottom_trim_internal(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font, <a class="code hl_enumeration" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0">lv_text_leading_trim_t</a> trim)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>{</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__assert_8h.html#a6f28be74978da222b03c2694241d3d01">LV_ASSERT</a>(font != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keywordflow">switch</span>(trim) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0adc3bf7a75de74f03a75f18c14ddfa938">LV_TEXT_LEADING_TRIM_CAPITAL_BASELINE</a>:</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0ae4af5616f96723d260b8de1bc4a87393">LV_TEXT_LEADING_TRIM_LOWER_BASELINE</a>:</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">return</span> font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a75c300f0bad92d7b69cdf4271f22c8a6">base_line</a>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0aa275ee8e8533db94aff1d5c4e83a19a4">LV_TEXT_LEADING_TRIM_NONE</a>:</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a4f3403d1378fd6cd6a18ca25ea6eac1f">LV_TEXT_LEADING_TRIM_CAPITAL</a>:</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a2353d5dcc1b93119ab4f6f429053835d">LV_TEXT_LEADING_TRIM_LOWER</a>:</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#aff96ed12592afd8b7de28e35fb7a47cd">LV_UNREACHABLE</a>();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>}</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_font_get_top_trim_internal(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a> * font, <a class="code hl_enumeration" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0">lv_text_leading_trim_t</a> trim)</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>{</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__assert_8h.html#a6f28be74978da222b03c2694241d3d01">LV_ASSERT</a>(font != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">switch</span>(trim) {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0adc3bf7a75de74f03a75f18c14ddfa938">LV_TEXT_LEADING_TRIM_CAPITAL_BASELINE</a>:</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a4f3403d1378fd6cd6a18ca25ea6eac1f">LV_TEXT_LEADING_TRIM_CAPITAL</a>:</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            <span class="keywordflow">return</span> (font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a0d73a43bf6868cfdc261c0ffe3259766">line_height</a> - font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a75c300f0bad92d7b69cdf4271f22c8a6">base_line</a>) - font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#ae54a863e79e88d78769484618ff87be9">cap_height</a>;</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0ae4af5616f96723d260b8de1bc4a87393">LV_TEXT_LEADING_TRIM_LOWER_BASELINE</a>:</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a2353d5dcc1b93119ab4f6f429053835d">LV_TEXT_LEADING_TRIM_LOWER</a>:</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">return</span> (font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a0d73a43bf6868cfdc261c0ffe3259766">line_height</a> - font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a75c300f0bad92d7b69cdf4271f22c8a6">base_line</a>) - font-&gt;<a class="code hl_variable" href="struct__lv__font__t.html#a4f7c9d0329d40c5421c2b8b7dfdd0572">x_height</a>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0aa275ee8e8533db94aff1d5c4e83a19a4">LV_TEXT_LEADING_TRIM_NONE</a>:</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#aff96ed12592afd8b7de28e35fb7a47cd">LV_UNREACHABLE</a>();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="comment">/***************************************************************</span></div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment"> *  GLOBAL FUNCTION POINTERS FOR CHARACTER ENCODING INTERFACE</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="comment"> ***************************************************************/</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a822e32db44b7fde4595d0060b57775c5">lv_text_encoded_size</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt);</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a2ce41e55c89270a5ee2366d3b467a76e">lv_text_unicode_to_encoded</a>)(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> letter_uni);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a1d67bb7b9ef786868af614d6fd93932e">lv_text_encoded_conv_wc</a>)(<a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> c);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#ac6c9e317a0d51ed17ce79f70108917c8">lv_text_encoded_next</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> * i_start);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span></div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a3d36d90116c497eb8dafe3f62df89340">lv_text_encoded_prev</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> * i_start);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a10c6af2d3b1f6370a6dfd68bfdd16d4d">lv_text_encoded_get_byte_id</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> utf8_id);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#a44351cc27a91d493d1134be99b991c3c">lv_text_encoded_get_char_id</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> byte_id);</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span></div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="keyword">extern</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> (*<span class="keyword">const</span> <a class="code hl_variable" href="lv__text_8c.html#aea0560d7b91ca907e2d1737eec6d3f9a">lv_text_get_encoded_length</a>)(<span class="keyword">const</span> <span class="keywordtype">char</span> * txt);</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>} <span class="comment">/*extern &quot;C&quot;*/</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">#endif </span><span class="comment">/*LV_TEXT_PRIVATE_H*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="aefi_8h_html_af53f622e3b6c080daeb167c1955d7ec1"><div class="ttname"><a href="efi_8h.html#af53f622e3b6c080daeb167c1955d7ec1">va_list</a></div><div class="ttdeci">__builtin_va_list va_list</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00137">efi.h:137</a></div></div>
+<div class="ttc" id="afreetype-_l_i_c_e_n_s_e_8txt_html_a37b112ef047aa5e18e9681fdd373ea8f"><div class="ttname"><a href="freetype-_l_i_c_e_n_s_e_8txt.html#a37b112ef047aa5e18e9681fdd373ea8f">text</a></div><div class="ttdeci">some of them may in addition to the FreeType font various tools and contributions which rely or relate the FreeType Project This license applies to all files found in such and which do not fall under their own license The license affects thus the FreeType font the test documentation and at the very least This license was inspired by the and which all encourage inclusion and use of free software in commercial and freeware products alike As a its main points are we will be interested in any kind of bug in parts or full without having to pay or only parts of in a you must acknowledge somewhere in your documentation that you have used the FreeType with or without in commercial products We disclaim all warranties covering The FreeType Project and assume no liability related to The FreeType Project many people asked us for a preferred form for a credit disclaimer to use in compliance with this license We thus encourage you to use the following text</div><div class="ttdef"><b>Definition</b> <a href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00048">freetype-LICENSE.txt:65</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__observer_8h_html_a77d414ff90e339cae0846e84dd6885d3"><div class="ttname"><a href="include_2lvgl_2core_2lv__observer_8h.html#a77d414ff90e339cae0846e84dd6885d3">flag</a></div><div class="ttdeci">lv_subject_t lv_obj_flag_t flag</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">lv_observer.h:656</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2debugging_2lv__assert_8h_html_a6f28be74978da222b03c2694241d3d01"><div class="ttname"><a href="include_2lvgl_2debugging_2lv__assert_8h.html#a6f28be74978da222b03c2694241d3d01">LV_ASSERT</a></div><div class="ttdeci">#define LV_ASSERT(expr)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00067">lv_assert.h:67</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0">lv_text_leading_trim_t</a></div><div class="ttdeci">lv_text_leading_trim_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00064">lv_text.h:64</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0a2353d5dcc1b93119ab4f6f429053835d"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a2353d5dcc1b93119ab4f6f429053835d">LV_TEXT_LEADING_TRIM_LOWER</a></div><div class="ttdeci">@ LV_TEXT_LEADING_TRIM_LOWER</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00081">lv_text.h:81</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0a4f3403d1378fd6cd6a18ca25ea6eac1f"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0a4f3403d1378fd6cd6a18ca25ea6eac1f">LV_TEXT_LEADING_TRIM_CAPITAL</a></div><div class="ttdeci">@ LV_TEXT_LEADING_TRIM_CAPITAL</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00078">lv_text.h:78</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0aa275ee8e8533db94aff1d5c4e83a19a4"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0aa275ee8e8533db94aff1d5c4e83a19a4">LV_TEXT_LEADING_TRIM_NONE</a></div><div class="ttdeci">@ LV_TEXT_LEADING_TRIM_NONE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00067">lv_text.h:67</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0adc3bf7a75de74f03a75f18c14ddfa938"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0adc3bf7a75de74f03a75f18c14ddfa938">LV_TEXT_LEADING_TRIM_CAPITAL_BASELINE</a></div><div class="ttdeci">@ LV_TEXT_LEADING_TRIM_CAPITAL_BASELINE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00071">lv_text.h:71</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a16e92edc8844320ae0269bc0f98243b0ae4af5616f96723d260b8de1bc4a87393"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a16e92edc8844320ae0269bc0f98243b0ae4af5616f96723d260b8de1bc4a87393">LV_TEXT_LEADING_TRIM_LOWER_BASELINE</a></div><div class="ttdeci">@ LV_TEXT_LEADING_TRIM_LOWER_BASELINE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00075">lv_text.h:75</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2font_2lv__text_8h_html_a9fe3eca2e243f5215e4f53eabd35cecb"><div class="ttname"><a href="include_2lvgl_2font_2lv__text_8h.html#a9fe3eca2e243f5215e4f53eabd35cecb">lv_text_flag_t</a></div><div class="ttdeci">lv_text_flag_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__text_8h_source.html#l00033">lv_text.h:33</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a11e3396cab33231964d98046c4e436af"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a11e3396cab33231964d98046c4e436af">lv_font_t</a></div><div class="ttdeci">struct _lv_font_t lv_font_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00138">lv_types.h:138</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a7f9cd8663554d2d676fde390bb00bcd6"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a7f9cd8663554d2d676fde390bb00bcd6">LV_FORMAT_ATTRIBUTE</a></div><div class="ttdeci">#define LV_FORMAT_ATTRIBUTE(fmtstr, vararg)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00422">lv_types.h:422</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aff96ed12592afd8b7de28e35fb7a47cd"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aff96ed12592afd8b7de28e35fb7a47cd">LV_UNREACHABLE</a></div><div class="ttdeci">#define LV_UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00443">lv_types.h:443</a></div></div>
+<div class="ttc" id="alv__cmsis__pack_8txt_html_a89e4273598e9eb000b5609ef2f65996a"><div class="ttname"><a href="lv__cmsis__pack_8txt.html#a89e4273598e9eb000b5609ef2f65996a">state</a></div><div class="ttdeci">#define state</div><div class="ttdef"><b>Definition</b> <a href="lv__cmsis__pack_8txt_source.html#l00041">lv_cmsis_pack.txt:41</a></div></div>
+<div class="ttc" id="alv__conf__cmsis_8h_html_a39568ba761e0c4ce5af64132e036a7e4"><div class="ttname"><a href="lv__conf__cmsis_8h.html#a39568ba761e0c4ce5af64132e036a7e4">LV_TXT_BREAK_CHARS</a></div><div class="ttdeci">#define LV_TXT_BREAK_CHARS</div><div class="ttdef"><b>Definition</b> <a href="lv__conf__cmsis_8h_source.html#l00910">lv_conf_cmsis.h:910</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a10c6af2d3b1f6370a6dfd68bfdd16d4d"><div class="ttname"><a href="lv__text_8c.html#a10c6af2d3b1f6370a6dfd68bfdd16d4d">lv_text_encoded_get_byte_id</a></div><div class="ttdeci">uint32_t(*const lv_text_encoded_get_byte_id)(const char *, uint32_t)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00059">lv_text.c:59</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a1d67bb7b9ef786868af614d6fd93932e"><div class="ttname"><a href="lv__text_8c.html#a1d67bb7b9ef786868af614d6fd93932e">lv_text_encoded_conv_wc</a></div><div class="ttdeci">uint32_t(*const lv_text_encoded_conv_wc)(uint32_t)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00056">lv_text.c:56</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a2ce41e55c89270a5ee2366d3b467a76e"><div class="ttname"><a href="lv__text_8c.html#a2ce41e55c89270a5ee2366d3b467a76e">lv_text_unicode_to_encoded</a></div><div class="ttdeci">uint32_t(*const lv_text_unicode_to_encoded)(uint32_t)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00055">lv_text.c:55</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a3d36d90116c497eb8dafe3f62df89340"><div class="ttname"><a href="lv__text_8c.html#a3d36d90116c497eb8dafe3f62df89340">lv_text_encoded_prev</a></div><div class="ttdeci">uint32_t(*const lv_text_encoded_prev)(const char *, uint32_t *)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00058">lv_text.c:58</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a44351cc27a91d493d1134be99b991c3c"><div class="ttname"><a href="lv__text_8c.html#a44351cc27a91d493d1134be99b991c3c">lv_text_encoded_get_char_id</a></div><div class="ttdeci">uint32_t(*const lv_text_encoded_get_char_id)(const char *, uint32_t)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00060">lv_text.c:60</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a822e32db44b7fde4595d0060b57775c5"><div class="ttname"><a href="lv__text_8c.html#a822e32db44b7fde4595d0060b57775c5">lv_text_encoded_size</a></div><div class="ttdeci">uint8_t(*const lv_text_encoded_size)(const char *)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00054">lv_text.c:54</a></div></div>
+<div class="ttc" id="alv__text_8c_html_ac6c9e317a0d51ed17ce79f70108917c8"><div class="ttname"><a href="lv__text_8c.html#ac6c9e317a0d51ed17ce79f70108917c8">lv_text_encoded_next</a></div><div class="ttdeci">uint32_t(*const lv_text_encoded_next)(const char *, uint32_t *)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00057">lv_text.c:57</a></div></div>
+<div class="ttc" id="alv__text_8c_html_aea0560d7b91ca907e2d1737eec6d3f9a"><div class="ttname"><a href="lv__text_8c.html#aea0560d7b91ca907e2d1737eec6d3f9a">lv_text_get_encoded_length</a></div><div class="ttdeci">uint32_t(*const lv_text_get_encoded_length)(const char *)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00061">lv_text.c:61</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a02562f289f126d7268edb4c0dff06180"><div class="ttname"><a href="lv__text__private_8h.html#a02562f289f126d7268edb4c0dff06180">lv_text_get_line_width</a></div><div class="ttdeci">int32_t lv_text_get_line_width(const char *txt, uint32_t length, const lv_font_t *font, const lv_text_attributes_t *attributes)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00372">lv_text.c:372</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a0998aa6a472a4b6259ccbbf1844d64f3"><div class="ttname"><a href="lv__text__private_8h.html#a0998aa6a472a4b6259ccbbf1844d64f3">lv_text_encoded_letter_next_2</a></div><div class="ttdeci">char void lv_text_encoded_letter_next_2(const char *txt, uint32_t *letter, uint32_t *letter_next, uint32_t *ofs)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00609">lv_text.c:609</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a19ff98a84d2533c79ba59b08198526b9"><div class="ttname"><a href="lv__text__private_8h.html#a19ff98a84d2533c79ba59b08198526b9">lv_text_attributes_init</a></div><div class="ttdeci">void lv_text_attributes_init(lv_text_attributes_t *attributes)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00087">lv_text.c:87</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a1b7abc0c06adb642ac2d5e15340c2644"><div class="ttname"><a href="lv__text__private_8h.html#a1b7abc0c06adb642ac2d5e15340c2644">lv_text_get_next_line</a></div><div class="ttdeci">uint32_t lv_text_get_next_line(const char *txt, uint32_t len, const lv_font_t *font, int32_t *used_width, lv_text_attributes_t *attributes)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00386">lv_text.c:386</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a317ebd3748f8ff82f1dc043ebb5d6552"><div class="ttname"><a href="lv__text__private_8h.html#a317ebd3748f8ff82f1dc043ebb5d6552">lv_text_get_size_attributes</a></div><div class="ttdeci">void lv_text_get_size_attributes(lv_point_t *size_res, const char *text, const lv_font_t *font, lv_text_attributes_t *attributes)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00116">lv_text.c:116</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a3d51fce3d7af4515b6fead0cb2b8117e"><div class="ttname"><a href="lv__text__private_8h.html#a3d51fce3d7af4515b6fead0cb2b8117e">lv_text_cut</a></div><div class="ttdeci">void lv_text_cut(char *txt, uint32_t pos, uint32_t len)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00548">lv_text.c:548</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a4f370388e0e148c60bc8d294e66ca6ec"><div class="ttname"><a href="lv__text__private_8h.html#a4f370388e0e148c60bc8d294e66ca6ec">lv_text_ins</a></div><div class="ttdeci">void lv_text_ins(char *txt_buf, uint32_t pos, const char *ins_txt)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00527">lv_text.c:527</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_a74590800e4c1678cb32543a69f647db4"><div class="ttname"><a href="lv__text__private_8h.html#a74590800e4c1678cb32543a69f647db4">lv_text_is_cmd</a></div><div class="ttdeci">bool lv_text_is_cmd(lv_text_cmd_state_t *state, uint32_t c)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00170">lv_text.c:170</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_ac3e445eb980269d553ff1b70d2538978"><div class="ttname"><a href="lv__text__private_8h.html#ac3e445eb980269d553ff1b70d2538978">lv_text_set_text_vfmt</a></div><div class="ttdeci">char * lv_text_set_text_vfmt(const char *fmt, va_list ap) LV_FORMAT_ATTRIBUTE(1</div></div>
+<div class="ttc" id="alv__text__private_8h_html_aceda72bd7f8d8bfcc7c70aa7ea4c7f24"><div class="ttname"><a href="lv__text__private_8h.html#aceda72bd7f8d8bfcc7c70aa7ea4c7f24">lv_text_get_size_internal</a></div><div class="ttdeci">void lv_text_get_size_internal(lv_point_t *size_res, const char *text, const lv_font_t *font, int32_t letter_space, int32_t line_space, int32_t max_width, lv_text_flag_t flag)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00100">lv_text.c:100</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_ad8be22124adc0fed3dfe21c00c91e2be"><div class="ttname"><a href="lv__text__private_8h.html#ad8be22124adc0fed3dfe21c00c91e2be">lv_text_get_width</a></div><div class="ttdeci">int32_t lv_text_get_width(const char *txt, uint32_t length, const lv_font_t *font, const lv_text_attributes_t *attributes)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00486">lv_text.c:486</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_af691e4d0a6e6089202b5031650d8114d"><div class="ttname"><a href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114d">lv_text_cmd_state_t</a></div><div class="ttdeci">lv_text_cmd_state_t</div><div class="ttdef"><b>Definition</b> <a href="#l00037">lv_text_private.h:37</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_af691e4d0a6e6089202b5031650d8114da2b5fe999a16906b4131f8eae657a293b"><div class="ttname"><a href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da2b5fe999a16906b4131f8eae657a293b">LV_TEXT_CMD_STATE_WAIT</a></div><div class="ttdeci">@ LV_TEXT_CMD_STATE_WAIT</div><div class="ttdef"><b>Definition</b> <a href="#l00038">lv_text_private.h:38</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_af691e4d0a6e6089202b5031650d8114da7f4be2bb77c23de87f77e962fa29ab8c"><div class="ttname"><a href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114da7f4be2bb77c23de87f77e962fa29ab8c">LV_TEXT_CMD_STATE_PAR</a></div><div class="ttdeci">@ LV_TEXT_CMD_STATE_PAR</div><div class="ttdef"><b>Definition</b> <a href="#l00039">lv_text_private.h:39</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html_af691e4d0a6e6089202b5031650d8114daf28008d7d78cceaba9308ac5fe353607"><div class="ttname"><a href="lv__text__private_8h.html#af691e4d0a6e6089202b5031650d8114daf28008d7d78cceaba9308ac5fe353607">LV_TEXT_CMD_STATE_IN</a></div><div class="ttdeci">@ LV_TEXT_CMD_STATE_IN</div><div class="ttdef"><b>Definition</b> <a href="#l00040">lv_text_private.h:40</a></div></div>
+<div class="ttc" id="alvgl__public_8h_html"><div class="ttname"><a href="lvgl__public_8h.html">lvgl_public.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astdint_8h_html_aba7bc1797add20fe3efdf37ced1182c5"><div class="ttname"><a href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></div><div class="ttdeci">unsigned char uint8_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00124">stdint.h:124</a></div></div>
+<div class="ttc" id="astruct__lv__font__t_html_a0d73a43bf6868cfdc261c0ffe3259766"><div class="ttname"><a href="struct__lv__font__t.html#a0d73a43bf6868cfdc261c0ffe3259766">_lv_font_t::line_height</a></div><div class="ttdeci">int32_t line_height</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font_8h_source.html#l00155">lv_font.h:155</a></div></div>
+<div class="ttc" id="astruct__lv__font__t_html_a4f7c9d0329d40c5421c2b8b7dfdd0572"><div class="ttname"><a href="struct__lv__font__t.html#a4f7c9d0329d40c5421c2b8b7dfdd0572">_lv_font_t::x_height</a></div><div class="ttdeci">int32_t x_height</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font_8h_source.html#l00158">lv_font.h:158</a></div></div>
+<div class="ttc" id="astruct__lv__font__t_html_a75c300f0bad92d7b69cdf4271f22c8a6"><div class="ttname"><a href="struct__lv__font__t.html#a75c300f0bad92d7b69cdf4271f22c8a6">_lv_font_t::base_line</a></div><div class="ttdeci">int32_t base_line</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font_8h_source.html#l00156">lv_font.h:156</a></div></div>
+<div class="ttc" id="astruct__lv__font__t_html_ae54a863e79e88d78769484618ff87be9"><div class="ttname"><a href="struct__lv__font__t.html#ae54a863e79e88d78769484618ff87be9">_lv_font_t::cap_height</a></div><div class="ttdeci">int32_t cap_height</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2font_2lv__font_8h_source.html#l00157">lv_font.h:157</a></div></div>
+<div class="ttc" id="astructlv__point__t_html"><div class="ttname"><a href="structlv__point__t.html">lv_point_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00031">lv_area.h:31</a></div></div>
+<div class="ttc" id="astructlv__text__attributes__t_html"><div class="ttname"><a href="structlv__text__attributes__t.html">lv_text_attributes_t</a></div><div class="ttdef"><b>Definition</b> <a href="#l00043">lv_text_private.h:43</a></div></div>
+<div class="ttc" id="astructlv__text__attributes__t_html_a76320b581ed6eed0b1fd167ec083b684"><div class="ttname"><a href="structlv__text__attributes__t.html#a76320b581ed6eed0b1fd167ec083b684">lv_text_attributes_t::max_width</a></div><div class="ttdeci">int32_t max_width</div><div class="ttdef"><b>Definition</b> <a href="#l00046">lv_text_private.h:46</a></div></div>
+<div class="ttc" id="astructlv__text__attributes__t_html_ab16dcaffc0987b87d9f623c0bd1f77f2"><div class="ttname"><a href="structlv__text__attributes__t.html#ab16dcaffc0987b87d9f623c0bd1f77f2">lv_text_attributes_t::letter_space</a></div><div class="ttdeci">int32_t letter_space</div><div class="ttdef"><b>Definition</b> <a href="#l00044">lv_text_private.h:44</a></div></div>
+<div class="ttc" id="astructlv__text__attributes__t_html_abbf62ee132bd47b75361aaa275a733b1"><div class="ttname"><a href="structlv__text__attributes__t.html#abbf62ee132bd47b75361aaa275a733b1">lv_text_attributes_t::line_space</a></div><div class="ttdeci">int32_t line_space</div><div class="ttdef"><b>Definition</b> <a href="#l00045">lv_text_private.h:45</a></div></div>
+<div class="ttc" id="astructlv__text__attributes__t_html_ade8f7202ae0aee18a3005ffd0a028e20"><div class="ttname"><a href="structlv__text__attributes__t.html#ade8f7202ae0aee18a3005ffd0a028e20">lv_text_attributes_t::text_flags</a></div><div class="ttdeci">lv_text_flag_t text_flags</div><div class="ttdef"><b>Definition</b> <a href="#l00047">lv_text_private.h:47</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_32c820c032576f8606561fc14ebf0e8c.html">misc</a></li><li class="navelem"><a href="lv__text__private_8h.html">lv_text_private.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

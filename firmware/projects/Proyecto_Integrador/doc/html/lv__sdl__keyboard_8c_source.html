@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/drivers/sdl/lv_sdl_keyboard.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__sdl__keyboard_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_sdl_keyboard.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__sdl__keyboard_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="lv__sdl__private_8h.html">lv_sdl_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if LV_USE_SDL</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="lv__text__private_8h.html">../../misc/lv_text_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> *      DEFINES</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *      TYPEDEFS</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">buf</a>[KEYBOARD_BUFFER_SIZE];</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">bool</span> dummy_read;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} lv_sdl_keyboard_t;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  STATIC PROTOTYPES</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">static</span> <span class="keywordtype">void</span> sdl_keyboard_read(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * indev, <a class="code hl_struct" href="structlv__indev__data__t.html">lv_indev_data_t</a> * data);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> keycode_to_ctrl_key(SDL_Keycode sdl_key);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">static</span> <span class="keywordtype">void</span> release_indev_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> * e);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *  STATIC VARIABLES</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * lv_sdl_keyboard_create(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    lv_sdl_keyboard_t * dsc = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a97fef3705e62aacd5c27c84f95186b64">lv_malloc_zeroed</a>(<span class="keyword">sizeof</span>(lv_sdl_keyboard_t));</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__assert_8h.html#a124f08761ffc45565d4511eaf68f777e">LV_ASSERT_MALLOC</a>(dsc);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span>(dsc == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keywordflow">return</span> <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * indev = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a9e8fac2a3892deca39d80d90afdac1b3">lv_indev_create</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__assert_8h.html#a124f08761ffc45565d4511eaf68f777e">LV_ASSERT_MALLOC</a>(indev);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span>(indev == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a>(dsc);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#ad621c9f885cb2304809e295ba0b71b76">lv_indev_set_type</a>(indev, <a class="code hl_enumvalue" href="include_2lvgl_2indev_2lv__indev_8h.html#a11213c9864502e382d5f19b9e6b2de5ba9f8299c12ea91ab8e7a6e783b9b0664d">LV_INDEV_TYPE_KEYPAD</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#ac8bc2642f0f2440e76e9d39b6891eb52">lv_indev_set_read_cb</a>(indev, sdl_keyboard_read);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a41f44ef210dbc4e31244bb94baa95ec1">lv_indev_set_driver_data</a>(indev, dsc);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#aa9f1dc332f31a9a2a1d06b35ac59af3b">lv_indev_set_mode</a>(indev, <a class="code hl_enumvalue" href="include_2lvgl_2indev_2lv__indev_8h.html#abea65055ab3d1ceaa293aca7abee3052aca5969b5c467dd2d63a93141238874b8">LV_INDEV_MODE_EVENT</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a5bebdabb489bf625cb37a7a2be6a970d">lv_indev_add_event_cb</a>(indev, release_indev_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a2b6e10a27dd52c80f3ed04e4bc3ced2b">LV_EVENT_DELETE</a>, indev);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> indev;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment"> *   STATIC FUNCTIONS</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">static</span> <span class="keywordtype">void</span> sdl_keyboard_read(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * indev, <a class="code hl_struct" href="structlv__indev__data__t.html">lv_indev_data_t</a> * data)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    lv_sdl_keyboard_t * dev = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a9d7518f34669ae24da3c119671d32ff0">lv_indev_get_driver_data</a>(indev);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a>(dev-&gt;buf);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">/*Send a release manually*/</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span>(dev-&gt;dummy_read) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        dev-&gt;dummy_read = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;state = <a class="code hl_enumvalue" href="include_2lvgl_2indev_2lv__indev_8h.html#aacdf3efce400e71895f5efb42ee24956aa17473382979b77cb5f5388ff3e11b2e">LV_INDEV_STATE_RELEASED</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">/*Send the pressed character*/</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(len &gt; 0) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        dev-&gt;dummy_read = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;state = <a class="code hl_enumvalue" href="include_2lvgl_2indev_2lv__indev_8h.html#aacdf3efce400e71895f5efb42ee24956aae8cba42264e264514d9789425c14d39">LV_INDEV_STATE_PRESSED</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;key = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">/*Copy the first UTF8 character from the buffer*/</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> utf8_len = <a class="code hl_variable" href="lv__text_8c.html#a822e32db44b7fde4595d0060b57775c5">lv_text_encoded_size</a>(dev-&gt;buf);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span>(utf8_len == 0) utf8_len = 1; <span class="comment">/*Make sure that at least 1 character is read*/</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#a036075376021724a89548607952fc7f1">lv_memcpy</a>(&amp;<a class="code hl_variable" href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">data</a>-&gt;key, dev-&gt;buf, utf8_len);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">/*Drop the first character*/</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#a2469b748454d371afba415c2b776b6f6">lv_memmove</a>(dev-&gt;buf, dev-&gt;buf + utf8_len, len - utf8_len + 1);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">static</span> <span class="keywordtype">void</span> release_indev_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a> * e)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * indev = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> *) <a class="code hl_function" href="include_2lvgl_2core_2lv__event_8h.html#af53ff7139d892df3f552f3d54703fa8f">lv_event_get_user_data</a>(e);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    lv_sdl_keyboard_t * dev = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a9d7518f34669ae24da3c119671d32ff0">lv_indev_get_driver_data</a>(indev);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span>(dev) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a41f44ef210dbc4e31244bb94baa95ec1">lv_indev_set_driver_data</a>(indev, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#ac8bc2642f0f2440e76e9d39b6891eb52">lv_indev_set_read_cb</a>(indev, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a>(dev);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;done&quot;</span>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keywordtype">void</span> lv_sdl_keyboard_handler(SDL_Event * event)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> win_id = <a class="code hl_define" href="stdint_8h.html#ab5eb23180f7cc12b7d6c04a8ec067fdd">UINT32_MAX</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">switch</span>(event-&gt;type) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">case</span> SDL_KEYDOWN:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            win_id = <span class="keyword">event</span>-&gt;key.windowID;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">case</span> SDL_TEXTINPUT:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            win_id = <span class="keyword">event</span>-&gt;text.windowID;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a> * disp = lv_sdl_get_disp_from_win_id(win_id);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">/*Find a suitable indev*/</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a> * indev = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a5ac34da1402e8d7540b17627d262ac01">lv_indev_get_next</a>(<a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">while</span>(indev) {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">if</span>(<a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#ac31b3d74656a0892330359adb39b81cc">lv_indev_get_read_cb</a>(indev) == sdl_keyboard_read) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="comment">/*If disp is NULL for any reason use the first indev with the correct type*/</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">if</span>(disp == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> || <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a184892ae79df198e95b0be8b2503a699">lv_indev_get_display</a>(indev) == disp) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        indev = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a5ac34da1402e8d7540b17627d262ac01">lv_indev_get_next</a>(indev);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span>(indev == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    lv_sdl_keyboard_t * dsc = <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a9d7518f34669ae24da3c119671d32ff0">lv_indev_get_driver_data</a>(indev);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="comment">/* We only care about SDL_KEYDOWN and SDL_TEXTINPUT events */</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">switch</span>(event-&gt;type) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">case</span> SDL_KEYDOWN: {                     <span class="comment">/*Button press*/</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                <span class="keyword">const</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> ctrl_key = keycode_to_ctrl_key(event-&gt;key.keysym.sym);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <span class="keywordflow">if</span>(ctrl_key == <span class="charliteral">&#39;\0&#39;</span>)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a>(dsc-&gt;buf);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordflow">if</span>(len &lt; KEYBOARD_BUFFER_SIZE - 1) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    dsc-&gt;buf[len] = ctrl_key;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    dsc-&gt;buf[len + 1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">case</span> SDL_TEXTINPUT: {                   <span class="comment">/*Text input*/</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="keyword">const</span> <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a>(dsc-&gt;buf) + <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a>(event-&gt;text.text);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                <span class="keywordflow">if</span>(len &lt; KEYBOARD_BUFFER_SIZE - 1)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#ae1a5fc1902872a0f9ecde0f228cf87e9">lv_strcat</a>(dsc-&gt;buf, event-&gt;text.text);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">size_t</span> len = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a>(dsc-&gt;buf);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">while</span>(len) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a5beec9c2aee30d58ebd61acc58923259">lv_indev_read</a>(indev);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="comment">/*Call again to handle dummy read in `sdl_keyboard_read`*/</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_function" href="include_2lvgl_2indev_2lv__indev_8h.html#a5beec9c2aee30d58ebd61acc58923259">lv_indev_read</a>(indev);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        len--;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">static</span> <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> keycode_to_ctrl_key(SDL_Keycode sdl_key)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">/*Remap some key to LV_KEY_... to manage groups*/</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">switch</span>(sdl_key) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">case</span> SDLK_RIGHT:</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">case</span> SDLK_KP_PLUS:</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dad77cbb92e03b53f89e7933fadaf38ab2">LV_KEY_RIGHT</a>;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordflow">case</span> SDLK_LEFT:</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <span class="keywordflow">case</span> SDLK_KP_MINUS:</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da087a04c571deda9bd82386057bd4313a">LV_KEY_LEFT</a>;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">case</span> SDLK_UP:</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da82eb5e1cae7704a974f4974f3021d1ef">LV_KEY_UP</a>;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordflow">case</span> SDLK_DOWN:</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da1b104023df6a6857b1450edeaf07fced">LV_KEY_DOWN</a>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">case</span> SDLK_ESCAPE:</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dac4b1d01e3260ac11d6489c9aa0b2422e">LV_KEY_ESC</a>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">case</span> SDLK_BACKSPACE:</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da7400777a83c342237eff06e1138185da">LV_KEY_BACKSPACE</a>;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">case</span> SDLK_DELETE:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da798af263a85b6730224a4132d45db135">LV_KEY_DEL</a>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">case</span> SDLK_KP_ENTER:</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;\r&#39;</span>:</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dade5cf66b4e8a3a21f8dee3c359b0005b">LV_KEY_ENTER</a>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">case</span> SDLK_TAB:</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">case</span> SDLK_PAGEDOWN:</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dabd46589ff90ce03de97362565601fabe">LV_KEY_NEXT</a>;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">case</span> SDLK_PAGEUP:</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da46c855b0f8769f68b80f88323f59c805">LV_KEY_PREV</a>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">case</span> SDLK_HOME:</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dad0059702787e44499656a96280ae7244">LV_KEY_HOME</a>;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">case</span> SDLK_END:</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da1f1940fcc3e093c3356a0255d6357dd3">LV_KEY_END</a>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span> <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>}</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#endif </span><span class="comment">/*LV_USE_SDL*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_a34581e6a5056b169f0a229f3e51c7771a2b6e10a27dd52c80f3ed04e4bc3ced2b"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a2b6e10a27dd52c80f3ed04e4bc3ced2b">LV_EVENT_DELETE</a></div><div class="ttdeci">@ LV_EVENT_DELETE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__event_8h_source.html#l00091">lv_event.h:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_af53ff7139d892df3f552f3d54703fa8f"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#af53ff7139d892df3f552f3d54703fa8f">lv_event_get_user_data</a></div><div class="ttdeci">void * lv_event_get_user_data(lv_event_t *e)</div><div class="ttdef"><b>Definition</b> <a href="lv__event_8c_source.html#l00299">lv_event.c:299</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da087a04c571deda9bd82386057bd4313a"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da087a04c571deda9bd82386057bd4313a">LV_KEY_LEFT</a></div><div class="ttdeci">@ LV_KEY_LEFT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00027">lv_group.h:27</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da1b104023df6a6857b1450edeaf07fced"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da1b104023df6a6857b1450edeaf07fced">LV_KEY_DOWN</a></div><div class="ttdeci">@ LV_KEY_DOWN</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00025">lv_group.h:25</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da1f1940fcc3e093c3356a0255d6357dd3"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da1f1940fcc3e093c3356a0255d6357dd3">LV_KEY_END</a></div><div class="ttdeci">@ LV_KEY_END</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00035">lv_group.h:35</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da46c855b0f8769f68b80f88323f59c805"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da46c855b0f8769f68b80f88323f59c805">LV_KEY_PREV</a></div><div class="ttdeci">@ LV_KEY_PREV</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00033">lv_group.h:33</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da7400777a83c342237eff06e1138185da"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da7400777a83c342237eff06e1138185da">LV_KEY_BACKSPACE</a></div><div class="ttdeci">@ LV_KEY_BACKSPACE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00030">lv_group.h:30</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da798af263a85b6730224a4132d45db135"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da798af263a85b6730224a4132d45db135">LV_KEY_DEL</a></div><div class="ttdeci">@ LV_KEY_DEL</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00029">lv_group.h:29</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22da82eb5e1cae7704a974f4974f3021d1ef"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22da82eb5e1cae7704a974f4974f3021d1ef">LV_KEY_UP</a></div><div class="ttdeci">@ LV_KEY_UP</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00024">lv_group.h:24</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22dabd46589ff90ce03de97362565601fabe"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dabd46589ff90ce03de97362565601fabe">LV_KEY_NEXT</a></div><div class="ttdeci">@ LV_KEY_NEXT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00032">lv_group.h:32</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22dac4b1d01e3260ac11d6489c9aa0b2422e"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dac4b1d01e3260ac11d6489c9aa0b2422e">LV_KEY_ESC</a></div><div class="ttdeci">@ LV_KEY_ESC</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00028">lv_group.h:28</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22dad0059702787e44499656a96280ae7244"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dad0059702787e44499656a96280ae7244">LV_KEY_HOME</a></div><div class="ttdeci">@ LV_KEY_HOME</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00034">lv_group.h:34</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22dad77cbb92e03b53f89e7933fadaf38ab2"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dad77cbb92e03b53f89e7933fadaf38ab2">LV_KEY_RIGHT</a></div><div class="ttdeci">@ LV_KEY_RIGHT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00026">lv_group.h:26</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__group_8h_html_ab2463aef0f356690e6e37c418146c22dade5cf66b4e8a3a21f8dee3c359b0005b"><div class="ttname"><a href="include_2lvgl_2core_2lv__group_8h.html#ab2463aef0f356690e6e37c418146c22dade5cf66b4e8a3a21f8dee3c359b0005b">LV_KEY_ENTER</a></div><div class="ttdeci">@ LV_KEY_ENTER</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__group_8h_source.html#l00031">lv_group.h:31</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2debugging_2lv__assert_8h_html_a124f08761ffc45565d4511eaf68f777e"><div class="ttname"><a href="include_2lvgl_2debugging_2lv__assert_8h.html#a124f08761ffc45565d4511eaf68f777e">LV_ASSERT_MALLOC</a></div><div class="ttdeci">#define LV_ASSERT_MALLOC(p)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">lv_assert.h:86</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a11213c9864502e382d5f19b9e6b2de5ba9f8299c12ea91ab8e7a6e783b9b0664d"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a11213c9864502e382d5f19b9e6b2de5ba9f8299c12ea91ab8e7a6e783b9b0664d">LV_INDEV_TYPE_KEYPAD</a></div><div class="ttdeci">@ LV_INDEV_TYPE_KEYPAD</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2indev_2lv__indev_8h_source.html#l00033">lv_indev.h:33</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a184892ae79df198e95b0be8b2503a699"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a184892ae79df198e95b0be8b2503a699">lv_indev_get_display</a></div><div class="ttdeci">lv_display_t * lv_indev_get_display(const lv_indev_t *indev)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00345">lv_indev.c:345</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a41f44ef210dbc4e31244bb94baa95ec1"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a41f44ef210dbc4e31244bb94baa95ec1">lv_indev_set_driver_data</a></div><div class="ttdeci">void lv_indev_set_driver_data(lv_indev_t *indev, void *driver_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00311">lv_indev.c:311</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a5ac34da1402e8d7540b17627d262ac01"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a5ac34da1402e8d7540b17627d262ac01">lv_indev_get_next</a></div><div class="ttdeci">lv_indev_t * lv_indev_get_next(lv_indev_t *indev)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00156">lv_indev.c:156</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a5bebdabb489bf625cb37a7a2be6a970d"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a5bebdabb489bf625cb37a7a2be6a970d">lv_indev_add_event_cb</a></div><div class="ttdeci">lv_event_dsc_t * lv_indev_add_event_cb(lv_indev_t *indev, lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00651">lv_indev.c:651</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a5beec9c2aee30d58ebd61acc58923259"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a5beec9c2aee30d58ebd61acc58923259">lv_indev_read</a></div><div class="ttdeci">void lv_indev_read(lv_indev_t *indev)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00202">lv_indev.c:202</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a9d7518f34669ae24da3c119671d32ff0"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a9d7518f34669ae24da3c119671d32ff0">lv_indev_get_driver_data</a></div><div class="ttdeci">void * lv_indev_get_driver_data(const lv_indev_t *indev)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00415">lv_indev.c:415</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_a9e8fac2a3892deca39d80d90afdac1b3"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#a9e8fac2a3892deca39d80d90afdac1b3">lv_indev_create</a></div><div class="ttdeci">lv_indev_t * lv_indev_create(void)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00088">lv_indev.c:88</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_aa9f1dc332f31a9a2a1d06b35ac59af3b"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#aa9f1dc332f31a9a2a1d06b35ac59af3b">lv_indev_set_mode</a></div><div class="ttdeci">void lv_indev_set_mode(lv_indev_t *indev, lv_indev_mode_t mode)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00592">lv_indev.c:592</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_aacdf3efce400e71895f5efb42ee24956aa17473382979b77cb5f5388ff3e11b2e"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#aacdf3efce400e71895f5efb42ee24956aa17473382979b77cb5f5388ff3e11b2e">LV_INDEV_STATE_RELEASED</a></div><div class="ttdeci">@ LV_INDEV_STATE_RELEASED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2indev_2lv__indev_8h_source.html#l00040">lv_indev.h:40</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_aacdf3efce400e71895f5efb42ee24956aae8cba42264e264514d9789425c14d39"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#aacdf3efce400e71895f5efb42ee24956aae8cba42264e264514d9789425c14d39">LV_INDEV_STATE_PRESSED</a></div><div class="ttdeci">@ LV_INDEV_STATE_PRESSED</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2indev_2lv__indev_8h_source.html#l00041">lv_indev.h:41</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_abea65055ab3d1ceaa293aca7abee3052aca5969b5c467dd2d63a93141238874b8"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#abea65055ab3d1ceaa293aca7abee3052aca5969b5c467dd2d63a93141238874b8">LV_INDEV_MODE_EVENT</a></div><div class="ttdeci">@ LV_INDEV_MODE_EVENT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2indev_2lv__indev_8h_source.html#l00047">lv_indev.h:47</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_ac31b3d74656a0892330359adb39b81cc"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#ac31b3d74656a0892330359adb39b81cc">lv_indev_get_read_cb</a></div><div class="ttdeci">lv_indev_read_cb_t lv_indev_get_read_cb(lv_indev_t *indev)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00317">lv_indev.c:317</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_ac8bc2642f0f2440e76e9d39b6891eb52"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#ac8bc2642f0f2440e76e9d39b6891eb52">lv_indev_set_read_cb</a></div><div class="ttdeci">void lv_indev_set_read_cb(lv_indev_t *indev, lv_indev_read_cb_t read_cb)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00298">lv_indev.c:298</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2indev_2lv__indev_8h_html_ad621c9f885cb2304809e295ba0b71b76"><div class="ttname"><a href="include_2lvgl_2indev_2lv__indev_8h.html#ad621c9f885cb2304809e295ba0b71b76">lv_indev_set_type</a></div><div class="ttdeci">void lv_indev_set_type(lv_indev_t *indev, lv_indev_type_t indev_type)</div><div class="ttdef"><b>Definition</b> <a href="lv__indev_8c_source.html#l00290">lv_indev.c:290</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_ad912d92d4a755984e83980ff3ee67673"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a></div><div class="ttdeci">#define LV_LOG_INFO(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">lv_log.h:162</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a21b130dbe9349eab447cf0c891517272"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a21b130dbe9349eab447cf0c891517272">lv_event_t</a></div><div class="ttdeci">struct _lv_event_t lv_event_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00127">lv_types.h:127</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a6e34268a0a7129745629c71f74e86265"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a6e34268a0a7129745629c71f74e86265">lv_display_t</a></div><div class="ttdeci">struct _lv_display_t lv_display_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00119">lv_types.h:119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a7fc4c271f4ad53b4949e26b2999a1785"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a7fc4c271f4ad53b4949e26b2999a1785">lv_indev_t</a></div><div class="ttdeci">struct _lv_indev_t lv_indev_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00125">lv_types.h:125</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7455e11b1593bd5d98475bde81b97171"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a></div><div class="ttdeci">void lv_free(void *data)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00131">lv_mem.c:131</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a97fef3705e62aacd5c27c84f95186b64"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a97fef3705e62aacd5c27c84f95186b64">lv_malloc_zeroed</a></div><div class="ttdeci">void * lv_malloc_zeroed(size_t size)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00089">lv_mem.c:89</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__string_8h_html_a036075376021724a89548607952fc7f1"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__string_8h.html#a036075376021724a89548607952fc7f1">lv_memcpy</a></div><div class="ttdeci">void * lv_memcpy(void *dst, const void *src, size_t len)</div><div class="ttdoc">Copies a block of memory from a source address to a destination address.</div><div class="ttdef"><b>Definition</b> <a href="lv__string__builtin_8c_source.html#l00061">lv_string_builtin.c:61</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__string_8h_html_a2469b748454d371afba415c2b776b6f6"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__string_8h.html#a2469b748454d371afba415c2b776b6f6">lv_memmove</a></div><div class="ttdeci">void * lv_memmove(void *dst, const void *src, size_t len)</div><div class="ttdoc">Move a block of memory from source to destination.</div><div class="ttdef"><b>Definition</b> <a href="lv__string__builtin_8c_source.html#l00178">lv_string_builtin.c:178</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__string_8h_html_ae1a5fc1902872a0f9ecde0f228cf87e9"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__string_8h.html#ae1a5fc1902872a0f9ecde0f228cf87e9">lv_strcat</a></div><div class="ttdeci">char * lv_strcat(char *dst, const char *src)</div><div class="ttdoc">Copies the string pointed to by src, including the terminating null character, to the end of the stri...</div><div class="ttdef"><b>Definition</b> <a href="lv__string__builtin_8c_source.html#l00339">lv_string_builtin.c:339</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__string_8h_html_af7f73f38c46466f753c7faaafa35b600"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__string_8h.html#af7f73f38c46466f753c7faaafa35b600">lv_strlen</a></div><div class="ttdeci">size_t lv_strlen(const char *str)</div><div class="ttdoc">Computes the length of the string str up to (but not including) the terminating null character.</div><div class="ttdef"><b>Definition</b> <a href="lv__string__builtin_8c_source.html#l00222">lv_string_builtin.c:222</a></div></div>
+<div class="ttc" id="alv__sdl__private_8h_html"><div class="ttname"><a href="lv__sdl__private_8h.html">lv_sdl_private.h</a></div></div>
+<div class="ttc" id="alv__text_8c_html_a822e32db44b7fde4595d0060b57775c5"><div class="ttname"><a href="lv__text_8c.html#a822e32db44b7fde4595d0060b57775c5">lv_text_encoded_size</a></div><div class="ttdeci">uint8_t(*const lv_text_encoded_size)(const char *)</div><div class="ttdef"><b>Definition</b> <a href="lv__text_8c_source.html#l00054">lv_text.c:54</a></div></div>
+<div class="ttc" id="alv__text__private_8h_html"><div class="ttname"><a href="lv__text__private_8h.html">lv_text_private.h</a></div></div>
+<div class="ttc" id="anamespacejpg__to__sjpg_html_a511ae0b1c13f95e5f08f1a0dd3da3d93"><div class="ttname"><a href="namespacejpg__to__sjpg.html#a511ae0b1c13f95e5f08f1a0dd3da3d93">jpg_to_sjpg.data</a></div><div class="ttdeci">data</div><div class="ttdef"><b>Definition</b> <a href="jpg__to__sjpg_8py_source.html#l00096">jpg_to_sjpg.py:96</a></div></div>
+<div class="ttc" id="anamespacemicropy__test_1_1micropy_html_a680ed5d3fdf874dd4c8685cb51c3f1a6"><div class="ttname"><a href="namespacemicropy__test_1_1micropy.html#a680ed5d3fdf874dd4c8685cb51c3f1a6">micropy_test.micropy.buf</a></div><div class="ttdeci">buf</div><div class="ttdef"><b>Definition</b> <a href="micropy_8py_source.html#l00019">micropy.py:19</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab5eb23180f7cc12b7d6c04a8ec067fdd"><div class="ttname"><a href="stdint_8h.html#ab5eb23180f7cc12b7d6c04a8ec067fdd">UINT32_MAX</a></div><div class="ttdeci">#define UINT32_MAX</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00188">stdint.h:188</a></div></div>
+<div class="ttc" id="astructlv__indev__data__t_html"><div class="ttname"><a href="structlv__indev__data__t.html">lv_indev_data_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2indev_2lv__indev_8h_source.html#l00063">lv_indev.h:63</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_f3def1a0aa02097d7e8c0e4b8cca1ae4.html">drivers</a></li><li class="navelem"><a href="dir_da52e1ad47db357951050b7e19f4df3b.html">sdl</a></li><li class="navelem"><a href="lv__sdl__keyboard_8c.html">lv_sdl_keyboard.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

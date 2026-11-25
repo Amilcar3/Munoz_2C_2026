@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/main/Proyecto_Integrador.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('_proyecto___integrador_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo Proyecto_Integrador.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="stdint_8h_source.html">stdint.h</a>&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
+<code>#include &quot;freertos/task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="all__in__one_8h_source.html">all_in_one.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gc9a01_8h_source.html">gc9a01.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gpio__mcu_8h_source.html">gpio_mcu.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &quot;freertos/queue.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="heart_rate_8h_source.html">heartRate.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="max3010x_8h_source.html">max3010x.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spo2__algorithm_8h_source.html">spo2_algorithm.h</a>&quot;</code><br />
+<code>#include &lt;iir_filter.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ble__mcu_8h_source.html">ble_mcu.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="switch_8h_source.html">switch.h</a>&quot;</code><br />
+</div>
+<p><a href="_proyecto___integrador_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:display_5Fmsg_5Ft" id="r_display_5Fmsg_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdisplay__msg__t.html">display_msg_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mensaje enviado a la cola de display.  <a href="structdisplay__msg__t.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:sample_5Ft" id="r_sample_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structsample__t.html">sample_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra cruda del sensor MAX30102.  <a href="structsample__t.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9401e43a8c86acafb31c8e2709baefa1" id="r_a9401e43a8c86acafb31c8e2709baefa1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9401e43a8c86acafb31c8e2709baefa1">SAMPLE_FREQ</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memitem:ab4ab9b46006f8550b4b48d225b406a8c" id="r_ab4ab9b46006f8550b4b48d225b406a8c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab4ab9b46006f8550b4b48d225b406a8c">HR_AVG_SIZE</a>&#160;&#160;&#160;4</td></tr>
+<tr class="memitem:a2ab7c539efae0dbaf7cfaf6c63321241" id="r_a2ab7c539efae0dbaf7cfaf6c63321241"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2ab7c539efae0dbaf7cfaf6c63321241">LED_POWER</a>&#160;&#160;&#160;60</td></tr>
+<tr class="memitem:aece44f20bacf9a9a5d83fad7a015e2c3" id="r_aece44f20bacf9a9a5d83fad7a015e2c3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aece44f20bacf9a9a5d83fad7a015e2c3">FINGER_THRESHOLD</a>&#160;&#160;&#160;50000</td></tr>
+<tr class="memitem:ae3a40bb5c237cfbcf07531f939b588ca" id="r_ae3a40bb5c237cfbcf07531f939b588ca"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae3a40bb5c237cfbcf07531f939b588ca">READ_POLL_MS</a>&#160;&#160;&#160;10</td></tr>
+<tr class="memitem:a5865038af0125227e6de307194f68cb7" id="r_a5865038af0125227e6de307194f68cb7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5865038af0125227e6de307194f68cb7">SAMPLE_QUEUE_LEN</a>&#160;&#160;&#160;100</td></tr>
+<tr class="memitem:a692ffc8dc3338213cfbbf968d3715989" id="r_a692ffc8dc3338213cfbbf968d3715989"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a692ffc8dc3338213cfbbf968d3715989">PPG_CENTER</a>&#160;&#160;&#160;500.0f</td></tr>
+<tr class="memitem:a1a36ef23830068001f9c8461d6f70f1b" id="r_a1a36ef23830068001f9c8461d6f70f1b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1a36ef23830068001f9c8461d6f70f1b">PPG_TARGET_HEIGHT</a>&#160;&#160;&#160;350.0f</td></tr>
+<tr class="memitem:abba6224a9f66a6e8b3e09eec74466af8" id="r_abba6224a9f66a6e8b3e09eec74466af8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abba6224a9f66a6e8b3e09eec74466af8">PPG_INITIAL_SPAN</a>&#160;&#160;&#160;1000.0f</td></tr>
+<tr class="memitem:abc49a06c63577bbf2871a5e79e3f5a4d" id="r_abc49a06c63577bbf2871a5e79e3f5a4d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abc49a06c63577bbf2871a5e79e3f5a4d">PPG_DECIM</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a737cb535ace9ee310a6fda64d082c100" id="r_a737cb535ace9ee310a6fda64d082c100"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a737cb535ace9ee310a6fda64d082c100">BUF_LINES</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memitem:a99ec496a9b3ab64b857498b37a48bb7f" id="r_a99ec496a9b3ab64b857498b37a48bb7f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a99ec496a9b3ab64b857498b37a48bb7f">DISPLAY_QUEUE_LEN</a>&#160;&#160;&#160;32</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a76f51138d3051b734605c5bacc811dba" id="r_a76f51138d3051b734605c5bacc811dba"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a76f51138d3051b734605c5bacc811dba">msg_type_t</a> { <a class="el" href="#a76f51138d3051b734605c5bacc811dbaa4a02991c25f910a61014f883fd66922b">MSG_PPG_SAMPLE</a>
+, <a class="el" href="#a76f51138d3051b734605c5bacc811dbaa90153272e66d9060630a06ecee668aed">MSG_VITALS</a>
+, <a class="el" href="#a76f51138d3051b734605c5bacc811dbaabaf37d962b35e1b35c80c43bc6824337">MSG_KEY</a>
+, <a class="el" href="#a76f51138d3051b734605c5bacc811dbaae371b9b48feb5d72da3ce27e79628f94">MSG_BEAT</a>
+ }</td></tr>
+<tr class="memdesc:a76f51138d3051b734605c5bacc811dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipos de mensajes intercambiados entre ProcessTask y DisplayTask.  <a href="#a76f51138d3051b734605c5bacc811dba">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a630544a7f0a2cc40d8a7fefab7e2fe70" id="r_a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a630544a7f0a2cc40d8a7fefab7e2fe70">app_main</a> (void)</td></tr>
+<tr class="memdesc:a630544a7f0a2cc40d8a7fefab7e2fe70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función principal de la aplicación.  <br /></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a737cb535ace9ee310a6fda64d082c100" name="a737cb535ace9ee310a6fda64d082c100"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737cb535ace9ee310a6fda64d082c100">&#9670;&#160;</a></span>BUF_LINES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUF_LINES&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Filas que LVGL dibuja de una vez </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00095">95</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a99ec496a9b3ab64b857498b37a48bb7f" name="a99ec496a9b3ab64b857498b37a48bb7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ec496a9b3ab64b857498b37a48bb7f">&#9670;&#160;</a></span>DISPLAY_QUEUE_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DISPLAY_QUEUE_LEN&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Longitud de la cola de mensajes hacia DisplayTask </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00096">96</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00475">app_main()</a>.</p>
+
+</div>
+</div>
+<a id="aece44f20bacf9a9a5d83fad7a015e2c3" name="aece44f20bacf9a9a5d83fad7a015e2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece44f20bacf9a9a5d83fad7a015e2c3">&#9670;&#160;</a></span>FINGER_THRESHOLD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINGER_THRESHOLD&#160;&#160;&#160;50000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Umbral de señal IR para detectar presencia de dedo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00088">88</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="ab4ab9b46006f8550b4b48d225b406a8c" name="ab4ab9b46006f8550b4b48d225b406a8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4ab9b46006f8550b4b48d225b406a8c">&#9670;&#160;</a></span>HR_AVG_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HR_AVG_SIZE&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cantidad de muestras para el promedio móvil de HR </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00086">86</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a2ab7c539efae0dbaf7cfaf6c63321241" name="a2ab7c539efae0dbaf7cfaf6c63321241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab7c539efae0dbaf7cfaf6c63321241">&#9670;&#160;</a></span>LED_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LED_POWER&#160;&#160;&#160;60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Potencia del LED del MAX30102 (0-255) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00087">87</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a692ffc8dc3338213cfbbf968d3715989" name="a692ffc8dc3338213cfbbf968d3715989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692ffc8dc3338213cfbbf968d3715989">&#9670;&#160;</a></span>PPG_CENTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_CENTER&#160;&#160;&#160;500.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Centro vertical del chart en unidades LVGL (rango 0-1000) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00091">91</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="abc49a06c63577bbf2871a5e79e3f5a4d" name="abc49a06c63577bbf2871a5e79e3f5a4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc49a06c63577bbf2871a5e79e3f5a4d">&#9670;&#160;</a></span>PPG_DECIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_DECIM&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Factor de decimación de la PPG hacia el display (1 = sin decimación) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00094">94</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="abba6224a9f66a6e8b3e09eec74466af8" name="abba6224a9f66a6e8b3e09eec74466af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba6224a9f66a6e8b3e09eec74466af8">&#9670;&#160;</a></span>PPG_INITIAL_SPAN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_INITIAL_SPAN&#160;&#160;&#160;1000.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Amplitud pico a pico inicial antes de normalizar </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00093">93</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a1a36ef23830068001f9c8461d6f70f1b" name="a1a36ef23830068001f9c8461d6f70f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a36ef23830068001f9c8461d6f70f1b">&#9670;&#160;</a></span>PPG_TARGET_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_TARGET_HEIGHT&#160;&#160;&#160;350.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Amplitud pico a pico deseada en pantalla </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00092">92</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="ae3a40bb5c237cfbcf07531f939b588ca" name="ae3a40bb5c237cfbcf07531f939b588ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a40bb5c237cfbcf07531f939b588ca">&#9670;&#160;</a></span>READ_POLL_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_POLL_MS&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Período de polling de la FIFO del sensor en ms </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00089">89</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a9401e43a8c86acafb31c8e2709baefa1" name="a9401e43a8c86acafb31c8e2709baefa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9401e43a8c86acafb31c8e2709baefa1">&#9670;&#160;</a></span>SAMPLE_FREQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_FREQ&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frecuencia de muestreo del sensor MAX30102 en Hz </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00085">85</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a id="a5865038af0125227e6de307194f68cb7" name="a5865038af0125227e6de307194f68cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5865038af0125227e6de307194f68cb7">&#9670;&#160;</a></span>SAMPLE_QUEUE_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_QUEUE_LEN&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Longitud de la cola de muestras entre readTask y ProcessTask </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00090">90</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="_proyecto___integrador_8c_source.html#l00475">app_main()</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="a76f51138d3051b734605c5bacc811dba" name="a76f51138d3051b734605c5bacc811dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f51138d3051b734605c5bacc811dba">&#9670;&#160;</a></span>msg_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a76f51138d3051b734605c5bacc811dba">msg_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipos de mensajes intercambiados entre ProcessTask y DisplayTask. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a76f51138d3051b734605c5bacc811dbaa4a02991c25f910a61014f883fd66922b" name="a76f51138d3051b734605c5bacc811dbaa4a02991c25f910a61014f883fd66922b"></a>MSG_PPG_SAMPLE&#160;</td><td class="fielddoc"><p>Muestra PPG normalizada para el chart </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a76f51138d3051b734605c5bacc811dbaa90153272e66d9060630a06ecee668aed" name="a76f51138d3051b734605c5bacc811dbaa90153272e66d9060630a06ecee668aed"></a>MSG_VITALS&#160;</td><td class="fielddoc"><p>HR y SpO2 calculados </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a76f51138d3051b734605c5bacc811dbaabaf37d962b35e1b35c80c43bc6824337" name="a76f51138d3051b734605c5bacc811dbaabaf37d962b35e1b35c80c43bc6824337"></a>MSG_KEY&#160;</td><td class="fielddoc"><p>Comando de cambio de vista (tecla o BLE) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a76f51138d3051b734605c5bacc811dbaae371b9b48feb5d72da3ce27e79628f94" name="a76f51138d3051b734605c5bacc811dbaae371b9b48feb5d72da3ce27e79628f94"></a>MSG_BEAT&#160;</td><td class="fielddoc"><p>Pico de latido detectado por <a class="el" href="heart_rate_8h.html#a83abdb9881ef7887abffdbf639539572">checkForBeat()</a> </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00105">105</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a630544a7f0a2cc40d8a7fefab7e2fe70" name="a630544a7f0a2cc40d8a7fefab7e2fe70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630544a7f0a2cc40d8a7fefab7e2fe70">&#9670;&#160;</a></span>app_main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void app_main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Función principal de la aplicación. </p>
+<p>Inicializa los periféricos (pulsadores), configura la interrupción de SWITCH_1 para cambiar de vista, crea las colas de comunicación entre tareas y lanza las cuatro tareas del sistema. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_proyecto___integrador_8c_source.html#l00475">475</a> del archivo <a class="el" href="_proyecto___integrador_8c_source.html">Proyecto_Integrador.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_proyecto___integrador_8c_source.html#l00096">DISPLAY_QUEUE_LEN</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="_proyecto___integrador_8c_source.html#l00090">SAMPLE_QUEUE_LEN</a>, <a class="el" href="switch_8h_source.html#l00032">SWITCH_1</a>, <a class="el" href="switch_8c_source.html#l00047">SwitchActivInt()</a> y <a class="el" href="switch_8c_source.html#l00029">SwitchesInit()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_3b199c4b78c4e35bce7c24e7e2cd4ae5.html">main</a></li><li class="navelem"><a href="_proyecto___integrador_8c.html">Proyecto_Integrador.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

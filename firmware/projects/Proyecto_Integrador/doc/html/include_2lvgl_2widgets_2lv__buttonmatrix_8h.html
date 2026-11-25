@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/include/lvgl/widgets/lv_buttonmatrix.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('include_2lvgl_2widgets_2lv__buttonmatrix_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_buttonmatrix.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html">../config/lv_conf_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html">../core/lv_obj.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj__property_8h_source.html">../core/lv_obj_property.h</a>&quot;</code><br />
+</div>
+<p><a href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae0337aecf1e97012d122a9f1ab782c40" id="r_ae0337aecf1e97012d122a9f1ab782c40"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae0337aecf1e97012d122a9f1ab782c40">LV_BUTTONMATRIX_BUTTON_NONE</a>&#160;&#160;&#160;0xFFFF</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a54a42a30e0c52162377d5a550e29b50e" id="r_a54a42a30e0c52162377d5a550e29b50e"><td class="memItemLeft">typedef <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>(*&#160;</td><td class="memItemRight"><a class="el" href="#a54a42a30e0c52162377d5a550e29b50e">lv_buttonmatrix_button_draw_cb_t</a>) (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *btnm, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *draw_area, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *clip_area)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:afc89731eac25222abcfd183003644632" id="r_afc89731eac25222abcfd183003644632"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> { <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632a100b36c076dd86b3c4278c4203e31c7d">LV_BUTTONMATRIX_CTRL_NONE</a> = 0x0000
+, <a class="el" href="#afc89731eac25222abcfd183003644632a9c770b505616e9d8f2b68fcb5def6dbd">LV_BUTTONMATRIX_CTRL_WIDTH_1</a> = 0x0001
+, <a class="el" href="#afc89731eac25222abcfd183003644632a177f2e9c5ba43bee93ab0265be44e54a">LV_BUTTONMATRIX_CTRL_WIDTH_2</a> = 0x0002
+, <a class="el" href="#afc89731eac25222abcfd183003644632aa403dd6a06c8a1e601fabfbe67067ec3">LV_BUTTONMATRIX_CTRL_WIDTH_3</a> = 0x0003
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632af98c35b6f528a985032f46aa3b1625db">LV_BUTTONMATRIX_CTRL_WIDTH_4</a> = 0x0004
+, <a class="el" href="#afc89731eac25222abcfd183003644632a259bf5b4e4c7cb3236473cd13169de55">LV_BUTTONMATRIX_CTRL_WIDTH_5</a> = 0x0005
+, <a class="el" href="#afc89731eac25222abcfd183003644632a8179f8cd48565361228ad7c11e4b22d8">LV_BUTTONMATRIX_CTRL_WIDTH_6</a> = 0x0006
+, <a class="el" href="#afc89731eac25222abcfd183003644632a0951206f39464f53d8b967602d6a162b">LV_BUTTONMATRIX_CTRL_WIDTH_7</a> = 0x0007
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632aff58d52f88f4bdfc16edefba325bee23">LV_BUTTONMATRIX_CTRL_WIDTH_8</a> = 0x0008
+, <a class="el" href="#afc89731eac25222abcfd183003644632a3e573eaa7be8d3271668763d7f282ffa">LV_BUTTONMATRIX_CTRL_WIDTH_9</a> = 0x0009
+, <a class="el" href="#afc89731eac25222abcfd183003644632af1fd5703210d68285661dc87f829f490">LV_BUTTONMATRIX_CTRL_WIDTH_10</a> = 0x000A
+, <a class="el" href="#afc89731eac25222abcfd183003644632a13bf2b270e030cad90c87a5803599549">LV_BUTTONMATRIX_CTRL_WIDTH_11</a> = 0x000B
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632a858ffea6f8c7e4bd013b4e9600aaa4cd">LV_BUTTONMATRIX_CTRL_WIDTH_12</a> = 0x000C
+, <a class="el" href="#afc89731eac25222abcfd183003644632a830fe31560d171a16b9853e8bfff5931">LV_BUTTONMATRIX_CTRL_WIDTH_13</a> = 0x000D
+, <a class="el" href="#afc89731eac25222abcfd183003644632ab6a57a50354f22cf01a99be811bd4ddf">LV_BUTTONMATRIX_CTRL_WIDTH_14</a> = 0x000E
+, <a class="el" href="#afc89731eac25222abcfd183003644632a228ccbf9abaac34c6cf9220789a130b7">LV_BUTTONMATRIX_CTRL_WIDTH_15</a> = 0x000F
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632a46a0452fc067bb4ade07e495fcdb48cd">LV_BUTTONMATRIX_CTRL_HIDDEN</a> = 0x0010
+, <a class="el" href="#afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305">LV_BUTTONMATRIX_CTRL_NO_REPEAT</a> = 0x0020
+, <a class="el" href="#afc89731eac25222abcfd183003644632ab0d1cc235aac55478d6bcf7206b20211">LV_BUTTONMATRIX_CTRL_DISABLED</a> = 0x0040
+, <a class="el" href="#afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688">LV_BUTTONMATRIX_CTRL_CHECKABLE</a> = 0x0080
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632a2150713005bcd078f8559ef1bd6c9530">LV_BUTTONMATRIX_CTRL_CHECKED</a> = 0x0100
+, <a class="el" href="#afc89731eac25222abcfd183003644632a7dae618e7245e27674071db1f5b562e3">LV_BUTTONMATRIX_CTRL_CLICK_TRIG</a> = 0x0200
+, <a class="el" href="#afc89731eac25222abcfd183003644632a316f6c8e087ee81b838f97950f344a2d">LV_BUTTONMATRIX_CTRL_POPOVER</a> = 0x0400
+, <a class="el" href="#afc89731eac25222abcfd183003644632a75b064c6b4e96bca5c9b7b5b11c6b3ab">LV_BUTTONMATRIX_CTRL_RECOLOR</a> = 0x0800
+, <br />
+&#160;&#160;<a class="el" href="#afc89731eac25222abcfd183003644632a102e8160e0c5e7b81c5b039914a972e6">LV_BUTTONMATRIX_CTRL_RESERVED_1</a> = 0x1000
+, <a class="el" href="#afc89731eac25222abcfd183003644632a69084f5aa33e8525cb8f10a4fff910b3">LV_BUTTONMATRIX_CTRL_RESERVED_2</a> = 0x2000
+, <a class="el" href="#afc89731eac25222abcfd183003644632a1fcfab2ad776a0359916e1d7e6371050">LV_BUTTONMATRIX_CTRL_CUSTOM_1</a> = 0x4000
+, <a class="el" href="#afc89731eac25222abcfd183003644632a666d21640a37a9b18f125a6a534ccbcb">LV_BUTTONMATRIX_CTRL_CUSTOM_2</a> = 0x8000
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ae31126bd42d798120e471c70bc430a1c" id="r_ae31126bd42d798120e471c70bc430a1c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae31126bd42d798120e471c70bc430a1c">LV_EXPORT_CONST_INT</a> (<a class="el" href="#ae0337aecf1e97012d122a9f1ab782c40">LV_BUTTONMATRIX_BUTTON_NONE</a>)</td></tr>
+<tr class="memitem:aa4cb8f71aede9e1485cee41362289b07" id="r_aa4cb8f71aede9e1485cee41362289b07"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa4cb8f71aede9e1485cee41362289b07">lv_buttonmatrix_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:afab00c1ec4088bb2f5d101c98dec4559" id="r_afab00c1ec4088bb2f5d101c98dec4559"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afab00c1ec4088bb2f5d101c98dec4559">lv_buttonmatrix_set_map</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const char *const map[])</td></tr>
+<tr class="memitem:adcaf51aab980c348e5f9b178728fe9b0" id="r_adcaf51aab980c348e5f9b178728fe9b0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adcaf51aab980c348e5f9b178728fe9b0">lv_buttonmatrix_set_ctrl_map</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl_map[])</td></tr>
+<tr class="memitem:a5fe2e95eacc734c20688338018771c64" id="r_a5fe2e95eacc734c20688338018771c64"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5fe2e95eacc734c20688338018771c64">lv_buttonmatrix_set_selected_button</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id)</td></tr>
+<tr class="memitem:ab774195a90b800d1564d134f4c192af3" id="r_ab774195a90b800d1564d134f4c192af3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab774195a90b800d1564d134f4c192af3">lv_buttonmatrix_set_button_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:af30320773de78d1ed92cbf553fda67bc" id="r_af30320773de78d1ed92cbf553fda67bc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af30320773de78d1ed92cbf553fda67bc">lv_buttonmatrix_clear_button_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:a8f9a5b93e1b04abe1e8781fefb206ec0" id="r_a8f9a5b93e1b04abe1e8781fefb206ec0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8f9a5b93e1b04abe1e8781fefb206ec0">lv_buttonmatrix_set_button_ctrl_all</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:a4dd877ff6f0875d4802fabcc1726765c" id="r_a4dd877ff6f0875d4802fabcc1726765c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4dd877ff6f0875d4802fabcc1726765c">lv_buttonmatrix_clear_button_ctrl_all</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:aeb11f72e08dd783056b05aff62caf097" id="r_aeb11f72e08dd783056b05aff62caf097"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb11f72e08dd783056b05aff62caf097">lv_buttonmatrix_set_button_width</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> width)</td></tr>
+<tr class="memitem:ac4afe546114b3a7820dcde85a10e6ba6" id="r_ac4afe546114b3a7820dcde85a10e6ba6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac4afe546114b3a7820dcde85a10e6ba6">lv_buttonmatrix_set_one_checked</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> en)</td></tr>
+<tr class="memitem:a78e0bb2dc97ca5e0158fddf5988d4621" id="r_a78e0bb2dc97ca5e0158fddf5988d4621"><td class="memItemLeft">const char *const *&#160;</td><td class="memItemRight"><a class="el" href="#a78e0bb2dc97ca5e0158fddf5988d4621">lv_buttonmatrix_get_map</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:accc9be6c5fbd0a364f5e61a43117bf01" id="r_accc9be6c5fbd0a364f5e61a43117bf01"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#accc9be6c5fbd0a364f5e61a43117bf01">lv_buttonmatrix_get_selected_button</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a6d5e12bf5e9b6b8c67fe975cdba08ebe" id="r_a6d5e12bf5e9b6b8c67fe975cdba08ebe"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a6d5e12bf5e9b6b8c67fe975cdba08ebe">lv_buttonmatrix_get_button_text</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id)</td></tr>
+<tr class="memitem:afe9ebd7cf85e07357f436a8af40842bc" id="r_afe9ebd7cf85e07357f436a8af40842bc"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#afe9ebd7cf85e07357f436a8af40842bc">lv_buttonmatrix_has_button_ctrl</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a> ctrl)</td></tr>
+<tr class="memitem:ab8b4c86ec03fb98c525c3f989491698f" id="r_ab8b4c86ec03fb98c525c3f989491698f"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab8b4c86ec03fb98c525c3f989491698f">lv_buttonmatrix_get_one_checked</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:afffc41d521be922ee55d7f7b68f53c1c" id="r_afffc41d521be922ee55d7f7b68f53c1c"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a52a21700fe5946c140157ebf74459a46">LV_ATTRIBUTE_EXTERN_DATA</a> const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#afffc41d521be922ee55d7f7b68f53c1c">lv_buttonmatrix_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="ae0337aecf1e97012d122a9f1ab782c40" name="ae0337aecf1e97012d122a9f1ab782c40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0337aecf1e97012d122a9f1ab782c40">&#9670;&#160;</a></span>LV_BUTTONMATRIX_BUTTON_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_BUTTONMATRIX_BUTTON_NONE&#160;&#160;&#160;0xFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00026">26</a> del archivo <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html">lv_buttonmatrix.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__buttonmatrix_8c_source.html#l00279">lv_buttonmatrix_get_button_text()</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00113">lv_buttonmatrix_set_map()</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00165">lv_buttonmatrix_set_selected_button()</a>, <a class="el" href="lv__calendar_8c_source.html#l00312">lv_calendar_get_pressed_date()</a>, <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>, <a class="el" href="#ae31126bd42d798120e471c70bc430a1c">LV_EXPORT_CONST_INT()</a> y <a class="el" href="lv__keyboard_8c_source.html#l00326">lv_keyboard_def_event_cb()</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a54a42a30e0c52162377d5a550e29b50e" name="a54a42a30e0c52162377d5a550e29b50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a42a30e0c52162377d5a550e29b50e">&#9670;&#160;</a></span>lv_buttonmatrix_button_draw_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>(* lv_buttonmatrix_button_draw_cb_t) (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *btnm, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> btn_id, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *draw_area, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *clip_area)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00066">66</a> del archivo <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html">lv_buttonmatrix.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="afc89731eac25222abcfd183003644632" name="afc89731eac25222abcfd183003644632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc89731eac25222abcfd183003644632">&#9670;&#160;</a></span>lv_buttonmatrix_ctrl_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type of JSON value.">Type</a> to store button control flags (disabled, hidden etc.) The least-significant 4 bits are used to store button-width proportions in range [1..15]. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a100b36c076dd86b3c4278c4203e31c7d" name="afc89731eac25222abcfd183003644632a100b36c076dd86b3c4278c4203e31c7d"></a>LV_BUTTONMATRIX_CTRL_NONE&#160;</td><td class="fielddoc"><p>No extra control, use the default settings </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a9c770b505616e9d8f2b68fcb5def6dbd" name="afc89731eac25222abcfd183003644632a9c770b505616e9d8f2b68fcb5def6dbd"></a>LV_BUTTONMATRIX_CTRL_WIDTH_1&#160;</td><td class="fielddoc"><p>Set the width to 1 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a177f2e9c5ba43bee93ab0265be44e54a" name="afc89731eac25222abcfd183003644632a177f2e9c5ba43bee93ab0265be44e54a"></a>LV_BUTTONMATRIX_CTRL_WIDTH_2&#160;</td><td class="fielddoc"><p>Set the width to 2 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632aa403dd6a06c8a1e601fabfbe67067ec3" name="afc89731eac25222abcfd183003644632aa403dd6a06c8a1e601fabfbe67067ec3"></a>LV_BUTTONMATRIX_CTRL_WIDTH_3&#160;</td><td class="fielddoc"><p>Set the width to 3 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632af98c35b6f528a985032f46aa3b1625db" name="afc89731eac25222abcfd183003644632af98c35b6f528a985032f46aa3b1625db"></a>LV_BUTTONMATRIX_CTRL_WIDTH_4&#160;</td><td class="fielddoc"><p>Set the width to 4 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a259bf5b4e4c7cb3236473cd13169de55" name="afc89731eac25222abcfd183003644632a259bf5b4e4c7cb3236473cd13169de55"></a>LV_BUTTONMATRIX_CTRL_WIDTH_5&#160;</td><td class="fielddoc"><p>Set the width to 5 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a8179f8cd48565361228ad7c11e4b22d8" name="afc89731eac25222abcfd183003644632a8179f8cd48565361228ad7c11e4b22d8"></a>LV_BUTTONMATRIX_CTRL_WIDTH_6&#160;</td><td class="fielddoc"><p>Set the width to 6 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a0951206f39464f53d8b967602d6a162b" name="afc89731eac25222abcfd183003644632a0951206f39464f53d8b967602d6a162b"></a>LV_BUTTONMATRIX_CTRL_WIDTH_7&#160;</td><td class="fielddoc"><p>Set the width to 7 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632aff58d52f88f4bdfc16edefba325bee23" name="afc89731eac25222abcfd183003644632aff58d52f88f4bdfc16edefba325bee23"></a>LV_BUTTONMATRIX_CTRL_WIDTH_8&#160;</td><td class="fielddoc"><p>Set the width to 8 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a3e573eaa7be8d3271668763d7f282ffa" name="afc89731eac25222abcfd183003644632a3e573eaa7be8d3271668763d7f282ffa"></a>LV_BUTTONMATRIX_CTRL_WIDTH_9&#160;</td><td class="fielddoc"><p>Set the width to 9 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632af1fd5703210d68285661dc87f829f490" name="afc89731eac25222abcfd183003644632af1fd5703210d68285661dc87f829f490"></a>LV_BUTTONMATRIX_CTRL_WIDTH_10&#160;</td><td class="fielddoc"><p>Set the width to 10 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a13bf2b270e030cad90c87a5803599549" name="afc89731eac25222abcfd183003644632a13bf2b270e030cad90c87a5803599549"></a>LV_BUTTONMATRIX_CTRL_WIDTH_11&#160;</td><td class="fielddoc"><p>Set the width to 11 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a858ffea6f8c7e4bd013b4e9600aaa4cd" name="afc89731eac25222abcfd183003644632a858ffea6f8c7e4bd013b4e9600aaa4cd"></a>LV_BUTTONMATRIX_CTRL_WIDTH_12&#160;</td><td class="fielddoc"><p>Set the width to 12 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a830fe31560d171a16b9853e8bfff5931" name="afc89731eac25222abcfd183003644632a830fe31560d171a16b9853e8bfff5931"></a>LV_BUTTONMATRIX_CTRL_WIDTH_13&#160;</td><td class="fielddoc"><p>Set the width to 13 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632ab6a57a50354f22cf01a99be811bd4ddf" name="afc89731eac25222abcfd183003644632ab6a57a50354f22cf01a99be811bd4ddf"></a>LV_BUTTONMATRIX_CTRL_WIDTH_14&#160;</td><td class="fielddoc"><p>Set the width to 14 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a228ccbf9abaac34c6cf9220789a130b7" name="afc89731eac25222abcfd183003644632a228ccbf9abaac34c6cf9220789a130b7"></a>LV_BUTTONMATRIX_CTRL_WIDTH_15&#160;</td><td class="fielddoc"><p>Set the width to 15 relative to the other buttons in the same row </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a46a0452fc067bb4ade07e495fcdb48cd" name="afc89731eac25222abcfd183003644632a46a0452fc067bb4ade07e495fcdb48cd"></a>LV_BUTTONMATRIX_CTRL_HIDDEN&#160;</td><td class="fielddoc"><p>Hides button; it continues to hold its space in layout. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305" name="afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305"></a>LV_BUTTONMATRIX_CTRL_NO_REPEAT&#160;</td><td class="fielddoc"><p>Do not emit LV_EVENT_LONG_PRESSED_REPEAT events while button is long-pressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632ab0d1cc235aac55478d6bcf7206b20211" name="afc89731eac25222abcfd183003644632ab0d1cc235aac55478d6bcf7206b20211"></a>LV_BUTTONMATRIX_CTRL_DISABLED&#160;</td><td class="fielddoc"><p>Disables button like LV_STATE_DISABLED on normal Widgets. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688" name="afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688"></a>LV_BUTTONMATRIX_CTRL_CHECKABLE&#160;</td><td class="fielddoc"><p>Enable toggling of LV_STATE_CHECKED when clicked. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a2150713005bcd078f8559ef1bd6c9530" name="afc89731eac25222abcfd183003644632a2150713005bcd078f8559ef1bd6c9530"></a>LV_BUTTONMATRIX_CTRL_CHECKED&#160;</td><td class="fielddoc"><p>Make the button checked. It will use the :cpp:enumerator:<span class="tt"><a class="el" href="include_2lvgl_2core_2lv__obj__style_8h.html#a1a992070c236042354cd579c43c4f5e5a6fc6f742b7b193d9dad585f32826afcf">LV_STATE_CHECKED</a></span> styles. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a7dae618e7245e27674071db1f5b562e3" name="afc89731eac25222abcfd183003644632a7dae618e7245e27674071db1f5b562e3"></a>LV_BUTTONMATRIX_CTRL_CLICK_TRIG&#160;</td><td class="fielddoc"><p>1: Enables sending LV_EVENT_VALUE_CHANGE on CLICK, 0: sends LV_EVENT_VALUE_CHANGE on PRESS. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a316f6c8e087ee81b838f97950f344a2d" name="afc89731eac25222abcfd183003644632a316f6c8e087ee81b838f97950f344a2d"></a>LV_BUTTONMATRIX_CTRL_POPOVER&#160;</td><td class="fielddoc"><p>Show button text in a pop-over while being pressed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a75b064c6b4e96bca5c9b7b5b11c6b3ab" name="afc89731eac25222abcfd183003644632a75b064c6b4e96bca5c9b7b5b11c6b3ab"></a>LV_BUTTONMATRIX_CTRL_RECOLOR&#160;</td><td class="fielddoc"><p>Enable text recoloring with <span class="tt">#color</span> </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a102e8160e0c5e7b81c5b039914a972e6" name="afc89731eac25222abcfd183003644632a102e8160e0c5e7b81c5b039914a972e6"></a>LV_BUTTONMATRIX_CTRL_RESERVED_1&#160;</td><td class="fielddoc"><p>Reserved for later use </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a69084f5aa33e8525cb8f10a4fff910b3" name="afc89731eac25222abcfd183003644632a69084f5aa33e8525cb8f10a4fff910b3"></a>LV_BUTTONMATRIX_CTRL_RESERVED_2&#160;</td><td class="fielddoc"><p>Reserved for later use </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a1fcfab2ad776a0359916e1d7e6371050" name="afc89731eac25222abcfd183003644632a1fcfab2ad776a0359916e1d7e6371050"></a>LV_BUTTONMATRIX_CTRL_CUSTOM_1&#160;</td><td class="fielddoc"><p>Custom free-to-use flag </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afc89731eac25222abcfd183003644632a666d21640a37a9b18f125a6a534ccbcb" name="afc89731eac25222abcfd183003644632a666d21640a37a9b18f125a6a534ccbcb"></a>LV_BUTTONMATRIX_CTRL_CUSTOM_2&#160;</td><td class="fielddoc"><p>Custom free-to-use flag </p>
+</td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00035">35</a> del archivo <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html">lv_buttonmatrix.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="af30320773de78d1ed92cbf553fda67bc" name="af30320773de78d1ed92cbf553fda67bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af30320773de78d1ed92cbf553fda67bc">&#9670;&#160;</a></span>lv_buttonmatrix_clear_button_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_clear_button_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clear the attributes of a button of the button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>0 based index of the button to modify. (Not counting new lines) </td></tr>
+    <tr><td class="paramname">ctrl</td><td>OR-ed attributes. E.g. <span class="tt"><a class="el" href="#afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305">LV_BUTTONMATRIX_CTRL_NO_REPEAT</a> | <a class="el" href="#afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688">LV_BUTTONMATRIX_CTRL_CHECKABLE</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00198">198</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00058">LV_BUTTONMATRIX_CTRL_POPOVER</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__draw_8c_source.html#l00425">lv_obj_refresh_ext_draw_size()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__buttonmatrix_8c_source.html#l00225">lv_buttonmatrix_clear_button_ctrl_all()</a>.</p>
+
+</div>
+</div>
+<a id="a4dd877ff6f0875d4802fabcc1726765c" name="a4dd877ff6f0875d4802fabcc1726765c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd877ff6f0875d4802fabcc1726765c">&#9670;&#160;</a></span>lv_buttonmatrix_clear_button_ctrl_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_clear_button_ctrl_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clear the attributes of all buttons of a button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">ctrl</td><td>attribute(s) to set from <span class="tt"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></span>. Values can be ORed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00225">225</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00198">lv_buttonmatrix_clear_button_ctrl()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__buttonmatrix_8c_source.html#l00178">lv_buttonmatrix_set_button_ctrl()</a> y <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>.</p>
+
+</div>
+</div>
+<a id="aa4cb8f71aede9e1485cee41362289b07" name="aa4cb8f71aede9e1485cee41362289b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cb8f71aede9e1485cee41362289b07">&#9670;&#160;</a></span>lv_buttonmatrix_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_buttonmatrix_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a button matrix object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the created button matrix </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00101">101</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__buttonmatrix__button__ctrl_8c_source.html#l00017">lv_example_buttonmatrix_button_ctrl()</a>, <a class="el" href="lv__example__buttonmatrix__button__width_8c_source.html#l00021">lv_example_buttonmatrix_button_width()</a>, <a class="el" href="lv__example__buttonmatrix__event_8c_source.html#l00024">lv_example_buttonmatrix_event()</a>, <a class="el" href="lv__example__buttonmatrix__map_8c_source.html#l00020">lv_example_buttonmatrix_map()</a>, <a class="el" href="lv__example__buttonmatrix__one__checked_8c_source.html#l00017">lv_example_buttonmatrix_one_checked()</a>, <a class="el" href="lv__example__buttonmatrix__popover_8c_source.html#l00017">lv_example_buttonmatrix_popover()</a>, <a class="el" href="lv__example__buttonmatrix__recolor_8c_source.html#l00017">lv_example_buttonmatrix_recolor()</a>, <a class="el" href="lv__example__buttonmatrix__styling_8c_source.html#l00017">lv_example_buttonmatrix_styling()</a> y <a class="el" href="lv__example__textarea__buttonmatrix_8c_source.html#l00034">lv_example_textarea_buttonmatrix()</a>.</p>
+
+</div>
+</div>
+<a id="a6d5e12bf5e9b6b8c67fe975cdba08ebe" name="a6d5e12bf5e9b6b8c67fe975cdba08ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5e12bf5e9b6b8c67fe975cdba08ebe">&#9670;&#160;</a></span>lv_buttonmatrix_get_button_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * lv_buttonmatrix_get_button_text </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the button's text </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>the index a button not counting new line characters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>text of <span class="tt">btn_index</span> button </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00279">279</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00026">LV_BUTTONMATRIX_BUTTON_NONE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00283">lv_strcmp()</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00033">_lv_buttonmatrix_t::map_p</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__calendar_8c_source.html#l00312">lv_calendar_get_pressed_date()</a>, <a class="el" href="lv__keyboard_8c_source.html#l00326">lv_keyboard_def_event_cb()</a> y <a class="el" href="lv__keyboard_8c_source.html#l00446">lv_keyboard_get_button_text()</a>.</p>
+
+</div>
+</div>
+<a id="a78e0bb2dc97ca5e0158fddf5988d4621" name="a78e0bb2dc97ca5e0158fddf5988d4621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e0bb2dc97ca5e0158fddf5988d4621">&#9670;&#160;</a></span>lv_buttonmatrix_get_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char *const  * lv_buttonmatrix_get_map </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current map of a button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the current map </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00263">263</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00033">_lv_buttonmatrix_t::map_p</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__keyboard_8c_source.html#l00432">lv_keyboard_get_map_array()</a>.</p>
+
+</div>
+</div>
+<a id="ab8b4c86ec03fb98c525c3f989491698f" name="ab8b4c86ec03fb98c525c3f989491698f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b4c86ec03fb98c525c3f989491698f">&#9670;&#160;</a></span>lv_buttonmatrix_get_one_checked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_buttonmatrix_get_one_checked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tell whether "one check" mode is enabled or not. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Button matrix object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true: "one check" mode is enabled; false: disabled </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00314">314</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00039">_lv_buttonmatrix_t::one_check</a>.</p>
+
+</div>
+</div>
+<a id="accc9be6c5fbd0a364f5e61a43117bf01" name="accc9be6c5fbd0a364f5e61a43117bf01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc9be6c5fbd0a364f5e61a43117bf01">&#9670;&#160;</a></span>lv_buttonmatrix_get_selected_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_buttonmatrix_get_selected_button </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the index of the lastly "activated" button by the user (pressed, released, focused etc) Useful in the <span class="tt">event_cb</span> to get the text of the button, check if hidden etc. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>index of the last released button (LV_BUTTONMATRIX_BUTTON_NONE: if unset) </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00271">271</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00038">_lv_buttonmatrix_t::btn_id_sel</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__calendar_8c_source.html#l00312">lv_calendar_get_pressed_date()</a>, <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>, <a class="el" href="lv__keyboard_8c_source.html#l00326">lv_keyboard_def_event_cb()</a> y <a class="el" href="lv__keyboard_8c_source.html#l00439">lv_keyboard_get_selected_button()</a>.</p>
+
+</div>
+</div>
+<a id="afe9ebd7cf85e07357f436a8af40842bc" name="afe9ebd7cf85e07357f436a8af40842bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9ebd7cf85e07357f436a8af40842bc">&#9670;&#160;</a></span>lv_buttonmatrix_has_button_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_buttonmatrix_has_button_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the whether a control value is enabled or disabled for button of a button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>the index of a button not counting new line characters. </td></tr>
+    <tr><td class="paramname">ctrl</td><td>control values to check (ORed value can be used) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true: the control attribute is enabled false: disabled </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00304">304</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="ab774195a90b800d1564d134f4c192af3" name="ab774195a90b800d1564d134f4c192af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab774195a90b800d1564d134f4c192af3">&#9670;&#160;</a></span>lv_buttonmatrix_set_button_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_button_ctrl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the attributes of a button of the button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>0 based index of the button to modify. (Not counting new lines) </td></tr>
+    <tr><td class="paramname">ctrl</td><td>OR-ed attributes. E.g. <span class="tt"><a class="el" href="#afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305">LV_BUTTONMATRIX_CTRL_NO_REPEAT</a> | <a class="el" href="#afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688">LV_BUTTONMATRIX_CTRL_CHECKABLE</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00178">178</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00225">lv_buttonmatrix_clear_button_ctrl_all()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00056">LV_BUTTONMATRIX_CTRL_CHECKED</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00058">LV_BUTTONMATRIX_CTRL_POPOVER</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__draw_8c_source.html#l00425">lv_obj_refresh_ext_draw_size()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00039">_lv_buttonmatrix_t::one_check</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__buttonmatrix_8c_source.html#l00214">lv_buttonmatrix_set_button_ctrl_all()</a> y <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>.</p>
+
+</div>
+</div>
+<a id="a8f9a5b93e1b04abe1e8781fefb206ec0" name="a8f9a5b93e1b04abe1e8781fefb206ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9a5b93e1b04abe1e8781fefb206ec0">&#9670;&#160;</a></span>lv_buttonmatrix_set_button_ctrl_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_button_ctrl_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set attributes of all buttons of a button matrix </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">ctrl</td><td>attribute(s) to set from <span class="tt"><a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></span>. Values can be ORed. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00214">214</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00178">lv_buttonmatrix_set_button_ctrl()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="aeb11f72e08dd783056b05aff62caf097" name="aeb11f72e08dd783056b05aff62caf097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb11f72e08dd783056b05aff62caf097">&#9670;&#160;</a></span>lv_buttonmatrix_set_button_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_button_width </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>width</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a single button's relative width. This method will cause the matrix be regenerated and is a relatively expensive operation. It is recommended that initial width be specified using <span class="tt"><a class="el" href="#adcaf51aab980c348e5f9b178728fe9b0">lv_buttonmatrix_set_ctrl_map</a></span> and this method only be used for dynamic changes. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>0 based index of the button to modify. </td></tr>
+    <tr><td class="paramname">width</td><td>relative width compared to the buttons in the same row. [1..15] </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00236">236</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="lv__buttonmatrix_8c_source.html#l00025">LV_BUTTONMATRIX_WIDTH_MASK</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+</div>
+</div>
+<a id="adcaf51aab980c348e5f9b178728fe9b0" name="adcaf51aab980c348e5f9b178728fe9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcaf51aab980c348e5f9b178728fe9b0">&#9670;&#160;</a></span>lv_buttonmatrix_set_ctrl_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_ctrl_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#afc89731eac25222abcfd183003644632">lv_buttonmatrix_ctrl_t</a></td>          <td class="paramname"><span class="paramname"><em>ctrl_map</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the button control map (hidden, disabled etc.) for a button matrix. The control map array will be copied and so may be deallocated after this function returns. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">ctrl_map</td><td>pointer to an array of <span class="tt">lv_button_ctrl_t</span> control bytes. The length of the array and position of the elements must match the number and order of the individual buttons (i.e. excludes newline entries). An element of the map should look like e.g.: <span class="tt">ctrl_map[0] = width | <a class="el" href="#afc89731eac25222abcfd183003644632a5457fa1d99bc0944ada080f43c1b8305">LV_BUTTONMATRIX_CTRL_NO_REPEAT</a> |  LV_BUTTONMATRIX_CTRL_TGL_ENABLE</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00154">154</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__buttonmatrix__button__ctrl_8c_source.html#l00017">lv_example_buttonmatrix_button_ctrl()</a>, <a class="el" href="lv__example__buttonmatrix__button__width_8c_source.html#l00021">lv_example_buttonmatrix_button_width()</a>, <a class="el" href="lv__example__buttonmatrix__one__checked_8c_source.html#l00017">lv_example_buttonmatrix_one_checked()</a>, <a class="el" href="lv__example__buttonmatrix__popover_8c_source.html#l00017">lv_example_buttonmatrix_popover()</a>, <a class="el" href="lv__example__buttonmatrix__recolor_8c_source.html#l00017">lv_example_buttonmatrix_recolor()</a> y <a class="el" href="lv__example__buttonmatrix__styling_8c_source.html#l00017">lv_example_buttonmatrix_styling()</a>.</p>
+
+</div>
+</div>
+<a id="afab00c1ec4088bb2f5d101c98dec4559" name="afab00c1ec4088bb2f5d101c98dec4559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab00c1ec4088bb2f5d101c98dec4559">&#9670;&#160;</a></span>lv_buttonmatrix_set_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_map </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *const</td>          <td class="paramname"><span class="paramname"><em>map</em></span>[]&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a new map. Buttons will be created/deleted according to the map. The button matrix keeps a reference to the map and so the string array must not be deallocated during the life of the matrix. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">map</td><td>pointer a string array. The last string has to be: "". Use "\n" to make a line break. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00113">113</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__example__anim__3_8c_source.html#l00017">a</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00040">_lv_buttonmatrix_t::auto_free_map</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00038">_lv_buttonmatrix_t::btn_id_sel</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00034">_lv_buttonmatrix_t::button_areas</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00035">_lv_buttonmatrix_t::ctrl_bits</a>, <a class="el" href="lv__area_8c_source.html#l00549">lv_area_get_height()</a>, <a class="el" href="lv__area_8c_source.html#l00543">lv_area_get_width()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00026">LV_BUTTONMATRIX_BUTTON_NONE</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l00528">lv_obj_get_coords()</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00033">_lv_buttonmatrix_t::map_p</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00032">lv_point_t::x</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area_t::x1</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00033">lv_point_t::y</a> y <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area_t::y1</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__buttonmatrix__button__ctrl_8c_source.html#l00017">lv_example_buttonmatrix_button_ctrl()</a>, <a class="el" href="lv__example__buttonmatrix__button__width_8c_source.html#l00021">lv_example_buttonmatrix_button_width()</a>, <a class="el" href="lv__example__buttonmatrix__event_8c_source.html#l00024">lv_example_buttonmatrix_event()</a>, <a class="el" href="lv__example__buttonmatrix__map_8c_source.html#l00020">lv_example_buttonmatrix_map()</a>, <a class="el" href="lv__example__buttonmatrix__one__checked_8c_source.html#l00017">lv_example_buttonmatrix_one_checked()</a>, <a class="el" href="lv__example__buttonmatrix__popover_8c_source.html#l00017">lv_example_buttonmatrix_popover()</a>, <a class="el" href="lv__example__buttonmatrix__recolor_8c_source.html#l00017">lv_example_buttonmatrix_recolor()</a>, <a class="el" href="lv__example__buttonmatrix__styling_8c_source.html#l00017">lv_example_buttonmatrix_styling()</a>, <a class="el" href="lv__example__textarea__buttonmatrix_8c_source.html#l00034">lv_example_textarea_buttonmatrix()</a> y <a class="el" href="lv__keyboard_8c_source.html#l00326">lv_keyboard_def_event_cb()</a>.</p>
+
+</div>
+</div>
+<a id="ac4afe546114b3a7820dcde85a10e6ba6" name="ac4afe546114b3a7820dcde85a10e6ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4afe546114b3a7820dcde85a10e6ba6">&#9670;&#160;</a></span>lv_buttonmatrix_set_one_checked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_one_checked </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>en</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Make the button matrix like a selector widget (only one button may be checked at a time). <span class="tt"><a class="el" href="#afc89731eac25222abcfd183003644632ab55b783fae27240e5f6a314383b2a688">LV_BUTTONMATRIX_CTRL_CHECKABLE</a></span> must be enabled on the buttons to be selected using <span class="tt">lv_buttonmatrix_set_ctrl()</span> or <span class="tt"><a class="el" href="#a8f9a5b93e1b04abe1e8781fefb206ec0">lv_buttonmatrix_set_button_ctrl_all()</a></span>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a button matrix object </td></tr>
+    <tr><td class="paramname">en</td><td>whether "one check" mode is enabled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00248">248</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00039">_lv_buttonmatrix_t::one_check</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__buttonmatrix__one__checked_8c_source.html#l00017">lv_example_buttonmatrix_one_checked()</a> y <a class="el" href="lv__example__buttonmatrix__styling_8c_source.html#l00017">lv_example_buttonmatrix_styling()</a>.</p>
+
+</div>
+</div>
+<a id="a5fe2e95eacc734c20688338018771c64" name="a5fe2e95eacc734c20688338018771c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe2e95eacc734c20688338018771c64">&#9670;&#160;</a></span>lv_buttonmatrix_set_selected_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_buttonmatrix_set_selected_button </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>btn_id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the selected buttons </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to button matrix object </td></tr>
+    <tr><td class="paramname">btn_id</td><td>0 based index of the button to modify. (Not counting new lines) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00165">165</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00036">_lv_buttonmatrix_t::btn_cnt</a>, <a class="el" href="lv__buttonmatrix__private_8h_source.html#l00038">_lv_buttonmatrix_t::btn_id_sel</a>, <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00026">LV_BUTTONMATRIX_BUTTON_NONE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__calendar_8c_source.html#l00156">lv_calendar_set_month_shown()</a>.</p>
+
+</div>
+</div>
+<a id="ae31126bd42d798120e471c70bc430a1c" name="ae31126bd42d798120e471c70bc430a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31126bd42d798120e471c70bc430a1c">&#9670;&#160;</a></span>LV_EXPORT_CONST_INT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LV_EXPORT_CONST_INT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ae0337aecf1e97012d122a9f1ab782c40">LV_BUTTONMATRIX_BUTTON_NONE</a></td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2widgets_2lv__buttonmatrix_8h_source.html#l00026">LV_BUTTONMATRIX_BUTTON_NONE</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="afffc41d521be922ee55d7f7b68f53c1c" name="afffc41d521be922ee55d7f7b68f53c1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffc41d521be922ee55d7f7b68f53c1c">&#9670;&#160;</a></span>lv_buttonmatrix_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a52a21700fe5946c140157ebf74459a46">LV_ATTRIBUTE_EXTERN_DATA</a> const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_buttonmatrix_class</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__buttonmatrix_8c_source.html#l00079">79</a> del archivo <a class="el" href="lv__buttonmatrix_8c_source.html">lv_buttonmatrix.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_9217fd4f896c7dabfd10ab01c3bac1ef.html">include</a></li><li class="navelem"><a href="dir_f3987adca4f4e4d8dfc0669d06d0d161.html">lvgl</a></li><li class="navelem"><a href="dir_e0bfaa53cfa640b77648f9f5cc765955.html">widgets</a></li><li class="navelem"><a href="include_2lvgl_2widgets_2lv__buttonmatrix_8h.html">lv_buttonmatrix.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+var class_generic_schema_document =
+[
+    [ "AllocatorType", "class_generic_schema_document.html#a9ef808f72e1794946cc557e2a9a546ff", null ],
+    [ "Ch", "class_generic_schema_document.html#a35703406564c3147489128e59bafc246", null ],
+    [ "EncodingType", "class_generic_schema_document.html#a44ad096a6ef84b62bf807b1732a59dd0", null ],
+    [ "GValue", "class_generic_schema_document.html#a7eaac7d2a22f57d2c91e740122a58dbb", null ],
+    [ "IRemoteSchemaDocumentProviderType", "class_generic_schema_document.html#afa312c5e3978992d8f887fdfd146091c", null ],
+    [ "PointerType", "class_generic_schema_document.html#aecb14e3a778b77bca5aa590d20206673", null ],
+    [ "SchemaType", "class_generic_schema_document.html#a97542beaaf6d81626888d9320510da35", null ],
+    [ "StringRefType", "class_generic_schema_document.html#a1a7478cece39a7044feb4d91021a7d5c", null ],
+    [ "UriType", "class_generic_schema_document.html#a687e0447cc56a32eeb7c0e0312ddebd1", null ],
+    [ "ValueType", "class_generic_schema_document.html#a10b843fba2f32761b707fafe0d9ce802", null ],
+    [ "GenericSchemaDocument", "class_generic_schema_document.html#a9e5391fa7464ebf150c83837763bf26a", null ],
+    [ "~GenericSchemaDocument", "class_generic_schema_document.html#a49ad7f9625252491fa0b06aae02670ca", null ],
+    [ "GetError", "class_generic_schema_document.html#a4cba2923c8cfbee18d6cafb7a976936e", null ],
+    [ "GetError", "class_generic_schema_document.html#a5d41c23859446daaa75e39291f16c19b", null ],
+    [ "GetRoot", "class_generic_schema_document.html#a1f69c9281ed13d0a9f8e68e59bfac007", null ],
+    [ "GetSpecification", "class_generic_schema_document.html#ad327806c2491d9e39ad4af841c3169fa", null ],
+    [ "GetURI", "class_generic_schema_document.html#a553fbdb1c812693d3bc02c0a2f6cb620", null ],
+    [ "IsSupportedSpecification", "class_generic_schema_document.html#a19844f16894f818c91ab353863ed649a", null ],
+    [ "SchemaError", "class_generic_schema_document.html#a801ff420b9ea655f249198a9a85a9261", null ],
+    [ "SchemaErrorPointer", "class_generic_schema_document.html#a2e5009c11135a5865d491072b8c10f5a", null ],
+    [ "SchemaErrorValue", "class_generic_schema_document.html#af9445ea6d8fd2f5bc76d61ce3ce9d055", null ],
+    [ "GenericSchemaValidator", "class_generic_schema_document.html#afcc03e6ba8f1a819e1a028c31ad38347", null ],
+    [ "internal::Schema< GenericSchemaDocument >", "class_generic_schema_document.html#a706511849688d9245fc37109f02a03c4", null ]
+];

@@ -17,7 +17,7 @@
 #include "nvs_flash.h"
 
 #include "esp_log.h"
-
+#include "esp_log_buffer.h"
 #include "esp_bt.h"
 #include "esp_gap_ble_api.h"
 #include "esp_gatts_api.h"
@@ -263,7 +263,7 @@ static void gap_event_handler(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param
 		ESP_LOGD(__FUNCTION__, "ESP_GAP_BLE_REMOVE_BOND_DEV_COMPLETE_EVT status = %d", param->remove_bond_dev_cmpl.status);
 		ESP_LOGI(__FUNCTION__, "ESP_GAP_BLE_REMOVE_BOND_DEV");
 		ESP_LOGI(__FUNCTION__, "-----ESP_GAP_BLE_REMOVE_BOND_DEV----");
-		esp_log_buffer_hex(__FUNCTION__, (void *)param->remove_bond_dev_cmpl.bd_addr, sizeof(esp_bd_addr_t));
+		ESP_LOG_BUFFER_HEX(__FUNCTION__, (void *)param->remove_bond_dev_cmpl.bd_addr, sizeof(esp_bd_addr_t));
 		ESP_LOGI(__FUNCTION__, "------------------------------------");
 		break;
 	}

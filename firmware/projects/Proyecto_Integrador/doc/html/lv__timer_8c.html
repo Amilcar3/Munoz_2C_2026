@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/misc/lv_timer.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__timer_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_timer.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__timer__private_8h_source.html">lv_timer_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../core/lv_global.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__timer_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ab9b92e3ca5f56511b69d1ce1e187c48b" id="r_ab9b92e3ca5f56511b69d1ce1e187c48b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ab9b92e3ca5f56511b69d1ce1e187c48b">IDLE_MEAS_PERIOD</a>&#160;&#160;&#160;500 /*[ms]*/</td></tr>
+<tr class="memitem:a61ab5364baf001df55c0517f574e40f3" id="r_a61ab5364baf001df55c0517f574e40f3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a61ab5364baf001df55c0517f574e40f3">DEF_PERIOD</a>&#160;&#160;&#160;500</td></tr>
+<tr class="memitem:a17ba9d3d3f420182822febf73adca0a4" id="r_a17ba9d3d3f420182822febf73adca0a4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a17ba9d3d3f420182822febf73adca0a4">state</a>&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;timer_state</td></tr>
+<tr class="memitem:a3276fc1cbee37c9f26a24c333dcf9fcb" id="r_a3276fc1cbee37c9f26a24c333dcf9fcb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3276fc1cbee37c9f26a24c333dcf9fcb">timer_ll_p</a>&#160;&#160;&#160;&amp;(state.timer_ll)</td></tr>
+<tr class="memitem:acb0f48ca7a61b115be00a00462ce4d50" id="r_acb0f48ca7a61b115be00a00462ce4d50"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acb0f48ca7a61b115be00a00462ce4d50">LV_TRACE_TIMER</a>(...)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a69566bba5de77cc705b7d3535de386a5" id="r_a69566bba5de77cc705b7d3535de386a5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a69566bba5de77cc705b7d3535de386a5">lv_timer_core_init</a> (void)</td></tr>
+<tr class="memitem:adb5cfb35b8a8ffe081b95c92b29c7c8c" id="r_adb5cfb35b8a8ffe081b95c92b29c7c8c"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler</a> (void)</td></tr>
+<tr class="memitem:a214363f0203e6adccc9fdee865faf69f" id="r_a214363f0203e6adccc9fdee865faf69f"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a214363f0203e6adccc9fdee865faf69f">lv_timer_get_time_to_next</a> (void)</td></tr>
+<tr class="memitem:a4acaa2a1a10dd3efc5c36730557f90e9" id="r_a4acaa2a1a10dd3efc5c36730557f90e9"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> void&#160;</td><td class="memItemRight"><a class="el" href="#a4acaa2a1a10dd3efc5c36730557f90e9">lv_timer_periodic_handler</a> (void)</td></tr>
+<tr class="memitem:a59810b0483766ce41193ce562f2c7889" id="r_a59810b0483766ce41193ce562f2c7889"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a59810b0483766ce41193ce562f2c7889">lv_timer_create_basic</a> (void)</td></tr>
+<tr class="memitem:a9f92d3830e2336b96d0459199b87ff18" id="r_a9f92d3830e2336b96d0459199b87ff18"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f92d3830e2336b96d0459199b87ff18">lv_timer_create</a> (<a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#abe734badf4cb07f041541ba627282c7f">lv_timer_cb_t</a> timer_xcb, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> period, void *user_data)</td></tr>
+<tr class="memitem:a26a85f864c0b682f69fde9f34aa132a7" id="r_a26a85f864c0b682f69fde9f34aa132a7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a26a85f864c0b682f69fde9f34aa132a7">lv_timer_set_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer, <a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#abe734badf4cb07f041541ba627282c7f">lv_timer_cb_t</a> timer_cb)</td></tr>
+<tr class="memitem:a23535f9f44d85d2ad1fe660b0fb09fda" id="r_a23535f9f44d85d2ad1fe660b0fb09fda"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a23535f9f44d85d2ad1fe660b0fb09fda">lv_timer_delete</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a90e10e2ab69ab89747b9b20face7f038" id="r_a90e10e2ab69ab89747b9b20face7f038"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a90e10e2ab69ab89747b9b20face7f038">lv_timer_pause</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a25ed72d3306a02d08e65f9f265f6958c" id="r_a25ed72d3306a02d08e65f9f265f6958c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a25ed72d3306a02d08e65f9f265f6958c">lv_timer_resume</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:adf9e813ac9c28319d45db10e78f06d9c" id="r_adf9e813ac9c28319d45db10e78f06d9c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf9e813ac9c28319d45db10e78f06d9c">lv_timer_set_period</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> period)</td></tr>
+<tr class="memitem:a346ed206bc41f346e2f29f2991dc0703" id="r_a346ed206bc41f346e2f29f2991dc0703"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a346ed206bc41f346e2f29f2991dc0703">lv_timer_ready</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a30eaae235dd52aa13491dc2aab28905e" id="r_a30eaae235dd52aa13491dc2aab28905e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a30eaae235dd52aa13491dc2aab28905e">lv_timer_set_repeat_count</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> repeat_count)</td></tr>
+<tr class="memitem:ae33a5d38af71c423fd473a8a1ee183c7" id="r_ae33a5d38af71c423fd473a8a1ee183c7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae33a5d38af71c423fd473a8a1ee183c7">lv_timer_set_auto_delete</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> auto_delete)</td></tr>
+<tr class="memitem:a1e373dc827d48321692b3f8c6fd86451" id="r_a1e373dc827d48321692b3f8c6fd86451"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e373dc827d48321692b3f8c6fd86451">lv_timer_set_user_data</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer, void *user_data)</td></tr>
+<tr class="memitem:ab1d0f47b0ce4cc897f99fe7426a3b252" id="r_ab1d0f47b0ce4cc897f99fe7426a3b252"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab1d0f47b0ce4cc897f99fe7426a3b252">lv_timer_reset</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a20104d9b90d04c1c63e4974baaf930b3" id="r_a20104d9b90d04c1c63e4974baaf930b3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20104d9b90d04c1c63e4974baaf930b3">lv_timer_enable</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> en)</td></tr>
+<tr class="memitem:a14da0aaf24ddac622f6d0a9abe0c7f7e" id="r_a14da0aaf24ddac622f6d0a9abe0c7f7e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14da0aaf24ddac622f6d0a9abe0c7f7e">lv_timer_core_deinit</a> (void)</td></tr>
+<tr class="memitem:a9a3fbf26ce231b757959563590108cfa" id="r_a9a3fbf26ce231b757959563590108cfa"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9a3fbf26ce231b757959563590108cfa">lv_timer_get_idle</a> (void)</td></tr>
+<tr class="memitem:a7a13e9fadcaaa0098b9e379b35d85785" id="r_a7a13e9fadcaaa0098b9e379b35d85785"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7a13e9fadcaaa0098b9e379b35d85785">lv_timer_get_time_until_next</a> (void)</td></tr>
+<tr class="memitem:a8cadfeccdc0ea47f6c0f0875e58d47f1" id="r_a8cadfeccdc0ea47f6c0f0875e58d47f1"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8cadfeccdc0ea47f6c0f0875e58d47f1">lv_timer_get_next</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a5ca8c2c66eed4dd317e6111319e4544b" id="r_a5ca8c2c66eed4dd317e6111319e4544b"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a5ca8c2c66eed4dd317e6111319e4544b">lv_timer_handler_run_in_period</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> period)</td></tr>
+<tr class="memitem:a685b05b74d44a85138aa756f6d978ac6" id="r_a685b05b74d44a85138aa756f6d978ac6"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#a685b05b74d44a85138aa756f6d978ac6">lv_timer_get_user_data</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:a741cc5b89cafa5e4d68f28b85ba87e23" id="r_a741cc5b89cafa5e4d68f28b85ba87e23"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a741cc5b89cafa5e4d68f28b85ba87e23">lv_timer_get_paused</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *timer)</td></tr>
+<tr class="memitem:ad9e61e87da50c72666feae74db216192" id="r_ad9e61e87da50c72666feae74db216192"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad9e61e87da50c72666feae74db216192">lv_timer_handler_set_resume_cb</a> (<a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#a0735c7731e190c96870582eda3c2c6ab">lv_timer_handler_resume_cb_t</a> cb, void *data)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a61ab5364baf001df55c0517f574e40f3" name="a61ab5364baf001df55c0517f574e40f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61ab5364baf001df55c0517f574e40f3">&#9670;&#160;</a></span>DEF_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEF_PERIOD&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00017">17</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00163">lv_timer_create_basic()</a>.</p>
+
+</div>
+</div>
+<a id="ab9b92e3ca5f56511b69d1ce1e187c48b" name="ab9b92e3ca5f56511b69d1ce1e187c48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b92e3ca5f56511b69d1ce1e187c48b">&#9670;&#160;</a></span>IDLE_MEAS_PERIOD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDLE_MEAS_PERIOD&#160;&#160;&#160;500 /*[ms]*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00016">16</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>.</p>
+
+</div>
+</div>
+<a id="acb0f48ca7a61b115be00a00462ce4d50" name="acb0f48ca7a61b115be00a00462ce4d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0f48ca7a61b115be00a00462ce4d50">&#9670;&#160;</a></span>LV_TRACE_TIMER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LV_TRACE_TIMER</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00043">43</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a> y <a class="el" href="lv__timer_8c_source.html#l00153">lv_timer_periodic_handler()</a>.</p>
+
+</div>
+</div>
+<a id="a17ba9d3d3f420182822febf73adca0a4" name="a17ba9d3d3f420182822febf73adca0a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ba9d3d3f420182822febf73adca0a4">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define state&#160;&#160;&#160;<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;timer_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00019">19</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+</div>
+</div>
+<a id="a3276fc1cbee37c9f26a24c333dcf9fcb" name="a3276fc1cbee37c9f26a24c333dcf9fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3276fc1cbee37c9f26a24c333dcf9fcb">&#9670;&#160;</a></span>timer_ll_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define timer_ll_p&#160;&#160;&#160;&amp;(state.timer_ll)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00020">20</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00275">lv_timer_core_deinit()</a>, <a class="el" href="lv__timer_8c_source.html#l00050">lv_timer_core_init()</a>, <a class="el" href="lv__timer_8c_source.html#l00168">lv_timer_create()</a>, <a class="el" href="lv__timer_8c_source.html#l00201">lv_timer_delete()</a>, <a class="el" href="lv__timer_8c_source.html#l00292">lv_timer_get_next()</a>, <a class="el" href="lv__timer_8c_source.html#l00135">lv_timer_get_time_to_next()</a> y <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a14da0aaf24ddac622f6d0a9abe0c7f7e" name="a14da0aaf24ddac622f6d0a9abe0c7f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14da0aaf24ddac622f6d0a9abe0c7f7e">&#9670;&#160;</a></span>lv_timer_core_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_core_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deinit the lv_timer module </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00275">275</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__ll_8c_source.html#l00316">lv_ll_clear()</a>, <a class="el" href="lv__timer_8c_source.html#l00269">lv_timer_enable()</a> y <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00406">lv_deinit()</a>.</p>
+
+</div>
+</div>
+<a id="a69566bba5de77cc705b7d3535de386a5" name="a69566bba5de77cc705b7d3535de386a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69566bba5de77cc705b7d3535de386a5">&#9670;&#160;</a></span>lv_timer_core_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_core_init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Init the lv_timer module </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00050">50</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__ll_8c_source.html#l00042">lv_ll_init()</a>, <a class="el" href="lv__timer_8c_source.html#l00269">lv_timer_enable()</a> y <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00158">lv_init()</a>.</p>
+
+</div>
+</div>
+<a id="a9f92d3830e2336b96d0459199b87ff18" name="a9f92d3830e2336b96d0459199b87ff18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f92d3830e2336b96d0459199b87ff18">&#9670;&#160;</a></span>lv_timer_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> * lv_timer_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#abe734badf4cb07f041541ba627282c7f">lv_timer_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_xcb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>period</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new lv_timer </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_xcb</td><td>a callback to call periodically. (the 'x' in the argument name indicates that it's not a fully generic function because it not follows the <span class="tt">func_name(object, callback, ...)</span> convention) </td></tr>
+    <tr><td class="paramname">period</td><td>call period in ms unit </td></tr>
+    <tr><td class="paramname">user_data</td><td>custom parameter @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the new timer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00168">168</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer__private_8h_source.html#l00040">_lv_timer_t::auto_delete</a>, <a class="el" href="lv__timer__private_8h_source.html#l00035">_lv_timer_t::last_run</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__ll_8c_source.html#l00059">lv_ll_ins_head()</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__timer__private_8h_source.html#l00039">_lv_timer_t::paused</a>, <a class="el" href="lv__timer__private_8h_source.html#l00034">_lv_timer_t::period</a>, <a class="el" href="lv__timer__private_8h_source.html#l00038">_lv_timer_t::repeat_count</a>, <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>, <a class="el" href="lv__timer__private_8h_source.html#l00036">_lv_timer_t::timer_cb</a>, <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a> y <a class="el" href="lv__timer__private_8h_source.html#l00037">_lv_timer_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00572">all_in_one_create()</a>, <a class="el" href="all__in__one_8c_source.html#l00717">all_in_one_demo_start()</a>, <a class="el" href="lv__anim_8c_source.html#l00064">lv_anim_core_init()</a>, <a class="el" href="lv__anim_8c_source.html#l00078">lv_anim_enable_vsync_mode()</a>, <a class="el" href="lv__async_8c_source.html#l00044">lv_async_call()</a>, <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>, <a class="el" href="lv__example__canvas__wave__text_8c_source.html#l00061">lv_example_canvas_wave_text()</a>, <a class="el" href="lv__example__canvas__windstorm__text_8c_source.html#l00064">lv_example_canvas_windstorm_text()</a>, <a class="el" href="lv__example__chart__circular__gap_8c_source.html#l00032">lv_example_chart_circular_gap()</a>, <a class="el" href="lv__example__chart__scatter_8c_source.html#l00053">lv_example_chart_scatter()</a>, <a class="el" href="lv__example__event__draw_8c_source.html#l00058">lv_example_event_draw()</a>, <a class="el" href="lv__indev_8c_source.html#l00088">lv_indev_create()</a> y <a class="el" href="lv__timer_8c_source.html#l00163">lv_timer_create_basic()</a>.</p>
+
+</div>
+</div>
+<a id="a59810b0483766ce41193ce562f2c7889" name="a59810b0483766ce41193ce562f2c7889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59810b0483766ce41193ce562f2c7889">&#9670;&#160;</a></span>lv_timer_create_basic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> * lv_timer_create_basic </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create an "empty" timer. It needs to be initialized with at least <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#a26a85f864c0b682f69fde9f34aa132a7">lv_timer_set_cb</a></span> and <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#adf9e813ac9c28319d45db10e78f06d9c">lv_timer_set_period</a></span> </p><dl class="section return"><dt>Devuelve</dt><dd>pointer to the created timer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00163">163</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer_8c_source.html#l00017">DEF_PERIOD</a>, <a class="el" href="lv__timer_8c_source.html#l00168">lv_timer_create()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a23535f9f44d85d2ad1fe660b0fb09fda" name="a23535f9f44d85d2ad1fe660b0fb09fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23535f9f44d85d2ad1fe660b0fb09fda">&#9670;&#160;</a></span>lv_timer_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delete a lv_timer </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to an lv_timer @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00201">201</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__ll_8c_source.html#l00129">lv_ll_remove()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a> y <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__anim_8c_source.html#l00078">lv_anim_enable_vsync_mode()</a>, <a class="el" href="lv__async_8c_source.html#l00069">lv_async_call_cancel()</a>, <a class="el" href="lv__display_8c_source.html#l00197">lv_display_delete()</a>, <a class="el" href="lv__display_8c_source.html#l01249">lv_display_delete_refr_timer()</a> y <a class="el" href="lv__indev_8c_source.html#l00131">lv_indev_delete()</a>.</p>
+
+</div>
+</div>
+<a id="a20104d9b90d04c1c63e4974baaf930b3" name="a20104d9b90d04c1c63e4974baaf930b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20104d9b90d04c1c63e4974baaf930b3">&#9670;&#160;</a></span>lv_timer_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>en</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enable or disable the whole lv_timer handling </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">en</td><td>true: lv_timer handling is running, false: lv_timer handling is suspended </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00269">269</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00275">lv_timer_core_deinit()</a> y <a class="el" href="lv__timer_8c_source.html#l00050">lv_timer_core_init()</a>.</p>
+
+</div>
+</div>
+<a id="a9a3fbf26ce231b757959563590108cfa" name="a9a3fbf26ce231b757959563590108cfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a3fbf26ce231b757959563590108cfa">&#9670;&#160;</a></span>lv_timer_get_idle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_timer_get_idle </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get idle percentage </p><dl class="section return"><dt>Devuelve</dt><dd>the lv_timer idle in percentage </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00282">282</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__os__none_8c_source.html#l00040">lv_os_get_idle_percent()</a>.</p>
+
+</div>
+</div>
+<a id="a8cadfeccdc0ea47f6c0f0875e58d47f1" name="a8cadfeccdc0ea47f6c0f0875e58d47f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cadfeccdc0ea47f6c0f0875e58d47f1">&#9670;&#160;</a></span>lv_timer_get_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> * lv_timer_get_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Iterate through the timers </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>the previous return value. @nullable When NULL the iteration starts from the first timer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the next timer or NULL if there is no more timer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00292">292</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__ll_8c_source.html#l00226">lv_ll_get_head()</a>, <a class="el" href="lv__ll_8c_source.html#l00238">lv_ll_get_next()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__async_8c_source.html#l00069">lv_async_call_cancel()</a>.</p>
+
+</div>
+</div>
+<a id="a741cc5b89cafa5e4d68f28b85ba87e23" name="a741cc5b89cafa5e4d68f28b85ba87e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741cc5b89cafa5e4d68f28b85ba87e23">&#9670;&#160;</a></span>lv_timer_get_paused()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_timer_get_paused </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the pause state of a timer </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true: timer is paused; false: timer is running </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00315">315</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00039">_lv_timer_t::paused</a>.</p>
+
+</div>
+</div>
+<a id="a214363f0203e6adccc9fdee865faf69f" name="a214363f0203e6adccc9fdee865faf69f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a214363f0203e6adccc9fdee865faf69f">&#9670;&#160;</a></span>lv_timer_get_time_to_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_timer_get_time_to_next </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate the time to the soonest LVGL timer. </p><dl class="section return"><dt>Devuelve</dt><dd>time till it needs to be run next timer (in ms) </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00135">135</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05197">LV_ATTRIBUTE_TIMER_HANDLER</a>, <a class="el" href="lv__ll_8c_source.html#l00226">lv_ll_get_head()</a>, <a class="el" href="lv__ll_8c_source.html#l00238">lv_ll_get_next()</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00152">LV_MIN</a>, <a class="el" href="include_2lvgl_2core_2lv__timer_8h_source.html#l00025">LV_NO_TIMER_READY</a>, <a class="el" href="lv__timer__private_8h_source.html#l00039">_lv_timer_t::paused</a> y <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>.</p>
+
+</div>
+</div>
+<a id="a7a13e9fadcaaa0098b9e379b35d85785" name="a7a13e9fadcaaa0098b9e379b35d85785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a13e9fadcaaa0098b9e379b35d85785">&#9670;&#160;</a></span>lv_timer_get_time_until_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_timer_get_time_until_next </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the time remaining until the next timer will run </p><dl class="section return"><dt>Devuelve</dt><dd>the time remaining in ms </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00287">287</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+<a id="a685b05b74d44a85138aa756f6d978ac6" name="a685b05b74d44a85138aa756f6d978ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685b05b74d44a85138aa756f6d978ac6">&#9670;&#160;</a></span>lv_timer_get_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * lv_timer_get_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the user_data passed when the timer was created </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to the lv_timer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the user_data </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00309">309</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00037">_lv_timer_t::user_data</a>.</p>
+
+</div>
+</div>
+<a id="adb5cfb35b8a8ffe081b95c92b29c7c8c" name="adb5cfb35b8a8ffe081b95c92b29c7c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb5cfb35b8a8ffe081b95c92b29c7c8c">&#9670;&#160;</a></span>lv_timer_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_timer_handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Call it periodically to handle lv_timers. </p><dl class="section return"><dt>Devuelve</dt><dd>time till it needs to be run next (in ms) </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00058">58</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer__private_8h_source.html#l00052">lv_timer_state_t::already_running</a>, <a class="el" href="lv__timer__private_8h_source.html#l00054">lv_timer_state_t::busy_time</a>, <a class="el" href="lv__timer__private_8h_source.html#l00047">lv_timer_state_t::idle_last</a>, <a class="el" href="lv__timer_8c_source.html#l00016">IDLE_MEAS_PERIOD</a>, <a class="el" href="lv__timer__private_8h_source.html#l00055">lv_timer_state_t::idle_period_start</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05197">LV_ATTRIBUTE_TIMER_HANDLER</a>, <a class="el" href="lv__ll_8c_source.html#l00226">lv_ll_get_head()</a>, <a class="el" href="lv__ll_8c_source.html#l00238">lv_ll_get_next()</a>, <a class="el" href="lv__os_8c_source.html#l00045">lv_lock()</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">LV_LOG_WARN</a>, <a class="el" href="include_2lvgl_2stdlib_2lv__sprintf_8h_source.html#l00038">LV_PRIu32</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00170">LV_PROFILER_TIMER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00171">LV_PROFILER_TIMER_END</a>, <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a>, <a class="el" href="lv__timer_8c_source.html#l00135">lv_timer_get_time_to_next()</a>, <a class="el" href="lv__timer__private_8h_source.html#l00046">lv_timer_state_t::lv_timer_run</a>, <a class="el" href="lv__timer_8c_source.html#l00043">LV_TRACE_TIMER</a>, <a class="el" href="lv__os_8c_source.html#l00061">lv_unlock()</a>, <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>, <a class="el" href="lv__timer__private_8h_source.html#l00049">lv_timer_state_t::timer_created</a>, <a class="el" href="lv__timer__private_8h_source.html#l00048">lv_timer_state_t::timer_deleted</a>, <a class="el" href="lv__timer_8c_source.html#l00020">timer_ll_p</a> y <a class="el" href="lv__timer__private_8h_source.html#l00050">lv_timer_state_t::timer_time_until_next</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__timer_8c_source.html#l00298">lv_timer_handler_run_in_period()</a>, <a class="el" href="lv__timer_8c_source.html#l00153">lv_timer_periodic_handler()</a> y <a class="el" href="lvgl__linux-3d_8c_source.html#l00003">main()</a>.</p>
+
+</div>
+</div>
+<a id="a5ca8c2c66eed4dd317e6111319e4544b" name="a5ca8c2c66eed4dd317e6111319e4544b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca8c2c66eed4dd317e6111319e4544b">&#9670;&#160;</a></span>lv_timer_handler_run_in_period()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_timer_handler_run_in_period </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>period</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Call it in the super-loop of <a class="el" href="namespacemain.html">main()</a> or threads. It will run <a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler()</a> with a given period in ms. You can use it with sleep or delay in OS environment. This function is used to simplify the porting. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">period</td><td>the period for running <a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the time after which it must be called again </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00298">298</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05197">LV_ATTRIBUTE_TIMER_HANDLER</a>, <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a> y <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>.</p>
+
+</div>
+</div>
+<a id="ad9e61e87da50c72666feae74db216192" name="ad9e61e87da50c72666feae74db216192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e61e87da50c72666feae74db216192">&#9670;&#160;</a></span>lv_timer_handler_set_resume_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_handler_set_resume_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#a0735c7731e190c96870582eda3c2c6ab">lv_timer_handler_resume_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>cb</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the resume callback to the timer handler </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>the function to call when timer handler is resumed </td></tr>
+    <tr><td class="paramname">data</td><td>pointer to a resume data @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00412">412</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a>.</p>
+
+</div>
+</div>
+<a id="a90e10e2ab69ab89747b9b20face7f038" name="a90e10e2ab69ab89747b9b20face7f038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90e10e2ab69ab89747b9b20face7f038">&#9670;&#160;</a></span>lv_timer_pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_pause </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pause a timer. It is typically safe to call from an interrupt handler or a different thread. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to an lv_timer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00217">217</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00039">_lv_timer_t::paused</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00572">all_in_one_create()</a>, <a class="el" href="lv__refr_8c_source.html#l00369">lv_display_refr_timer()</a> y <a class="el" href="lv__indev_8c_source.html#l00592">lv_indev_set_mode()</a>.</p>
+
+</div>
+</div>
+<a id="a4acaa2a1a10dd3efc5c36730557f90e9" name="a4acaa2a1a10dd3efc5c36730557f90e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4acaa2a1a10dd3efc5c36730557f90e9">&#9670;&#160;</a></span>lv_timer_periodic_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a65a000fa97141d8340aab1813d0966d2">LV_ATTRIBUTE_TIMER_HANDLER</a> void lv_timer_periodic_handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Call it in the super-loop of <a class="el" href="namespacemain.html">main()</a> or threads. It will automatically call <a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#adb5cfb35b8a8ffe081b95c92b29c7c8c">lv_timer_handler()</a> at the right time. This function is used to simplify the porting. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00153">153</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05197">LV_ATTRIBUTE_TIMER_HANDLER</a>, <a class="el" href="lv__tick_8c_source.html#l00066">lv_tick_elaps()</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a>, <a class="el" href="lv__timer_8c_source.html#l00058">lv_timer_handler()</a>, <a class="el" href="lv__timer_8c_source.html#l00043">LV_TRACE_TIMER</a>, <a class="el" href="lv__timer__private_8h_source.html#l00053">lv_timer_state_t::periodic_last_tick</a>, <a class="el" href="lv__cmsis__pack_8txt_source.html#l00041">state</a> y <a class="el" href="lv__timer__private_8h_source.html#l00050">lv_timer_state_t::timer_time_until_next</a>.</p>
+
+</div>
+</div>
+<a id="a346ed206bc41f346e2f29f2991dc0703" name="a346ed206bc41f346e2f29f2991dc0703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346ed206bc41f346e2f29f2991dc0703">&#9670;&#160;</a></span>lv_timer_ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_ready </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Make a lv_timer ready. It will not wait its period. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00237">237</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer__private_8h_source.html#l00035">_lv_timer_t::last_run</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00034">_lv_timer_t::period</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__display_8c_source.html#l00075">lv_display_create()</a>.</p>
+
+</div>
+</div>
+<a id="ab1d0f47b0ce4cc897f99fe7426a3b252" name="ab1d0f47b0ce4cc897f99fe7426a3b252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d0f47b0ce4cc897f99fe7426a3b252">&#9670;&#160;</a></span>lv_timer_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reset a lv_timer. It will be called the previously set period milliseconds later. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00262">262</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer__private_8h_source.html#l00035">_lv_timer_t::last_run</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__tick_8c_source.html#l00045">lv_tick_get()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a25ed72d3306a02d08e65f9f265f6958c" name="a25ed72d3306a02d08e65f9f265f6958c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ed72d3306a02d08e65f9f265f6958c">&#9670;&#160;</a></span>lv_timer_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_resume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resume a timer. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to an lv_timer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00223">223</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00039">_lv_timer_t::paused</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__indev_8c_source.html#l00592">lv_indev_set_mode()</a>.</p>
+
+</div>
+</div>
+<a id="ae33a5d38af71c423fd473a8a1ee183c7" name="ae33a5d38af71c423fd473a8a1ee183c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae33a5d38af71c423fd473a8a1ee183c7">&#9670;&#160;</a></span>lv_timer_set_auto_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_set_auto_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>auto_delete</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set whether a lv_timer will be deleted automatically when it is called <span class="tt">repeat_count</span> times. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer. </td></tr>
+    <tr><td class="paramname">auto_delete</td><td>true: auto delete; false: timer will be paused when it is called <span class="tt">repeat_count</span> times. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00250">250</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__timer__private_8h_source.html#l00040">_lv_timer_t::auto_delete</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a26a85f864c0b682f69fde9f34aa132a7" name="a26a85f864c0b682f69fde9f34aa132a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a85f864c0b682f69fde9f34aa132a7">&#9670;&#160;</a></span>lv_timer_set_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_set_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__timer_8h.html#abe734badf4cb07f041541ba627282c7f">lv_timer_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the callback to the timer (the function to call periodically) </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a timer </td></tr>
+    <tr><td class="paramname">timer_cb</td><td>the function to call periodically </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00195">195</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00036">_lv_timer_t::timer_cb</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__indev_8c_source.html#l00592">lv_indev_set_mode()</a>.</p>
+
+</div>
+</div>
+<a id="adf9e813ac9c28319d45db10e78f06d9c" name="adf9e813ac9c28319d45db10e78f06d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9e813ac9c28319d45db10e78f06d9c">&#9670;&#160;</a></span>lv_timer_set_period()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_set_period </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>period</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set new period for a lv_timer </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer </td></tr>
+    <tr><td class="paramname">period</td><td>the new period </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00230">230</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00034">_lv_timer_t::period</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00631">all_in_one_set_hr()</a>.</p>
+
+</div>
+</div>
+<a id="a30eaae235dd52aa13491dc2aab28905e" name="a30eaae235dd52aa13491dc2aab28905e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30eaae235dd52aa13491dc2aab28905e">&#9670;&#160;</a></span>lv_timer_set_repeat_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_set_repeat_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>repeat_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the number of times a timer will repeat. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer. </td></tr>
+    <tr><td class="paramname">repeat_count</td><td>-1 : infinity; 0 : stop ; n&gt;0: residual times </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00244">244</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00038">_lv_timer_t::repeat_count</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__async_8c_source.html#l00044">lv_async_call()</a>.</p>
+
+</div>
+</div>
+<a id="a1e373dc827d48321692b3f8c6fd86451" name="a1e373dc827d48321692b3f8c6fd86451"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e373dc827d48321692b3f8c6fd86451">&#9670;&#160;</a></span>lv_timer_set_user_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_timer_set_user_data </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set custom parameter to the lv_timer. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>pointer to a lv_timer. </td></tr>
+    <tr><td class="paramname">user_data</td><td>custom parameter @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__timer_8c_source.html#l00256">256</a> del archivo <a class="el" href="lv__timer_8c_source.html">lv_timer.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__timer__private_8h_source.html#l00037">_lv_timer_t::user_data</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_32c820c032576f8606561fc14ebf0e8c.html">misc</a></li><li class="navelem"><a href="lv__timer_8c.html">lv_timer.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

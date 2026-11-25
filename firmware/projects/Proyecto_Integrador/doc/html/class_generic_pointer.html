@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia de la plantilla de la clase GenericPointer&lt; ValueType, Allocator &gt;</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_generic_pointer.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la plantilla de la clase GenericPointer&lt; ValueType, Allocator &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Represents a JSON <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. Use <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> for <a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8</a> encoding and default allocator.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pointer_8h_source.html">pointer.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:Token" id="r_Token"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_generic_pointer_1_1_token.html">Token</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A token is the basic units of internal representation.  <a href="struct_generic_pointer_1_1_token.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:PercentEncodeStream" id="r_PercentEncodeStream"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_generic_pointer_1_1_percent_encode_stream.html">PercentEncodeStream</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper stream to encode character (UTF-8 code unit) into percent-encoded sequence.  <a href="class_generic_pointer_1_1_percent_encode_stream.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:a44ad096a6ef84b62bf807b1732a59dd0" id="r_a44ad096a6ef84b62bf807b1732a59dd0"><td class="memItemLeft">typedef ValueType::EncodingType&#160;</td><td class="memItemRight"><a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a></td></tr>
+<tr class="memdesc:a44ad096a6ef84b62bf807b1732a59dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classrapidjson_1_1_encoding.html" title="Concept for encoding of Unicode characters.">Encoding</a> type from <a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a>.  <br /></td></tr>
+<tr class="memitem:a0412994b5b9254612a891dc7a4ec6a6b" id="r_a0412994b5b9254612a891dc7a4ec6a6b"><td class="memItemLeft">typedef ValueType::Ch&#160;</td><td class="memItemRight"><a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a></td></tr>
+<tr class="memdesc:a0412994b5b9254612a891dc7a4ec6a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character type from <a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a>.  <br /></td></tr>
+<tr class="memitem:a687e0447cc56a32eeb7c0e0312ddebd1" id="r_a687e0447cc56a32eeb7c0e0312ddebd1"><td class="memItemLeft">typedef <a class="el" href="class_generic_uri.html">GenericUri</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a687e0447cc56a32eeb7c0e0312ddebd1">UriType</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Append token</h2></td></tr>
+<tr class="memitem:a534c051907574ebc78b506013a02ee7d" id="r_a534c051907574ebc78b506013a02ee7d"><td class="memItemLeft"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a534c051907574ebc78b506013a02ee7d">allocator</a></td></tr>
+<tr class="memdesc:a534c051907574ebc78b506013a02ee7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current allocator. It is either user-supplied or equal to ownAllocator_.  <br /></td></tr>
+<tr class="memitem:a592d0cad8f4db9d81e67b00705c482b9" id="r_a592d0cad8f4db9d81e67b00705c482b9"><td class="memItemLeft"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a592d0cad8f4db9d81e67b00705c482b9">allocator_</a></td></tr>
+<tr class="memdesc:a592d0cad8f4db9d81e67b00705c482b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current allocator. It is either user-supplied or equal to ownAllocator_.  <br /></td></tr>
+<tr class="memitem:ac87a809a9ba92419ee77736da74de327" id="r_ac87a809a9ba92419ee77736da74de327"><td class="memItemLeft"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac87a809a9ba92419ee77736da74de327">ownAllocator_</a></td></tr>
+<tr class="memdesc:ac87a809a9ba92419ee77736da74de327"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> owned by this <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>.  <br /></td></tr>
+<tr class="memitem:a94befcb23b1dc38d4a6d00620ec6109b" id="r_a94befcb23b1dc38d4a6d00620ec6109b"><td class="memItemLeft"><a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a94befcb23b1dc38d4a6d00620ec6109b">nameBuffer_</a></td></tr>
+<tr class="memdesc:a94befcb23b1dc38d4a6d00620ec6109b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A buffer containing all names in tokens.  <br /></td></tr>
+<tr class="memitem:ab9cb141fe16bc04f401f4edc82c398dc" id="r_ab9cb141fe16bc04f401f4edc82c398dc"><td class="memItemLeft"><a class="el" href="struct_generic_pointer_1_1_token.html">Token</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab9cb141fe16bc04f401f4edc82c398dc">tokens_</a></td></tr>
+<tr class="memdesc:ab9cb141fe16bc04f401f4edc82c398dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of tokens.  <br /></td></tr>
+<tr class="memitem:a9342c1e41a851940584902971dca1146" id="r_a9342c1e41a851940584902971dca1146"><td class="memItemLeft"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9342c1e41a851940584902971dca1146">tokenCount_</a></td></tr>
+<tr class="memdesc:a9342c1e41a851940584902971dca1146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of tokens in tokens_.  <br /></td></tr>
+<tr class="memitem:a228fe4120f77ea052435b59ec87487f0" id="r_a228fe4120f77ea052435b59ec87487f0"><td class="memItemLeft"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a228fe4120f77ea052435b59ec87487f0">parseErrorOffset_</a></td></tr>
+<tr class="memdesc:a228fe4120f77ea052435b59ec87487f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset in code unit when parsing fail.  <br /></td></tr>
+<tr class="memitem:acb833a735e53e1507e8bb27b7df56e91" id="r_acb833a735e53e1507e8bb27b7df56e91"><td class="memItemLeft"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#gacb2e274f33e54d91b96e9883a99a98be">PointerParseErrorCode</a>&#160;</td><td class="memItemRight"><a class="el" href="#acb833a735e53e1507e8bb27b7df56e91">parseErrorCode_</a></td></tr>
+<tr class="memdesc:acb833a735e53e1507e8bb27b7df56e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parsing error code.  <br /></td></tr>
+<tr class="memitem:a6ef12eed93d032906caebd586343d881" id="r_a6ef12eed93d032906caebd586343d881"><td class="memItemLeft"><a class="el" href="class_generic_pointer.html">GenericPointer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6ef12eed93d032906caebd586343d881">Append</a> (const <a class="el" href="struct_generic_pointer_1_1_token.html">Token</a> &amp;token, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0) const</td></tr>
+<tr class="memdesc:a6ef12eed93d032906caebd586343d881"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a token and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>.  <br /></td></tr>
+<tr class="memitem:a8bf417684250704f664885cb2c313ee9" id="r_a8bf417684250704f664885cb2c313ee9"><td class="memItemLeft"><a class="el" href="class_generic_pointer.html">GenericPointer</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8bf417684250704f664885cb2c313ee9">Append</a> (const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *name, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0) const</td></tr>
+<tr class="memdesc:a8bf417684250704f664885cb2c313ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a name token with length, and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>.  <br /></td></tr>
+<tr class="memitem:ab7afb99cb2227e2072ac0f6dab8eb593" id="r_ab7afb99cb2227e2072ac0f6dab8eb593"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ab7afb99cb2227e2072ac0f6dab8eb593 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab7afb99cb2227e2072ac0f6dab8eb593">RAPIDJSON_DISABLEIF_RETURN</a> ((internal::NotExpr&lt; internal::IsSame&lt; typename internal::RemoveConst&lt; T &gt;<a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">::Type</a>, <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> &gt; &gt;),(<a class="el" href="class_generic_pointer.html">GenericPointer</a>)) <a class="el" href="#a6ef12eed93d032906caebd586343d881">Append</a>(T *name</td></tr>
+<tr class="memdesc:ab7afb99cb2227e2072ac0f6dab8eb593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a name token without length, and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Constructors and destructor.</h2></td></tr>
+<tr class="memitem:aafe12583fc5c29775f8e956acaf2ed32" id="r_aafe12583fc5c29775f8e956acaf2ed32"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aafe12583fc5c29775f8e956acaf2ed32">GenericPointer</a> (<a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0)</td></tr>
+<tr class="memdesc:aafe12583fc5c29775f8e956acaf2ed32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:aca7a15d6407edc48beff390dabec5d15" id="r_aca7a15d6407edc48beff390dabec5d15"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aca7a15d6407edc48beff390dabec5d15">GenericPointer</a> (const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *source, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0)</td></tr>
+<tr class="memdesc:aca7a15d6407edc48beff390dabec5d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that parses a string or URI fragment representation.  <br /></td></tr>
+<tr class="memitem:a8a4931c4710a144ba3ddd793dd0c8993" id="r_a8a4931c4710a144ba3ddd793dd0c8993"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8a4931c4710a144ba3ddd793dd0c8993">GenericPointer</a> (const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *source, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> length, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator=0)</td></tr>
+<tr class="memdesc:a8a4931c4710a144ba3ddd793dd0c8993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that parses a string or URI fragment representation, with length of the source string.  <br /></td></tr>
+<tr class="memitem:a7b7b3661f14202335dddb6cc1d6d07da" id="r_a7b7b3661f14202335dddb6cc1d6d07da"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7b7b3661f14202335dddb6cc1d6d07da">GenericPointer</a> (const <a class="el" href="struct_generic_pointer_1_1_token.html">Token</a> *tokens, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> tokenCount)</td></tr>
+<tr class="memdesc:a7b7b3661f14202335dddb6cc1d6d07da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with user-supplied tokens.  <br /></td></tr>
+<tr class="memitem:a36bbb81f86e621e439ea296ae7c9b958" id="r_a36bbb81f86e621e439ea296ae7c9b958"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a36bbb81f86e621e439ea296ae7c9b958">GenericPointer</a> (const <a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a36bbb81f86e621e439ea296ae7c9b958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="memitem:afb7bd2f00ede4145197254e2be8df363" id="r_afb7bd2f00ede4145197254e2be8df363"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#afb7bd2f00ede4145197254e2be8df363">GenericPointer</a> (const <a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;rhs, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *allocator)</td></tr>
+<tr class="memdesc:afb7bd2f00ede4145197254e2be8df363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="memitem:a4128d47a5c036c895ef5a0e0873bb0e3" id="r_a4128d47a5c036c895ef5a0e0873bb0e3"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4128d47a5c036c895ef5a0e0873bb0e3">~GenericPointer</a> ()</td></tr>
+<tr class="memdesc:a4128d47a5c036c895ef5a0e0873bb0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="memitem:a1bce4c964c1a1319e7d479f26986fee4" id="r_a1bce4c964c1a1319e7d479f26986fee4"><td class="memItemLeft"><a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1bce4c964c1a1319e7d479f26986fee4">operator=</a> (const <a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;rhs)</td></tr>
+<tr class="memdesc:a1bce4c964c1a1319e7d479f26986fee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <br /></td></tr>
+<tr class="memitem:adfe13dfdd2a3ecf0f10ee7906acf1ff9" id="r_adfe13dfdd2a3ecf0f10ee7906acf1ff9"><td class="memItemLeft"><a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#adfe13dfdd2a3ecf0f10ee7906acf1ff9">Swap</a> (<a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;other) RAPIDJSON_NOEXCEPT</td></tr>
+<tr class="memdesc:adfe13dfdd2a3ecf0f10ee7906acf1ff9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the content of this pointer with another.  <br /></td></tr>
+<tr class="memitem:a249c61b5d4bed20c3f8972c57f46a937" id="r_a249c61b5d4bed20c3f8972c57f46a937"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a249c61b5d4bed20c3f8972c57f46a937">swap</a> (<a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;a, <a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp;b) RAPIDJSON_NOEXCEPT</td></tr>
+<tr class="memdesc:a249c61b5d4bed20c3f8972c57f46a937"><td class="mdescLeft">&#160;</td><td class="mdescRight">free-standing swap function helper  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt;<br />
+class GenericPointer&lt; ValueType, Allocator &gt;</div><p>Represents a JSON <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. Use <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> for <a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8</a> encoding and default allocator. </p>
+<p>This class implements RFC 6901 "JavaScript Object Notation (JSON) Pointer" (<a href="https://tools.ietf.org/html/rfc6901">https://tools.ietf.org/html/rfc6901</a>).</p>
+<p>A JSON pointer is for identifying a specific value in a JSON document (<a class="el" href="class_generic_document.html" title="A document for parsing JSON text as DOM.">GenericDocument</a>). It can simplify coding of DOM tree manipulation, because it can access multiple-level depth of DOM tree with single API call.</p>
+<p>After it parses a string representation (e.g. "/foo/0" or URI fragment representation (e.g. "#/foo/0") into its internal representation (tokens), it can be used to resolve a specific value in multiple documents, or sub-tree of documents.</p>
+<p>Contrary to <a class="el" href="class_generic_value.html" title="Represents a JSON value. Use Value for UTF8 encoding and default allocator.">GenericValue</a>, <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> can be copy constructed and copy assigned. Apart from assignment, a <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> cannot be modified after construction.</p>
+<p>Although <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> is very convenient, please aware that constructing <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> involves parsing and dynamic memory allocation. A special constructor with user- supplied tokens eliminates these.</p>
+<p><a class="el" href="class_generic_pointer.html" title="Represents a JSON Pointer. Use Pointer for UTF8 encoding and default allocator.">GenericPointer</a> depends on <a class="el" href="class_generic_document.html" title="A document for parsing JSON text as DOM.">GenericDocument</a> and <a class="el" href="class_generic_value.html" title="Represents a JSON value. Use Value for UTF8 encoding and default allocator.">GenericValue</a>.</p>
+<dl class="tparams"><dt>Parámetros de plantilla</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ValueType</td><td>The value type of the DOM tree. E.g. <a class="el" href="class_generic_value.html" title="Represents a JSON value. Use Value for UTF8 encoding and default allocator.">GenericValue</a>&lt;<a class="el" href="struct_u_t_f8.html" title="UTF-8 encoding.">UTF8&lt;&gt;</a> &gt; </td></tr>
+    <tr><td class="paramname">Allocator</td><td>The allocator type for allocating memory for internal representation.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd><a class="el" href="class_generic_pointer.html" title="Represents a JSON Pointer. Use Pointer for UTF8 encoding and default allocator.">GenericPointer</a> uses same encoding of ValueType. However, <a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> of <a class="el" href="class_generic_pointer.html" title="Represents a JSON Pointer. Use Pointer for UTF8 encoding and default allocator.">GenericPointer</a> is independent of <a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> of <a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00068">68</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="a0412994b5b9254612a891dc7a4ec6a6b" name="a0412994b5b9254612a891dc7a4ec6a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0412994b5b9254612a891dc7a4ec6a6b">&#9670;&#160;</a></span>Ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueType::Ch <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Character type from <a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00071">71</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a44ad096a6ef84b62bf807b1732a59dd0" name="a44ad096a6ef84b62bf807b1732a59dd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44ad096a6ef84b62bf807b1732a59dd0">&#9670;&#160;</a></span>EncodingType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef ValueType::EncodingType <a class="el" href="#a44ad096a6ef84b62bf807b1732a59dd0">EncodingType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classrapidjson_1_1_encoding.html" title="Concept for encoding of Unicode characters.">Encoding</a> type from <a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481" title="GenericValue with UTF8 encoding.">Value</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00070">70</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a687e0447cc56a32eeb7c0e0312ddebd1" name="a687e0447cc56a32eeb7c0e0312ddebd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687e0447cc56a32eeb7c0e0312ddebd1">&#9670;&#160;</a></span>UriType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_generic_uri.html">GenericUri</a>&lt;ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>&gt; <a class="el" href="#a687e0447cc56a32eeb7c0e0312ddebd1">UriType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00072">72</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="aafe12583fc5c29775f8e956acaf2ed32" name="aafe12583fc5c29775f8e956acaf2ed32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe12583fc5c29775f8e956acaf2ed32">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00098">98</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="aca7a15d6407edc48beff390dabec5d15" name="aca7a15d6407edc48beff390dabec5d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca7a15d6407edc48beff390dabec5d15">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that parses a string or URI fragment representation. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>A null-terminated, string or URI fragment representation of JSON pointer. </td></tr>
+    <tr><td class="paramname">allocator</td><td>User supplied allocator for this pointer. If no allocator is provided, it creates a self-owned one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00105">105</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a8a4931c4710a144ba3ddd793dd0c8993" name="a8a4931c4710a144ba3ddd793dd0c8993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4931c4710a144ba3ddd793dd0c8993">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>source</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor that parses a string or URI fragment representation, with length of the source string. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>A string or URI fragment representation of JSON pointer. </td></tr>
+    <tr><td class="paramname">length</td><td>Length of source. </td></tr>
+    <tr><td class="paramname">allocator</td><td>User supplied allocator for this pointer. If no allocator is provided, it creates a self-owned one. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Slightly faster than the overload without length. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00128">128</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a7b7b3661f14202335dddb6cc1d6d07da" name="a7b7b3661f14202335dddb6cc1d6d07da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7b3661f14202335dddb6cc1d6d07da">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_generic_pointer_1_1_token.html">Token</a> *</td>          <td class="paramname"><span class="paramname"><em>tokens</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>tokenCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor with user-supplied tokens. </p>
+<p>This constructor let user supplies const array of tokens. This prevents the parsing process and eliminates allocation. This is preferred for memory constrained environments.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tokens</td><td>An constant array of tokens representing the JSON pointer. </td></tr>
+    <tr><td class="paramname">tokenCount</td><td>Number of tokens.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#define NAME(s) { s, sizeof(s) / sizeof(s[0]) - 1, kPointerInvalidIndex }</span></div>
+<div class="line"><span class="preprocessor">#define INDEX(i) { #i, sizeof(#i) - 1, i }</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">const</span> Pointer::Token kTokens[] = { NAME(<span class="stringliteral">&quot;foo&quot;</span>), INDEX(123) };</div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> p(kTokens, <span class="keyword">sizeof</span>(kTokens) / <span class="keyword">sizeof</span>(kTokens[0]));</div>
+<div class="line"><span class="comment">// Equivalent to static const Pointer p(&quot;/foo/123&quot;);</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#undef NAME</span></div>
+<div class="line"><span class="preprocessor">#undef INDEX</span></div>
+<div class="ttc" id="afwd_8h_html_a0e5c49dba7ec654cdda5735347c00397"><div class="ttname"><a href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a></div><div class="ttdeci">GenericPointer&lt; Value, CrtAllocator &gt; Pointer</div><div class="ttdef"><b>Definition</b> <a href="fwd_8h_source.html#l00128">fwd.h:128</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00154">154</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a36bbb81f86e621e439ea296ae7c9b958" name="a36bbb81f86e621e439ea296ae7c9b958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36bbb81f86e621e439ea296ae7c9b958">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00157">157</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="afb7bd2f00ede4145197254e2be8df363" name="afb7bd2f00ede4145197254e2be8df363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7bd2f00ede4145197254e2be8df363">&#9670;&#160;</a></span>GenericPointer() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00162">162</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a4128d47a5c036c895ef5a0e0873bb0e3" name="a4128d47a5c036c895ef5a0e0873bb0e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4128d47a5c036c895ef5a0e0873bb0e3">&#9670;&#160;</a></span>~GenericPointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="class_generic_pointer.html">GenericPointer</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00167">167</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a8bf417684250704f664885cb2c313ee9" name="a8bf417684250704f664885cb2c313ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf417684250704f664885cb2c313ee9">&#9670;&#160;</a></span>Append() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> Append </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append a name token with length, and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name to be appended. </td></tr>
+    <tr><td class="paramname">length</td><td>Length of name. </td></tr>
+    <tr><td class="paramname">allocator</td><td><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> for the newly return <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>A new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> with appended token. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00253">253</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a6ef12eed93d032906caebd586343d881" name="a6ef12eed93d032906caebd586343d881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef12eed93d032906caebd586343d881">&#9670;&#160;</a></span>Append() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> Append </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_generic_pointer_1_1_token.html">Token</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>token</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Append a token and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td><a class="el" href="struct_generic_pointer_1_1_token.html" title="A token is the basic units of internal representation.">Token</a> to be appended. </td></tr>
+    <tr><td class="paramname">allocator</td><td><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> for the newly return <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>A new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> with appended token. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00235">235</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00253">GenericPointer&lt; Value, CrtAllocator &gt;::Append()</a>, <a class="el" href="schema_8h_source.html#l02698">GenericSchemaValidator&lt; SchemaDocument, BaseReaderHandler&lt; UTF8&lt; char &gt;, void &gt;, CrtAllocator &gt;::EndMissingDependentProperties()</a> y <a class="el" href="schema_8h_source.html#l00536">Schema&lt; GenericSchemaDocument &gt;::Schema()</a>.</p>
+
+</div>
+</div>
+<a id="a1bce4c964c1a1319e7d479f26986fee4" name="a1bce4c964c1a1319e7d479f26986fee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bce4c964c1a1319e7d479f26986fee4">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>rhs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00174">174</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="ab7afb99cb2227e2072ac0f6dab8eb593" name="ab7afb99cb2227e2072ac0f6dab8eb593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7afb99cb2227e2072ac0f6dab8eb593">&#9670;&#160;</a></span>RAPIDJSON_DISABLEIF_RETURN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">RAPIDJSON_DISABLEIF_RETURN </td>
+          <td>(</td>
+          <td class="paramtype">(internal::NotExpr&lt; internal::IsSame&lt; typename internal::RemoveConst&lt; T &gt;<a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">::Type</a>, <a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a> &gt; &gt;)</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt;)</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Append a name token without length, and return a new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name (const Ch*) to be appended. </td></tr>
+    <tr><td class="paramname">allocator</td><td><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> for the newly return <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>A new <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> with appended token. </dd></dl>
+
+</div>
+</div>
+<a id="adfe13dfdd2a3ecf0f10ee7906acf1ff9" name="adfe13dfdd2a3ecf0f10ee7906acf1ff9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe13dfdd2a3ecf0f10ee7906acf1ff9">&#9670;&#160;</a></span>Swap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_generic_pointer.html">GenericPointer</a> &amp; Swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Swap the content of this pointer with another. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>The pointer to swap with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Constant complexity. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00199">199</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l01446">SwapValueByPointer()</a> y <a class="el" href="pointer_8h_source.html#l01436">SwapValueByPointer()</a>.</p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Documentación de símbolos amigos y relacionados</h2>
+<a id="a249c61b5d4bed20c3f8972c57f46a937" name="a249c61b5d4bed20c3f8972c57f46a937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249c61b5d4bed20c3f8972c57f46a937">&#9670;&#160;</a></span>swap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void swap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_generic_pointer.html">GenericPointer</a>&lt; ValueType, <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>free-standing swap function helper </p>
+<p>Helper function to enable support for common swap implementation pattern based on <code>std::swap:</code> </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code hl_friend" href="#a249c61b5d4bed20c3f8972c57f46a937">swap</a>(MyClass&amp; <a class="code hl_variable" href="pointer_8h.html#ae1f93a8c6f2a4c2a4108d65590a9d37b">a</a>, MyClass&amp; b) {</div>
+<div class="line">    <span class="keyword">using </span>std::swap;</div>
+<div class="line">    <a class="code hl_friend" href="#a249c61b5d4bed20c3f8972c57f46a937">swap</a>(<a class="code hl_variable" href="pointer_8h.html#ae1f93a8c6f2a4c2a4108d65590a9d37b">a</a>.pointer, b.pointer);</div>
+<div class="line">    <span class="comment">// ...</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_generic_pointer_html_a249c61b5d4bed20c3f8972c57f46a937"><div class="ttname"><a href="#a249c61b5d4bed20c3f8972c57f46a937">GenericPointer::swap</a></div><div class="ttdeci">friend void swap(GenericPointer &amp;a, GenericPointer &amp;b) RAPIDJSON_NOEXCEPT</div><div class="ttdoc">free-standing swap function helper</div><div class="ttdef"><b>Definition</b> <a href="pointer_8h_source.html#l00222">pointer.h:222</a></div></div>
+<div class="ttc" id="apointer_8h_html_ae1f93a8c6f2a4c2a4108d65590a9d37b"><div class="ttname"><a href="pointer_8h.html#ae1f93a8c6f2a4c2a4108d65590a9d37b">a</a></div><div class="ttdeci">const GenericPointer&lt; typename T::ValueType &gt; T2 T::AllocatorType &amp; a</div><div class="ttdef"><b>Definition</b> <a href="pointer_8h_source.html#l01237">pointer.h:1237</a></div></div>
+</div><!-- fragment --> <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="#adfe13dfdd2a3ecf0f10ee7906acf1ff9" title="Swap the content of this pointer with another.">Swap()</a> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00222">222</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a534c051907574ebc78b506013a02ee7d" name="a534c051907574ebc78b506013a02ee7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534c051907574ebc78b506013a02ee7d">&#9670;&#160;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>* allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current allocator. It is either user-supplied or equal to ownAllocator_. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l00266">266</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="a592d0cad8f4db9d81e67b00705c482b9" name="a592d0cad8f4db9d81e67b00705c482b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592d0cad8f4db9d81e67b00705c482b9">&#9670;&#160;</a></span>allocator_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>* allocator_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current allocator. It is either user-supplied or equal to ownAllocator_. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01155">1155</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00235">GenericPointer&lt; Value, CrtAllocator &gt;::Append()</a>.</p>
+
+</div>
+</div>
+<a id="a94befcb23b1dc38d4a6d00620ec6109b" name="a94befcb23b1dc38d4a6d00620ec6109b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94befcb23b1dc38d4a6d00620ec6109b">&#9670;&#160;</a></span>nameBuffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a0412994b5b9254612a891dc7a4ec6a6b">Ch</a>* nameBuffer_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A buffer containing all names in tokens. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01157">1157</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00174">GenericPointer&lt; Value, CrtAllocator &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<a id="ac87a809a9ba92419ee77736da74de327" name="ac87a809a9ba92419ee77736da74de327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87a809a9ba92419ee77736da74de327">&#9670;&#160;</a></span>ownAllocator_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a>* ownAllocator_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classrapidjson_1_1_allocator.html" title="Concept for allocating, resizing and freeing memory block.">Allocator</a> owned by this <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01156">1156</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+</div>
+</div>
+<a id="acb833a735e53e1507e8bb27b7df56e91" name="acb833a735e53e1507e8bb27b7df56e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb833a735e53e1507e8bb27b7df56e91">&#9670;&#160;</a></span>parseErrorCode_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#gacb2e274f33e54d91b96e9883a99a98be">PointerParseErrorCode</a> parseErrorCode_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parsing error code. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01161">1161</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00174">GenericPointer&lt; Value, CrtAllocator &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<a id="a228fe4120f77ea052435b59ec87487f0" name="a228fe4120f77ea052435b59ec87487f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a228fe4120f77ea052435b59ec87487f0">&#9670;&#160;</a></span>parseErrorOffset_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> parseErrorOffset_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Offset in code unit when parsing fail. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01160">1160</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00174">GenericPointer&lt; Value, CrtAllocator &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<a id="a9342c1e41a851940584902971dca1146" name="a9342c1e41a851940584902971dca1146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9342c1e41a851940584902971dca1146">&#9670;&#160;</a></span>tokenCount_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> tokenCount_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of tokens in tokens_. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01159">1159</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00174">GenericPointer&lt; Value, CrtAllocator &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<a id="ab9cb141fe16bc04f401f4edc82c398dc" name="ab9cb141fe16bc04f401f4edc82c398dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9cb141fe16bc04f401f4edc82c398dc">&#9670;&#160;</a></span>tokens_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ValueType, typename <a class="el" href="classrapidjson_1_1_allocator.html">Allocator</a> = CrtAllocator&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_generic_pointer_1_1_token.html">Token</a>* tokens_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A list of tokens. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="pointer_8h_source.html#l01158">1158</a> del archivo <a class="el" href="pointer_8h_source.html">pointer.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="pointer_8h_source.html#l00235">GenericPointer&lt; Value, CrtAllocator &gt;::Append()</a> y <a class="el" href="pointer_8h_source.html#l00174">GenericPointer&lt; Value, CrtAllocator &gt;::operator=()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="fwd_8h_source.html">fwd.h</a></li>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="pointer_8h_source.html">pointer.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_generic_pointer.html">GenericPointer</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

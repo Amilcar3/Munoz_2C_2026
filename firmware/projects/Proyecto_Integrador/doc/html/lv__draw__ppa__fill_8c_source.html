@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/espressif/ppa/lv_draw_ppa_fill.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__ppa__fill_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_draw_ppa_fill.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__draw__ppa__fill_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__ppa__private_8h.html">lv_draw_ppa_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__ppa_8h.html">lv_draw_ppa.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#if LV_USE_PPA</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> lv_draw_ppa_fill(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * t, <span class="keyword">const</span> <a class="code hl_struct" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> * dsc,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                      <span class="keyword">const</span> <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> * coords)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    ppa_fill_oper_config_t fill_cfg = {0};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    lv_draw_ppa_unit_t * u = (lv_draw_ppa_unit_t *)t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">draw_unit</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * draw_buf = t-&gt;target_layer-&gt;draw_buf;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> rel_coords;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    rel_coords = *coords;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a>(&amp;rel_coords, -t-&gt;target_layer-&gt;buf_area.x1, -t-&gt;target_layer-&gt;buf_area.y1);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> rel_clip_area;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    rel_clip_area = t-&gt;clip_area;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a>(&amp;rel_clip_area, -t-&gt;target_layer-&gt;buf_area.x1, -t-&gt;target_layer-&gt;buf_area.y1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> blend_area;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span>(!<a class="code hl_function" href="lv__area_8c.html#aebf8be947f901f46693b4c2956a805a0">lv_area_intersect</a>(&amp;blend_area, &amp;rel_coords, &amp;rel_clip_area))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span>; <span class="comment">/*Fully clipped, nothing to do*/</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    fill_cfg.fill_argb_color.val = <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a8751d74dde6486a4fdba45e679120b56">lv_color_to_u32</a>(dsc-&gt;color);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    fill_cfg.out.block_offset_x = blend_area.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    fill_cfg.out.block_offset_y = blend_area.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    fill_cfg.out.fill_cm        = lv_color_format_to_ppa_fill(draw_buf-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">header</a>.<a class="code hl_variable" href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">cf</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    fill_cfg.fill_block_w       = <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a>(&amp;blend_area);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    fill_cfg.fill_block_h       = <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a>(&amp;blend_area);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    fill_cfg.out.buffer         = draw_buf-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#abe222f6d3581e7920dcad5306cc906a8">data</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    fill_cfg.out.buffer_size    = draw_buf-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#ab670c6c21aced4765ecd6b29283f22b0">data_size</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    fill_cfg.out.pic_w          = draw_buf-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">header</a>.<a class="code hl_variable" href="structlv__image__header__t.html#ad0fb62e7a08e70fc5e0a76b67809f84b">w</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    fill_cfg.out.pic_h          = draw_buf-&gt;<a class="code hl_variable" href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">header</a>.<a class="code hl_variable" href="structlv__image__header__t.html#a50d0f0f0767450a76d736d60766c9999">h</a>;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    fill_cfg.mode            = PPA_TRANS_MODE_BLOCKING;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    esp_err_t ret = ppa_do_fill(u-&gt;fill_client, &amp;fill_cfg);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span>(ret != ESP_OK) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a4f5f1571a6bea2b8532fa6c28dbb0d92">LV_LOG_ERROR</a>(<span class="stringliteral">&quot;PPA fill failed: %d&quot;</span>, ret);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">/* LV_USE_PPA */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a7171303afa691c85cb264d01671c6be9"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a></div><div class="ttdeci">int32_t lv_area_get_height(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00549">lv_area.c:549</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_aac11b92df2af8c3c7f003975c401df87"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a></div><div class="ttdeci">void lv_area_move(lv_area_t *area, int32_t x_ofs, int32_t y_ofs)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00091">lv_area.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_ad13c9f67788081fc1236a36d0e1f29cb"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a></div><div class="ttdeci">int32_t lv_area_get_width(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00543">lv_area.c:543</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a8751d74dde6486a4fdba45e679120b56"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a8751d74dde6486a4fdba45e679120b56">lv_color_to_u32</a></div><div class="ttdeci">uint32_t lv_color_to_u32(lv_color_t color)</div><div class="ttdef"><b>Definition</b> <a href="lv__color_8c_source.html#l00131">lv_color.c:131</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_a4f5f1571a6bea2b8532fa6c28dbb0d92"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#a4f5f1571a6bea2b8532fa6c28dbb0d92">LV_LOG_ERROR</a></div><div class="ttdeci">#define LV_LOG_ERROR(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00165">lv_log.h:165</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a9d358cfe063f80d7499a72b46429bf61"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a></div><div class="ttdeci">struct _lv_draw_task_t lv_draw_task_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00123">lv_types.h:123</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aef095d20cced64810944ca64aab7ca31"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a></div><div class="ttdeci">struct _lv_draw_buf_t lv_draw_buf_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00360">lv_types.h:360</a></div></div>
+<div class="ttc" id="alv__area_8c_html_aebf8be947f901f46693b4c2956a805a0"><div class="ttname"><a href="lv__area_8c.html#aebf8be947f901f46693b4c2956a805a0">lv_area_intersect</a></div><div class="ttdeci">bool lv_area_intersect(lv_area_t *res_p, const lv_area_t *a1_p, const lv_area_t *a2_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00100">lv_area.c:100</a></div></div>
+<div class="ttc" id="alv__draw__ppa_8h_html"><div class="ttname"><a href="lv__draw__ppa_8h.html">lv_draw_ppa.h</a></div></div>
+<div class="ttc" id="alv__draw__ppa__private_8h_html"><div class="ttname"><a href="lv__draw__ppa__private_8h.html">lv_draw_ppa_private.h</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__t_html_a0fafdd32ced7869f3b5a0bde84cb9329"><div class="ttname"><a href="struct__lv__draw__buf__t.html#a0fafdd32ced7869f3b5a0bde84cb9329">_lv_draw_buf_t::header</a></div><div class="ttdeci">lv_image_header_t header</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">lv_draw_buf.h:94</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__t_html_ab670c6c21aced4765ecd6b29283f22b0"><div class="ttname"><a href="struct__lv__draw__buf__t.html#ab670c6c21aced4765ecd6b29283f22b0">_lv_draw_buf_t::data_size</a></div><div class="ttdeci">uint32_t data_size</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00095">lv_draw_buf.h:95</a></div></div>
+<div class="ttc" id="astruct__lv__draw__buf__t_html_abe222f6d3581e7920dcad5306cc906a8"><div class="ttname"><a href="struct__lv__draw__buf__t.html#abe222f6d3581e7920dcad5306cc906a8">_lv_draw_buf_t::data</a></div><div class="ttdeci">uint8_t * data</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00096">lv_draw_buf.h:96</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a2ad9255e9c76b693a7ba3f50d1c3cfb2"><div class="ttname"><a href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">_lv_draw_task_t::draw_unit</a></div><div class="ttdeci">lv_draw_unit_t * draw_unit</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00059">lv_draw_private.h:59</a></div></div>
+<div class="ttc" id="astructlv__area__t_html"><div class="ttname"><a href="structlv__area__t.html">lv_area_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00042">lv_area.h:42</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a00eed38fb678bbe97965bd9fdf9af6dc"><div class="ttname"><a href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">lv_area_t::x1</a></div><div class="ttdeci">int32_t x1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area.h:43</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_ae7d9f6a7144e1bf81a6dd4d1308e2578"><div class="ttname"><a href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">lv_area_t::y1</a></div><div class="ttdeci">int32_t y1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area.h:44</a></div></div>
+<div class="ttc" id="astructlv__draw__fill__dsc__t_html"><div class="ttname"><a href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00077">lv_draw_rect.h:77</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html_a50d0f0f0767450a76d736d60766c9999"><div class="ttname"><a href="structlv__image__header__t.html#a50d0f0f0767450a76d736d60766c9999">lv_image_header_t::h</a></div><div class="ttdeci">uint32_t h</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00115">lv_image_dsc.h:115</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html_ac1a1d0af0ba96d034c8339af33dce82f"><div class="ttname"><a href="structlv__image__header__t.html#ac1a1d0af0ba96d034c8339af33dce82f">lv_image_header_t::cf</a></div><div class="ttdeci">uint32_t cf</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_dsc.h:111</a></div></div>
+<div class="ttc" id="astructlv__image__header__t_html_ad0fb62e7a08e70fc5e0a76b67809f84b"><div class="ttname"><a href="structlv__image__header__t.html#ad0fb62e7a08e70fc5e0a76b67809f84b">lv_image_header_t::w</a></div><div class="ttdeci">uint32_t w</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00114">lv_image_dsc.h:114</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_b2959cf5fceda1bb5c3a8e9e721476f4.html">espressif</a></li><li class="navelem"><a href="dir_6679310e3387d0d82ca3a1763a0fff18.html">ppa</a></li><li class="navelem"><a href="lv__draw__ppa__fill_8c.html">lv_draw_ppa_fill.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

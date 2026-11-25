@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/image/lv_image_decoder.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__image__decoder_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_image_decoder.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__image__decoder__private_8h_source.html">lv_image_decoder_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__global_8h_source.html">../core/lv_global.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__cache_8h_source.html">../misc/cache/lv_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__image__cache_8h_source.html">../misc/cache/instance/lv_image_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__image__header__cache_8h_source.html">../misc/cache/instance/lv_image_header_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__cache__entry_8h_source.html">../misc/cache/lv_cache_entry.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__image__decoder_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a7d997bb9fe67ffb455964c9cc40c7469" id="r_a7d997bb9fe67ffb455964c9cc40c7469"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7d997bb9fe67ffb455964c9cc40c7469">img_decoder_ll_p</a>&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_decoder_ll)</td></tr>
+<tr class="memitem:aaeead149de34ecea8df2e8a8c528ced0" id="r_aaeead149de34ecea8df2e8a8c528ced0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaeead149de34ecea8df2e8a8c528ced0">img_cache_p</a>&#160;&#160;&#160;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_cache)</td></tr>
+<tr class="memitem:a792ad4612dc42e8832ad879a42c01829" id="r_a792ad4612dc42e8832ad879a42c01829"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a792ad4612dc42e8832ad879a42c01829">img_header_cache_p</a>&#160;&#160;&#160;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_header_cache)</td></tr>
+<tr class="memitem:aa35d94ecebc815fe92b37b5ca2359ff1" id="r_aa35d94ecebc815fe92b37b5ca2359ff1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa35d94ecebc815fe92b37b5ca2359ff1">image_cache_draw_buf_handlers</a>&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;image_cache_draw_buf_handlers)</td></tr>
+<tr class="memitem:a113d8c262f628e95893b568ca7ab2824" id="r_a113d8c262f628e95893b568ca7ab2824"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a113d8c262f628e95893b568ca7ab2824">img_decoder_info_lock_p</a>&#160;&#160;&#160;<a class="el" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+<tr class="memitem:ac5eb85184760ab0809d147e48e4071b9" id="r_ac5eb85184760ab0809d147e48e4071b9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac5eb85184760ab0809d147e48e4071b9">img_decoder_open_lock_p</a>&#160;&#160;&#160;<a class="el" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a1e08c3a738efd1f27c98575e7cfff509" id="r_a1e08c3a738efd1f27c98575e7cfff509"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1e08c3a738efd1f27c98575e7cfff509">lv_image_decoder_init</a> (<a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> image_cache_size, <a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> image_header_count)</td></tr>
+<tr class="memitem:afdaccc144358e9994724f6614f3aaad8" id="r_afdaccc144358e9994724f6614f3aaad8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afdaccc144358e9994724f6614f3aaad8">lv_image_decoder_deinit</a> (void)</td></tr>
+<tr class="memitem:a9d3be5153d5737fe3ae1b15998ea8bd4" id="r_a9d3be5153d5737fe3ae1b15998ea8bd4"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9d3be5153d5737fe3ae1b15998ea8bd4">lv_image_decoder_get_info</a> (const void *src, <a class="el" href="structlv__image__header__t.html">lv_image_header_t</a> *header)</td></tr>
+<tr class="memitem:a0617037f49310d083faeaad013466f29" id="r_a0617037f49310d083faeaad013466f29"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0617037f49310d083faeaad013466f29">lv_image_decoder_open</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc, const void *src, const <a class="el" href="include_2lvgl_2lv__types_8h.html#aa2cffabc800b4bc250317e9602fdcf12">lv_image_decoder_args_t</a> *args)</td></tr>
+<tr class="memitem:a6853f577294e69ef79050466a6445797" id="r_a6853f577294e69ef79050466a6445797"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6853f577294e69ef79050466a6445797">lv_image_decoder_get_area</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *full_area, <a class="el" href="structlv__area__t.html">lv_area_t</a> *decoded_area)</td></tr>
+<tr class="memitem:ac75bdadd394912b204d474d13b187b00" id="r_ac75bdadd394912b204d474d13b187b00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac75bdadd394912b204d474d13b187b00">lv_image_decoder_close</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:abaf46020fd8cb8a4ad383327737c46ff" id="r_abaf46020fd8cb8a4ad383327737c46ff"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#abaf46020fd8cb8a4ad383327737c46ff">lv_image_decoder_create</a> (void)</td></tr>
+<tr class="memitem:aa6b00dc68337ab2fb108e4057ab81e9d" id="r_aa6b00dc68337ab2fb108e4057ab81e9d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6b00dc68337ab2fb108e4057ab81e9d">lv_image_decoder_delete</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder)</td></tr>
+<tr class="memitem:a8287dacaa131d0dffb783d378381a6a0" id="r_a8287dacaa131d0dffb783d378381a6a0"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8287dacaa131d0dffb783d378381a6a0">lv_image_decoder_get_next</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder)</td></tr>
+<tr class="memitem:a9bcdf5fd3c55d90f626ee7395e871ca2" id="r_a9bcdf5fd3c55d90f626ee7395e871ca2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9bcdf5fd3c55d90f626ee7395e871ca2">lv_image_decoder_set_info_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a07f95f8a66abb46a0f7d2658b1b9abcd">lv_image_decoder_info_f_t</a> info_cb)</td></tr>
+<tr class="memitem:a09add895e2c824ac045c153b584a07cf" id="r_a09add895e2c824ac045c153b584a07cf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a09add895e2c824ac045c153b584a07cf">lv_image_decoder_set_open_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a32cc9c90c0a191a222d3b20018e23837">lv_image_decoder_open_f_t</a> open_cb)</td></tr>
+<tr class="memitem:a3b7470390083afb4cc030c7124afe8fa" id="r_a3b7470390083afb4cc030c7124afe8fa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b7470390083afb4cc030c7124afe8fa">lv_image_decoder_set_get_area_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#af0c1649b619ba226d14872edf9567dcb">lv_image_decoder_get_area_cb_t</a> get_area_cb)</td></tr>
+<tr class="memitem:a913793eff0a28b832a46e7ee868bed8c" id="r_a913793eff0a28b832a46e7ee868bed8c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a913793eff0a28b832a46e7ee868bed8c">lv_image_decoder_set_close_cb</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a399f61f52e2c241ddaf2f20faed2e8ea">lv_image_decoder_close_f_t</a> close_cb)</td></tr>
+<tr class="memitem:a6881190822611e5a94c1f7ad824b20fd" id="r_a6881190822611e5a94c1f7ad824b20fd"><td class="memItemLeft"><a class="el" href="lv__cache_8h.html#acc3bb05738d33b35c54cff5dcfec50a5">lv_cache_entry_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6881190822611e5a94c1f7ad824b20fd">lv_image_decoder_add_to_cache</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *decoder, <a class="el" href="include_2lvgl_2lv__types_8h.html#a947669f390edb235e66f88746ab7b158">lv_image_cache_data_t</a> *search_key, const <a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *decoded, void *user_data)</td></tr>
+<tr class="memitem:ab35acd351773213789829a64c37e817a" id="r_ab35acd351773213789829a64c37e817a"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab35acd351773213789829a64c37e817a">lv_image_decoder_post_process</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *dsc, <a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *decoded)</td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="aa35d94ecebc815fe92b37b5ca2359ff1" name="aa35d94ecebc815fe92b37b5ca2359ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa35d94ecebc815fe92b37b5ca2359ff1">&#9670;&#160;</a></span>image_cache_draw_buf_handlers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define image_cache_draw_buf_handlers&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;image_cache_draw_buf_handlers)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00023">23</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+</div>
+</div>
+<a id="aaeead149de34ecea8df2e8a8c528ced0" name="aaeead149de34ecea8df2e8a8c528ced0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeead149de34ecea8df2e8a8c528ced0">&#9670;&#160;</a></span>img_cache_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define img_cache_p&#160;&#160;&#160;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_cache)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00021">21</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__image__cache_8c_source.html#l00081">lv_image_cache_drop()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00056">lv_image_cache_init()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00102">lv_image_cache_is_enabled()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00107">lv_image_cache_iter_create()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00073">lv_image_cache_resize()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00298">lv_image_decoder_add_to_cache()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00083">lv_image_decoder_deinit()</a> y <a class="el" href="lv__image__decoder_8c_source.html#l00113">lv_image_decoder_open()</a>.</p>
+
+</div>
+</div>
+<a id="a113d8c262f628e95893b568ca7ab2824" name="a113d8c262f628e95893b568ca7ab2824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113d8c262f628e95893b568ca7ab2824">&#9670;&#160;</a></span>img_decoder_info_lock_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define img_decoder_info_lock_p&#160;&#160;&#160;<a class="el" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00029">29</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__image__decoder_8c_source.html#l00083">lv_image_decoder_deinit()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00094">lv_image_decoder_get_info()</a> y <a class="el" href="lv__image__decoder_8c_source.html#l00068">lv_image_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a7d997bb9fe67ffb455964c9cc40c7469" name="a7d997bb9fe67ffb455964c9cc40c7469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d997bb9fe67ffb455964c9cc40c7469">&#9670;&#160;</a></span>img_decoder_ll_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define img_decoder_ll_p&#160;&#160;&#160;&amp;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_decoder_ll)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00020">20</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__image__decoder_8c_source.html#l00242">lv_image_decoder_create()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00083">lv_image_decoder_deinit()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00254">lv_image_decoder_delete()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00262">lv_image_decoder_get_next()</a> y <a class="el" href="lv__image__decoder_8c_source.html#l00068">lv_image_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="ac5eb85184760ab0809d147e48e4071b9" name="ac5eb85184760ab0809d147e48e4071b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5eb85184760ab0809d147e48e4071b9">&#9670;&#160;</a></span>img_decoder_open_lock_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define img_decoder_open_lock_p&#160;&#160;&#160;<a class="el" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00030">30</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__image__decoder_8c_source.html#l00211">lv_image_decoder_close()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00083">lv_image_decoder_deinit()</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00068">lv_image_decoder_init()</a> y <a class="el" href="lv__image__decoder_8c_source.html#l00113">lv_image_decoder_open()</a>.</p>
+
+</div>
+</div>
+<a id="a792ad4612dc42e8832ad879a42c01829" name="a792ad4612dc42e8832ad879a42c01829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a792ad4612dc42e8832ad879a42c01829">&#9670;&#160;</a></span>img_header_cache_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define img_header_cache_p&#160;&#160;&#160;(<a class="el" href="lv__global_8h.html#a2278d81a8423436c3d1bddf6bb940bc6">LV_GLOBAL_DEFAULT</a>()-&gt;img_header_cache)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00022">22</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__image__decoder_8c_source.html#l00083">lv_image_decoder_deinit()</a>, <a class="el" href="lv__image__header__cache_8c_source.html#l00079">lv_image_header_cache_drop()</a>, <a class="el" href="lv__image__header__cache_8c_source.html#l00054">lv_image_header_cache_init()</a>, <a class="el" href="lv__image__header__cache_8c_source.html#l00094">lv_image_header_cache_is_enabled()</a>, <a class="el" href="lv__image__header__cache_8c_source.html#l00099">lv_image_header_cache_iter_create()</a> y <a class="el" href="lv__image__header__cache_8c_source.html#l00071">lv_image_header_cache_resize()</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a6881190822611e5a94c1f7ad824b20fd" name="a6881190822611e5a94c1f7ad824b20fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6881190822611e5a94c1f7ad824b20fd">&#9670;&#160;</a></span>lv_image_decoder_add_to_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="lv__cache_8h.html#acc3bb05738d33b35c54cff5dcfec50a5">lv_cache_entry_t</a> * lv_image_decoder_add_to_cache </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a947669f390edb235e66f88746ab7b158">lv_image_cache_data_t</a> *</td>          <td class="paramname"><span class="paramname"><em>search_key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoded</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00298">298</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00063">_lv_image_cache_data_t::decoded</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00064">_lv_image_cache_data_t::decoder</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00021">img_cache_p</a>, <a class="el" href="lv__cache_8c_source.html#l00120">lv_cache_add()</a>, <a class="el" href="lv__cache__entry_8c_source.html#l00087">lv_cache_entry_get_data()</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00314">lv_strdup()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00060">_lv_image_cache_data_t::src</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00061">_lv_image_cache_data_t::src_type</a> y <a class="el" href="lv__image__decoder__private_8h_source.html#l00065">_lv_image_cache_data_t::user_data</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00179">lv_bin_decoder_open()</a>.</p>
+
+</div>
+</div>
+<a id="ac75bdadd394912b204d474d13b187b00" name="ac75bdadd394912b204d474d13b187b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75bdadd394912b204d474d13b187b00">&#9670;&#160;</a></span>lv_image_decoder_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close a decoding session </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to <span class="tt"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a></span> used in <span class="tt"><a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a0617037f49310d083faeaad013466f29">lv_image_decoder_open</a></span> @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00211">211</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00110">_lv_image_decoder_dsc_t::cache</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00113">_lv_image_decoder_dsc_t::cache_entry</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00048">_lv_image_decoder_t::close_cb</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00079">_lv_image_decoder_dsc_t::decoder</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00030">img_decoder_open_lock_p</a>, <a class="el" href="lv__cache_8c_source.html#l00103">lv_cache_release()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00102">lv_image_cache_is_enabled()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00065">lv_mutex_lock()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00077">lv_mutex_unlock()</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00100">LV_PROFILER_DECODER_BEGIN_TAG</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00101">LV_PROFILER_DECODER_END_TAG</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00052">_lv_image_decoder_t::name</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__image_8c_source.html#l00101">lv_draw_image()</a>, <a class="el" href="lv__draw__image_8c_source.html#l00235">lv_draw_image_normal_helper()</a>, <a class="el" href="lv__draw__image_8c_source.html#l00276">lv_draw_image_tiled_helper()</a> y <a class="el" href="lv__draw__sw__arc_8c_source.html#l00052">lv_draw_sw_arc()</a>.</p>
+
+</div>
+</div>
+<a id="abaf46020fd8cb8a4ad383327737c46ff" name="abaf46020fd8cb8a4ad383327737c46ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf46020fd8cb8a4ad383327737c46ff">&#9670;&#160;</a></span>lv_image_decoder_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> * lv_image_decoder_create </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new image decoder </p><dl class="section return"><dt>Devuelve</dt><dd>pointer to the new image decoder </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00242">242</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00020">img_decoder_ll_p</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00086">LV_ASSERT_MALLOC</a>, <a class="el" href="lv__ll_8c_source.html#l00059">lv_ll_ins_head()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="afdaccc144358e9994724f6614f3aaad8" name="afdaccc144358e9994724f6614f3aaad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdaccc144358e9994724f6614f3aaad8">&#9670;&#160;</a></span>lv_image_decoder_deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_deinit </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Deinitialize the image decoder module </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00083">83</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00021">img_cache_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00029">img_decoder_info_lock_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00020">img_decoder_ll_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00030">img_decoder_open_lock_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00022">img_header_cache_p</a>, <a class="el" href="lv__cache_8c_source.html#l00067">lv_cache_destroy()</a>, <a class="el" href="lv__ll_8c_source.html#l00316">lv_ll_clear()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00083">lv_mutex_delete()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00406">lv_deinit()</a>.</p>
+
+</div>
+</div>
+<a id="aa6b00dc68337ab2fb108e4057ab81e9d" name="aa6b00dc68337ab2fb108e4057ab81e9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b00dc68337ab2fb108e4057ab81e9d">&#9670;&#160;</a></span>lv_image_decoder_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Delete an image decoder </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder @nullable </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00254">254</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00020">img_decoder_ll_p</a>, <a class="el" href="lv__mem_8c_source.html#l00131">lv_free()</a>, <a class="el" href="lv__ll_8c_source.html#l00129">lv_ll_remove()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a6853f577294e69ef79050466a6445797" name="a6853f577294e69ef79050466a6445797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6853f577294e69ef79050466a6445797">&#9670;&#160;</a></span>lv_image_decoder_get_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_image_decoder_get_area </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>full_area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoded_area</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Decode <span class="tt">full_area</span> pixels incrementally by calling in a loop. Set <span class="tt">decoded_area</span> to <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__area_8h.html#aac556eabce2feec93116344fb2b87b25">LV_COORD_MIN</a></span> on first call. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>image decoder descriptor </td></tr>
+    <tr><td class="paramname">full_area</td><td>input parameter. the full area to decode after enough subsequent calls </td></tr>
+    <tr><td class="paramname">decoded_area</td><td>input+output parameter. set the values to <span class="tt"><a class="el" href="include_2lvgl_2core_2lv__area_8h.html#aac556eabce2feec93116344fb2b87b25">LV_COORD_MIN</a></span> for the first call and to reset decoding. the decoded area is stored here after each call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: success; LV_RESULT_INVALID: an error occurred or there is nothing left to decode </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00192">192</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00079">_lv_image_decoder_dsc_t::decoder</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00047">_lv_image_decoder_t::get_area_cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00100">LV_PROFILER_DECODER_BEGIN_TAG</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00101">LV_PROFILER_DECODER_END_TAG</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00052">_lv_image_decoder_t::name</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a9d3be5153d5737fe3ae1b15998ea8bd4" name="a9d3be5153d5737fe3ae1b15998ea8bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d3be5153d5737fe3ae1b15998ea8bd4">&#9670;&#160;</a></span>lv_image_decoder_get_info()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_image_decoder_get_info </td>
+          <td>(</td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__image__header__t.html">lv_image_header_t</a> *</td>          <td class="paramname"><span class="paramname"><em>header</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get information about an image. Try the created image decoder one by one. Once one is able to get info that info will be used. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the image source. Can be 1) File name: E.g. "S:folder/img1.png" (The drivers needs to registered via <span class="tt"><a class="el" href="include_2lvgl_2fs_2lv__fs_8h.html#a2540b36d20b26416d944092a818b7be6">lv_fs_drv_register()</a></span>) 2) Variable: <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> to an <span class="tt"><a class="el" href="structlv__image__dsc__t.html">lv_image_dsc_t</a></span> variable 3) Symbol: E.g. <span class="tt"><a class="el" href="include_2lvgl_2font_2lv__symbol__def_8h.html#abbfa485495b9c32d2c7e7294acb06827">LV_SYMBOL_OK</a></span> </td></tr>
+    <tr><td class="paramname">header</td><td>the image info will be stored here </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: success; LV_RESULT_INVALID: wasn't able to get info about the image </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00094">94</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00029">img_decoder_info_lock_p</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw__image_8c_source.html#l00206">lv_image_src_get_type()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00065">lv_mutex_lock()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00077">lv_mutex_unlock()</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00085">_lv_image_decoder_dsc_t::src</a> y <a class="el" href="lv__image__decoder__private_8h_source.html#l00088">_lv_image_decoder_dsc_t::src_type</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__image_8c_source.html#l00101">lv_draw_image()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00179">lv_draw_rect()</a> y <a class="el" href="lv__image_8c_source.html#l00148">lv_image_set_src()</a>.</p>
+
+</div>
+</div>
+<a id="a8287dacaa131d0dffb783d378381a6a0" name="a8287dacaa131d0dffb783d378381a6a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8287dacaa131d0dffb783d378381a6a0">&#9670;&#160;</a></span>lv_image_decoder_get_next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> * lv_image_decoder_get_next </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the next image decoder in the linked list of image decoders </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder. @nullable. Use NULL to get the first one </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the next image decoder or NULL if no more image decoder exists </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00262">262</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00020">img_decoder_ll_p</a>, <a class="el" href="lv__ll_8c_source.html#l00226">lv_ll_get_head()</a>, <a class="el" href="lv__ll_8c_source.html#l00238">lv_ll_get_next()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a1e08c3a738efd1f27c98575e7cfff509" name="a1e08c3a738efd1f27c98575e7cfff509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e08c3a738efd1f27c98575e7cfff509">&#9670;&#160;</a></span>lv_image_decoder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>image_cache_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></td>          <td class="paramname"><span class="paramname"><em>image_header_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the image decoder module</p>
+<p>Initialize the image decoder module </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image_cache_size</td><td>Image cache size in bytes. 0 to disable cache. </td></tr>
+    <tr><td class="paramname">image_header_count</td><td>Number of header cache entries. 0 to disable header cache. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00068">68</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder_8c_source.html#l00029">img_decoder_info_lock_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00020">img_decoder_ll_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00030">img_decoder_open_lock_p</a>, <a class="el" href="lv__image__cache_8c_source.html#l00056">lv_image_cache_init()</a>, <a class="el" href="lv__image__header__cache_8c_source.html#l00054">lv_image_header_cache_init()</a>, <a class="el" href="lv__ll_8c_source.html#l00042">lv_ll_init()</a> y <a class="el" href="lv__os__custom__c_8txt_source.html#l00059">lv_mutex_init()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__init_8c_source.html#l00158">lv_init()</a>.</p>
+
+</div>
+</div>
+<a id="a0617037f49310d083faeaad013466f29" name="a0617037f49310d083faeaad013466f29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0617037f49310d083faeaad013466f29">&#9670;&#160;</a></span>lv_image_decoder_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5b0d1e3e8ccbb62b04ba2a6688ead275">lv_result_t</a> lv_image_decoder_open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#aa2cffabc800b4bc250317e9602fdcf12">lv_image_decoder_args_t</a> *</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Open an image. Try the created image decoders one by one. Once one is able to open the image that decoder is saved in <span class="tt">dsc</span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>describes a decoding session. Simply a pointer to an <span class="tt"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a></span> variable. </td></tr>
+    <tr><td class="paramname">src</td><td>the image source. @nullable Can be 1) File name: E.g. "S:folder/img1.png" (The drivers needs to registered via <span class="tt"><a class="el" href="include_2lvgl_2fs_2lv__fs_8h.html#a2540b36d20b26416d944092a818b7be6">lv_fs_drv_register()</a>)</span>) 2) Variable: <a class="el" href="fwd_8h.html#a0e5c49dba7ec654cdda5735347c00397">Pointer</a> to an <span class="tt"><a class="el" href="structlv__image__dsc__t.html">lv_image_dsc_t</a></span> variable 3) Symbol: E.g. <span class="tt"><a class="el" href="include_2lvgl_2font_2lv__symbol__def_8h.html#abbfa485495b9c32d2c7e7294acb06827">LV_SYMBOL_OK</a></span> </td></tr>
+    <tr><td class="paramname">args</td><td>args about how the image should be opened. @nullable. Use NULL to use default parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>LV_RESULT_OK: opened the image. <span class="tt">dsc-&gt;decoded</span> and <span class="tt">dsc-&gt;<a class="el" href="namespaceheader.html">header</a></span> are set. LV_RESULT_INVALID: none of the registered image decoders were able to open the image. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00113">113</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00082">_lv_image_decoder_dsc_t::args</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00110">_lv_image_decoder_dsc_t::cache</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00096">_lv_draw_buf_t::data</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00097">_lv_image_decoder_dsc_t::decoded</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00079">_lv_image_decoder_dsc_t::decoder</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00041">_lv_image_decoder_args_t::flush_cache</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00115">lv_image_header_t::h</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00098">_lv_draw_buf_t::handlers</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00093">_lv_image_decoder_dsc_t::header</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00021">img_cache_p</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00030">img_decoder_open_lock_p</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00067">LV_ASSERT</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00068">LV_ASSERT_MSG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00154">lv_draw_buf_flush_cache()</a>, <a class="el" href="lv__conf__cmsis_8h_source.html#l00154">LV_DRAW_BUF_STRIDE_ALIGN</a>, <a class="el" href="lv__image__cache_8c_source.html#l00102">lv_image_cache_is_enabled()</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="lv__draw__image_8c_source.html#l00206">lv_image_src_get_type()</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00065">lv_mutex_lock()</a>, <a class="el" href="lv__os__custom__c_8txt_source.html#l00077">lv_mutex_unlock()</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00100">LV_PROFILER_DECODER_BEGIN_TAG</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00101">LV_PROFILER_DECODER_END_TAG</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00052">_lv_image_decoder_t::name</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00046">_lv_image_decoder_t::open_cb</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00085">_lv_image_decoder_dsc_t::src</a>, <a class="el" href="lv__image__decoder__private_8h_source.html#l00088">_lv_image_decoder_dsc_t::src_type</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00097">_lv_draw_buf_t::unaligned_data</a> y <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00114">lv_image_header_t::w</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__image_8c_source.html#l00101">lv_draw_image()</a>, <a class="el" href="lv__draw__image_8c_source.html#l00235">lv_draw_image_normal_helper()</a>, <a class="el" href="lv__draw__image_8c_source.html#l00276">lv_draw_image_tiled_helper()</a> y <a class="el" href="lv__draw__sw__arc_8c_source.html#l00052">lv_draw_sw_arc()</a>.</p>
+
+</div>
+</div>
+<a id="ab35acd351773213789829a64c37e817a" name="ab35acd351773213789829a64c37e817a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35acd351773213789829a64c37e817a">&#9670;&#160;</a></span>lv_image_decoder_post_process()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * lv_image_decoder_post_process </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aa57e2cda5824f5ba4ce5e5a0ad6da725">lv_image_decoder_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoded</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check the decoded image, make any modification if decoder <span class="tt">args</span> requires. </p><dl class="section note"><dt>Nota</dt><dd>A new draw buf will be allocated if provided <span class="tt">decoded</span> is not modifiable or stride mismatch etc. </dd></dl>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to a decoder descriptor </td></tr>
+    <tr><td class="paramname">decoded</td><td>pointer to a decoded image to post process to meet dsc-&gt;args requirement. @nullable. When NULL no post processing is done </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>post processed draw buffer, when it differs with <span class="tt">decoded</span>, it's newly allocated. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00324">324</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00082">_lv_image_decoder_dsc_t::args</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00115">lv_image_header_t::h</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00019">image_cache_draw_buf_handlers</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00164">LV_COLOR_FORMAT_ARGB8888_PREMULTIPLIED</a>, <a class="el" href="lv__color_8c_source.html#l00091">lv_color_format_has_alpha()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00203">LV_COLOR_FORMAT_IS_ALPHA_ONLY</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00156">LV_COLOR_FORMAT_RGB565A8</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00442">lv_draw_buf_adjust_stride()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00402">lv_draw_buf_copy()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00277">lv_draw_buf_create_ex()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00324">lv_draw_buf_dup_ex()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00592">lv_draw_buf_has_flag()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00511">lv_draw_buf_premultiply()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00102">lv_draw_buf_width_to_stride()</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00072">LV_IMAGE_FLAGS_MODIFIABLE</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00053">LV_IMAGE_FLAGS_PREMULTIPLIED</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00165">LV_LOG_ERROR</a>, <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00161">LV_LOG_TRACE</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00098">LV_PROFILER_DECODER_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00099">LV_PROFILER_DECODER_END</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00116">lv_image_header_t::stride</a> y <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00114">lv_image_header_t::w</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00179">lv_bin_decoder_open()</a>.</p>
+
+</div>
+</div>
+<a id="a913793eff0a28b832a46e7ee868bed8c" name="a913793eff0a28b832a46e7ee868bed8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a913793eff0a28b832a46e7ee868bed8c">&#9670;&#160;</a></span>lv_image_decoder_set_close_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_set_close_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a399f61f52e2c241ddaf2f20faed2e8ea">lv_image_decoder_close_f_t</a></td>          <td class="paramname"><span class="paramname"><em>close_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a callback to close a decoding session. E.g. close files and free other resources. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder </td></tr>
+    <tr><td class="paramname">close_cb</td><td>a function to close a decoding session @nullable. Use NULL to detach a previously assigned callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00291">291</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00048">_lv_image_decoder_t::close_cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a3b7470390083afb4cc030c7124afe8fa" name="a3b7470390083afb4cc030c7124afe8fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7470390083afb4cc030c7124afe8fa">&#9670;&#160;</a></span>lv_image_decoder_set_get_area_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_set_get_area_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#af0c1649b619ba226d14872edf9567dcb">lv_image_decoder_get_area_cb_t</a></td>          <td class="paramname"><span class="paramname"><em>get_area_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a callback to a decoded line of an image </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder </td></tr>
+    <tr><td class="paramname">get_area_cb</td><td>a function to read a line of an image @nullable. Use NULL to detach a previously assigned callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00284">284</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00047">_lv_image_decoder_t::get_area_cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a9bcdf5fd3c55d90f626ee7395e871ca2" name="a9bcdf5fd3c55d90f626ee7395e871ca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcdf5fd3c55d90f626ee7395e871ca2">&#9670;&#160;</a></span>lv_image_decoder_set_info_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_set_info_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a07f95f8a66abb46a0f7d2658b1b9abcd">lv_image_decoder_info_f_t</a></td>          <td class="paramname"><span class="paramname"><em>info_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a callback to get information about the image </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder </td></tr>
+    <tr><td class="paramname">info_cb</td><td>a function to collect info about an image (fill an <span class="tt"><a class="el" href="structlv__image__header__t.html">lv_image_header_t</a></span> struct). @nullable. Use NULL to detach a previously assigned callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00270">270</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__image__decoder__private_8h_source.html#l00045">_lv_image_decoder_t::info_cb</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+<a id="a09add895e2c824ac045c153b584a07cf" name="a09add895e2c824ac045c153b584a07cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09add895e2c824ac045c153b584a07cf">&#9670;&#160;</a></span>lv_image_decoder_set_open_cb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_image_decoder_set_open_cb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a5bac91810ff9cd902ad9a46dbaf6d2a7">lv_image_decoder_t</a> *</td>          <td class="paramname"><span class="paramname"><em>decoder</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h.html#a32cc9c90c0a191a222d3b20018e23837">lv_image_decoder_open_f_t</a></td>          <td class="paramname"><span class="paramname"><em>open_cb</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a callback to open an image </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">decoder</td><td>pointer to an image decoder </td></tr>
+    <tr><td class="paramname">open_cb</td><td>a function to open an image @nullable. Use NULL to detach a previously assigned callback </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__image__decoder_8c_source.html#l00277">277</a> del archivo <a class="el" href="lv__image__decoder_8c_source.html">lv_image_decoder.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__image__decoder__private_8h_source.html#l00046">_lv_image_decoder_t::open_cb</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bin__decoder_8c_source.html#l00091">lv_bin_decoder_init()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_066d33789e3ed9ee056e5e6a8ada1e48.html">image</a></li><li class="navelem"><a href="lv__image__decoder_8c.html">lv_image_decoder.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

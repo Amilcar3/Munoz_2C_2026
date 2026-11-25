@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/release_branch_updater.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('release__branch__updater_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">release_branch_updater.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="release__branch__updater_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html">    1</a></span><span class="keyword">import</span> subprocess</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> argparse</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> os</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> shutil</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> sys</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"># v10.0.0 -&gt; create release/v10.0 from the port&#39;s default branch and update it</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"># v10.0.1 -&gt; update release/v10.0</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"># v10.1.0 -&gt; create release/v10.1 from the port&#39;s default branch and update it</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"># v10.1.1 -&gt; update release/v10.1</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html#aa7016b745dafd48a2caa38a3f054ad1d">   13</a></span>LOG = <span class="stringliteral">&quot;[release_branch_updater.py]&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html#a74aa66d65cfe12f5516bb71692f365f5">   15</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerelease__branch__updater.html#a74aa66d65cfe12f5516bb71692f365f5">git_repository</a>(repository: str, token: str):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> token:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> f<span class="stringliteral">&quot;https://{repository}&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> f<span class="stringliteral">&quot;https://{token}@{repository}&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="foldopen" id="foldopen00020" data-start="" data-end="">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html#a51af30a60f9f02777c6396b8247e356f">   20</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerelease__branch__updater.html#a51af30a60f9f02777c6396b8247e356f">main</a>():</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    arg_parser = argparse.ArgumentParser()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--port-clone-tmpdir&quot;</span>, default=<span class="stringliteral">&quot;port_tmpdir&quot;</span>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--port-urls-path&quot;</span>, default=os.path.join(os.path.dirname(__file__), <span class="stringliteral">&quot;release_branch_updater_port_urls.txt&quot;</span>))</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--lvgl-path&quot;</span>, default=os.path.join(os.path.dirname(__file__), <span class="stringliteral">&quot;..&quot;</span>))</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--dry-run&quot;</span>, action=<span class="stringliteral">&quot;store_true&quot;</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--oldest-major&quot;</span>, type=int)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--github-token&quot;</span>, type=str)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    arg_parser.add_argument(<span class="stringliteral">&quot;--skip-master&quot;</span>, action=<span class="stringliteral">&quot;store_true&quot;</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    args = arg_parser.parse_args()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    port_clone_tmpdir = args.port_clone_tmpdir</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    port_urls_path = args.port_urls_path</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    lvgl_path = args.lvgl_path</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    dry_run = args.dry_run</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    oldest_major = args.oldest_major</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    skip_master = args.skip_master</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> args.github_token <span class="keywordflow">and</span> <span class="keywordflow">not</span> dry_run:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        print(LOG, <span class="stringliteral">&quot;Warning: No github token was provided for this production run. Continuing anyway...&quot;</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    lvgl_release_branches, lvgl_default_branch = <a class="code hl_function" href="namespacerelease__branch__updater.html#a59accdadf4d80098acdd957fcd6acbda">get_release_branches</a>(lvgl_path)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    print(LOG, <span class="stringliteral">&quot;LVGL release branches:&quot;</span>, <span class="stringliteral">&quot;, &quot;</span>.join(<a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(br) <span class="keywordflow">for</span> br <span class="keywordflow">in</span> lvgl_release_branches) <span class="keywordflow">or</span> <span class="stringliteral">&quot;(none)&quot;</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">assert</span> lvgl_default_branch <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    print(LOG, <span class="stringliteral">&quot;LVGL default branch:&quot;</span>, lvgl_default_branch)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> oldest_major <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        lvgl_release_branches = [br <span class="keywordflow">for</span> br <span class="keywordflow">in</span> lvgl_release_branches <span class="keywordflow">if</span> br[0] &gt;= oldest_major]</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        print(LOG, <span class="stringliteral">&#39;LVGL release branches after &quot;oldest-major&quot; filter:&#39;</span>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>              <span class="stringliteral">&quot;, &quot;</span>.join(<a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(br) <span class="keywordflow">for</span> br <span class="keywordflow">in</span> lvgl_release_branches) <span class="keywordflow">or</span> <span class="stringliteral">&quot;(none)&quot;</span>)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment"># only this one is created automatically in the ports. see below.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    newest_lvgl_release = lvgl_release_branches[-1] <span class="keywordflow">if</span> lvgl_release_branches <span class="keywordflow">else</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">with</span> open(port_urls_path) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        urls = f.read()</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    urls = [url <span class="keywordflow">for</span> url <span class="keywordflow">in</span> map(str.strip, urls.splitlines()) <span class="keywordflow">if</span> url]</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment"># ensure this script creates the directory i.e. it doesn&#39;t belong to the user since it will rm -rf at the end</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">assert</span> <span class="keywordflow">not</span> os.path.exists(port_clone_tmpdir), <span class="stringliteral">&quot;the port clone tmpdir should not exist yet&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">for</span> url <span class="keywordflow">in</span> urls:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        print(LOG, <span class="stringliteral">&quot;working with port:&quot;</span>, url)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">if</span> dry_run:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            port_clone_tmpdir = url[len(<span class="stringliteral">&quot;https://github.com/lvgl/&quot;</span>): ]</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            print(<span class="stringliteral">&quot;port_clone_tmpdir: &quot;</span> + port_clone_tmpdir)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment"># It&#39;s very important to not leak the github_token here</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="comment"># So make sure the stdout and stderr are piped here</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        subprocess.run((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;clone&quot;</span>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        <a class="code hl_function" href="namespacerelease__branch__updater.html#a74aa66d65cfe12f5516bb71692f365f5">git_repository</a>(url.replace(<span class="stringliteral">&quot;https://&quot;</span>, <span class="stringliteral">&quot;&quot;</span>), args.github_token),</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        port_clone_tmpdir),</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                        stdout=subprocess.PIPE,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                        stderr=subprocess.PIPE)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        port_release_branches, port_default_branch = <a class="code hl_function" href="namespacerelease__branch__updater.html#a59accdadf4d80098acdd957fcd6acbda">get_release_branches</a>(port_clone_tmpdir)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        print(LOG, <span class="stringliteral">&quot;port release branches:&quot;</span>, <span class="stringliteral">&quot;, &quot;</span>.join(<a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(br) <span class="keywordflow">for</span> br <span class="keywordflow">in</span> port_release_branches) <span class="keywordflow">or</span> <span class="stringliteral">&quot;(none)&quot;</span>)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        print(LOG, <span class="stringliteral">&quot;port default branch:&quot;</span>, port_default_branch <span class="keywordflow">if</span> port_default_branch <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span> <span class="keywordflow">else</span> <span class="stringliteral">&quot;(none)&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment"># we want to</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="comment"># 1. create (if necessary) the port&#39;s release branch</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="comment"># 2. update the LVGL submodule to match the LVGL&#39;s release branch version</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment"># 3. update the lv_conf.h based on the lv_conf.defaults</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        branches_to_update = lvgl_release_branches</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">if</span> <span class="keywordflow">not</span> skip_master:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            branches_to_update = branches_to_update + [lvgl_default_branch]</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment"># from oldest to newest release...</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">for</span> lvgl_branch <span class="keywordflow">in</span> branches_to_update:</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> isinstance(lvgl_branch, tuple):</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                port_branch = lvgl_branch</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                print(LOG, f<span class="stringliteral">&quot;attempting to update release branch {fmt_release(port_branch)} ...&quot;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                port_branch = port_default_branch</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <span class="keywordflow">if</span> port_branch <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                    print(LOG, <span class="stringliteral">&quot;the port does not have a default branch to update. continuing to next.&quot;</span>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                print(LOG, f<span class="stringliteral">&quot;attempting to update default branch {port_branch} ...&quot;</span>)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            port_does_not_have_the_branch = <span class="keyword">False</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            port_submodule_was_updated = <span class="keyword">False</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            port_lv_conf_h_was_updated = <span class="keyword">False</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment"># if the branch does not exist in the port, create it from the tip of the</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="comment"># port&#39;s default branch. the port is kept up to date against LVGL&#39;s master,</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment"># so by the time the release happens its default branch has already been</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment"># adapted to the new version. the previous release branch has not.</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">if</span> port_branch <span class="keywordflow">in</span> port_release_branches:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                print(LOG, <span class="stringliteral">&quot;... this port has a matching release branch.&quot;</span>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                subprocess.run((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;branch&quot;</span>, <span class="stringliteral">&quot;--track&quot;</span>,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                                       <a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(port_branch),</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                                       f<span class="stringliteral">&quot;origin/{fmt_release(port_branch)}&quot;</span>))</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">elif</span> port_branch != port_default_branch:</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                print(LOG, <span class="stringliteral">&quot;... this port does not have this release branch minor ...&quot;</span>)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="keywordflow">if</span> port_branch != newest_lvgl_release:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                    print(LOG, <span class="stringliteral">&quot;... this is not the newest LVGL release so it will not be created &quot;</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                               <span class="stringliteral">&quot;automatically. one must be created manually. continuing to next.&quot;</span>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordflow">if</span> port_default_branch <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    print(LOG, <span class="stringliteral">&quot;... this port has no default branch to create it from. &quot;</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                               <span class="stringliteral">&quot;one must be created manually. continuing to next.&quot;</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                port_does_not_have_the_branch = <span class="keyword">True</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                print(LOG, f<span class="stringliteral">&quot;... creating the new branch {fmt_release(port_branch)} &quot;</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                                             f<span class="stringliteral">&quot;from origin/{port_default_branch}&quot;</span>)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                res = subprocess.run((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;branch&quot;</span>,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                       <a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(port_branch),           <span class="comment"># new branch name</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                                       f<span class="stringliteral">&quot;origin/{port_default_branch}&quot;</span>))   <span class="comment"># start point</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                <span class="keywordflow">if</span> res.returncode != 0: <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                port_release_branches.append(port_branch)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                port_release_branches.sort()</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="comment"># checkout the same release in both LVGL and the port</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, lvgl_path, <span class="stringliteral">&quot;checkout&quot;</span>, f<span class="stringliteral">&quot;origin/{fmt_release(lvgl_branch)}&quot;</span>))</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;checkout&quot;</span>, <a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(port_branch)))</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="comment"># update the submodule in the port if it exists</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            port_lvgl_submodule_path = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="keywordflow">if</span> os.path.exists(os.path.join(port_clone_tmpdir, <span class="stringliteral">&quot;.gitmodules&quot;</span>)): </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                res = subprocess.run((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;config&quot;</span>, <span class="stringliteral">&quot;--file&quot;</span>,</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                      <span class="stringliteral">&quot;.gitmodules&quot;</span>, <span class="stringliteral">&quot;--get-regexp&quot;</span>, <span class="stringliteral">&quot;path&quot;</span>),</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                     stdout=subprocess.PIPE)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                port_lvgl_submodule_path = next((</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                    line.partition(<span class="stringliteral">&quot;lvgl.path &quot;</span>)[2]</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                    <span class="keywordflow">for</span> line</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                    <span class="keywordflow">in</span> res.stdout.decode().strip().splitlines()</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                    <span class="keywordflow">if</span> <span class="stringliteral">&quot;lvgl.path &quot;</span> <span class="keywordflow">in</span> line</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                ), <span class="keywordtype">None</span>)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">if</span> port_lvgl_submodule_path <span class="keywordflow">is</span> <span class="keywordflow">not</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                <span class="comment"># check if the submodule is really in the index and not just a leftover in .gitmodules</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;submodule&quot;</span>, <span class="stringliteral">&quot;status&quot;</span>))</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                <span class="keywordflow">if</span> <span class="keywordflow">not</span> any(</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                    line.split(maxsplit=1)[1].rsplit(maxsplit=1)[0] == port_lvgl_submodule_path</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                    <span class="keywordflow">for</span> line</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    <span class="keywordflow">in</span> out.decode().strip().splitlines()</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                ):</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    port_lvgl_submodule_path = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <span class="keywordflow">if</span> port_lvgl_submodule_path <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                print(LOG, <span class="stringliteral">&quot;this port has no LVGL submodule&quot;</span>)</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                print(LOG, <span class="stringliteral">&quot;lvgl submodule found in port at:&quot;</span>, port_lvgl_submodule_path)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="comment"># get the SHA of LVGL in this release of LVGL</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, lvgl_path, <span class="stringliteral">&quot;rev-parse&quot;</span>, <span class="stringliteral">&quot;--verify&quot;</span>, <span class="stringliteral">&quot;HEAD&quot;</span>))</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                lvgl_sha = out.decode().strip()</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                print(LOG, <span class="stringliteral">&quot;the SHA of LVGL in this release should be:&quot;</span>, lvgl_sha)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                <span class="comment"># get the SHA of LVGL this port wants to use in this release</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;rev-parse&quot;</span>,</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                                               <span class="stringliteral">&quot;--verify&quot;</span>, f<span class="stringliteral">&quot;HEAD:{port_lvgl_submodule_path}&quot;</span>))</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                port_lvgl_submodule_sha = out.decode().strip()</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                print(LOG, <span class="stringliteral">&quot;the SHA of LVGL in the submodule of this port is:&quot;</span>, port_lvgl_submodule_sha)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="keywordflow">if</span> lvgl_sha == port_lvgl_submodule_sha:</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    print(LOG, <span class="stringliteral">&quot;the submodule&#39;s version of LVGL is already up to date&quot;</span>)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                    print(LOG, <span class="stringliteral">&quot;the submodule&#39;s version of LVGL is NOT up to date&quot;</span>)</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                    port_submodule_was_updated = <span class="keyword">True</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                    <span class="comment"># update the version of the submodule in the index. no need to `git submodule update --init` it.</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    <span class="comment"># also no need to `git add .` afterwards because it stages the change.</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    <span class="comment"># 160000 is a git file mode which means submodule.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;update-index&quot;</span>, <span class="stringliteral">&quot;--cacheinfo&quot;</span>,</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                                           f<span class="stringliteral">&quot;160000,{lvgl_sha},{port_lvgl_submodule_path}&quot;</span>))</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="comment"># update the lv_conf.h if there&#39;s an lv_conf.defaults</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            out = subprocess.check_output((<span class="stringliteral">&quot;find&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;-name&quot;</span>, <span class="stringliteral">&quot;lv_conf.defaults&quot;</span>, <span class="stringliteral">&quot;-print&quot;</span>, <span class="stringliteral">&quot;-quit&quot;</span>), cwd=port_clone_tmpdir)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            port_lv_conf_defaults = next(iter(out.decode().strip().splitlines()), <span class="keywordtype">None</span>)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordflow">if</span> port_lv_conf_defaults <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                print(LOG, <span class="stringliteral">&quot;this port has no lv_conf.defaults&quot;</span>)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                out = subprocess.check_output((<span class="stringliteral">&quot;find&quot;</span>, <span class="stringliteral">&quot;.&quot;</span>, <span class="stringliteral">&quot;-name&quot;</span>, <span class="stringliteral">&quot;lv_conf.h&quot;</span>, <span class="stringliteral">&quot;-print&quot;</span>, <span class="stringliteral">&quot;-quit&quot;</span>), cwd=port_clone_tmpdir)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                port_lv_conf_h = next(iter(out.decode().strip().splitlines()), <span class="keywordtype">None</span>)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordflow">if</span> port_lv_conf_h <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    print(LOG, <span class="stringliteral">&quot;this port has an lv_conf.defaults but no lv_conf.h&quot;</span>)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    subprocess.check_call((sys.executable, os.path.join(lvgl_path, <span class="stringliteral">&quot;scripts/generate_lv_conf.py&quot;</span>),</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                                           <span class="stringliteral">&quot;--defaults&quot;</span>, os.path.abspath(os.path.join(port_clone_tmpdir, port_lv_conf_defaults)),</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>                                           <span class="stringliteral">&quot;--config&quot;</span>, os.path.abspath(os.path.join(port_clone_tmpdir, port_lv_conf_h)), ))</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    <span class="comment"># check if lv_conf.h actually changed. it will not detect the submodule change as a false positive.</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;diff&quot;</span>))</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                    diff = out.decode().strip()</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                    <span class="keywordflow">if</span> <span class="keywordflow">not</span> diff:</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        print(LOG, <span class="stringliteral">&quot;this port&#39;s lv_conf.h did NOT change&quot;</span>)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                        print(LOG, <span class="stringliteral">&quot;this port&#39;s lv_conf.h changed&quot;</span>)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                        port_lv_conf_h_was_updated = <span class="keyword">True</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                        subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;add&quot;</span>, port_lv_conf_h))</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                        out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;diff&quot;</span>))</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                        diff = out.decode().strip()</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                        <span class="keyword">assert</span> <span class="keywordflow">not</span> diff</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            <span class="keywordflow">if</span> port_does_not_have_the_branch <span class="keywordflow">or</span> port_submodule_was_updated <span class="keywordflow">or</span> port_lv_conf_h_was_updated:</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                print(LOG, <span class="stringliteral">&quot;changes were made. ready to push.&quot;</span>)</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                <span class="comment"># keep it brief for commit message 50 character limit suggestion.</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="comment"># max length will be 50 characters in this case: &quot;bot: New branch. Update LVGL submodule. lv_conf.h.&quot;</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                commit_msg = (<span class="stringliteral">&quot;bot:&quot;</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                              + (<span class="stringliteral">&quot; New branch.&quot;</span> <span class="keywordflow">if</span> port_does_not_have_the_branch <span class="keywordflow">else</span> <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                              + (<span class="stringliteral">&quot; Update LVGL submodule.&quot;</span> <span class="keywordflow">if</span> port_submodule_was_updated <span class="keywordflow">else</span> <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                              + (<span class="stringliteral">&quot; lv_conf.h.&quot;</span> <span class="keywordflow">if</span> port_lv_conf_h_was_updated <span class="keywordflow">else</span> <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                             )</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                print(LOG, f<span class="stringliteral">&quot;commit message: &#39;{commit_msg}&#39;&quot;</span>)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;commit&quot;</span>, <span class="stringliteral">&quot;--allow-empty&quot;</span>, <span class="stringliteral">&quot;-m&quot;</span>, commit_msg))</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <span class="keywordflow">if</span> dry_run:</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    print(LOG, <span class="stringliteral">&quot;this is a dry run so nothing will be pushed&quot;</span>)</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    subprocess.check_call((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, port_clone_tmpdir, <span class="stringliteral">&quot;push&quot;</span>, <span class="stringliteral">&quot;origin&quot;</span>, <a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(port_branch)))</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                    print(LOG, <span class="stringliteral">&quot;the changes were pushed.&quot;</span>)</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                print(LOG, <span class="stringliteral">&quot;nothing to push for this release. it is up to date.&quot;</span>)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">if</span> <span class="keywordflow">not</span> dry_run:</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            shutil.rmtree(port_clone_tmpdir)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        print(LOG, <span class="stringliteral">&quot;port update complete:&quot;</span>, url)</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+</div>
+<div class="foldopen" id="foldopen00248" data-start="" data-end="">
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html#a59accdadf4d80098acdd957fcd6acbda">  248</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerelease__branch__updater.html#a59accdadf4d80098acdd957fcd6acbda">get_release_branches</a>(working_dir):</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    out = subprocess.check_output((<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, working_dir, <span class="stringliteral">&quot;branch&quot;</span>, <span class="stringliteral">&quot;--format&quot;</span>, <span class="stringliteral">&quot;%(refname)&quot;</span>, <span class="stringliteral">&quot;--all&quot;</span>))</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    branches = out.decode().strip().splitlines()</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    release_versions = []</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">for</span> branch_name <span class="keywordflow">in</span> branches:</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        release_branch = re.fullmatch(<span class="stringliteral">r&quot;refs/remotes/origin/release/v([0-9]+)\.([0-9]+)&quot;</span>, branch_name)</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordflow">if</span> release_branch <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        release_versions.append((int(release_branch[1]), int(release_branch[2])))</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    release_versions.sort()</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    default_branch = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">if</span> <span class="stringliteral">&quot;refs/remotes/origin/master&quot;</span> <span class="keywordflow">in</span> branches:</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        default_branch = <span class="stringliteral">&quot;master&quot;</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">elif</span> <span class="stringliteral">&quot;refs/remotes/origin/main&quot;</span> <span class="keywordflow">in</span> branches:</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        default_branch = <span class="stringliteral">&quot;main&quot;</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">return</span> release_versions, default_branch</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+</div>
+<div class="foldopen" id="foldopen00270" data-start="" data-end="">
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">  270</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">fmt_release</a>(release_tuple):</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">return</span> f<span class="stringliteral">&quot;release/v{release_tuple[0]}.{release_tuple[1]}&quot;</span> <span class="keywordflow">if</span> isinstance(release_tuple, tuple) <span class="keywordflow">else</span> release_tuple</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_namespace" href="namespacemain.html">main</a>()</div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00001">main.py:1</a></div></div>
+<div class="ttc" id="anamespacerelease__branch__updater_html_a164df046adfc55ae931c45e0e8e11db4"><div class="ttname"><a href="namespacerelease__branch__updater.html#a164df046adfc55ae931c45e0e8e11db4">release_branch_updater.fmt_release</a></div><div class="ttdeci">fmt_release(release_tuple)</div><div class="ttdef"><b>Definition</b> <a href="#l00270">release_branch_updater.py:270</a></div></div>
+<div class="ttc" id="anamespacerelease__branch__updater_html_a51af30a60f9f02777c6396b8247e356f"><div class="ttname"><a href="namespacerelease__branch__updater.html#a51af30a60f9f02777c6396b8247e356f">release_branch_updater.main</a></div><div class="ttdeci">main()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">release_branch_updater.py:20</a></div></div>
+<div class="ttc" id="anamespacerelease__branch__updater_html_a59accdadf4d80098acdd957fcd6acbda"><div class="ttname"><a href="namespacerelease__branch__updater.html#a59accdadf4d80098acdd957fcd6acbda">release_branch_updater.get_release_branches</a></div><div class="ttdeci">get_release_branches(working_dir)</div><div class="ttdef"><b>Definition</b> <a href="#l00248">release_branch_updater.py:248</a></div></div>
+<div class="ttc" id="anamespacerelease__branch__updater_html_a74aa66d65cfe12f5516bb71692f365f5"><div class="ttname"><a href="namespacerelease__branch__updater.html#a74aa66d65cfe12f5516bb71692f365f5">release_branch_updater.git_repository</a></div><div class="ttdeci">git_repository(str repository, str token)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">release_branch_updater.py:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="release__branch__updater_8py.html">release_branch_updater.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

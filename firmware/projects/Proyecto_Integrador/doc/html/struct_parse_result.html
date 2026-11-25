@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia de la estructura ParseResult</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_parse_result.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la estructura ParseResult<div class="ingroups"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html">RapidJSON error handling</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Result of parsing (wraps <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7" title="Error code of parsing.">ParseErrorCode</a>).  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="error_8h_source.html">error.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:ae59954717a06dc8d58c0ab142f7d88c9" id="r_ae59954717a06dc8d58c0ab142f7d88c9"><td class="memItemLeft">typedef <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>(ParseResult::*&#160;</td><td class="memItemRight"><a class="el" href="#ae59954717a06dc8d58c0ab142f7d88c9">BooleanType</a>) () const</td></tr>
+<tr class="memdesc:ae59954717a06dc8d58c0ab142f7d88c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Unspecified boolean type  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a6664493f9a52bbd4eb0008776986bb14" id="r_a6664493f9a52bbd4eb0008776986bb14"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a6664493f9a52bbd4eb0008776986bb14">ParseResult</a> ()</td></tr>
+<tr class="memdesc:a6664493f9a52bbd4eb0008776986bb14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor, no error.  <br /></td></tr>
+<tr class="memitem:ab1e09fc3b0216627dcea60bbe47c03b9" id="r_ab1e09fc3b0216627dcea60bbe47c03b9"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab1e09fc3b0216627dcea60bbe47c03b9">ParseResult</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> offset)</td></tr>
+<tr class="memdesc:ab1e09fc3b0216627dcea60bbe47c03b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to set an error.  <br /></td></tr>
+<tr class="memitem:a75384a8f3ce52f662dca93dede89de15" id="r_a75384a8f3ce52f662dca93dede89de15"><td class="memItemLeft"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a>&#160;</td><td class="memItemRight"><a class="el" href="#a75384a8f3ce52f662dca93dede89de15">Code</a> () const</td></tr>
+<tr class="memdesc:a75384a8f3ce52f662dca93dede89de15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error code.  <br /></td></tr>
+<tr class="memitem:a656ef52cb6ac8b3e5f927a24b5b48ebc" id="r_a656ef52cb6ac8b3e5f927a24b5b48ebc"><td class="memItemLeft"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a656ef52cb6ac8b3e5f927a24b5b48ebc">Offset</a> () const</td></tr>
+<tr class="memdesc:a656ef52cb6ac8b3e5f927a24b5b48ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error offset, if <a class="el" href="#aca1654c65182fe4e7d5fd45f556fcd57" title="IsError()">IsError()</a>, 0 otherwise.  <br /></td></tr>
+<tr class="memitem:a302b56909418d1140d4bd2154d72c459" id="r_a302b56909418d1140d4bd2154d72c459"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a302b56909418d1140d4bd2154d72c459">operator BooleanType</a> () const</td></tr>
+<tr class="memdesc:a302b56909418d1140d4bd2154d72c459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicit conversion to <code>bool</code>, returns <code>true</code>, iff !<a class="el" href="#aca1654c65182fe4e7d5fd45f556fcd57" title="IsError()">IsError()</a>.  <br /></td></tr>
+<tr class="memitem:aca1654c65182fe4e7d5fd45f556fcd57" id="r_aca1654c65182fe4e7d5fd45f556fcd57"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#aca1654c65182fe4e7d5fd45f556fcd57">IsError</a> () const</td></tr>
+<tr class="memdesc:aca1654c65182fe4e7d5fd45f556fcd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the result is an error.  <br /></td></tr>
+<tr class="memitem:a1177c956c1f288db3f49f95d9f04cffc" id="r_a1177c956c1f288db3f49f95d9f04cffc"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1177c956c1f288db3f49f95d9f04cffc">operator==</a> (const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;that) const</td></tr>
+<tr class="memitem:a43895e8692e5c7aaa9e9d30b06fdd4b1" id="r_a43895e8692e5c7aaa9e9d30b06fdd4b1"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a43895e8692e5c7aaa9e9d30b06fdd4b1">operator==</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code) const</td></tr>
+<tr class="memitem:ad078b1dbdfe00781dbb3466faa1c5103" id="r_ad078b1dbdfe00781dbb3466faa1c5103"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad078b1dbdfe00781dbb3466faa1c5103">operator!=</a> (const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;that) const</td></tr>
+<tr class="memitem:a0ef4b4afa2f0d1785be328eff049ef31" id="r_a0ef4b4afa2f0d1785be328eff049ef31"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0ef4b4afa2f0d1785be328eff049ef31">operator!=</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code) const</td></tr>
+<tr class="memitem:aa71d36872f416feaa853788a7a7a7ef8" id="r_aa71d36872f416feaa853788a7a7a7ef8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa71d36872f416feaa853788a7a7a7ef8">Clear</a> ()</td></tr>
+<tr class="memdesc:aa71d36872f416feaa853788a7a7a7ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset error code.  <br /></td></tr>
+<tr class="memitem:a9641e8c9bf19f4615e655eb6e598967a" id="r_a9641e8c9bf19f4615e655eb6e598967a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9641e8c9bf19f4615e655eb6e598967a">Set</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> offset=0)</td></tr>
+<tr class="memdesc:a9641e8c9bf19f4615e655eb6e598967a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update error code and offset.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a58c9982e833d1c74686506ac7449200c" id="r_a58c9982e833d1c74686506ac7449200c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a58c9982e833d1c74686506ac7449200c">operator==</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code, const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;err)</td></tr>
+<tr class="memitem:a0498aebcfdd3d4a5dcb989ee29b93d4d" id="r_a0498aebcfdd3d4a5dcb989ee29b93d4d"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0498aebcfdd3d4a5dcb989ee29b93d4d">operator!=</a> (<a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> code, const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;err)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Result of parsing (wraps <a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7" title="Error code of parsing.">ParseErrorCode</a>). </p>
+<div class="fragment"><div class="line"><a class="code hl_typedef" href="document_8h.html#ac6ea5b168e3fe8c7fa532450fc9391f7">Document</a> doc;</div>
+<div class="line"><a class="code hl_function" href="#a6664493f9a52bbd4eb0008776986bb14">ParseResult</a> ok = doc.<a class="code hl_function" href="class_generic_document.html#a77f089c9fec348a92fa30c5f3a9aa32e">Parse</a>(<span class="stringliteral">&quot;[42]&quot;</span>);</div>
+<div class="line"><span class="keywordflow">if</span> (!ok) {</div>
+<div class="line">    fprintf(stderr, <span class="stringliteral">&quot;JSON parse error: %s (%u)&quot;</span>,</div>
+<div class="line">            <a class="code hl_function" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga28835eb93d2c3c07bbea13515eb31415">GetParseError_En</a>(ok.Code()), ok.Offset());</div>
+<div class="line">    exit(EXIT_FAILURE);</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_generic_document_html_a77f089c9fec348a92fa30c5f3a9aa32e"><div class="ttname"><a href="class_generic_document.html#a77f089c9fec348a92fa30c5f3a9aa32e">GenericDocument::Parse</a></div><div class="ttdeci">GenericDocument &amp; Parse(const typename SourceEncoding::Ch *str)</div><div class="ttdoc">Parse JSON text from a read-only string (with Encoding conversion).</div><div class="ttdef"><b>Definition</b> <a href="document_8h_source.html#l02708">document.h:2708</a></div></div>
+<div class="ttc" id="adocument_8h_html_ac6ea5b168e3fe8c7fa532450fc9391f7"><div class="ttname"><a href="document_8h.html#ac6ea5b168e3fe8c7fa532450fc9391f7">Document</a></div><div class="ttdeci">GenericDocument&lt; UTF8&lt;&gt; &gt; Document</div><div class="ttdoc">GenericDocument with UTF8 encoding.</div><div class="ttdef"><b>Definition</b> <a href="document_8h_source.html#l02889">document.h:2889</a></div></div>
+<div class="ttc" id="agroup___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s_html_ga28835eb93d2c3c07bbea13515eb31415"><div class="ttname"><a href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga28835eb93d2c3c07bbea13515eb31415">GetParseError_En</a></div><div class="ttdeci">RAPIDJSON_NAMESPACE_BEGIN const RAPIDJSON_ERROR_CHARTYPE * GetParseError_En(ParseErrorCode parseErrorCode)</div><div class="ttdoc">Maps error code of parsing into error message.</div><div class="ttdef"><b>Definition</b> <a href="en_8h_source.html#l00036">en.h:36</a></div></div>
+<div class="ttc" id="astruct_parse_result_html_a6664493f9a52bbd4eb0008776986bb14"><div class="ttname"><a href="#a6664493f9a52bbd4eb0008776986bb14">ParseResult::ParseResult</a></div><div class="ttdeci">ParseResult()</div><div class="ttdoc">Default constructor, no error.</div><div class="ttdef"><b>Definition</b> <a href="error_8h_source.html#l00111">error.h:111</a></div></div>
+</div><!-- fragment --> <dl class="section see"><dt>Ver también</dt><dd><a class="el" href="class_generic_reader.html#a33bfcbda5ffaee102d69d25e03859203" title="Parse JSON text.">GenericReader::Parse</a>, <a class="el" href="class_generic_document.html#a77f089c9fec348a92fa30c5f3a9aa32e" title="Parse JSON text from a read-only string (with Encoding conversion).">GenericDocument::Parse</a> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00106">106</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="ae59954717a06dc8d58c0ab142f7d88c9" name="ae59954717a06dc8d58c0ab142f7d88c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae59954717a06dc8d58c0ab142f7d88c9">&#9670;&#160;</a></span>BooleanType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>(ParseResult::* BooleanType) () const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>! Unspecified boolean type </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00108">108</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a6664493f9a52bbd4eb0008776986bb14" name="a6664493f9a52bbd4eb0008776986bb14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6664493f9a52bbd4eb0008776986bb14">&#9670;&#160;</a></span>ParseResult() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_parse_result.html">ParseResult</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constructor, no error. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00111">111</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00065">kParseErrorNone</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="error_8h_source.html#l00129">operator!=()</a>, <a class="el" href="error_8h_source.html#l00131">operator!=</a>, <a class="el" href="error_8h_source.html#l00125">operator==()</a> y <a class="el" href="error_8h_source.html#l00127">operator==</a>.</p>
+
+</div>
+</div>
+<a id="ab1e09fc3b0216627dcea60bbe47c03b9" name="ab1e09fc3b0216627dcea60bbe47c03b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e09fc3b0216627dcea60bbe47c03b9">&#9670;&#160;</a></span>ParseResult() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_parse_result.html">ParseResult</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor to set an error. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00113">113</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a> y <a class="el" href="heart_rate_8c_source.html#l00070">offset</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="aa71d36872f416feaa853788a7a7a7ef8" name="aa71d36872f416feaa853788a7a7a7ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71d36872f416feaa853788a7a7a7ef8">&#9670;&#160;</a></span>Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset error code. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00134">134</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00065">kParseErrorNone</a> y <a class="el" href="error_8h_source.html#l00136">Set()</a>.</p>
+
+</div>
+</div>
+<a id="a75384a8f3ce52f662dca93dede89de15" name="a75384a8f3ce52f662dca93dede89de15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75384a8f3ce52f662dca93dede89de15">&#9670;&#160;</a></span>Code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a> Code </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the error code. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00116">116</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+</div>
+</div>
+<a id="aca1654c65182fe4e7d5fd45f556fcd57" name="aca1654c65182fe4e7d5fd45f556fcd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1654c65182fe4e7d5fd45f556fcd57">&#9670;&#160;</a></span>IsError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> IsError </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the result is an error. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00123">123</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00065">kParseErrorNone</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="error_8h_source.html#l00121">operator BooleanType()</a>.</p>
+
+</div>
+</div>
+<a id="a656ef52cb6ac8b3e5f927a24b5b48ebc" name="a656ef52cb6ac8b3e5f927a24b5b48ebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656ef52cb6ac8b3e5f927a24b5b48ebc">&#9670;&#160;</a></span>Offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> Offset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the error offset, if <a class="el" href="#aca1654c65182fe4e7d5fd45f556fcd57" title="IsError()">IsError()</a>, 0 otherwise. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00118">118</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+</div>
+</div>
+<a id="a302b56909418d1140d4bd2154d72c459" name="a302b56909418d1140d4bd2154d72c459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302b56909418d1140d4bd2154d72c459">&#9670;&#160;</a></span>operator BooleanType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">operator <a class="el" href="#ae59954717a06dc8d58c0ab142f7d88c9">BooleanType</a> </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Explicit conversion to <code>bool</code>, returns <code>true</code>, iff !<a class="el" href="#aca1654c65182fe4e7d5fd45f556fcd57" title="IsError()">IsError()</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00121">121</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00123">IsError()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="ad078b1dbdfe00781dbb3466faa1c5103" name="ad078b1dbdfe00781dbb3466faa1c5103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad078b1dbdfe00781dbb3466faa1c5103">&#9670;&#160;</a></span>operator!=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00129">129</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00111">ParseResult()</a> y <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00029">that</a>.</p>
+
+</div>
+</div>
+<a id="a0ef4b4afa2f0d1785be328eff049ef31" name="a0ef4b4afa2f0d1785be328eff049ef31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ef4b4afa2f0d1785be328eff049ef31">&#9670;&#160;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00130">130</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a>.</p>
+
+</div>
+</div>
+<a id="a1177c956c1f288db3f49f95d9f04cffc" name="a1177c956c1f288db3f49f95d9f04cffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1177c956c1f288db3f49f95d9f04cffc">&#9670;&#160;</a></span>operator==() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>that</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00125">125</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="error_8h_source.html#l00111">ParseResult()</a> y <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt_source.html#l00029">that</a>.</p>
+
+</div>
+</div>
+<a id="a43895e8692e5c7aaa9e9d30b06fdd4b1" name="a43895e8692e5c7aaa9e9d30b06fdd4b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43895e8692e5c7aaa9e9d30b06fdd4b1">&#9670;&#160;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00126">126</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a>.</p>
+
+</div>
+</div>
+<a id="a9641e8c9bf19f4615e655eb6e598967a" name="a9641e8c9bf19f4615e655eb6e598967a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9641e8c9bf19f4615e655eb6e598967a">&#9670;&#160;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Update error code and offset. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00136">136</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a> y <a class="el" href="heart_rate_8c_source.html#l00070">offset</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="error_8h_source.html#l00134">Clear()</a>.</p>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Documentación de símbolos amigos y relacionados</h2>
+<a id="a0498aebcfdd3d4a5dcb989ee29b93d4d" name="a0498aebcfdd3d4a5dcb989ee29b93d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0498aebcfdd3d4a5dcb989ee29b93d4d">&#9670;&#160;</a></span>operator!=</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00131">131</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a> y <a class="el" href="error_8h_source.html#l00111">ParseResult()</a>.</p>
+
+</div>
+</div>
+<a id="a58c9982e833d1c74686506ac7449200c" name="a58c9982e833d1c74686506ac7449200c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58c9982e833d1c74686506ac7449200c">&#9670;&#160;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___r_a_p_i_d_j_s_o_n___e_r_r_o_r_s.html#ga8d4b32dfc45840bca189ade2bbcb6ba7">ParseErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_parse_result.html">ParseResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>err</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="error_8h_source.html#l00127">127</a> del archivo <a class="el" href="error_8h_source.html">error.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="freetype-_l_i_c_e_n_s_e_8txt.html#adf102e4e86a3735e1ecd6ca9a31d90ab">code()</a> y <a class="el" href="error_8h_source.html#l00111">ParseResult()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/error/<a class="el" href="error_8h_source.html">error.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_parse_result.html">ParseResult</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/test_memory_usage/measure.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('measure_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">measure.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="measure_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacemeasure.html">    1</a></span><span class="comment">#!/usr/bin/env python3</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">&quot;&quot;&quot;Build the memory-usage test configurations and report their flash and RAM usage.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> argparse</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> glob</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> json</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> os</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> shutil</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> subprocess</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> sys</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="namespacemeasure.html#af185254566e9abda94b6ee8e18ebffd0">   12</a></span>SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a614ca6e7fe7f1f3f3a899cb7a73f8377">   14</a></span>TARGETS = {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="stringliteral">&quot;arm-cortex-m4&quot;</span>: <span class="stringliteral">&quot;arm-none-eabi-gcc&quot;</span>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="stringliteral">&quot;arm-cortex-m0plus&quot;</span>: <span class="stringliteral">&quot;arm-none-eabi-gcc&quot;</span>,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="stringliteral">&quot;xtensa-esp32&quot;</span>: <span class="stringliteral">&quot;xtensa-esp32-elf-gcc&quot;</span>,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="stringliteral">&quot;riscv32-esp32c3&quot;</span>: <span class="stringliteral">&quot;riscv32-esp-elf-gcc&quot;</span>,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a4e81a3de209ff3bf3da8525f78bfe97c">   21</a></span>CONFIGS = [<span class="stringliteral">&quot;standard&quot;</span>, <span class="stringliteral">&quot;rgb565&quot;</span>, <span class="stringliteral">&quot;minimal&quot;</span>]</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="" data-end="">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">   24</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>(cmd, **kwargs):</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> subprocess.run(cmd, check=<span class="keyword">True</span>, capture_output=<span class="keyword">True</span>, text=<span class="keyword">True</span>, **kwargs)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+</div>
+<div class="foldopen" id="foldopen00028" data-start="" data-end="">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">   28</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">binutil</a>(build_dir, name):</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="stringliteral">&quot;&quot;&quot;Derive a binutils path from the compiler CMake actually used for this build.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    cache = os.path.join(build_dir, <span class="stringliteral">&quot;CMakeCache.txt&quot;</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">with</span> open(cache) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">for</span> line <span class="keywordflow">in</span> f:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> line.startswith(<span class="stringliteral">&quot;CMAKE_C_COMPILER:&quot;</span>):</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                compiler = line.split(<span class="stringliteral">&quot;=&quot;</span>, 1)[1].strip()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">break</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">raise</span> RuntimeError(f<span class="stringliteral">&quot;no CMAKE_C_COMPILER in {cache}&quot;</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> compiler.endswith(<span class="stringliteral">&quot;gcc&quot;</span>):</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">raise</span> RuntimeError(f<span class="stringliteral">&quot;unexpected compiler name: {compiler}&quot;</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> compiler[: -len(<span class="stringliteral">&quot;gcc&quot;</span>)] + name</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+</div>
+<div class="foldopen" id="foldopen00044" data-start="" data-end="">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacemeasure.html#ae30e6ac256e2a543c2b101fdfc13a771">   44</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#ae30e6ac256e2a543c2b101fdfc13a771">symbol_sizes</a>(build_dir, elf):</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="stringliteral">&quot;&quot;&quot;Per-symbol sizes from the linked image, so a regression can be localised.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    out = <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>(</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        [<a class="code hl_function" href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">binutil</a>(build_dir, <span class="stringliteral">&quot;nm&quot;</span>), <span class="stringliteral">&quot;--print-size&quot;</span>, <span class="stringliteral">&quot;--size-sort&quot;</span>, <span class="stringliteral">&quot;--radix=d&quot;</span>, elf]</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    ).stdout</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    sizes = {}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> line <span class="keywordflow">in</span> out.splitlines():</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        fields = line.split()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> len(fields) != 4:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        _, size, _, name = fields</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        sizes[name] = sizes.get(name, 0) + int(size)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span> sizes</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="foldopen" id="foldopen00059" data-start="" data-end="">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacemeasure.html#ae573ded7c118402819aa0f9725ab2dd5">   59</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#ae573ded7c118402819aa0f9725ab2dd5">library_size</a>(build_dir):</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="stringliteral">&quot;&quot;&quot;Size of liblvgl.a with nothing dead-stripped.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    matches = glob.glob(os.path.join(build_dir, <span class="stringliteral">&quot;**&quot;</span>, <span class="stringliteral">&quot;liblvgl.a&quot;</span>), recursive=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> matches:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">raise</span> SystemExit(f<span class="stringliteral">&quot;no liblvgl.a under {build_dir}&quot;</span>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    out = <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>([<a class="code hl_function" href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">binutil</a>(build_dir, <span class="stringliteral">&quot;size&quot;</span>), <span class="stringliteral">&quot;-t&quot;</span>, matches[0]]).stdout</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    text, data, bss = (int(v) <span class="keywordflow">for</span> v <span class="keywordflow">in</span> out.splitlines()[-1].split()[:3])</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> {<span class="stringliteral">&quot;text&quot;</span>: text, <span class="stringliteral">&quot;data&quot;</span>: data, <span class="stringliteral">&quot;bss&quot;</span>: bss, <span class="stringliteral">&quot;size&quot;</span>: text + data}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+</div>
+<div class="foldopen" id="foldopen00070" data-start="" data-end="">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a3ba78de7d2d88f30de0e99660a48fba1">   70</a></span><span class="keyword">def </span><a class="code hl_namespace" href="namespacemeasure.html">measure</a>(target, config, build_root):</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    build_dir = os.path.join(build_root, f<span class="stringliteral">&quot;{target}-{config}&quot;</span>)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    shutil.rmtree(build_dir, ignore_errors=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    toolchain = os.path.join(SCRIPT_DIR, <span class="stringliteral">&quot;toolchain&quot;</span>, f<span class="stringliteral">&quot;{target}.cmake&quot;</span>)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>(</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        [</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="stringliteral">&quot;cmake&quot;</span>,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="stringliteral">&quot;-S&quot;</span>,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            os.path.join(SCRIPT_DIR, config),</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="stringliteral">&quot;-B&quot;</span>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            build_dir,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="stringliteral">&quot;-GNinja&quot;</span>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            f<span class="stringliteral">&quot;-DCMAKE_TOOLCHAIN_FILE={toolchain}&quot;</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        ]</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    )</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>([<span class="stringliteral">&quot;cmake&quot;</span>, <span class="stringliteral">&quot;--build&quot;</span>, build_dir])</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    elf = os.path.join(build_dir, <span class="stringliteral">&quot;main&quot;</span>)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    out = <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>([<a class="code hl_function" href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">binutil</a>(build_dir, <span class="stringliteral">&quot;size&quot;</span>), elf]).stdout</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    text, data, bss = (int(v) <span class="keywordflow">for</span> v <span class="keywordflow">in</span> out.splitlines()[-1].split()[:3])</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    sizes = {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="stringliteral">&quot;text&quot;</span>: text,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="stringliteral">&quot;data&quot;</span>: data,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="stringliteral">&quot;bss&quot;</span>: bss,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="stringliteral">&quot;flash&quot;</span>: text + data,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="stringliteral">&quot;ram&quot;</span>: data + bss,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="stringliteral">&quot;library&quot;</span>: <a class="code hl_function" href="namespacemeasure.html#ae573ded7c118402819aa0f9725ab2dd5">library_size</a>(build_dir),</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">return</span> sizes, <a class="code hl_function" href="namespacemeasure.html#ae30e6ac256e2a543c2b101fdfc13a771">symbol_sizes</a>(build_dir, elf)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+</div>
+<div class="foldopen" id="foldopen00103" data-start="" data-end="">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a9904c89debfe61357f91d1b52ec8977a">  103</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#a9904c89debfe61357f91d1b52ec8977a">measured_commit</a>():</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="stringliteral">&quot;&quot;&quot;The commit these numbers describe, so a stale baseline is visible in the report.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">run</a>([<span class="stringliteral">&quot;git&quot;</span>, <span class="stringliteral">&quot;-C&quot;</span>, SCRIPT_DIR, <span class="stringliteral">&quot;rev-parse&quot;</span>, <span class="stringliteral">&quot;HEAD&quot;</span>]).stdout.strip()</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">except</span> (subprocess.CalledProcessError, OSError):</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+</div>
+<div class="foldopen" id="foldopen00111" data-start="" data-end="">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a93923ffa5ef9b1efd633d0ec7f05431b">  111</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#a93923ffa5ef9b1efd633d0ec7f05431b">write_results</a>(out, results, all_symbols):</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    out_dir = os.path.dirname(os.path.abspath(out))</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    os.makedirs(out_dir, exist_ok=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">with</span> open(out, <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        json.dump(results, f, indent=2)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    commit = <a class="code hl_function" href="namespacemeasure.html#a9904c89debfe61357f91d1b52ec8977a">measured_commit</a>()</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">if</span> commit:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keyword">with</span> open(os.path.join(out_dir, <span class="stringliteral">&quot;commit.txt&quot;</span>), <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            f.write(commit + <span class="stringliteral">&quot;\n&quot;</span>)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment"># Kept beside the totals rather than in them: the totals stay readable, and report.py</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="comment"># only needs these for the rows that actually moved.</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    symbols_dir = os.path.join(out_dir, <span class="stringliteral">&quot;symbols&quot;</span>)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    os.makedirs(symbols_dir, exist_ok=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">for</span> (target, config), symbols <span class="keywordflow">in</span> all_symbols.items():</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keyword">with</span> open(os.path.join(symbols_dir, f<span class="stringliteral">&quot;{target}-{config}.json&quot;</span>), <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> f:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            json.dump(symbols, f, indent=2, sort_keys=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> symbols_dir</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+</div>
+<div class="foldopen" id="foldopen00132" data-start="" data-end="">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="namespacemeasure.html#a51af30a60f9f02777c6396b8247e356f">  132</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacemeasure.html#a51af30a60f9f02777c6396b8247e356f">main</a>():</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    parser = argparse.ArgumentParser(</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    )</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    parser.add_argument(</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="stringliteral">&quot;--out&quot;</span>, default=<span class="stringliteral">&quot;size-results.json&quot;</span>, help=<span class="stringliteral">&quot;where to write the results&quot;</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    )</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    parser.add_argument(</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="stringliteral">&quot;--build-root&quot;</span>,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        default=os.path.join(SCRIPT_DIR, <span class="stringliteral">&quot;build&quot;</span>),</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        help=<span class="stringliteral">&quot;directory to build in&quot;</span>,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    )</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    parser.add_argument(</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="stringliteral">&quot;--targets&quot;</span>, nargs=<span class="stringliteral">&quot;+&quot;</span>, default=list(TARGETS), choices=list(TARGETS)</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    )</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    parser.add_argument(<span class="stringliteral">&quot;--configs&quot;</span>, nargs=<span class="stringliteral">&quot;+&quot;</span>, default=CONFIGS, choices=CONFIGS)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    parser.add_argument(</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="stringliteral">&quot;--skip-missing&quot;</span>,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        action=<span class="stringliteral">&quot;store_true&quot;</span>,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        help=<span class="stringliteral">&quot;skip targets whose compiler is not on PATH&quot;</span>,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    )</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    args = parser.parse_args()</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    results = {}</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    all_symbols = {}</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">for</span> target <span class="keywordflow">in</span> args.targets:</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">if</span> shutil.which(TARGETS[target]) <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">if</span> args.skip_missing:</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                print(</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    f<span class="stringliteral">&quot;skipping {target}: {TARGETS[target]} not found&quot;</span>, file=sys.stderr</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                )</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            <span class="keywordflow">raise</span> SystemExit(</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                f<span class="stringliteral">&quot;{TARGETS[target]} not found on PATH (needed for {target})&quot;</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            )</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">for</span> config <span class="keywordflow">in</span> args.configs:</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                sizes, symbols = <a class="code hl_namespace" href="namespacemeasure.html">measure</a>(target, config, args.build_root)</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">except</span> subprocess.CalledProcessError <span class="keyword">as</span> e:</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                print(e.stdout, file=sys.stderr)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                print(e.stderr, file=sys.stderr)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <a class="code hl_function" href="namespacemeasure.html#a93923ffa5ef9b1efd633d0ec7f05431b">write_results</a>(args.out, results, all_symbols)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                <span class="keywordflow">raise</span> SystemExit(f<span class="stringliteral">&quot;{target}/{config}: build failed&quot;</span>)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            results.setdefault(target, {})[config] = sizes</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            all_symbols[(target, config)] = symbols</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            print(</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                f<span class="stringliteral">&quot;{target:18s} {config:9s} flash={sizes[&#39;flash&#39;]:8d} &quot;</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                f<span class="stringliteral">&quot;ram={sizes[&#39;ram&#39;]:8d} lib={sizes[&#39;library&#39;][&#39;size&#39;]:8d}&quot;</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            )</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    symbols_dir = <a class="code hl_function" href="namespacemeasure.html#a93923ffa5ef9b1efd633d0ec7f05431b">write_results</a>(args.out, results, all_symbols)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    print(f<span class="stringliteral">&quot;\nwrote {args.out} and {len(all_symbols)} symbol maps in {symbols_dir}&quot;</span>)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_namespace" href="namespacemain.html">main</a>()</div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00001">main.py:1</a></div></div>
+<div class="ttc" id="anamespacemeasure_html"><div class="ttname"><a href="namespacemeasure.html">measure</a></div><div class="ttdef"><b>Definition</b> <a href="#l00001">measure.py:1</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_a51af30a60f9f02777c6396b8247e356f"><div class="ttname"><a href="namespacemeasure.html#a51af30a60f9f02777c6396b8247e356f">measure.main</a></div><div class="ttdeci">main()</div><div class="ttdef"><b>Definition</b> <a href="#l00132">measure.py:132</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_a69e0097513bfa544fc49605533eb78c7"><div class="ttname"><a href="namespacemeasure.html#a69e0097513bfa544fc49605533eb78c7">measure.run</a></div><div class="ttdeci">run(cmd, **kwargs)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">measure.py:24</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_a93923ffa5ef9b1efd633d0ec7f05431b"><div class="ttname"><a href="namespacemeasure.html#a93923ffa5ef9b1efd633d0ec7f05431b">measure.write_results</a></div><div class="ttdeci">write_results(out, results, all_symbols)</div><div class="ttdef"><b>Definition</b> <a href="#l00111">measure.py:111</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_a95bf23c4a5d3579249001fbe612a6bc2"><div class="ttname"><a href="namespacemeasure.html#a95bf23c4a5d3579249001fbe612a6bc2">measure.binutil</a></div><div class="ttdeci">binutil(build_dir, name)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">measure.py:28</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_a9904c89debfe61357f91d1b52ec8977a"><div class="ttname"><a href="namespacemeasure.html#a9904c89debfe61357f91d1b52ec8977a">measure.measured_commit</a></div><div class="ttdeci">measured_commit()</div><div class="ttdef"><b>Definition</b> <a href="#l00103">measure.py:103</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_ae30e6ac256e2a543c2b101fdfc13a771"><div class="ttname"><a href="namespacemeasure.html#ae30e6ac256e2a543c2b101fdfc13a771">measure.symbol_sizes</a></div><div class="ttdeci">symbol_sizes(build_dir, elf)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">measure.py:44</a></div></div>
+<div class="ttc" id="anamespacemeasure_html_ae573ded7c118402819aa0f9725ab2dd5"><div class="ttname"><a href="namespacemeasure.html#ae573ded7c118402819aa0f9725ab2dd5">measure.library_size</a></div><div class="ttdeci">library_size(build_dir)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">measure.py:59</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_8ababf01e94c1ade71231e8194ba8567.html">test_memory_usage</a></li><li class="navelem"><a href="measure_8py.html">measure.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/misc/lv_cache_iter_base.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__cache__iter__base_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_cache_iter_base.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__cache__iter__base_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base.html">    1</a></span><span class="keyword">from</span> typing <span class="keyword">import</span> List, Optional</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> gdb</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1value.html">lvglgdb.value</a> <span class="keyword">import</span> Value</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00007" data-start="" data-end="">
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html">LVCacheIteratorBase</a>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="stringliteral">&quot;&quot;&quot;Base class for cache iterators&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="" data-end="">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a5174b9f7f3aa617380d8c6cf4f6f145c">   10</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a5174b9f7f3aa617380d8c6cf4f6f145c">__init__</a>(self, cache):</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3c138af7067df82c4c4964d42878edc6">   11</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3c138af7067df82c4c4964d42878edc6">cache</a> = cache</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">   12</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>: List[Value] = []</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">   13</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">_current_index</a> = 0</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">   14</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">_collect_error</a>: Optional[str] = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a84f855ed3f421dc306b29a0666dcd47a">_collect_entries</a>()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+</div>
+<div class="foldopen" id="foldopen00017" data-start="" data-end="">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3d1374cfb30c05eeeb049c2197b5a824">   17</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3d1374cfb30c05eeeb049c2197b5a824">__iter__</a>(self):</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keywordflow">return</span> self</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="foldopen" id="foldopen00020" data-start="" data-end="">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#aba69578c717635c5ab898e66318799c1">   20</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#aba69578c717635c5ab898e66318799c1">__next__</a>(self):</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="stringliteral">&quot;&quot;&quot;Get next cache entry&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keywordflow">if</span> self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">_current_index</a> &lt; len(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>):</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            entry = self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>[self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">_current_index</a>]</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">_current_index</a> += 1</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> entry</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">raise</span> StopIteration</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+</div>
+<div class="foldopen" id="foldopen00029" data-start="" data-end="">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a6781b036ba1c606be31ad87a0d530414">   29</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a6781b036ba1c606be31ad87a0d530414">__len__</a>(self):</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> len(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+</div>
+<div class="foldopen" id="foldopen00032" data-start="" data-end="">
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a40b37c981a056437fd94276341c63fe8">   32</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a40b37c981a056437fd94276341c63fe8">__str__</a>(self):</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> f<span class="stringliteral">&quot;{self.__class__.__name__}(cache={self.cache.name}, entries={len(self._entries)})&quot;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a84f855ed3f421dc306b29a0666dcd47a">   35</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a84f855ed3f421dc306b29a0666dcd47a">_collect_entries</a>(self):</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="stringliteral">&quot;&quot;&quot;To be implemented by subclasses&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">raise</span> NotImplementedError(<span class="stringliteral">&quot;Subclasses must implement _collect_entries&quot;</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00040" data-start="" data-end="">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a08e22dcd4ca3d8b295b5cce20c3023a3">   40</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a08e22dcd4ca3d8b295b5cce20c3023a3">extra_fields</a>(self):</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;&quot;&quot;Extra column names provided by this iterator, override in subclasses&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> []</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+</div>
+<div class="foldopen" id="foldopen00044" data-start="" data-end="">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a7c8444c96e64638c349de5bf08258f29">   44</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a7c8444c96e64638c349de5bf08258f29">get_extra</a>(self, entry):</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="stringliteral">&quot;&quot;&quot;Get extra column values for an entry, override in subclasses&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> []</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+</div>
+<div class="foldopen" id="foldopen00048" data-start="" data-end="">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a854ad95c6ed069885b16ddc63c952e42">   48</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a854ad95c6ed069885b16ddc63c952e42">sanity_check</a>(self, entry_checker=None):</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="stringliteral">&quot;&quot;&quot;Run sanity check on cache entries, override in subclasses for structural checks.</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="stringliteral">        Args:</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="stringliteral">            entry_checker: optional callable(entry) -&gt; list of error strings</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="stringliteral">        Returns:</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="stringliteral">            list of error strings, empty means all good</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>.clear()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">_current_index</a> = 0</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">_collect_error</a> = <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a84f855ed3f421dc306b29a0666dcd47a">_collect_entries</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        errors = []</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">_collect_error</a>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            errors.append(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">_collect_error</a>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span> entry_checker:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">for</span> entry <span class="keywordflow">in</span> self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">_entries</a>:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                    errs = entry_checker(entry)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    <span class="keywordflow">if</span> errs:</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        errors.extend(errs)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">except</span> Exception <span class="keyword">as</span> e:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                    errors.append(f<span class="stringliteral">&quot;entry_checker raised: {e}&quot;</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> errors</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase</a></div><div class="ttdef"><b>Definition</b> <a href="#l00007">lv_cache_iter_base.py:7</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a08e22dcd4ca3d8b295b5cce20c3023a3"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a08e22dcd4ca3d8b295b5cce20c3023a3">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.extra_fields</a></div><div class="ttdeci">extra_fields(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">lv_cache_iter_base.py:40</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a3c138af7067df82c4c4964d42878edc6"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3c138af7067df82c4c4964d42878edc6">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.cache</a></div><div class="ttdeci">cache</div><div class="ttdef"><b>Definition</b> <a href="#l00011">lv_cache_iter_base.py:11</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a3d1374cfb30c05eeeb049c2197b5a824"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a3d1374cfb30c05eeeb049c2197b5a824">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.__iter__</a></div><div class="ttdeci">__iter__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">lv_cache_iter_base.py:17</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a40b37c981a056437fd94276341c63fe8"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a40b37c981a056437fd94276341c63fe8">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.__str__</a></div><div class="ttdeci">__str__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00032">lv_cache_iter_base.py:32</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a5174b9f7f3aa617380d8c6cf4f6f145c"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a5174b9f7f3aa617380d8c6cf4f6f145c">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.__init__</a></div><div class="ttdeci">__init__(self, cache)</div><div class="ttdef"><b>Definition</b> <a href="#l00010">lv_cache_iter_base.py:10</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a599bd0abeb5a8c8f2ad37cddd128049b"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a599bd0abeb5a8c8f2ad37cddd128049b">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase._entries</a></div><div class="ttdeci">list _entries</div><div class="ttdef"><b>Definition</b> <a href="#l00012">lv_cache_iter_base.py:12</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a6781b036ba1c606be31ad87a0d530414"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a6781b036ba1c606be31ad87a0d530414">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.__len__</a></div><div class="ttdeci">__len__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00029">lv_cache_iter_base.py:29</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a7c8444c96e64638c349de5bf08258f29"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a7c8444c96e64638c349de5bf08258f29">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.get_extra</a></div><div class="ttdeci">get_extra(self, entry)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">lv_cache_iter_base.py:44</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a84f855ed3f421dc306b29a0666dcd47a"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a84f855ed3f421dc306b29a0666dcd47a">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase._collect_entries</a></div><div class="ttdeci">_collect_entries(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">lv_cache_iter_base.py:35</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_a854ad95c6ed069885b16ddc63c952e42"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#a854ad95c6ed069885b16ddc63c952e42">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.sanity_check</a></div><div class="ttdeci">sanity_check(self, entry_checker=None)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">lv_cache_iter_base.py:48</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_aba69578c717635c5ab898e66318799c1"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#aba69578c717635c5ab898e66318799c1">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase.__next__</a></div><div class="ttdeci">__next__(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00020">lv_cache_iter_base.py:20</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_af8a14ae7e4170692776097d58c5e967d"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#af8a14ae7e4170692776097d58c5e967d">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase._current_index</a></div><div class="ttdeci">int _current_index</div><div class="ttdef"><b>Definition</b> <a href="#l00013">lv_cache_iter_base.py:13</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base_html_affffa6e2e4e742ea946f7bfcfad509e9"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1misc_1_1lv__cache__iter__base_1_1_l_v_cache_iterator_base.html#affffa6e2e4e742ea946f7bfcfad509e9">lvglgdb.lvgl.misc.lv_cache_iter_base.LVCacheIteratorBase._collect_error</a></div><div class="ttdeci">Optional[str] _collect_error</div><div class="ttdef"><b>Definition</b> <a href="#l00014">lv_cache_iter_base.py:14</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1value_html"><div class="ttname"><a href="namespacelvglgdb_1_1value.html">lvglgdb.value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00001">value.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_f8ea00a3c574e198478017a91384b346.html">misc</a></li><li class="navelem"><a href="lv__cache__iter__base_8py.html">lv_cache_iter_base.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

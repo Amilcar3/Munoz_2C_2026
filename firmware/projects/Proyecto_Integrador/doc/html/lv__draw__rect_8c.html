@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/lv_draw_rect.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__rect_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_draw_rect.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__draw__private_8h_source.html">lv_draw_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__text__private_8h_source.html">../misc/lv_text_private.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__draw__rect_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:af62a0ca73215a2e95250cf33210609b2" id="r_af62a0ca73215a2e95250cf33210609b2"><td class="memItemLeft">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a>&#160;</td><td class="memItemRight"><a class="el" href="#af62a0ca73215a2e95250cf33210609b2">lv_draw_rect_dsc_init</a> (<a class="el" href="structlv__draw__rect__dsc__t.html">lv_draw_rect_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a07d95c86be92547d5299439c8db4ee88" id="r_a07d95c86be92547d5299439c8db4ee88"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07d95c86be92547d5299439c8db4ee88">lv_draw_fill_dsc_init</a> (<a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a649bcef32f6250fb6b1b79bb8e6d63df" id="r_a649bcef32f6250fb6b1b79bb8e6d63df"><td class="memItemLeft"><a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a649bcef32f6250fb6b1b79bb8e6d63df">lv_draw_task_get_fill_dsc</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *task)</td></tr>
+<tr class="memitem:ab23271b0319bf9900f06603a97a0469f" id="r_ab23271b0319bf9900f06603a97a0469f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab23271b0319bf9900f06603a97a0469f">lv_draw_fill</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer, const <a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *coords)</td></tr>
+<tr class="memitem:a772b5a9f1530d46cf926761f0dfc2342" id="r_a772b5a9f1530d46cf926761f0dfc2342"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a772b5a9f1530d46cf926761f0dfc2342">lv_draw_border_dsc_init</a> (<a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a2aa31e39be2a4a4c782ab45425930bc6" id="r_a2aa31e39be2a4a4c782ab45425930bc6"><td class="memItemLeft"><a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2aa31e39be2a4a4c782ab45425930bc6">lv_draw_task_get_border_dsc</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *task)</td></tr>
+<tr class="memitem:a12aea113781c4a88732f4a2cb0ad5ae7" id="r_a12aea113781c4a88732f4a2cb0ad5ae7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a12aea113781c4a88732f4a2cb0ad5ae7">lv_draw_border</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer, const <a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *coords)</td></tr>
+<tr class="memitem:a6616164df22c6edd7a5a514be8dc2d06" id="r_a6616164df22c6edd7a5a514be8dc2d06"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6616164df22c6edd7a5a514be8dc2d06">lv_draw_box_shadow_dsc_init</a> (<a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> *dsc)</td></tr>
+<tr class="memitem:a9a480d6ccc8618f4a8540b4ad51247c3" id="r_a9a480d6ccc8618f4a8540b4ad51247c3"><td class="memItemLeft"><a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9a480d6ccc8618f4a8540b4ad51247c3">lv_draw_task_get_box_shadow_dsc</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *task)</td></tr>
+<tr class="memitem:a3e67bfddadfbe944ead45cfaf3474584" id="r_a3e67bfddadfbe944ead45cfaf3474584"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3e67bfddadfbe944ead45cfaf3474584">lv_draw_box_shadow</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer, const <a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *coords)</td></tr>
+<tr class="memitem:a6ee80424802df70f274002ab417a3c15" id="r_a6ee80424802df70f274002ab417a3c15"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ee80424802df70f274002ab417a3c15">lv_draw_rect</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer, const <a class="el" href="structlv__draw__rect__dsc__t.html">lv_draw_rect_dsc_t</a> *dsc, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *coords)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a12aea113781c4a88732f4a2cb0ad5ae7" name="a12aea113781c4a88732f4a2cb0ad5ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12aea113781c4a88732f4a2cb0ad5ae7">&#9670;&#160;</a></span>lv_draw_border()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_border </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw a border </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>pointer to a layer </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to an initialized draw descriptor variable </td></tr>
+    <tr><td class="paramname">coords</td><td>the coordinates of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00119">119</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00096">lv_draw_border_dsc_t::base</a>, <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00185">lv_draw_dsc_base_t::drop_shadow_opa</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00080">LV_ASSERT_NULL</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw_8c_source.html#l00090">lv_draw_add_task()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00119">lv_draw_border()</a>, <a class="el" href="lv__draw_8c_source.html#l00129">lv_draw_finalize_task_creation()</a>, <a class="el" href="lv__draw_8c_source.html#l00574">lv_draw_layer_create_drop_shadow()</a>, <a class="el" href="lv__draw_8c_source.html#l00594">lv_draw_layer_finish_drop_shadow()</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00049">LV_DRAW_TASK_TYPE_BORDER</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">LV_OPA_MIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00086">LV_PROFILER_DRAW_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00087">LV_PROFILER_DRAW_END</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00110">lv_draw_border_dsc_t::opa</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__rect_8c_source.html#l00119">lv_draw_border()</a>.</p>
+
+</div>
+</div>
+<a id="a772b5a9f1530d46cf926761f0dfc2342" name="a772b5a9f1530d46cf926761f0dfc2342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772b5a9f1530d46cf926761f0dfc2342">&#9670;&#160;</a></span>lv_draw_border_dsc_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_border_dsc_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a border draw descriptor. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to a draw descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00102">102</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00096">lv_draw_border_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00194">lv_draw_dsc_base_t::dsc_size</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00117">LV_BORDER_SIDE_FULL</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">LV_OPA_COVER</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00110">lv_draw_border_dsc_t::opa</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00115">lv_draw_border_dsc_t::side</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__sw__arc_8c_source.html#l00052">lv_draw_sw_arc()</a> y <a class="el" href="lv__draw__sw__img_8c_source.html#l00101">lv_draw_sw_layer()</a>.</p>
+
+</div>
+</div>
+<a id="a3e67bfddadfbe944ead45cfaf3474584" name="a3e67bfddadfbe944ead45cfaf3474584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e67bfddadfbe944ead45cfaf3474584">&#9670;&#160;</a></span>lv_draw_box_shadow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_box_shadow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw a box shadow </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>pointer to a layer </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to an initialized draw descriptor variable </td></tr>
+    <tr><td class="paramname">coords</td><td>the coordinates of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00162">162</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw_8c_source.html#l00090">lv_draw_add_task()</a>, <a class="el" href="lv__draw_8c_source.html#l00129">lv_draw_finalize_task_creation()</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00050">LV_DRAW_TASK_TYPE_BOX_SHADOW</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">LV_OPA_MIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00086">LV_PROFILER_DRAW_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00087">LV_PROFILER_DRAW_END</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00142">lv_draw_box_shadow_dsc_t::opa</a>.</p>
+
+</div>
+</div>
+<a id="a6616164df22c6edd7a5a514be8dc2d06" name="a6616164df22c6edd7a5a514be8dc2d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6616164df22c6edd7a5a514be8dc2d06">&#9670;&#160;</a></span>lv_draw_box_shadow_dsc_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_box_shadow_dsc_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a box shadow draw descriptor. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to a draw descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00146">146</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00120">lv_draw_box_shadow_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00194">lv_draw_dsc_base_t::dsc_size</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">LV_OPA_COVER</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00142">lv_draw_box_shadow_dsc_t::opa</a>.</p>
+
+</div>
+</div>
+<a id="ab23271b0319bf9900f06603a97a0469f" name="ab23271b0319bf9900f06603a97a0469f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab23271b0319bf9900f06603a97a0469f">&#9670;&#160;</a></span>lv_draw_fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_fill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fill an area </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>pointer to a layer </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to an initialized draw descriptor variable </td></tr>
+    <tr><td class="paramname">coords</td><td>the coordinates of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00075">75</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00078">lv_draw_fill_dsc_t::base</a>, <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00185">lv_draw_dsc_base_t::drop_shadow_opa</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00080">LV_ASSERT_NULL</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__draw_8c_source.html#l00090">lv_draw_add_task()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00075">lv_draw_fill()</a>, <a class="el" href="lv__draw_8c_source.html#l00129">lv_draw_finalize_task_creation()</a>, <a class="el" href="lv__draw_8c_source.html#l00574">lv_draw_layer_create_drop_shadow()</a>, <a class="el" href="lv__draw_8c_source.html#l00594">lv_draw_layer_finish_drop_shadow()</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00048">LV_DRAW_TASK_TYPE_FILL</a>, <a class="el" href="lv__string__builtin_8c_source.html#l00061">lv_memcpy()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">LV_OPA_MIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00086">LV_PROFILER_DRAW_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00087">LV_PROFILER_DRAW_END</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00085">lv_draw_fill_dsc_t::opa</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__rect_8c_source.html#l00075">lv_draw_fill()</a>.</p>
+
+</div>
+</div>
+<a id="a07d95c86be92547d5299439c8db4ee88" name="a07d95c86be92547d5299439c8db4ee88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07d95c86be92547d5299439c8db4ee88">&#9670;&#160;</a></span>lv_draw_fill_dsc_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_fill_dsc_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a fill draw descriptor. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to a draw descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00059">59</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00078">lv_draw_fill_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00194">lv_draw_dsc_base_t::dsc_size</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">LV_OPA_COVER</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00085">lv_draw_fill_dsc_t::opa</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__label_8c_source.html#l00230">lv_draw_label_iterate_characters()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00179">lv_draw_rect()</a>, <a class="el" href="lv__draw__sw__img_8c_source.html#l00101">lv_draw_sw_layer()</a> y <a class="el" href="lv__draw__sw__line_8c_source.html#l00047">lv_draw_sw_line()</a>.</p>
+
+</div>
+</div>
+<a id="a6ee80424802df70f274002ab417a3c15" name="a6ee80424802df70f274002ab417a3c15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ee80424802df70f274002ab417a3c15">&#9670;&#160;</a></span>lv_draw_rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_draw_rect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__draw__rect__dsc__t.html">lv_draw_rect_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>coords</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The rectangle is a wrapper for fill, border, bg. image and box shadow. Internally fill, border, image and box shadow draw tasks will be created. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>pointer to a layer </td></tr>
+    <tr><td class="paramname">dsc</td><td>pointer to an initialized draw descriptor variable </td></tr>
+    <tr><td class="paramname">coords</td><td>the coordinates of the rectangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00179">179</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__private_8h_source.html#l00043">_lv_draw_task_t::_real_area</a>, <a class="el" href="lv__example__anim__3_8c_source.html#l00017">a</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00030">_lv_draw_image_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00096">lv_draw_border_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00120">lv_draw_box_shadow_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00078">lv_draw_fill_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__label_8h_source.html#l00033">lv_draw_label_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00032">lv_draw_rect_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00053">lv_draw_rect_dsc_t::bg_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00146">lv_draw_box_shadow_dsc_t::bg_cover</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00054">lv_draw_rect_dsc_t::bg_grad</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00056">lv_draw_rect_dsc_t::bg_image_colorkey</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00040">lv_draw_rect_dsc_t::bg_image_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00039">lv_draw_rect_dsc_t::bg_image_recolor</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00041">lv_draw_rect_dsc_t::bg_image_recolor_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00037">lv_draw_rect_dsc_t::bg_image_src</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00038">lv_draw_rect_dsc_t::bg_image_symbol_font</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00042">lv_draw_rect_dsc_t::bg_image_tiled</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00044">lv_draw_rect_dsc_t::bg_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00059">lv_draw_rect_dsc_t::border_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00046">lv_draw_rect_dsc_t::border_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00062">lv_draw_rect_dsc_t::border_post</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00061">lv_draw_rect_dsc_t::border_side</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00060">lv_draw_rect_dsc_t::border_width</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00039">_lv_draw_image_dsc_t::clip_radius</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00102">lv_draw_border_dsc_t::color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00126">lv_draw_box_shadow_dsc_t::color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00089">lv_draw_fill_dsc_t::color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__label_8h_source.html#l00045">lv_draw_label_dsc_t::color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00084">_lv_draw_image_dsc_t::colorkey</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00062">lv_grad_dsc_t::dir</a>, <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00185">lv_draw_dsc_base_t::drop_shadow_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00194">lv_draw_dsc_base_t::dsc_size</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__label_8h_source.html#l00042">lv_draw_label_dsc_t::font</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00092">lv_draw_fill_dsc_t::grad</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00036">_lv_draw_image_dsc_t::header</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00095">_lv_draw_image_dsc_t::image_area</a>, <a class="el" href="lv__text__private_8h_source.html#l00044">lv_text_attributes_t::letter_space</a>, <a class="el" href="lv__text__private_8h_source.html#l00045">lv_text_attributes_t::line_space</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00061">LV_ALIGN_CENTER</a>, <a class="el" href="lv__area_8c_source.html#l00341">lv_area_align()</a>, <a class="el" href="lv__area_8c_source.html#l00082">lv_area_increase()</a>, <a class="el" href="lv__area_8c_source.html#l00091">lv_area_move()</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00092">LV_ASSERT_MEM_INTEGRITY</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00080">LV_ASSERT_NULL</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00113">LV_BORDER_SIDE_BOTTOM</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00117">LV_BORDER_SIDE_FULL</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00115">LV_BORDER_SIDE_LEFT</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00112">LV_BORDER_SIDE_NONE</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00116">LV_BORDER_SIDE_RIGHT</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00114">LV_BORDER_SIDE_TOP</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00216">LV_COORD_MAX</a>, <a class="el" href="lv__draw_8c_source.html#l00090">lv_draw_add_task()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00059">lv_draw_fill_dsc_init()</a>, <a class="el" href="lv__draw_8c_source.html#l00129">lv_draw_finalize_task_creation()</a>, <a class="el" href="lv__draw__image_8c_source.html#l00045">lv_draw_image_dsc_init()</a>, <a class="el" href="lv__draw__label_8c_source.html#l00072">lv_draw_label_dsc_init()</a>, <a class="el" href="lv__draw_8c_source.html#l00574">lv_draw_layer_create_drop_shadow()</a>, <a class="el" href="lv__draw_8c_source.html#l00594">lv_draw_layer_finish_drop_shadow()</a>, <a class="el" href="lv__draw__rect_8c_source.html#l00179">lv_draw_rect()</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00049">LV_DRAW_TASK_TYPE_BORDER</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00050">LV_DRAW_TASK_TYPE_BOX_SHADOW</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00048">LV_DRAW_TASK_TYPE_FILL</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00053">LV_DRAW_TASK_TYPE_IMAGE</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00052">LV_DRAW_TASK_TYPE_LABEL</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00032">LV_GRAD_DIR_NONE</a>, <a class="el" href="lv__image__decoder_8c_source.html#l00094">lv_image_decoder_get_info()</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00035">LV_IMAGE_SRC_FILE</a>, <a class="el" href="lv__draw__image_8c_source.html#l00206">lv_image_src_get_type()</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00037">LV_IMAGE_SRC_UNKNOWN</a>, <a class="el" href="include_2lvgl_2image_2lv__image__decoder_8h_source.html#l00034">LV_IMAGE_SRC_VARIABLE</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">LV_OPA_COVER</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00057">LV_OPA_MAX</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">LV_OPA_MIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00086">LV_PROFILER_DRAW_BEGIN</a>, <a class="el" href="include_2lvgl_2debugging_2profiler_2lv__profiler_8h_source.html#l00087">LV_PROFILER_DRAW_END</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00024">LV_RADIUS_CIRCLE</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00065">LV_RESULT_INVALID</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="include_2lvgl_2font_2lv__text_8h_source.html#l00034">LV_TEXT_FLAG_NONE</a>, <a class="el" href="lv__text_8c_source.html#l00116">lv_text_get_size_attributes()</a>, <a class="el" href="lv__text__private_8h_source.html#l00046">lv_text_attributes_t::max_width</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00135">lv_draw_box_shadow_dsc_t::ofs_x</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00138">lv_draw_box_shadow_dsc_t::ofs_y</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00069">_lv_draw_image_dsc_t::opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00110">lv_draw_border_dsc_t::opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00142">lv_draw_box_shadow_dsc_t::opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00085">lv_draw_fill_dsc_t::opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00054">lv_grad_stop_t::opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00065">lv_draw_rect_dsc_t::outline_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00048">lv_draw_rect_dsc_t::outline_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00067">lv_draw_rect_dsc_t::outline_pad</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00066">lv_draw_rect_dsc_t::outline_width</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00099">lv_draw_border_dsc_t::radius</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00123">lv_draw_box_shadow_dsc_t::radius</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00081">lv_draw_fill_dsc_t::radius</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00034">lv_draw_rect_dsc_t::radius</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00062">_lv_draw_image_dsc_t::recolor</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00065">_lv_draw_image_dsc_t::recolor_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00070">lv_draw_rect_dsc_t::shadow_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00072">lv_draw_rect_dsc_t::shadow_offset_x</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00073">lv_draw_rect_dsc_t::shadow_offset_y</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00050">lv_draw_rect_dsc_t::shadow_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00074">lv_draw_rect_dsc_t::shadow_spread</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00071">lv_draw_rect_dsc_t::shadow_width</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00115">lv_draw_border_dsc_t::side</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00132">lv_draw_box_shadow_dsc_t::spread</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00033">_lv_draw_image_dsc_t::src</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00060">lv_grad_dsc_t::stops</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00061">lv_grad_dsc_t::stops_count</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__label_8h_source.html#l00036">lv_draw_label_dsc_t::text</a>, <a class="el" href="lv__text__private_8h_source.html#l00047">lv_text_attributes_t::text_flags</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__image_8h_source.html#l00082">_lv_draw_image_dsc_t::tile</a>, <a class="el" href="lv__draw__private_8h_source.html#l00033">_lv_draw_task_t::type</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00106">lv_draw_border_dsc_t::width</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00129">lv_draw_box_shadow_dsc_t::width</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area_t::x1</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00045">lv_area_t::x2</a>, <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area_t::y1</a> y <a class="el" href="include_2lvgl_2core_2lv__area_8h_source.html#l00046">lv_area_t::y2</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__draw__rect_8c_source.html#l00179">lv_draw_rect()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a> y <a class="el" href="lv__refr_8c_source.html#l00105">lv_obj_redraw()</a>.</p>
+
+</div>
+</div>
+<a id="af62a0ca73215a2e95250cf33210609b2" name="af62a0ca73215a2e95250cf33210609b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af62a0ca73215a2e95250cf33210609b2">&#9670;&#160;</a></span>lv_draw_rect_dsc_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a61048d2055ebf90e7cb2c67c3d453b78">LV_ATTRIBUTE_FAST_MEM</a> lv_draw_rect_dsc_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structlv__draw__rect__dsc__t.html">lv_draw_rect_dsc_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dsc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a rectangle draw descriptor. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dsc</td><td>pointer to a draw descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00037">37</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00032">lv_draw_rect_dsc_t::base</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00053">lv_draw_rect_dsc_t::bg_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00054">lv_draw_rect_dsc_t::bg_grad</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00040">lv_draw_rect_dsc_t::bg_image_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00038">lv_draw_rect_dsc_t::bg_image_symbol_font</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00044">lv_draw_rect_dsc_t::bg_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00059">lv_draw_rect_dsc_t::border_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00046">lv_draw_rect_dsc_t::border_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00061">lv_draw_rect_dsc_t::border_side</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00053">lv_grad_stop_t::color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00194">lv_draw_dsc_base_t::dsc_size</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00055">lv_grad_stop_t::frac</a>, <a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html#l05217">LV_ATTRIBUTE_FAST_MEM</a>, <a class="el" href="include_2lvgl_2core_2lv__style_8h_source.html#l00117">LV_BORDER_SIDE_FULL</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__color_8c_source.html#l00341">lv_color_black()</a>, <a class="el" href="lv__color_8c_source.html#l00336">lv_color_white()</a>, <a class="el" href="lv__conf__cmsis_8h_source.html#l01097">LV_FONT_DEFAULT</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00053">LV_OPA_COVER</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00048">lv_draw_rect_dsc_t::outline_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00070">lv_draw_rect_dsc_t::shadow_color</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__rect_8h_source.html#l00050">lv_draw_rect_dsc_t::shadow_opa</a>, <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00060">lv_grad_dsc_t::stops</a> y <a class="el" href="include_2lvgl_2draw_2lv__grad_8h_source.html#l00061">lv_grad_dsc_t::stops_count</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a> y <a class="el" href="lv__refr_8c_source.html#l00105">lv_obj_redraw()</a>.</p>
+
+</div>
+</div>
+<a id="a2aa31e39be2a4a4c782ab45425930bc6" name="a2aa31e39be2a4a4c782ab45425930bc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aa31e39be2a4a4c782ab45425930bc6">&#9670;&#160;</a></span>lv_draw_task_get_border_dsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__draw__border__dsc__t.html">lv_draw_border_dsc_t</a> * lv_draw_task_get_border_dsc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *</td>          <td class="paramname"><span class="paramname"><em>task</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Try to get a border draw descriptor from a draw task. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>draw task </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_BORDER </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00112">112</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00049">LV_DRAW_TASK_TYPE_BORDER</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__draw__private_8h_source.html#l00033">_lv_draw_task_t::type</a>.</p>
+
+</div>
+</div>
+<a id="a9a480d6ccc8618f4a8540b4ad51247c3" name="a9a480d6ccc8618f4a8540b4ad51247c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a480d6ccc8618f4a8540b4ad51247c3">&#9670;&#160;</a></span>lv_draw_task_get_box_shadow_dsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__draw__box__shadow__dsc__t.html">lv_draw_box_shadow_dsc_t</a> * lv_draw_task_get_box_shadow_dsc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *</td>          <td class="paramname"><span class="paramname"><em>task</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Try to get a box shadow draw descriptor from a draw task. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>draw task </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_BOX_SHADOW </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00155">155</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00050">LV_DRAW_TASK_TYPE_BOX_SHADOW</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__draw__private_8h_source.html#l00033">_lv_draw_task_t::type</a>.</p>
+
+</div>
+</div>
+<a id="a649bcef32f6250fb6b1b79bb8e6d63df" name="a649bcef32f6250fb6b1b79bb8e6d63df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649bcef32f6250fb6b1b79bb8e6d63df">&#9670;&#160;</a></span>lv_draw_task_get_fill_dsc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__draw__fill__dsc__t.html">lv_draw_fill_dsc_t</a> * lv_draw_task_get_fill_dsc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> *</td>          <td class="paramname"><span class="paramname"><em>task</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Try to get a fill draw descriptor from a draw task. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task</td><td>draw task </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the task's draw descriptor or NULL if the task is not of type LV_DRAW_TASK_TYPE_FILL </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__draw__rect_8c_source.html#l00068">68</a> del archivo <a class="el" href="lv__draw__rect_8c_source.html">lv_draw_rect.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__draw__private_8h_source.html#l00063">_lv_draw_task_t::draw_dsc</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00048">LV_DRAW_TASK_TYPE_FILL</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__draw__private_8h_source.html#l00033">_lv_draw_task_t::type</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="lv__draw__rect_8c.html">lv_draw_rect.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

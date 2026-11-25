@@ -1,0 +1,767 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/include/lvgl/widgets/lv_bar.h</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('include_2lvgl_2widgets_2lv__bar_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_bar.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h_source.html">../config/lv_conf_internal.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html">../core/lv_obj.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2widgets_2lv__label_8h_source.html">lv_label.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html">../core/lv_observer.h</a>&quot;</code><br />
+</div>
+<p><a href="include_2lvgl_2widgets_2lv__bar_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ab0f4799117e09b8c93a851fd4f36956f" id="r_ab0f4799117e09b8c93a851fd4f36956f"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a> { <a class="el" href="#ab0f4799117e09b8c93a851fd4f36956fa21e2e89c34e5159d4ac04918112743e4">LV_BAR_MODE_NORMAL</a>
+, <a class="el" href="#ab0f4799117e09b8c93a851fd4f36956fadd6aa17a1c24939ebb039abba780f259">LV_BAR_MODE_SYMMETRICAL</a>
+, <a class="el" href="#ab0f4799117e09b8c93a851fd4f36956fa86cac7e743b5639db5252b642ff4b117">LV_BAR_MODE_RANGE</a>
+ }</td></tr>
+<tr class="memitem:a903c19005dc9aafc8617e92258a90881" id="r_a903c19005dc9aafc8617e92258a90881"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a> { <a class="el" href="#a903c19005dc9aafc8617e92258a90881a485b322625a09dcaa550f296cb43d78f">LV_BAR_ORIENTATION_AUTO</a>
+, <a class="el" href="#a903c19005dc9aafc8617e92258a90881a5d111796eb986f8595dc0dbe46331144">LV_BAR_ORIENTATION_HORIZONTAL</a>
+, <a class="el" href="#a903c19005dc9aafc8617e92258a90881ad1dfce9863e4c44d51340c52ed1a6cdb">LV_BAR_ORIENTATION_VERTICAL</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a5d0819a9a2bc510c0c5f995e70dc0df4" id="r_a5d0819a9a2bc510c0c5f995e70dc0df4"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5d0819a9a2bc510c0c5f995e70dc0df4">lv_bar_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a34b028e8302a9ea27b4fbe24cb300b7a" id="r_a34b028e8302a9ea27b4fbe24cb300b7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a34b028e8302a9ea27b4fbe24cb300b7a">lv_bar_set_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> value, <a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a> anim)</td></tr>
+<tr class="memitem:a215d8f20675a424a32db3f4bce3067a4" id="r_a215d8f20675a424a32db3f4bce3067a4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a215d8f20675a424a32db3f4bce3067a4">lv_bar_set_start_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> start_value, <a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a> anim)</td></tr>
+<tr class="memitem:a9bb7d26ed4bb68a4db615b45e5ac92ef" id="r_a9bb7d26ed4bb68a4db615b45e5ac92ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9bb7d26ed4bb68a4db615b45e5ac92ef">lv_bar_set_range</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:a51c613805c14b54e7428a7c338fa2b42" id="r_a51c613805c14b54e7428a7c338fa2b42"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51c613805c14b54e7428a7c338fa2b42">lv_bar_set_min_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> min)</td></tr>
+<tr class="memitem:af6c7216c4d9e400ef6b61492ce25e3aa" id="r_af6c7216c4d9e400ef6b61492ce25e3aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af6c7216c4d9e400ef6b61492ce25e3aa">lv_bar_set_max_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> max)</td></tr>
+<tr class="memitem:a57f1dfc479b7283ef71ca5cef6cb992d" id="r_a57f1dfc479b7283ef71ca5cef6cb992d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a57f1dfc479b7283ef71ca5cef6cb992d">lv_bar_set_mode</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a> mode)</td></tr>
+<tr class="memitem:a6e7505053188d3f38c3486da07c11210" id="r_a6e7505053188d3f38c3486da07c11210"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e7505053188d3f38c3486da07c11210">lv_bar_set_orientation</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a> orientation)</td></tr>
+<tr class="memitem:a48cb49480b5ac3cf20595d036a192942" id="r_a48cb49480b5ac3cf20595d036a192942"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a48cb49480b5ac3cf20595d036a192942">lv_bar_get_value</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a7989f5f102fe9a960a53aa7cf91a367b" id="r_a7989f5f102fe9a960a53aa7cf91a367b"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7989f5f102fe9a960a53aa7cf91a367b">lv_bar_get_start_value</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:adcb65469a8b967ee8c985972d9bf34f0" id="r_adcb65469a8b967ee8c985972d9bf34f0"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#adcb65469a8b967ee8c985972d9bf34f0">lv_bar_get_min_value</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a3a687fafdd9d61fe69e3210ef3f04ee6" id="r_a3a687fafdd9d61fe69e3210ef3f04ee6"><td class="memItemLeft"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3a687fafdd9d61fe69e3210ef3f04ee6">lv_bar_get_max_value</a> (const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a1cba90e71e06291f65286e57c916754b" id="r_a1cba90e71e06291f65286e57c916754b"><td class="memItemLeft"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1cba90e71e06291f65286e57c916754b">lv_bar_get_mode</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:aa726df50d1e171c80786228f9fa1f80b" id="r_aa726df50d1e171c80786228f9fa1f80b"><td class="memItemLeft"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa726df50d1e171c80786228f9fa1f80b">lv_bar_get_orientation</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:ae18c8c3c01c4b218347a6e60e6a0b579" id="r_ae18c8c3c01c4b218347a6e60e6a0b579"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae18c8c3c01c4b218347a6e60e6a0b579">lv_bar_is_symmetrical</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:afc6a6bf6eeb4e1b7bf68616ed27a29e6" id="r_afc6a6bf6eeb4e1b7bf68616ed27a29e6"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afc6a6bf6eeb4e1b7bf68616ed27a29e6">lv_bar_bind_value</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *subject)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a459ca76eb38d91c740a527639ebe92e9" id="r_a459ca76eb38d91c740a527639ebe92e9"><td class="memItemLeft"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a52a21700fe5946c140157ebf74459a46">LV_ATTRIBUTE_EXTERN_DATA</a> const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a459ca76eb38d91c740a527639ebe92e9">lv_bar_class</a></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Documentación de enumeraciones</h2>
+<a id="ab0f4799117e09b8c93a851fd4f36956f" name="ab0f4799117e09b8c93a851fd4f36956f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f4799117e09b8c93a851fd4f36956f">&#9670;&#160;</a></span>lv_bar_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ab0f4799117e09b8c93a851fd4f36956fa21e2e89c34e5159d4ac04918112743e4" name="ab0f4799117e09b8c93a851fd4f36956fa21e2e89c34e5159d4ac04918112743e4"></a>LV_BAR_MODE_NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab0f4799117e09b8c93a851fd4f36956fadd6aa17a1c24939ebb039abba780f259" name="ab0f4799117e09b8c93a851fd4f36956fadd6aa17a1c24939ebb039abba780f259"></a>LV_BAR_MODE_SYMMETRICAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab0f4799117e09b8c93a851fd4f36956fa86cac7e743b5639db5252b642ff4b117" name="ab0f4799117e09b8c93a851fd4f36956fa86cac7e743b5639db5252b642ff4b117"></a>LV_BAR_MODE_RANGE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00031">31</a> del archivo <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html">lv_bar.h</a>.</p>
+
+</div>
+</div>
+<a id="a903c19005dc9aafc8617e92258a90881" name="a903c19005dc9aafc8617e92258a90881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a903c19005dc9aafc8617e92258a90881">&#9670;&#160;</a></span>lv_bar_orientation_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a903c19005dc9aafc8617e92258a90881a485b322625a09dcaa550f296cb43d78f" name="a903c19005dc9aafc8617e92258a90881a485b322625a09dcaa550f296cb43d78f"></a>LV_BAR_ORIENTATION_AUTO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a903c19005dc9aafc8617e92258a90881a5d111796eb986f8595dc0dbe46331144" name="a903c19005dc9aafc8617e92258a90881a5d111796eb986f8595dc0dbe46331144"></a>LV_BAR_ORIENTATION_HORIZONTAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a903c19005dc9aafc8617e92258a90881ad1dfce9863e4c44d51340c52ed1a6cdb" name="a903c19005dc9aafc8617e92258a90881ad1dfce9863e4c44d51340c52ed1a6cdb"></a>LV_BAR_ORIENTATION_VERTICAL&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definición en la línea <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00037">37</a> del archivo <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html">lv_bar.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="afc6a6bf6eeb4e1b7bf68616ed27a29e6" name="afc6a6bf6eeb4e1b7bf68616ed27a29e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6a6bf6eeb4e1b7bf68616ed27a29e6">&#9670;&#160;</a></span>lv_bar_bind_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#ae4868706c8ccd93b41d1bf850de7cd93">lv_observer_t</a> * lv_bar_bind_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a4881e030e5e167d86882b87c25181992">lv_subject_t</a> *</td>          <td class="paramname"><span class="paramname"><em>subject</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bind an integer or float Subject to a Bar's value. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to Bar </td></tr>
+    <tr><td class="paramname">subject</td><td>pointer to Subject </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to newly-created Observer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00304">304</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00153">LV_CHECK_ARG_FORMAT_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__observer_8c_source.html#l00518">lv_subject_add_observer_obj()</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00038">LV_SUBJECT_TYPE_FLOAT</a>, <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00037">LV_SUBJECT_TYPE_INT</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2core_2lv__observer_8h_source.html#l00656">subject</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__bind__value_8c_source.html#l00018">lv_example_bar_bind_value()</a> y <a class="el" href="lv__example__bar__img__indicator_8c_source.html#l00018">lv_example_bar_img_indicator()</a>.</p>
+
+</div>
+</div>
+<a id="a5d0819a9a2bc510c0c5f995e70dc0df4" name="a5d0819a9a2bc510c0c5f995e70dc0df4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d0819a9a2bc510c0c5f995e70dc0df4">&#9670;&#160;</a></span>lv_bar_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_bar_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a bar object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the created bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00130">130</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__bind__value_8c_source.html#l00018">lv_example_bar_bind_value()</a>, <a class="el" href="lv__example__bar__img__indicator_8c_source.html#l00018">lv_example_bar_img_indicator()</a>, <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a>, <a class="el" href="lv__example__bar__orientation_8c_source.html#l00018">lv_example_bar_orientation()</a>, <a class="el" href="lv__example__bar__styling_8c_source.html#l00017">lv_example_bar_styling()</a> y <a class="el" href="lv__example__bar__value__range_8c_source.html#l00018">lv_example_bar_value_range()</a>.</p>
+
+</div>
+</div>
+<a id="a3a687fafdd9d61fe69e3210ef3f04ee6" name="a3a687fafdd9d61fe69e3210ef3f04ee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a687fafdd9d61fe69e3210ef3f04ee6">&#9670;&#160;</a></span>lv_bar_get_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_bar_get_max_value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the maximum value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the maximum value of the bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00270">270</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00044">_lv_bar_t::val_reversed</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bar_8c_source.html#l00205">lv_bar_set_min_value()</a> y <a class="el" href="lv__slider_8c_source.html#l00209">lv_slider_get_max_value()</a>.</p>
+
+</div>
+</div>
+<a id="adcb65469a8b967ee8c985972d9bf34f0" name="adcb65469a8b967ee8c985972d9bf34f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb65469a8b967ee8c985972d9bf34f0">&#9670;&#160;</a></span>lv_bar_get_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_bar_get_min_value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the minimum value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the minimum value of the bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00263">263</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00044">_lv_bar_t::val_reversed</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bar_8c_source.html#l00212">lv_bar_set_max_value()</a> y <a class="el" href="lv__slider_8c_source.html#l00202">lv_slider_get_min_value()</a>.</p>
+
+</div>
+</div>
+<a id="a1cba90e71e06291f65286e57c916754b" name="a1cba90e71e06291f65286e57c916754b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cba90e71e06291f65286e57c916754b">&#9670;&#160;</a></span>lv_bar_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a> lv_bar_get_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the type of bar. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>bar type from <span class="tt"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a></span> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00278">278</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__bar__private_8h_source.html#l00047">_lv_bar_t::mode</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bar_8c_source.html#l00175">lv_bar_set_range()</a> y <a class="el" href="lv__slider_8c_source.html#l00216">lv_slider_get_mode()</a>.</p>
+
+</div>
+</div>
+<a id="aa726df50d1e171c80786228f9fa1f80b" name="aa726df50d1e171c80786228f9fa1f80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa726df50d1e171c80786228f9fa1f80b">&#9670;&#160;</a></span>lv_bar_get_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a> lv_bar_get_orientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the orientation of bar. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>bar orientation from <span class="tt"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a></span> </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00286">286</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00048">_lv_bar_t::orientation</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__slider_8c_source.html#l00226">lv_slider_get_orientation()</a>.</p>
+
+</div>
+</div>
+<a id="a7989f5f102fe9a960a53aa7cf91a367b" name="a7989f5f102fe9a960a53aa7cf91a367b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7989f5f102fe9a960a53aa7cf91a367b">&#9670;&#160;</a></span>lv_bar_get_start_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_bar_get_start_value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the start value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the start value of the bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00253">253</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar_8c_source.html#l00031">LV_BAR_GET_ANIM_VALUE</a>, <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00034">LV_BAR_MODE_RANGE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00047">_lv_bar_t::mode</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a> y <a class="el" href="lv__bar__private_8h_source.html#l00046">_lv_bar_t::start_value_anim</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__slider_8c_source.html#l00195">lv_slider_get_left_value()</a>.</p>
+
+</div>
+</div>
+<a id="a48cb49480b5ac3cf20595d036a192942" name="a48cb49480b5ac3cf20595d036a192942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48cb49480b5ac3cf20595d036a192942">&#9670;&#160;</a></span>lv_bar_get_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> lv_bar_get_value </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>the value of the bar </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00245">245</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar__private_8h_source.html#l00039">_lv_bar_t::cur_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00045">_lv_bar_t::cur_value_anim</a>, <a class="el" href="lv__bar_8c_source.html#l00031">LV_BAR_GET_ANIM_VALUE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__slider_8c_source.html#l00188">lv_slider_get_value()</a>.</p>
+
+</div>
+</div>
+<a id="ae18c8c3c01c4b218347a6e60e6a0b579" name="ae18c8c3c01c4b218347a6e60e6a0b579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18c8c3c01c4b218347a6e60e6a0b579">&#9670;&#160;</a></span>lv_bar_is_symmetrical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> lv_bar_is_symmetrical </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Give the bar is in symmetrical mode or not </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to bar object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true: in symmetrical mode false : not in </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00294">294</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00033">LV_BAR_MODE_SYMMETRICAL</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00047">_lv_bar_t::mode</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__slider_8c_source.html#l00236">lv_slider_is_symmetrical()</a>.</p>
+
+</div>
+</div>
+<a id="af6c7216c4d9e400ef6b61492ce25e3aa" name="af6c7216c4d9e400ef6b61492ce25e3aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c7216c4d9e400ef6b61492ce25e3aa">&#9670;&#160;</a></span>lv_bar_set_max_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_max_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set maximum value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to the bar object </td></tr>
+    <tr><td class="paramname">max</td><td>maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00212">212</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar_8c_source.html#l00263">lv_bar_get_min_value()</a>, <a class="el" href="lv__bar_8c_source.html#l00175">lv_bar_set_range()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__img__indicator_8c_source.html#l00018">lv_example_bar_img_indicator()</a>, <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a>, <a class="el" href="lv__example__bar__orientation_8c_source.html#l00018">lv_example_bar_orientation()</a>, <a class="el" href="lv__example__bar__styling_8c_source.html#l00017">lv_example_bar_styling()</a>, <a class="el" href="lv__example__bar__value__range_8c_source.html#l00018">lv_example_bar_value_range()</a> y <a class="el" href="lv__slider_8c_source.html#l00167">lv_slider_set_max_value()</a>.</p>
+
+</div>
+</div>
+<a id="a51c613805c14b54e7428a7c338fa2b42" name="a51c613805c14b54e7428a7c338fa2b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51c613805c14b54e7428a7c338fa2b42">&#9670;&#160;</a></span>lv_bar_set_min_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_min_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set minimum value of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to the bar object </td></tr>
+    <tr><td class="paramname">min</td><td>minimum value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00205">205</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar_8c_source.html#l00270">lv_bar_get_max_value()</a>, <a class="el" href="lv__bar_8c_source.html#l00175">lv_bar_set_range()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__img__indicator_8c_source.html#l00018">lv_example_bar_img_indicator()</a>, <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a>, <a class="el" href="lv__example__bar__orientation_8c_source.html#l00018">lv_example_bar_orientation()</a>, <a class="el" href="lv__example__bar__styling_8c_source.html#l00017">lv_example_bar_styling()</a>, <a class="el" href="lv__example__bar__value__range_8c_source.html#l00018">lv_example_bar_value_range()</a> y <a class="el" href="lv__slider_8c_source.html#l00160">lv_slider_set_min_value()</a>.</p>
+
+</div>
+</div>
+<a id="a57f1dfc479b7283ef71ca5cef6cb992d" name="a57f1dfc479b7283ef71ca5cef6cb992d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f1dfc479b7283ef71ca5cef6cb992d">&#9670;&#160;</a></span>lv_bar_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the type of bar. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to bar object </td></tr>
+    <tr><td class="paramname">mode</td><td>bar type from <span class="tt"><a class="el" href="#ab0f4799117e09b8c93a851fd4f36956f">lv_bar_mode_t</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00219">219</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00034">LV_BAR_MODE_RANGE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00047">_lv_bar_t::mode</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a> y <a class="el" href="lv__slider_8c_source.html#l00174">lv_slider_set_mode()</a>.</p>
+
+</div>
+</div>
+<a id="a6e7505053188d3f38c3486da07c11210" name="a6e7505053188d3f38c3486da07c11210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e7505053188d3f38c3486da07c11210">&#9670;&#160;</a></span>lv_bar_set_orientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_orientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a></td>          <td class="paramname"><span class="paramname"><em>orientation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the orientation of bar. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to bar object </td></tr>
+    <tr><td class="paramname">orientation</td><td>bar orientation from <span class="tt"><a class="el" href="#a903c19005dc9aafc8617e92258a90881">lv_bar_orientation_t</a></span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00232">232</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="lv__bar__private_8h_source.html#l00048">_lv_bar_t::orientation</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__orientation_8c_source.html#l00018">lv_example_bar_orientation()</a> y <a class="el" href="lv__slider_8c_source.html#l00181">lv_slider_set_orientation()</a>.</p>
+
+</div>
+</div>
+<a id="a9bb7d26ed4bb68a4db615b45e5ac92ef" name="a9bb7d26ed4bb68a4db615b45e5ac92ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bb7d26ed4bb68a4db615b45e5ac92ef">&#9670;&#160;</a></span>lv_bar_set_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set minimum and the maximum values of a bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to the bar object </td></tr>
+    <tr><td class="paramname">min</td><td>minimum value </td></tr>
+    <tr><td class="paramname">max</td><td>maximum value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>If min is greater than max, the drawing direction becomes to the opposite direction. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00175">175</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar__private_8h_source.html#l00039">_lv_bar_t::cur_value</a>, <a class="el" href="include_2lvgl_2core_2lv__anim_8h_source.html#l00083">LV_ANIM_OFF</a>, <a class="el" href="lv__bar_8c_source.html#l00278">lv_bar_get_mode()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00034">LV_BAR_MODE_RANGE</a>, <a class="el" href="lv__bar_8c_source.html#l00142">lv_bar_set_value()</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a> y <a class="el" href="lv__bar__private_8h_source.html#l00044">_lv_bar_t::val_reversed</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bar_8c_source.html#l00212">lv_bar_set_max_value()</a>, <a class="el" href="lv__bar_8c_source.html#l00205">lv_bar_set_min_value()</a> y <a class="el" href="lv__slider_8c_source.html#l00153">lv_slider_set_range()</a>.</p>
+
+</div>
+</div>
+<a id="a215d8f20675a424a32db3f4bce3067a4" name="a215d8f20675a424a32db3f4bce3067a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a215d8f20675a424a32db3f4bce3067a4">&#9670;&#160;</a></span>lv_bar_set_start_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_start_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>start_value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a></td>          <td class="paramname"><span class="paramname"><em>anim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a new start value on the bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+    <tr><td class="paramname">start_value</td><td>new start value </td></tr>
+    <tr><td class="paramname">anim</td><td>LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00157">157</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar__private_8h_source.html#l00039">_lv_bar_t::cur_value</a>, <a class="el" href="include_2lvgl_2widgets_2lv__bar_8h_source.html#l00034">LV_BAR_MODE_RANGE</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00160">LV_CLAMP</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00047">_lv_bar_t::mode</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a> y <a class="el" href="lv__bar__private_8h_source.html#l00046">_lv_bar_t::start_value_anim</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a> y <a class="el" href="lv__slider_8c_source.html#l00146">lv_slider_set_start_value()</a>.</p>
+
+</div>
+</div>
+<a id="a34b028e8302a9ea27b4fbe24cb300b7a" name="a34b028e8302a9ea27b4fbe24cb300b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b028e8302a9ea27b4fbe24cb300b7a">&#9670;&#160;</a></span>lv_bar_set_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_bar_set_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2core_2lv__anim_8h.html#a2ccc5e2a177bd1e1f0dca6456b034153">lv_anim_enable_t</a></td>          <td class="paramname"><span class="paramname"><em>anim</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a new value on the bar </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a bar object </td></tr>
+    <tr><td class="paramname">value</td><td>new value </td></tr>
+    <tr><td class="paramname">anim</td><td>LV_ANIM_ON: set the value with an animation; LV_ANIM_OFF: change the value immediately </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00142">142</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__bar__private_8h_source.html#l00039">_lv_bar_t::cur_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00045">_lv_bar_t::cur_value_anim</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2misc_2lv__math_8h_source.html#l00160">LV_CLAMP</a>, <a class="el" href="lv__bar__private_8h_source.html#l00041">_lv_bar_t::max_value</a>, <a class="el" href="lv__bar__private_8h_source.html#l00040">_lv_bar_t::min_value</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="lv__bar__private_8h_source.html#l00042">_lv_bar_t::start_value</a> y <a class="el" href="pointer_8h_source.html#l01338">value</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__bar_8c_source.html#l00175">lv_bar_set_range()</a>, <a class="el" href="lv__example__bar__modes_8c_source.html#l00019">lv_example_bar_modes()</a>, <a class="el" href="lv__example__bar__orientation_8c_source.html#l00018">lv_example_bar_orientation()</a>, <a class="el" href="lv__example__bar__styling_8c_source.html#l00017">lv_example_bar_styling()</a>, <a class="el" href="lv__example__bar__value__range_8c_source.html#l00018">lv_example_bar_value_range()</a> y <a class="el" href="lv__slider_8c_source.html#l00139">lv_slider_set_value()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a459ca76eb38d91c740a527639ebe92e9" name="a459ca76eb38d91c740a527639ebe92e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459ca76eb38d91c740a527639ebe92e9">&#9670;&#160;</a></span>lv_bar_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2config_2lv__conf__internal_8h.html#a52a21700fe5946c140157ebf74459a46">LV_ATTRIBUTE_EXTERN_DATA</a> const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_bar_class</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__bar_8c_source.html#l00110">110</a> del archivo <a class="el" href="lv__bar_8c_source.html">lv_bar.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_9217fd4f896c7dabfd10ab01c3bac1ef.html">include</a></li><li class="navelem"><a href="dir_f3987adca4f4e4d8dfc0669d06d0d161.html">lvgl</a></li><li class="navelem"><a href="dir_e0bfaa53cfa640b77648f9f5cc765955.html">widgets</a></li><li class="navelem"><a href="include_2lvgl_2widgets_2lv__bar_8h.html">lv_bar.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

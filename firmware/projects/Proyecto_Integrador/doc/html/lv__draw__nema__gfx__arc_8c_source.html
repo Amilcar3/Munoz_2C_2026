@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/draw/nema_gfx/lv_draw_nema_gfx_arc.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__draw__nema__gfx__arc_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_draw_nema_gfx_arc.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__draw__nema__gfx__arc_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#if LV_USE_NEMA_GFX &amp;&amp; LV_USE_NEMA_VG</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> lv_draw_nema_gfx_arc(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a> * t, <span class="keyword">const</span> <a class="code hl_struct" href="structlv__draw__arc__dsc__t.html">lv_draw_arc_dsc_t</a> * dsc, <span class="keyword">const</span> <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> * coords)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(coords);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span>(dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#abb00c9386bab32dd992382c759ce4ce5">opa</a> &lt;= (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a>)<a class="code hl_define" href="include_2lvgl_2draw_2lv__color_8h.html#ac614bb0f5acc68f3b921f3213d46ac0f">LV_OPA_MIN</a>)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">if</span>(dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a395d15e7c2b09961c1bfd1da6179b64c">width</a> == 0)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span>(dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a93a1fd31b678bb055908dd2b51f07ced">start_angle</a> == dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#ab87ee9938aefb68eaea68aa018ceccf0">end_angle</a>)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    lv_draw_nema_gfx_unit_t * draw_nema_gfx_unit = (lv_draw_nema_gfx_unit_t *)t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">draw_unit</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> * layer = t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">target_layer</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_struct" href="structlv__point__t.html">lv_point_t</a> center = {dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a324464fb3e3fed2adad76a94d1560623">center</a>.<a class="code hl_variable" href="structlv__point__t.html#af6d3062751bd565decb1a2cd3b63bdb2">x</a> - layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a324464fb3e3fed2adad76a94d1560623">center</a>.<a class="code hl_variable" href="structlv__point__t.html#af64066d134a77e01b3d6eb8da813627a">y</a> - layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>};</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> clip_area;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    clip_area = t-&gt;<a class="code hl_variable" href="struct__lv__draw__task__t.html#a5a6ee2a7baa2a0a2b04811ab1d6f12c0">clip_area</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a>(&amp;clip_area, -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, -layer-&gt;<a class="code hl_variable" href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">buf_area</a>.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#ae1091e3619d2c4e53e99f69dac1865f7">nema_set_clip</a>(clip_area.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, clip_area.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a>(&amp;clip_area), <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a>(&amp;clip_area));</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5a7caf7a6d6e9ef7ce147c4d2f629eb8">lv_value_precise_t</a> start_angle = dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a93a1fd31b678bb055908dd2b51f07ced">start_angle</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a5a7caf7a6d6e9ef7ce147c4d2f629eb8">lv_value_precise_t</a> end_angle = dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#ab87ee9938aefb68eaea68aa018ceccf0">end_angle</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">if</span>(start_angle &gt;= end_angle) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        end_angle += 360.0f;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span>(end_angle - start_angle &gt; 360.0f) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        start_angle = 0.0f;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        end_angle = 360.0f;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">while</span>(end_angle &gt; 360.0f) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            start_angle -= 360.0f;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            end_angle -= 360.0f;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#af248cecf504695708767910102654bd1">nema_vg_paint_clear</a>(draw_nema_gfx_unit-&gt;paint);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ad7620d0ff6c0768bc5bf21fe640aaf0d">nema_vg_paint_set_type</a>(draw_nema_gfx_unit-&gt;paint, <a class="code hl_define" href="cortex__m33_2nema__vg__paint_8h.html#ac0902382176e3b27d5348b2d49bd6a1f">NEMA_VG_PAINT_COLOR</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="structlv__color32__t.html">lv_color32_t</a> col32 = <a class="code hl_function" href="include_2lvgl_2draw_2lv__color_8h.html#a1460428cd70003f29f0dbe88ef6b6fa5">lv_color_to_32</a>(dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#aef0d153803da81fbd6003fc9d8662e46">color</a>, dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#abb00c9386bab32dd992382c759ce4ce5">opa</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> bg_color = <a class="code hl_function" href="cortex__m33_2nema__graphics_8h.html#a6867f473b5cd05bcd605e6d76b109014">nema_rgba</a>(col32.<a class="code hl_variable" href="structlv__color32__t.html#ad47d918910aaa51c73160ac85999d09c">red</a>, col32.<a class="code hl_variable" href="structlv__color32__t.html#a90d21fa503b626c00cdc8d94863d5877">green</a>, col32.<a class="code hl_variable" href="structlv__color32__t.html#a287b397e90d7b995c81ff54e741f96b2">blue</a>, col32.<a class="code hl_variable" href="structlv__color32__t.html#acf5bb76caa419c0fa231dbd66c881084">alpha</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#ac3c00e4772d213ffadbc83f3aad40414">nema_vg_paint_set_paint_color</a>(draw_nema_gfx_unit-&gt;paint, bg_color); <span class="comment">// green</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__paint_8h.html#af9747f11ea7041bb2cae3f269059d408">nema_vg_paint_set_stroke_width</a>(draw_nema_gfx_unit-&gt;paint, dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a395d15e7c2b09961c1bfd1da6179b64c">width</a>);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_function" href="cortex__m33_2nema__vg__context_8h.html#acd973997f98069c905ba492524360d0a">nema_vg_set_blend</a>(<a class="code hl_define" href="cortex__m33_2nema__blender_8h.html#ae2018a681a02e53d1989fbc8f04a8b1d">NEMA_BL_SRC_OVER</a> | <a class="code hl_define" href="cortex__m33_2nema__blender_8h.html#a7711991d870bda22b86142e207e63f87">NEMA_BLOP_SRC_PREMULT</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">if</span>(dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a9678eb38428a855f2fb89aa9c409e98a">rounded</a> == 1) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="cortex__m33_2nema__vg_8h.html#afaf54c0ab1f149ef1cdd14dbad4ed8e4">nema_vg_draw_ring</a>(center.<a class="code hl_variable" href="structlv__point__t.html#af6d3062751bd565decb1a2cd3b63bdb2">x</a>, center.<a class="code hl_variable" href="structlv__point__t.html#af64066d134a77e01b3d6eb8da813627a">y</a>, (<span class="keywordtype">float</span>)dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a4c45f850851f8dc60b3c8cd98dbf9dba">radius</a> - (<span class="keywordtype">float</span>)dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a395d15e7c2b09961c1bfd1da6179b64c">width</a> * 0.5f, start_angle, end_angle,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                          draw_nema_gfx_unit-&gt;paint);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        nema_vg_draw_ring_generic(center.<a class="code hl_variable" href="structlv__point__t.html#af6d3062751bd565decb1a2cd3b63bdb2">x</a>, center.<a class="code hl_variable" href="structlv__point__t.html#af64066d134a77e01b3d6eb8da813627a">y</a>, (<span class="keywordtype">float</span>)dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a4c45f850851f8dc60b3c8cd98dbf9dba">radius</a> - (<span class="keywordtype">float</span>)dsc-&gt;<a class="code hl_variable" href="structlv__draw__arc__dsc__t.html#a395d15e7c2b09961c1bfd1da6179b64c">width</a> * 0.5f, start_angle,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                  end_angle, draw_nema_gfx_unit-&gt;paint, 0U);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a>(&amp;(draw_nema_gfx_unit-&gt;cl));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="ttc" id="acortex__m33_2nema__blender_8h_html_a7711991d870bda22b86142e207e63f87"><div class="ttname"><a href="cortex__m33_2nema__blender_8h.html#a7711991d870bda22b86142e207e63f87">NEMA_BLOP_SRC_PREMULT</a></div><div class="ttdeci">#define NEMA_BLOP_SRC_PREMULT</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__blender_8h_source.html#l00077">nema_blender.h:77</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__blender_8h_html_ae2018a681a02e53d1989fbc8f04a8b1d"><div class="ttname"><a href="cortex__m33_2nema__blender_8h.html#ae2018a681a02e53d1989fbc8f04a8b1d">NEMA_BL_SRC_OVER</a></div><div class="ttdeci">#define NEMA_BL_SRC_OVER</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__blender_8h_source.html#l00058">nema_blender.h:58</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__cmdlist_8h_html_a18682aec6ae10597259998723e52c20d"><div class="ttname"><a href="cortex__m33_2nema__cmdlist_8h.html#a18682aec6ae10597259998723e52c20d">nema_cl_submit</a></div><div class="ttdeci">void nema_cl_submit(nema_cmdlist_t *cl)</div><div class="ttdoc">Enqueue Command List to the Ring Buffer for execution.</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_a6867f473b5cd05bcd605e6d76b109014"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#a6867f473b5cd05bcd605e6d76b109014">nema_rgba</a></div><div class="ttdeci">uint32_t nema_rgba(unsigned char R, unsigned char G, unsigned char B, unsigned char A)</div><div class="ttdoc">Return Nema internal RGBA color.</div></div>
+<div class="ttc" id="acortex__m33_2nema__graphics_8h_html_ae1091e3619d2c4e53e99f69dac1865f7"><div class="ttname"><a href="cortex__m33_2nema__graphics_8h.html#ae1091e3619d2c4e53e99f69dac1865f7">nema_set_clip</a></div><div class="ttdeci">void nema_set_clip(int32_t x, int32_t y, uint32_t w, uint32_t h)</div><div class="ttdoc">Sets the drawing area&#39;s Clipping Rectangle.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg_8h_html_afaf54c0ab1f149ef1cdd14dbad4ed8e4"><div class="ttname"><a href="cortex__m33_2nema__vg_8h.html#afaf54c0ab1f149ef1cdd14dbad4ed8e4">nema_vg_draw_ring</a></div><div class="ttdeci">uint32_t nema_vg_draw_ring(float cx, float cy, float ring_radius, float angle_start, float angle_end, NEMA_VG_PAINT_HANDLE paint)</div><div class="ttdoc">Draw a filled ring with rounded caps shape. In case of a conical gradient paint type,...</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__context_8h_html_acd973997f98069c905ba492524360d0a"><div class="ttname"><a href="cortex__m33_2nema__vg__context_8h.html#acd973997f98069c905ba492524360d0a">nema_vg_set_blend</a></div><div class="ttdeci">void nema_vg_set_blend(uint32_t blend)</div><div class="ttdoc">Set the blending mode for VG operations (see nema_blender.h documentation in NemaGFX API Manual) Addi...</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ac0902382176e3b27d5348b2d49bd6a1f"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ac0902382176e3b27d5348b2d49bd6a1f">NEMA_VG_PAINT_COLOR</a></div><div class="ttdeci">#define NEMA_VG_PAINT_COLOR</div><div class="ttdef"><b>Definition</b> <a href="cortex__m33_2nema__vg__paint_8h_source.html#l00047">nema_vg_paint.h:47</a></div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ac3c00e4772d213ffadbc83f3aad40414"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ac3c00e4772d213ffadbc83f3aad40414">nema_vg_paint_set_paint_color</a></div><div class="ttdeci">void nema_vg_paint_set_paint_color(NEMA_VG_PAINT_HANDLE paint, uint32_t rgba)</div><div class="ttdoc">Set the paint color.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_ad7620d0ff6c0768bc5bf21fe640aaf0d"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#ad7620d0ff6c0768bc5bf21fe640aaf0d">nema_vg_paint_set_type</a></div><div class="ttdeci">void nema_vg_paint_set_type(NEMA_VG_PAINT_HANDLE paint, uint8_t type)</div><div class="ttdoc">Set the paint type.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_af248cecf504695708767910102654bd1"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#af248cecf504695708767910102654bd1">nema_vg_paint_clear</a></div><div class="ttdeci">void nema_vg_paint_clear(NEMA_VG_PAINT_HANDLE paint)</div><div class="ttdoc">Clear the parameters of a paint object.</div></div>
+<div class="ttc" id="acortex__m33_2nema__vg__paint_8h_html_af9747f11ea7041bb2cae3f269059d408"><div class="ttname"><a href="cortex__m33_2nema__vg__paint_8h.html#af9747f11ea7041bb2cae3f269059d408">nema_vg_paint_set_stroke_width</a></div><div class="ttdeci">void nema_vg_paint_set_stroke_width(NEMA_VG_PAINT_HANDLE paint, float stroke_width)</div><div class="ttdoc">Set stroke width - DEPRECATED USE nema_vg_stroke_set_width.</div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_a7171303afa691c85cb264d01671c6be9"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#a7171303afa691c85cb264d01671c6be9">lv_area_get_height</a></div><div class="ttdeci">int32_t lv_area_get_height(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00549">lv_area.c:549</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_aac11b92df2af8c3c7f003975c401df87"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#aac11b92df2af8c3c7f003975c401df87">lv_area_move</a></div><div class="ttdeci">void lv_area_move(lv_area_t *area, int32_t x_ofs, int32_t y_ofs)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00091">lv_area.c:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_ad13c9f67788081fc1236a36d0e1f29cb"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#ad13c9f67788081fc1236a36d0e1f29cb">lv_area_get_width</a></div><div class="ttdeci">int32_t lv_area_get_width(const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00543">lv_area.c:543</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a1460428cd70003f29f0dbe88ef6b6fa5"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a1460428cd70003f29f0dbe88ef6b6fa5">lv_color_to_32</a></div><div class="ttdeci">lv_color32_t lv_color_to_32(lv_color_t color, lv_opa_t opa)</div><div class="ttdef"><b>Definition</b> <a href="lv__color_8c_source.html#l00116">lv_color.c:116</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_ac614bb0f5acc68f3b921f3213d46ac0f"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#ac614bb0f5acc68f3b921f3213d46ac0f">LV_OPA_MIN</a></div><div class="ttdeci">#define LV_OPA_MIN</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00056">lv_color.h:56</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a582c22621ba5b1fdf40a96325a0564e9"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a></div><div class="ttdeci">struct _lv_layer_t lv_layer_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00121">lv_types.h:121</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a5a7caf7a6d6e9ef7ce147c4d2f629eb8"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a5a7caf7a6d6e9ef7ce147c4d2f629eb8">lv_value_precise_t</a></div><div class="ttdeci">int32_t lv_value_precise_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00091">lv_types.h:91</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a9d358cfe063f80d7499a72b46429bf61"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a9d358cfe063f80d7499a72b46429bf61">lv_draw_task_t</a></div><div class="ttdeci">struct _lv_draw_task_t lv_draw_task_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00123">lv_types.h:123</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_acdb0f6245624d86b1cb002186fd6cf96"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a></div><div class="ttdeci">uint8_t lv_opa_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00109">lv_types.h:109</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ad07f3715eae2cfee3d5e0000edb150d7"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a></div><div class="ttdeci">#define LV_UNUSED(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00405">lv_types.h:405</a></div></div>
+<div class="ttc" id="alv__draw__nema__gfx_8h_html"><div class="ttname"><a href="lv__draw__nema__gfx_8h.html">lv_draw_nema_gfx.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a06033bbeebba9fe22c96be484552a70b"><div class="ttname"><a href="struct__lv__draw__task__t.html#a06033bbeebba9fe22c96be484552a70b">_lv_draw_task_t::target_layer</a></div><div class="ttdeci">lv_layer_t * target_layer</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00051">lv_draw_private.h:51</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a2ad9255e9c76b693a7ba3f50d1c3cfb2"><div class="ttname"><a href="struct__lv__draw__task__t.html#a2ad9255e9c76b693a7ba3f50d1c3cfb2">_lv_draw_task_t::draw_unit</a></div><div class="ttdeci">lv_draw_unit_t * draw_unit</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00059">lv_draw_private.h:59</a></div></div>
+<div class="ttc" id="astruct__lv__draw__task__t_html_a5a6ee2a7baa2a0a2b04811ab1d6f12c0"><div class="ttname"><a href="struct__lv__draw__task__t.html#a5a6ee2a7baa2a0a2b04811ab1d6f12c0">_lv_draw_task_t::clip_area</a></div><div class="ttdeci">lv_area_t clip_area</div><div class="ttdef"><b>Definition</b> <a href="lv__draw__private_8h_source.html#l00050">lv_draw_private.h:50</a></div></div>
+<div class="ttc" id="astruct__lv__layer__t_html_a3d01d8a9b86b99401cab67b2ae32a2dc"><div class="ttname"><a href="struct__lv__layer__t.html#a3d01d8a9b86b99401cab67b2ae32a2dc">_lv_layer_t::buf_area</a></div><div class="ttdeci">lv_area_t buf_area</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00118">lv_draw.h:118</a></div></div>
+<div class="ttc" id="astructlv__area__t_html"><div class="ttname"><a href="structlv__area__t.html">lv_area_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00042">lv_area.h:42</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a00eed38fb678bbe97965bd9fdf9af6dc"><div class="ttname"><a href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">lv_area_t::x1</a></div><div class="ttdeci">int32_t x1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area.h:43</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_ae7d9f6a7144e1bf81a6dd4d1308e2578"><div class="ttname"><a href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">lv_area_t::y1</a></div><div class="ttdeci">int32_t y1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area.h:44</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html"><div class="ttname"><a href="structlv__color32__t.html">lv_color32_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00121">lv_color.h:121</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html_a287b397e90d7b995c81ff54e741f96b2"><div class="ttname"><a href="structlv__color32__t.html#a287b397e90d7b995c81ff54e741f96b2">lv_color32_t::blue</a></div><div class="ttdeci">uint8_t blue</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00122">lv_color.h:122</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html_a90d21fa503b626c00cdc8d94863d5877"><div class="ttname"><a href="structlv__color32__t.html#a90d21fa503b626c00cdc8d94863d5877">lv_color32_t::green</a></div><div class="ttdeci">uint8_t green</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00123">lv_color.h:123</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html_acf5bb76caa419c0fa231dbd66c881084"><div class="ttname"><a href="structlv__color32__t.html#acf5bb76caa419c0fa231dbd66c881084">lv_color32_t::alpha</a></div><div class="ttdeci">uint8_t alpha</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00125">lv_color.h:125</a></div></div>
+<div class="ttc" id="astructlv__color32__t_html_ad47d918910aaa51c73160ac85999d09c"><div class="ttname"><a href="structlv__color32__t.html#ad47d918910aaa51c73160ac85999d09c">lv_color32_t::red</a></div><div class="ttdeci">uint8_t red</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00124">lv_color.h:124</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html">lv_draw_arc_dsc_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00029">lv_draw_arc.h:29</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_a324464fb3e3fed2adad76a94d1560623"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#a324464fb3e3fed2adad76a94d1560623">lv_draw_arc_dsc_t::center</a></div><div class="ttdeci">lv_point_t center</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00046">lv_draw_arc.h:46</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_a395d15e7c2b09961c1bfd1da6179b64c"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#a395d15e7c2b09961c1bfd1da6179b64c">lv_draw_arc_dsc_t::width</a></div><div class="ttdeci">int32_t width</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00036">lv_draw_arc.h:36</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_a4c45f850851f8dc60b3c8cd98dbf9dba"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#a4c45f850851f8dc60b3c8cd98dbf9dba">lv_draw_arc_dsc_t::radius</a></div><div class="ttdeci">uint16_t radius</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00052">lv_draw_arc.h:52</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_a93a1fd31b678bb055908dd2b51f07ced"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#a93a1fd31b678bb055908dd2b51f07ced">lv_draw_arc_dsc_t::start_angle</a></div><div class="ttdeci">lv_value_precise_t start_angle</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00040">lv_draw_arc.h:40</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_a9678eb38428a855f2fb89aa9c409e98a"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#a9678eb38428a855f2fb89aa9c409e98a">lv_draw_arc_dsc_t::rounded</a></div><div class="ttdeci">uint8_t rounded</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00059">lv_draw_arc.h:59</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_ab87ee9938aefb68eaea68aa018ceccf0"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#ab87ee9938aefb68eaea68aa018ceccf0">lv_draw_arc_dsc_t::end_angle</a></div><div class="ttdeci">lv_value_precise_t end_angle</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00043">lv_draw_arc.h:43</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_abb00c9386bab32dd992382c759ce4ce5"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#abb00c9386bab32dd992382c759ce4ce5">lv_draw_arc_dsc_t::opa</a></div><div class="ttdeci">lv_opa_t opa</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00056">lv_draw_arc.h:56</a></div></div>
+<div class="ttc" id="astructlv__draw__arc__dsc__t_html_aef0d153803da81fbd6003fc9d8662e46"><div class="ttname"><a href="structlv__draw__arc__dsc__t.html#aef0d153803da81fbd6003fc9d8662e46">lv_draw_arc_dsc_t::color</a></div><div class="ttdeci">lv_color_t color</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__draw__arc_8h_source.html#l00033">lv_draw_arc.h:33</a></div></div>
+<div class="ttc" id="astructlv__point__t_html"><div class="ttname"><a href="structlv__point__t.html">lv_point_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00031">lv_area.h:31</a></div></div>
+<div class="ttc" id="astructlv__point__t_html_af64066d134a77e01b3d6eb8da813627a"><div class="ttname"><a href="structlv__point__t.html#af64066d134a77e01b3d6eb8da813627a">lv_point_t::y</a></div><div class="ttdeci">int32_t y</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00033">lv_area.h:33</a></div></div>
+<div class="ttc" id="astructlv__point__t_html_af6d3062751bd565decb1a2cd3b63bdb2"><div class="ttname"><a href="structlv__point__t.html#af6d3062751bd565decb1a2cd3b63bdb2">lv_point_t::x</a></div><div class="ttdeci">int32_t x</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00032">lv_area.h:32</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_94fe71d42d82cc12c7e3b5578903b445.html">draw</a></li><li class="navelem"><a href="dir_23a653447504d8eae6a2882d11b89ec8.html">nema_gfx</a></li><li class="navelem"><a href="lv__draw__nema__gfx__arc_8c.html">lv_draw_nema_gfx_arc.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

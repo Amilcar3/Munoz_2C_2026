@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del espacio de nombres filter_docker_benchmark_logs</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacefilter__docker__benchmark__logs.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del espacio de nombres filter_docker_benchmark_logs</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a51af30a60f9f02777c6396b8247e356f" id="r_a51af30a60f9f02777c6396b8247e356f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a51af30a60f9f02777c6396b8247e356f">main</a> ()</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><pre class="fragment">This script parses a docker logs file for the lv_benchmark summary results
+
+The input looks something like:
+```
+{"log":"SO3: starting the initial process ...\r\n","stream":"stdout","time":"2025-03-14T20:32:17.712134853Z"}
+{"log":"\r\n","stream":"stdout","time":"2025-03-14T20:32:17.712146014Z"}
+{"log":"\r\n","stream":"stdout","time":"2025-03-14T20:32:17.712150624Z"}
+{"log":"Starting LVGL Benchmark\r\n","stream":"stdout","time":"2025-03-14T20:32:17.816299617Z"}
+{"log":"Warning: The guest is now late by 0.0 to 1.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:32:19.129030996Z"}
+{"log":"Warning: The guest is now late by 1.0 to 2.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:32:40.699491404Z"}
+{"log":"Warning: The guest is now late by 2.0 to 3.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:33:02.966355127Z"}
+{"log":"Warning: The guest is now late by 3.0 to 4.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:33:30.06251689Z"}
+{"log":"Warning: The guest is now late by 4.0 to 5.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:33:38.253535255Z"}
+{"log":"Warning: The guest is now late by 5.0 to 6.0 seconds\r\n","stream":"stdout","time":"2025-03-14T20:33:51.010250882Z"}
+{"log":"Benchmark Summary (9.3.0 dev)\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.855785347Z"}
+{"log":"Name, Avg. CPU, Avg. FPS, Avg. time, render time, flush time\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.855997881Z"}
+{"log":"Empty screen, 11%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.857828373Z"}
+{"log":"Moving wallpaper, 2%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.858455924Z"}
+{"log":"Single rectangle, 0%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.859125276Z"}
+{"log":"Multiple rectangles, 0%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.859847899Z"}
+{"log":"Multiple RGB images, 0%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.860658884Z"}
+{"log":"Multiple ARGB images, 23%, 25, 1, 1, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.86156999Z"}
+{"log":"Rotated ARGB images, 48%, 24, 20, 20, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.862511197Z"}
+{"log":"Multiple labels, 3%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.863549175Z"}
+{"log":"Screen sized text, 30%, 24, 11, 11, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.864642275Z"}
+{"log":"Multiple arcs, 18%, 24, 7, 7, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.865801475Z"}
+{"log":"Containers, 3%, 25, 0, 0, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.867039657Z"}
+{"log":"Containers with overlay, 88%, 21, 44, 44, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.868379231Z"}
+{"log":"Containers with opa, 10%, 24, 3, 3, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.869736765Z"}
+{"log":"Containers with opa_layer, 22%, 24, 8, 8, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.871269383Z"}
+{"log":"Containers with scrolling, 25%, 25, 10, 10, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.872899952Z"}
+{"log":"Widgets demo, 34%, 25, 13, 13, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.874447759Z"}
+{"log":"All scenes avg.,19%, 24, 7, 7, 0\r\r\n","stream":"stdout","time":"2025-03-14T20:33:57.875031879Z"}
+{"log":"LVGL Benchmark Over\r\n","stream":"stdout","time":"2025-03-14T20:33:57.933458479Z"}
+````
+
+Outputs a json file with the format:
+```json
+[
+    {
+        "scene_name": "",
+        "avg_cpu": 0,
+        "avg_fps": 0,
+        "avg_time": 0,
+        "render_time": 0,
+        "flush_time": 0,
+    }
+    ...
+]
+```
+</pre> </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a51af30a60f9f02777c6396b8247e356f" name="a51af30a60f9f02777c6396b8247e356f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51af30a60f9f02777c6396b8247e356f">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="filter__docker__benchmark__logs_8py_source.html#l00058">58</a> del archivo <a class="el" href="filter__docker__benchmark__logs_8py_source.html">filter_docker_benchmark_logs.py</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacefilter__docker__benchmark__logs.html">filter_docker_benchmark_logs</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/tests/test_widget_specs.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__widget__specs_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_widget_specs.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__widget__specs_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacetest__widget__specs.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;Tests for the widget field metadata used by `info widget`.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral">The module only reads widget_specs.json and formats values, so it needs no</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">target and no GDB - it is imported straight from its file to keep the lvglgdb</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">package (and its `import gdb`) out of the way.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="stringliteral">Run from the GDB script root with:</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="stringliteral">    python3 -m unittest discover tests</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> importlib.util</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> unittest</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacetest__widget__specs.html#a2f226c0dc7872631f02dca304d41628f">   15</a></span>ROOT = Path(__file__).resolve().parent.parent</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacetest__widget__specs.html#a9694164bbb11582a60ddbc2b77f73861">   17</a></span>_spec = importlib.util.spec_from_file_location(</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="stringliteral">&quot;widget_specs_under_test&quot;</span>, ROOT / <span class="stringliteral">&quot;lvglgdb&quot;</span> / <span class="stringliteral">&quot;lvgl&quot;</span> / <span class="stringliteral">&quot;widgets&quot;</span> / <span class="stringliteral">&quot;specs.py&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacetest__widget__specs.html#a7b2ab8b04ceea7e0069242a37cd3a162">   20</a></span>specs = importlib.util.module_from_spec(_spec)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>_spec.loader.exec_module(specs)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="" data-end="">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_spec_lookup.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classtest__widget__specs_1_1_test_spec_lookup.html">TestSpecLookup</a>(unittest.TestCase):</div>
+<div class="foldopen" id="foldopen00025" data-start="" data-end="">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_spec_lookup.html#a8eadf2dec4be3a1929e672e6e0d409f0">   25</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_spec_lookup.html#a8eadf2dec4be3a1929e672e6e0d409f0">test_a_class_name_without_the_prefix_still_finds_its_spec</a>(self):</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment"># Before LVGL 6d999331d the class names carried no &#39;lv_&#39;.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        self.assertEqual(</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            specs.widget_spec(<span class="stringliteral">&quot;label&quot;</span>), specs.widget_spec(<span class="stringliteral">&quot;lv_label&quot;</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        )</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+</div>
+<div class="foldopen" id="foldopen00031" data-start="" data-end="">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_spec_lookup.html#a1edd1e7dd049b8a1664cc8ac916605e9">   31</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_spec_lookup.html#a1edd1e7dd049b8a1664cc8ac916605e9">test_an_unknown_class_has_an_empty_spec_rather_than_raising</a>(self):</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        self.assertEqual(specs.widget_spec(<span class="stringliteral">&quot;lv_nope&quot;</span>), {})</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+</div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="classtest__widget__specs_1_1_test_format_value.html">TestFormatValue</a>(unittest.TestCase):</div>
+<div class="foldopen" id="foldopen00036" data-start="" data-end="">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#aa209fcd422d05955cc78d11485894b96">   36</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#aa209fcd422d05955cc78d11485894b96">test_an_enum_is_named</a>(self):</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        self.assertEqual(</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;long_mode&quot;</span>, 2), <span class="stringliteral">&quot;SCROLL (2)&quot;</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        )</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+</div>
+<div class="foldopen" id="foldopen00041" data-start="" data-end="">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#ad9024ccf5bb261f6e26a6419adb38aa7">   41</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#ad9024ccf5bb261f6e26a6419adb38aa7">test_an_out_of_range_enum_stays_a_number</a>(self):</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        self.assertEqual(specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;long_mode&quot;</span>, 99), <span class="stringliteral">&quot;99&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+</div>
+<div class="foldopen" id="foldopen00044" data-start="" data-end="">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#a7fe733909b09a9742f435a2a6995783d">   44</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#a7fe733909b09a9742f435a2a6995783d">test_a_bool_field_reads_as_a_bool_not_as_1</a>(self):</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        self.assertEqual(specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;recolor&quot;</span>, 1), <span class="stringliteral">&quot;True&quot;</span>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+</div>
+<div class="foldopen" id="foldopen00047" data-start="" data-end="">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#af8ffa6e35c81f2a39c0849b2d54a192e">   47</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#af8ffa6e35c81f2a39c0849b2d54a192e">test_points_and_areas_are_rendered_inline</a>(self):</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        self.assertEqual(</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;offset&quot;</span>, {<span class="stringliteral">&quot;x&quot;</span>: 1, <span class="stringliteral">&quot;y&quot;</span>: 2}), <span class="stringliteral">&quot;(1,2)&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        )</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        self.assertEqual(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            specs.format_value(</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                <span class="stringliteral">&quot;lv_slider&quot;</span>, <span class="stringliteral">&quot;left_knob_area&quot;</span>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                {<span class="stringliteral">&quot;x1&quot;</span>: 1, <span class="stringliteral">&quot;y1&quot;</span>: 2, <span class="stringliteral">&quot;x2&quot;</span>: 3, <span class="stringliteral">&quot;y2&quot;</span>: 4},</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            ),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="stringliteral">&quot;(1,2)-(3,4)&quot;</span>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        )</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="foldopen" id="foldopen00059" data-start="" data-end="">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#aa3360701f8abe1a59b25ee5ad77ac3ae">   59</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#aa3360701f8abe1a59b25ee5ad77ac3ae">test_a_missing_value_is_a_dash</a>(self):</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        self.assertEqual(specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;text&quot;</span>, <span class="keywordtype">None</span>), <span class="stringliteral">&quot;-&quot;</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+</div>
+<div class="foldopen" id="foldopen00062" data-start="" data-end="">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_format_value.html#a1aec74cba12a2649447fc7d2a16fe706">   62</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_format_value.html#a1aec74cba12a2649447fc7d2a16fe706">test_a_multiline_text_stays_on_one_line</a>(self):</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        self.assertEqual(</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            specs.format_value(<span class="stringliteral">&quot;lv_label&quot;</span>, <span class="stringliteral">&quot;text&quot;</span>, <span class="stringliteral">&quot;a\nb&quot;</span>), <span class="stringliteral">&#39;&quot;a\\nb&quot;&#39;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        )</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+</div>
+</div>
+<div class="foldopen" id="foldopen00068" data-start="" data-end="">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_summary.html">   68</a></span><span class="keyword">class </span><a class="code hl_class" href="classtest__widget__specs_1_1_test_summary.html">TestSummary</a>(unittest.TestCase):</div>
+<div class="foldopen" id="foldopen00069" data-start="" data-end="">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_summary.html#a316fa3c98204fe1e7470670ed71a40bc">   69</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_summary.html#a316fa3c98204fe1e7470670ed71a40bc">test_the_template_is_filled_from_widget_data</a>(self):</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        self.assertEqual(</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            specs.summary(<span class="stringliteral">&quot;lv_arc&quot;</span>, {<span class="stringliteral">&quot;value&quot;</span>: 50, <span class="stringliteral">&quot;min_value&quot;</span>: 0, <span class="stringliteral">&quot;max_value&quot;</span>: 100}),</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="stringliteral">&quot;50 [0..100]&quot;</span>,</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        )</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+</div>
+<div class="foldopen" id="foldopen00075" data-start="" data-end="">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_summary.html#ae2bc722cec6ccc3b5e5cd68882a85da5">   75</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_summary.html#ae2bc722cec6ccc3b5e5cd68882a85da5">test_a_missing_field_leaves_a_gap_rather_than_a_none</a>(self):</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        self.assertEqual(specs.summary(<span class="stringliteral">&quot;lv_label&quot;</span>, {<span class="stringliteral">&quot;text&quot;</span>: <span class="keywordtype">None</span>}), <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+</div>
+<div class="foldopen" id="foldopen00078" data-start="" data-end="">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_summary.html#a46362fd22dbea44497fa46f3d3843e63">   78</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_summary.html#a46362fd22dbea44497fa46f3d3843e63">test_a_long_value_is_cut</a>(self):</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        self.assertEqual(</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            specs.summary(<span class="stringliteral">&quot;lv_label&quot;</span>, {<span class="stringliteral">&quot;text&quot;</span>: <span class="stringliteral">&quot;x&quot;</span> * 40}, limit=8), <span class="stringliteral">&quot;xxxxxxxx…&quot;</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        )</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+</div>
+<div class="foldopen" id="foldopen00083" data-start="" data-end="">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_summary.html#a9bfc75dc000eb0121137f68851d687eb">   83</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_summary.html#a9bfc75dc000eb0121137f68851d687eb">test_a_widget_without_a_template_has_no_summary</a>(self):</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        self.assertEqual(specs.summary(<span class="stringliteral">&quot;lv_obj&quot;</span>, {<span class="stringliteral">&quot;whatever&quot;</span>: 1}), <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+</div>
+</div>
+<div class="foldopen" id="foldopen00087" data-start="" data-end="">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_order_fields.html">   87</a></span><span class="keyword">class </span><a class="code hl_class" href="classtest__widget__specs_1_1_test_order_fields.html">TestOrderFields</a>(unittest.TestCase):</div>
+<div class="foldopen" id="foldopen00088" data-start="" data-end="">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_order_fields.html#aae41af63eb7cea86cfc9b4cef41524b2">   88</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_order_fields.html#aae41af63eb7cea86cfc9b4cef41524b2">test_primary_fields_come_first_and_nothing_is_lost</a>(self):</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        keys = [<span class="stringliteral">&quot;rotation&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>, <span class="stringliteral">&quot;dragging&quot;</span>, <span class="stringliteral">&quot;max_value&quot;</span>]</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        ordered = specs.order_fields(<span class="stringliteral">&quot;lv_arc&quot;</span>, keys)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        self.assertEqual(ordered[0], <span class="stringliteral">&quot;value&quot;</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        self.assertEqual(sorted(ordered), sorted(keys))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+</div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classtest__widget__specs_1_1_test_order_fields.html#a21402df4453cc7fbbc77ff7c02480f36">   94</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classtest__widget__specs_1_1_test_order_fields.html#a21402df4453cc7fbbc77ff7c02480f36">test_an_unknown_class_keeps_the_given_order</a>(self):</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        keys = [<span class="stringliteral">&quot;b&quot;</span>, <span class="stringliteral">&quot;a&quot;</span>]</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        self.assertEqual(specs.order_fields(<span class="stringliteral">&quot;lv_nope&quot;</span>, keys), keys)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    unittest.main()</div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html">test_widget_specs.TestFormatValue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00035">test_widget_specs.py:35</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_a1aec74cba12a2649447fc7d2a16fe706"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#a1aec74cba12a2649447fc7d2a16fe706">test_widget_specs.TestFormatValue.test_a_multiline_text_stays_on_one_line</a></div><div class="ttdeci">test_a_multiline_text_stays_on_one_line(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00062">test_widget_specs.py:62</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_a7fe733909b09a9742f435a2a6995783d"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#a7fe733909b09a9742f435a2a6995783d">test_widget_specs.TestFormatValue.test_a_bool_field_reads_as_a_bool_not_as_1</a></div><div class="ttdeci">test_a_bool_field_reads_as_a_bool_not_as_1(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">test_widget_specs.py:44</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_aa209fcd422d05955cc78d11485894b96"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#aa209fcd422d05955cc78d11485894b96">test_widget_specs.TestFormatValue.test_an_enum_is_named</a></div><div class="ttdeci">test_an_enum_is_named(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">test_widget_specs.py:36</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_aa3360701f8abe1a59b25ee5ad77ac3ae"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#aa3360701f8abe1a59b25ee5ad77ac3ae">test_widget_specs.TestFormatValue.test_a_missing_value_is_a_dash</a></div><div class="ttdeci">test_a_missing_value_is_a_dash(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">test_widget_specs.py:59</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_ad9024ccf5bb261f6e26a6419adb38aa7"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#ad9024ccf5bb261f6e26a6419adb38aa7">test_widget_specs.TestFormatValue.test_an_out_of_range_enum_stays_a_number</a></div><div class="ttdeci">test_an_out_of_range_enum_stays_a_number(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">test_widget_specs.py:41</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_format_value_html_af8ffa6e35c81f2a39c0849b2d54a192e"><div class="ttname"><a href="classtest__widget__specs_1_1_test_format_value.html#af8ffa6e35c81f2a39c0849b2d54a192e">test_widget_specs.TestFormatValue.test_points_and_areas_are_rendered_inline</a></div><div class="ttdeci">test_points_and_areas_are_rendered_inline(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">test_widget_specs.py:47</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_order_fields_html"><div class="ttname"><a href="classtest__widget__specs_1_1_test_order_fields.html">test_widget_specs.TestOrderFields</a></div><div class="ttdef"><b>Definition</b> <a href="#l00087">test_widget_specs.py:87</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_order_fields_html_a21402df4453cc7fbbc77ff7c02480f36"><div class="ttname"><a href="classtest__widget__specs_1_1_test_order_fields.html#a21402df4453cc7fbbc77ff7c02480f36">test_widget_specs.TestOrderFields.test_an_unknown_class_keeps_the_given_order</a></div><div class="ttdeci">test_an_unknown_class_keeps_the_given_order(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00094">test_widget_specs.py:94</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_order_fields_html_aae41af63eb7cea86cfc9b4cef41524b2"><div class="ttname"><a href="classtest__widget__specs_1_1_test_order_fields.html#aae41af63eb7cea86cfc9b4cef41524b2">test_widget_specs.TestOrderFields.test_primary_fields_come_first_and_nothing_is_lost</a></div><div class="ttdeci">test_primary_fields_come_first_and_nothing_is_lost(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00088">test_widget_specs.py:88</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_spec_lookup_html"><div class="ttname"><a href="classtest__widget__specs_1_1_test_spec_lookup.html">test_widget_specs.TestSpecLookup</a></div><div class="ttdef"><b>Definition</b> <a href="#l00024">test_widget_specs.py:24</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_spec_lookup_html_a1edd1e7dd049b8a1664cc8ac916605e9"><div class="ttname"><a href="classtest__widget__specs_1_1_test_spec_lookup.html#a1edd1e7dd049b8a1664cc8ac916605e9">test_widget_specs.TestSpecLookup.test_an_unknown_class_has_an_empty_spec_rather_than_raising</a></div><div class="ttdeci">test_an_unknown_class_has_an_empty_spec_rather_than_raising(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">test_widget_specs.py:31</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_spec_lookup_html_a8eadf2dec4be3a1929e672e6e0d409f0"><div class="ttname"><a href="classtest__widget__specs_1_1_test_spec_lookup.html#a8eadf2dec4be3a1929e672e6e0d409f0">test_widget_specs.TestSpecLookup.test_a_class_name_without_the_prefix_still_finds_its_spec</a></div><div class="ttdeci">test_a_class_name_without_the_prefix_still_finds_its_spec(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">test_widget_specs.py:25</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_summary_html"><div class="ttname"><a href="classtest__widget__specs_1_1_test_summary.html">test_widget_specs.TestSummary</a></div><div class="ttdef"><b>Definition</b> <a href="#l00068">test_widget_specs.py:68</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_summary_html_a316fa3c98204fe1e7470670ed71a40bc"><div class="ttname"><a href="classtest__widget__specs_1_1_test_summary.html#a316fa3c98204fe1e7470670ed71a40bc">test_widget_specs.TestSummary.test_the_template_is_filled_from_widget_data</a></div><div class="ttdeci">test_the_template_is_filled_from_widget_data(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00069">test_widget_specs.py:69</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_summary_html_a46362fd22dbea44497fa46f3d3843e63"><div class="ttname"><a href="classtest__widget__specs_1_1_test_summary.html#a46362fd22dbea44497fa46f3d3843e63">test_widget_specs.TestSummary.test_a_long_value_is_cut</a></div><div class="ttdeci">test_a_long_value_is_cut(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00078">test_widget_specs.py:78</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_summary_html_a9bfc75dc000eb0121137f68851d687eb"><div class="ttname"><a href="classtest__widget__specs_1_1_test_summary.html#a9bfc75dc000eb0121137f68851d687eb">test_widget_specs.TestSummary.test_a_widget_without_a_template_has_no_summary</a></div><div class="ttdeci">test_a_widget_without_a_template_has_no_summary(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00083">test_widget_specs.py:83</a></div></div>
+<div class="ttc" id="aclasstest__widget__specs_1_1_test_summary_html_ae2bc722cec6ccc3b5e5cd68882a85da5"><div class="ttname"><a href="classtest__widget__specs_1_1_test_summary.html#ae2bc722cec6ccc3b5e5cd68882a85da5">test_widget_specs.TestSummary.test_a_missing_field_leaves_a_gap_rather_than_a_none</a></div><div class="ttdeci">test_a_missing_field_leaves_a_gap_rather_than_a_none(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">test_widget_specs.py:75</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_129344748656f5cbb5f8284163f2cc55.html">tests</a></li><li class="navelem"><a href="test__widget__specs_8py.html">test_widget_specs.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

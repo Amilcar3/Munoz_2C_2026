@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/tests/src/test_cases/refr/test_refr_transform.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__refr__transform_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">test_refr_transform.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="test__refr__transform_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#if LV_BUILD_TEST</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="lv__test__refr_8h.html">refr/lv_test_refr.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keywordtype">void</span> setUp(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    refr_ctx_reset();</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> tearDown(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    refr_disp_delete();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> test_refr_transformed_object_uses_a_layer(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 30, 30, 40, 40, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a49805578aebd488d108f7ae264cbc644">lv_obj_set_style_transform_pivot_x</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa4f496f38e8c712c9b8024872ab0b43e">lv_obj_set_style_transform_pivot_y</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a630ae85881e113b64ceb8621c312a6e1">lv_obj_set_style_transform_rotation</a>(obj, 900, 0);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a5d08ea9309ab0a6b5cd9ef38534af514">LV_LAYER_TYPE_TRANSFORM</a>, <a class="code hl_function" href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a>(obj));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    refr_frame();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    TEST_ASSERT_EQUAL_UINT32(1, draw_cnt);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/*A square rotated by 90 degrees around its center covers the same area*/</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> test_refr_rotation_is_normalized(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 30, 30, 40, 40, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a49805578aebd488d108f7ae264cbc644">lv_obj_set_style_transform_pivot_x</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa4f496f38e8c712c9b8024872ab0b43e">lv_obj_set_style_transform_pivot_y</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">/*Angles out of the 0..3600 range are wrapped around*/</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a630ae85881e113b64ceb8621c312a6e1">lv_obj_set_style_transform_rotation</a>(obj, 3600 + 900, 0);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    refr_frame();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a630ae85881e113b64ceb8621c312a6e1">lv_obj_set_style_transform_rotation</a>(obj, -900, 0);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    refr_frame();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> test_refr_scaled_and_skewed_object(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 40, 40, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a49805578aebd488d108f7ae264cbc644">lv_obj_set_style_transform_pivot_x</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa4f496f38e8c712c9b8024872ab0b43e">lv_obj_set_style_transform_pivot_y</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">/*Twice as large around its center*/</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa264668601f5946c8a431f46e57398ac">lv_obj_set_style_transform_scale_x</a>(obj, 2 * <a class="code hl_define" href="include_2lvgl_2core_2lv__style_8h.html#a078845be427f8504a4b15374c0a95e67">LV_SCALE_NONE</a>, 0);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a62ad35db0d37b165e7bd835eebe4843f">lv_obj_set_style_transform_scale_y</a>(obj, 2 * <a class="code hl_define" href="include_2lvgl_2core_2lv__style_8h.html#a078845be427f8504a4b15374c0a95e67">LV_SCALE_NONE</a>, 0);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a5d08ea9309ab0a6b5cd9ef38534af514">LV_LAYER_TYPE_TRANSFORM</a>, <a class="code hl_function" href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a>(obj));</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    refr_frame();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">/*The object covers twice as much as before*/</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(35, 50));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 65));</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">/*A skewed object is rendered too. How it looks depends on the renderer,</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">     *only the fact that it is drawn is checked here.*/</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa264668601f5946c8a431f46e57398ac">lv_obj_set_style_transform_scale_x</a>(obj, <a class="code hl_define" href="include_2lvgl_2core_2lv__style_8h.html#a078845be427f8504a4b15374c0a95e67">LV_SCALE_NONE</a>, 0);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a62ad35db0d37b165e7bd835eebe4843f">lv_obj_set_style_transform_scale_y</a>(obj, <a class="code hl_define" href="include_2lvgl_2core_2lv__style_8h.html#a078845be427f8504a4b15374c0a95e67">LV_SCALE_NONE</a>, 0);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ada88e4bdf75d4a529f68552a8ab92b98">lv_obj_set_style_transform_skew_x</a>(obj, 20, 0);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    refr_frame();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    TEST_ASSERT_EQUAL_UINT32(1, draw_cnt);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keywordtype">void</span> test_refr_zero_scale_is_not_drawn(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>{</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 30, 30, 40, 40, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa264668601f5946c8a431f46e57398ac">lv_obj_set_style_transform_scale_x</a>(obj, 0, 0);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    refr_frame();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">/*The pixels of a rotated display are not where the logical coordinates say,</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment"> *so the draw buffer is checked directly*/</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">static</span> <span class="keywordtype">void</span> check_rotated_rect(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * buf, <span class="keyword">const</span> <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> * logical_area, <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> color)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> physical = *logical_area;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ab93743230d49c04103a6b9c2a61a97fa">lv_display_rotate_area</a>(refr_ctx.disp, &amp;physical);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ASSERT_PX_EQ(color, refr_buf_px(buf, physical.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a>, physical.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a>));</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    ASSERT_PX_EQ(color, refr_buf_px(buf, physical.<a class="code hl_variable" href="structlv__area__t.html#aad44611f5c9c60283a51863693fdeeb9">x2</a>, physical.<a class="code hl_variable" href="structlv__area__t.html#a9baffd46d307414588242eaa27c013a7">y2</a>));</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ASSERT_PX_EQ(color, refr_buf_px(buf, (physical.<a class="code hl_variable" href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">x1</a> + physical.<a class="code hl_variable" href="structlv__area__t.html#aad44611f5c9c60283a51863693fdeeb9">x2</a>) / 2,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                                    (physical.<a class="code hl_variable" href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">y1</a> + physical.<a class="code hl_variable" href="structlv__area__t.html#a9baffd46d307414588242eaa27c013a7">y2</a>) / 2));</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#endif </span><span class="comment">/*LV_DRAW_TRANSFORM_USE_MATRIX*/</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keywordtype">void</span> test_refr_matrix_display_rotation(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">/*A square display so that every rotation uses the same buffer size*/</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 64);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a8d216151889c44945c871890d6a8eea2">lv_display_set_matrix_rotation</a>(refr_ctx.disp, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    TEST_ASSERT_TRUE(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a725a538c21ec3db2a9f0336dc257aa62">lv_display_get_matrix_rotation</a>(refr_ctx.disp));</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    refr_rect_create(refr_screen(), 0, 0, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_enumeration" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04">lv_display_rotation_t</a> rotations[] = {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a35e7abe8728d94fb49b5ad38a76c639f">LV_DISPLAY_ROTATION_0</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a8e3089af2ed5944188542928ef22106d">LV_DISPLAY_ROTATION_90</a>,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a887d601cbb69cf0f8704caa3051cbb71">LV_DISPLAY_ROTATION_180</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04acf396c73649b27bf09419d70778d7e54">LV_DISPLAY_ROTATION_270</a>,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    };</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> logical = {0, 0, 19, 19};</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">size_t</span> i;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">for</span>(i = 0; i &lt; <span class="keyword">sizeof</span>(rotations) / <span class="keyword">sizeof</span>(rotations[0]); i++) {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ac30d495dbabdb158d67748da272cd4ee">lv_display_set_rotation</a>(refr_ctx.disp, rotations[i]);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        refr_frame();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="comment">/*The buffer is always the size of the unrotated display*/</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        TEST_ASSERT_EQUAL_INT32(<a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ae4584561ff98ceb6878db3fce9d103da">lv_display_get_original_horizontal_resolution</a>(refr_ctx.disp),</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                                (<a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a>)refr_ctx.disp-&gt;buf_act-&gt;header.w);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        check_rotated_rect(refr_ctx.disp-&gt;buf_act, &amp;logical, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ac30d495dbabdb158d67748da272cd4ee">lv_display_set_rotation</a>(refr_ctx.disp, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a35e7abe8728d94fb49b5ad38a76c639f">LV_DISPLAY_ROTATION_0</a>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a8d216151889c44945c871890d6a8eea2">lv_display_set_matrix_rotation</a>(refr_ctx.disp, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;LV_DRAW_TRANSFORM_USE_MATRIX not enabled&quot;</span>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keywordtype">void</span> test_refr_matrix_sync_areas_are_rotated(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    refr_disp_create(64, 64, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 2, 64);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a8d216151889c44945c871890d6a8eea2">lv_display_set_matrix_rotation</a>(refr_ctx.disp, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ac30d495dbabdb158d67748da272cd4ee">lv_display_set_rotation</a>(refr_ctx.disp, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a8e3089af2ed5944188542928ef22106d">LV_DISPLAY_ROTATION_90</a>);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    refr_frame();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment">/*Render a rectangle into one buffer only*/</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * rendered_buf = refr_ctx.disp-&gt;buf_act;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    refr_rect_create(refr_screen(), 0, 0, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#aff54da7280d2ddf3a84db3d08c3bce83">lv_obj_update_layout</a>(refr_screen());</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> logical = {0, 0, 19, 19};</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    refr_ctx.disp-&gt;inv_p = 0;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <a class="code hl_function" href="lv__refr_8c.html#af55a07c32a5dd394f7080fb2081f77f1">lv_inv_area</a>(refr_ctx.disp, &amp;logical);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    refr_frame();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    check_rotated_rect(rendered_buf, &amp;logical, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="comment">/*Refresh an unrelated area. The rectangle has to be copied to the other</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">     *buffer at its rotated position.*/</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * next_buf = refr_ctx.disp-&gt;buf_act;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    TEST_ASSERT_NOT_EQUAL(rendered_buf, next_buf);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> other = {40, 40, 59, 59};</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    refr_ctx.disp-&gt;inv_p = 0;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_function" href="lv__refr_8c.html#af55a07c32a5dd394f7080fb2081f77f1">lv_inv_area</a>(refr_ctx.disp, &amp;other);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    refr_frame();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    check_rotated_rect(next_buf, &amp;logical, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#ac30d495dbabdb158d67748da272cd4ee">lv_display_set_rotation</a>(refr_ctx.disp, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a35e7abe8728d94fb49b5ad38a76c639f">LV_DISPLAY_ROTATION_0</a>);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_function" href="include_2lvgl_2display_2lv__display_8h.html#a8d216151889c44945c871890d6a8eea2">lv_display_set_matrix_rotation</a>(refr_ctx.disp, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;LV_DRAW_TRANSFORM_USE_MATRIX not enabled&quot;</span>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>}</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keywordtype">void</span> test_refr_obj_matrix_is_applied_without_a_layer(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 10, 10, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aecc04bfa364c7b83d110a05b4fb24495">lv_matrix_t</a> matrix;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    lv_matrix_identity(&amp;matrix);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    lv_matrix_translate(&amp;matrix, 40, 30);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a3ffa3fec5daa922d31df8f086de0541b">lv_obj_set_transform</a>(obj, &amp;matrix);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    TEST_ASSERT_EQUAL(<a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a5d08ea9309ab0a6b5cd9ef38534af514">LV_LAYER_TYPE_TRANSFORM</a>, <a class="code hl_function" href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a>(obj));</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    refr_frame();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="comment">/*A fully opaque transformed object is drawn directly with a matrix*/</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    TEST_ASSERT_EQUAL_UINT32(1, draw_cnt);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(60, 50));</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(15, 15));</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a3ffa3fec5daa922d31df8f086de0541b">lv_obj_set_transform</a>(obj, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;LV_DRAW_TRANSFORM_USE_MATRIX not enabled&quot;</span>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keywordtype">void</span> test_refr_obj_matrix_not_invertible(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>{</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 10, 10, 20, 20, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="comment">/*A matrix that collapses everything to a line can not be inverted*/</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aecc04bfa364c7b83d110a05b4fb24495">lv_matrix_t</a> matrix;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    lv_matrix_identity(&amp;matrix);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    lv_matrix_scale(&amp;matrix, 1.0f, 0.0f);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a3ffa3fec5daa922d31df8f086de0541b">lv_obj_set_transform</a>(obj, &amp;matrix);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <a class="code hl_typedef" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> draw_cnt = 0;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a>(obj, refr_draw_main_counter_cb, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a>, &amp;draw_cnt);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    refr_frame();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    TEST_ASSERT_EQUAL_UINT32(0, draw_cnt);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(15, 15));</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a3ffa3fec5daa922d31df8f086de0541b">lv_obj_set_transform</a>(obj, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;LV_DRAW_TRANSFORM_USE_MATRIX not enabled&quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>}</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keywordtype">void</span> test_refr_rotated_obj_clipped_by_the_invalid_area(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>{</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="preprocessor">#if LV_DRAW_TRANSFORM_USE_MATRIX</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    refr_disp_create(100, 100, <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a>, <a class="code hl_enumvalue" href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a>, 1, 100);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    refr_screen_set_color(REFR_COLOR_BLACK);</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = refr_rect_create(refr_screen(), 30, 30, 40, 40, REFR_COLOR_RED);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a49805578aebd488d108f7ae264cbc644">lv_obj_set_style_transform_pivot_x</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa4f496f38e8c712c9b8024872ab0b43e">lv_obj_set_style_transform_pivot_y</a>(obj, <a class="code hl_function" href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a>(50), 0);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a630ae85881e113b64ceb8621c312a6e1">lv_obj_set_style_transform_rotation</a>(obj, 900, 0);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="comment">/*The whole object is inside the clip area, so the matrix can be used*/</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(refr_screen());</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    refr_frame();</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">/*Now only a part of the object is refreshed, so it is rendered to a layer*/</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_struct" href="structlv__area__t.html">lv_area_t</a> part = {40, 40, 59, 59};</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    refr_log_reset();</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    refr_ctx.disp-&gt;inv_p = 0;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_function" href="lv__refr_8c.html#af55a07c32a5dd394f7080fb2081f77f1">lv_inv_area</a>(refr_ctx.disp, &amp;part);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    refr_frame();</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    TEST_ASSERT_EQUAL_UINT32(1, refr_ctx.flush_cnt);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    ASSERT_PX_EQ(REFR_COLOR_RED, refr_screen_px(50, 50));</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    ASSERT_PX_EQ(REFR_COLOR_BLACK, refr_screen_px(10, 10));</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    TEST_IGNORE_MESSAGE(<span class="stringliteral">&quot;LV_DRAW_TRANSFORM_USE_MATRIX not enabled&quot;</span>);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>}</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="preprocessor">#endif </span><span class="comment">/*LV_BUILD_TEST*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__area_8h_html_aaab45f4752db2db4f70fd48a8d8d50d0"><div class="ttname"><a href="include_2lvgl_2core_2lv__area_8h.html#aaab45f4752db2db4f70fd48a8d8d50d0">lv_pct</a></div><div class="ttdeci">int32_t lv_pct(int32_t x)</div><div class="ttdef"><b>Definition</b> <a href="lv__area_8c_source.html#l00611">lv_area.c:611</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771abbc98db62e7a478c6ac49601bde148bd">LV_EVENT_DRAW_MAIN</a></div><div class="ttdeci">@ LV_EVENT_DRAW_MAIN</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__event_8h_source.html#l00072">lv_event.h:72</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__draw_8h_html_aaeb21c6eea41dba9d1140ace157efce8a5d08ea9309ab0a6b5cd9ef38534af514"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__draw_8h.html#aaeb21c6eea41dba9d1140ace157efce8a5d08ea9309ab0a6b5cd9ef38534af514">LV_LAYER_TYPE_TRANSFORM</a></div><div class="ttdeci">@ LV_LAYER_TYPE_TRANSFORM</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__obj__draw_8h_source.html#l00051">lv_obj_draw.h:51</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__event_8h_html_a13335793b24322d550c8faa8e3dda247"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__event_8h.html#a13335793b24322d550c8faa8e3dda247">lv_obj_add_event_cb</a></div><div class="ttdeci">lv_event_dsc_t * lv_obj_add_event_cb(lv_obj_t *obj, lv_event_cb_t event_cb, lv_event_code_t filter, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__event_8c_source.html#l00106">lv_obj_event.c:106</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_a32abbcce30358cd46c4a68261a2b6898"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a></div><div class="ttdeci">lv_result_t lv_obj_invalidate(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l01119">lv_obj_pos.c:1119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_a3ffa3fec5daa922d31df8f086de0541b"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#a3ffa3fec5daa922d31df8f086de0541b">lv_obj_set_transform</a></div><div class="ttdeci">void lv_obj_set_transform(lv_obj_t *obj, const lv_matrix_t *matrix)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l01275">lv_obj_pos.c:1275</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_aff54da7280d2ddf3a84db3d08c3bce83"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#aff54da7280d2ddf3a84db3d08c3bce83">lv_obj_update_layout</a></div><div class="ttdeci">void lv_obj_update_layout(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l00322">lv_obj_pos.c:322</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a49805578aebd488d108f7ae264cbc644"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a49805578aebd488d108f7ae264cbc644">lv_obj_set_style_transform_pivot_x</a></div><div class="ttdeci">void lv_obj_set_style_transform_pivot_x(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01029">lv_obj_style_gen.c:1029</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a62ad35db0d37b165e7bd835eebe4843f"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a62ad35db0d37b165e7bd835eebe4843f">lv_obj_set_style_transform_scale_y</a></div><div class="ttdeci">void lv_obj_set_style_transform_scale_y(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01011">lv_obj_style_gen.c:1011</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_a630ae85881e113b64ceb8621c312a6e1"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#a630ae85881e113b64ceb8621c312a6e1">lv_obj_set_style_transform_rotation</a></div><div class="ttdeci">void lv_obj_set_style_transform_rotation(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01020">lv_obj_style_gen.c:1020</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_aa264668601f5946c8a431f46e57398ac"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa264668601f5946c8a431f46e57398ac">lv_obj_set_style_transform_scale_x</a></div><div class="ttdeci">void lv_obj_set_style_transform_scale_x(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01002">lv_obj_style_gen.c:1002</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_aa4f496f38e8c712c9b8024872ab0b43e"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#aa4f496f38e8c712c9b8024872ab0b43e">lv_obj_set_style_transform_pivot_y</a></div><div class="ttdeci">void lv_obj_set_style_transform_pivot_y(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01038">lv_obj_style_gen.c:1038</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__style__gen_8h_html_ada88e4bdf75d4a529f68552a8ab92b98"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__style__gen_8h.html#ada88e4bdf75d4a529f68552a8ab92b98">lv_obj_set_style_transform_skew_x</a></div><div class="ttdeci">void lv_obj_set_style_transform_skew_x(lv_obj_t *obj, int32_t value, lv_style_selector_t selector)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__style__gen_8c_source.html#l01047">lv_obj_style_gen.c:1047</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__style_8h_html_a078845be427f8504a4b15374c0a95e67"><div class="ttname"><a href="include_2lvgl_2core_2lv__style_8h.html#a078845be427f8504a4b15374c0a95e67">LV_SCALE_NONE</a></div><div class="ttdeci">#define LV_SCALE_NONE</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__style_8h_source.html#l00048">lv_style.h:48</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a3b2ee783d72d01151dac020bbb1e1d04"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04">lv_display_rotation_t</a></div><div class="ttdeci">lv_display_rotation_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00034">lv_display.h:34</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a3b2ee783d72d01151dac020bbb1e1d04a35e7abe8728d94fb49b5ad38a76c639f"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a35e7abe8728d94fb49b5ad38a76c639f">LV_DISPLAY_ROTATION_0</a></div><div class="ttdeci">@ LV_DISPLAY_ROTATION_0</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00035">lv_display.h:35</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a3b2ee783d72d01151dac020bbb1e1d04a887d601cbb69cf0f8704caa3051cbb71"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a887d601cbb69cf0f8704caa3051cbb71">LV_DISPLAY_ROTATION_180</a></div><div class="ttdeci">@ LV_DISPLAY_ROTATION_180</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00037">lv_display.h:37</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a3b2ee783d72d01151dac020bbb1e1d04a8e3089af2ed5944188542928ef22106d"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04a8e3089af2ed5944188542928ef22106d">LV_DISPLAY_ROTATION_90</a></div><div class="ttdeci">@ LV_DISPLAY_ROTATION_90</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00036">lv_display.h:36</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a3b2ee783d72d01151dac020bbb1e1d04acf396c73649b27bf09419d70778d7e54"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a3b2ee783d72d01151dac020bbb1e1d04acf396c73649b27bf09419d70778d7e54">LV_DISPLAY_ROTATION_270</a></div><div class="ttdeci">@ LV_DISPLAY_ROTATION_270</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00038">lv_display.h:38</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a5132aad8662c8544749cbb74dd7e1753a52d575579a92bef572f1645e03b0ba09">LV_DISPLAY_RENDER_MODE_DIRECT</a></div><div class="ttdeci">@ LV_DISPLAY_RENDER_MODE_DIRECT</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2display_2lv__display_8h_source.html#l00053">lv_display.h:53</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a725a538c21ec3db2a9f0336dc257aa62"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a725a538c21ec3db2a9f0336dc257aa62">lv_display_get_matrix_rotation</a></div><div class="ttdeci">bool lv_display_get_matrix_rotation(lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01143">lv_display.c:1143</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_a8d216151889c44945c871890d6a8eea2"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#a8d216151889c44945c871890d6a8eea2">lv_display_set_matrix_rotation</a></div><div class="ttdeci">void lv_display_set_matrix_rotation(lv_display_t *disp, bool enable)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01128">lv_display.c:1128</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ab93743230d49c04103a6b9c2a61a97fa"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ab93743230d49c04103a6b9c2a61a97fa">lv_display_rotate_area</a></div><div class="ttdeci">void lv_display_rotate_area(lv_display_t *disp, lv_area_t *area)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01366">lv_display.c:1366</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ac30d495dbabdb158d67748da272cd4ee"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ac30d495dbabdb158d67748da272cd4ee">lv_display_set_rotation</a></div><div class="ttdeci">void lv_display_set_rotation(lv_display_t *disp, lv_display_rotation_t rotation)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l01106">lv_display.c:1106</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2display_2lv__display_8h_html_ae4584561ff98ceb6878db3fce9d103da"><div class="ttname"><a href="include_2lvgl_2display_2lv__display_8h.html#ae4584561ff98ceb6878db3fce9d103da">lv_display_get_original_horizontal_resolution</a></div><div class="ttdeci">int32_t lv_display_get_original_horizontal_resolution(const lv_display_t *disp)</div><div class="ttdef"><b>Definition</b> <a href="lv__display_8c_source.html#l00379">lv_display.c:379</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ab0d9837834fbe76e8332b2f8df0bcd79">LV_COLOR_FORMAT_XRGB8888</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_XRGB8888</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">lv_color.h:163</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aecc04bfa364c7b83d110a05b4fb24495"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aecc04bfa364c7b83d110a05b4fb24495">lv_matrix_t</a></div><div class="ttdeci">struct _lv_matrix_t lv_matrix_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00306">lv_types.h:306</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aef095d20cced64810944ca64aab7ca31"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a></div><div class="ttdeci">struct _lv_draw_buf_t lv_draw_buf_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00360">lv_types.h:360</a></div></div>
+<div class="ttc" id="alv__obj__draw_8c_html_a7dd2d330382933034e1568e170c5ddbb"><div class="ttname"><a href="lv__obj__draw_8c.html#a7dd2d330382933034e1568e170c5ddbb">lv_obj_get_layer_type</a></div><div class="ttdeci">lv_layer_type_t lv_obj_get_layer_type(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__draw_8c_source.html#l00460">lv_obj_draw.c:460</a></div></div>
+<div class="ttc" id="alv__refr_8c_html_af55a07c32a5dd394f7080fb2081f77f1"><div class="ttname"><a href="lv__refr_8c.html#af55a07c32a5dd394f7080fb2081f77f1">lv_inv_area</a></div><div class="ttdeci">lv_result_t lv_inv_area(lv_display_t *disp, const lv_area_t *area_p)</div><div class="ttdef"><b>Definition</b> <a href="lv__refr_8c_source.html#l00273">lv_refr.c:273</a></div></div>
+<div class="ttc" id="alv__test__refr_8h_html"><div class="ttname"><a href="lv__test__refr_8h.html">lv_test_refr.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_a435d1572bf3f880d55459d9805097f62"><div class="ttname"><a href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a></div><div class="ttdeci">unsigned int uint32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00126">stdint.h:126</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+<div class="ttc" id="astructlv__area__t_html"><div class="ttname"><a href="structlv__area__t.html">lv_area_t</a></div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00042">lv_area.h:42</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a00eed38fb678bbe97965bd9fdf9af6dc"><div class="ttname"><a href="structlv__area__t.html#a00eed38fb678bbe97965bd9fdf9af6dc">lv_area_t::x1</a></div><div class="ttdeci">int32_t x1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00043">lv_area.h:43</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_a9baffd46d307414588242eaa27c013a7"><div class="ttname"><a href="structlv__area__t.html#a9baffd46d307414588242eaa27c013a7">lv_area_t::y2</a></div><div class="ttdeci">int32_t y2</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00046">lv_area.h:46</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_aad44611f5c9c60283a51863693fdeeb9"><div class="ttname"><a href="structlv__area__t.html#aad44611f5c9c60283a51863693fdeeb9">lv_area_t::x2</a></div><div class="ttdeci">int32_t x2</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00045">lv_area.h:45</a></div></div>
+<div class="ttc" id="astructlv__area__t_html_ae7d9f6a7144e1bf81a6dd4d1308e2578"><div class="ttname"><a href="structlv__area__t.html#ae7d9f6a7144e1bf81a6dd4d1308e2578">lv_area_t::y1</a></div><div class="ttdeci">int32_t y1</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__area_8h_source.html#l00044">lv_area.h:44</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_f157357037b2ecd3dd55343bf894eaa3.html">tests</a></li><li class="navelem"><a href="dir_a2db2b5e922be370ef89e28f89eca8b6.html">src</a></li><li class="navelem"><a href="dir_0da03cef61f81ff608e9e8a57be45fcc.html">test_cases</a></li><li class="navelem"><a href="dir_7a4dd5a7596719f070cd6920c14b426d.html">refr</a></li><li class="navelem"><a href="test__refr__transform_8c.html">test_refr_transform.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

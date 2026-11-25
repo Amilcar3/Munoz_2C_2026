@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/widgets/canvas/lv_canvas.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__canvas_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo lv_canvas.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="lv__canvas__private_8h_source.html">lv_canvas_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__display__private_8h_source.html">../../display/lv_display_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__class__private_8h_source.html">../../core/lv_obj_class_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lvgl__public_8h_source.html">../../lvgl_public.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__draw__private_8h_source.html">../../draw/lv_draw_private.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__cache_8h_source.html">../../misc/cache/lv_cache.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lv__obj__style__internal_8h_source.html">../../core/lv_obj_style_internal.h</a>&quot;</code><br />
+</div>
+<p><a href="lv__canvas_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a9be806f23ad96997f1d62c1a6dfabe05" id="r_a9be806f23ad96997f1d62c1a6dfabe05"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>&#160;&#160;&#160;(&amp;<a class="el" href="#a9dcad9177f51515b881bceff7e682291">lv_canvas_class</a>)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ae388ed6ddca1f158c973319ba41cd607" id="r_ae388ed6ddca1f158c973319ba41cd607"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae388ed6ddca1f158c973319ba41cd607">lv_canvas_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memitem:a449208b992856a8cfa644236bd9fd479" id="r_a449208b992856a8cfa644236bd9fd479"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a449208b992856a8cfa644236bd9fd479">lv_canvas_set_buffer</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, void *buf, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h, <a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a> cf)</td></tr>
+<tr class="memitem:aa9b57a935be1ff68832998ef4e29b6ec" id="r_aa9b57a935be1ff68832998ef4e29b6ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa9b57a935be1ff68832998ef4e29b6ec">lv_canvas_set_draw_buf</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *draw_buf)</td></tr>
+<tr class="memitem:a3994cf33ef606eefeab7be1015cd65e4" id="r_a3994cf33ef606eefeab7be1015cd65e4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3994cf33ef606eefeab7be1015cd65e4">lv_canvas_set_px</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y, <a class="el" href="structlv__color__t.html">lv_color_t</a> color, <a class="el" href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a> opa)</td></tr>
+<tr class="memitem:af4c79c04cb0e9cb6a7fc4715e19b2193" id="r_af4c79c04cb0e9cb6a7fc4715e19b2193"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af4c79c04cb0e9cb6a7fc4715e19b2193">lv_canvas_set_palette</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> index, <a class="el" href="structlv__color32__t.html">lv_color32_t</a> color)</td></tr>
+<tr class="memitem:a57090536e4e8a2d5c8aae85ed68bf027" id="r_a57090536e4e8a2d5c8aae85ed68bf027"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a57090536e4e8a2d5c8aae85ed68bf027">lv_canvas_get_draw_buf</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a148dd432f788594c405f84f7f8911e9f" id="r_a148dd432f788594c405f84f7f8911e9f"><td class="memItemLeft"><a class="el" href="structlv__color32__t.html">lv_color32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a148dd432f788594c405f84f7f8911e9f">lv_canvas_get_px</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> x, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> y)</td></tr>
+<tr class="memitem:a88351f558c8cb0bceaaa8e2f1095d67a" id="r_a88351f558c8cb0bceaaa8e2f1095d67a"><td class="memItemLeft"><a class="el" href="structlv__image__dsc__t.html">lv_image_dsc_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a88351f558c8cb0bceaaa8e2f1095d67a">lv_canvas_get_image</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a4b32579d3fe3bb6e2589c36ac899b6a1" id="r_a4b32579d3fe3bb6e2589c36ac899b6a1"><td class="memItemLeft">const void *&#160;</td><td class="memItemRight"><a class="el" href="#a4b32579d3fe3bb6e2589c36ac899b6a1">lv_canvas_get_buf</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj)</td></tr>
+<tr class="memitem:a17ed22546731e9dd029ea5b0079e747e" id="r_a17ed22546731e9dd029ea5b0079e747e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17ed22546731e9dd029ea5b0079e747e">lv_canvas_copy_buf</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *canvas_area, <a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *src_buf, const <a class="el" href="structlv__area__t.html">lv_area_t</a> *src_area)</td></tr>
+<tr class="memitem:a44d801ed0d0fca3f09490a8e2474ac51" id="r_a44d801ed0d0fca3f09490a8e2474ac51"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a44d801ed0d0fca3f09490a8e2474ac51">lv_canvas_fill_bg</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="structlv__color__t.html">lv_color_t</a> color, <a class="el" href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a> opa)</td></tr>
+<tr class="memitem:a8113d7f876d48992550b8236210c968e" id="r_a8113d7f876d48992550b8236210c968e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8113d7f876d48992550b8236210c968e">lv_canvas_init_layer</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *obj, <a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer)</td></tr>
+<tr class="memitem:ab5b350e1602b5384c24b5c2a8cade1ac" id="r_ab5b350e1602b5384c24b5c2a8cade1ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab5b350e1602b5384c24b5c2a8cade1ac">lv_canvas_finish_layer</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *canvas, <a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *layer)</td></tr>
+<tr class="memitem:a2cddfdd21084ffe2fcdc1ce4879de179" id="r_a2cddfdd21084ffe2fcdc1ce4879de179"><td class="memItemLeft"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2cddfdd21084ffe2fcdc1ce4879de179">lv_canvas_buf_size</a> (<a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> w, <a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> h, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> bpp, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> stride)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9dcad9177f51515b881bceff7e682291" id="r_a9dcad9177f51515b881bceff7e682291"><td class="memItemLeft">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9dcad9177f51515b881bceff7e682291">lv_canvas_class</a></td></tr>
+</table>
+<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a9be806f23ad96997f1d62c1a6dfabe05" name="a9be806f23ad96997f1d62c1a6dfabe05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be806f23ad96997f1d62c1a6dfabe05">&#9670;&#160;</a></span>MY_CLASS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MY_CLASS&#160;&#160;&#160;(&amp;<a class="el" href="#a9dcad9177f51515b881bceff7e682291">lv_canvas_class</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Modified by NXP in 2024 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00028">28</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a2cddfdd21084ffe2fcdc1ce4879de179" name="a2cddfdd21084ffe2fcdc1ce4879de179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cddfdd21084ffe2fcdc1ce4879de179">&#9670;&#160;</a></span>lv_canvas_buf_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="stdint_8h.html#a435d1572bf3f880d55459d9805097f62">uint32_t</a> lv_canvas_buf_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>bpp</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>stride</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Just a wrapper to <span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h.html#a6fd16ee247cdfd86d46a073a08831337">LV_CANVAS_BUF_SIZE</a></span> for bindings. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00448">448</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h_source.html#l00179">LV_CANVAS_BUF_SIZE</a>.</p>
+
+</div>
+</div>
+<a id="a17ed22546731e9dd029ea5b0079e747e" name="a17ed22546731e9dd029ea5b0079e747e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17ed22546731e9dd029ea5b0079e747e">&#9670;&#160;</a></span>lv_canvas_copy_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_copy_buf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>canvas_area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src_buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structlv__area__t.html">lv_area_t</a> *</td>          <td class="paramname"><span class="paramname"><em>src_area</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Copy a buffer to the canvas </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas object </td></tr>
+    <tr><td class="paramname">canvas_area</td><td>the area of the canvas to copy the new data to </td></tr>
+    <tr><td class="paramname">src_buf</td><td>pointer to a buffer holding the source data </td></tr>
+    <tr><td class="paramname">src_area</td><td>the area of the source buffer to copy from. @nullable When NULL the whole buffer is copied. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>canvas_area and src_area should be the same size. If canvas_area and the size of src_buf are the same, src_area can be left NULL. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00291">291</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00136">LV_CHECK_ARG_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00402">lv_draw_buf_copy()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="ae388ed6ddca1f158c973319ba41cd607" name="ae388ed6ddca1f158c973319ba41cd607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae388ed6ddca1f158c973319ba41cd607">&#9670;&#160;</a></span>lv_canvas_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_canvas_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a canvas object </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>pointer to a parent widget @nullable. When NULL, the widget is created as a screen on the default display. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the created canvas </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00061">61</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">LV_LOG_INFO</a>, <a class="el" href="lv__obj__class_8c_source.html#l00045">lv_obj_class_create_obj()</a>, <a class="el" href="lv__obj__class_8c_source.html#l00107">lv_obj_class_init_obj()</a> y <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__alpha_8c_source.html#l00017">lv_example_canvas_alpha()</a>, <a class="el" href="lv__example__canvas__arc_8c_source.html#l00017">lv_example_canvas_arc()</a>, <a class="el" href="lv__example__canvas__image_8c_source.html#l00017">lv_example_canvas_image()</a>, <a class="el" href="lv__example__canvas__line_8c_source.html#l00016">lv_example_canvas_line()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a>, <a class="el" href="lv__example__canvas__triangle_8c_source.html#l00018">lv_example_canvas_triangle()</a>, <a class="el" href="lv__example__canvas__wave__text_8c_source.html#l00061">lv_example_canvas_wave_text()</a> y <a class="el" href="lv__example__canvas__windstorm__text_8c_source.html#l00064">lv_example_canvas_windstorm_text()</a>.</p>
+
+</div>
+</div>
+<a id="a44d801ed0d0fca3f09490a8e2474ac51" name="a44d801ed0d0fca3f09490a8e2474ac51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44d801ed0d0fca3f09490a8e2474ac51">&#9670;&#160;</a></span>lv_canvas_fill_bg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_fill_bg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__color__t.html">lv_color_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a></td>          <td class="paramname"><span class="paramname"><em>opa</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fill the canvas with color </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas </td></tr>
+    <tr><td class="paramname">color</td><td>the background color </td></tr>
+    <tr><td class="paramname">opa</td><td>the desired opacity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00304">304</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00136">lv_color16a_t::alpha</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00110">lv_color_t::blue</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00096">_lv_draw_buf_t::data</a>, <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00111">lv_color_t::green</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00135">lv_color16a_t::lumi</a>, <a class="el" href="lv__canvas_8c_source.html#l00113">lv_canvas_set_px()</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00157">LV_COLOR_FORMAT_AL88</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00146">LV_COLOR_FORMAT_L8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="lv__color_8c_source.html#l00382">lv_color_luminance()</a>, <a class="el" href="lv__color_8c_source.html#l00126">lv_color_to_u16()</a>, <a class="el" href="lv__color_8c_source.html#l00131">lv_color_to_u32()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00154">lv_draw_buf_flush_cache()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00112">lv_color_t::red</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__alpha_8c_source.html#l00017">lv_example_canvas_alpha()</a>, <a class="el" href="lv__example__canvas__arc_8c_source.html#l00017">lv_example_canvas_arc()</a>, <a class="el" href="lv__example__canvas__image_8c_source.html#l00017">lv_example_canvas_image()</a>, <a class="el" href="lv__example__canvas__line_8c_source.html#l00016">lv_example_canvas_line()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a> y <a class="el" href="lv__example__canvas__triangle_8c_source.html#l00018">lv_example_canvas_triangle()</a>.</p>
+
+</div>
+</div>
+<a id="ab5b350e1602b5384c24b5c2a8cade1ac" name="ab5b350e1602b5384c24b5c2a8cade1ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b350e1602b5384c24b5c2a8cade1ac">&#9670;&#160;</a></span>lv_canvas_finish_layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_finish_layer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>canvas</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait until all the drawings are finished on layer. Needs to be usd in pair with <span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h.html#a8113d7f876d48992550b8236210c968e">lv_canvas_init_layer</a></span>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">canvas</td><td>pointer to a canvas </td></tr>
+    <tr><td class="paramname">layer</td><td>pointer to a layer to finalize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00403">403</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00148">_lv_layer_t::all_tasks_added</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00106">_lv_layer_t::display</a>, <a class="el" href="src_2libs_2frogfs_2_l_i_c_e_n_s_e_8txt_source.html#l00102">display</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00103">_lv_layer_t::draw_task_head</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00067">LV_ASSERT</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__draw_8c_source.html#l00239">lv_draw_dispatch_layer()</a>, <a class="el" href="lv__draw_8c_source.html#l00322">lv_draw_dispatch_request()</a>, <a class="el" href="lv__draw_8c_source.html#l00310">lv_draw_dispatch_wait_for_request()</a>, <a class="el" href="lv__draw_8c_source.html#l00405">lv_draw_unit_send_event()</a>, <a class="el" href="lv__draw_8c_source.html#l00200">lv_draw_wait_for_finish()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00094">LV_EVENT_CHILD_DELETED</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00096">LV_EVENT_SCREEN_LOAD_START</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00112">_lv_layer_t::next</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__arc_8c_source.html#l00017">lv_example_canvas_arc()</a>, <a class="el" href="lv__example__canvas__image_8c_source.html#l00017">lv_example_canvas_image()</a>, <a class="el" href="lv__example__canvas__line_8c_source.html#l00016">lv_example_canvas_line()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a> y <a class="el" href="lv__example__canvas__triangle_8c_source.html#l00018">lv_example_canvas_triangle()</a>.</p>
+
+</div>
+</div>
+<a id="a4b32579d3fe3bb6e2589c36ac899b6a1" name="a4b32579d3fe3bb6e2589c36ac899b6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b32579d3fe3bb6e2589c36ac899b6a1">&#9670;&#160;</a></span>lv_canvas_get_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void * lv_canvas_get_buf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return the pointer for the buffer. It's recommended to use this function instead of the buffer form the return value of <a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h.html#a88351f558c8cb0bceaaa8e2f1095d67a">lv_canvas_get_image()</a> as is can be aligned </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the buffer </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00276">276</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00097">_lv_draw_buf_t::unaligned_data</a>.</p>
+
+</div>
+</div>
+<a id="a57090536e4e8a2d5c8aae85ed68bf027" name="a57090536e4e8a2d5c8aae85ed68bf027"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57090536e4e8a2d5c8aae85ed68bf027">&#9670;&#160;</a></span>lv_canvas_get_draw_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> * lv_canvas_get_draw_buf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00206">206</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a88351f558c8cb0bceaaa8e2f1095d67a" name="a88351f558c8cb0bceaaa8e2f1095d67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88351f558c8cb0bceaaa8e2f1095d67a">&#9670;&#160;</a></span>lv_canvas_get_image()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__image__dsc__t.html">lv_image_dsc_t</a> * lv_canvas_get_image </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the image of the canvas as a pointer to an <span class="tt"><a class="el" href="structlv__image__dsc__t.html">lv_image_dsc_t</a></span> variable. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>pointer to the image descriptor. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00268">268</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a148dd432f788594c405f84f7f8911e9f" name="a148dd432f788594c405f84f7f8911e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a148dd432f788594c405f84f7f8911e9f">&#9670;&#160;</a></span>lv_canvas_get_px()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structlv__color32__t.html">lv_color32_t</a> lv_canvas_get_px </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get a pixel's color and opacity </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas </td></tr>
+    <tr><td class="paramname">x</td><td>X coordinate of the pixel </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate of the pixel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>ARGB8888 color of the pixel </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00214">214</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00125">lv_color32_t::alpha</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00116">lv_color16_t::blue</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00122">lv_color32_t::blue</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00110">lv_color_t::blue</a>, <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00117">lv_color16_t::green</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00123">lv_color32_t::green</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00111">lv_color_t::green</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="include_2lvgl_2debugging_2lv__assert_8h_source.html#l00067">LV_ASSERT</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00151">LV_COLOR_FORMAT_A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00146">LV_COLOR_FORMAT_L8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00422">lv_draw_buf_goto_xy()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00417">lv_draw_buf_is_position_valid()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj__style_8h_source.html#l00061">LV_PART_MAIN</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00118">lv_color16_t::red</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00124">lv_color32_t::red</a> y <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00112">lv_color_t::red</a>.</p>
+
+</div>
+</div>
+<a id="a8113d7f876d48992550b8236210c968e" name="a8113d7f876d48992550b8236210c968e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8113d7f876d48992550b8236210c968e">&#9670;&#160;</a></span>lv_canvas_init_layer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_init_layer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a582c22621ba5b1fdf40a96325a0564e9">lv_layer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>layer</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize a layer to use LVGL's generic draw functions (lv_draw_rect/label/...) on the canvas. Needs to be usd in pair with <span class="tt"><a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h.html#ab5b350e1602b5384c24b5c2a8cade1ac">lv_canvas_finish_layer</a></span>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas </td></tr>
+    <tr><td class="paramname">layer</td><td>pointer to a layer variable to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00382">382</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00131">_lv_layer_t::_clip_area</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00118">_lv_layer_t::buf_area</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00145">_lv_layer_t::color_format</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00106">_lv_layer_t::display</a>, <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00100">_lv_layer_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__draw_8c_source.html#l00405">lv_draw_unit_send_event()</a>, <a class="el" href="include_2lvgl_2core_2lv__event_8h_source.html#l00093">LV_EVENT_CHILD_CREATED</a>, <a class="el" href="lv__draw_8c_source.html#l00428">lv_layer_init()</a>, <a class="el" href="lv__obj__tree_8c_source.html#l00289">lv_obj_get_display()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__draw_8h_source.html#l00121">_lv_layer_t::phy_clip_area</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__arc_8c_source.html#l00017">lv_example_canvas_arc()</a>, <a class="el" href="lv__example__canvas__image_8c_source.html#l00017">lv_example_canvas_image()</a>, <a class="el" href="lv__example__canvas__line_8c_source.html#l00016">lv_example_canvas_line()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a> y <a class="el" href="lv__example__canvas__triangle_8c_source.html#l00018">lv_example_canvas_triangle()</a>.</p>
+
+</div>
+</div>
+<a id="a449208b992856a8cfa644236bd9fd479" name="a449208b992856a8cfa644236bd9fd479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449208b992856a8cfa644236bd9fd479">&#9670;&#160;</a></span>lv_canvas_set_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_set_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932">lv_color_format_t</a></td>          <td class="paramname"><span class="paramname"><em>cf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a buffer for the canvas.</p>
+<p>Use <a class="el" href="include_2lvgl_2widgets_2lv__canvas_8h.html#aa9b57a935be1ff68832998ef4e29b6ec">lv_canvas_set_draw_buf()</a> instead if you need to set a buffer with alignment requirement.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas object </td></tr>
+    <tr><td class="paramname">buf</td><td>buffer where content of canvas will be. The required size is (lv_image_color_format_get_px_size(cf) * w) / 8 * h) It can be allocated with <span class="tt"><a class="el" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc()</a></span> or it can be statically allocated array (e.g. static <a class="el" href="structlv__color__t.html">lv_color_t</a> buf[100*50]) or it can be an address in RAM or external SRAM </td></tr>
+    <tr><td class="paramname">w</td><td>width of canvas </td></tr>
+    <tr><td class="paramname">h</td><td>height of canvas </td></tr>
+    <tr><td class="paramname">cf</td><td>color format. <span class="tt">LV_COLOR_FORMAT...</span> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00073">73</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00239">lv_draw_buf_init()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00102">lv_draw_buf_width_to_stride()</a>, <a class="el" href="lv__image__cache_8c_source.html#l00081">lv_image_cache_drop()</a>, <a class="el" href="lv__image_8c_source.html#l00490">lv_image_get_src()</a>, <a class="el" href="lv__image_8c_source.html#l00148">lv_image_set_src()</a>, <a class="el" href="include_2lvgl_2lv__types_8h_source.html#l00067">LV_RESULT_OK</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="lv__canvas__private_8h_source.html#l00034">_lv_canvas_t::static_buf</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__image_8c_source.html#l00017">lv_example_canvas_image()</a>.</p>
+
+</div>
+</div>
+<a id="aa9b57a935be1ff68832998ef4e29b6ec" name="aa9b57a935be1ff68832998ef4e29b6ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b57a935be1ff68832998ef4e29b6ec">&#9670;&#160;</a></span>lv_canvas_set_draw_buf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_set_draw_buf </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#aef095d20cced64810944ca64aab7ca31">lv_draw_buf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>draw_buf</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a draw buffer for the canvas. A draw buffer either can be allocated by <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a9efa15f1c2e128c938ea00e991f68e2e">lv_draw_buf_create()</a></span> or defined statically by <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a9e8f0809964b17439a5bdc773bb3ca32">LV_DRAW_BUF_DEFINE_STATIC</a></span>. When buffer start address and stride has alignment requirement, it's recommended to use <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h.html#a9efa15f1c2e128c938ea00e991f68e2e">lv_draw_buf_create</a></span>. </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas object </td></tr>
+    <tr><td class="paramname">draw_buf</td><td>pointer to a draw buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00095">95</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00098">_lv_draw_buf_t::handlers</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">LV_CHECK_ARG</a>, <a class="el" href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00136">LV_CHECK_ARG_MSG</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__image__cache_8c_source.html#l00081">lv_image_cache_drop()</a>, <a class="el" href="lv__image_8c_source.html#l00490">lv_image_get_src()</a>, <a class="el" href="lv__image_8c_source.html#l00148">lv_image_set_src()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__example__canvas__alpha_8c_source.html#l00017">lv_example_canvas_alpha()</a>, <a class="el" href="lv__example__canvas__arc_8c_source.html#l00017">lv_example_canvas_arc()</a>, <a class="el" href="lv__example__canvas__line_8c_source.html#l00016">lv_example_canvas_line()</a>, <a class="el" href="lv__example__canvas__rectangle_8c_source.html#l00017">lv_example_canvas_rectangle()</a>, <a class="el" href="lv__example__canvas__rotate_8c_source.html#l00018">lv_example_canvas_rotate()</a>, <a class="el" href="lv__example__canvas__triangle_8c_source.html#l00018">lv_example_canvas_triangle()</a>, <a class="el" href="lv__example__canvas__wave__text_8c_source.html#l00061">lv_example_canvas_wave_text()</a> y <a class="el" href="lv__example__canvas__windstorm__text_8c_source.html#l00064">lv_example_canvas_windstorm_text()</a>.</p>
+
+</div>
+</div>
+<a id="af4c79c04cb0e9cb6a7fc4715e19b2193" name="af4c79c04cb0e9cb6a7fc4715e19b2193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c79c04cb0e9cb6a7fc4715e19b2193">&#9670;&#160;</a></span>lv_canvas_set_palette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_set_palette </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__color32__t.html">lv_color32_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the palette color of a canvas for index format. Valid only for <span class="tt">LV_COLOR_FORMAT_I1/2/4/8</span> </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to canvas object </td></tr>
+    <tr><td class="paramname">index</td><td>the palette color to set:<ul>
+<li>for <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ad307868267c4b8c79770008c5b9ca5e4">LV_COLOR_FORMAT_I1</a></span>: 0..1</li>
+<li>for <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a57cd2efef8d89876ab42b303686a3a7c">LV_COLOR_FORMAT_I2</a></span>: 0..3</li>
+<li>for <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932aa680509a87486d2e3be354d6619af680">LV_COLOR_FORMAT_I4</a></span>: 0..15</li>
+<li>for <span class="tt"><a class="el" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932ae06216fdd0bf012bba81eb1881183d19">LV_COLOR_FORMAT_I8</a></span>: 0..255 </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">color</td><td>the color to set </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00190">190</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00538">lv_draw_buf_set_palette()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a3994cf33ef606eefeab7be1015cd65e4" name="a3994cf33ef606eefeab7be1015cd65e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3994cf33ef606eefeab7be1015cd65e4">&#9670;&#160;</a></span>lv_canvas_set_px()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lv_canvas_set_px </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structlv__color__t.html">lv_color_t</a></td>          <td class="paramname"><span class="paramname"><em>color</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#acdb0f6245624d86b1cb002186fd6cf96">lv_opa_t</a></td>          <td class="paramname"><span class="paramname"><em>opa</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a pixel's color and opacity </p><dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>pointer to a canvas </td></tr>
+    <tr><td class="paramname">x</td><td>X coordinate of the pixel </td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinate of the pixel </td></tr>
+    <tr><td class="paramname">color</td><td>the color </td></tr>
+    <tr><td class="paramname">opa</td><td>the opacity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>The following color formats are supported LV_COLOR_FORMAT_I1/2/4/8, LV_COLOR_FORMAT_A8, LV_COLOR_FORMAT_RGB565, LV_COLOR_FORMAT_RGB888, LV_COLOR_FORMAT_XRGB8888, LV_COLOR_FORMAT_ARGB8888 </dd>
+<dd>
+this function invalidates the canvas object every time, for best performance, if you're changing a lot of pixels in a loop, call <span class="tt"><a class="el" href="include_2lvgl_2display_2lv__display_8h.html#ab3a307b7c6910a02b07db9c6e7dd76a4">lv_display_enable_invalidation</a></span> before the loop starts so the invalidation isn't done on every call </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00113">113</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00110">lv_color_t::blue</a>, <a class="el" href="include_2lvgl_2draw_2lv__image__dsc_8h_source.html#l00111">lv_image_header_t::cf</a>, <a class="el" href="lv__canvas__private_8h_source.html#l00033">_lv_canvas_t::draw_buf</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00111">lv_color_t::green</a>, <a class="el" href="include_2lvgl_2draw_2lv__draw__buf_8h_source.html#l00094">_lv_draw_buf_t::header</a>, <a class="el" href="lv__check__obj_8h_source.html#l00071">LV_CHECK_OBJ</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00151">LV_COLOR_FORMAT_A8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00157">LV_COLOR_FORMAT_AL88</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">LV_COLOR_FORMAT_ARGB8888</a>, <a class="el" href="lv__color_8c_source.html#l00043">lv_color_format_get_bpp()</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00147">LV_COLOR_FORMAT_I1</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00148">LV_COLOR_FORMAT_I2</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00149">LV_COLOR_FORMAT_I4</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00150">LV_COLOR_FORMAT_I8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00204">LV_COLOR_FORMAT_IS_INDEXED</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00146">LV_COLOR_FORMAT_L8</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00154">LV_COLOR_FORMAT_RGB565</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00161">LV_COLOR_FORMAT_RGB888</a>, <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00163">LV_COLOR_FORMAT_XRGB8888</a>, <a class="el" href="lv__color_8c_source.html#l00382">lv_color_luminance()</a>, <a class="el" href="lv__draw__buf_8c_source.html#l00422">lv_draw_buf_goto_xy()</a>, <a class="el" href="lv__obj__pos_8c_source.html#l01119">lv_obj_invalidate()</a>, <a class="el" href="lv__obj_8c_source.html#l00025">MY_CLASS</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a> y <a class="el" href="include_2lvgl_2draw_2lv__color_8h_source.html#l00112">lv_color_t::red</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="lv__canvas_8c_source.html#l00304">lv_canvas_fill_bg()</a> y <a class="el" href="lv__example__canvas__alpha_8c_source.html#l00017">lv_example_canvas_alpha()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Documentación de variables</h2>
+<a id="a9dcad9177f51515b881bceff7e682291" name="a9dcad9177f51515b881bceff7e682291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dcad9177f51515b881bceff7e682291">&#9670;&#160;</a></span>lv_canvas_class</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_canvas_class</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor inicial:</b><div class="fragment"><div class="line">                                     = {</div>
+<div class="line">    .constructor_cb = lv_canvas_constructor,</div>
+<div class="line">    .destructor_cb = lv_canvas_destructor,</div>
+<div class="line">    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a90b29f8449ad2cc6f065abf732996546">lv_canvas_t</a>),</div>
+<div class="line">    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2widgets_2lv__image_8h.html#a38781db28b75d735ea4116811a95da1b">lv_image_class</a>,</div>
+<div class="line">    .name = <span class="stringliteral">&quot;lv_canvas&quot;</span>,</div>
+<div class="line">}</div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a90b29f8449ad2cc6f065abf732996546"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a90b29f8449ad2cc6f065abf732996546">lv_canvas_t</a></div><div class="ttdeci">struct _lv_canvas_t lv_canvas_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00206">lv_types.h:206</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_a38781db28b75d735ea4116811a95da1b"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#a38781db28b75d735ea4116811a95da1b">lv_image_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_image_class</div><div class="ttdef"><b>Definition</b> <a href="lv__image_8c_source.html#l00116">lv_image.c:116</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definición en la línea <a class="el" href="lv__canvas_8c_source.html#l00045">45</a> del archivo <a class="el" href="lv__canvas_8c_source.html">lv_canvas.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_7d4f8216b3ff01558054747bad22e86a.html">widgets</a></li><li class="navelem"><a href="dir_f256e922503634413f8c3ea99bb7b96c.html">canvas</a></li><li class="navelem"><a href="lv__canvas_8c.html">lv_canvas.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

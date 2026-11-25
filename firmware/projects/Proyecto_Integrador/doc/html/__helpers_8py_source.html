@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/widgets/_helpers.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('__helpers_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">_helpers.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="__helpers_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;Shared field-reading helpers for widget wrappers.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral">All helpers return a safe value (or None) without raising exceptions.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">Protection is provided by Value.safe_field() and Value.string(fallback=).</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1lvgl_1_1data__utils.html">lvglgdb.lvgl.data_utils</a> <span class="keyword">import</span> ptr_or_none  <span class="comment"># noqa: F401</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="" data-end="">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a5c109239579e357371ca6d9252cabe80">   10</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a5c109239579e357371ca6d9252cabe80">safe_string</a>(obj, field_name):</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="stringliteral">&quot;&quot;&quot;Read a char* field as string, corrupted marker, or None (NULL/missing).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1value.html">lvglgdb.value</a> <span class="keyword">import</span> CorruptedValue</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    val = obj.safe_field(field_name)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordflow">if</span> val <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> getattr(val, <span class="stringliteral">&#39;is_ok&#39;</span>, <span class="keyword">True</span>):</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> str(val)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    addr = int(val)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> addr:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">return</span> val.string(fallback=str(<a class="code hl_class" href="classlvglgdb_1_1value_1_1_corrupted_value.html">CorruptedValue</a>(addr, MemoryError(<span class="stringliteral">&quot;unreadable&quot;</span>))))</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+</div>
+<div class="foldopen" id="foldopen00024" data-start="" data-end="">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a1ea1608a5d8a8179d63544b47ca6d341">   24</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a1ea1608a5d8a8179d63544b47ca6d341">safe_color</a>(obj, field_name):</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="stringliteral">&quot;&quot;&quot;Read lv_color_t {red, green, blue} as hex string.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    val = obj.safe_field(field_name)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> val <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> <span class="keywordflow">not</span> getattr(val, <span class="stringliteral">&#39;is_ok&#39;</span>, <span class="keyword">True</span>):</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    r = int(val.safe_field(<span class="stringliteral">&quot;red&quot;</span>, 0))</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    g = int(val.safe_field(<span class="stringliteral">&quot;green&quot;</span>, 0))</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    b = int(val.safe_field(<span class="stringliteral">&quot;blue&quot;</span>, 0))</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">return</span> f<span class="stringliteral">&quot;#{r:02x}{g:02x}{b:02x}&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a44a469699747a840f31e72c0be2d262f">   35</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a44a469699747a840f31e72c0be2d262f">safe_area</a>(obj, field_name):</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="stringliteral">&quot;&quot;&quot;Read lv_area_t as dict.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    val = obj.safe_field(field_name)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> val <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> <span class="keywordflow">not</span> getattr(val, <span class="stringliteral">&#39;is_ok&#39;</span>, <span class="keyword">True</span>):</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="stringliteral">&quot;x1&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;x1&quot;</span>, 0)),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="stringliteral">&quot;y1&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;y1&quot;</span>, 0)),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="stringliteral">&quot;x2&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;x2&quot;</span>, 0)),</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="stringliteral">&quot;y2&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;y2&quot;</span>, 0)),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+</div>
+<div class="foldopen" id="foldopen00048" data-start="" data-end="">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#ad20a92286c8893b7a600ef8d63f319a6">   48</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#ad20a92286c8893b7a600ef8d63f319a6">safe_point</a>(obj, field_name):</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="stringliteral">&quot;&quot;&quot;Read lv_point_t as dict.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    val = obj.safe_field(field_name)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> val <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> <span class="keywordflow">not</span> getattr(val, <span class="stringliteral">&#39;is_ok&#39;</span>, <span class="keyword">True</span>):</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="stringliteral">&quot;x&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;x&quot;</span>, 0)),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="stringliteral">&quot;y&quot;</span>: int(val.safe_field(<span class="stringliteral">&quot;y&quot;</span>, 0)),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+</div>
+<div class="foldopen" id="foldopen00059" data-start="" data-end="">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a35ffad8026c289d8c92d2d8874d34988">   59</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a35ffad8026c289d8c92d2d8874d34988">safe_wrapper</a>(obj, field_name, module_path, class_name):</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="stringliteral">&quot;&quot;&quot;Read a struct field using its known Value wrapper, return snapshot dict.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral">    Not every wrapper has a snapshot(); LVArray does not. Value forwards an</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">    unknown attribute to gdb.Value.__getitem__, so asking for one raises</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">    gdb.error rather than AttributeError, and the caller would otherwise lose</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="stringliteral">    the whole widget - and its subtree - over a single field.</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">import</span> gdb</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    val = obj.safe_field(field_name)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> val <span class="keywordflow">is</span> <span class="keywordtype">None</span> <span class="keywordflow">or</span> <span class="keywordflow">not</span> getattr(val, <span class="stringliteral">&#39;is_ok&#39;</span>, <span class="keyword">True</span>):</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">import</span> importlib</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">try</span>:</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        mod = importlib.import_module(module_path)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        cls = getattr(mod, class_name)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        wrapper = cls(val)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">if</span> getattr(type(wrapper), <span class="stringliteral">&quot;snapshot&quot;</span>, <span class="keywordtype">None</span>) <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="comment"># An embedded struct - lv_scale_t.needles - is not convertible to an</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="comment"># int, so the address has to come from the field itself.</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">if</span> val.type.strip_typedefs().code != gdb.TYPE_CODE_PTR:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                val = val.address</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">return</span> {<span class="stringliteral">&quot;addr&quot;</span>: hex(int(val)), <span class="stringliteral">&quot;type&quot;</span>: class_name}</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> wrapper.snapshot().as_dict()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">except</span> (gdb.error, gdb.MemoryError, ImportError, AttributeError, TypeError):</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span> <span class="keywordtype">None</span></div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_corrupted_value_html"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_corrupted_value.html">lvglgdb.value.CorruptedValue</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00273">value.py:273</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1data__utils_html"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1data__utils.html">lvglgdb.lvgl.data_utils</a></div><div class="ttdef"><b>Definition</b> <a href="data__utils_8py_source.html#l00001">data_utils.py:1</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers_html_a1ea1608a5d8a8179d63544b47ca6d341"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a1ea1608a5d8a8179d63544b47ca6d341">lvglgdb.lvgl.widgets._helpers.safe_color</a></div><div class="ttdeci">safe_color(obj, field_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00024">_helpers.py:24</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers_html_a35ffad8026c289d8c92d2d8874d34988"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a35ffad8026c289d8c92d2d8874d34988">lvglgdb.lvgl.widgets._helpers.safe_wrapper</a></div><div class="ttdeci">safe_wrapper(obj, field_name, module_path, class_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">_helpers.py:59</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers_html_a44a469699747a840f31e72c0be2d262f"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a44a469699747a840f31e72c0be2d262f">lvglgdb.lvgl.widgets._helpers.safe_area</a></div><div class="ttdeci">safe_area(obj, field_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">_helpers.py:35</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers_html_a5c109239579e357371ca6d9252cabe80"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#a5c109239579e357371ca6d9252cabe80">lvglgdb.lvgl.widgets._helpers.safe_string</a></div><div class="ttdeci">safe_string(obj, field_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00010">_helpers.py:10</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers_html_ad20a92286c8893b7a600ef8d63f319a6"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1__helpers.html#ad20a92286c8893b7a600ef8d63f319a6">lvglgdb.lvgl.widgets._helpers.safe_point</a></div><div class="ttdeci">safe_point(obj, field_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">_helpers.py:48</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1value_html"><div class="ttname"><a href="namespacelvglgdb_1_1value.html">lvglgdb.value</a></div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00001">value.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_201b7a9d9a46579215ae39de1754cc76.html">widgets</a></li><li class="navelem"><a href="__helpers_8py.html">_helpers.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

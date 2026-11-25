@@ -1,0 +1,1252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia de la plantilla de la clase PrettyWriter&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('class_pretty_writer.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la plantilla de la clase PrettyWriter&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="class_writer.html" title="JSON writer.">Writer</a> with indentation and spacing.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de PrettyWriter&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_pretty_writer.png" usemap="#PrettyWriter_3C_20OutputStream_2C_20SourceEncoding_2C_20TargetEncoding_2C_20StackAllocator_2C_20writeFlags_20_3E_map" alt=""/>
+  <map id="PrettyWriter_3C_20OutputStream_2C_20SourceEncoding_2C_20TargetEncoding_2C_20StackAllocator_2C_20writeFlags_20_3E_map" name="PrettyWriter_3C_20OutputStream_2C_20SourceEncoding_2C_20TargetEncoding_2C_20StackAllocator_2C_20writeFlags_20_3E_map">
+<area href="class_writer.html" alt="Writer&lt; OutputStream, UTF8&lt;&gt;, UTF8&lt;&gt;, CrtAllocator, kWriteDefaultFlags &gt;" shape="rect" coords="0,0,538,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Tipos públicos</h2></td></tr>
+<tr class="memitem:aa756e12dd9ee731a1e0f9831c4a3602e" id="r_aa756e12dd9ee731a1e0f9831c4a3602e"><td class="memItemLeft">typedef <a class="el" href="class_writer.html">Writer</a>&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa756e12dd9ee731a1e0f9831c4a3602e">Base</a></td></tr>
+<tr class="memitem:a9204ec6a6fb106573f4784eeb4e7d8c3" id="r_a9204ec6a6fb106573f4784eeb4e7d8c3"><td class="memItemLeft">typedef <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Base::Ch</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a></td></tr>
+<tr class="inherit_header pub_types_class_writer"><td colspan="2">Tipos públicos heredados de <a class="el" href="class_writer.html">Writer&lt; OutputStream, UTF8&lt;&gt;, UTF8&lt;&gt;, CrtAllocator, kWriteDefaultFlags &gt;</a></td></tr>
+<tr class="memitem:a100c3c0b3c33974a2555c26e9f172211 pub_types_class_writer" id="r_a100c3c0b3c33974a2555c26e9f172211"><td class="memItemLeft">typedef <a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt;::Ch&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a0d4880ef3bca4afe31716b8c31644844" id="r_a0d4880ef3bca4afe31716b8c31644844"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a0d4880ef3bca4afe31716b8c31644844">PrettyWriter</a> (OutputStream &amp;os, StackAllocator *allocator=0, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> levelDepth=<a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">Base::kDefaultLevelDepth</a>)</td></tr>
+<tr class="memdesc:a0d4880ef3bca4afe31716b8c31644844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:a2bc570f891a76b2e65b689b84a7e4c3d" id="r_a2bc570f891a76b2e65b689b84a7e4c3d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2bc570f891a76b2e65b689b84a7e4c3d">PrettyWriter</a> (StackAllocator *allocator=0, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> levelDepth=<a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">Base::kDefaultLevelDepth</a>)</td></tr>
+<tr class="memitem:a203db678ca7f4202c8ede679bdca065c" id="r_a203db678ca7f4202c8ede679bdca065c"><td class="memItemLeft"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a203db678ca7f4202c8ede679bdca065c">SetIndent</a> (<a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> indentChar, unsigned indentCharCount)</td></tr>
+<tr class="memdesc:a203db678ca7f4202c8ede679bdca065c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set custom indentation.  <br /></td></tr>
+<tr class="memitem:ad032f6c42da4bcecde78a1910e1047d9" id="r_ad032f6c42da4bcecde78a1910e1047d9"><td class="memItemLeft"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad032f6c42da4bcecde78a1910e1047d9">SetFormatOptions</a> (<a class="el" href="prettywriter_8h.html#a150fd6ef2dbf4025c33ece85451982d5">PrettyFormatOptions</a> options)</td></tr>
+<tr class="memdesc:ad032f6c42da4bcecde78a1910e1047d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pretty writer formatting options.  <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Implementation of Handler</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><dl class="section see"><dt>Ver también</dt><dd><a class="el" href="classrapidjson_1_1_handler.html" title="Concept for receiving events from GenericReader upon parsing. The functions return true if no error o...">Handler</a> </dd></dl>
+</div></td></tr>
+<tr class="memitem:a83726c3e82631cc2b8ccb6e1003802dd" id="r_a83726c3e82631cc2b8ccb6e1003802dd"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a83726c3e82631cc2b8ccb6e1003802dd">Null</a> ()</td></tr>
+<tr class="memitem:a2771b84162e8e5989582dcfa2e0a619c" id="r_a2771b84162e8e5989582dcfa2e0a619c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2771b84162e8e5989582dcfa2e0a619c">Bool</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> b)</td></tr>
+<tr class="memitem:ac33a3b8045cfa32baebf44c4f832b83c" id="r_ac33a3b8045cfa32baebf44c4f832b83c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac33a3b8045cfa32baebf44c4f832b83c">Int</a> (int i)</td></tr>
+<tr class="memitem:a86cfd5a805bac8d0b84dcf284396b89f" id="r_a86cfd5a805bac8d0b84dcf284396b89f"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a86cfd5a805bac8d0b84dcf284396b89f">Uint</a> (unsigned u)</td></tr>
+<tr class="memitem:ab57d0f5570905d393450daca545d3a46" id="r_ab57d0f5570905d393450daca545d3a46"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab57d0f5570905d393450daca545d3a46">Int64</a> (<a class="el" href="stdint_8h.html#a414156feea104f8f75b4ed9e3121b2f6">int64_t</a> i64)</td></tr>
+<tr class="memitem:a24f0a54c02c1974af053f1bfbf446f30" id="r_a24f0a54c02c1974af053f1bfbf446f30"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a24f0a54c02c1974af053f1bfbf446f30">Uint64</a> (<a class="el" href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> u64)</td></tr>
+<tr class="memitem:ab0849c2598ffcad58d01b468676ed580" id="r_ab0849c2598ffcad58d01b468676ed580"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab0849c2598ffcad58d01b468676ed580">Double</a> (double d)</td></tr>
+<tr class="memitem:a89f91d1d4227d67db8df58864c0be9dd" id="r_a89f91d1d4227d67db8df58864c0be9dd"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a89f91d1d4227d67db8df58864c0be9dd">RawNumber</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memitem:ad92413ac61bb6efc02026361551b6b56" id="r_ad92413ac61bb6efc02026361551b6b56"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad92413ac61bb6efc02026361551b6b56">String</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memitem:a0932d4d164d5d4d47cb69beb5deb2464" id="r_a0932d4d164d5d4d47cb69beb5deb2464"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0932d4d164d5d4d47cb69beb5deb2464">StartObject</a> ()</td></tr>
+<tr class="memitem:a8aed8b5e494ca3e6d56f1f848f4419c8" id="r_a8aed8b5e494ca3e6d56f1f848f4419c8"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8aed8b5e494ca3e6d56f1f848f4419c8">Key</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memitem:a4d4d0ddcbfc233083c51517f0091ee8c" id="r_a4d4d0ddcbfc233083c51517f0091ee8c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4d4d0ddcbfc233083c51517f0091ee8c">EndObject</a> (<a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> memberCount=0)</td></tr>
+<tr class="memitem:a432aca099c1c5354bbcb0b7e4e5a2b7e" id="r_a432aca099c1c5354bbcb0b7e4e5a2b7e"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a432aca099c1c5354bbcb0b7e4e5a2b7e">StartArray</a> ()</td></tr>
+<tr class="memitem:a2cae8f43afaab6eee1572eeebe3c45bf" id="r_a2cae8f43afaab6eee1572eeebe3c45bf"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2cae8f43afaab6eee1572eeebe3c45bf">EndArray</a> (<a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> memberCount=0)</td></tr>
+<tr class="inherit_header pub_methods_class_writer"><td colspan="2">Métodos públicos heredados de <a class="el" href="class_writer.html">Writer&lt; OutputStream, UTF8&lt;&gt;, UTF8&lt;&gt;, CrtAllocator, kWriteDefaultFlags &gt;</a></td></tr>
+<tr class="memitem:a7547df83f81c5c28cf71080a076c4a3c pub_methods_class_writer" id="r_a7547df83f81c5c28cf71080a076c4a3c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a7547df83f81c5c28cf71080a076c4a3c">Writer</a> (OutputStream &amp;os, <a class="el" href="class_crt_allocator.html">CrtAllocator</a> *stackAllocator=0, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> levelDepth=<a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">kDefaultLevelDepth</a>)</td></tr>
+<tr class="memdesc:a7547df83f81c5c28cf71080a076c4a3c pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="memitem:abb0048e870cecd3815c6e3e8d7f81a1b pub_methods_class_writer" id="r_abb0048e870cecd3815c6e3e8d7f81a1b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#abb0048e870cecd3815c6e3e8d7f81a1b">Reset</a> (OutputStream &amp;os)</td></tr>
+<tr class="memdesc:abb0048e870cecd3815c6e3e8d7f81a1b pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the writer with a new stream.  <br /></td></tr>
+<tr class="memitem:a2dcfd43994bb6ea7a391ced3f53b71df pub_methods_class_writer" id="r_a2dcfd43994bb6ea7a391ced3f53b71df"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a2dcfd43994bb6ea7a391ced3f53b71df">IsComplete</a> () const</td></tr>
+<tr class="memdesc:a2dcfd43994bb6ea7a391ced3f53b71df pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the output is a complete JSON.  <br /></td></tr>
+<tr class="memitem:aadc4a03119af047f92b7cdb87d232141 pub_methods_class_writer" id="r_aadc4a03119af047f92b7cdb87d232141"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aadc4a03119af047f92b7cdb87d232141">GetMaxDecimalPlaces</a> () const</td></tr>
+<tr class="memitem:a1ee2b09fb28d6fbab4950328c6edc1b4 pub_methods_class_writer" id="r_a1ee2b09fb28d6fbab4950328c6edc1b4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a1ee2b09fb28d6fbab4950328c6edc1b4">SetMaxDecimalPlaces</a> (int maxDecimalPlaces)</td></tr>
+<tr class="memdesc:a1ee2b09fb28d6fbab4950328c6edc1b4 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the maximum number of decimal places for double output.  <br /></td></tr>
+<tr class="memitem:a83726c3e82631cc2b8ccb6e1003802dd pub_methods_class_writer" id="r_a83726c3e82631cc2b8ccb6e1003802dd"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a83726c3e82631cc2b8ccb6e1003802dd">Null</a> ()</td></tr>
+<tr class="memdesc:a83726c3e82631cc2b8ccb6e1003802dd pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a2771b84162e8e5989582dcfa2e0a619c pub_methods_class_writer" id="r_a2771b84162e8e5989582dcfa2e0a619c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a2771b84162e8e5989582dcfa2e0a619c">Bool</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> b)</td></tr>
+<tr class="memdesc:a2771b84162e8e5989582dcfa2e0a619c pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:ac33a3b8045cfa32baebf44c4f832b83c pub_methods_class_writer" id="r_ac33a3b8045cfa32baebf44c4f832b83c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ac33a3b8045cfa32baebf44c4f832b83c">Int</a> (int i)</td></tr>
+<tr class="memdesc:ac33a3b8045cfa32baebf44c4f832b83c pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a86cfd5a805bac8d0b84dcf284396b89f pub_methods_class_writer" id="r_a86cfd5a805bac8d0b84dcf284396b89f"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a86cfd5a805bac8d0b84dcf284396b89f">Uint</a> (unsigned u)</td></tr>
+<tr class="memdesc:a86cfd5a805bac8d0b84dcf284396b89f pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:ab57d0f5570905d393450daca545d3a46 pub_methods_class_writer" id="r_ab57d0f5570905d393450daca545d3a46"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ab57d0f5570905d393450daca545d3a46">Int64</a> (<a class="el" href="stdint_8h.html#a414156feea104f8f75b4ed9e3121b2f6">int64_t</a> i64)</td></tr>
+<tr class="memdesc:ab57d0f5570905d393450daca545d3a46 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a24f0a54c02c1974af053f1bfbf446f30 pub_methods_class_writer" id="r_a24f0a54c02c1974af053f1bfbf446f30"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a24f0a54c02c1974af053f1bfbf446f30">Uint64</a> (<a class="el" href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> u64)</td></tr>
+<tr class="memdesc:a24f0a54c02c1974af053f1bfbf446f30 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:ab0849c2598ffcad58d01b468676ed580 pub_methods_class_writer" id="r_ab0849c2598ffcad58d01b468676ed580"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ab0849c2598ffcad58d01b468676ed580">Double</a> (double d)</td></tr>
+<tr class="memdesc:ab0849c2598ffcad58d01b468676ed580 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a89f91d1d4227d67db8df58864c0be9dd pub_methods_class_writer" id="r_a89f91d1d4227d67db8df58864c0be9dd"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a89f91d1d4227d67db8df58864c0be9dd">RawNumber</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memdesc:a89f91d1d4227d67db8df58864c0be9dd pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:ad92413ac61bb6efc02026361551b6b56 pub_methods_class_writer" id="r_ad92413ac61bb6efc02026361551b6b56"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ad92413ac61bb6efc02026361551b6b56">String</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memdesc:ad92413ac61bb6efc02026361551b6b56 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a0932d4d164d5d4d47cb69beb5deb2464 pub_methods_class_writer" id="r_a0932d4d164d5d4d47cb69beb5deb2464"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a0932d4d164d5d4d47cb69beb5deb2464">StartObject</a> ()</td></tr>
+<tr class="memdesc:a0932d4d164d5d4d47cb69beb5deb2464 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a8aed8b5e494ca3e6d56f1f848f4419c8 pub_methods_class_writer" id="r_a8aed8b5e494ca3e6d56f1f848f4419c8"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a8aed8b5e494ca3e6d56f1f848f4419c8">Key</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length, <a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> copy=<a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a>)</td></tr>
+<tr class="memdesc:a8aed8b5e494ca3e6d56f1f848f4419c8 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a4d4d0ddcbfc233083c51517f0091ee8c pub_methods_class_writer" id="r_a4d4d0ddcbfc233083c51517f0091ee8c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a4d4d0ddcbfc233083c51517f0091ee8c">EndObject</a> (<a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> memberCount=0)</td></tr>
+<tr class="memdesc:a4d4d0ddcbfc233083c51517f0091ee8c pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a432aca099c1c5354bbcb0b7e4e5a2b7e pub_methods_class_writer" id="r_a432aca099c1c5354bbcb0b7e4e5a2b7e"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a432aca099c1c5354bbcb0b7e4e5a2b7e">StartArray</a> ()</td></tr>
+<tr class="memdesc:a432aca099c1c5354bbcb0b7e4e5a2b7e pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:a8a2a0788222c1bd23bf53613ed9e1926 pub_methods_class_writer" id="r_a8a2a0788222c1bd23bf53613ed9e1926"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a8a2a0788222c1bd23bf53613ed9e1926">EndArray</a> (<a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> elementCount=0)</td></tr>
+<tr class="memdesc:a8a2a0788222c1bd23bf53613ed9e1926 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the given <code>double</code> value to the stream.  <br /></td></tr>
+<tr class="memitem:af8e7b9f849163fe092fd1826bc088ce3 pub_methods_class_writer" id="r_af8e7b9f849163fe092fd1826bc088ce3"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#af8e7b9f849163fe092fd1826bc088ce3">RawValue</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *json, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> length, <a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
+<tr class="memdesc:af8e7b9f849163fe092fd1826bc088ce3 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a raw JSON value.  <br /></td></tr>
+<tr class="memitem:a0e2644b2df3c228e8d71a55b60723f31 pub_methods_class_writer" id="r_a0e2644b2df3c228e8d71a55b60723f31"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a0e2644b2df3c228e8d71a55b60723f31">Flush</a> ()</td></tr>
+<tr class="memdesc:a0e2644b2df3c228e8d71a55b60723f31 pub_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the output stream.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Convenience extensions</h2></td></tr>
+<tr class="memitem:a71060b14c6107d1fb1a6baaad9d50c01" id="r_a71060b14c6107d1fb1a6baaad9d50c01"><td class="memItemLeft"><a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a>&#160;</td><td class="memItemRight"><a class="el" href="#a71060b14c6107d1fb1a6baaad9d50c01">indentChar_</a></td></tr>
+<tr class="memdesc:a71060b14c6107d1fb1a6baaad9d50c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a1de367f38c9c0a22af0ef25fedc4194c" id="r_a1de367f38c9c0a22af0ef25fedc4194c"><td class="memItemLeft">unsigned&#160;</td><td class="memItemRight"><a class="el" href="#a1de367f38c9c0a22af0ef25fedc4194c">indentCharCount_</a></td></tr>
+<tr class="memdesc:a1de367f38c9c0a22af0ef25fedc4194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a4f151b8155c8b8a4092138c99c125712" id="r_a4f151b8155c8b8a4092138c99c125712"><td class="memItemLeft"><a class="el" href="prettywriter_8h.html#a150fd6ef2dbf4025c33ece85451982d5">PrettyFormatOptions</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4f151b8155c8b8a4092138c99c125712">formatOptions_</a></td></tr>
+<tr class="memdesc:a4f151b8155c8b8a4092138c99c125712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a16439ba1963d77c2800422abbaff0bfc" id="r_a16439ba1963d77c2800422abbaff0bfc"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#a16439ba1963d77c2800422abbaff0bfc">String</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *str)</td></tr>
+<tr class="memdesc:a16439ba1963d77c2800422abbaff0bfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aa4e77c9d1794a68f2ef9096bb3033b89" id="r_aa4e77c9d1794a68f2ef9096bb3033b89"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa4e77c9d1794a68f2ef9096bb3033b89">Key</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *str)</td></tr>
+<tr class="memdesc:aa4e77c9d1794a68f2ef9096bb3033b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:af8e7b9f849163fe092fd1826bc088ce3" id="r_af8e7b9f849163fe092fd1826bc088ce3"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="#af8e7b9f849163fe092fd1826bc088ce3">RawValue</a> (const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *json, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> length, <a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
+<tr class="memdesc:af8e7b9f849163fe092fd1826bc088ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a raw JSON value.  <br /></td></tr>
+<tr class="memitem:a8cfdb2497abc4b448d1f935c8480bc17" id="r_a8cfdb2497abc4b448d1f935c8480bc17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8cfdb2497abc4b448d1f935c8480bc17">PrettyPrefix</a> (<a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
+<tr class="memdesc:a8cfdb2497abc4b448d1f935c8480bc17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:adf8f107f25e5065028f8ae704e4c6f0c" id="r_adf8f107f25e5065028f8ae704e4c6f0c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf8f107f25e5065028f8ae704e4c6f0c">WriteIndent</a> ()</td></tr>
+<tr class="memdesc:adf8f107f25e5065028f8ae704e4c6f0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+Otros miembros heredados</h2></td></tr>
+<tr class="inherit_header pub_static_attribs_class_writer"><td colspan="2">Atributos públicos estáticos heredados de <a class="el" href="class_writer.html">Writer&lt; OutputStream, UTF8&lt;&gt;, UTF8&lt;&gt;, CrtAllocator, kWriteDefaultFlags &gt;</a></td></tr>
+<tr class="memitem:aef61606f420a5701a83a08f5e026a8c3 pub_static_attribs_class_writer" id="r_aef61606f420a5701a83a08f5e026a8c3"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aef61606f420a5701a83a08f5e026a8c3">kDefaultMaxDecimalPlaces</a></td></tr>
+<tr class="memitem:a25e62e0b06943e588c8e0fb9e90d0722 pub_static_attribs_class_writer" id="r_a25e62e0b06943e588c8e0fb9e90d0722"><td class="memItemLeft">static const <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">kDefaultLevelDepth</a></td></tr>
+<tr class="memdesc:a25e62e0b06943e588c8e0fb9e90d0722 pub_static_attribs_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_writer"><td colspan="2">Métodos protegidos heredados de <a class="el" href="class_writer.html">Writer&lt; OutputStream, UTF8&lt;&gt;, UTF8&lt;&gt;, CrtAllocator, kWriteDefaultFlags &gt;</a></td></tr>
+<tr class="memitem:a15d6565a240ab0a3dc185bbb861486b4 pro_methods_class_writer" id="r_a15d6565a240ab0a3dc185bbb861486b4"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a15d6565a240ab0a3dc185bbb861486b4">WriteInt</a> (int i)</td></tr>
+<tr class="memitem:aee0a6bb63bc98c2d29bedd82da87b251 pro_methods_class_writer" id="r_aee0a6bb63bc98c2d29bedd82da87b251"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aee0a6bb63bc98c2d29bedd82da87b251">WriteUint</a> (unsigned u)</td></tr>
+<tr class="memitem:aaba3a73795b97b0fa707f44a86f857b7 pro_methods_class_writer" id="r_aaba3a73795b97b0fa707f44a86f857b7"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aaba3a73795b97b0fa707f44a86f857b7">WriteInt64</a> (<a class="el" href="stdint_8h.html#a414156feea104f8f75b4ed9e3121b2f6">int64_t</a> i64)</td></tr>
+<tr class="memitem:aa1702a1fe7cd97cb7dfed179968b6b40 pro_methods_class_writer" id="r_aa1702a1fe7cd97cb7dfed179968b6b40"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aa1702a1fe7cd97cb7dfed179968b6b40">WriteUint64</a> (<a class="el" href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> u)</td></tr>
+<tr class="memitem:a38ddf47e32442429d0760f8777ce37ee pro_methods_class_writer" id="r_a38ddf47e32442429d0760f8777ce37ee"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a38ddf47e32442429d0760f8777ce37ee">WriteDouble</a> (double d)</td></tr>
+<tr class="memitem:a87c17274a47ce591dea8775d80283c7a pro_methods_class_writer" id="r_a87c17274a47ce591dea8775d80283c7a"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a87c17274a47ce591dea8775d80283c7a">WriteNull</a> ()</td></tr>
+<tr class="memdesc:a87c17274a47ce591dea8775d80283c7a pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aece775cfdffb485a2b369235a01920a8 pro_methods_class_writer" id="r_aece775cfdffb485a2b369235a01920a8"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aece775cfdffb485a2b369235a01920a8">WriteBool</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> b)</td></tr>
+<tr class="memdesc:aece775cfdffb485a2b369235a01920a8 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a27a314c72df9349e54643de30ba527fe pro_methods_class_writer" id="r_a27a314c72df9349e54643de30ba527fe"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a27a314c72df9349e54643de30ba527fe">WriteString</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *str, <a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a> length)</td></tr>
+<tr class="memdesc:a27a314c72df9349e54643de30ba527fe pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a5811ae5a9f749324058ae6c63ad58d98 pro_methods_class_writer" id="r_a5811ae5a9f749324058ae6c63ad58d98"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a5811ae5a9f749324058ae6c63ad58d98">ScanWriteUnescapedString</a> (<a class="el" href="struct_generic_string_stream.html">GenericStringStream</a>&lt; <a class="el" href="struct_u_t_f8.html">UTF8</a>&lt;&gt; &gt; &amp;is, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> length)</td></tr>
+<tr class="memdesc:a5811ae5a9f749324058ae6c63ad58d98 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a724f2509e0c2505f3e2909a0a67d23f0 pro_methods_class_writer" id="r_a724f2509e0c2505f3e2909a0a67d23f0"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a724f2509e0c2505f3e2909a0a67d23f0">WriteStartObject</a> ()</td></tr>
+<tr class="memdesc:a724f2509e0c2505f3e2909a0a67d23f0 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aa9ab61d6fa6455febf4f2164294fce66 pro_methods_class_writer" id="r_aa9ab61d6fa6455febf4f2164294fce66"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aa9ab61d6fa6455febf4f2164294fce66">WriteEndObject</a> ()</td></tr>
+<tr class="memdesc:aa9ab61d6fa6455febf4f2164294fce66 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aa1be282949399dda7c925444cc65b0c7 pro_methods_class_writer" id="r_aa1be282949399dda7c925444cc65b0c7"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aa1be282949399dda7c925444cc65b0c7">WriteStartArray</a> ()</td></tr>
+<tr class="memdesc:aa1be282949399dda7c925444cc65b0c7 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:ae253cb5f6e5342ac635933eb1629cd3a pro_methods_class_writer" id="r_ae253cb5f6e5342ac635933eb1629cd3a"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ae253cb5f6e5342ac635933eb1629cd3a">WriteEndArray</a> ()</td></tr>
+<tr class="memdesc:ae253cb5f6e5342ac635933eb1629cd3a pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:abc6828de0e835d7439d7c5e20cf99a7c pro_methods_class_writer" id="r_abc6828de0e835d7439d7c5e20cf99a7c"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#abc6828de0e835d7439d7c5e20cf99a7c">WriteRawValue</a> (const <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Ch</a> *json, <a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a> length)</td></tr>
+<tr class="memdesc:abc6828de0e835d7439d7c5e20cf99a7c pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aa7acf8b71a11cb67124c5cad6547c289 pro_methods_class_writer" id="r_aa7acf8b71a11cb67124c5cad6547c289"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aa7acf8b71a11cb67124c5cad6547c289">Prefix</a> (<a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> type)</td></tr>
+<tr class="memdesc:aa7acf8b71a11cb67124c5cad6547c289 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a6a871b44e089883e1f8c9034a715f530 pro_methods_class_writer" id="r_a6a871b44e089883e1f8c9034a715f530"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a6a871b44e089883e1f8c9034a715f530">EndValue</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> ret)</td></tr>
+<tr class="memdesc:a6a871b44e089883e1f8c9034a715f530 pro_methods_class_writer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:ae617d8a2d8bcac6c84c830bc9f46b431" id="r_ae617d8a2d8bcac6c84c830bc9f46b431"><td class="memItemLeft">OutputStream *&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#ae617d8a2d8bcac6c84c830bc9f46b431">os_</a></td></tr>
+<tr class="memdesc:ae617d8a2d8bcac6c84c830bc9f46b431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:aa2a6714ee39a67dccc28a083f04991cd" id="r_aa2a6714ee39a67dccc28a083f04991cd"><td class="memItemLeft"><a class="el" href="classinternal_1_1_stack.html">internal::Stack</a>&lt; <a class="el" href="class_crt_allocator.html">CrtAllocator</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#aa2a6714ee39a67dccc28a083f04991cd">level_stack_</a></td></tr>
+<tr class="memdesc:aa2a6714ee39a67dccc28a083f04991cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a0c7bfaa8a9068bf55fc489ac5040441c" id="r_a0c7bfaa8a9068bf55fc489ac5040441c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a0c7bfaa8a9068bf55fc489ac5040441c">maxDecimalPlaces_</a></td></tr>
+<tr class="memdesc:a0c7bfaa8a9068bf55fc489ac5040441c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+<tr class="memitem:a80af64e8e277f7148821c2337cc24d41" id="r_a80af64e8e277f7148821c2337cc24d41"><td class="memItemLeft"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a>&#160;</td><td class="memItemRight"><a class="el" href="class_writer.html#a80af64e8e277f7148821c2337cc24d41">hasRoot_</a></td></tr>
+<tr class="memdesc:a80af64e8e277f7148821c2337cc24d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpler but slower overload.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt;<br />
+class PrettyWriter&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;</div><p><a class="el" href="class_writer.html" title="JSON writer.">Writer</a> with indentation and spacing. </p>
+<dl class="tparams"><dt>Parámetros de plantilla</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OutputStream</td><td><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type of JSON value.">Type</a> of output os. </td></tr>
+    <tr><td class="paramname">SourceEncoding</td><td><a class="el" href="classrapidjson_1_1_encoding.html" title="Concept for encoding of Unicode characters.">Encoding</a> of source string. </td></tr>
+    <tr><td class="paramname">TargetEncoding</td><td><a class="el" href="classrapidjson_1_1_encoding.html" title="Concept for encoding of Unicode characters.">Encoding</a> of output stream. </td></tr>
+    <tr><td class="paramname">StackAllocator</td><td><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type of JSON value.">Type</a> of allocator for allocating memory of stack. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00048">48</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+</div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="aa756e12dd9ee731a1e0f9831c4a3602e" name="aa756e12dd9ee731a1e0f9831c4a3602e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa756e12dd9ee731a1e0f9831c4a3602e">&#9670;&#160;</a></span>Base</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_writer.html">Writer</a>&lt;OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags&gt; <a class="el" href="#aa756e12dd9ee731a1e0f9831c4a3602e">Base</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00050">50</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+</div>
+</div>
+<a id="a9204ec6a6fb106573f4784eeb4e7d8c3" name="a9204ec6a6fb106573f4784eeb4e7d8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9204ec6a6fb106573f4784eeb4e7d8c3">&#9670;&#160;</a></span>Ch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_writer.html#a100c3c0b3c33974a2555c26e9f172211">Base::Ch</a> <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00051">51</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a0d4880ef3bca4afe31716b8c31644844" name="a0d4880ef3bca4afe31716b8c31644844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4880ef3bca4afe31716b8c31644844">&#9670;&#160;</a></span>PrettyWriter() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> </td>
+          <td>(</td>
+          <td class="paramtype">OutputStream &amp;</td>          <td class="paramname"><span class="paramname"><em>os</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">StackAllocator *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>levelDepth</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">Base::kDefaultLevelDepth</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Output stream. </td></tr>
+    <tr><td class="paramname">allocator</td><td>User supplied allocator. If it is null, it will create a private one. </td></tr>
+    <tr><td class="paramname">levelDepth</td><td>Initial capacity of stack. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00058">58</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00259">formatOptions_</a>, <a class="el" href="prettywriter_8h_source.html#l00257">indentChar_</a>, <a class="el" href="prettywriter_8h_source.html#l00258">indentCharCount_</a>, <a class="el" href="writer_8h_source.html#l00286">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::kDefaultLevelDepth</a> y <a class="el" href="prettywriter_8h_source.html#l00036">kFormatDefault</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00085">SetFormatOptions()</a> y <a class="el" href="prettywriter_8h_source.html#l00075">SetIndent()</a>.</p>
+
+</div>
+</div>
+<a id="a2bc570f891a76b2e65b689b84a7e4c3d" name="a2bc570f891a76b2e65b689b84a7e4c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc570f891a76b2e65b689b84a7e4c3d">&#9670;&#160;</a></span>PrettyWriter() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> </td>
+          <td>(</td>
+          <td class="paramtype">StackAllocator *</td>          <td class="paramname"><span class="paramname"><em>allocator</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>levelDepth</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="class_writer.html#a25e62e0b06943e588c8e0fb9e90d0722">Base::kDefaultLevelDepth</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00062">62</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00259">formatOptions_</a>, <a class="el" href="prettywriter_8h_source.html#l00257">indentChar_</a>, <a class="el" href="prettywriter_8h_source.html#l00258">indentCharCount_</a>, <a class="el" href="writer_8h_source.html#l00286">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::kDefaultLevelDepth</a> y <a class="el" href="prettywriter_8h_source.html#l00036">kFormatDefault</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a2771b84162e8e5989582dcfa2e0a619c" name="a2771b84162e8e5989582dcfa2e0a619c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2771b84162e8e5989582dcfa2e0a619c">&#9670;&#160;</a></span>Bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Bool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00096">96</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00731">kFalseType</a>, <a class="el" href="rapidjson_8h_source.html#l00732">kTrueType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00301">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteBool()</a>.</p>
+
+</div>
+</div>
+<a id="ab0849c2598ffcad58d01b468676ed580" name="ab0849c2598ffcad58d01b468676ed580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0849c2598ffcad58d01b468676ed580">&#9670;&#160;</a></span>Double()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Double </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00101">101</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00349">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteDouble()</a>.</p>
+
+</div>
+</div>
+<a id="a2cae8f43afaab6eee1572eeebe3c45bf" name="a2cae8f43afaab6eee1572eeebe3c45bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cae8f43afaab6eee1572eeebe3c45bf">&#9670;&#160;</a></span>EndArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> EndArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>memberCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00163">163</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="writer_8h_source.html#l00282">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::Flush()</a>, <a class="el" href="prettywriter_8h_source.html#l00259">formatOptions_</a>, <a class="el" href="prettywriter_8h_source.html#l00037">kFormatSingleLineArray</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="writer_8h_source.html#l00500">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::os_</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a>, <a class="el" href="writer_8h_source.html#l00458">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteEndArray()</a> y <a class="el" href="prettywriter_8h_source.html#l00252">WriteIndent()</a>.</p>
+
+</div>
+</div>
+<a id="a4d4d0ddcbfc233083c51517f0091ee8c" name="a4d4d0ddcbfc233083c51517f0091ee8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4d0ddcbfc233083c51517f0091ee8c">&#9670;&#160;</a></span>EndObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> EndObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>memberCount</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00137">137</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="writer_8h_source.html#l00282">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::Flush()</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="writer_8h_source.html#l00500">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::os_</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a>, <a class="el" href="writer_8h_source.html#l00456">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteEndObject()</a> y <a class="el" href="prettywriter_8h_source.html#l00252">WriteIndent()</a>.</p>
+
+</div>
+</div>
+<a id="ac33a3b8045cfa32baebf44c4f832b83c" name="ac33a3b8045cfa32baebf44c4f832b83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac33a3b8045cfa32baebf44c4f832b83c">&#9670;&#160;</a></span>Int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Int </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00097">97</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00313">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteInt()</a>.</p>
+
+</div>
+</div>
+<a id="ab57d0f5570905d393450daca545d3a46" name="ab57d0f5570905d393450daca545d3a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57d0f5570905d393450daca545d3a46">&#9670;&#160;</a></span>Int64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Int64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#a414156feea104f8f75b4ed9e3121b2f6">int64_t</a></td>          <td class="paramname"><span class="paramname"><em>i64</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00099">99</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00331">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteInt64()</a>.</p>
+
+</div>
+</div>
+<a id="aa4e77c9d1794a68f2ef9096bb3033b89" name="aa4e77c9d1794a68f2ef9096bb3033b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e77c9d1794a68f2ef9096bb3033b89">&#9670;&#160;</a></span>Key() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Key </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00188">188</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00188">Key()</a> y <a class="el" href="strfunc_8h_source.html#l00031">internal::StrLen()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00188">Key()</a>.</p>
+
+</div>
+</div>
+<a id="a8aed8b5e494ca3e6d56f1f848f4419c8" name="a8aed8b5e494ca3e6d56f1f848f4419c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aed8b5e494ca3e6d56f1f848f4419c8">&#9670;&#160;</a></span>Key() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Key </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>copy</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00129">129</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_l_i_c_e_n_c_e_8txt_source.html#l00004">copy</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a> y <a class="el" href="prettywriter_8h_source.html#l00110">String()</a>.</p>
+
+</div>
+</div>
+<a id="a83726c3e82631cc2b8ccb6e1003802dd" name="a83726c3e82631cc2b8ccb6e1003802dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83726c3e82631cc2b8ccb6e1003802dd">&#9670;&#160;</a></span>Null()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Null </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00095">95</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00730">kNullType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00296">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteNull()</a>.</p>
+
+</div>
+</div>
+<a id="a8cfdb2497abc4b448d1f935c8480bc17" name="a8cfdb2497abc4b448d1f935c8480bc17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfdb2497abc4b448d1f935c8480bc17">&#9670;&#160;</a></span>PrettyPrefix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PrettyPrefix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00208">208</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00259">formatOptions_</a>, <a class="el" href="writer_8h_source.html#l00503">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::hasRoot_</a>, <a class="el" href="prettywriter_8h_source.html#l00037">kFormatSingleLineArray</a>, <a class="el" href="rapidjson_8h_source.html#l00735">kStringType</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="writer_8h_source.html#l00500">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::os_</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a> y <a class="el" href="prettywriter_8h_source.html#l00252">WriteIndent()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00096">Bool()</a>, <a class="el" href="prettywriter_8h_source.html#l00101">Double()</a>, <a class="el" href="prettywriter_8h_source.html#l00097">Int()</a>, <a class="el" href="prettywriter_8h_source.html#l00099">Int64()</a>, <a class="el" href="prettywriter_8h_source.html#l00095">Null()</a>, <a class="el" href="prettywriter_8h_source.html#l00103">RawNumber()</a>, <a class="el" href="prettywriter_8h_source.html#l00201">RawValue()</a>, <a class="el" href="prettywriter_8h_source.html#l00157">StartArray()</a>, <a class="el" href="prettywriter_8h_source.html#l00123">StartObject()</a>, <a class="el" href="prettywriter_8h_source.html#l00110">String()</a>, <a class="el" href="prettywriter_8h_source.html#l00098">Uint()</a> y <a class="el" href="prettywriter_8h_source.html#l00100">Uint64()</a>.</p>
+
+</div>
+</div>
+<a id="a89f91d1d4227d67db8df58864c0be9dd" name="a89f91d1d4227d67db8df58864c0be9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f91d1d4227d67db8df58864c0be9dd">&#9670;&#160;</a></span>RawNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> RawNumber </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>copy</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00103">103</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_l_i_c_e_n_c_e_8txt_source.html#l00004">copy</a>, <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a> y <a class="el" href="writer_8h_source.html#l00377">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteString()</a>.</p>
+
+</div>
+</div>
+<a id="af8e7b9f849163fe092fd1826bc088ce3" name="af8e7b9f849163fe092fd1826bc088ce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e7b9f849163fe092fd1826bc088ce3">&#9670;&#160;</a></span>RawValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> RawValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>json</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a raw JSON value. </p>
+<p>For user to write a stringified JSON as a value.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>A well-formed JSON value. It should not contain null character within [0, length - 1] range. </td></tr>
+    <tr><td class="paramname">length</td><td>Length of the json. </td></tr>
+    <tr><td class="paramname">type</td><td><a class="el" href="rapidjson_8h.html#a1d1cfd8ffb84e947f82999c682b666a7" title="Type of JSON value.">Type</a> of the root of json. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>When using <a class="el" href="#af8e7b9f849163fe092fd1826bc088ce3" title="Write a raw JSON value.">PrettyWriter::RawValue()</a>, the result json may not be indented correctly. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00201">201</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a> y <a class="el" href="writer_8h_source.html#l00460">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteRawValue()</a>.</p>
+
+</div>
+</div>
+<a id="ad032f6c42da4bcecde78a1910e1047d9" name="ad032f6c42da4bcecde78a1910e1047d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad032f6c42da4bcecde78a1910e1047d9">&#9670;&#160;</a></span>SetFormatOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> &amp; SetFormatOptions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="prettywriter_8h.html#a150fd6ef2dbf4025c33ece85451982d5">PrettyFormatOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set pretty writer formatting options. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>Formatting options. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00085">85</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00259">formatOptions_</a> y <a class="el" href="prettywriter_8h_source.html#l00058">PrettyWriter()</a>.</p>
+
+</div>
+</div>
+<a id="a203db678ca7f4202c8ede679bdca065c" name="a203db678ca7f4202c8ede679bdca065c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a203db678ca7f4202c8ede679bdca065c">&#9670;&#160;</a></span>SetIndent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_pretty_writer.html">PrettyWriter</a> &amp; SetIndent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a></td>          <td class="paramname"><span class="paramname"><em>indentChar</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>indentCharCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set custom indentation. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indentChar</td><td>Character for indentation. Must be whitespace character (' ', '\t', '\n', '\r'). </td></tr>
+    <tr><td class="paramname">indentCharCount</td><td>Number of indent characters for each indentation level. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>The default indentation is 4 spaces. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00075">75</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00257">indentChar_</a>, <a class="el" href="prettywriter_8h_source.html#l00258">indentCharCount_</a>, <a class="el" href="prettywriter_8h_source.html#l00058">PrettyWriter()</a> y <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a>.</p>
+
+</div>
+</div>
+<a id="a432aca099c1c5354bbcb0b7e4e5a2b7e" name="a432aca099c1c5354bbcb0b7e4e5a2b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432aca099c1c5354bbcb0b7e4e5a2b7e">&#9670;&#160;</a></span>StartArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> StartArray </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00157">157</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="rapidjson_8h_source.html#l00734">kArrayType</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00457">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteStartArray()</a>.</p>
+
+</div>
+</div>
+<a id="a0932d4d164d5d4d47cb69beb5deb2464" name="a0932d4d164d5d4d47cb69beb5deb2464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0932d4d164d5d4d47cb69beb5deb2464">&#9670;&#160;</a></span>StartObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> StartObject </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00123">123</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="rapidjson_8h_source.html#l00733">kObjectType</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00455">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteStartObject()</a>.</p>
+
+</div>
+</div>
+<a id="a16439ba1963d77c2800422abbaff0bfc" name="a16439ba1963d77c2800422abbaff0bfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16439ba1963d77c2800422abbaff0bfc">&#9670;&#160;</a></span>String() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> String </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00187">187</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00187">String()</a> y <a class="el" href="strfunc_8h_source.html#l00031">internal::StrLen()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00187">String()</a>.</p>
+
+</div>
+</div>
+<a id="ad92413ac61bb6efc02026361551b6b56" name="ad92413ac61bb6efc02026361551b6b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92413ac61bb6efc02026361551b6b56">&#9670;&#160;</a></span>String() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> String </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rapidjson_8h.html#a5ed6e6e67250fadbd041127e6386dcb5">SizeType</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>copy</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="efi_8h.html#a65e9886d74aaee76545e83dd09011727">false</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00110">110</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="_l_i_c_e_n_c_e_8txt_source.html#l00004">copy</a>, <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00735">kStringType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a>, <a class="el" href="rapidjson_8h_source.html#l00437">RAPIDJSON_ASSERT</a>, <a class="el" href="rapidjson_8h_source.html#l00415">SizeType</a> y <a class="el" href="writer_8h_source.html#l00377">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteString()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00129">Key()</a>.</p>
+
+</div>
+</div>
+<a id="a86cfd5a805bac8d0b84dcf284396b89f" name="a86cfd5a805bac8d0b84dcf284396b89f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86cfd5a805bac8d0b84dcf284396b89f">&#9670;&#160;</a></span>Uint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Uint </td>
+          <td>(</td>
+          <td class="paramtype">unsigned</td>          <td class="paramname"><span class="paramname"><em>u</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00098">98</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00322">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteUint()</a>.</p>
+
+</div>
+</div>
+<a id="a24f0a54c02c1974af053f1bfbf446f30" name="a24f0a54c02c1974af053f1bfbf446f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f0a54c02c1974af053f1bfbf446f30">&#9670;&#160;</a></span>Uint64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> Uint64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a></td>          <td class="paramname"><span class="paramname"><em>u64</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00100">100</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="writer_8h_source.html#l00494">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::EndValue()</a>, <a class="el" href="rapidjson_8h_source.html#l00736">kNumberType</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a> y <a class="el" href="writer_8h_source.html#l00340">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::WriteUint64()</a>.</p>
+
+</div>
+</div>
+<a id="adf8f107f25e5065028f8ae704e4c6f0c" name="adf8f107f25e5065028f8ae704e4c6f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf8f107f25e5065028f8ae704e4c6f0c">&#9670;&#160;</a></span>WriteIndent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteIndent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00252">252</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="prettywriter_8h_source.html#l00257">indentChar_</a>, <a class="el" href="prettywriter_8h_source.html#l00258">indentCharCount_</a>, <a class="el" href="writer_8h_source.html#l00501">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::level_stack_</a>, <a class="el" href="writer_8h_source.html#l00500">Writer&lt; OutputStream, SourceEncoding, TargetEncoding, StackAllocator, writeFlags &gt;::os_</a> y <a class="el" href="filewritestream_8h_source.html#l00094">PutN()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00163">EndArray()</a>, <a class="el" href="prettywriter_8h_source.html#l00137">EndObject()</a> y <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a4f151b8155c8b8a4092138c99c125712" name="a4f151b8155c8b8a4092138c99c125712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f151b8155c8b8a4092138c99c125712">&#9670;&#160;</a></span>formatOptions_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="prettywriter_8h.html#a150fd6ef2dbf4025c33ece85451982d5">PrettyFormatOptions</a> formatOptions_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00259">259</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00163">EndArray()</a>, <a class="el" href="prettywriter_8h_source.html#l00208">PrettyPrefix()</a>, <a class="el" href="prettywriter_8h_source.html#l00058">PrettyWriter()</a>, <a class="el" href="prettywriter_8h_source.html#l00062">PrettyWriter()</a> y <a class="el" href="prettywriter_8h_source.html#l00085">SetFormatOptions()</a>.</p>
+
+</div>
+</div>
+<a id="a71060b14c6107d1fb1a6baaad9d50c01" name="a71060b14c6107d1fb1a6baaad9d50c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71060b14c6107d1fb1a6baaad9d50c01">&#9670;&#160;</a></span>indentChar_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a9204ec6a6fb106573f4784eeb4e7d8c3">Ch</a> indentChar_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00257">257</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00058">PrettyWriter()</a>, <a class="el" href="prettywriter_8h_source.html#l00062">PrettyWriter()</a>, <a class="el" href="prettywriter_8h_source.html#l00075">SetIndent()</a> y <a class="el" href="prettywriter_8h_source.html#l00252">WriteIndent()</a>.</p>
+
+</div>
+</div>
+<a id="a1de367f38c9c0a22af0ef25fedc4194c" name="a1de367f38c9c0a22af0ef25fedc4194c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de367f38c9c0a22af0ef25fedc4194c">&#9670;&#160;</a></span>indentCharCount_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename OutputStream, typename SourceEncoding = UTF8&lt;&gt;, typename TargetEncoding = UTF8&lt;&gt;, typename StackAllocator = CrtAllocator, unsigned writeFlags = kWriteDefaultFlags&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned indentCharCount_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Simpler but slower overload. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="prettywriter_8h_source.html#l00258">258</a> del archivo <a class="el" href="prettywriter_8h_source.html">prettywriter.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="prettywriter_8h_source.html#l00058">PrettyWriter()</a>, <a class="el" href="prettywriter_8h_source.html#l00062">PrettyWriter()</a>, <a class="el" href="prettywriter_8h_source.html#l00075">SetIndent()</a> y <a class="el" href="prettywriter_8h_source.html#l00252">WriteIndent()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="fwd_8h_source.html">fwd.h</a></li>
+<li>C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/thorvg/rapidjson/<a class="el" href="prettywriter_8h_source.html">prettywriter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_pretty_writer.html">PrettyWriter</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

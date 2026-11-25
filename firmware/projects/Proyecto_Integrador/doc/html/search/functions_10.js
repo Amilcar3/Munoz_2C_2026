@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['qrcodegen_5fcalcsegmentbuffersize_0',['qrcodegen_calcSegmentBufferSize',['../qrcodegen_8h.html#a15e9a13d5e49596089d6506558f6e506',1,'qrcodegen.h']]],
+  ['qrcodegen_5fencodebinary_1',['qrcodegen_encodeBinary',['../qrcodegen_8h.html#a1cc45de66046354d5aad2ee1cc6b2581',1,'qrcodegen.h']]],
+  ['qrcodegen_5fencodesegments_2',['qrcodegen_encodeSegments',['../qrcodegen_8h.html#a41164e2a41efb324b919395ffde14fa7',1,'qrcodegen.h']]],
+  ['qrcodegen_5fencodesegmentsadvanced_3',['qrcodegen_encodeSegmentsAdvanced',['../qrcodegen_8h.html#a7df325ca1714e2a5a1305b9b75436f8f',1,'qrcodegen.h']]],
+  ['qrcodegen_5fencodetext_4',['qrcodegen_encodeText',['../qrcodegen_8h.html#a2eb79247b6f8bed92514c1815fe0079c',1,'qrcodegen.h']]],
+  ['qrcodegen_5fgetminfitversion_5',['qrcodegen_getMinFitVersion',['../qrcodegen_8h.html#ac90fae8dd32872553aa99a20978dc22c',1,'qrcodegen.h']]],
+  ['qrcodegen_5fgetmodule_6',['qrcodegen_getModule',['../qrcodegen_8h.html#a495cb24d97c9b90a9c1e8a62903debf5',1,'qrcodegen.h']]],
+  ['qrcodegen_5fgetsize_7',['qrcodegen_getSize',['../qrcodegen_8h.html#afe30b8ff2b6218f37a2945871e6f11b8',1,'qrcodegen.h']]],
+  ['qrcodegen_5fisalphanumeric_8',['qrcodegen_isAlphanumeric',['../qrcodegen_8h.html#a25856a1d9c76851f8b83640ba3c6a3fc',1,'qrcodegen.h']]],
+  ['qrcodegen_5fisnumeric_9',['qrcodegen_isNumeric',['../qrcodegen_8h.html#aa873e0a91056118719064ea4f2a15013',1,'qrcodegen.h']]],
+  ['qrcodegen_5fmakealphanumeric_10',['qrcodegen_makeAlphanumeric',['../qrcodegen_8h.html#aaed32d45f095ce02e6718c8a48f4393d',1,'qrcodegen.h']]],
+  ['qrcodegen_5fmakebytes_11',['qrcodegen_makeBytes',['../qrcodegen_8h.html#a5b28f0f89765839d8f4c8a803edc4ad4',1,'qrcodegen.h']]],
+  ['qrcodegen_5fmakeeci_12',['qrcodegen_makeEci',['../qrcodegen_8h.html#a27c3b3d01e91f9532689adbb01c1ff2c',1,'qrcodegen.h']]],
+  ['qrcodegen_5fmakenumeric_13',['qrcodegen_makeNumeric',['../qrcodegen_8h.html#aa1c8b8a85f121c8cd1be89ddab684d43',1,'qrcodegen.h']]],
+  ['qrcodegen_5fversion2size_14',['qrcodegen_version2size',['../qrcodegen_8h.html#af4c81f8d440eaa1a5aebf17a4d8ab51b',1,'qrcodegen.h']]],
+  ['quiet_5fzone_15',['quiet_zone',['../classlvglgdb_1_1lvgl_1_1widgets_1_1lv__qrcode_1_1_l_v_qrcode.html#a4ed05bd7b12d6109fb436eaa5983be6a',1,'lvglgdb::lvgl::widgets::lv_qrcode::LVQrcode']]]
+];

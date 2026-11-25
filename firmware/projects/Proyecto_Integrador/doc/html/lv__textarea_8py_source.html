@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/gdb/lvglgdb/lvgl/widgets/lv_textarea.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__textarea_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_textarea.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__textarea_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacelvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea.html">    1</a></span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">Auto-generated wrapper for lv_textarea_t.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral">Do not edit manually. Regenerate from the GDB script root with:</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">    python3 scripts/generate_all.py</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">from</span> <a class="code hl_namespace" href="namespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj.html">lvglgdb.lvgl.core.lv_obj</a> <span class="keyword">import</span> LVObject</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">from</span> ._helpers <span class="keyword">import</span> ptr_or_none, safe_point, safe_string</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="" data-end="">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html">LVTextarea</a>(<a class="code hl_class" href="classlvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object.html">LVObject</a>):</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="stringliteral">&quot;&quot;&quot;LVGL textarea widget (lv_textarea_t).&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ad0e14a97d790539fe72203c0c835a61c">   15</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(self, obj):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        super().<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ad0e14a97d790539fe72203c0c835a61c">__init__</a>(obj)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">   17</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a> = self.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">cast</a>(<span class="stringliteral">&quot;lv_textarea_t&quot;</span>, ptr=<span class="keyword">True</span>) <span class="keywordflow">or</span> self</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a0d0eef48765392521b81d54ddbd1f1e3">   18</a></span>        self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a0d0eef48765392521b81d54ddbd1f1e3">_wv</a> = self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00021" data-start="" data-end="">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7cfedb10a37880e4018675e4a2fbb4a3">   21</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7cfedb10a37880e4018675e4a2fbb4a3">label</a>(self):</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="stringliteral">&quot;&quot;&quot;Label of the text area&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordflow">return</span> ptr_or_none(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;label&quot;</span>))</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00026" data-start="" data-end="">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac3272df28e0d8125d2eb06ee7acb6f18">   26</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac3272df28e0d8125d2eb06ee7acb6f18">placeholder_txt</a>(self):</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="stringliteral">&quot;&quot;&quot;Place holder label. only visible if text is an empty string&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> safe_string(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>, <span class="stringliteral">&quot;placeholder_txt&quot;</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00031" data-start="" data-end="">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac4cd15c39cea97d058724d06f9f5a569">   31</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac4cd15c39cea97d058724d06f9f5a569">placeholder_txt_size</a>(self):</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="stringliteral">&quot;&quot;&quot;Size of the placeholder text&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> safe_point(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>, <span class="stringliteral">&quot;placeholder_txt_size&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00036" data-start="" data-end="">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a6ed31024af37d7effe4c33990ac59ba3">   36</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a6ed31024af37d7effe4c33990ac59ba3">pwd_tmp</a>(self):</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="stringliteral">&quot;&quot;&quot;Used to store the original text in password mode&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">return</span> safe_string(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>, <span class="stringliteral">&quot;pwd_tmp&quot;</span>)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00041" data-start="" data-end="">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac83e12f5d31bc3860df1764ee327a5b9">   41</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac83e12f5d31bc3860df1764ee327a5b9">pwd_bullet</a>(self):</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="stringliteral">&quot;&quot;&quot;Replacement characters displayed in password mode&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> safe_string(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>, <span class="stringliteral">&quot;pwd_bullet&quot;</span>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00046" data-start="" data-end="">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ab872ea24636ab1def199de62c7ae3d61">   46</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ab872ea24636ab1def199de62c7ae3d61">accepted_chars</a>(self):</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="stringliteral">&quot;&quot;&quot;Only these characters will be accepted. NULL: accept all&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> safe_string(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>, <span class="stringliteral">&quot;accepted_chars&quot;</span>)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00051" data-start="" data-end="">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a8c79f7d2f3047f2557e9c87224019d49">   51</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a8c79f7d2f3047f2557e9c87224019d49">max_length</a>(self):</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="stringliteral">&quot;&quot;&quot;The max. number of characters. 0: no limit&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;max_length&quot;</span>, 0))</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00056" data-start="" data-end="">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a513d74f939e80fafc33023b4109e818e">   56</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a513d74f939e80fafc33023b4109e818e">pwd_show_time</a>(self):</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="stringliteral">&quot;&quot;&quot;Time to show characters in password mode before change them to &#39;*&#39;&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;pwd_show_time&quot;</span>, 0))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00061" data-start="" data-end="">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7ed53b622004416a2ff885413c086a76">   61</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7ed53b622004416a2ff885413c086a76">sel_start</a>(self):</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="stringliteral">&quot;&quot;&quot;Temporary values for text selection&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;sel_start&quot;</span>, 0))</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00066" data-start="" data-end="">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#adf3cfc589ffff6a27f3fec98128a3aeb">   66</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#adf3cfc589ffff6a27f3fec98128a3aeb">sel_end</a>(self):</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;sel_end&quot;</span>, 0))</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00070" data-start="" data-end="">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae47c8f4ad649849fedd5b41ae50d0500">   70</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae47c8f4ad649849fedd5b41ae50d0500">text_sel_in_prog</a>(self):</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="stringliteral">&quot;&quot;&quot;User is in process of selecting&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;text_sel_in_prog&quot;</span>, 0))</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00075" data-start="" data-end="">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae681c6dd29bc96525bd93c59eb9a6579">   75</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae681c6dd29bc96525bd93c59eb9a6579">text_sel_en</a>(self):</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="stringliteral">&quot;&quot;&quot;Text can be selected on this text area&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;text_sel_en&quot;</span>, 0))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00080" data-start="" data-end="">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a3f51c9eec9ddcfed3c092ef43d29f0eb">   80</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a3f51c9eec9ddcfed3c092ef43d29f0eb">pwd_mode</a>(self):</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="stringliteral">&quot;&quot;&quot;Replace characters with &#39;*&#39;&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;pwd_mode&quot;</span>, 0))</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00085" data-start="" data-end="">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac91e4a4a1d22cff1248ead9d19044d76">   85</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac91e4a4a1d22cff1248ead9d19044d76">one_line</a>(self):</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="stringliteral">&quot;&quot;&quot;One line mode (ignore line breaks)&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;one_line&quot;</span>, 0))</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="preprocessor">@property</span></div>
+<div class="foldopen" id="foldopen00090" data-start="" data-end="">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#abdc12f2df1a3b4ba3bc0f6c6caceff92">   90</a></span>    <span class="keyword">def </span><a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#abdc12f2df1a3b4ba3bc0f6c6caceff92">static_accepted_chars</a>(self):</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="stringliteral">&quot;&quot;&quot;1: Only a pointer is saved in `accepted_chars`&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">return</span> int(self.<a class="code hl_variable" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">_wv_lv_textarea_t</a>.<a class="code hl_function" href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">safe_field</a>(<span class="stringliteral">&quot;static_accepted_chars&quot;</span>, 0))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+</div>
+<div class="foldopen" id="foldopen00094" data-start="" data-end="">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a58a8e7ac184a990e83950901f11ac838">   94</a></span>    <span class="keyword">def </span>snapshot(self, include_children=False, include_styles=False):</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="stringliteral">&quot;&quot;&quot;Snapshot with widget-specific fields in widget_data.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        s = super().snapshot(include_children=include_children, include_styles=include_styles)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        d = s.get(<span class="stringliteral">&#39;widget_data&#39;</span>) <span class="keywordflow">or</span> {}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        d[<span class="stringliteral">&quot;label&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7cfedb10a37880e4018675e4a2fbb4a3">label</a></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        d[<span class="stringliteral">&quot;placeholder_txt&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac3272df28e0d8125d2eb06ee7acb6f18">placeholder_txt</a></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        d[<span class="stringliteral">&quot;placeholder_txt_size&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac4cd15c39cea97d058724d06f9f5a569">placeholder_txt_size</a></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        d[<span class="stringliteral">&quot;pwd_tmp&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a6ed31024af37d7effe4c33990ac59ba3">pwd_tmp</a></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        d[<span class="stringliteral">&quot;pwd_bullet&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac83e12f5d31bc3860df1764ee327a5b9">pwd_bullet</a></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        d[<span class="stringliteral">&quot;accepted_chars&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ab872ea24636ab1def199de62c7ae3d61">accepted_chars</a></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        d[<span class="stringliteral">&quot;max_length&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a8c79f7d2f3047f2557e9c87224019d49">max_length</a></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        d[<span class="stringliteral">&quot;pwd_show_time&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a513d74f939e80fafc33023b4109e818e">pwd_show_time</a></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        d[<span class="stringliteral">&quot;sel_start&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7ed53b622004416a2ff885413c086a76">sel_start</a></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        d[<span class="stringliteral">&quot;sel_end&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#adf3cfc589ffff6a27f3fec98128a3aeb">sel_end</a></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        d[<span class="stringliteral">&quot;text_sel_in_prog&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae47c8f4ad649849fedd5b41ae50d0500">text_sel_in_prog</a></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        d[<span class="stringliteral">&quot;text_sel_en&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae681c6dd29bc96525bd93c59eb9a6579">text_sel_en</a></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        d[<span class="stringliteral">&quot;pwd_mode&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a3f51c9eec9ddcfed3c092ef43d29f0eb">pwd_mode</a></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        d[<span class="stringliteral">&quot;one_line&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac91e4a4a1d22cff1248ead9d19044d76">one_line</a></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        d[<span class="stringliteral">&quot;static_accepted_chars&quot;</span>] = self.<a class="code hl_function" href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#abdc12f2df1a3b4ba3bc0f6c6caceff92">static_accepted_chars</a></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        s[<span class="stringliteral">&#39;widget_data&#39;</span>] = d</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> s</div>
+</div>
+</div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1core_1_1lv__obj_1_1_l_v_object.html">lvglgdb.lvgl.core.lv_obj.LVObject</a></div><div class="ttdef"><b>Definition</b> <a href="lvgl_2core_2lv__obj_8py_source.html#l00042">lv_obj.py:42</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">lv_textarea.py:12</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a0d0eef48765392521b81d54ddbd1f1e3"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a0d0eef48765392521b81d54ddbd1f1e3">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea._wv</a></div><div class="ttdeci">_wv</div><div class="ttdef"><b>Definition</b> <a href="#l00018">lv_textarea.py:18</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a235ca289047f949dd8cc9879a708b1d2"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a235ca289047f949dd8cc9879a708b1d2">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea._wv_lv_textarea_t</a></div><div class="ttdeci">_wv_lv_textarea_t</div><div class="ttdef"><b>Definition</b> <a href="#l00017">lv_textarea.py:17</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a3f51c9eec9ddcfed3c092ef43d29f0eb"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a3f51c9eec9ddcfed3c092ef43d29f0eb">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.pwd_mode</a></div><div class="ttdeci">pwd_mode(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">lv_textarea.py:80</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a513d74f939e80fafc33023b4109e818e"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a513d74f939e80fafc33023b4109e818e">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.pwd_show_time</a></div><div class="ttdeci">pwd_show_time(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00056">lv_textarea.py:56</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a6ed31024af37d7effe4c33990ac59ba3"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a6ed31024af37d7effe4c33990ac59ba3">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.pwd_tmp</a></div><div class="ttdeci">pwd_tmp(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">lv_textarea.py:36</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a7cfedb10a37880e4018675e4a2fbb4a3"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7cfedb10a37880e4018675e4a2fbb4a3">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.label</a></div><div class="ttdeci">label(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00021">lv_textarea.py:21</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a7ed53b622004416a2ff885413c086a76"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a7ed53b622004416a2ff885413c086a76">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.sel_start</a></div><div class="ttdeci">sel_start(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00061">lv_textarea.py:61</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_a8c79f7d2f3047f2557e9c87224019d49"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#a8c79f7d2f3047f2557e9c87224019d49">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.max_length</a></div><div class="ttdeci">max_length(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00051">lv_textarea.py:51</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ab872ea24636ab1def199de62c7ae3d61"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ab872ea24636ab1def199de62c7ae3d61">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.accepted_chars</a></div><div class="ttdeci">accepted_chars(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">lv_textarea.py:46</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_abdc12f2df1a3b4ba3bc0f6c6caceff92"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#abdc12f2df1a3b4ba3bc0f6c6caceff92">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.static_accepted_chars</a></div><div class="ttdeci">static_accepted_chars(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00090">lv_textarea.py:90</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ac3272df28e0d8125d2eb06ee7acb6f18"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac3272df28e0d8125d2eb06ee7acb6f18">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.placeholder_txt</a></div><div class="ttdeci">placeholder_txt(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00026">lv_textarea.py:26</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ac4cd15c39cea97d058724d06f9f5a569"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac4cd15c39cea97d058724d06f9f5a569">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.placeholder_txt_size</a></div><div class="ttdeci">placeholder_txt_size(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">lv_textarea.py:31</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ac83e12f5d31bc3860df1764ee327a5b9"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac83e12f5d31bc3860df1764ee327a5b9">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.pwd_bullet</a></div><div class="ttdeci">pwd_bullet(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">lv_textarea.py:41</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ac91e4a4a1d22cff1248ead9d19044d76"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ac91e4a4a1d22cff1248ead9d19044d76">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.one_line</a></div><div class="ttdeci">one_line(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">lv_textarea.py:85</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ad0e14a97d790539fe72203c0c835a61c"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ad0e14a97d790539fe72203c0c835a61c">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.__init__</a></div><div class="ttdeci">__init__(self, obj)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">lv_textarea.py:15</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_adf3cfc589ffff6a27f3fec98128a3aeb"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#adf3cfc589ffff6a27f3fec98128a3aeb">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.sel_end</a></div><div class="ttdeci">sel_end(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">lv_textarea.py:66</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ae47c8f4ad649849fedd5b41ae50d0500"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae47c8f4ad649849fedd5b41ae50d0500">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.text_sel_in_prog</a></div><div class="ttdeci">text_sel_in_prog(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00070">lv_textarea.py:70</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea_html_ae681c6dd29bc96525bd93c59eb9a6579"><div class="ttname"><a href="classlvglgdb_1_1lvgl_1_1widgets_1_1lv__textarea_1_1_l_v_textarea.html#ae681c6dd29bc96525bd93c59eb9a6579">lvglgdb.lvgl.widgets.lv_textarea.LVTextarea.text_sel_en</a></div><div class="ttdeci">text_sel_en(self)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">lv_textarea.py:75</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a042905354ccf68cda661c3303c15a3d2"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a042905354ccf68cda661c3303c15a3d2">lvglgdb.value.Value.safe_field</a></div><div class="ttdeci">safe_field(self, str attr, default=None, cast=None)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00216">value.py:216</a></div></div>
+<div class="ttc" id="aclasslvglgdb_1_1value_1_1_value_html_a50db75204e74779840c3025b9211aabe"><div class="ttname"><a href="classlvglgdb_1_1value_1_1_value.html#a50db75204e74779840c3025b9211aabe">lvglgdb.value.Value.cast</a></div><div class="ttdeci">Optional[Union[&quot;Value&quot;, &quot;CorruptedValue&quot;]] cast(self, Union[str, gdb.Type] type_name, bool ptr=False)</div><div class="ttdef"><b>Definition</b> <a href="value_8py_source.html#l00196">value.py:198</a></div></div>
+<div class="ttc" id="anamespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj_html"><div class="ttname"><a href="namespacelvglgdb_1_1lvgl_1_1core_1_1lv__obj.html">lvglgdb.lvgl.core.lv_obj</a></div><div class="ttdef"><b>Definition</b> <a href="lvgl_2core_2lv__obj_8py_source.html#l00001">lv_obj.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_00fd08e3171dfa3dfd25185255cf3ba1.html">gdb</a></li><li class="navelem"><a href="dir_5ee2c0d0c8a712d071bc0094a83a15ce.html">lvglgdb</a></li><li class="navelem"><a href="dir_db8cbb198919b727e9f5361676a79e81.html">lvgl</a></li><li class="navelem"><a href="dir_201b7a9d9a46579215ae39de1754cc76.html">widgets</a></li><li class="navelem"><a href="lv__textarea_8py.html">lv_textarea.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

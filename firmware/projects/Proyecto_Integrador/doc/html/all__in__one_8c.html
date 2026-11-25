@@ -1,0 +1,1264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Referencia del archivo C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/main/all_in_one.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('all__in__one_8c.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo all_in_one.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación de la interfaz gráfica de smartwatch (240×240 redonda) con LVGL 9.x.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="all__in__one_8h_source.html">all_in_one.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="all__in__one_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:dial_5Fcfg_5Ft" id="r_dial_5Fcfg_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structdial__cfg__t.html">dial_cfg_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuración del dial del reloj analógico.  <a href="structdial__cfg__t.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ae71449b1cc6e6250b91f539153a7a0d3" id="r_ae71449b1cc6e6250b91f539153a7a0d3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ae71449b1cc6e6250b91f539153a7a0d3">M_PI</a>&#160;&#160;&#160;3.14159265358979323846</td></tr>
+<tr class="memitem:a0d50f3102011c7982e4b83b70dba0839" id="r_a0d50f3102011c7982e4b83b70dba0839"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0d50f3102011c7982e4b83b70dba0839">ALL_IN_ONE_BIG_FONT</a>&#160;&#160;&#160;(&amp;lv_font_montserrat_32)</td></tr>
+<tr id="define-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">Geometría del display</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Constantes geométricas para la pantalla circular de 240×240 px. </p>
+</div></td></tr>
+<tr class="memitem:a03122d882ce5fb22dc0655a62326d26a" id="r_a03122d882ce5fb22dc0655a62326d26a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a03122d882ce5fb22dc0655a62326d26a">WF_SIZE</a>&#160;&#160;&#160;240</td></tr>
+<tr class="memitem:a34d29052418a48e6217c1049f2fdd9d7" id="r_a34d29052418a48e6217c1049f2fdd9d7"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a34d29052418a48e6217c1049f2fdd9d7">WF_CX</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memitem:ac734469887584093206a56e59f30f0f5" id="r_ac734469887584093206a56e59f30f0f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac734469887584093206a56e59f30f0f5">WF_CY</a>&#160;&#160;&#160;120</td></tr>
+<tr id="define-members-1" class="groupHeader"><td colspan="2"><div class="groupHeader">Geometría del dial</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>Radios de ticks y números del reloj analógico. </p>
+</div></td></tr>
+<tr class="memitem:af647dc22ec4957317937193087b6adb4" id="r_af647dc22ec4957317937193087b6adb4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af647dc22ec4957317937193087b6adb4">R_INNER</a>&#160;&#160;&#160;80</td></tr>
+<tr class="memitem:a762ef3af40a03894870e412d2f618da1" id="r_a762ef3af40a03894870e412d2f618da1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a762ef3af40a03894870e412d2f618da1">R_TICK_OUT</a>&#160;&#160;&#160;116</td></tr>
+<tr class="memitem:a9867294ebc6941396b006c490fdbb443" id="r_a9867294ebc6941396b006c490fdbb443"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9867294ebc6941396b006c490fdbb443">R_TICK_MAJOR_IN</a>&#160;&#160;&#160;106</td></tr>
+<tr class="memitem:a2aff119c6434bc05bd09b9f495e4501a" id="r_a2aff119c6434bc05bd09b9f495e4501a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2aff119c6434bc05bd09b9f495e4501a">R_TICK_MINOR_IN</a>&#160;&#160;&#160;111</td></tr>
+<tr class="memitem:a73691925b4b7bfeee407976c5b716858" id="r_a73691925b4b7bfeee407976c5b716858"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a73691925b4b7bfeee407976c5b716858">R_NUMBERS</a>&#160;&#160;&#160;92</td></tr>
+<tr id="define-members-2" class="groupHeader"><td colspan="2"><div class="groupHeader">Dimensiones de las agujas</div></td></tr>
+<tr class="memitem:a90b2c6d1f166a19be4d4591a03ccf09a" id="r_a90b2c6d1f166a19be4d4591a03ccf09a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a90b2c6d1f166a19be4d4591a03ccf09a">HOUR_LEN</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memitem:a91ea30a5759bd1899f639cba6380435e" id="r_a91ea30a5759bd1899f639cba6380435e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a91ea30a5759bd1899f639cba6380435e">HOUR_TAIL</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:ace68c653bd0aa016b6e8d89e2746a188" id="r_ace68c653bd0aa016b6e8d89e2746a188"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ace68c653bd0aa016b6e8d89e2746a188">HOUR_HALF_W</a>&#160;&#160;&#160;4.0f</td></tr>
+<tr class="memitem:aa69f8dba9add1a52ce3cf7bcfafcfda0" id="r_aa69f8dba9add1a52ce3cf7bcfafcfda0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa69f8dba9add1a52ce3cf7bcfafcfda0">MIN_LEN</a>&#160;&#160;&#160;78</td></tr>
+<tr class="memitem:a532e6cff9faf1f65b68f60165a0a80b6" id="r_a532e6cff9faf1f65b68f60165a0a80b6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a532e6cff9faf1f65b68f60165a0a80b6">MIN_TAIL</a>&#160;&#160;&#160;8</td></tr>
+<tr class="memitem:afbd80920398af33d4ef3f009d311f929" id="r_afbd80920398af33d4ef3f009d311f929"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afbd80920398af33d4ef3f009d311f929">MIN_HALF_W</a>&#160;&#160;&#160;3.5<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></td></tr>
+<tr class="memitem:af998c24e5e97a8581b54bcd626a48665" id="r_af998c24e5e97a8581b54bcd626a48665"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af998c24e5e97a8581b54bcd626a48665">SEC_LEN</a>&#160;&#160;&#160;96</td></tr>
+<tr class="memitem:ad857e24feeac2207a8e25d30b8b5de7e" id="r_ad857e24feeac2207a8e25d30b8b5de7e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad857e24feeac2207a8e25d30b8b5de7e">SEC_TAIL</a>&#160;&#160;&#160;40</td></tr>
+<tr id="define-members-3" class="groupHeader"><td colspan="2"><div class="groupHeader">Configuración de los charts PPG</div></td></tr>
+<tr class="memitem:a41b0b1ffe36a2687b86fa9046972a418" id="r_a41b0b1ffe36a2687b86fa9046972a418"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a41b0b1ffe36a2687b86fa9046972a418">PPG_POINTS_ALL</a>&#160;&#160;&#160;300</td></tr>
+<tr class="memitem:acb31261eb5d3f6631bf01d01a62a70b1" id="r_acb31261eb5d3f6631bf01d01a62a70b1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acb31261eb5d3f6631bf01d01a62a70b1">PPG_POINTS_PARAMS</a>&#160;&#160;&#160;350</td></tr>
+<tr id="define-members-4" class="groupHeader"><td colspan="2"><div class="groupHeader">Configuración del anillo de latido (vista PARAMS)</div></td></tr>
+<tr class="memitem:a917b727b7da28ad1f0e2ea255d1c4e0d" id="r_a917b727b7da28ad1f0e2ea255d1c4e0d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a917b727b7da28ad1f0e2ea255d1c4e0d">RING_D_MIN</a>&#160;&#160;&#160;216</td></tr>
+<tr class="memitem:a2b38b69c97bde9c573d1056b006c6d5c" id="r_a2b38b69c97bde9c573d1056b006c6d5c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2b38b69c97bde9c573d1056b006c6d5c">RING_D_MAX</a>&#160;&#160;&#160;236</td></tr>
+<tr class="memitem:a66dee5960608d735e1953b81d21d3456" id="r_a66dee5960608d735e1953b81d21d3456"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a66dee5960608d735e1953b81d21d3456">RING_W</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memitem:a33e0f9343d73d4969a60b4e489ec5a1c" id="r_a33e0f9343d73d4969a60b4e489ec5a1c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a33e0f9343d73d4969a60b4e489ec5a1c">RING_OPA_START</a>&#160;&#160;&#160;200</td></tr>
+<tr class="memitem:a21858e1da712db5d5fd4a1c2516517e4" id="r_a21858e1da712db5d5fd4a1c2516517e4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a21858e1da712db5d5fd4a1c2516517e4">RING_ANIM_MAX_MS</a>&#160;&#160;&#160;700</td></tr>
+<tr class="memitem:a3f0643cf492a0a1d4db9890a8ee041e3" id="r_a3f0643cf492a0a1d4db9890a8ee041e3"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3f0643cf492a0a1d4db9890a8ee041e3">RING_ANIM_MIN_MS</a>&#160;&#160;&#160;300</td></tr>
+<tr id="define-members-5" class="groupHeader"><td colspan="2"><div class="groupHeader">Índices de widgets duplicados entre vistas</div></td></tr>
+<tr class="memitem:a377e5fd265bf6cc7eea9fe263662368c" id="r_a377e5fd265bf6cc7eea9fe263662368c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a377e5fd265bf6cc7eea9fe263662368c">IDX_ALL</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a63498614acd85e9bac832795c461e07c" id="r_a63498614acd85e9bac832795c461e07c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a63498614acd85e9bac832795c461e07c">IDX_PARAMS</a>&#160;&#160;&#160;1</td></tr>
+<tr id="define-members-6" class="groupHeader"><td colspan="2"><div class="groupHeader">Paleta de colores (RGB hexadecimal)</div></td></tr>
+<tr class="memitem:a2a77b4166cf4816424910c230f58bb82" id="r_a2a77b4166cf4816424910c230f58bb82"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2a77b4166cf4816424910c230f58bb82">C_BG</a>&#160;&#160;&#160;0x05080A</td></tr>
+<tr class="memitem:af922582d0ae6048cdf24b0e7102cc971" id="r_af922582d0ae6048cdf24b0e7102cc971"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af922582d0ae6048cdf24b0e7102cc971">C_INNER</a>&#160;&#160;&#160;0x141A1E</td></tr>
+<tr class="memitem:a650f963db79688c78bf4b62e39f56906" id="r_a650f963db79688c78bf4b62e39f56906"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a650f963db79688c78bf4b62e39f56906">C_INNER_BORDER</a>&#160;&#160;&#160;0x232B30</td></tr>
+<tr class="memitem:a852549ee23355220ba1ef2747db1f1b4" id="r_a852549ee23355220ba1ef2747db1f1b4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a852549ee23355220ba1ef2747db1f1b4">C_TICK_MAJOR</a>&#160;&#160;&#160;0x4DE8F5</td></tr>
+<tr class="memitem:adfb3f567cf1f58f241ae8921a349a62a" id="r_adfb3f567cf1f58f241ae8921a349a62a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#adfb3f567cf1f58f241ae8921a349a62a">C_TICK_MINOR</a>&#160;&#160;&#160;0x2A8C9A</td></tr>
+<tr class="memitem:a6b7d90b1ac5d57df6cbf59e602a73650" id="r_a6b7d90b1ac5d57df6cbf59e602a73650"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6b7d90b1ac5d57df6cbf59e602a73650">C_NUMBER</a>&#160;&#160;&#160;0xFFFFFF</td></tr>
+<tr class="memitem:a6100abcf2ab3cb53ccd3059139725d39" id="r_a6100abcf2ab3cb53ccd3059139725d39"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a6100abcf2ab3cb53ccd3059139725d39">C_HAND</a>&#160;&#160;&#160;0xC9D3D6</td></tr>
+<tr class="memitem:a558de312534e9210592753614e52f03f" id="r_a558de312534e9210592753614e52f03f"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a558de312534e9210592753614e52f03f">C_SEC_FRONT</a>&#160;&#160;&#160;0x3AA0FF</td></tr>
+<tr class="memitem:aa33d6418b7d7dda3a24ddabf296d5149" id="r_aa33d6418b7d7dda3a24ddabf296d5149"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa33d6418b7d7dda3a24ddabf296d5149">C_SEC_TAIL</a>&#160;&#160;&#160;0xFF4545</td></tr>
+<tr class="memitem:a5e40f0456b2e98ed3fc0eb36bb4391fb" id="r_a5e40f0456b2e98ed3fc0eb36bb4391fb"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a5e40f0456b2e98ed3fc0eb36bb4391fb">C_HEART</a>&#160;&#160;&#160;0xF0504B</td></tr>
+<tr class="memitem:ad3888a4af0c919f671b946efbe0a3a07" id="r_ad3888a4af0c919f671b946efbe0a3a07"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ad3888a4af0c919f671b946efbe0a3a07">C_BUBBLE</a>&#160;&#160;&#160;0x3AA0FF</td></tr>
+<tr class="memitem:aba760c07d3cd5cdaf4f6a990e129af60" id="r_aba760c07d3cd5cdaf4f6a990e129af60"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aba760c07d3cd5cdaf4f6a990e129af60">C_PPG</a>&#160;&#160;&#160;0x3CFF6E</td></tr>
+<tr class="memitem:a1116122efe423cbd3fe8c0c9f8e13bb6" id="r_a1116122efe423cbd3fe8c0c9f8e13bb6"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1116122efe423cbd3fe8c0c9f8e13bb6">C_TEXT_DIM</a>&#160;&#160;&#160;0xA9B4B8</td></tr>
+<tr class="memitem:a7616ddbf9e35e7f18fba36b40a333ac0" id="r_a7616ddbf9e35e7f18fba36b40a333ac0"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7616ddbf9e35e7f18fba36b40a333ac0">C_RING</a>&#160;&#160;&#160;0x4FC3F7</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a504790cb1160f83c6473537a1149cd6e" id="r_a504790cb1160f83c6473537a1149cd6e"><td class="memItemLeft"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a504790cb1160f83c6473537a1149cd6e">all_in_one_create</a> (<a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *parent)</td></tr>
+<tr class="memdesc:a504790cb1160f83c6473537a1149cd6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea la interfaz completa con las tres vistas.  <br /></td></tr>
+<tr class="memitem:a2bf08b6dd3f9d98c6cf3ad3e13425bb7" id="r_a2bf08b6dd3f9d98c6cf3ad3e13425bb7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2bf08b6dd3f9d98c6cf3ad3e13425bb7">all_in_one_set_view</a> (<a class="el" href="all__in__one_8h.html#a875bc1b8afd2b6ac1dc1b35347d8c4ff">all_in_one_view_t</a> view)</td></tr>
+<tr class="memdesc:a2bf08b6dd3f9d98c6cf3ad3e13425bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cambia a la vista indicada.  <br /></td></tr>
+<tr class="memitem:a70dd4c34fdfe2f152867f32f930982b1" id="r_a70dd4c34fdfe2f152867f32f930982b1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a70dd4c34fdfe2f152867f32f930982b1">all_in_one_next_view</a> (void)</td></tr>
+<tr class="memdesc:a70dd4c34fdfe2f152867f32f930982b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pasa a la siguiente vista en orden cíclico (ALL → CLOCK → PARAMS → ALL).  <br /></td></tr>
+<tr class="memitem:a72f28c8598e89b801b6c8704dcd44a66" id="r_a72f28c8598e89b801b6c8704dcd44a66"><td class="memItemLeft"><a class="el" href="all__in__one_8h.html#a875bc1b8afd2b6ac1dc1b35347d8c4ff">all_in_one_view_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a72f28c8598e89b801b6c8704dcd44a66">all_in_one_get_view</a> (void)</td></tr>
+<tr class="memdesc:a72f28c8598e89b801b6c8704dcd44a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la vista actualmente visible.  <br /></td></tr>
+<tr class="memitem:a2e7b6592fd2c411afa4d1af58794451d" id="r_a2e7b6592fd2c411afa4d1af58794451d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2e7b6592fd2c411afa4d1af58794451d">all_in_one_set_time</a> (<a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> h, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> m, <a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a> s)</td></tr>
+<tr class="memdesc:a2e7b6592fd2c411afa4d1af58794451d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fija la hora del reloj analógico.  <br /></td></tr>
+<tr class="memitem:aa1f77f9db67a6a1c496c759c314185a3" id="r_aa1f77f9db67a6a1c496c759c314185a3"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1f77f9db67a6a1c496c759c314185a3">all_in_one_set_hr</a> (int bpm)</td></tr>
+<tr class="memdesc:aa1f77f9db67a6a1c496c759c314185a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la frecuencia cardíaca en todas las vistas.  <br /></td></tr>
+<tr class="memitem:a2f75f4085b2917e29f2da7d6ae8e5399" id="r_a2f75f4085b2917e29f2da7d6ae8e5399"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2f75f4085b2917e29f2da7d6ae8e5399">all_in_one_set_spo2</a> (int pct)</td></tr>
+<tr class="memdesc:a2f75f4085b2917e29f2da7d6ae8e5399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza la saturación de oxígeno en todas las vistas.  <br /></td></tr>
+<tr class="memitem:a049a3e25c2cff801c4861ac739b485ec" id="r_a049a3e25c2cff801c4861ac739b485ec"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a049a3e25c2cff801c4861ac739b485ec">all_in_one_ppg_push</a> (int value_0_1000)</td></tr>
+<tr class="memdesc:a049a3e25c2cff801c4861ac739b485ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agrega una muestra a la curva PPG en todas las vistas.  <br /></td></tr>
+<tr class="memitem:a01b4b97d81bd39622ae870f02dec3249" id="r_a01b4b97d81bd39622ae870f02dec3249"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a01b4b97d81bd39622ae870f02dec3249">all_in_one_beat</a> (void)</td></tr>
+<tr class="memdesc:a01b4b97d81bd39622ae870f02dec3249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispara la animación de latido en la vista PARAMS.  <br /></td></tr>
+<tr class="memitem:ab7635b49ab28dd632bae6cfc0b9177aa" id="r_ab7635b49ab28dd632bae6cfc0b9177aa"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab7635b49ab28dd632bae6cfc0b9177aa">all_in_one_set_beat_auto</a> (<a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a> enable)</td></tr>
+<tr class="memdesc:ab7635b49ab28dd632bae6cfc0b9177aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Habilita o deshabilita el modo de latido automático.  <br /></td></tr>
+<tr class="memitem:aeb8d456e0c4c0f41fdbd5347dd893727" id="r_aeb8d456e0c4c0f41fdbd5347dd893727"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb8d456e0c4c0f41fdbd5347dd893727">all_in_one_demo_start</a> (void)</td></tr>
+<tr class="memdesc:aeb8d456e0c4c0f41fdbd5347dd893727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia una demostración con datos sintéticos.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de la interfaz gráfica de smartwatch (240×240 redonda) con LVGL 9.x. </p>
+<p>Estructura de vistas dentro del contenedor raíz:</p><ul>
+<li><b>ALL</b> : dial con círculo interior + textos HR/SpO2 + arco + chart PPG reducido + agujas.</li>
+<li><b>CLOCK</b> : dial sin círculo interior + agujas (reloj a pantalla completa).</li>
+<li><b>PARAMS</b>: anillo animado de latido + íconos + HR + SpO2 + chart PPG ampliado.</li>
+</ul>
+<p>Solo una vista es visible a la vez; las demás se ocultan con LV_OBJ_FLAG_HIDDEN para que LVGL no las redibuje.</p>
+<dl class="section author"><dt>Autor</dt><dd>Amilcar Muñoz (<a href="#" onclick="location.href='mai'+'lto:'+'ami'+'lc'+'ar.'+'mu'+'nio'+'z@'+'gma'+'il'+'.co'+'m'; return false;">amilc<span class="obfuscator">.nosp@m.</span>ar.m<span class="obfuscator">.nosp@m.</span>unioz<span class="obfuscator">.nosp@m.</span>@gma<span class="obfuscator">.nosp@m.</span>il.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
+
+<p class="definition">Definición en el archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="a0d50f3102011c7982e4b83b70dba0839" name="a0d50f3102011c7982e4b83b70dba0839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d50f3102011c7982e4b83b70dba0839">&#9670;&#160;</a></span>ALL_IN_ONE_BIG_FONT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALL_IN_ONE_BIG_FONT&#160;&#160;&#160;(&amp;lv_font_montserrat_32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00028">28</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a2a77b4166cf4816424910c230f58bb82" name="a2a77b4166cf4816424910c230f58bb82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a77b4166cf4816424910c230f58bb82">&#9670;&#160;</a></span>C_BG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_BG&#160;&#160;&#160;0x05080A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fondo del watchface </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00092">92</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="ad3888a4af0c919f671b946efbe0a3a07" name="ad3888a4af0c919f671b946efbe0a3a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3888a4af0c919f671b946efbe0a3a07">&#9670;&#160;</a></span>C_BUBBLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_BUBBLE&#160;&#160;&#160;0x3AA0FF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ícono de burbuja (SpO2) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00102">102</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a6100abcf2ab3cb53ccd3059139725d39" name="a6100abcf2ab3cb53ccd3059139725d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6100abcf2ab3cb53ccd3059139725d39">&#9670;&#160;</a></span>C_HAND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_HAND&#160;&#160;&#160;0xC9D3D6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Agujas de hora y minuto </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00098">98</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a5e40f0456b2e98ed3fc0eb36bb4391fb" name="a5e40f0456b2e98ed3fc0eb36bb4391fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e40f0456b2e98ed3fc0eb36bb4391fb">&#9670;&#160;</a></span>C_HEART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_HEART&#160;&#160;&#160;0xF0504B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ícono de corazón </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00101">101</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="af922582d0ae6048cdf24b0e7102cc971" name="af922582d0ae6048cdf24b0e7102cc971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af922582d0ae6048cdf24b0e7102cc971">&#9670;&#160;</a></span>C_INNER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_INNER&#160;&#160;&#160;0x141A1E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Relleno del círculo interior </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00093">93</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a650f963db79688c78bf4b62e39f56906" name="a650f963db79688c78bf4b62e39f56906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650f963db79688c78bf4b62e39f56906">&#9670;&#160;</a></span>C_INNER_BORDER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_INNER_BORDER&#160;&#160;&#160;0x232B30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Borde del círculo interior </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00094">94</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a6b7d90b1ac5d57df6cbf59e602a73650" name="a6b7d90b1ac5d57df6cbf59e602a73650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b7d90b1ac5d57df6cbf59e602a73650">&#9670;&#160;</a></span>C_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_NUMBER&#160;&#160;&#160;0xFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Números 1-12 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00097">97</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="aba760c07d3cd5cdaf4f6a990e129af60" name="aba760c07d3cd5cdaf4f6a990e129af60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba760c07d3cd5cdaf4f6a990e129af60">&#9670;&#160;</a></span>C_PPG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_PPG&#160;&#160;&#160;0x3CFF6E</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Curva PPG </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00103">103</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a7616ddbf9e35e7f18fba36b40a333ac0" name="a7616ddbf9e35e7f18fba36b40a333ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7616ddbf9e35e7f18fba36b40a333ac0">&#9670;&#160;</a></span>C_RING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_RING&#160;&#160;&#160;0x4FC3F7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Anillo de latido </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00105">105</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a558de312534e9210592753614e52f03f" name="a558de312534e9210592753614e52f03f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a558de312534e9210592753614e52f03f">&#9670;&#160;</a></span>C_SEC_FRONT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_SEC_FRONT&#160;&#160;&#160;0x3AA0FF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Segundero (parte delantera) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00099">99</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="aa33d6418b7d7dda3a24ddabf296d5149" name="aa33d6418b7d7dda3a24ddabf296d5149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33d6418b7d7dda3a24ddabf296d5149">&#9670;&#160;</a></span>C_SEC_TAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_SEC_TAIL&#160;&#160;&#160;0xFF4545</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Segundero (cola) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00100">100</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a1116122efe423cbd3fe8c0c9f8e13bb6" name="a1116122efe423cbd3fe8c0c9f8e13bb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1116122efe423cbd3fe8c0c9f8e13bb6">&#9670;&#160;</a></span>C_TEXT_DIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_TEXT_DIM&#160;&#160;&#160;0xA9B4B8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Texto secundario ("BPM", "SpO2") </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00104">104</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a852549ee23355220ba1ef2747db1f1b4" name="a852549ee23355220ba1ef2747db1f1b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852549ee23355220ba1ef2747db1f1b4">&#9670;&#160;</a></span>C_TICK_MAJOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_TICK_MAJOR&#160;&#160;&#160;0x4DE8F5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ticks de hora </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00095">95</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="adfb3f567cf1f58f241ae8921a349a62a" name="adfb3f567cf1f58f241ae8921a349a62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfb3f567cf1f58f241ae8921a349a62a">&#9670;&#160;</a></span>C_TICK_MINOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define C_TICK_MINOR&#160;&#160;&#160;0x2A8C9A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ticks de minuto </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00096">96</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="ace68c653bd0aa016b6e8d89e2746a188" name="ace68c653bd0aa016b6e8d89e2746a188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace68c653bd0aa016b6e8d89e2746a188">&#9670;&#160;</a></span>HOUR_HALF_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HOUR_HALF_W&#160;&#160;&#160;4.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medio ancho de la aguja de hora </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00056">56</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a90b2c6d1f166a19be4d4591a03ccf09a" name="a90b2c6d1f166a19be4d4591a03ccf09a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b2c6d1f166a19be4d4591a03ccf09a">&#9670;&#160;</a></span>HOUR_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HOUR_LEN&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Largo de la aguja de hora </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00054">54</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a91ea30a5759bd1899f639cba6380435e" name="a91ea30a5759bd1899f639cba6380435e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ea30a5759bd1899f639cba6380435e">&#9670;&#160;</a></span>HOUR_TAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HOUR_TAIL&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cola de la aguja de hora </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00055">55</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a377e5fd265bf6cc7eea9fe263662368c" name="a377e5fd265bf6cc7eea9fe263662368c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377e5fd265bf6cc7eea9fe263662368c">&#9670;&#160;</a></span>IDX_ALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDX_ALL&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Índice para la vista ALL </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00085">85</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a63498614acd85e9bac832795c461e07c" name="a63498614acd85e9bac832795c461e07c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63498614acd85e9bac832795c461e07c">&#9670;&#160;</a></span>IDX_PARAMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDX_PARAMS&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Índice para la vista PARAMS </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00086">86</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="ae71449b1cc6e6250b91f539153a7a0d3" name="ae71449b1cc6e6250b91f539153a7a0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71449b1cc6e6250b91f539153a7a0d3">&#9670;&#160;</a></span>M_PI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define M_PI&#160;&#160;&#160;3.14159265358979323846</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00021">21</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00572">all_in_one_create()</a>.</p>
+
+</div>
+</div>
+<a id="afbd80920398af33d4ef3f009d311f929" name="afbd80920398af33d4ef3f009d311f929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd80920398af33d4ef3f009d311f929">&#9670;&#160;</a></span>MIN_HALF_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_HALF_W&#160;&#160;&#160;3.5<a class="el" href="include_2lvgl_2core_2lv__obj_8h.html#a2eb0b42e4093af18beb31744eb94a90c">f</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Medio ancho de la aguja de minutos </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00059">59</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="aa69f8dba9add1a52ce3cf7bcfafcfda0" name="aa69f8dba9add1a52ce3cf7bcfafcfda0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa69f8dba9add1a52ce3cf7bcfafcfda0">&#9670;&#160;</a></span>MIN_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_LEN&#160;&#160;&#160;78</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Largo de la aguja de minutos </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00057">57</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a532e6cff9faf1f65b68f60165a0a80b6" name="a532e6cff9faf1f65b68f60165a0a80b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a532e6cff9faf1f65b68f60165a0a80b6">&#9670;&#160;</a></span>MIN_TAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIN_TAIL&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cola de la aguja de minutos </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00058">58</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a41b0b1ffe36a2687b86fa9046972a418" name="a41b0b1ffe36a2687b86fa9046972a418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b0b1ffe36a2687b86fa9046972a418">&#9670;&#160;</a></span>PPG_POINTS_ALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_POINTS_ALL&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Puntos del chart PPG en la vista ALL </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00067">67</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="acb31261eb5d3f6631bf01d01a62a70b1" name="acb31261eb5d3f6631bf01d01a62a70b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb31261eb5d3f6631bf01d01a62a70b1">&#9670;&#160;</a></span>PPG_POINTS_PARAMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PPG_POINTS_PARAMS&#160;&#160;&#160;350</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Puntos del chart PPG en la vista PARAMS </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00068">68</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="af647dc22ec4957317937193087b6adb4" name="af647dc22ec4957317937193087b6adb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af647dc22ec4957317937193087b6adb4">&#9670;&#160;</a></span>R_INNER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_INNER&#160;&#160;&#160;80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio del círculo interior oscuro </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00044">44</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a73691925b4b7bfeee407976c5b716858" name="a73691925b4b7bfeee407976c5b716858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73691925b4b7bfeee407976c5b716858">&#9670;&#160;</a></span>R_NUMBERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_NUMBERS&#160;&#160;&#160;92</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio donde se centran los números 1-12 </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00048">48</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a9867294ebc6941396b006c490fdbb443" name="a9867294ebc6941396b006c490fdbb443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9867294ebc6941396b006c490fdbb443">&#9670;&#160;</a></span>R_TICK_MAJOR_IN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_TICK_MAJOR_IN&#160;&#160;&#160;106</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio interior de los ticks de hora </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00046">46</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a2aff119c6434bc05bd09b9f495e4501a" name="a2aff119c6434bc05bd09b9f495e4501a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aff119c6434bc05bd09b9f495e4501a">&#9670;&#160;</a></span>R_TICK_MINOR_IN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_TICK_MINOR_IN&#160;&#160;&#160;111</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio interior de los ticks de minuto </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00047">47</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a762ef3af40a03894870e412d2f618da1" name="a762ef3af40a03894870e412d2f618da1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762ef3af40a03894870e412d2f618da1">&#9670;&#160;</a></span>R_TICK_OUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define R_TICK_OUT&#160;&#160;&#160;116</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Radio exterior de los ticks </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00045">45</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a21858e1da712db5d5fd4a1c2516517e4" name="a21858e1da712db5d5fd4a1c2516517e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21858e1da712db5d5fd4a1c2516517e4">&#9670;&#160;</a></span>RING_ANIM_MAX_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_ANIM_MAX_MS&#160;&#160;&#160;700</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Duración máxima de la animación en ms </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00078">78</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00667">all_in_one_beat()</a>.</p>
+
+</div>
+</div>
+<a id="a3f0643cf492a0a1d4db9890a8ee041e3" name="a3f0643cf492a0a1d4db9890a8ee041e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f0643cf492a0a1d4db9890a8ee041e3">&#9670;&#160;</a></span>RING_ANIM_MIN_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_ANIM_MIN_MS&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Duración mínima de la animación en ms </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00079">79</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00667">all_in_one_beat()</a>.</p>
+
+</div>
+</div>
+<a id="a2b38b69c97bde9c573d1056b006c6d5c" name="a2b38b69c97bde9c573d1056b006c6d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b38b69c97bde9c573d1056b006c6d5c">&#9670;&#160;</a></span>RING_D_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_D_MAX&#160;&#160;&#160;236</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Diámetro final del anillo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00075">75</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a917b727b7da28ad1f0e2ea255d1c4e0d" name="a917b727b7da28ad1f0e2ea255d1c4e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917b727b7da28ad1f0e2ea255d1c4e0d">&#9670;&#160;</a></span>RING_D_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_D_MIN&#160;&#160;&#160;216</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Diámetro inicial del anillo </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00074">74</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a33e0f9343d73d4969a60b4e489ec5a1c" name="a33e0f9343d73d4969a60b4e489ec5a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e0f9343d73d4969a60b4e489ec5a1c">&#9670;&#160;</a></span>RING_OPA_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_OPA_START&#160;&#160;&#160;200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Opacidad inicial del anillo (se desvanece a 0) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00077">77</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a66dee5960608d735e1953b81d21d3456" name="a66dee5960608d735e1953b81d21d3456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66dee5960608d735e1953b81d21d3456">&#9670;&#160;</a></span>RING_W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RING_W&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Grosor del anillo en píxeles </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00076">76</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="af998c24e5e97a8581b54bcd626a48665" name="af998c24e5e97a8581b54bcd626a48665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af998c24e5e97a8581b54bcd626a48665">&#9670;&#160;</a></span>SEC_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEC_LEN&#160;&#160;&#160;96</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Largo del segundero (parte delantera) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00060">60</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="ad857e24feeac2207a8e25d30b8b5de7e" name="ad857e24feeac2207a8e25d30b8b5de7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad857e24feeac2207a8e25d30b8b5de7e">&#9670;&#160;</a></span>SEC_TAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEC_TAIL&#160;&#160;&#160;40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Largo del segundero (parte trasera) </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00061">61</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a34d29052418a48e6217c1049f2fdd9d7" name="a34d29052418a48e6217c1049f2fdd9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d29052418a48e6217c1049f2fdd9d7">&#9670;&#160;</a></span>WF_CX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WF_CX&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coordenada X del centro </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00036">36</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="ac734469887584093206a56e59f30f0f5" name="ac734469887584093206a56e59f30f0f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac734469887584093206a56e59f30f0f5">&#9670;&#160;</a></span>WF_CY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WF_CY&#160;&#160;&#160;120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coordenada Y del centro </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00037">37</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a03122d882ce5fb22dc0655a62326d26a" name="a03122d882ce5fb22dc0655a62326d26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03122d882ce5fb22dc0655a62326d26a">&#9670;&#160;</a></span>WF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WF_SIZE&#160;&#160;&#160;240</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tamaño del watchface en píxeles </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00035">35</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a01b4b97d81bd39622ae870f02dec3249" name="a01b4b97d81bd39622ae870f02dec3249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b4b97d81bd39622ae870f02dec3249">&#9670;&#160;</a></span>all_in_one_beat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_beat </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispara la animación de latido en la vista PARAMS. </p>
+<p>El anillo celeste se expande hacia el borde del display y se desvanece. Debe llamarse en el instante en que se detecta cada latido. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00667">667</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__example__anim__3_8c_source.html#l00017">a</a>, <a class="el" href="all__in__one_8h_source.html#l00031">ALL_IN_ONE_VIEW_PARAMS</a>, <a class="el" href="lv__anim_8c_source.html#l00183">lv_anim_delete()</a>, <a class="el" href="lv__anim_8c_source.html#l00102">lv_anim_init()</a>, <a class="el" href="lv__anim_8c_source.html#l00310">lv_anim_path_ease_out()</a>, <a class="el" href="lv__anim_8c_source.html#l00455">lv_anim_set_completed_cb()</a>, <a class="el" href="lv__anim_8c_source.html#l00411">lv_anim_set_duration()</a>, <a class="el" href="lv__anim_8c_source.html#l00405">lv_anim_set_exec_cb()</a>, <a class="el" href="lv__anim_8c_source.html#l00437">lv_anim_set_path_cb()</a>, <a class="el" href="lv__anim_8c_source.html#l00423">lv_anim_set_values()</a>, <a class="el" href="lv__anim_8c_source.html#l00399">lv_anim_set_var()</a>, <a class="el" href="lv__anim_8c_source.html#l00118">lv_anim_start()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00052">LV_OBJ_FLAG_HIDDEN</a>, <a class="el" href="lv__obj_8c_source.html#l00445">lv_obj_remove_flag()</a>, <a class="el" href="efi_8h_source.html#l00084">NULL</a>, <a class="el" href="all__in__one_8c_source.html#l00078">RING_ANIM_MAX_MS</a> y <a class="el" href="all__in__one_8c_source.html#l00079">RING_ANIM_MIN_MS</a>.</p>
+
+</div>
+</div>
+<a id="a504790cb1160f83c6473537a1149cd6e" name="a504790cb1160f83c6473537a1149cd6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a504790cb1160f83c6473537a1149cd6e">&#9670;&#160;</a></span>all_in_one_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * all_in_one_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea la interfaz completa con las tres vistas. </p>
+<p>Construye los widgets de las vistas ALL, CLOCK y PARAMS dentro del contenedor padre indicado (o la pantalla activa si parent es NULL). Arranca mostrando ALL_IN_ONE_VIEW_ALL; las demás vistas se ocultan.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>Contenedor padre de LVGL (NULL = pantalla activa). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al contenedor raíz de 240×240 creado. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00572">572</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__example__anim__3_8c_source.html#l00017">a</a>, <a class="el" href="all__in__one_8h_source.html#l00029">ALL_IN_ONE_VIEW_ALL</a>, <a class="el" href="all__in__one_8h_source.html#l00030">ALL_IN_ONE_VIEW_CLOCK</a>, <a class="el" href="all__in__one_8h_source.html#l00032">ALL_IN_ONE_VIEW_COUNT</a>, <a class="el" href="all__in__one_8h_source.html#l00031">ALL_IN_ONE_VIEW_PARAMS</a>, <a class="el" href="lv__obj_8c_source.html#l00393">lv_obj_add_flag()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00052">LV_OBJ_FLAG_HIDDEN</a>, <a class="el" href="lv__display_8c_source.html#l01496">lv_screen_active()</a>, <a class="el" href="lv__timer_8c_source.html#l00168">lv_timer_create()</a>, <a class="el" href="lv__timer_8c_source.html#l00217">lv_timer_pause()</a>, <a class="el" href="all__in__one_8c_source.html#l00021">M_PI</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="aeb8d456e0c4c0f41fdbd5347dd893727" name="aeb8d456e0c4c0f41fdbd5347dd893727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8d456e0c4c0f41fdbd5347dd893727">&#9670;&#160;</a></span>all_in_one_demo_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_demo_start </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicia una demostración con datos sintéticos. </p>
+<p>Genera una señal PPG artificial con HR de 72 BPM y SpO2 de 98% para verificar la interfaz gráfica sin necesidad de conectar el sensor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00717">717</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="all__in__one_8c_source.html#l00631">all_in_one_set_hr()</a>, <a class="el" href="all__in__one_8c_source.html#l00649">all_in_one_set_spo2()</a>, <a class="el" href="lv__timer_8c_source.html#l00168">lv_timer_create()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+</div>
+</div>
+<a id="a72f28c8598e89b801b6c8704dcd44a66" name="a72f28c8598e89b801b6c8704dcd44a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72f28c8598e89b801b6c8704dcd44a66">&#9670;&#160;</a></span>all_in_one_get_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="all__in__one_8h.html#a875bc1b8afd2b6ac1dc1b35347d8c4ff">all_in_one_view_t</a> all_in_one_get_view </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Devuelve la vista actualmente visible. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Vista actual. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00618">618</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a70dd4c34fdfe2f152867f32f930982b1" name="a70dd4c34fdfe2f152867f32f930982b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70dd4c34fdfe2f152867f32f930982b1">&#9670;&#160;</a></span>all_in_one_next_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_next_view </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pasa a la siguiente vista en orden cíclico (ALL → CLOCK → PARAMS → ALL). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00613">613</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="all__in__one_8c_source.html#l00602">all_in_one_set_view()</a> y <a class="el" href="all__in__one_8h_source.html#l00032">ALL_IN_ONE_VIEW_COUNT</a>.</p>
+
+</div>
+</div>
+<a id="a049a3e25c2cff801c4861ac739b485ec" name="a049a3e25c2cff801c4861ac739b485ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049a3e25c2cff801c4861ac739b485ec">&#9670;&#160;</a></span>all_in_one_ppg_push()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_ppg_push </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value_0_1000</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Agrega una muestra a la curva PPG en todas las vistas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value_0_1000</td><td>Valor normalizado en el rango 0-1000 (se satura internamente). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00658">658</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__chart_8c_source.html#l00701">lv_chart_set_next_value()</a>.</p>
+
+</div>
+</div>
+<a id="ab7635b49ab28dd632bae6cfc0b9177aa" name="ab7635b49ab28dd632bae6cfc0b9177aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7635b49ab28dd632bae6cfc0b9177aa">&#9670;&#160;</a></span>all_in_one_set_beat_auto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_set_beat_auto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="efi_8h.html#a3a69c4a11d4f8ab9401271364ae45b18">bool</a></td>          <td class="paramname"><span class="paramname"><em>enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Habilita o deshabilita el modo de latido automático. </p>
+<p>En modo automático, el anillo late al ritmo del último HR recibido sin necesidad de detección externa de cada pico.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>true para activar, false para desactivar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00690">690</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="aa1f77f9db67a6a1c496c759c314185a3" name="aa1f77f9db67a6a1c496c759c314185a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f77f9db67a6a1c496c759c314185a3">&#9670;&#160;</a></span>all_in_one_set_hr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_set_hr </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bpm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza la frecuencia cardíaca en todas las vistas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bpm</td><td>Frecuencia cardíaca en BPM. Valores ≤ 0 muestran "--". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00631">631</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a>, <a class="el" href="include_2lvgl_2widgets_2lv__label_8h.html#a3de2e48985478051a59ee276f7868936">lv_label_set_text_fmt()</a> y <a class="el" href="lv__timer_8c_source.html#l00230">lv_timer_set_period()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00717">all_in_one_demo_start()</a>.</p>
+
+</div>
+</div>
+<a id="a2f75f4085b2917e29f2da7d6ae8e5399" name="a2f75f4085b2917e29f2da7d6ae8e5399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f75f4085b2917e29f2da7d6ae8e5399">&#9670;&#160;</a></span>all_in_one_set_spo2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_set_spo2 </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pct</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza la saturación de oxígeno en todas las vistas. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pct</td><td>SpO2 en porcentaje. Valores ≤ 0 muestran "--". </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00649">649</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="lv__label_8c_source.html#l00132">lv_label_set_text()</a> y <a class="el" href="include_2lvgl_2widgets_2lv__label_8h.html#a3de2e48985478051a59ee276f7868936">lv_label_set_text_fmt()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00717">all_in_one_demo_start()</a>.</p>
+
+</div>
+</div>
+<a id="a2e7b6592fd2c411afa4d1af58794451d" name="a2e7b6592fd2c411afa4d1af58794451d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7b6592fd2c411afa4d1af58794451d">&#9670;&#160;</a></span>all_in_one_set_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_set_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="stdint_8h.html#aba7bc1797add20fe3efdf37ced1182c5">uint8_t</a></td>          <td class="paramname"><span class="paramname"><em>s</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fija la hora del reloj analógico. </p>
+<p>El segundero avanza automáticamente cada 1 s mediante un timer interno de LVGL.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Hora (0-23). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>Minutos (0-59). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Segundos (0-59). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00623">623</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+</div>
+</div>
+<a id="a2bf08b6dd3f9d98c6cf3ad3e13425bb7" name="a2bf08b6dd3f9d98c6cf3ad3e13425bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf08b6dd3f9d98c6cf3ad3e13425bb7">&#9670;&#160;</a></span>all_in_one_set_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void all_in_one_set_view </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="all__in__one_8h.html#a875bc1b8afd2b6ac1dc1b35347d8c4ff">all_in_one_view_t</a></td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cambia a la vista indicada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">view</td><td>Vista destino (ALL, CLOCK o PARAMS). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="all__in__one_8c_source.html#l00602">602</a> del archivo <a class="el" href="all__in__one_8c_source.html">all_in_one.c</a>.</p>
+
+<p class="reference">Hace referencia a <a class="el" href="all__in__one_8h_source.html#l00032">ALL_IN_ONE_VIEW_COUNT</a>, <a class="el" href="all__in__one_8h_source.html#l00031">ALL_IN_ONE_VIEW_PARAMS</a>, <a class="el" href="lv__obj_8c_source.html#l00393">lv_obj_add_flag()</a>, <a class="el" href="include_2lvgl_2core_2lv__obj_8h_source.html#l00052">LV_OBJ_FLAG_HIDDEN</a>, <a class="el" href="lv__obj_8c_source.html#l00445">lv_obj_remove_flag()</a> y <a class="el" href="efi_8h_source.html#l00084">NULL</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="all__in__one_8c_source.html#l00613">all_in_one_next_view()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_3b199c4b78c4e35bce7c24e7e2cd4ae5.html">main</a></li><li class="navelem"><a href="all__in__one_8c.html">all_in_one.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

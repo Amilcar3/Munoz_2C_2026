@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/src/libs/rlottie/lv_rlottie.c</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('lv__rlottie_8c_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lv_rlottie.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lv__rlottie_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> *      INCLUDES</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *********************/</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2lvgl_8h.html">../../lvgl.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if LV_USE_RLOTTIE</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="lv__rlottie__private_8h.html">lv_rlottie_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="lv__obj__class__private_8h.html">../../core/lv_obj_class_private.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;rlottie_capi.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">/*********************</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">*      DEFINES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">*********************/</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define MY_CLASS (&amp;lv_rlottie_class)</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define LV_ARGB32   32</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">*      TYPEDEFS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">**********************/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define LV_ARGB32   32</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  STATIC PROTOTYPES</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_rlottie_constructor(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> * class_p, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_rlottie_destructor(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> * class_p, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">static</span> <span class="keywordtype">void</span> next_frame_task_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> * t);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *  STATIC VARIABLES</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> lv_rlottie_class = {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    .constructor_cb = lv_rlottie_constructor,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    .destructor_cb = lv_rlottie_destructor,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    .instance_size = <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a>),</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    .base_class = &amp;<a class="code hl_variable" href="include_2lvgl_2widgets_2lv__image_8h.html#a38781db28b75d735ea4116811a95da1b">lv_image_class</a>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    .name = <span class="stringliteral">&quot;lv_rlottie&quot;</span>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> * rlottie_desc;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} lv_rlottie_create_info_t;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/*Only used in lv_obj_class_create_obj, no affect multiple instances*/</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">static</span> lv_rlottie_create_info_t create_info;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment"> *      MACROS</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment"> *   GLOBAL FUNCTIONS</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_rlottie_create_from_file(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * parent, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> width, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> height, <span class="keyword">const</span> <span class="keywordtype">char</span> * path)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__check__arg_8h.html#a79110a61ff05d7c86c8b02c22213ad4e">LV_CHECK_ARG</a>(path != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordflow">return</span> <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a27955f382440a5aad4f682209187206f">LV_LOG_DEPRECATED</a>(LV_RLOTTIE_DEPRECATED_MSG);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    create_info.width = <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    create_info.height = <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    create_info.path = <a class="code hl_variable" href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">path</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    create_info.rlottie_desc = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;begin&quot;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__class_8h.html#ab2819e3208b748d3e3a60c932a32f6d0">lv_obj_class_create_obj</a>(<a class="code hl_define" href="lv__obj_8c.html#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>, parent);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__class_8h.html#af1b44594b97077bc64b751f8932b4739">lv_obj_class_init_obj</a>(obj);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * lv_rlottie_create_from_raw(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * parent, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> width, <a class="code hl_typedef" href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a> height, <span class="keyword">const</span> <span class="keywordtype">char</span> * rlottie_desc)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_define" href="include_2lvgl_2debugging_2lv__check__arg_8h.html#a79110a61ff05d7c86c8b02c22213ad4e">LV_CHECK_ARG</a>(rlottie_desc != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keywordflow">return</span> <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a27955f382440a5aad4f682209187206f">LV_LOG_DEPRECATED</a>(LV_RLOTTIE_DEPRECATED_MSG);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    create_info.width = <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a5558ace5433f9aabbf0a0ec059900d94">width</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    create_info.height = <a class="code hl_variable" href="namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810">height</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    create_info.rlottie_desc = rlottie_desc;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    create_info.path = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a>(<span class="stringliteral">&quot;begin&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__class_8h.html#ab2819e3208b748d3e3a60c932a32f6d0">lv_obj_class_create_obj</a>(<a class="code hl_define" href="lv__obj_8c.html#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>, parent);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__class_8h.html#af1b44594b97077bc64b751f8932b4739">lv_obj_class_init_obj</a>(obj);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">void</span> lv_rlottie_set_play_mode(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj, <span class="keyword">const</span> lv_rlottie_ctrl_t ctrl)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="lv__check__obj_8h.html#ada011603f8c9ba33ede9024602c29428">LV_CHECK_OBJ</a>(obj, <a class="code hl_define" href="lv__obj_8c.html#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>, <span class="keywordflow">return</span>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a27955f382440a5aad4f682209187206f">LV_LOG_DEPRECATED</a>(LV_RLOTTIE_DEPRECATED_MSG);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> * rlottie = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> *) obj;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    rlottie-&gt;play_ctrl = ctrl;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">if</span>(rlottie-&gt;task &amp;&amp; (rlottie-&gt;dest_frame != rlottie-&gt;current_frame ||</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                         (rlottie-&gt;play_ctrl &amp; LV_RLOTTIE_CTRL_PAUSE) == LV_RLOTTIE_CTRL_PLAY)) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a25ed72d3306a02d08e65f9f265f6958c">lv_timer_resume</a>(rlottie-&gt;task);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keywordtype">void</span> lv_rlottie_set_current_frame(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj, <span class="keyword">const</span> <span class="keywordtype">size_t</span> goto_frame)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_define" href="lv__check__obj_8h.html#ada011603f8c9ba33ede9024602c29428">LV_CHECK_OBJ</a>(obj, <a class="code hl_define" href="lv__obj_8c.html#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a>, <span class="keywordflow">return</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a27955f382440a5aad4f682209187206f">LV_LOG_DEPRECATED</a>(LV_RLOTTIE_DEPRECATED_MSG);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> * rlottie = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> *) obj;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    rlottie-&gt;current_frame = goto_frame &lt; rlottie-&gt;total_frames ? goto_frame : rlottie-&gt;total_frames - 1;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment">/**********************</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"> *   STATIC FUNCTIONS</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"> **********************/</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_rlottie_constructor(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> * class_p, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>{</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(class_p);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> * rlottie = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> *) obj;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span>(create_info.rlottie_desc) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        rlottie-&gt;animation = lottie_animation_from_data(create_info.rlottie_desc, create_info.rlottie_desc, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(create_info.path) {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        rlottie-&gt;animation = lottie_animation_from_file(create_info.path);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span>(rlottie-&gt;animation == <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <a class="code hl_define" href="include_2lvgl_2logging_2lv__log_8h.html#a7838f102c438c68e7936435f2d981808">LV_LOG_WARN</a>(<span class="stringliteral">&quot;The animation can&#39;t be opened&quot;</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    rlottie-&gt;total_frames = lottie_animation_get_totalframe(rlottie-&gt;animation);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    rlottie-&gt;framerate = (<a class="code hl_typedef" href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a>)lottie_animation_get_framerate(rlottie-&gt;animation);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    rlottie-&gt;current_frame = 0;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    rlottie-&gt;scanline_width = create_info.width * LV_ARGB32 / 8;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">size_t</span> allocated_buf_size = (create_info.width * create_info.height * LV_ARGB32 / 8);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    rlottie-&gt;allocated_buf = <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc</a>(allocated_buf_size);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span>(rlottie-&gt;allocated_buf != <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        rlottie-&gt;allocated_buffer_size = allocated_buf_size;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_function" href="rom__stubs_8c.html#acd089d60aca28d482823f97639b584f8">memset</a>(rlottie-&gt;allocated_buf, 0, allocated_buf_size);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    rlottie-&gt;imgdsc.header.cf = <a class="code hl_enumvalue" href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a4c5aecc3efd95782b54d703cf3dec783">LV_COLOR_FORMAT_ARGB8888</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    rlottie-&gt;imgdsc.header.h = create_info.height;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    rlottie-&gt;imgdsc.header.w = create_info.width;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    rlottie-&gt;imgdsc.data = (<span class="keywordtype">void</span> *)rlottie-&gt;allocated_buf;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    rlottie-&gt;imgdsc.data_size = allocated_buf_size;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_function" href="include_2lvgl_2widgets_2lv__image_8h.html#abd50066a66f6c4496c5d9149dbb67cfd">lv_image_set_src</a>(obj, &amp;rlottie-&gt;imgdsc);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    rlottie-&gt;play_ctrl = LV_RLOTTIE_CTRL_FORWARD | LV_RLOTTIE_CTRL_PLAY | LV_RLOTTIE_CTRL_LOOP;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    rlottie-&gt;dest_frame = rlottie-&gt;total_frames; <span class="comment">/* invalid destination frame so it&#39;s possible to pause on frame 0 */</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    rlottie-&gt;task = <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a9f92d3830e2336b96d0459199b87ff18">lv_timer_create</a>(next_frame_task_cb, 1000 / rlottie-&gt;framerate, obj);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#aff54da7280d2ddf3a84db3d08c3bce83">lv_obj_update_layout</a>(obj);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">static</span> <span class="keywordtype">void</span> lv_rlottie_destructor(<span class="keyword">const</span> <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a> * class_p, <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>{</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_define" href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a>(class_p);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> * rlottie = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> *) obj;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">if</span>(rlottie-&gt;animation) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        lottie_animation_destroy(rlottie-&gt;animation);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        rlottie-&gt;animation = 0;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        rlottie-&gt;current_frame = 0;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        rlottie-&gt;framerate = 0;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        rlottie-&gt;scanline_width = 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        rlottie-&gt;total_frames = 0;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">if</span>(rlottie-&gt;task) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a23535f9f44d85d2ad1fe660b0fb09fda">lv_timer_delete</a>(rlottie-&gt;task);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        rlottie-&gt;task = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        rlottie-&gt;play_ctrl = LV_RLOTTIE_CTRL_FORWARD;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        rlottie-&gt;dest_frame = 0;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_function" href="lv__image__cache_8c.html#a08b8eef25f2baf5d75bcb0fbc406f520">lv_image_cache_drop</a>(&amp;rlottie-&gt;imgdsc);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordflow">if</span>(rlottie-&gt;allocated_buf) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <a class="code hl_function" href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a>(rlottie-&gt;allocated_buf);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        rlottie-&gt;allocated_buf = <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        rlottie-&gt;allocated_buffer_size = 0;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">static</span> <span class="keywordtype">void</span> next_frame_task_cb(<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a> * t)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>{</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a> * obj = <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a685b05b74d44a85138aa756f6d978ac6">lv_timer_get_user_data</a>(t);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> * rlottie = (<a class="code hl_typedef" href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a> *) obj;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keywordflow">if</span>((rlottie-&gt;play_ctrl &amp; LV_RLOTTIE_CTRL_PAUSE) == LV_RLOTTIE_CTRL_PAUSE) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <span class="keywordflow">if</span>(rlottie-&gt;current_frame == rlottie-&gt;dest_frame) {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="comment">/* Pause the timer too when it has run once to avoid CPU consumption */</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a90e10e2ab69ab89747b9b20face7f038">lv_timer_pause</a>(t);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        rlottie-&gt;dest_frame = rlottie-&gt;current_frame;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">if</span>((rlottie-&gt;play_ctrl &amp; LV_RLOTTIE_CTRL_BACKWARD) == LV_RLOTTIE_CTRL_BACKWARD) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            <span class="keywordflow">if</span>(rlottie-&gt;current_frame &gt; 0)</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                --rlottie-&gt;current_frame;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">else</span> { <span class="comment">/* Looping ? */</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="keywordflow">if</span>((rlottie-&gt;play_ctrl &amp; LV_RLOTTIE_CTRL_LOOP) == LV_RLOTTIE_CTRL_LOOP)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                    rlottie-&gt;current_frame = rlottie-&gt;total_frames - 1;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13bd931332f561598a06b676f6552966">lv_obj_send_event</a>(obj, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a21db384437206787e67a96e4e1a03b5d">LV_EVENT_READY</a>, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>                    <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a90e10e2ab69ab89747b9b20face7f038">lv_timer_pause</a>(t);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                }</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            }</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">if</span>(rlottie-&gt;current_frame &lt; rlottie-&gt;total_frames)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                ++rlottie-&gt;current_frame;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            <span class="keywordflow">else</span> { <span class="comment">/* Looping ? */</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>                <span class="keywordflow">if</span>((rlottie-&gt;play_ctrl &amp; LV_RLOTTIE_CTRL_LOOP) == LV_RLOTTIE_CTRL_LOOP)</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                    rlottie-&gt;current_frame = 0;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__event_8h.html#a13bd931332f561598a06b676f6552966">lv_obj_send_event</a>(obj, <a class="code hl_enumvalue" href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a21db384437206787e67a96e4e1a03b5d">LV_EVENT_READY</a>, <a class="code hl_define" href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    <a class="code hl_function" href="include_2lvgl_2core_2lv__timer_8h.html#a90e10e2ab69ab89747b9b20face7f038">lv_timer_pause</a>(t);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                }</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    lottie_animation_render(</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        rlottie-&gt;animation,</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        rlottie-&gt;current_frame,</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        rlottie-&gt;allocated_buf,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        rlottie-&gt;imgdsc.header.w,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        rlottie-&gt;imgdsc.header.h,</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        rlottie-&gt;scanline_width</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    );</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_function" href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a>(obj);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>}</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#endif </span><span class="comment">/*LV_USE_RLOTTIE*/</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aefi_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="efi_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00084">efi.h:84</a></div></div>
+<div class="ttc" id="aefi_8h_html_a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2"><div class="ttname"><a href="efi_8h.html#a8fd92ccc0b4f7dd4cd3d9a2a6b600ed2">size_t</a></div><div class="ttdeci">UINTN size_t</div><div class="ttdef"><b>Definition</b> <a href="efi_8h_source.html#l00072">efi.h:72</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__event_8h_html_a34581e6a5056b169f0a229f3e51c7771a21db384437206787e67a96e4e1a03b5d"><div class="ttname"><a href="include_2lvgl_2core_2lv__event_8h.html#a34581e6a5056b169f0a229f3e51c7771a21db384437206787e67a96e4e1a03b5d">LV_EVENT_READY</a></div><div class="ttdeci">@ LV_EVENT_READY</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2core_2lv__event_8h_source.html#l00083">lv_event.h:83</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_ab2819e3208b748d3e3a60c932a32f6d0"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#ab2819e3208b748d3e3a60c932a32f6d0">lv_obj_class_create_obj</a></div><div class="ttdeci">lv_obj_t * lv_obj_class_create_obj(const lv_obj_class_t *class_p, lv_obj_t *parent)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__class_8c_source.html#l00045">lv_obj_class.c:45</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__class_8h_html_af1b44594b97077bc64b751f8932b4739"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__class_8h.html#af1b44594b97077bc64b751f8932b4739">lv_obj_class_init_obj</a></div><div class="ttdeci">void lv_obj_class_init_obj(lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__class_8c_source.html#l00107">lv_obj_class.c:107</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__event_8h_html_a13bd931332f561598a06b676f6552966"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__event_8h.html#a13bd931332f561598a06b676f6552966">lv_obj_send_event</a></div><div class="ttdeci">lv_result_t lv_obj_send_event(lv_obj_t *obj, lv_event_code_t event_code, void *param)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__event_8c_source.html#l00052">lv_obj_event.c:52</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_a32abbcce30358cd46c4a68261a2b6898"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#a32abbcce30358cd46c4a68261a2b6898">lv_obj_invalidate</a></div><div class="ttdeci">lv_result_t lv_obj_invalidate(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l01119">lv_obj_pos.c:1119</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__obj__pos_8h_html_aff54da7280d2ddf3a84db3d08c3bce83"><div class="ttname"><a href="include_2lvgl_2core_2lv__obj__pos_8h.html#aff54da7280d2ddf3a84db3d08c3bce83">lv_obj_update_layout</a></div><div class="ttdeci">void lv_obj_update_layout(const lv_obj_t *obj)</div><div class="ttdef"><b>Definition</b> <a href="lv__obj__pos_8c_source.html#l00322">lv_obj_pos.c:322</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_a23535f9f44d85d2ad1fe660b0fb09fda"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#a23535f9f44d85d2ad1fe660b0fb09fda">lv_timer_delete</a></div><div class="ttdeci">void lv_timer_delete(lv_timer_t *timer)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00201">lv_timer.c:201</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_a25ed72d3306a02d08e65f9f265f6958c"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#a25ed72d3306a02d08e65f9f265f6958c">lv_timer_resume</a></div><div class="ttdeci">void lv_timer_resume(lv_timer_t *timer)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00223">lv_timer.c:223</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_a685b05b74d44a85138aa756f6d978ac6"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#a685b05b74d44a85138aa756f6d978ac6">lv_timer_get_user_data</a></div><div class="ttdeci">void * lv_timer_get_user_data(lv_timer_t *timer)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00309">lv_timer.c:309</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_a90e10e2ab69ab89747b9b20face7f038"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#a90e10e2ab69ab89747b9b20face7f038">lv_timer_pause</a></div><div class="ttdeci">void lv_timer_pause(lv_timer_t *timer)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00217">lv_timer.c:217</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2core_2lv__timer_8h_html_a9f92d3830e2336b96d0459199b87ff18"><div class="ttname"><a href="include_2lvgl_2core_2lv__timer_8h.html#a9f92d3830e2336b96d0459199b87ff18">lv_timer_create</a></div><div class="ttdeci">lv_timer_t * lv_timer_create(lv_timer_cb_t timer_xcb, uint32_t period, void *user_data)</div><div class="ttdef"><b>Definition</b> <a href="lv__timer_8c_source.html#l00168">lv_timer.c:168</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2debugging_2lv__check__arg_8h_html_a79110a61ff05d7c86c8b02c22213ad4e"><div class="ttname"><a href="include_2lvgl_2debugging_2lv__check__arg_8h.html#a79110a61ff05d7c86c8b02c22213ad4e">LV_CHECK_ARG</a></div><div class="ttdeci">#define LV_CHECK_ARG(cond, action_on_fail)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2debugging_2lv__check__arg_8h_source.html#l00120">lv_check_arg.h:120</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2draw_2lv__color_8h_html_a373bd610cd5bd39aa97244166a356932a4c5aecc3efd95782b54d703cf3dec783"><div class="ttname"><a href="include_2lvgl_2draw_2lv__color_8h.html#a373bd610cd5bd39aa97244166a356932a4c5aecc3efd95782b54d703cf3dec783">LV_COLOR_FORMAT_ARGB8888</a></div><div class="ttdeci">@ LV_COLOR_FORMAT_ARGB8888</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2draw_2lv__color_8h_source.html#l00162">lv_color.h:162</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_a27955f382440a5aad4f682209187206f"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#a27955f382440a5aad4f682209187206f">LV_LOG_DEPRECATED</a></div><div class="ttdeci">#define LV_LOG_DEPRECATED(_)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00169">lv_log.h:169</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_a7838f102c438c68e7936435f2d981808"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#a7838f102c438c68e7936435f2d981808">LV_LOG_WARN</a></div><div class="ttdeci">#define LV_LOG_WARN(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00163">lv_log.h:163</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2logging_2lv__log_8h_html_ad912d92d4a755984e83980ff3ee67673"><div class="ttname"><a href="include_2lvgl_2logging_2lv__log_8h.html#ad912d92d4a755984e83980ff3ee67673">LV_LOG_INFO</a></div><div class="ttdeci">#define LV_LOG_INFO(...)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2logging_2lv__log_8h_source.html#l00162">lv_log.h:162</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a01de9a127bcf589bd7d0c695a429b158"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a01de9a127bcf589bd7d0c695a429b158">lv_obj_t</a></div><div class="ttdeci">struct _lv_obj_t lv_obj_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00105">lv_types.h:105</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_a45f1eead6ce2fb12e215ea3e0558f168"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#a45f1eead6ce2fb12e215ea3e0558f168">lv_obj_class_t</a></div><div class="ttdeci">struct _lv_obj_class_t lv_obj_class_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00113">lv_types.h:113</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aa821cf4a6e5ec2d4ebfc71097a85beed"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aa821cf4a6e5ec2d4ebfc71097a85beed">lv_rlottie_t</a></div><div class="ttdeci">struct _lv_rlottie_t lv_rlottie_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00348">lv_types.h:348</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_aab341e84d977d67aec9b766ccd6d3173"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#aab341e84d977d67aec9b766ccd6d3173">lv_timer_t</a></div><div class="ttdeci">struct _lv_timer_t lv_timer_t</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00130">lv_types.h:130</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2lv__types_8h_html_ad07f3715eae2cfee3d5e0000edb150d7"><div class="ttname"><a href="include_2lvgl_2lv__types_8h.html#ad07f3715eae2cfee3d5e0000edb150d7">LV_UNUSED</a></div><div class="ttdeci">#define LV_UNUSED(x)</div><div class="ttdef"><b>Definition</b> <a href="include_2lvgl_2lv__types_8h_source.html#l00405">lv_types.h:405</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7455e11b1593bd5d98475bde81b97171"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7455e11b1593bd5d98475bde81b97171">lv_free</a></div><div class="ttdeci">void lv_free(void *data)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00131">lv_mem.c:131</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2stdlib_2lv__mem_8h_html_a7c725dea849c62a365099eb5783cd7a9"><div class="ttname"><a href="include_2lvgl_2stdlib_2lv__mem_8h.html#a7c725dea849c62a365099eb5783cd7a9">lv_malloc</a></div><div class="ttdeci">void * lv_malloc(size_t size)</div><div class="ttdef"><b>Definition</b> <a href="lv__mem_8c_source.html#l00059">lv_mem.c:59</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_a38781db28b75d735ea4116811a95da1b"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#a38781db28b75d735ea4116811a95da1b">lv_image_class</a></div><div class="ttdeci">LV_ATTRIBUTE_EXTERN_DATA const lv_obj_class_t lv_image_class</div><div class="ttdef"><b>Definition</b> <a href="lv__image_8c_source.html#l00116">lv_image.c:116</a></div></div>
+<div class="ttc" id="ainclude_2lvgl_2widgets_2lv__image_8h_html_abd50066a66f6c4496c5d9149dbb67cfd"><div class="ttname"><a href="include_2lvgl_2widgets_2lv__image_8h.html#abd50066a66f6c4496c5d9149dbb67cfd">lv_image_set_src</a></div><div class="ttdeci">void lv_image_set_src(lv_obj_t *obj, const void *src)</div><div class="ttdef"><b>Definition</b> <a href="lv__image_8c_source.html#l00148">lv_image.c:148</a></div></div>
+<div class="ttc" id="alv__check__obj_8h_html_ada011603f8c9ba33ede9024602c29428"><div class="ttname"><a href="lv__check__obj_8h.html#ada011603f8c9ba33ede9024602c29428">LV_CHECK_OBJ</a></div><div class="ttdeci">#define LV_CHECK_OBJ(obj, cls, action)</div><div class="ttdef"><b>Definition</b> <a href="lv__check__obj_8h_source.html#l00071">lv_check_obj.h:71</a></div></div>
+<div class="ttc" id="alv__image__cache_8c_html_a08b8eef25f2baf5d75bcb0fbc406f520"><div class="ttname"><a href="lv__image__cache_8c.html#a08b8eef25f2baf5d75bcb0fbc406f520">lv_image_cache_drop</a></div><div class="ttdeci">void lv_image_cache_drop(const void *src)</div><div class="ttdef"><b>Definition</b> <a href="lv__image__cache_8c_source.html#l00081">lv_image_cache.c:81</a></div></div>
+<div class="ttc" id="alv__obj_8c_html_a9be806f23ad96997f1d62c1a6dfabe05"><div class="ttname"><a href="lv__obj_8c.html#a9be806f23ad96997f1d62c1a6dfabe05">MY_CLASS</a></div><div class="ttdeci">#define MY_CLASS</div><div class="ttdef"><b>Definition</b> <a href="lv__obj_8c_source.html#l00025">lv_obj.c:25</a></div></div>
+<div class="ttc" id="alv__obj__class__private_8h_html"><div class="ttname"><a href="lv__obj__class__private_8h.html">lv_obj_class_private.h</a></div></div>
+<div class="ttc" id="alv__rlottie__private_8h_html"><div class="ttname"><a href="lv__rlottie__private_8h.html">lv_rlottie_private.h</a></div></div>
+<div class="ttc" id="anamespacecheck__file__template_html_aa28dc103258589d9cb421197fe2de90b"><div class="ttname"><a href="namespacecheck__file__template.html#aa28dc103258589d9cb421197fe2de90b">check_file_template.path</a></div><div class="ttdeci">path</div><div class="ttdef"><b>Definition</b> <a href="check__file__template_8py_source.html#l00113">check_file_template.py:113</a></div></div>
+<div class="ttc" id="anamespacejpg__to__sjpg_html_a509290c21d570ff479c1b9d9b1fe8810"><div class="ttname"><a href="namespacejpg__to__sjpg.html#a509290c21d570ff479c1b9d9b1fe8810">jpg_to_sjpg.height</a></div><div class="ttdeci">height</div><div class="ttdef"><b>Definition</b> <a href="jpg__to__sjpg_8py_source.html#l00034">jpg_to_sjpg.py:34</a></div></div>
+<div class="ttc" id="anamespacejpg__to__sjpg_html_a5558ace5433f9aabbf0a0ec059900d94"><div class="ttname"><a href="namespacejpg__to__sjpg.html#a5558ace5433f9aabbf0a0ec059900d94">jpg_to_sjpg.width</a></div><div class="ttdeci">width</div><div class="ttdef"><b>Definition</b> <a href="jpg__to__sjpg_8py_source.html#l00034">jpg_to_sjpg.py:34</a></div></div>
+<div class="ttc" id="arom__stubs_8c_html_acd089d60aca28d482823f97639b584f8"><div class="ttname"><a href="rom__stubs_8c.html#acd089d60aca28d482823f97639b584f8">memset</a></div><div class="ttdeci">void * memset(void *dest, int c, size_t len)</div><div class="ttdef"><b>Definition</b> <a href="rom__stubs_8c_source.html#l00036">rom_stubs.c:36</a></div></div>
+<div class="ttc" id="asrc_2lvgl_8h_html"><div class="ttname"><a href="src_2lvgl_8h.html">lvgl.h</a></div></div>
+<div class="ttc" id="astdint_8h_html_ab1967d8591af1a4e48c37fd2b0f184d0"><div class="ttname"><a href="stdint_8h.html#ab1967d8591af1a4e48c37fd2b0f184d0">int32_t</a></div><div class="ttdeci">signed int int32_t</div><div class="ttdef"><b>Definition</b> <a href="stdint_8h_source.html#l00123">stdint.h:123</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_46b4b40e3154f31ac531f1fab1d8ec3b.html">src</a></li><li class="navelem"><a href="dir_5f15c64a648eaeb802aa13d0bcde5c72.html">libs</a></li><li class="navelem"><a href="dir_ffc393957e1ab8b7564089cea9511c5c.html">rlottie</a></li><li class="navelem"><a href="lv__rlottie_8c.html">lv_rlottie.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

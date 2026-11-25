@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/generators/built_in_font/generate_all.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('generators_2built__in__font_2generate__all_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">generate_all.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="generators_2built__in__font_2generate__all_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">#!/usr/bin/env python3</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="stringliteral">Generate every built-in LVGL font into src/font/.</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="stringliteral">Needs lv_font_conv (https://github.com/lvgl/lv_font_conv) and astyle in PATH.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="stringliteral">Runs from anywhere:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="stringliteral">    python3 scripts/generators/built_in_font/generate_all.py</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> shutil</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> subprocess</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> sys</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>SCRIPT_DIR = Path(__file__).resolve().parent</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a982709f83a76a045dd5528b7b63473fc">   16</a></span>LVGL_ROOT_DIR = SCRIPT_DIR.parents[2]</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a97a3c16cc56f23d357ad893c71781cab">   17</a></span>FONT_GEN = SCRIPT_DIR / <span class="stringliteral">&quot;built_in_font_gen.py&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a7590b2a00f4183f24eca39608aeeec5c">   18</a></span>CODE_FORMAT_CFG = LVGL_ROOT_DIR / <span class="stringliteral">&quot;scripts&quot;</span> / <span class="stringliteral">&quot;code-format.cfg&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a193365a965e66d645617161fb3416d35">   19</a></span>OUTPUT_DIR = LVGL_ROOT_DIR / <span class="stringliteral">&quot;src&quot;</span> / <span class="stringliteral">&quot;font&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a75fa5a1d75e742007d0177023d398399">   21</a></span>MONTSERRAT_SIZES = range(8, 49, 2)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a8398241fb5d671495bc12ec6a55b4a6c">   23</a></span>PERSIAN_HEBREW_RANGE = <span class="stringliteral">&quot;0x20-0x7f,0x5d0-0x5ea,0x600-0x6FF,0xFB50-0xFDFF,0xFE70-0xFEFF&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a25ec9bd73200e54c6632067362bc9cc5">   25</a></span>CJK_SYMBOLS = <span class="stringliteral">&quot;（），盗提陽帯鼻画輕ッ冊ェル写父ぁフ結想正四O夫源庭場天續鳥れ講猿苦階給了製守8祝己妳薄泣塩帰ぺ吃変輪那着仍嗯爭熱創味保字宿捨準查達肯ァ薬得査障該降察ね網加昼料等図邪秋コ態品屬久原殊候路願楽確針上被怕悲風份重歡っ附ぷ既4黨價娘朝凍僅際洋止右航よ专角應酸師個比則響健昇豐筆歷適修據細忙跟管長令家ザ期般花越ミ域泳通些油乏ラ。營ス返調農叫樹刊愛間包知把ヤ貧橋拡普聞前ジ建当繰ネ送習渇用補ィ覺體法遊宙ョ酔余利壊語くつ払皆時辺追奇そ們只胸械勝住全沈力光ん深溝二類北面社值試9和五勵ゃ貿幾逐打課ゲて領3鼓辦発評１渉詳暇込计駄供嘛郵頃腦反構絵お容規借身妻国慮剛急乗静必議置克土オ乎荷更肉還混古渡授合主離條値決季晴東大尚央州が嗎験流先医亦林田星晩拿60旅婦量為痛テ孫う環友況玩務其ぼち揺坐一肩腰犯タょ希即果ぶ物練待み高九找やヶ都グ去」サ、气仮雑酒許終企笑録形リ銀切ギ快問滿役単黄集森毎實研喜蘇司鉛洲川条媽ノ才兩話言雖媒出客づ卻現異故り誌逮同訊已視本題ぞを横開音第席費持眾怎選元退限ー賽処喝就残無いガ多ケ沒義遠歌隣錢某雪析嬉採自透き側員予ゼ白婚电へ顯呀始均畫似懸格車騒度わ親店週維億締慣免帳電甚來園浴ゅ愈京と杯各海怒ぜ排敗挙老買7極模実紀ヒ携隻告シ並屋這孩讓質ワブ富賃争康由辞マ火於短樣削弟材注節另室ダ招擁ぃ若套底波行勤關著泊背疲狭作念推ぐ民貸祖介說ビ代温契你我レ入描變再札ソ派頭智遅私聽舉灣山伸放直安ト誕煙付符幅ふ絡她届耳飲忘参革團仕様載ど歩獲嫌息の汚交興魚指資雙與館初学年幸史位柱族走括び考青也共腕Lで販擔理病イ今逃當寺猫邊菓係ム秘示解池影ド文例斷曾事茶寫明科桃藝売便え導禁財飛替而亡到し具空寝辛業ウ府セ國何基菜厳市努張缺雲根外だ断万砂ゴ超使台实ぽ礼最慧算軟界段律像夕丈窓助刻月夏政呼ぴざ擇趣除動従涼方勉名線対存請子氏將5少否諸論美感或西者定食御表は參歳緑命進易性錯房も捕皿判中觀戦ニ緩町ピ番ず金千ろ?不た象治関ャ每看徒卒統じ手範訪押座步号ベ旁以母すほ密減成往歲件緒読歯效院种七謂凝濃嵌震喉繼クュ拭死円2積水欲如ポにさ寒道區精啦姐ア聯能足及停思壓２春且メ裏株官答概黒過氷柿戻厚ぱ党祭織引計け委暗複誘港バ失下村較続神ぇ尤強秀膝兒来績十書済化服破新廠1紹您情半式產系好教暑早め樂地休協良な哪常要揮周かエ麗境働避護ンツ香夜太見設非改広聲他検求危清彼經未在起葉控靴所差內造寄南望尺換向展備眠點完約ぎ裡分説申童優伝島机須塊日立拉,鉄軽單気信很転識支布数紙此迎受心輸坊モ處「訳三曇兄野顔戰增ナ伊列又髪両有取左毛至困吧昔赤狀相夠整別士経頼然簡ホ会發隨営需脱ヨば接永居冬迫圍甘醫誰部充消連弱宇會咲覚姉麼的増首统帶糖朋術商担移景功育庫曲總劃牛程駅犬報ロ學責因パ嚴八世後平負公げ曜陸專午之閉ぬ談ご災昨冷職悪謝對它近射敢意運船臉局難什産頗!球真記ま但蔵究制機案湖臺ひ害券男留内木驗雨施種特復句末濟キ色訴依せ百型る石牠討呢时任執飯歐宅組傳配小活ゆべ暖ズ漸站素らボ束価チ浅回女片独妹英目從認生違策僕楚ペ米こ掛む爸六状落漢プ投カ校做啊洗声探あ割体項履触々訓技ハ低工映是標速善点人デ口次可廿节宵植树端阳旦腊妇费愚劳动儿军师庆圣诞闰&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="" data-end="">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#aad707374cbfc6215d7e63887bfaaf529">   28</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__all.html#aad707374cbfc6215d7e63887bfaaf529">run</a>(cmd, description):</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    print(f<span class="stringliteral">&quot;\nGenerating {description}&quot;</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment"># The command line is echoed into the generated file&#39;s header comment, so</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment"># run from the asset directory and keep every path in it a bare file name</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    subprocess.run(cmd, cwd=SCRIPT_DIR, check=<span class="keyword">True</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+</div>
+<div class="foldopen" id="foldopen00035" data-start="" data-end="">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">   35</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(output, description, *args):</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_function" href="namespacegenerate__all.html#aad707374cbfc6215d7e63887bfaaf529">run</a>([sys.executable, str(FONT_GEN), <span class="stringliteral">&quot;-o&quot;</span>, output, <span class="stringliteral">&quot;--bpp&quot;</span>, <span class="stringliteral">&quot;4&quot;</span>, *args], description)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">return</span> output</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+</div>
+<div class="foldopen" id="foldopen00040" data-start="" data-end="">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#aac3fbe4d0b321bc98ba7036972455fdd">   40</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__all.html#aac3fbe4d0b321bc98ba7036972455fdd">gen_unscii</a>(output, size):</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_function" href="namespacegenerate__all.html#aad707374cbfc6215d7e63887bfaaf529">run</a>(</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        [</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="stringliteral">&quot;lv_font_conv&quot;</span>,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="stringliteral">&quot;--no-compress&quot;</span>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="stringliteral">&quot;--no-prefilter&quot;</span>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="stringliteral">&quot;--bpp&quot;</span>,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="stringliteral">&quot;1&quot;</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="stringliteral">&quot;--size&quot;</span>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            str(size),</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="stringliteral">&quot;--font&quot;</span>,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="stringliteral">&quot;unscii-8.ttf&quot;</span>,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="stringliteral">&quot;-r&quot;</span>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="stringliteral">&quot;0x20-0x7F&quot;</span>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="stringliteral">&quot;--format&quot;</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="stringliteral">&quot;lvgl&quot;</span>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="stringliteral">&quot;-o&quot;</span>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            output,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="stringliteral">&quot;--force-fast-kern-format&quot;</span>,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        ],</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        f<span class="stringliteral">&quot;{size} px unscii&quot;</span>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    )</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">return</span> output</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+</div>
+<div class="foldopen" id="foldopen00065" data-start="" data-end="">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacegenerate__all.html#a2f955f639d37acf56111d30b61a1799a">   65</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__all.html#a2f955f639d37acf56111d30b61a1799a">generate_all</a>():</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    outputs = []</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">for</span> size <span class="keywordflow">in</span> MONTSERRAT_SIZES:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        outputs.append(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(f<span class="stringliteral">&quot;lv_font_montserrat_{size}.c&quot;</span>, f<span class="stringliteral">&quot;{size} px&quot;</span>, <span class="stringliteral">&quot;--size&quot;</span>, str(size))</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        )</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    outputs.append(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="stringliteral">&quot;lv_font_montserrat_12_subpx.c&quot;</span>, <span class="stringliteral">&quot;12 px subpx&quot;</span>, <span class="stringliteral">&quot;--size&quot;</span>, <span class="stringliteral">&quot;12&quot;</span>, <span class="stringliteral">&quot;--subpx&quot;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        )</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    )</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    outputs.append(</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="stringliteral">&quot;lv_font_montserrat_28_compressed.c&quot;</span>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="stringliteral">&quot;28 px compressed&quot;</span>,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="stringliteral">&quot;--size&quot;</span>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="stringliteral">&quot;28&quot;</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="stringliteral">&quot;--compressed&quot;</span>,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        )</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    )</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    outputs.append(</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="stringliteral">&quot;lv_font_dejavu_16_persian_hebrew.c&quot;</span>,</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="stringliteral">&quot;16 px Hebrew, Persian&quot;</span>,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="stringliteral">&quot;--size&quot;</span>,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="stringliteral">&quot;16&quot;</span>,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="stringliteral">&quot;--font&quot;</span>,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <span class="stringliteral">&quot;DejaVuSans.ttf&quot;</span>,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="stringliteral">&quot;-r&quot;</span>,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            PERSIAN_HEBREW_RANGE,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        )</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    )</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">for</span> size <span class="keywordflow">in</span> (14, 16):</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        outputs.append(</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_function" href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">gen_font</a>(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                f<span class="stringliteral">&quot;lv_font_source_han_sans_sc_{size}_cjk.c&quot;</span>,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                f<span class="stringliteral">&quot;{size} px CJK&quot;</span>,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <span class="stringliteral">&quot;--size&quot;</span>,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                str(size),</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="stringliteral">&quot;--font&quot;</span>,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="stringliteral">&quot;SourceHanSansSC-Normal.otf&quot;</span>,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="stringliteral">&quot;-r&quot;</span>,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="stringliteral">&quot;0x20-0x7f&quot;</span>,</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>                <span class="stringliteral">&quot;--symbols&quot;</span>,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                CJK_SYMBOLS,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            )</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        )</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    outputs.append(<a class="code hl_function" href="namespacegenerate__all.html#aac3fbe4d0b321bc98ba7036972455fdd">gen_unscii</a>(<span class="stringliteral">&quot;lv_font_unscii_8.c&quot;</span>, 8))</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    outputs.append(<a class="code hl_function" href="namespacegenerate__all.html#aac3fbe4d0b321bc98ba7036972455fdd">gen_unscii</a>(<span class="stringliteral">&quot;lv_font_unscii_16.c&quot;</span>, 16))</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> [SCRIPT_DIR / name <span class="keywordflow">for</span> name <span class="keywordflow">in</span> outputs]</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__all.html#a51af30a60f9f02777c6396b8247e356f">main</a>():</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">for</span> tool <span class="keywordflow">in</span> (<span class="stringliteral">&quot;lv_font_conv&quot;</span>, <span class="stringliteral">&quot;astyle&quot;</span>):</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span> shutil.which(tool) <span class="keywordflow">is</span> <span class="keywordtype">None</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            sys.exit(f<span class="stringliteral">&quot;error: &#39;{tool}&#39; is required but was not found in PATH&quot;</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    fonts = <a class="code hl_namespace" href="namespacegenerate__all.html">generate_all</a>()</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="comment"># The fonts end up in src/font/, so point lv_font_conv&#39;s include of the</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment"># LVGL header at the repository root instead of an installed lvgl/ prefix</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">for</span> font <span class="keywordflow">in</span> fonts:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        font.write_text(</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            font.read_text().replace(<span class="stringliteral">&#39;#include &quot;lvgl/lvgl.h&quot;&#39;</span>, <span class="stringliteral">&#39;#include &quot;../../lvgl.h&quot;&#39;</span>)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        )</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    print()</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    subprocess.run(</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        [</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="stringliteral">&quot;astyle&quot;</span>,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <span class="stringliteral">&quot;--ignore-exclude-errors&quot;</span>,</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            f<span class="stringliteral">&quot;--options={CODE_FORMAT_CFG}&quot;</span>,</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            *[str(font) <span class="keywordflow">for</span> font <span class="keywordflow">in</span> fonts],</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        ],</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        check=<span class="keyword">True</span>,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    )</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">for</span> font <span class="keywordflow">in</span> fonts:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        shutil.move(font, OUTPUT_DIR / font.name)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    print(f<span class="stringliteral">&quot;\n{len(fonts)} fonts written to {OUTPUT_DIR}&quot;</span>)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <a class="code hl_namespace" href="namespacemain.html">main</a>()</div>
+<div class="ttc" id="anamespacegenerate__all_html"><div class="ttname"><a href="namespacegenerate__all.html">generate_all</a></div><div class="ttdef"><b>Definition</b> <a href="built__in__font_2generate__all_8py_source.html#l00001">generate_all.py:1</a></div></div>
+<div class="ttc" id="anamespacegenerate__all_html_a2f955f639d37acf56111d30b61a1799a"><div class="ttname"><a href="namespacegenerate__all.html#a2f955f639d37acf56111d30b61a1799a">generate_all.generate_all</a></div><div class="ttdeci">generate_all()</div><div class="ttdef"><b>Definition</b> <a href="#l00065">generate_all.py:65</a></div></div>
+<div class="ttc" id="anamespacegenerate__all_html_a51af30a60f9f02777c6396b8247e356f"><div class="ttname"><a href="namespacegenerate__all.html#a51af30a60f9f02777c6396b8247e356f">generate_all.main</a></div><div class="ttdeci">main()</div><div class="ttdef"><b>Definition</b> <a href="gdb_2scripts_2generate__all_8py_source.html#l00023">generate_all.py:23</a></div></div>
+<div class="ttc" id="anamespacegenerate__all_html_a93e9abd7eeadfe2fa895f11bcd3230bf"><div class="ttname"><a href="namespacegenerate__all.html#a93e9abd7eeadfe2fa895f11bcd3230bf">generate_all.gen_font</a></div><div class="ttdeci">gen_font(output, description, *args)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">generate_all.py:35</a></div></div>
+<div class="ttc" id="anamespacegenerate__all_html_aac3fbe4d0b321bc98ba7036972455fdd"><div class="ttname"><a href="namespacegenerate__all.html#aac3fbe4d0b321bc98ba7036972455fdd">generate_all.gen_unscii</a></div><div class="ttdeci">gen_unscii(output, size)</div><div class="ttdef"><b>Definition</b> <a href="#l00040">generate_all.py:40</a></div></div>
+<div class="ttc" id="anamespacegenerate__all_html_aad707374cbfc6215d7e63887bfaaf529"><div class="ttname"><a href="namespacegenerate__all.html#aad707374cbfc6215d7e63887bfaaf529">generate_all.run</a></div><div class="ttdeci">run(cmd, description)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">generate_all.py:28</a></div></div>
+<div class="ttc" id="anamespacemain_html"><div class="ttname"><a href="namespacemain.html">main</a></div><div class="ttdef"><b>Definition</b> <a href="main_8py_source.html#l00001">main.py:1</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="dir_61b3af5ed844b8f59be1a03953634437.html">generators</a></li><li class="navelem"><a href="dir_8afa70b3cf35f3b0ba4fdd526c7eeb90.html">built_in_font</a></li><li class="navelem"><a href="generators_2built__in__font_2generate__all_8py.html">generate_all.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

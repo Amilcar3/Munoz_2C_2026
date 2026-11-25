@@ -164,6 +164,28 @@ bool I2C_writeBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *d
  */
 void I2C_SelectRegister(uint8_t devAddr, uint8_t reg);
 
+/**
+ * @brief Write a register address to a device (without data)
+ * 
+ * @param devAddr I2C slave device address
+ * @param regAddr Register address to write
+ * @return true on success
+ * @return false on failure
+ */
+bool I2C_writeREG(uint8_t devAddr, uint8_t regAddr);
+
+/**
+ * @brief Read multiple bytes from device without specifying a register address.
+ *        Used by devices like MAX3010x that auto-increment their read pointer.
+ * 
+ * @param devAddr I2C slave device address
+ * @param length Number of bytes to read
+ * @param data Buffer to store read data in
+ * @param timeout Read timeout in milliseconds (0 to use default)
+ * @return int8_t Number of bytes read, 0 on failure
+ */
+int8_t I2C_requestBytes(uint8_t devAddr, uint8_t length, uint8_t *data, uint16_t timeout);
+
 /** @} doxygen end group definition */
 /** @} doxygen end group definition */
 /** @} doxygen end group definition */

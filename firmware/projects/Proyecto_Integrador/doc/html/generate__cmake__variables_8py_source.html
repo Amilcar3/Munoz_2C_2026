@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Proyecto Integrador: Archivo de código fuente C:/Users/amilc/Documents/Programable/Repositorio/Munoz_2C_2026/firmware/projects/Proyecto_Integrador/managed_components/lvgl__lvgl/scripts/generate_cmake_variables.py</title>
+<link rel="icon" href="icon.ico" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="fiuner.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Proyecto Integrador<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Prototipo de Smartwatch</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('generate__cmake__variables_8py_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">generate_cmake_variables.py</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="generate__cmake__variables_8py.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html">    1</a></span><span class="comment">#!/usr/bin/env python3</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">#</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"># Generate the cmake variables CONFIG_LV_USE_* or CONFIG_LV_BUILD_* from the</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"># preprocessed lv_conf_internal.h</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">#</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"># Author: David TRUAN (david.truan@edgemtech.ch)</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"># Author: Erik Tagirov (erik.tagirov@edgemtech.ch)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">#</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> os</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> argparse</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> re</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="" data-end="">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a98377d6b92039c847b067de711a039bf">   15</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__cmake__variables.html#a98377d6b92039c847b067de711a039bf">fatal</a>(msg):</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    print()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    print(<span class="stringliteral">&quot;ERROR! &quot;</span> + msg)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    exit(1)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+</div>
+<div class="foldopen" id="foldopen00020" data-start="" data-end="">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#aa9db369dca7f14132ee348b520250cfc">   20</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__cmake__variables.html#aa9db369dca7f14132ee348b520250cfc">get_args</a>():</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter, description=<span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                     <span class="stringliteral">&quot;Convert the expanded lv_conf_internal.h to cmake variables.&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                                     <span class="stringliteral">&quot;It converts all LV_USE_*, LV_BUILD_* configurations.&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                                    )</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    parser.add_argument(<span class="stringliteral">&#39;--input&#39;</span>, type=str, required=<span class="keyword">True</span>, nargs=<span class="stringliteral">&#39;?&#39;</span>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                        help=<span class="stringliteral">&#39;Path of the macro expanded lv_conf_internal.h, which should be generated during a cmake build&#39;</span>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    parser.add_argument(<span class="stringliteral">&#39;--output&#39;</span>, type=str, required=<span class="keyword">True</span>, nargs=<span class="stringliteral">&#39;?&#39;</span>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        help=<span class="stringliteral">&#39;Path of the output file, where the cmake variables declaration will be written (ex: build/lv_conf.cmake)&#39;</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    parser.add_argument(<span class="stringliteral">&quot;--kconfig&quot;</span>, action=<span class="stringliteral">&quot;store_true&quot;</span>, help=<span class="stringliteral">&quot;Enable kconfig flag&quot;</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    parser.add_argument(<span class="stringliteral">&quot;--debug&quot;</span>, action=<span class="stringliteral">&quot;store_true&quot;</span>, required=<span class="keyword">False</span>, help=<span class="stringliteral">&quot;Show unhandled expressions&quot;</span>)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    parser.add_argument(<span class="stringliteral">&quot;--parentscope&quot;</span>, action=<span class="stringliteral">&quot;store_true&quot;</span>, required=<span class="keyword">False</span>, help=<span class="stringliteral">&quot;Additionally set the variables in the parent scope&quot;</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    args = parser.parse_args()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment"># The input must exist</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> <span class="keywordflow">not</span> os.path.exists(args.input):</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="namespacegenerate__cmake__variables.html#a98377d6b92039c847b067de711a039bf">fatal</a>(f<span class="stringliteral">&quot;Input {args.input} not found&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> args</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+</div>
+<div class="foldopen" id="foldopen00046" data-start="" data-end="">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a0d6855470856fc24835506a40c2b0acf">   46</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__cmake__variables.html#a0d6855470856fc24835506a40c2b0acf">write_set_cmd</a>(fout, expr, is_parent_scope):</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    fout.write(f<span class="stringliteral">&#39;set({expr})\n&#39;</span>)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment"># This makes the variable usable from the top level directory</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> is_parent_scope == <span class="keyword">True</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        fout.write(f<span class="stringliteral">&#39;set({expr} PARENT_SCOPE)\n&#39;</span>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"># Boolean options outside of the LV_USE_*/LV_BUILD_*</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment"># namespaces to be export to CMake</span></div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a551702dfff46edc36432fc9c33deaa82">   56</a></span>EXTRA_SYMBOLS = [</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="stringliteral">&quot;LV_CHECK_ARG_ASSERT_ON_FAIL&quot;</span>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>]</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="" data-end="">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a072b2700648a81ee058418ce09f08412">   60</a></span><span class="keyword">def </span><a class="code hl_function" href="namespacegenerate__cmake__variables.html#a072b2700648a81ee058418ce09f08412">symbol_pattern</a>(prefix: str):</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="stringliteral">&quot;&quot;&quot;Match the `#define`s to export, `prefix` being &quot;&quot; or &quot;CONFIG_&quot;.</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="stringliteral">    Only the LV_USE_*/LV_BUILD_* namespaces and the symbols explicitly listed</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="stringliteral">    in EXTRA_SYMBOLS are exported.&quot;&quot;&quot;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">assert</span> prefix == <span class="stringliteral">&quot;&quot;</span> <span class="keywordflow">or</span> prefix == <span class="stringliteral">&quot;CONFIG_&quot;</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    namespaces = [<span class="stringliteral">&quot;LV_USE&quot;</span>, <span class="stringliteral">&quot;LV_BUILD&quot;</span>, <span class="stringliteral">&quot;LV_[0-9A-Z_]+_USE&quot;</span>]</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    extras = [<span class="stringliteral">&quot;%s\\b&quot;</span> % symbol <span class="keywordflow">for</span> symbol <span class="keywordflow">in</span> EXTRA_SYMBOLS]</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    alternatives = <span class="stringliteral">&quot;|&quot;</span>.join(prefix + name <span class="keywordflow">for</span> name <span class="keywordflow">in</span> namespaces + extras)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;^#define +(%s)&quot;</span> % alternatives</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+</div>
+<div class="foldopen" id="foldopen00073" data-start="" data-end="">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a735018070b7d2f1917de01f12374ee7c">   73</a></span><span class="keyword">def </span><a class="code hl_namespace" href="namespacegenerate__cmake__variables.html">generate_cmake_variables</a>(path_input: str, path_output: str, kconfig: bool, debug: bool, is_parent_scope: bool):</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    fin = open(path_input)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    fout = open(path_output, <span class="stringliteral">&quot;w&quot;</span>, newline=<span class="stringliteral">&#39;&#39;</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    BARE_PATTERN = <a class="code hl_function" href="namespacegenerate__cmake__variables.html#a072b2700648a81ee058418ce09f08412">symbol_pattern</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> kconfig:</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="comment"># If we use Kconfig, we must check for CONFIG_LV_USE_* and </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment"># CONFIG_LV_BUILD_* defines</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        CONFIG_PATTERN = <a class="code hl_function" href="namespacegenerate__cmake__variables.html#a072b2700648a81ee058418ce09f08412">symbol_pattern</a>(<span class="stringliteral">&quot;CONFIG_&quot;</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        CONFIG_PREFIX = <span class="stringliteral">&quot;&quot;</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment"># Otherwise check the LV_USE_* and LV_BUILD_* defines</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        CONFIG_PATTERN = BARE_PATTERN</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        CONFIG_PREFIX = <span class="stringliteral">&quot;CONFIG_&quot;</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment"># Using the expanded lv_conf_internal, we don&#39;t have to deal with regexp,</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment"># as all the #define will be aligned on the left with a single space before the value</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">for</span> line <span class="keywordflow">in</span> fin.read().splitlines():</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="comment"># For the rest of the configs, simply add CONFIG_ and write the name of the define</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment"># all LV_USE_* or LV_BUILD_* configs where the value is 0 or 1,</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment"># as these are the ones that are needed in cmake</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment"># To detect the configuration of LVGL to perform conditional compilation/linking</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span> re.search(f<span class="stringliteral">&#39;{CONFIG_PATTERN}.* +[01] *$&#39;</span>, line):</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            parts = line.split()</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">if</span> len(parts) &lt; 3:</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            name = parts[1]</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            value = parts[2].strip()</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_function" href="namespacegenerate__cmake__variables.html#a0d6855470856fc24835506a40c2b0acf">write_set_cmd</a>(fout, f<span class="stringliteral">&#39;{CONFIG_PREFIX}{name} {value}&#39;</span>, is_parent_scope)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="comment"># When using kconfig: catch bare LV_* defines with a literal 0/1 value</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="comment"># that aren&#39;t backed by Kconfig (value is not a CONFIG_* reference)</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">elif</span> kconfig <span class="keywordflow">and</span> re.search(f<span class="stringliteral">&#39;{BARE_PATTERN}.* +[01] *$&#39;</span>, line):</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            parts = line.split()</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">if</span> len(parts) &lt; 3:</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                <span class="keywordflow">continue</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            name = parts[1]</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            value = parts[2].strip()</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment"># Export with CONFIG_ prefix so it&#39;s consistent with kconfig-backed vars</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <a class="code hl_function" href="namespacegenerate__cmake__variables.html#a0d6855470856fc24835506a40c2b0acf">write_set_cmd</a>(fout, f<span class="stringliteral">&#39;CONFIG_{name} {value}&#39;</span>, is_parent_scope)</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">else</span>:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="comment"># Useful for debugging expressions that are unhandled,</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="comment"># if the script fails in &#39;unexpected ways&#39;</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keywordflow">if</span> debug == <span class="keyword">True</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                print(f<span class="stringliteral">&quot;DBG: Skipping expression: &#39;{line} - not handled&#39;&quot;</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&#39;__main__&#39;</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="namespacegenerate__cmake__variables.html#a8187411843a6284ffb964ef3fb9fcab3">  129</a></span>    args = <a class="code hl_function" href="namespacegenerate__cmake__variables.html#aa9db369dca7f14132ee348b520250cfc">get_args</a>()</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_namespace" href="namespacegenerate__cmake__variables.html">generate_cmake_variables</a>(args.input, args.output, args.kconfig, args.debug, args.parentscope)</div>
+<div class="ttc" id="anamespacegenerate__cmake__variables_html"><div class="ttname"><a href="namespacegenerate__cmake__variables.html">generate_cmake_variables</a></div><div class="ttdef"><b>Definition</b> <a href="#l00001">generate_cmake_variables.py:1</a></div></div>
+<div class="ttc" id="anamespacegenerate__cmake__variables_html_a072b2700648a81ee058418ce09f08412"><div class="ttname"><a href="namespacegenerate__cmake__variables.html#a072b2700648a81ee058418ce09f08412">generate_cmake_variables.symbol_pattern</a></div><div class="ttdeci">symbol_pattern(str prefix)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">generate_cmake_variables.py:60</a></div></div>
+<div class="ttc" id="anamespacegenerate__cmake__variables_html_a0d6855470856fc24835506a40c2b0acf"><div class="ttname"><a href="namespacegenerate__cmake__variables.html#a0d6855470856fc24835506a40c2b0acf">generate_cmake_variables.write_set_cmd</a></div><div class="ttdeci">write_set_cmd(fout, expr, is_parent_scope)</div><div class="ttdef"><b>Definition</b> <a href="#l00046">generate_cmake_variables.py:46</a></div></div>
+<div class="ttc" id="anamespacegenerate__cmake__variables_html_a98377d6b92039c847b067de711a039bf"><div class="ttname"><a href="namespacegenerate__cmake__variables.html#a98377d6b92039c847b067de711a039bf">generate_cmake_variables.fatal</a></div><div class="ttdeci">fatal(msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">generate_cmake_variables.py:15</a></div></div>
+<div class="ttc" id="anamespacegenerate__cmake__variables_html_aa9db369dca7f14132ee348b520250cfc"><div class="ttname"><a href="namespacegenerate__cmake__variables.html#aa9db369dca7f14132ee348b520250cfc">generate_cmake_variables.get_args</a></div><div class="ttdeci">get_args()</div><div class="ttdef"><b>Definition</b> <a href="#l00020">generate_cmake_variables.py:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d9edf6c004b4a7ff14fe9ae7a92214ee.html">firmware</a></li><li class="navelem"><a href="dir_429d80758da54da73083af4edd40d0b3.html">projects</a></li><li class="navelem"><a href="dir_6a492918b4b1b94bfe7d2566f732ae10.html">Proyecto_Integrador</a></li><li class="navelem"><a href="dir_cabb26711d7ab58c73a758fd473247a1.html">managed_components</a></li><li class="navelem"><a href="dir_1e14201c8ed2b7ede2da00856a4460fe.html">lvgl__lvgl</a></li><li class="navelem"><a href="dir_83b838a8e3b112e54f21eacb15cb3448.html">scripts</a></li><li class="navelem"><a href="generate__cmake__variables_8py.html">generate_cmake_variables.py</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
